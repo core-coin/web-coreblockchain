@@ -1,0 +1,14 @@
+<head>
+  {% if page.title %}
+    <title>{{ site.title | default: site.github.project_title | prepend: ' - ' | prepend: page.title }}</title>
+  {% else %}
+    <title>{{ site.title | default: site.github.project_title }}</title>
+  {% endif %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#505050">
+  <link rel="stylesheet" href="{{ site.baseurl }}css/styles.css">
+  {% if site.donate.xce %}<meta name="donate:xce" content="{{ site.donate.xce }}">{% endif %}
+  {% if site.github.owner_gravatar_url %}<link rel="shortcut icon" type="image/png" href="{{ site.github.owner_gravatar_url }}">{% endif %}
+</head>

@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<section class="hero">
+	<div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column has-text-centered">
+          <img class="is-square" src="images/banner-globe.png" alt="Globe Network" />
+        </div>
+        <div class="column has-text-left">
+          {% assign slogan = site.description | default: site.github.project_tagline | split:" " %}
+          <p class="slogan is-size-1"><span>{{ slogan[0] }}</span> {{ slogan[1] }}<br>{{ slogan[2] }}<br><span>{{ slogan[3] }} {{ slogan[4] }}</span><br>{{ slogan[5] }}<br>{{ slogan[6] }}</p>
+          <p><a href="/get-started" class="button is-success is-large is-outlined">Get started</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="columns is-centered">
+  <div class="column is-full is-gapless divide">
+    <a href="/#about" class="arrow grey"><i class="down"></i></a>
+  </div>
+</div>
+<section id="about" class="has-background-black">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half has-text-centered">
+        <img src="images/illustration-network.png" alt="Core Network">
+      </div>
+      <div class="column is-half">
+        <h1 class="title is-3">About</h1>
+        <p>Core Coin is an open-source, public blockchain application platform featuring smart contract functionality.</p>
+        <p>With a decentralised network, which supports Decentralised applications (ÐApps) and supports tokens representing fiat currency, cryptocurrency, commodities, or other digitized units of value in a marketplace.</p>
+        <p>Core Coin brings financial information to the crypto World with enhanced address structures, which can simplify transfering holders of value to an intended beneficiary address.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="columns is-centered">
+  <div class="column is-full is-gapless divide">
+    <a href="/#smart-contracts" class="arrow black"><i class="down"></i></a>
+  </div>
+</div>
+<section id="smart-contracts" class="has-background-grey">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half">
+        <h1 class="title is-3">Smart Contracts</h1>
+        <p>CRC is a technical standard used on the Core Coin platform. CRC stands for Core Request for Comment followed with a number that was assigned to this request.</p>
+        <p>Core Improvement Proposal (CIP) describes the standards for the Core Coin platform, including core protocol specifications, client APIs, and contract standards.</p>
+        <p>As seen in Solidity with Comet software, you can deploy smart contracts.</p>
+      </div>
+      <div class="column is-half has-text-centered">
+        <img src="images/illustration-decentralized.png" alt="Decentralized with Smart Contracts">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="solidity" class="has-background-grey">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half has-text-centered">
+        <img src="images/illustration-code.png" alt="Solidity Code">
+      </div>
+      <div class="column is-half">
+        <h1 class="title is-3">Solidity</h1>
+        <p>Core Coin intends to provide a blockchain with a built-in fully fledged Turing-complete programming language that can be used to create Smart Contracts, to encode arbitrary state transition functions, allowing users to create any system, simply by writing the logic in a few lines of code.</p>
+        <p>With the Comet software you can deploy Smart Contracts, develop ÐApps and run tests on your local Core testnet.</p>
+        <p>
+          <a href="https://wiki.corecoin.cc" target="_blank" class="button is-outlined is-medium">Develop Smart Contract</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="columns is-centered">
+  <div class="column is-full is-gapless divide">
+    <a href="/#dapps" class="arrow grey"><i class="down"></i></a>
+  </div>
+</div>
+<section id="dapps" class="has-background-black">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half">
+        <h1 class="title is-3">ÐApps</h1>
+        <p>As seen in Solidity, any process, operation, governance or economic activity can be decentralized, tokenized with and transacted via Core Coin using smart contracts.</p>
+        <p>The token represents the ÐApp while it uses the Core Coin blockchain, but the price of the token is dynamic and a coded value storage.</p>
+        <p>Activity that has any economic or governance aspect, conceived or as of yet unconceived, can be done via Core Coin, provided that the right code is written and the necessary hardware or other required parameters are used.</p>
+        <p>
+          <a href="https://github.com/core-coin/go-core/releases" target="_blank" class="button is-outlined is-medium">Build your Node</a>
+        </p>
+      </div>
+      <div class="column is-half has-text-centered">
+        <img src="images/illustration-dapp.png" alt="ÐApps">
+      </div>
+    </div>
+  </div>
+</section>
+<div class="columns is-centered">
+  <div class="column is-full is-gapless divide">
+    <a href="/#wallet" class="arrow black"><i class="down"></i></a>
+  </div>
+</div>
+<section id="wallet" class="has-background-grey">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half has-text-centered">
+        <img src="images/illustration-wallet.png" alt="Wallet">
+      </div>
+      <div class="column is-half">
+        <h1 class="title is-3">Wallets</h1>
+        <p>The Core Coin Wallet allows you to hold and secure Core Coins and other crypto-assets built on the Core Coin platform, as well as connect to ÐApps and ÐEx (Decentralized Exchanges).</p>
+        <p>We integrated multi signatures inside the protocol, to make funds secure thus allowing the owner full control at any given time.</p>
+        <p>
+          <a href="https://github.com/core-coin/wallet/releases" target="_blank" class="button is-outlined is-medium">Download wallet</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
