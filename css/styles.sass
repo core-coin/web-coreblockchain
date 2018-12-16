@@ -45,6 +45,12 @@ h1, h2, h3, h4, h5, h6
 p
   margin-bottom: 1rem
 
+a.platforms
+  color: $white !important
+  text-decoration: none !important
+  &:hover
+    color: $green !important
+
 footer
   &>div
     margin: 20px auto !important
@@ -199,3 +205,66 @@ article .badge
     color: $green
 figure.is-logo
   padding: 10px
+
+#walletText, #coreText
+  margin-left: 7px
+
+.tabs.boxes
+  margin-bottom: 0
+  border-radius: 4px 4px 0 0
+  ul
+    border-bottom: 0
+    li
+      label
+        align-items: center
+        display: flex
+        justify-content: center
+        padding: .5em 1em
+        vertical-align: top
+        border-radius: 0
+        background-color: $black !important
+        border: 0
+        cursor: pointer
+        &:hover
+          color: $green
+          > div
+            &:before
+              opacity: 1
+        div
+          display: block
+          line-height: 100%
+          white-space: nowrap
+          text-align: center
+          &:before
+            content: ''
+            width: 50px
+            height: 50px
+            display: block
+            margin: 0 auto
+            background-position: center
+            background-repeat: no-repeat
+            transform-origin: bottom center
+            opacity: .6
+          &.server:before
+            background-image: url("../images/icon-server.svg")
+          &.docker:before
+            background-image: url("../images/icon-docker.svg")
+          &.kubernetes:before
+            background-image: url("../images/icon-kubernetes.svg")
+          &.aws:before
+            background-image: url("../images/icon-aws.svg")
+          &.gcp:before
+            background-image: url("../images/icon-gcp.svg")
+          &.azure:before
+            background-image: url("../images/icon-azure.svg")
+          &.alibaba:before
+            background-image: url("../images/icon-alibabacloud.svg")
+.tabsbox
+  background-color: $grey-original
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem
+  border-radius: 0 0 4px 4px
+  display: none
+.check-tabsbox
+  display: none
+input#check-server:checked ~ div#box-server, input#check-docker:checked ~ div#box-docker, input#check-kubernetes:checked ~ div#box-kubernetes, input#check-aws:checked ~ div#box-aws, input#check-gcp:checked ~ div#box-gcp, input#check-azure:checked ~ div#box-azure, input#check-alibaba:checked ~ div#box-alibaba
+  display: block

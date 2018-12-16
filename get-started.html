@@ -9,12 +9,15 @@ layout: default
 			<div class="tile">
 				<div class="tile is-parent">
 					<article class="tile is-child notification is-dark">
-						<p class="title">Core Wallet</p>
+						<p class="title">Core Wallet <span class="is-size-7" id="walletVer"></span></p>
 						<p class="badge">core</p>
-						<p class="subtitle">👝 Core Wallet and ÐApp browser</p>
+						<p class="subtitle">👝 Core Wallet</p>
 						<p>The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.</p>
 						<p class="mt10">
-							<a href="https://github.com/core-coin/wallet/releases/latest" class="button is-black is-medium">Releases</a>
+							<a href="https://github.com/core-coin/wallet/releases/latest" id="walletDownload" class="button is-black is-medium">Releases for all platforms</a>
+						</p>
+						<p>
+							<a href="https://github.com/core-coin/wallet/releases/latest" class="platforms">&gt; Other platforms</a>
 						</p>
 					</article>
 				</div>
@@ -22,12 +25,15 @@ layout: default
 			<div class="tile">
 				<div class="tile is-parent">
 					<article class="tile is-child notification is-dark">
-						<p class="title">Go-core</p>
+						<p class="title">Go-core <span class="is-size-7" id="coreVer"></span></p>
 						<p class="badge">core</p>
-						<p class="subtitle">⚙️ Core Daemon software</p>
+						<p class="subtitle">🧬 Core Daemon software</p>
 						<p>Go-core is the the command line interface for running a full Core node implemented in Go.</p>
 						<p class="mt10">
-							<a href="https://github.com/core-coin/go-core/releases/latest" class="button is-black is-medium">Releases</a>
+							<a href="https://github.com/core-coin/go-core/releases/latest" id="coreDownload" class="button is-black is-medium">Releases for all platforms</a>
+						</p>
+						<p>
+							<a href="https://github.com/core-coin/go-core/releases/latest" class="platforms">&gt; Other platforms</a>
 						</p>
 					</article>
 				</div>
@@ -109,7 +115,73 @@ layout: default
 <section id="nodes">
 	<div class="container">
 		<h3 class="title">Node distributions</h3>
-		coming soon...
+		<div class="tabs is-boxed is-fullwidth boxes">
+			<ul>
+				<li>
+					<label for="check-server">
+						<div class="server"><span>Images</span></div>
+					</label>
+				</li>
+				<li>
+					<label for="check-docker">
+						<div class="docker"><span>Docker</span></div>
+					</label>
+				</li>
+				<li>
+					<label for="check-kubernetes">
+						<div class="kubernetes"><span>Kubernetes</span></div>
+					</label>
+				</li>
+				<li>
+					<label for="check-aws">
+						<div class="aws"><span>AWS</span></div>
+					</label>
+				</li>
+				<li>
+					<label for="check-gcp">
+						<div class="gcp"><span>GCP</span></div>
+					</label>
+				</li>
+				<li>
+					<label for="check-azure">
+						<div class="azure"><span>Azure</span></div>
+					</label>
+				</li>
+				<li>
+					<label for="check-alibaba">
+						<div class="alibaba"><span>Alibaba</span></div>
+					</label>
+				</li>
+			</ul>
+		</div>
+		<input id="check-server" type="radio" name="tabsbox" class="check-tabsbox" checked/>
+		<div id="box-server" class="tabsbox">
+			comming soon...
+		</div>
+		<input id="check-docker" type="radio" name="tabsbox" class="check-tabsbox"/>
+		<div id="box-docker" class="tabsbox">
+			comming soon...
+		</div>
+		<input id="check-kubernetes" type="radio" name="tabsbox" class="check-tabsbox"/>
+		<div id="box-kubernetes" class="tabsbox">
+			comming soon...
+		</div>
+		<input id="check-aws" type="radio" name="tabsbox" class="check-tabsbox"/>
+		<div id="box-aws" class="tabsbox">
+			comming soon...
+		</div>
+		<input id="check-gcp" type="radio" name="tabsbox" class="check-tabsbox"/>
+		<div id="box-gcp" class="tabsbox">
+			comming soon...
+		</div>
+		<input id="check-azure" type="radio" name="tabsbox" class="check-tabsbox"/>
+		<div id="box-azure" class="tabsbox">
+			comming soon...
+		</div>
+		<input id="check-alibaba" type="radio" name="tabsbox" class="check-tabsbox"/>
+		<div id="box-alibaba" class="tabsbox">
+			comming soon...
+		</div>
 	</div>
 </section>
 <section id="smart-contracts">
@@ -124,3 +196,6 @@ layout: default
 		coming soon...
 	</div>
 </section>
+
+{% include script-wallet-download.html %}
+{% include script-gocore-download.html %}
