@@ -1,0 +1,31 @@
+{
+  "name": "web-corecoin",
+  "version": "1.0.0",
+  "description": "Core Coin Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "jekyll serve",
+    "postinstall": "ln -s -f ../node_modules/@cryptohub/coco/dist/sass _sass/coco"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/core-coin/web-corecoin.git"
+  },
+  "keywords": [
+    "web",
+    "core",
+    "core-coin",
+    "coin",
+    "cryptocurrency"
+  ],
+  "author": "@raisty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/core-coin/web-corecoin/issues"
+  },
+  "homepage": "https://github.com/core-coin/web-corecoin#readme",
+  "dependencies": {
+    "@cryptohub/coco": "github:CryptoHub-place/coco#master",
+    "coco": "github:CryptoHub-place/coco#master"
+  }
+}
