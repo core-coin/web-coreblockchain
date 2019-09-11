@@ -29,6 +29,7 @@ $button-focus-color: $white
 $title-color: $green
 $subtitle-color: $green
 $notification-background-color: $black
+$table-cell-border: 2px solid lighten(black, 25%)
 #theme-color
   background-color: $grey
   color: $green
@@ -276,3 +277,11 @@ figure.is-logo
   display: none
 input#check-server:checked ~ div#box-server, input#check-docker:checked ~ div#box-docker, input#check-kubernetes:checked ~ div#box-kubernetes, input#check-aws:checked ~ div#box-aws, input#check-gcp:checked ~ div#box-gcp, input#check-azure:checked ~ div#box-azure, input#check-alibaba:checked ~ div#box-alibaba
   display: block
+.mt20
+  margin-top: 20px
+.h_iframe
+  width: 100%
+  height: 700px
+  iframe
+    width: 100%
+    height: 100%
