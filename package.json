@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/core-coin/web-corecoin#readme",
   "dependencies": {
-    "@cryptohub/coco": "github:CryptoHub-place/coco#master",
-    "coco": "github:CryptoHub-place/coco#master"
+    "@cryptohub/coco": "github:cryptohub-digital/coco#master"
   }
 }
