@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "jekyll serve",
-    "postinstall": "ln -sf ../node_modules/@cryptohub/coco/dist/sass _sass/coco"
+    "postinstall": "ln -sf ../node_modules/@cryptohub/coco/dist/sass ./_sass/coco"
   },
   "repository": {
     "type": "git",
