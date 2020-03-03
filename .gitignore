@@ -3,6 +3,8 @@ _site
 .jekyll-metadata
 vendor
 .bundle
+node_modules/
+.idea
 
 ### macOS ###
 # General

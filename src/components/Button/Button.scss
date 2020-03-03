@@ -1,0 +1,66 @@
+.button {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  text-align: center;
+  &.hover {
+    transition: all .2s ease-in-out;
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.1);
+    }
+  }
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  &.size {
+    &_normal {
+      height: 67px;
+      min-width: 238px;
+      border-radius: 14px;
+      font-size: 14px;
+      color: #ffffff;
+      font-family: Montserrat;
+      font-weight: 700;
+      letter-spacing: 2.1px;
+      line-height: 24px;
+    }
+    &_small {
+      min-width: 120px;
+      height: 43px;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #ffffff;
+      font-family: "Red Hat Display";
+      font-weight: 400;
+      letter-spacing: -0.16px;
+      line-height: 24px;
+    }
+    &_extraSmall {
+      min-width: 43px;
+      height: 43px;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #ffffff;
+      font-family: "Red Hat Display";
+      font-weight: 400;
+      letter-spacing: -0.16px;
+      line-height: 24px;
+    }
+  }
+  &.theme {
+    &_green {
+      background-color: var(--green);
+      box-shadow: 3px 3px 20px rgba(0, 133, 44, 0.47);
+    }
+    &_ghost {
+      border: 1px solid var(--gray-darken);
+      background-color: var(--black);
+      &:hover {
+        border-color: var(--green);
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Montserrat-Medium';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../src/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../src/fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../src/fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../src/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+body {
+  margin: 0;
+  font-family: Montserrat-Light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:root {
+  --green: #46b549;
+  --green-darken: #42b649;
+  --green-lighter: #64cc6e;
+  --grey: #77778c;
+  --grey-lighter: #aeaebf;
+  --grey-darken: #303040;
+  --gray: #636378;
+  --gray-darken: #424259;
+  --white-darken: #c5c5d9;
+  --white: #fff;
+  --black: #18181f;
+  --black-lighter: #1c1c24;
+  --black-darken: #14141a;
+}
