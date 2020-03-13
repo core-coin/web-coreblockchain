@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import Navbar from '../components/HeaderNavbar'
+import HeroHeader from '../components/HeroHeader'
 
 class PageContainer extends PureComponent {
     static propTypes = {
@@ -17,6 +18,7 @@ class PageContainer extends PureComponent {
         return(
             <>
                 <Navbar/>
+                <HeroHeader/>
             </>
         )
     }

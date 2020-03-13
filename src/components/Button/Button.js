@@ -39,7 +39,7 @@ export default class Button extends PureComponent {
                 {icon && <span className={cx('body_icon')}>{icon}</span>}
                 <span className={cx('body_text')}>{text}</span>
             </span>
-        );
+        )
     }
 
     render() {
