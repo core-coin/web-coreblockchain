@@ -10,7 +10,7 @@ const icon = (
     <div className='account_icon'>
         <SearchIcon />
     </div>
-);
+)
 
 export default class Search extends PureComponent{
     render(){

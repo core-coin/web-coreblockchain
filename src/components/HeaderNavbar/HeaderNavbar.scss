@@ -1,9 +1,13 @@
 .headerNavbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 113px;
-  border: 1px solid #303040;
-  background-color: #18181f;
+  border-bottom: 1px solid var(--grey-darken);
+  background-color: var(--black);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 
   .navbar {
     justify-content: space-between;
@@ -12,7 +16,7 @@
 
   .nav-item {
     .nav-link {
-      color: #aeaebf;
+      color: var(--grey-lighter);
       font-family: "Red Hat Display";
       font-size: 16px;
       font-weight: 400;

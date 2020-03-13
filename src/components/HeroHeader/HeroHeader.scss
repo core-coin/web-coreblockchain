@@ -1,0 +1,67 @@
+.heroHeader {
+  background-color: var(--black);
+  background-image: url(../../images/Sphere_hero.png);
+  height: 100vh;
+  background-size: 746px 961px;
+  background-repeat: no-repeat;
+  background-position: 17% 147px;
+  position: relative;
+  display: flex;
+  h1 {
+    margin-top: 47%;
+    font-family: Montserrat-Regular;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    span {
+      color: var(--green);
+    }
+  }
+  p {
+    color: var(--grey);
+    font-family: "Red Hat Display";
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -0.26px;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 49px;
+  }
+
+  .mouseIcon {
+    margin: 89px auto 0;
+    width :25px;
+    height: 39px;
+    &_mouse {
+      width: 3px;
+      padding: 8px 9px;
+      height: 19px;
+      border: 2px solid #434359;
+      border-radius: 25px;
+      opacity: 0.75;
+      box-sizing: content-box;
+      &__scroller {
+        width: 3px;
+        height: 7px;
+        border-radius: 25%;
+        background-color: #fff;
+        animation-name: scroll;
+        animation-duration: 3s;
+        animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+        animation-iteration-count: infinite;
+      }
+      @keyframes scroll {
+        0% { opacity: 0; }
+        10% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(15px); opacity: 0;}
+      }
+    }
+  }
+  &_icon {
+    text-align: center;
+    margin: 10px auto 0;
+  }
+}
