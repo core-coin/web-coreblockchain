@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { number } from 'prop-types'
 import {
     Container,
     Row,
@@ -17,8 +18,20 @@ import Button from '../Button'
 import './Footer.scss'
 
 export default class Footer extends PureComponent{
+    static propTypes = {
+        blockTime: number,
+        networkHashrate: number,
+        difficulty: number,
+    }
+
+    static defaultProps = {
+        blockTime: 13.60,
+        networkHashrate: 143.1,
+        difficulty: 0.00,
+    }
 
     render(){
+        const { blockTime, networkHashrate, difficulty } = this.props
 
         return(
             <div className='footer'>
@@ -54,15 +67,15 @@ export default class Footer extends PureComponent{
                             <div className='footer_right__info'>
                                 <div className='footer_right__info-block'>
                                     <p>{FOOTER.blockTime}</p>
-                                    <span>13.60s</span>
+                                    <span>{blockTime}s</span>
                                 </div>
                                 <div className='footer_right__info-block'>
                                     <p>{FOOTER.networkHashrate}</p>
-                                    <span>143.1 TH/s</span>
+                                    <span>{networkHashrate} TH/s</span>
                                 </div>
                                 <div className='footer_right__info-block'>
                                     <p>{FOOTER.difficulty}</p>
-                                    <span>0.00 H</span>
+                                    <span>{difficulty} H</span>
                                 </div>
                             </div>
                             <div className='footer_right__button'>

@@ -50,3 +50,19 @@ export const FOOTER = {
     copyRights: 'Copyright © 2018-2020 Core Foundation. All Rights Reserved.',
     websiteUpdate: 'Website last updated: Jan 31, 2020',
 }
+
+export const NODECOVERAGE = {
+    preTitle: 'continuously optimized reach',
+    title: 'Covering',
+    highlightTitle: '98% of the world',
+    description: 'Core Coin can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.',
+    nodesOnline: 'Nodes online',
+    nodeStatistics: 'node statistics',
+    lastPerformance: 'Last 24h performance',
+    totalTransactions: 'Total transactions:',
+    totalBlocks: 'Total blocks:',
+    volume: 'Volume:',
+    pricePerCoin: 'Price per coin:',
+    walletAddresses: 'Wallet addresses:',
+    transactionExplorer: 'transaction explorer'
+}

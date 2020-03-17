@@ -1,26 +1,56 @@
 import React, { PureComponent } from 'react'
-import {  } from 'prop-types'
+import { number } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import Navbar from '../components/HeaderNavbar'
 import HeroHeader from '../components/HeroHeader'
 import Footer from '../components/Footer'
+import NodeCoverage from '../components/NodeCoverage'
 
 class PageContainer extends PureComponent {
     static propTypes = {
+        blockTime: number,
+        networkHashrate: number,
+        difficulty: number,
+        nodesOnline: number,
+        totalTransactions: number,
+        totalBlocks: number,
+        volume: number,
+        pricePerCoin: number,
+        walletAddresses: number,
     }
 
     static defaultProps = {}
 
     render() {
-        const { } = this.props
+        const {
+            totalTransactions,
+            totalBlocks,
+            volume,
+            pricePerCoin,
+            walletAddresses,
+            blockTimer,
+            networkHashrate,
+            difficulty,
+        } = this.props
 
         return(
             <>
                 <Navbar/>
                 <HeroHeader/>
-                <Footer/>
+                <NodeCoverage
+                    totalTransactions={totalTransactions}
+                    totalBlocks={totalBlocks}
+                    volume={volume}
+                    pricePerCoin={pricePerCoin}
+                    walletAddresses={walletAddresses}
+                />
+                <Footer
+                    blockTime={blockTimer}
+                    networkHashrate={networkHashrate}
+                    difficulty={difficulty}
+                />
             </>
         )
     }
