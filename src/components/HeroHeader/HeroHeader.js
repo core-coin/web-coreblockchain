@@ -8,7 +8,7 @@ import {
 import Button from '../Button'
 import Arrow from '../Icon/icons/Arrow'
 
-import { HeroScreen } from '../../constants'
+import { HEROHEADER } from '../../constants'
 
 import MouseIcon from './MouseIcon'
 
@@ -23,21 +23,21 @@ export default class HeroHeader extends PureComponent{
                 <Container>
                     <Row>
                         <Col sm='12' md={{ size: 10, offset: 1 }}>
-                            <h1>{HeroScreen.title} <span>{HeroScreen.highlightTitle}</span></h1>
+                            <h1>{HEROHEADER.title} <span>{HEROHEADER.highlightTitle}</span></h1>
                         </Col>
                         <Col sm='12' md={{ size: 8, offset: 2 }}>
-                            <p>{HeroScreen.subtitle}</p>
+                            <p>{HEROHEADER.subtitle}</p>
                         </Col>
                         <Col sm='12' md={{ size: 6, offset: 3 }} className='text-center'>
                             <Button
                                 theme='green'
                                 size='normal'
-                                text={HeroScreen.actionBtn}
+                                text={HEROHEADER.actionBtn}
                             />
                             <Button
                                 theme='ghost'
                                 size='normal'
-                                text={HeroScreen.infoBtn}
+                                text={HEROHEADER.infoBtn}
                             />
                         </Col>
                         <Col sm='12'>
