@@ -8,6 +8,8 @@ import HeroHeader from '../components/HeroHeader'
 import Footer from '../components/Footer'
 import NodeCoverage from '../components/NodeCoverage'
 import Developers from '../components/Developers'
+import Solutions from '../components/Solutions'
+import MouseIcon from "../components/HeroHeader/MouseIcon";
 
 class PageContainer extends PureComponent {
     static propTypes = {
@@ -40,6 +42,7 @@ class PageContainer extends PureComponent {
             <>
                 <Navbar/>
                 <HeroHeader/>
+                <Solutions/>
                 <Developers/>
                 <NodeCoverage
                     totalTransactions={totalTransactions}

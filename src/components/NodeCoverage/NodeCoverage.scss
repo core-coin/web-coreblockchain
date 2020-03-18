@@ -2,12 +2,11 @@
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
   background-image: url(../../images/map.png);
-  height: 100vh;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  padding-top: 8%;
+  padding: 8% 0;
   h3 {
     color: var(--grey-lighter);
     font-family: Montserrat-Regular;

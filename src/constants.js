@@ -92,3 +92,13 @@ export const DEVELOPERS = {
         },
     ]
 }
+
+export const SOLUTIONS = {
+    preTitle: 'solutions',
+    title: 'social impact provided by',
+    highlightTitle: 'core chain',
+    description: 'Core Foundation is building a Global Decentralized Network (GDN) to cover all areas on the planet using multiple communication technologies along with Core Coin’s Blockchain platform. We are creating an Inclusion program suited for all people.',
+    coreFoundation: 'Core Foundation',
+    text: 'To apply we require a Pitch Deck which our VC team analyze. Should the project be feasible, a representative will contact you.',
+    link: 'learn more'
+}
