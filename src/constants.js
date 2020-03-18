@@ -66,3 +66,29 @@ export const NODECOVERAGE = {
     walletAddresses: 'Wallet addresses:',
     transactionExplorer: 'transaction explorer'
 }
+
+export const DEVELOPERS = {
+    preTitle: 'connect with our dev community',
+    title: 'designed',
+    highlightTitle: 'for developers',
+    tabs: [
+        {
+            tabName: 'Developer portal',
+            tabText: 'some text',
+            tabGreenBtn: 'green button',
+            tabGhostBtn: 'ghost button',
+        },
+        {
+            tabName: 'core support',
+            tabText: 'some text',
+            tabGreenBtn: 'green button',
+            tabGhostBtn: 'ghost button',
+        },
+        {
+            tabName: 'Core Standards',
+            tabText: 'The Core Coin community has adopted many standards that are helpful to developers. Typically these are introduced as Core Improvement Proposals (CIPs). CIP\'s describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards.',
+            tabGreenBtn: 'learn more',
+            tabGhostBtn: 'contribute',
+        },
+    ]
+}

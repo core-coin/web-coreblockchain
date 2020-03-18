@@ -18,6 +18,7 @@ export default class Button extends PureComponent {
         onClick: func,
         icon: node,
         hover: bool,
+        margin: oneOf(['10', '35'])
     }
 
     static defaultProps = {
@@ -29,6 +30,7 @@ export default class Button extends PureComponent {
         onClick: () => {},
         icon: null,
         hover: true,
+        margin: '10',
     }
 
     renderBody() {
@@ -49,12 +51,14 @@ export default class Button extends PureComponent {
             theme,
             href,
             onClick,
-            hover
+            hover,
+            margin
         } = this.props
 
         const className = cx('button', {
             [`theme_${theme}`]: theme,
             [`size_${size}`]: size,
+            [`margin_${margin}`]: margin,
             hover
         })
 

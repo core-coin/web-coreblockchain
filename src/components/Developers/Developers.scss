@@ -1,0 +1,70 @@
+.developers {
+  border-top: 1px solid var(--grey-darken);
+  background-color: var(--black);
+  background-image: url(../../images/screendouble.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  padding: 8% 0;
+  h3 {
+    color: var(--grey-lighter);
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 6.4px;
+    line-height: 22px;
+    margin-bottom: 21px;
+  }
+  h1 {
+    color: var(--white);
+    font-family: Montserrat-Medium;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -1.32px;
+    line-height: 48px;
+    text-transform: uppercase;
+    span {
+      color: var(--green);
+    }
+  }
+  .nav-tabs {
+    border-bottom: 1px solid rgba(99, 99, 120, 0.2);
+    margin-top: 68px;
+    display: flex;
+    justify-content: space-between;
+    .nav-link {
+      color: var(--gray);
+      font-family: Montserrat-Medium;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      padding:0 20px 21px 20px;
+      &:hover{
+        border-bottom: 2px solid var(--green);
+        color: var(--white);
+      }
+      &.active {
+        background-color: transparent;
+        border-bottom: 2px solid var(--green);
+        color: var(--white);
+      }
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      margin-top: 42px;
+      p {
+        color: var(--grey);
+        font-family: 'Red Hat Display';
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: -0.22px;
+        line-height: 32px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

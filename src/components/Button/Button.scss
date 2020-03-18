@@ -16,6 +16,14 @@
   &:focus {
     outline: none;
   }
+  &.margin {
+    &_10 {
+      margin-right: 10px;
+    }
+    &_35 {
+      margin-right: 35px;
+    }
+  }
   &.size {
     &_normal {
       height: 67px;
@@ -63,5 +71,8 @@
         border-color: var(--green);
       }
     }
+  }
+  & + .button {
+    margin-right: 0;
   }
 }
