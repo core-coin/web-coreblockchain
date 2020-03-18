@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 import NodeCoverage from '../components/NodeCoverage'
 import Developers from '../components/Developers'
 import Solutions from '../components/Solutions'
-import MouseIcon from "../components/HeroHeader/MouseIcon";
+import Tabs from '../components/Tabs'
 
 class PageContainer extends PureComponent {
     static propTypes = {
@@ -42,6 +42,7 @@ class PageContainer extends PureComponent {
             <>
                 <Navbar/>
                 <HeroHeader/>
+                <Tabs/>
                 <Solutions/>
                 <Developers/>
                 <NodeCoverage

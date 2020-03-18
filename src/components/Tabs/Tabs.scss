@@ -1,0 +1,73 @@
+.tabs {
+  background-color: var(--black);
+  height: 100vh;
+  h3 {
+    color: var(--white);
+    font-family: Montserrat-Medium;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.96px;
+    line-height: 36px;
+    padding: 0 9% 9%;
+    margin: 0;
+  }
+  .nav-tabs {
+    color: var(--grey);
+    font-family: 'Red Hat Display';
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.22px;
+    flex-direction: column;
+    border: none;
+    .nav-item {
+      display: flex;
+      align-items: center;
+      .nav-link {
+        border: none;
+        background-color: transparent;
+        &::before{
+          content: '\2022';
+          color: transparent;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+        }
+        &.active {
+          color: var(--white);
+          &::before{
+            content: '\2022';
+            color: var(--green);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      img {
+        border-radius: 9px;
+        margin-bottom: 9%;
+      }
+      h2 {
+        color: var(--white);
+        font-family: Montserrat-Medium;
+        font-size: 44px;
+        font-weight: 700;
+        letter-spacing: -1.32px;
+        line-height: 48px;
+      }
+      p {
+        color: var(--grey);
+        font-family: 'Red Hat Display';
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: -0.22px;
+        line-height: 28px;
+        margin-bottom: 8%;
+      }
+    }
+  }
+}

@@ -39,7 +39,7 @@ export default class Button extends PureComponent {
         return (
             <span className={cx('body')}>
                 {icon && <span className={cx('body_icon')}>{icon}</span>}
-                <span className={cx('body_text')}>{text}</span>
+                {text && <span className={cx('body_text')}>{text}</span>}
             </span>
         )
     }

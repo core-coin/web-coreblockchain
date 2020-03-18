@@ -75,4 +75,11 @@
   & + .button {
     margin-right: 0;
   }
+  .body{
+    .body_icon {
+      & + .body_text {
+        padding-left: 15px;
+      }
+    }
+  }
 }

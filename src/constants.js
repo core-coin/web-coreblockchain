@@ -1,3 +1,5 @@
+import SpaceAgencies from './images/spaceAgencies.png'
+
 export const MenuLinks = [
     {
         link: '',
@@ -101,4 +103,81 @@ export const SOLUTIONS = {
     coreFoundation: 'Core Foundation',
     text: 'To apply we require a Pitch Deck which our VC team analyze. Should the project be feasible, a representative will contact you.',
     link: 'learn more'
+}
+
+export const TABS = {
+    targetedIndustries: 'targeted industries',
+    tabs: [
+        {
+            tabsName: 'Finance & Trading',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'Healthcare & Wellness',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'Space Agencies',
+            tabsContent: 'Manage data and decentralize algorithmic and automated decision-making.',
+            tabsLink: 'learn more',
+            tabsImage: SpaceAgencies,
+        },
+        {
+            tabsName: 'Energy',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'Supply Chain',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'eGovernment & DAO’s',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },{
+            tabsName: 'Mass Media & eSports',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'GIScience',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'Defence & Security',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'Asset Tokenization',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'Education & Activities',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+        {
+            tabsName: 'Telecommunications',
+            tabsContent: '',
+            tabsLink: '',
+            tabsImage: '',
+        },
+     ]
 }

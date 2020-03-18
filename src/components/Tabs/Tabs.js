@@ -11,12 +11,15 @@ import {
 } from 'reactstrap'
 
 import Button from '../Button'
+import Pdf from '../Icon/icons/Pdf'
 
-import { DEVELOPERS } from '../../constants'
+import { TABS } from '../../constants'
 
-import './Developers.scss'
+import './Tabs.scss'
 
-export default class Developers extends PureComponent{
+const PdfIcon = <Pdf/>
+
+export default class Tabs extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -46,7 +49,7 @@ export default class Developers extends PureComponent{
                     className={activeTab==index ? 'active' : ''}
                     onClick={() => { this.toggle(index); }}
                 >
-                    {tab.tabName}
+                    {tab.tabsName}
                 </NavLink>
             </NavItem>
         )
@@ -56,22 +59,16 @@ export default class Developers extends PureComponent{
         <TabPane tabId={index} key={index}>
             <Row>
                 <Col sm="12">
-                    <p>{tab.tabText}</p>
-                    <div>
-                        <Button
-                            theme='green'
-                            size='normal'
-                            text={tab.tabGreenBtn}
-                            margin='35'
-                            href=''
-                        />
-                        <Button
-                            theme='ghost'
-                            size='normal'
-                            text={tab.tabGhostBtn}
-                            href=''
-                        />
-                    </div>
+                    <img src={tab.tabsImage} alt={tab.tabsName} className='img-responsive'/>
+                    <h2>{tab.tabsName}</h2>
+                    <p>{tab.tabsContent}</p>
+                    <Button
+                        theme='green'
+                        size='normal'
+                        text={tab.tabsLink}
+                        href=''
+                        icon={PdfIcon}
+                    />
                 </Col>
             </Row>
         </TabPane>
@@ -84,19 +81,18 @@ export default class Developers extends PureComponent{
         const { activeTab } = this.state
 
         return(
-            <div className='developers'>
+            <div className='tabs'>
                 <Container>
                     <Row>
-                        <Col sm='12'>
-                            <h3>{DEVELOPERS.preTitle}</h3>
-                            <h1>{DEVELOPERS.title} <span>{DEVELOPERS.highlightTitle}</span></h1>
-                        </Col>
-                        <Col sm='8'>
+                        <Col md='4'>
+                            <h3>{TABS.targetedIndustries}</h3>
                             <Nav tabs>
-                                {DEVELOPERS.tabs.map(this.renderTabName)}
+                                {TABS.tabs.map(this.renderTabName)}
                             </Nav>
+                        </Col>
+                        <Col md='7'>
                             <TabContent activeTab={activeTab}>
-                                {DEVELOPERS.tabs.map(this.renderTabContent)}
+                                {TABS.tabs.map(this.renderTabContent)}
                             </TabContent>
                         </Col>
                     </Row>
