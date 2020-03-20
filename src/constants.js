@@ -179,5 +179,23 @@ export const TABS = {
             tabsLink: '',
             tabsImage: '',
         },
-     ]
+    ],
+}
+
+export const OFFERS = {
+    preTitle: 'what it offers',
+    title: 'main benefits of using',
+    highlightTitle: 'core chain',
+    decentralization: 'Decentralization',
+    decentralizationText: 'Core Coin is fully decentralized and open source.',
+    security: 'Security',
+    securityText: 'Using Edwards’ curve - ED448 with 224 bit security to decrease negative artifacts.',
+    interoperability: 'Interoperability',
+    interoperabilityText: 'Core network is designed to sinteract and integrate with other Blockchains.',
+    persistence: 'Persistence',
+    persistenceText: 'Everybody can join the network and mine with CryptOre PoW algorithm.',
+    coverage: 'Coverage',
+    coverageText: 'Accessible anywhere in the World through various networks covering 98% of the globe.',
+    swarmIntelligence: 'Swarm Intelligence',
+    swarmIntelligenceText: 'Core Coin follows the collective behavior of decentralized self-organized systems.',
 }

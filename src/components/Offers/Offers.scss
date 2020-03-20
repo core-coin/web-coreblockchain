@@ -1,0 +1,86 @@
+.offers {
+  background-color: var(--black);
+  padding: 8% 0;
+  h3 {
+    color: var(--grey-lighter);
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 6.4px;
+    line-height: 22px;
+  }
+  h1 {
+    color: var(--white);
+    font-family: Montserrat-Medium;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -1.32px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    span {
+      color: var(--green);
+    }
+  }
+  .zIndex {
+    z-index: 1;
+  }
+  &_block {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--grey-darken);
+    background: var(--black-lighter);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 23px;
+    margin-bottom: 19px;
+    &:hover {
+      &::after {
+        content: '';
+        background: linear-gradient(45deg,
+                var(--grey-darken),
+                var(--grey-darken),
+                var(--green),
+                var(--green),
+                var(--green),
+                var(--green),
+                var(--grey-darken),
+                var(--grey-darken));
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        filter: blur(2px);
+        z-index: -1;
+      }
+    }
+
+    &__lower {
+      margin-top: 50px;
+    }
+    &__higher {
+      margin-top: -50px;
+    }
+    h4 {
+      color: var(--white);
+      font-family: Montserrat-Regular;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      margin-top: 22px;
+    }
+    p {
+      color: var(--grey);
+      font-family: 'Red Hat Display';
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+}

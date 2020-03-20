@@ -10,6 +10,7 @@ import NodeCoverage from '../components/NodeCoverage'
 import Developers from '../components/Developers'
 import Solutions from '../components/Solutions'
 import Tabs from '../components/Tabs'
+import Offers from '../components/Offers'
 
 class PageContainer extends PureComponent {
     static propTypes = {
@@ -42,6 +43,7 @@ class PageContainer extends PureComponent {
             <>
                 <Navbar/>
                 <HeroHeader/>
+                <Offers/>
                 <Tabs/>
                 <Solutions/>
                 <Developers/>
