@@ -1,24 +1,21 @@
 import React, { PureComponent } from 'react'
-import { number } from 'prop-types'
+import { object, string } from 'prop-types'
 import {
     Container,
     Row,
     Col
 } from 'reactstrap'
 
-import { SOLUTIONS } from '../../constants'
-
 import './Solutions.scss'
 
 export default class Solutions extends PureComponent{
     static propTypes = {
-    }
-
-    static defaultProps = {
+        translate: object,
+        language: string,
     }
 
     render(){
-        const { } = this.props
+        const { translate: { SOLUTIONS }} = this.props
 
         return(
             <div className='solutions'>

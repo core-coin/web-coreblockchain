@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { object, string } from 'prop-types'
 import {
     Container,
     Row,
@@ -13,8 +14,6 @@ import {
 import Button from '../Button'
 import Pdf from '../Icon/icons/Pdf'
 
-import { TABS } from '../../constants'
-
 import './Tabs.scss'
 
 const PdfIcon = <Pdf/>
@@ -27,11 +26,8 @@ export default class Tabs extends PureComponent{
         }
     }
     static propTypes = {
-
-    }
-
-    static defaultProps = {
-
+        translate: object,
+        language: string,
     }
 
     toggle = tab => {
@@ -76,7 +72,7 @@ export default class Tabs extends PureComponent{
 
 
     render(){
-        const {  } = this.props
+        const { translate: { TABS } } = this.props
 
         const { activeTab } = this.state
 

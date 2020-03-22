@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number } from 'prop-types'
+import { number, string, object } from 'prop-types'
 import {
     Container,
     Row,
@@ -7,7 +7,6 @@ import {
 } from 'reactstrap'
 
 import Button from '../Button'
-import { NODECOVERAGE } from '../../constants'
 
 import './NodeCoverage.scss'
 
@@ -19,6 +18,8 @@ export default class NodeCoverage extends PureComponent{
         volume: number,
         pricePerCoin: number,
         walletAddresses: number,
+        language: string,
+        translate: object,
     }
 
     static defaultProps = {
@@ -37,7 +38,7 @@ export default class NodeCoverage extends PureComponent{
     )
 
     render(){
-        const { totalTransactions, totalBlocks, volume, pricePerCoin, walletAddresses, nodesOnline } = this.props
+        const { totalTransactions, totalBlocks, volume, pricePerCoin, walletAddresses, nodesOnline, translate: { NODECOVERAGE } } = this.props
 
         return(
             <div className='nodeCoverage'>

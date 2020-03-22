@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { object, string } from 'prop-types'
 import {
     Container,
     Row,
@@ -12,21 +13,16 @@ import Persistence from '../Icon/icons/Persistence'
 import Coverage from '../Icon/icons/Coverage'
 import Intelligence from '../Icon/icons/Intelligence'
 
-import { OFFERS } from '../../constants'
-
 import './Offers.scss'
 
 export default class Offers extends PureComponent{
     static propTypes = {
-
-    }
-
-    static defaultProps = {
-
+        translate: object,
+        language: string,
     }
 
     render(){
-        const {  } = this.props
+        const { translate: { OFFERS }} = this.props
 
         return(
             <div className='offers'>

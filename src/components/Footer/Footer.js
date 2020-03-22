@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
-import { number } from 'prop-types'
+import { number, object, string } from 'prop-types'
 import {
     Container,
     Row,
     Col
 } from 'reactstrap'
 
-import { FOOTER } from '../../constants'
 import Cube from '../Icon/icons/Cube'
 import Cryptohub from '../Icon/icons/Cryptohub'
 import Github from '../Icon/icons/Github'
@@ -22,6 +21,8 @@ export default class Footer extends PureComponent{
         blockTime: number,
         networkHashrate: number,
         difficulty: number,
+        translate: object,
+        language: string,
     }
 
     static defaultProps = {
@@ -31,7 +32,7 @@ export default class Footer extends PureComponent{
     }
 
     render(){
-        const { blockTime, networkHashrate, difficulty } = this.props
+        const { blockTime, networkHashrate, difficulty, translate: { FOOTER } } = this.props
 
         return(
             <div className='footer'>
@@ -50,7 +51,7 @@ export default class Footer extends PureComponent{
                                 <a href=''>{FOOTER.improvementProposals}</a>
                                 <a href=''>{FOOTER.coreFoundation}</a>
                                 <a href=''>{FOOTER.coreTalk}</a>
-                                <a href=''>{FOOTER.brandIdenity}</a>
+                                <a href=''>{FOOTER.brandIdentity}</a>
                             </div>
                             <div className='footer_left__icons'>
                                 <a href=''> <Cube currentColor='46b549'/></a>

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { string, object } from 'prop-types'
 import {
     Container,
     Row,
@@ -12,8 +13,6 @@ import {
 
 import Button from '../Button'
 
-import { DEVELOPERS } from '../../constants'
-
 import './Developers.scss'
 
 export default class Developers extends PureComponent{
@@ -24,12 +23,10 @@ export default class Developers extends PureComponent{
         }
     }
     static propTypes = {
-
+        language: string,
+        translate: object,
     }
 
-    static defaultProps = {
-
-    }
 
     toggle = tab => {
         if(this.state.activeTab !== tab) {
@@ -79,7 +76,7 @@ export default class Developers extends PureComponent{
 
 
     render(){
-        const {  } = this.props
+        const { translate: { DEVELOPERS } } = this.props
 
         const { activeTab } = this.state
 

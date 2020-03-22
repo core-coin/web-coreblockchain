@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { object, string } from 'prop-types'
 import {
     Container,
     Row,
@@ -8,15 +9,19 @@ import {
 import Button from '../Button'
 import Arrow from '../Icon/icons/Arrow'
 
-import { HEROHEADER } from '../../constants'
 
 import MouseIcon from './MouseIcon'
 
 import './HeroHeader.scss'
 
 export default class HeroHeader extends PureComponent{
+    static propTypes = {
+        translate: object,
+        language: string,
+    }
 
     render(){
+        const { translate: {HEROHEADER} } = this.props
 
         return(
             <div className='heroHeader'>

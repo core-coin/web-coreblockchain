@@ -1,16 +1,16 @@
 import React, { PureComponent } from 'react'
-import { number } from 'prop-types'
+import { number, func, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import Navbar from '../components/HeaderNavbar'
-import HeroHeader from '../components/HeroHeader'
-import Footer from '../components/Footer'
-import NodeCoverage from '../components/NodeCoverage'
-import Developers from '../components/Developers'
-import Solutions from '../components/Solutions'
-import Tabs from '../components/Tabs'
-import Offers from '../components/Offers'
+import Navbar from '../../components/HeaderNavbar/index'
+import HeroHeader from '../../components/HeroHeader/index'
+import Footer from '../../components/Footer/index'
+import NodeCoverage from '../../components/NodeCoverage/index'
+import Developers from '../../components/Developers/index'
+import Solutions from '../../components/Solutions/index'
+import Tabs from '../../components/Tabs/index'
+import Offers from '../../components/Offers/index'
 
 class PageContainer extends PureComponent {
     static propTypes = {
@@ -23,6 +23,8 @@ class PageContainer extends PureComponent {
         volume: number,
         pricePerCoin: number,
         walletAddresses: number,
+        translate: object,
+        language: string,
     }
 
     static defaultProps = {}
@@ -37,27 +39,33 @@ class PageContainer extends PureComponent {
             blockTimer,
             networkHashrate,
             difficulty,
+            translate,
+            language,
         } = this.props
 
         return(
             <>
-                <Navbar/>
-                <HeroHeader/>
-                <Offers/>
-                <Tabs/>
-                <Solutions/>
-                <Developers/>
+                <Navbar language={language} translate={translate}/>
+                <HeroHeader language={language} translate={translate}/>
+                <Offers language={language} translate={translate}/>
+                <Tabs language={language} translate={translate}/>
+                <Solutions language={language} translate={translate}/>
+                <Developers language={language} translate={translate}/>
                 <NodeCoverage
                     totalTransactions={totalTransactions}
                     totalBlocks={totalBlocks}
                     volume={volume}
                     pricePerCoin={pricePerCoin}
                     walletAddresses={walletAddresses}
+                    language={language}
+                    translate={translate}
                 />
                 <Footer
                     blockTime={blockTimer}
                     networkHashrate={networkHashrate}
                     difficulty={difficulty}
+                    language={language}
+                    translate={translate}
                 />
             </>
         )
@@ -66,6 +74,8 @@ class PageContainer extends PureComponent {
 
 function mapStateToProps(state) {
     return{
+       translate: state.translate,
+        language: state.language,
     }
 }
 

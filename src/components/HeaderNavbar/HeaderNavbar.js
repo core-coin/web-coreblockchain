@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { object, string } from 'prop-types'
 import {
     Navbar,
     NavbarBrand,
@@ -10,18 +11,21 @@ import {
     Col
 } from 'reactstrap'
 
-import Language from '../Icon/icons/Language'
 import Search from '../Search'
 import Button from '../Button'
-import { MenuLinks } from '../../constants'
+
+import LanguageButtonContainer from '../../containers/LanguageButtonContainer'
 
 import Logo from '../../images/CoreChain-logo.png'
 
 import './HeaderNavbar.scss'
 
-const LanguageIcon = <Language/>
 
 export default class HeaderNavbar extends PureComponent{
+    static propTypes = {
+        translate: object,
+        language: string,
+    }
 
     renderLink = ({link, label}, index) => (
         <NavItem key={index}>
@@ -30,7 +34,7 @@ export default class HeaderNavbar extends PureComponent{
     )
 
     render(){
-
+        const { translate: { MENULINKS } } = this.props
         return(
             <div className='headerNavbar'>
                 <Container>
@@ -44,18 +48,12 @@ export default class HeaderNavbar extends PureComponent{
                                 </div>
                                 <div>
                                     <Nav className="mr-auto" navbar>
-                                        {MenuLinks.map(this.renderLink)}
+                                        {MENULINKS.map(this.renderLink)}
                                     </Nav>
                                 </div>
                                 <div className='headerNavbar_left'>
                                     <Search />
-                                    {/*todo component for internationalization*/}
-                                    <Button
-                                        icon={LanguageIcon}
-                                        theme='ghost'
-                                        size='extraSmall'
-                                        hover={false}
-                                    />
+                                    <LanguageButtonContainer/>
                                     <Button text='Developer' />
                                 </div>
                             </Navbar>
