@@ -51,34 +51,12 @@
   }
   &_right {
     padding: 5% 0 0 6%;
-    h3 {
-      color: var(--grey-lighter);
-      font-family: Montserrat-Regular;
-      font-size: 16px;
-      font-weight: 400;
-      letter-spacing: 6.4px;
-      line-height: 22px;
-    }
-    h1 {
+    .title {
       margin-top: 1.5rem;
       margin-bottom: 2rem;
-      font-family: Montserrat-Medium;
-      font-size: 44px;
-      font-weight: 700;
-      letter-spacing: -1.32px;
-      line-height: 48px;
-      text-transform: uppercase;
-      color: var(--white);
-      span {
-        color: var(--green);
-      }
     }
-    p {
-      color: var(--grey);
-      font-family: 'Red Hat Display';
+    .description {
       font-size: 22px;
-      font-weight: 400;
-      letter-spacing: -0.22px;
       line-height: 32px;
     }
     &__info {

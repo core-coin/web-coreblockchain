@@ -38,7 +38,7 @@ export default class Footer extends PureComponent{
             <div className='footer'>
                 <Container>
                     <Row>
-                        <Col sm={12} md={5} className='footer_left'>
+                        <Col sm='12' lg='5' className='footer_left'>
                             <h2>{FOOTER.getInTouch}</h2>
                             <div className='footer_left__block'>
                                 <p>{FOOTER.contact}</p>
@@ -61,10 +61,10 @@ export default class Footer extends PureComponent{
                                 <a href=''><Twitter currentColor='46b549'/></a>
                             </div>
                         </Col>
-                        <Col md={{ size: 6, offset: 1 }} className='footer_right'>
-                            <h3>{FOOTER.getStarted}</h3>
-                            <h1>{FOOTER.core} <span>{FOOTER.mining}</span></h1>
-                            <p>{FOOTER.description}</p>
+                        <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='footer_right'>
+                            <h3 className='preTitle'>{FOOTER.getStarted}</h3>
+                            <h1 className='title'>{FOOTER.core} <span>{FOOTER.mining}</span></h1>
+                            <p className='description'>{FOOTER.description}</p>
                             <div className='footer_right__info'>
                                 <div className='footer_right__info-block'>
                                     <p>{FOOTER.blockTime}</p>

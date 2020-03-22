@@ -21,10 +21,10 @@ export default class Solutions extends PureComponent{
             <div className='solutions'>
                 <Container>
                     <Row>
-                        <Col sm='12' md={{ size: 7, offset: 5 }}>
-                            <h3>{SOLUTIONS.preTitle}</h3>
-                            <h1>{SOLUTIONS.title} <span>{SOLUTIONS.highlightTitle}</span></h1>
-                            <p>{SOLUTIONS.description}</p>
+                        <Col sm='12' lg={{ size: 7, offset: 5 }}>
+                            <h3 className='preTitle'>{SOLUTIONS.preTitle}</h3>
+                            <h1 className='title'>{SOLUTIONS.title} <span>{SOLUTIONS.highlightTitle}</span></h1>
+                            <p className='description'>{SOLUTIONS.description}</p>
                             <div className='solutions_block'>
                                 <h4>{SOLUTIONS.coreFoundation}</h4>
                                 <p>{SOLUTIONS.text}</p>

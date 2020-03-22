@@ -85,10 +85,10 @@ export default class Developers extends PureComponent{
                 <Container>
                     <Row>
                         <Col sm='12'>
-                            <h3>{DEVELOPERS.preTitle}</h3>
-                            <h1>{DEVELOPERS.title} <span>{DEVELOPERS.highlightTitle}</span></h1>
+                            <h3 className='preTitle'>{DEVELOPERS.preTitle}</h3>
+                            <h1 className='title'>{DEVELOPERS.title} <span>{DEVELOPERS.highlightTitle}</span></h1>
                         </Col>
-                        <Col sm='8'>
+                        <Col sm='12' lg='9' xl='8'>
                             <Nav tabs>
                                 {DEVELOPERS.tabs.map(this.renderTabName)}
                             </Nav>

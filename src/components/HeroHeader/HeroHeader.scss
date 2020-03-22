@@ -7,30 +7,21 @@
   background-position: 17% 147px;
   position: relative;
   display: flex;
-  h1 {
+  .title {
     margin-top: calc(100vh - 57%);
-    font-family: Montserrat-Regular;
     font-size: 50px;
     font-weight: 700;
     line-height: 60px;
-    color: var(--white);
-    text-transform: uppercase;
     text-align: center;
-    span {
-      color: var(--green);
+    @media (min-width: 768px) and (max-width: 1024px){
+      margin-top: calc(100vh - 100%);
     }
   }
-  p {
-    color: var(--grey);
-    font-family: "Red Hat Display";
-    font-size: 26px;
-    font-weight: 400;
-    letter-spacing: -0.26px;
+  .description {
     line-height: 34px;
     text-align: center;
     margin-bottom: 49px;
   }
-
   .mouseIcon {
     margin: 89px auto 0;
     width :25px;

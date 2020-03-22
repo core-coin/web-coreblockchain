@@ -80,7 +80,7 @@ export default class Tabs extends PureComponent{
             <div className='tabs'>
                 <Container>
                     <Row>
-                        <Col md='4'>
+                        <Col md='5' lg='4'>
                             <h3>{TABS.targetedIndustries}</h3>
                             <Nav tabs>
                                 {TABS.tabs.map(this.renderTabName)}

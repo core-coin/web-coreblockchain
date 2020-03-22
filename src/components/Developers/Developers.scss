@@ -6,26 +6,8 @@
   background-repeat: no-repeat;
   background-size: 45%;
   padding: 8% 0;
-  h3 {
-    color: var(--grey-lighter);
-    font-family: Montserrat-Regular;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 6.4px;
-    line-height: 22px;
+  .preTitle {
     margin-bottom: 21px;
-  }
-  h1 {
-    color: var(--white);
-    font-family: Montserrat-Medium;
-    font-size: 44px;
-    font-weight: 700;
-    letter-spacing: -1.32px;
-    line-height: 48px;
-    text-transform: uppercase;
-    span {
-      color: var(--green);
-    }
   }
   .nav-tabs {
     border-bottom: 1px solid rgba(99, 99, 120, 0.2);

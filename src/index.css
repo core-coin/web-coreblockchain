@@ -46,6 +46,43 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.title {
+  color: var(--white);
+  font-family: Montserrat-Medium;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -1.32px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: var(--green);
+}
+
+.preTitle {
+  color: var(--grey-lighter);
+  font-family: Montserrat-Regular;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 6.4px;
+  line-height: 22px;
+}
+
+.description {
+  color: var(--grey);
+  font-family: 'Red Hat Display';
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.26px;
+  line-height: 28px;
+}
+
+.img-responsive {
+  height: auto;
+  width: 100%;
+  display: block;
+}
 
 :root {
   --green: #46b549;

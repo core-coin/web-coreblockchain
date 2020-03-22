@@ -1,26 +1,8 @@
 .offers {
   background-color: var(--black);
   padding: 8% 0;
-  h3 {
-    color: var(--grey-lighter);
-    font-family: Montserrat-Regular;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 6.4px;
-    line-height: 22px;
-  }
-  h1 {
-    color: var(--white);
-    font-family: Montserrat-Medium;
-    font-size: 44px;
-    font-weight: 700;
-    letter-spacing: -1.32px;
-    line-height: 48px;
-    text-transform: uppercase;
+  .title {
     margin-bottom: 25px;
-    span {
-      color: var(--green);
-    }
   }
   .zIndex {
     z-index: 1;
