@@ -84,6 +84,14 @@ body {
   display: block;
 }
 
+.scroll-down .headerNavbar {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .headerNavbar {
+  transform: none;
+}
+
 :root {
   --green: #46b549;
   --green-darken: #42b649;

@@ -5,10 +5,13 @@
   height: 113px;
   border-bottom: 1px solid var(--grey-darken);
   background-color: var(--black);
-  position: absolute;
   width: 100%;
   z-index: 1;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.4s;
   .navbar {
     justify-content: space-between;
     width: 100%;
