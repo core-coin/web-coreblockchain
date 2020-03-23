@@ -1,28 +1,54 @@
 import React, { PureComponent } from 'react'
+import { func } from 'prop-types'
 
 import SearchIcon from '../Icon/icons/Search'
 
-import Button from '../Button'
-
 import './Search.scss'
 
-const icon = (
-    <div className='account_icon'>
-        <SearchIcon />
-    </div>
-)
-
 export default class Search extends PureComponent{
+    constructor(props) {
+        super(props);
+        this.searchInput = React.createRef();
+        this.state = {
+            isSearchBarOpen: false,
+        }
+    }
+
+    static propTypes = {
+        onSearch: func,
+    }
+
+    openSearchBar = () => {
+        this.setState({
+            isSearchBarOpen: true,
+        })
+    }
+
+    onSearchSubmit = () => {
+        console.log('test')
+        this.props.onSearch(this.searchInput.current.value)
+    }
+
     render(){
+        const { isSearchBarOpen } = this.state
 
         return(
             <div className='search'>
-                <Button
-                    icon={icon}
-                    theme='ghost'
-                    size='extraSmall'
-                    hover={false}
-                />
+                <label className={isSearchBarOpen ? 'search_box search_box__open' : 'search_box'} >
+                    <input
+                        type='search'
+                        placeholder='Search for a term or phrase...'
+                        name='search'
+                        className='search_box__input'
+                        ref={this.searchInput}
+                    />
+                    <input
+                        type='submit'
+                        className='search_box__submit'
+                        onClick={this.onSearchSubmit}
+                        value='' />
+                    <span className='search_box__icon' onClick={this.openSearchBar}><SearchIcon/></span>
+                </label>
             </div>
         )
     }
