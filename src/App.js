@@ -1,5 +1,10 @@
 import React, { PureComponent } from 'react'
 import { Provider } from 'react-redux'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from 'react-router-dom'
 import Store from './store'
 
 import Layout from './components/Layout'
@@ -13,7 +18,16 @@ export default class App extends PureComponent {
         return(
             <Provider store={store}>
                 <Layout>
-                    <PageContainer />
+                    <Router>
+                        <Switch>
+                            <Route exact path='/'>
+                                <PageContainer />
+                            </Route>
+                            <Route path='/language'>
+                                <div>text</div>
+                            </Route>
+                        </Switch>
+                    </Router>
                 </Layout>
             </Provider>
         )
