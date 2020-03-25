@@ -92,6 +92,29 @@ body {
   transform: none;
 }
 
+/*media*/
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none;
+  }
+  .title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.66px;
+    line-height: 1;
+
+  }
+  .preTitle {
+    font-size: 9px;
+    letter-spacing: 3.6px;
+  }
+  .description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 :root {
   --green: #46b549;
   --green-darken: #42b649;

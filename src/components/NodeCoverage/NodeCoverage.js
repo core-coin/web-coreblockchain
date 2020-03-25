@@ -44,7 +44,7 @@ export default class NodeCoverage extends PureComponent{
             <div className='nodeCoverage'>
                 <Container>
                     <Row>
-                        <Col sm='12' lg={{ size: 8, offset: 2 }} className='text-center'>
+                        <Col sm='12' lg={{ size: 8, offset: 2 }}>
                             <h3 className='preTitle'>{NODECOVERAGE.preTitle}</h3>
                             <h1 className='title'>{NODECOVERAGE.title} <span>{NODECOVERAGE.highlightTitle}</span></h1>
                             <p className='description'>{NODECOVERAGE.description}</p>

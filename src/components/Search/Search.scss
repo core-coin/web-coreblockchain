@@ -9,6 +9,15 @@
     transition: width 0.3s;
     border-radius: 10px;
     margin-right: 20px;
+    @media (max-width: 767px) {
+      width: 95%;
+      float: left;
+      .search_box__icon,
+      .search_box__submit {
+        border-radius: 0 10px 10px 0;
+        border-left: none;
+      }
+    }
     &__input {
       top:0;
       right:0;

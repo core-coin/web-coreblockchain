@@ -6,38 +6,79 @@
   background-repeat: no-repeat;
   background-size: 45%;
   padding: 8% 0;
+  @media (max-width: 767px) {
+    border-top: none;
+    background-color: var(--black-darken);
+    background-image: url(../../images/screen_for-mobile.png);
+    background-position: 30% top;
+    background-size: 613px 432px;
+    .container {
+      background-color: var(--black-darken);
+      border-top: 1px solid var(--grey-darken);
+      margin-top: 200px;
+    }
+  }
   .preTitle {
     margin-bottom: 21px;
+    @media (max-width: 767px) {
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
   }
-  .nav-tabs {
-    border-bottom: 1px solid rgba(99, 99, 120, 0.2);
-    margin-top: 68px;
-    display: flex;
-    justify-content: space-between;
-    .nav-link {
-      color: var(--gray);
-      font-family: Montserrat-Medium;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.6px;
-      text-transform: uppercase;
-      cursor: pointer;
-      border: none;
-      padding:0 20px 21px 20px;
-      &:hover{
-        border-bottom: 2px solid var(--green);
-        color: var(--white);
+  .tabs_header {
+    @media (max-width: 767px) {
+      border-bottom: 1px solid #434359;
+    }
+    .nav-tabs {
+      border-bottom: 1px solid rgba(99, 99, 120, 0.2);
+      margin-top: 68px;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 767px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        margin-top: 24px;
+        border-bottom: none;
       }
-      &.active {
-        background-color: transparent;
-        border-bottom: 2px solid var(--green);
-        color: var(--white);
+      .nav-link {
+        color: var(--gray);
+        font-family: Montserrat-Medium;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        padding:0 20px 21px 20px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          padding: 8px 16px;
+        }
+        &:hover{
+          border-bottom: 2px solid var(--green);
+          color: var(--white);
+        }
+        &.active {
+          background-color: transparent;
+          border-bottom: 2px solid var(--green);
+          color: var(--white);
+          @media (max-width: 767px) {
+            border-bottom: 2px solid var(--green);
+          }
+        }
       }
     }
   }
   .tab-content {
     .tab-pane {
       margin-top: 42px;
+      @media (max-width: 767px) {
+        margin-top: 24px;
+      }
       p {
         color: var(--grey);
         font-family: 'Red Hat Display';
@@ -46,6 +87,12 @@
         letter-spacing: -0.22px;
         line-height: 32px;
         margin-bottom: 50px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 24px;
+
+        }
       }
     }
   }

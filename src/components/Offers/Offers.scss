@@ -1,6 +1,12 @@
 .offers {
   background-color: var(--black);
   padding: 8% 0;
+  @media (max-width: 767px) {
+    .preTitle,
+    .title {
+      margin-left: 10px;
+    }
+  }
   .title {
     margin-bottom: 25px;
   }
@@ -20,6 +26,19 @@
     align-items: center;
     padding: 0 23px;
     margin-bottom: 19px;
+    @media (max-width: 767px) {
+      display: flex !important;
+      height: 201px;
+      border-radius: 14px;
+      width: calc(100% - 20px) !important;
+      margin: 0 auto 19px;
+      &:hover {
+        &::after {
+          contain: none;
+          background: none;
+        }
+      }
+    }
     &:hover {
       &::after {
         content: '';
@@ -63,6 +82,40 @@
       font-weight: 400;
       line-height: 22px;
       text-align: center;
+    }
+  }
+
+  //slider
+  .slick-slider {
+    .slick-list {
+      padding-left: 0 !important;
+      .slick-track {
+        display: flex;
+        align-items: center;
+        .slick-active {
+          .offers_block {
+            transition: transform 0.4s;
+            height: 233px;
+          }
+        }
+      }
+    }
+    .slick-dots {
+      li {
+        &.slick-active {
+          button {
+            &::before {
+              color: var(--white)
+            }
+          }
+        }
+        button {
+          &::before {
+            color: #43434c;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }

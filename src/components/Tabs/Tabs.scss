@@ -10,42 +10,71 @@
     line-height: 36px;
     padding: 0 9% 9%;
     margin: 0;
+    @media (max-width: 767px) {
+      text-transform: uppercase;
+      font-size: 22px;
+      letter-spacing: -0.66px;
+    }
   }
-  .nav-tabs {
-    color: var(--grey);
-    font-family: 'Red Hat Display';
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: -0.22px;
-    flex-direction: column;
-    border: none;
-    .nav-item {
-      display: flex;
-      align-items: center;
-      .nav-link {
-        border: none;
-        background-color: transparent;
-        &::before{
-          content: '\2022';
-          color: transparent;
-          font-weight: bold;
-          display: inline-block;
-          width: 1em;
-        }
-        &.active {
-          color: var(--white);
+  .tabs_header {
+    @media (max-width: 767px) {
+      border-bottom: 1px solid #434359;
+    }
+    .nav-tabs {
+      color: var(--grey);
+      font-family: 'Red Hat Display';
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: -0.22px;
+      flex-direction: column;
+      border: none;
+      @media (max-width: 767px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        height: 42px;
+        font-size: 16px;
+      }
+      .nav-item {
+        display: flex;
+        align-items: center;
+        .nav-link {
+          border: none;
+          background-color: transparent;
           &::before{
+            @media (max-width: 767px) {
+              content: none;
+            }
             content: '\2022';
-            color: var(--green);
+            color: transparent;
             font-weight: bold;
             display: inline-block;
             width: 1em;
+          }
+          &.active {
+            color: var(--white);
+            @media (max-width: 767px) {
+              border-bottom: 2px solid var(--green);
+            }
+            &::before{
+              @media (max-width: 767px) {
+                content: none;
+              }
+              content: '\2022';
+              color: var(--green);
+              font-weight: bold;
+              display: inline-block;
+              width: 1em;
+            }
           }
         }
       }
     }
   }
   .tab-content {
+    @media (max-width: 767px) {
+      margin-top: 37px;
+    }
     .tab-pane {
       img {
         border-radius: 9px;
@@ -58,6 +87,10 @@
         font-weight: 700;
         letter-spacing: -1.32px;
         line-height: 48px;
+        @media (max-width: 767px) {
+          font-size: 18px;
+          line-height: 1.2;
+        }
       }
       p {
         color: var(--grey);
@@ -67,6 +100,10 @@
         letter-spacing: -0.22px;
         line-height: 28px;
         margin-bottom: 8%;
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 1.2;
+        }
       }
     }
   }

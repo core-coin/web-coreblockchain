@@ -13,6 +13,8 @@ import {
 
 import Search from '../Search'
 import Button from '../Button'
+import Menu from '../Icon/icons/Menu'
+import Close from '../Icon/icons/Close'
 
 import LanguageButtonContainer from '../../containers/LanguageButtonContainer'
 
@@ -26,6 +28,12 @@ const scrollDown = 'scroll-down'
 let lastScroll = 0
 
 export default class HeaderNavbar extends PureComponent{
+    constructor(props) {
+        super(props);
+        this.state = {
+            isMenuOpen: false,
+        }
+    }
     static propTypes = {
         translate: object,
         language: string,
@@ -55,8 +63,24 @@ export default class HeaderNavbar extends PureComponent{
         })
     }
 
+    onOpenSidebar = () => {
+        this.setState({
+            isMenuOpen: true,
+        })
+    }
+
+    onCloseSidebar = () => {
+        this.setState({
+            isMenuOpen: false,
+        })
+    }
+
     render(){
         const { translate: { MENULINKS } } = this.props
+        const { isMenuOpen } = this.state
+
+        const isMobile = window.innerWidth <= 500;
+
         return(
             <div className='headerNavbar'>
                 <Container>
@@ -68,16 +92,42 @@ export default class HeaderNavbar extends PureComponent{
                                         <img src={Logo} alt="Core Chain"/>
                                     </NavbarBrand>
                                 </div>
-                                <div>
-                                    <Nav className="mr-auto" navbar>
-                                        {MENULINKS.map(this.renderLink)}
-                                    </Nav>
-                                </div>
-                                <div className='headerNavbar_left'>
-                                    <Search />
-                                    <LanguageButtonContainer/>
-                                    <Button text='Developer' />
-                                </div>
+                                {isMobile ?
+                                    <div>
+                                        <a onClick={this.onOpenSidebar}><Menu/></a>
+                                        <div className={isMenuOpen ? 'headerNavbar_sidebar open' : 'headerNavbar_sidebar'}>
+                                            <Container>
+                                                <Col className='headerNavbar_sidebar__header'>
+                                                    <NavbarBrand href="/">
+                                                        <img src={Logo} alt="Core Chain"/>
+                                                    </NavbarBrand>
+                                                    <a onClick={this.onCloseSidebar}><Close/></a>
+                                                </Col>
+                                                <Nav navbar>
+                                                    {MENULINKS.map(this.renderLink)}
+                                                </Nav>
+                                                <div className='headerNavbar_sidebar__search'>
+                                                    <Search />
+                                                    <LanguageButtonContainer/>
+                                                </div>
+                                                <Button mobileFullWidth text='Developer' />
+                                            </Container>
+                                        </div>
+                                    </div>
+                                :
+                                    <div className='headerNavbar_flex'>
+                                        <div>
+                                            <Nav navbar>
+                                                {MENULINKS.map(this.renderLink)}
+                                            </Nav>
+                                        </div>
+                                        <div className='headerNavbar_left'>
+                                            <Search />
+                                            <LanguageButtonContainer/>
+                                            <Button text='Developer' />
+                                        </div>
+                                    </div>
+                                }
                             </Navbar>
                         </Col>
                     </Row>

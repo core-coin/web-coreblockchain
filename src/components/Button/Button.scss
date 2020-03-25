@@ -5,6 +5,11 @@
   border: 1px solid transparent;
   text-align: center;
   margin-right: 10px;
+  @media (max-width: 767px) {
+    &.mobileFullWidth {
+      width: 100%;
+    }
+  }
   &.hover {
     transition: all .2s ease-in-out;
     &:hover {
@@ -35,6 +40,12 @@
       font-weight: 700;
       letter-spacing: 2.1px;
       line-height: 24px;
+      @media (max-width: 767px) {
+        height: 47px;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
     }
     &_small {
       min-width: 120px;

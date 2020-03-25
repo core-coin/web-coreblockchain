@@ -25,7 +25,6 @@ export default class Search extends PureComponent{
     }
 
     onSearchSubmit = () => {
-        console.log('test')
         this.props.onSearch(this.searchInput.current.value)
     }
 

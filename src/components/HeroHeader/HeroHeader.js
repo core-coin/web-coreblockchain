@@ -45,7 +45,7 @@ export default class HeroHeader extends PureComponent{
                                 text={HEROHEADER.infoBtn}
                             />
                         </Col>
-                        <Col sm='12'>
+                        <Col sm='12' md='12' className='hidden-xs'>
                             <MouseIcon />
                             <div className='heroHeader_icon'>
                                 <Arrow width={9} height={19} viewBox='0 0 9 19' currentColor={434359}/>

@@ -80,16 +80,26 @@ export default class Tabs extends PureComponent{
             <div className='tabs'>
                 <Container>
                     <Row>
-                        <Col md='5' lg='4'>
-                            <h3>{TABS.targetedIndustries}</h3>
-                            <Nav tabs>
-                                {TABS.tabs.map(this.renderTabName)}
-                            </Nav>
+                        <Col sm='12'>
+                            <Row>
+                                <Col xs='5' md='5' lg='4'>
+                                    <h3>{TABS.targetedIndustries}</h3>
+                                </Col>
+                            </Row>
                         </Col>
-                        <Col md='7'>
-                            <TabContent activeTab={activeTab}>
-                                {TABS.tabs.map(this.renderTabContent)}
-                            </TabContent>
+                        <Col sm='12'>
+                            <Row>
+                                <Col sm='4' md='5' lg='4' className='tabs_header'>
+                                    <Nav tabs>
+                                        {TABS.tabs.map(this.renderTabName)}
+                                    </Nav>
+                                </Col>
+                                <Col sm='12' md='7'>
+                                    <TabContent activeTab={activeTab}>
+                                        {TABS.tabs.map(this.renderTabContent)}
+                                    </TabContent>
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
                 </Container>
