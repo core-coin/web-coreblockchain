@@ -44,6 +44,7 @@ body {
   font-family: Montserrat-Light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
 }
 
 .title {

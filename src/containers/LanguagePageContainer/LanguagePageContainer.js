@@ -1,12 +1,16 @@
 import React, { PureComponent } from 'react'
-import { func } from 'prop-types'
+import { func, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {setLanguage} from "../../reducer/actions";
+import {setLanguage} from '../../reducer/actions'
+
+import LanguagePage from '../../components/LanguagePage'
 
 class LanguagePageContainer extends PureComponent {
     static propTypes = {
         setLanguage: func,
+        translate: object,
+        language: string,
     }
 
     static defaultProps = {}
@@ -15,10 +19,15 @@ class LanguagePageContainer extends PureComponent {
         const {
             translate,
             language,
+            setLanguage
         } = this.props
 
         return(
-            <div>text</div>
+            <LanguagePage
+                language={language}
+                translate={translate}
+                setLanguage={setLanguage}
+            />
         )
     }
 }
