@@ -157,7 +157,7 @@ export const LOCALIZED_STRINGS = {
             walletAddresses: 'Wallet addresses:',
             transactionExplorer: 'transaction explorer'
         },
-        FOOTER: {
+        CONTACTS: {
             getInTouch: 'Get in touch',
             contact: 'Contact',
             development: 'Development',
@@ -175,6 +175,8 @@ export const LOCALIZED_STRINGS = {
             difficulty: 'Difficulty',
             downloadMiner: 'download miner',
             miningPools: 'mining pools',
+        },
+        FOOTER: {
             copyRights: 'Copyright © 2018-2020 Core Foundation. All Rights Reserved.',
             websiteUpdate: 'Website last updated: Jan 31, 2020',
         },
@@ -335,7 +337,7 @@ export const LOCALIZED_STRINGS = {
             walletAddresses: 'Adresy peňaženky:',
             transactionExplorer: 'prieskumník transakcií',
         },
-        FOOTER: {
+        CONTACTS: {
             getInTouch: 'Spoj sa',
             contact: 'Kontakt',
             development: 'Rozvoj',
@@ -353,6 +355,8 @@ export const LOCALIZED_STRINGS = {
             difficulty: 'Obtiažnosť',
             downloadMiner: 'stiahnuť miner',
             miningPools: 'banské bazény',
+        },
+        FOOTER: {
             copyRights: 'Copyright © 2018-2020 Core Foundation. Všetky práva vyhradené.',
             websiteUpdate: 'Web naposledy aktualizovaný: 31. januára 2020',
         },
