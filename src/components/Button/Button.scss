@@ -87,6 +87,10 @@
     margin-right: 0;
   }
   .body{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .body_icon {
       & + .body_text {
         padding-left: 15px;

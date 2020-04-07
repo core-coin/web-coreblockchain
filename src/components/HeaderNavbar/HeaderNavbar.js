@@ -15,8 +15,9 @@ import Search from '../Search'
 import Button from '../Button'
 import Menu from '../Icon/icons/Menu'
 import Close from '../Icon/icons/Close'
+import Language from '../Icon/icons/Language'
 
-import LanguageButtonContainer from '../../containers/LanguageButtonContainer'
+const LanguageIcon = <Language/>
 
 import Logo from '../../images/CoreChain-logo.png'
 
@@ -108,7 +109,13 @@ export default class HeaderNavbar extends PureComponent{
                                                 </Nav>
                                                 <div className='headerNavbar_sidebar__search'>
                                                     <Search />
-                                                    <LanguageButtonContainer/>
+                                                    <Button
+                                                        icon={LanguageIcon}
+                                                        theme='ghost'
+                                                        size='extraSmall'
+                                                        hover={false}
+                                                        href='/language'
+                                                    />
                                                 </div>
                                                 <Button mobileFullWidth text='Developer' />
                                             </Container>
@@ -123,7 +130,14 @@ export default class HeaderNavbar extends PureComponent{
                                         </div>
                                         <div className='headerNavbar_left'>
                                             <Search />
-                                            <LanguageButtonContainer/>
+                                            <Button
+                                                icon={LanguageIcon}
+                                                theme='ghost'
+                                                size='extraSmall'
+                                                hover={false}
+                                                href='/language'
+                                                type='router'
+                                            />
                                             <Button text='Developer' />
                                         </div>
                                     </div>

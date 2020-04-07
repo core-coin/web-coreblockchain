@@ -10,9 +10,13 @@ import Solutions from '../../components/Solutions'
 import Tabs from '../../components/Tabs'
 import Offers from '../../components/Offers'
 import OffersMobile from '../../components/Offers/OffersMobile'
+import Contacts from '../../components/Contacts'
 
 class PageContainer extends PureComponent {
     static propTypes = {
+        blockTime: number,
+        networkHashrate: number,
+        difficulty: number,
         nodesOnline: number,
         totalTransactions: number,
         totalBlocks: number,
@@ -32,6 +36,9 @@ class PageContainer extends PureComponent {
             volume,
             pricePerCoin,
             walletAddresses,
+            blockTimer,
+            networkHashrate,
+            difficulty,
             translate,
             language,
         } = this.props
@@ -51,6 +58,13 @@ class PageContainer extends PureComponent {
                     volume={volume}
                     pricePerCoin={pricePerCoin}
                     walletAddresses={walletAddresses}
+                    language={language}
+                    translate={translate}
+                />
+                <Contacts
+                    blockTime={blockTimer}
+                    networkHashrate={networkHashrate}
+                    difficulty={difficulty}
                     language={language}
                     translate={translate}
                 />

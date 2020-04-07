@@ -157,7 +157,7 @@ export const LOCALIZED_STRINGS = {
             walletAddresses: 'Wallet addresses:',
             transactionExplorer: 'transaction explorer'
         },
-        FOOTER: {
+        CONTACTS: {
             getInTouch: 'Get in touch',
             contact: 'Contact',
             development: 'Development',
@@ -175,9 +175,44 @@ export const LOCALIZED_STRINGS = {
             difficulty: 'Difficulty',
             downloadMiner: 'download miner',
             miningPools: 'mining pools',
+        },
+        FOOTER: {
             copyRights: 'Copyright © 2018-2020 Core Foundation. All Rights Reserved.',
             websiteUpdate: 'Website last updated: Jan 31, 2020',
         },
+        LANGUAGE_PAGE: {
+            title: 'Language Support',
+            description: 'Core Coin is a global project, and it is critical that corecoin.cc is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.',
+            languageInProgress: 'The following language translations are in progress:',
+            selectLanguage: 'Select your language:',
+            languages: [
+                {
+                    englishName: 'English',
+                    nativeName: 'English',
+                    index: 'en',
+                }, {
+                    englishName: 'Slovak',
+                    nativeName: 'Slovenčina',
+                    index: 'sk',
+                },
+            ],
+            languagesInProgress: [
+                {
+                    englishName: 'African',
+                    nativeName: 'Africans',
+                }, {
+                    englishName: 'Czech',
+                    nativeName: 'čeština',
+                }, {
+                    englishName: 'Russian',
+                    nativeName: 'Rusky',
+                }, {
+                    englishName: 'Polish',
+                    nativeName: 'Polski',
+                },
+            ],
+            contribute: 'Contribute',
+        }
     }, //en end
     sk: {
         MENULINKS: [
@@ -335,7 +370,7 @@ export const LOCALIZED_STRINGS = {
             walletAddresses: 'Adresy peňaženky:',
             transactionExplorer: 'prieskumník transakcií',
         },
-        FOOTER: {
+        CONTACTS: {
             getInTouch: 'Spoj sa',
             contact: 'Kontakt',
             development: 'Rozvoj',
@@ -353,8 +388,43 @@ export const LOCALIZED_STRINGS = {
             difficulty: 'Obtiažnosť',
             downloadMiner: 'stiahnuť miner',
             miningPools: 'banské bazény',
+        },
+        FOOTER: {
             copyRights: 'Copyright © 2018-2020 Core Foundation. Všetky práva vyhradené.',
             websiteUpdate: 'Web naposledy aktualizovaný: 31. januára 2020',
         },
+        LANGUAGE_PAGE: {
+            title: 'Language Support',
+            description: 'Core Coin is a global project, and it is critical that corecoin.cc is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.',
+            languageInProgress: 'The following language translations are in progress:',
+            selectLanguage: 'Select your language:',
+            languages: [
+                {
+                    englishName: 'English',
+                    nativeName: 'English',
+                    index: 'en',
+                }, {
+                    englishName: 'Slovak',
+                    nativeName: 'Slovenčina',
+                    index: 'sk',
+                },
+            ],
+            languagesInProgress: [
+                {
+                    englishName: 'African',
+                    nativeName: 'Africans',
+                }, {
+                    englishName: 'Czech',
+                    nativeName: 'čeština',
+                }, {
+                    englishName: 'Russian',
+                    nativeName: 'Rusky',
+                }, {
+                    englishName: 'Polish',
+                    nativeName: 'Polski',
+                },
+            ],
+            contribute: 'Contribute',
+        }
     }, //sk end
 }
