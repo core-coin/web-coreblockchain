@@ -34,8 +34,8 @@ class LanguagePageContainer extends PureComponent {
 
 function mapStateToProps(state) {
     return{
-        translate: state.translate,
-        language: state.language,
+        translate: state.index.translate,
+        language: state.index.language,
     }
 }
 

@@ -1,7 +1,7 @@
 import { createReducer } from 'redux-act'
 import LocalizedStrings from 'react-localization'
 import { Cmd, loop } from 'redux-loop'
-import { useHistory } from 'react-router-dom'
+import { goBack } from 'connected-react-router'
 
 import { LOCALIZED_STRINGS } from '../constants'
 
@@ -16,11 +16,6 @@ const initialState = {
     difficulty: '0.00',
 }
 
-const getBack = () => {
-    let history = useHistory()
-    history.goBack()
-}
-
 const handleSetLanguage = (state, newLanguage) => {
     if(state.language != newLanguage) {
         const translate = state.translate
@@ -31,7 +26,7 @@ const handleSetLanguage = (state, newLanguage) => {
                 language: newLanguage,
                 translate: translate,
             },
-            Cmd.run(getBack)
+            Cmd.action(goBack())
         )
     }
 }
