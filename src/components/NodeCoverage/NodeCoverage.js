@@ -7,6 +7,7 @@ import {
 } from 'reactstrap'
 
 import Button from '../Button'
+import AnimatedArrow from '../AnimatedArrow'
 
 import './NodeCoverage.scss'
 
@@ -57,7 +58,7 @@ export default class NodeCoverage extends PureComponent{
                                         <div className='nodeCoverage_block__cards'>
                                             {nodesOnline.toString().split('').map(Number).map(this.renderDigit)}
                                         </div>
-                                        <a href='' className='nodeCoverage_block__link'>node statistics</a>
+                                        <AnimatedArrow centerMode text='node statistics' url=''/>
                                     </div>
                                 </Col>
                                 <Col sm='12' md='6'>

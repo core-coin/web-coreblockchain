@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 
 import PageContainer from './containers/PageContainer/PageContainer'
 import LanguagePageContainer from './containers/LanguagePageContainer/LanguagePageContainer'
+import GetStartedContainer from './containers/GetStartedContainer/GetStartedContainer'
 
 const store = Store()
 
@@ -23,6 +24,9 @@ export default class App extends PureComponent {
                             </Route>
                             <Route path='/language'>
                                 <LanguagePageContainer/>
+                            </Route>
+                            <Route path='/get-started'>
+                                <GetStartedContainer/>
                             </Route>
                         </Switch>
                     </Layout>

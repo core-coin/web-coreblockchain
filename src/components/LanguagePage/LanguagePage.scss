@@ -65,21 +65,6 @@
       }
       a {
         padding-top: 25px;
-        display: block;
-        color: var(--green);
-        font-family: Montserrat-Regular;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 2.1px;
-        line-height: 24px;
-        cursor: pointer;
-        &:hover{
-          text-decoration: none;
-          color: var(--green);
-        }
-        &::after {
-          content: '\27F6';
-        }
       }
     }
   }

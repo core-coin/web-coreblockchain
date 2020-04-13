@@ -36,13 +36,17 @@ export default class Tabs extends PureComponent{
         }
     }
 
+    componentDidMount(){
+        this.toggle(2)
+    }
+
     renderTabName = ( tab, index ) => {
         const { activeTab } = this.state
 
         return(
             <NavItem key={index}>
                 <NavLink
-                    className={activeTab==index ? 'active' : ''}
+                    className={activeTab === index ? 'active' : ''}
                     onClick={() => { this.toggle(index); }}
                 >
                     {tab.tabsName}

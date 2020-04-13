@@ -6,6 +6,8 @@ import {
     Col
 } from 'reactstrap'
 
+import AnimatedArrow from '../AnimatedArrow'
+
 import './Solutions.scss'
 
 export default class Solutions extends PureComponent{
@@ -30,7 +32,7 @@ export default class Solutions extends PureComponent{
                             <div className='solutions_block'>
                                 <h4>{SOLUTIONS.coreFoundation}</h4>
                                 <p>{SOLUTIONS.text}</p>
-                                <a href=''>{SOLUTIONS.link}</a>
+                                <AnimatedArrow text={SOLUTIONS.link} url=''/>
                             </div>
                         </Col>
                     </Row>
