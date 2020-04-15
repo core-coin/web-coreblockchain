@@ -39,6 +39,10 @@
   font-style: normal;
   src: url('../src/fonts/Montserrat-Regular.ttf') format('truetype');
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Montserrat-Light;

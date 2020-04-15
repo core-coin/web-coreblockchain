@@ -1,0 +1,66 @@
+.animatedArrow {
+  display: flex;
+  align-items: center;
+  color: var(--green);
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.1px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  &.center {
+    justify-content: center;
+  }
+  &:hover{
+    text-decoration: none;
+    color: var(--green);
+    .the-arrow {
+      .shaft{
+        width: 44px;
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+        background-color: var(--green);
+      }
+    }
+  }
+  .the-arrow {
+    width: 17px;
+    transition: all 0.2s;
+    padding-top: 2px;
+    padding-left: 10px;
+    & .shaft {
+      width: 17px;
+      background-color: var(--green);
+      display: block;
+      height: 1px;
+      position: relative;
+      transition: all 0.2s;
+      transition-delay: 0;
+      will-change: transform;
+      &:before,
+      &:after {
+        width: 5px;
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+        background-color: var(--green);
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.2s;
+        transform: rotate(0);
+      }
+      &:before {
+        transform-origin: top right;
+        transform: rotate(40deg);
+      }
+      &:after {
+        transform-origin: bottom right;
+        transform: rotate(-40deg)
+      }
+    }
+  }
+}

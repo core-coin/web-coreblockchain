@@ -1,14 +1,12 @@
 import React, { PureComponent } from 'react'
-import { func, object, string } from 'prop-types'
+import { object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {setLanguage} from '../../reducer/actions'
 
-import LanguagePage from '../../components/LanguagePage'
+import GetStarted from '../../components/GetStarted'
 
-class LanguagePageContainer extends PureComponent {
+class GetStartedContainer extends PureComponent {
     static propTypes = {
-        setLanguage: func,
         translate: object,
         language: string,
     }
@@ -18,16 +16,11 @@ class LanguagePageContainer extends PureComponent {
     render() {
         const {
             translate,
-            language,
-            setLanguage
+            language
         } = this.props
 
         return(
-            <LanguagePage
-                language={language}
-                translate={translate}
-                setLanguage={setLanguage}
-            />
+            <GetStarted translate={translate} language={language}/>
         )
     }
 }
@@ -40,8 +33,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    setLanguage: setLanguage,
 }, dispatch)
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(LanguagePageContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(GetStartedContainer)

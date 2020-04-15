@@ -1,4 +1,15 @@
-import SpaceAgencies from './images/spaceAgencies.png'
+import SpaceAgencies from './images/space.jpg'
+import Supply from './images/supply.jpg'
+import Trading from './images/trading.jpg'
+import Healthcare from './images/healthcare.jpg'
+import Energy from './images/energy.jpg'
+import Governmen from './images/egov.jpg'
+import Massmedia from './images/massmedia.jpg'
+import Defence from './images/defense.jpg'
+import Education from './images/education.jpg'
+import GIS from './images/GIS.jpg'
+import Telecommunications from './images/telecomunications.jpg'
+import Tokenization from './images/tokenization.jpg'
 
 export const LOCALIZED_STRINGS = {
     en: {
@@ -51,12 +62,12 @@ export const LOCALIZED_STRINGS = {
                     tabsName: 'Finance & Trading',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Trading,
                 }, {
                     tabsName: 'Healthcare & Wellness',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Healthcare,
                 }, {
                     tabsName: 'Space Agencies',
                     tabsContent: 'Manage data and decentralize algorithmic and automated decision-making.',
@@ -66,47 +77,47 @@ export const LOCALIZED_STRINGS = {
                     tabsName: 'Energy',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Energy,
                 }, {
                     tabsName: 'Supply Chain',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Supply,
                 }, {
                     tabsName: 'eGovernment & DAO’s',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Governmen,
                 }, {
                     tabsName: 'Mass Media & eSports',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Massmedia,
                 }, {
                     tabsName: 'GIScience',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: GIS,
                 }, {
                     tabsName: 'Defence & Security',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Defence,
                 }, {
                     tabsName: 'Asset Tokenization',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Tokenization,
                 }, {
                     tabsName: 'Education & Activities',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Education,
                 }, {
                     tabsName: 'Telecommunications',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Telecommunications,
                 },
             ],
         },
@@ -212,7 +223,89 @@ export const LOCALIZED_STRINGS = {
                 },
             ],
             contribute: 'Contribute',
-        }
+        },
+        GETSTERTED: {
+            menuLinks: [
+                {
+                    link: 'get_started',
+                    label: 'Get started',
+                }, {
+                    link: 'core_network',
+                    label: 'Core Network',
+                }, {
+                    link: 'core_foundation',
+                    label: 'Core Foundation',
+                }, {
+                    link: 'for_developers',
+                    label: 'For developers',
+                }, {
+                    link: 'core_mining',
+                    label: 'Core Mining',
+                }, {
+                    link: 'node_distributions',
+                    label: 'Node Distributions',
+                }, {
+                    link: 'faq',
+                    label: 'FAQ',
+                }
+            ],
+            coreSoftware: 'get',
+            coreSoftwareHighlight: 'core software',
+            coreSoftwareDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+            CoreWalletBlock: {
+                title: 'Core Wallet',
+                description: 'The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.',
+                dropdownLabel: 'Choose your operating system:',
+                dropdownList: [
+                    'Windows 10 (x64)',
+                    'Windows 10 (x32)',
+                ],
+                downloadBtn: 'Download',
+                torrentButton: 'Download via torrent',
+            },
+            CoreDaemonSoftware: {
+                title: 'Core Daemon software',
+                description: 'Go-core is the the command line interface for running a full Core node implemented in Go.',
+                dropdownLabel: 'Choose your operating system:',
+                dropdownList: [
+                    'Windows 10 (x64)',
+                    'Windows 10 (x32)',
+                ],
+                downloadBtn: 'Download',
+                torrentButton: 'Download via torrent',
+                publicKey: 'Public key',
+                key: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                publicKeyDescription: 'As a reminder, all release binaries are signed. You can manually verify the signatures with the command:',
+                linkToDownLoad: 'You can download the key',
+                here: 'here',
+            },
+            coreNetworkHightlight: 'core',
+            coreNetwork: 'network',
+            coreNetworkDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+            NodeStatus: {
+                title: 'Nodes status',
+                description: 'Charts and metrics for the Core network.',
+                link: 'Core stats'
+            },
+            CoreTransaction: {
+                title: 'Core transaction Explorer',
+                description: 'Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.',
+                link: 'core explorer'
+            },
+            coreMiningHightlight: 'core',
+            coreMining: 'Mining',
+            coreMiningDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+            CpuMiners: {
+                title: 'Core CPU miner',
+                description: 'Sentinel is a high performance Core (XCE) CPU miner written in C++.',
+                link: 'core explorer'
+            },
+            AndroidMiners: {
+                title: 'Android miner',
+                description: 'Auton miner based on Android system and support devices with ARM64 architecture.',
+                link: 'core explorer'
+            }
+        },
     }, //en end
     sk: {
         MENULINKS: [
@@ -264,12 +357,12 @@ export const LOCALIZED_STRINGS = {
                     tabsName: 'Financie a obchodovanie',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Trading,
                 }, {
                     tabsName: 'Zdravotníctvo & wellness',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Healthcare,
                 }, {
                     tabsName: 'Vesmírne agentúry',
                     tabsContent: 'Spravujte údaje a decentralizujte algoritmické a automatizované rozhodovanie.',
@@ -279,47 +372,47 @@ export const LOCALIZED_STRINGS = {
                     tabsName: 'Energie',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Energy,
                 }, {
                     tabsName: 'Zásobovací reťazec',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Supply,
                 }, {
                     tabsName: 'eGovernment & DAO',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Governmen,
                 }, {
                     tabsName: 'Hromadné médiá & eSports',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Massmedia,
                 }, {
                     tabsName: 'GIScience',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: GIS,
                 }, {
                     tabsName: 'Obrana & bezpečnosť',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Defence,
                 }, {
                     tabsName: 'Tokenization majetku',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Tokenization,
                 }, {
                     tabsName: 'Vzdelávanie & aktivity',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Education,
                 }, {
                     tabsName: 'Telekomunikácie',
                     tabsContent: '',
                     tabsLink: '',
-                    tabsImage: '',
+                    tabsImage: Telecommunications,
                 },
             ],
         },

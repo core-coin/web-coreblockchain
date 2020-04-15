@@ -5,6 +5,7 @@ vendor
 .bundle
 node_modules/
 .idea/
+.idea/*
 
 ### macOS ###
 # General

@@ -38,6 +38,8 @@ export default class HeroHeader extends PureComponent{
                                 theme='green'
                                 size='normal'
                                 text={HEROHEADER.actionBtn}
+                                type='router'
+                                href='/get-started'
                             />
                             <Button
                                 theme='ghost'

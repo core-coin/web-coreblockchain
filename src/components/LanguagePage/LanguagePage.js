@@ -7,6 +7,7 @@ import {
 } from 'reactstrap'
 
 import Check from '../Icon/icons/Check'
+import AnimatedArrow from '../AnimatedArrow'
 
 import './LanguagePage.scss'
 
@@ -36,7 +37,7 @@ export default class LanguagePage extends PureComponent{
                 <div className='languagePage_block__text'>
                     <p>{language.englishName}</p>
                     <span>{language.nativeName}</span>
-                    <a href=''>{this.props.translate.LANGUAGE_PAGE.contribute}</a>
+                    <AnimatedArrow url='' text={this.props.translate.LANGUAGE_PAGE.contribute} />
                 </div>
             </a>
         </Col>
