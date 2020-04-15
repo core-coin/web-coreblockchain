@@ -1,5 +1,5 @@
 {
-  "name": "core-chain",
+  "name": "web-core-blockchain",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
