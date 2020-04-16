@@ -20,9 +20,11 @@ export default class Search extends PureComponent{
 
     openSearchBar = () => {
         this.setState({
-            isSearchBarOpen: true,
+            isSearchBarOpen: !this.state.isSearchBarOpen,
         })
     }
+
+
 
     onSearchSubmit = () => {
         this.props.onSearch(this.searchInput.current.value)
