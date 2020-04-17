@@ -19,7 +19,7 @@ export default class Developers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: '2'
+            activeTab: 'Core Standards'
         }
     }
     static propTypes = {
@@ -34,18 +34,14 @@ export default class Developers extends PureComponent{
         }
     }
 
-    componentDidMount(){
-        this.toggle(2)
-    }
-
-    renderTabName = ( tab, index ) => {
+    renderTabName = ( tab ) => {
         const { activeTab } = this.state
 
         return(
-            <NavItem key={index}>
+            <NavItem key={tab.tabName}>
                 <NavLink
-                    className={activeTab === index ? 'active' : ''}
-                    onClick={() => { this.toggle(index); }}
+                    className={activeTab === tab.tabName ? 'active' : ''}
+                    onClick={() => { this.toggle(tab.tabName); }}
                 >
                     {tab.tabName}
                 </NavLink>
@@ -54,7 +50,7 @@ export default class Developers extends PureComponent{
     }
 
     renderTabContent = (tab, index) => (
-        <TabPane tabId={index} key={index}>
+        <TabPane tabId={tab.tabName} key={index}>
             <Row>
                 <Col sm="12">
                     <p>{tab.tabText}</p>

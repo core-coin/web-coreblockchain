@@ -41,6 +41,7 @@
         .nav-link {
           border: none;
           background-color: transparent;
+          cursor: pointer;
           &::before{
             @media (max-width: 767px) {
               content: none;
