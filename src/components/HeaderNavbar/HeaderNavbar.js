@@ -49,7 +49,7 @@ export default class HeaderNavbar extends PureComponent{
     componentDidMount () {
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset
-            if (currentScroll == 0) {
+            if (currentScroll === 0) {
                 body.classList.remove(scrollUp)
                 return
             }

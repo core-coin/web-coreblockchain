@@ -28,4 +28,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please, make sure to sign your commits.
 
 ## License
-[MIT License](LICENSE) CORE FOUNDATION, nadácia
+[MIT License](LICENSE.md) CORE FOUNDATION, nadácia
