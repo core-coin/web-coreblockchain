@@ -57,12 +57,6 @@ export default class GetStarted extends PureComponent{
         }
     }
 
-    onCopyClick = () => {
-        this.setState({
-            textToCopy: ''
-        })
-    }
-
     componentDidMount(){
         this.collectHeightMap()
         window.addEventListener('scroll', () => {
@@ -73,6 +67,10 @@ export default class GetStarted extends PureComponent{
 
     componentDidUpdate(){
         this.collectHeightMap()
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll', () => {})
     }
 
     render(){

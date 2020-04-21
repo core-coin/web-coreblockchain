@@ -6,7 +6,7 @@ import {
     Col
 } from 'reactstrap'
 
-import Check from '../Icon/icons/Check'
+import Check from '../SvgIcon/icons/Check'
 import AnimatedArrow from '../AnimatedArrow'
 
 import './LanguagePage.scss'

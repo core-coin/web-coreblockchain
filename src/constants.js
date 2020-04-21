@@ -12,10 +12,10 @@ import Education from './images/education.jpg'
 import GIS from './images/GIS.jpg'
 import Telecommunications from './images/telecomunications.jpg'
 import Tokenization from './images/tokenization.jpg'
-import Ubuntu from './components/Icon/icons/Ubuntu'
-import Debian from './components/Icon/icons/Debian'
-import Fedora from './components/Icon/icons/Fedora'
-import CentOS from './components/Icon/icons/CentOS'
+import Ubuntu from './components/SvgIcon/icons/Ubuntu'
+import Debian from './components/SvgIcon/icons/Debian'
+import Fedora from './components/SvgIcon/icons/Fedora'
+import CentOS from './components/SvgIcon/icons/CentOS'
 
 export const LOCALIZED_STRINGS = {
     en: {

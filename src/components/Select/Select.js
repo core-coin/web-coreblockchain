@@ -3,8 +3,8 @@ import { array, string, oneOf } from 'prop-types'
 import { Label, Input } from 'reactstrap'
 
 import Button from '../Button'
-import Download from '../Icon/icons/Download'
-import Torrent from '../Icon/icons/Torrent'
+import Download from '../SvgIcon/icons/Download'
+import Torrent from '../SvgIcon/icons/Torrent'
 
 import './Select.scss'
 

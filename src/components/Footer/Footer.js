@@ -6,7 +6,7 @@ import {
     Col
 } from 'reactstrap'
 
-import FooterLogo from '../Icon/icons/FooterLogo'
+import FooterLogo from '../SvgIcon/icons/FooterLogo'
 
 import './Footer.scss'
 

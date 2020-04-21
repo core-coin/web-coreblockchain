@@ -15,9 +15,9 @@ import Logo from '../../images/logo.png'
 
 import Search from '../Search'
 import Button from '../Button'
-import Menu from '../Icon/icons/Menu'
-import Close from '../Icon/icons/Close'
-import Language from '../Icon/icons/Language'
+import Menu from '../SvgIcon/icons/Menu'
+import Close from '../SvgIcon/icons/Close'
+import Language from '../SvgIcon/icons/Language'
 
 import './HeaderNavbar.scss'
 
@@ -62,6 +62,10 @@ export default class HeaderNavbar extends PureComponent{
             }
             lastScroll = currentScroll
         })
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll', () => {})
     }
 
     onOpenSidebar = () => {

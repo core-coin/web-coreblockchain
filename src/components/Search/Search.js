@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { func } from 'prop-types'
 
-import SearchIcon from '../Icon/icons/Search'
+import SearchIcon from '../SvgIcon/icons/Search'
 
 import './Search.scss'
 

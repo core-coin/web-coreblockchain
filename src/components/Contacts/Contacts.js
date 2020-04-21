@@ -7,12 +7,12 @@ import {
     Collapse
 } from 'reactstrap'
 
-import Cube from '../Icon/icons/Cube'
-import Cryptohub from '../Icon/icons/Cryptohub'
-import Github from '../Icon/icons/Github'
-import Discord from '../Icon/icons/Discord'
-import Twitter from '../Icon/icons/Twitter'
-import Plus from '../Icon/icons/Plus'
+import Cube from '../SvgIcon/icons/Cube'
+import Cryptohub from '../SvgIcon/icons/Cryptohub'
+import Github from '../SvgIcon/icons/Github'
+import Discord from '../SvgIcon/icons/Discord'
+import Twitter from '../SvgIcon/icons/Twitter'
+import Plus from '../SvgIcon/icons/Plus'
 import Button from '../Button'
 
 import './Contacts.scss'
@@ -79,11 +79,11 @@ export default class Contacts extends PureComponent{
                             <a href=''>{CONTACTS.brandIdentity}</a>
                         </div>
                             <div className='contacts_left__icons'>
-                                <a href=''> <Cube currentColor='46b549'/></a>
-                                <a href=''><Cryptohub currentColor='46b549'/></a>
-                                <a href=''><Github currentColor='46b549'/></a>
-                                <a href=''><Discord currentColor='46b549'/></a>
-                                <a href=''><Twitter currentColor='46b549'/></a>
+                                <a href=''><Cube/></a>
+                                <a href=''><Cryptohub/></a>
+                                <a href=''><Github/></a>
+                                <a href=''><Discord/></a>
+                                <a href=''><Twitter/></a>
                             </div>
                         </Col>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
@@ -136,11 +136,11 @@ export default class Contacts extends PureComponent{
                                             <a href=''>{CONTACTS.coreTalk}</a>
                                             <a href=''>{CONTACTS.brandIdentity}</a>
                                             <div className='icons'>
-                                                <a href=''> <Cube currentColor='46b549'/></a>
-                                                <a href=''><Cryptohub currentColor='46b549'/></a>
-                                                <a href=''><Github currentColor='46b549'/></a>
-                                                <a href=''><Discord currentColor='46b549'/></a>
-                                                <a href=''><Twitter currentColor='46b549'/></a>
+                                                <a href=''><Cube/></a>
+                                                <a href=''><Cryptohub/></a>
+                                                <a href=''><Github/></a>
+                                                <a href=''><Discord/></a>
+                                                <a href=''><Twitter/></a>
                                             </div>
                                         </Collapse>
                                     </Col>

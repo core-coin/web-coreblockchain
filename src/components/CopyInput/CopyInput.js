@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { string } from 'prop-types'
 
-import Copy from '../Icon/icons/Copy'
+import Copy from '../SvgIcon/icons/Copy'
 
 import './CopyInput.scss'
 

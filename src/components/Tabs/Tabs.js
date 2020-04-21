@@ -12,7 +12,7 @@ import {
 } from 'reactstrap'
 
 import Button from '../Button'
-import Pdf from '../Icon/icons/Pdf'
+import Pdf from '../SvgIcon/icons/Pdf'
 
 import './Tabs.scss'
 

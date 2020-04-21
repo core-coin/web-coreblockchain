@@ -11,8 +11,8 @@ import {
 
 import Button from '../Button'
 import CopyInput from '../CopyInput'
-import Download from '../Icon/icons/Download'
-import Torrent from '../Icon/icons/Torrent'
+import Download from '../SvgIcon/icons/Download'
+import Torrent from '../SvgIcon/icons/Torrent'
 
 import './GetStarted.scss'
 
