@@ -1,19 +1,10 @@
 import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
-import {
-    Label,
-    Input
-} from 'reactstrap'
 
-import Button from '../Button'
-import Download from '../Icon/icons/Download'
-import Torrent from '../Icon/icons/Torrent'
-import Copy from '../Icon/icons/Copy'
+import Select from '../Select'
+import CopyInput from '../CopyInput'
 
 import './GetStarted.scss'
-
-const DownloadIcon = <Download/>
-const TorrentIcon = <Torrent/>
 
 export class CoreSoftware extends PureComponent{
 static propTypes = {
@@ -21,9 +12,6 @@ static propTypes = {
         language: string,
     }
 
-    renderOption = (option, index) => (
-        <option key={index}>{option}</option>
-    )
 
     render(){
         const { translate } = this.props
@@ -35,59 +23,33 @@ static propTypes = {
                 <div className='downloadBlock coreWallet'>
                     <h3>{translate.CoreWalletBlock.title}</h3>
                     <p>{translate.CoreWalletBlock.description}</p>
-                    <Label for='coreWallet'>{translate.CoreWalletBlock.dropdownLabel}</Label>
-                    <Input type='select' name='select' id='coreWallet'>
-                        {translate.CoreWalletBlock.dropdownList.map(this.renderOption)}
-                    </Input>
-                    <Button
-                        mobileFullWidth
-                        theme='green'
-                        size='small'
-                        href=''
-                        text={translate.CoreWalletBlock.downloadBtn}
-                        icon={DownloadIcon}
-                    />
-                    <Button
-                        mobileFullWidth
-                        theme='ghost'
-                        size='small'
-                        href=''
-                        text={translate.CoreWalletBlock.torrentButton}
-                        icon={TorrentIcon}
+                    <Select
+                        type='buttons'
+                        id='coreWallet'
+                        labelText={translate.CoreWalletBlock.dropdownLabel}
+                        items={translate.CoreWalletBlock.osList}
+                        greenBtnText={translate.CoreWalletBlock.downloadBtn}
+                        ghostBtnText={translate.CoreWalletBlock.torrentButton}
+
                     />
                 </div>
 
                 <div className='downloadBlock'>
                     <h3>{translate.CoreDaemonSoftware.title}</h3>
                     <p>{translate.CoreDaemonSoftware.description}</p>
-                    <Label for='coreWallet'>{translate.CoreDaemonSoftware.dropdownLabel}</Label>
-                    <Input type='select' name='select' id='coreWallet'>
-                        {translate.CoreDaemonSoftware.dropdownList.map(this.renderOption)}
-                    </Input>
-                    <Button
-                        mobileFullWidth
-                        theme='green'
-                        size='small'
-                        href=''
-                        text={translate.CoreDaemonSoftware.downloadBtn}
-                        icon={DownloadIcon}
-                    />
-                    <Button
-                        mobileFullWidth
-                        theme='ghost'
-                        size='small'
-                        href=''
-                        text={translate.CoreDaemonSoftware.torrentButton}
-                        icon={TorrentIcon}
+                    <Select
+                        type='buttons'
+                        id='daemonSoftware'
+                        labelText={translate.CoreDaemonSoftware.dropdownLabel}
+                        items={translate.CoreDaemonSoftware.osList}
+                        greenBtnText={translate.CoreDaemonSoftware.downloadBtn}
+                        ghostBtnText={translate.CoreDaemonSoftware.torrentButton}
+
                     />
                     <hr/>
                     <h4>{translate.CoreDaemonSoftware.publicKey}</h4>
                     <p>{translate.CoreDaemonSoftware.publicKeyDescription}</p>
-                    <div className='input-group'>
-                        <input type='text' value={translate.CoreDaemonSoftware.key} readOnly />
-                        <hr className='vertical'/>
-                        <button type='button'><Copy/></button>
-                    </div>
+                    <CopyInput value={translate.CoreDaemonSoftware.key}/>
                     <p>{translate.CoreDaemonSoftware.linkToDownLoad} <a href=''>{translate.CoreDaemonSoftware.here}</a></p>
                 </div>
             </>

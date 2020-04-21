@@ -11,17 +11,17 @@ import {
     Col
 } from 'reactstrap'
 
+import Logo from '../../images/logo.png'
+
 import Search from '../Search'
 import Button from '../Button'
 import Menu from '../Icon/icons/Menu'
 import Close from '../Icon/icons/Close'
 import Language from '../Icon/icons/Language'
 
-const LanguageIcon = <Language/>
-
-import Logo from '../../images/CoreChain-logo.png'
-
 import './HeaderNavbar.scss'
+
+const LanguageIcon = <Language/>
 
 const body = document.body
 const scrollUp = 'scroll-up'

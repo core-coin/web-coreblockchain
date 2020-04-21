@@ -1,3 +1,5 @@
+import React from 'react'
+
 import SpaceAgencies from './images/space.jpg'
 import Supply from './images/supply.jpg'
 import Trading from './images/trading.jpg'
@@ -10,6 +12,10 @@ import Education from './images/education.jpg'
 import GIS from './images/GIS.jpg'
 import Telecommunications from './images/telecomunications.jpg'
 import Tokenization from './images/tokenization.jpg'
+import Ubuntu from './components/Icon/icons/Ubuntu'
+import Debian from './components/Icon/icons/Debian'
+import Fedora from './components/Icon/icons/Fedora'
+import CentOS from './components/Icon/icons/CentOS'
 
 export const LOCALIZED_STRINGS = {
     en: {
@@ -224,7 +230,7 @@ export const LOCALIZED_STRINGS = {
             ],
             contribute: 'Contribute',
         },
-        GETSTERTED: {
+        GETSTARTED: {
             menuLinks: [
                 {
                     link: 'get_started',
@@ -256,9 +262,17 @@ export const LOCALIZED_STRINGS = {
                 title: 'Core Wallet',
                 description: 'The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.',
                 dropdownLabel: 'Choose your operating system:',
-                dropdownList: [
-                    'Windows 10 (x64)',
-                    'Windows 10 (x32)',
+                osList: [
+                    {
+                        title: 'Windows 10 (x64)',
+                        linkToDownLoad: '',
+                        torrentLink: '',
+                    },
+                    {
+                        title: 'Windows 10 (x32)',
+                        linkToDownLoad: '',
+                        torrentLink: '',
+                    },
                 ],
                 downloadBtn: 'Download',
                 torrentButton: 'Download via torrent',
@@ -267,9 +281,17 @@ export const LOCALIZED_STRINGS = {
                 title: 'Core Daemon software',
                 description: 'Go-core is the the command line interface for running a full Core node implemented in Go.',
                 dropdownLabel: 'Choose your operating system:',
-                dropdownList: [
-                    'Windows 10 (x64)',
-                    'Windows 10 (x32)',
+                osList: [
+                    {
+                        title: 'Windows 10 (x64)',
+                        linkToDownLoad: '',
+                        torrentLink: '',
+                    },
+                    {
+                        title: 'Windows 10 (x32)',
+                        linkToDownLoad: '',
+                        torrentLink: '',
+                    },
                 ],
                 downloadBtn: 'Download',
                 torrentButton: 'Download via torrent',
@@ -292,6 +314,69 @@ export const LOCALIZED_STRINGS = {
                 description: 'Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.',
                 link: 'core explorer'
             },
+
+            nodeDistributionTitle: 'Node distribution',
+            nodeDistributionTabName: [
+                'ISO Image',
+                'Node distributor',
+                'Packages tool',
+            ],
+            downloadBtn: 'Download',
+            torrentButton: 'Download via torrent',
+            downloadScriptText: 'Verify your download by running this script:',
+            goToMarketplace: 'Go to marketplace',
+            isoImage: [
+                {
+                    title: 'Ubuntu',
+                    icon: <Ubuntu/>,
+                    downloadLink: '',
+                    torrentLink: '',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                },
+                {
+                    title: 'Debian',
+                    icon: <Debian/>,
+                    downloadLink: '',
+                    torrentLink: '',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                },
+                {
+                    title: 'Fedora',
+                    icon: <Fedora/>,
+                    downloadLink: '',
+                    torrentLink: '',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                },
+                {
+                    title: 'CentOS',
+                    icon: <CentOS/>,
+                    downloadLink: '',
+                    torrentLink: '',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                },
+            ],
+            nodeDistr: [
+                {
+                   title: 'Kubernetes',
+                   link: '',
+                },
+                {
+                    title: 'item',
+                    link: '',
+                },
+            ],
+            packageTool: [
+                {
+                    title: 'Advanced Package Tool [APT] (Ubuntu, Debian)',
+                },
+                {
+                    title: 'Advanced Package Tool [APT] (Ubuntu)',
+                },
+                {
+                    title: 'Advanced Package Tool [APT] (Debian)',
+                },
+            ],
+            packageToolScript: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             coreMiningHightlight: 'core',
             coreMining: 'Mining',
             coreMiningDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
