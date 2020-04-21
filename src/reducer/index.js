@@ -17,7 +17,7 @@ const initialState = {
 }
 
 const handleSetLanguage = (state, newLanguage) => {
-    if(state.language != newLanguage) {
+    if(state.language !== newLanguage) {
         const translate = state.translate
         translate.setLanguage(newLanguage)
         return loop (

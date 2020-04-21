@@ -40,7 +40,7 @@ export default class Select extends PureComponent{
     render(){
         const { id, labelText, items, greenBtnText, ghostBtnText, type } = this.props
 
-        let selectedItem = this.props.items.filter((item) => item.title == this.state.value)[0]
+        let selectedItem = this.props.items.filter((item) => item.title === this.state.value)[0]
 
         const SELECT = (
             <>
