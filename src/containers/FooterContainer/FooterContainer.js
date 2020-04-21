@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { object, string, number } from 'prop-types'
+import { object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -9,9 +9,6 @@ class FooterContainer extends PureComponent {
     static propTypes = {
         translate: object,
         language: string,
-        blockTime: number,
-        networkHashrate: number,
-        difficulty: number,
     }
 
     static defaultProps = {}
@@ -20,16 +17,10 @@ class FooterContainer extends PureComponent {
         const {
             translate,
             language,
-            blockTimer,
-            networkHashrate,
-            difficulty,
         } = this.props
 
         return(
             <Footer
-                blockTime={blockTimer}
-                networkHashrate={networkHashrate}
-                difficulty={difficulty}
                 language={language}
                 translate={translate}
             />
