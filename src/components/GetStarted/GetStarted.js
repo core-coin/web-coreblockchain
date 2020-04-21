@@ -42,9 +42,7 @@ export default class GetStarted extends PureComponent{
             let headerId = header.id
             headersMap.push([headerHeight, headerId])
         }
-        this.setState({
-            headersList: headersMap.reverse(),
-        })
+        this.state.headersList = headersMap.reverse()
     }
 
     updateActiveLink = (offset) => {
@@ -73,51 +71,55 @@ export default class GetStarted extends PureComponent{
         this.updateActiveLink(window.scrollY)
     }
 
+    componentDidUpdate(){
+        this.collectHeightMap()
+    }
+
     render(){
-        const { translate: { GETSTERTED }, language } = this.props
+        const { translate: { GETSTARTED }, language } = this.props
 
         return(
             <div className='getStarted'>
                 <Row className='getStarted_row'>
                     <Col sm='3' md='4' xl='4' className='hidden-xs getStarted_menu'>
                         <div className=''>
-                            <ul>{GETSTERTED.menuLinks.map(this.renderLinks)}</ul>
+                            <ul>{GETSTARTED.menuLinks.map(this.renderLinks)}</ul>
                         </div>
                     </Col>
-                    <Col sm='9'md={{ size: 8, offset: 4 }} xl={{ size: 6, offset: 5 }} className='getStarted_content'>
+                    <Col sm='9'md={{ size: 8, offset: 4 }} xl={{ size: 7, offset: 4 }} className='getStarted_content'>
                         <Container>
                             <Row>
                                 <Col>
                                     <div className='getStarted_content__block'>
                                         <span id='get_started' className='hiddenBlock'></span>
-                                        <CoreSoftware language={language} translate={GETSTERTED}/>
+                                        <CoreSoftware language={language} translate={GETSTARTED}/>
                                     </div>
                                     <div className='getStarted_content__block'>
                                         <span id='core_network' className='hiddenBlock'></span>
-                                        <CoreNetwork language={language} translate={GETSTERTED}/>
+                                        <CoreNetwork language={language} translate={GETSTARTED}/>
                                     </div>
 
-                                    <div className='getStarted_content__block'>
+                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
                                         <span id='core_foundation' className='hiddenBlock'></span>
                                         <h1 className="title">core_foundation</h1>
                                     </div>
 
-                                    <div className='getStarted_content__block'>
+                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
                                         <span id='for_developers' className='hiddenBlock'></span>
                                         <h1 className="title">for_developers</h1>
                                     </div>
 
                                     <div className='getStarted_content__block'>
                                         <span id='core_mining' className='hiddenBlock'></span>
-                                        <CoreMiners language={language} translate={GETSTERTED}/>
+                                        <CoreMiners language={language} translate={GETSTARTED}/>
                                     </div>
 
-                                    <div className='getStarted_content__block'>
+                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
                                         <span id='node_distributions' className='hiddenBlock'></span>
                                         <h1 className="title">node_distributions</h1>
                                     </div>
 
-                                    <div className='getStarted_content__block'>
+                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
                                         <span id='faq' className='hiddenBlock'></span>
                                         <h1 className="title">faq</h1>
                                     </div>

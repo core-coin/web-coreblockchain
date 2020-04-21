@@ -140,44 +140,6 @@
         margin: 50px 0 40px;
         border-color: var(--grey-darken);
       }
-      label {
-        margin-top: 43px;
-        color: var(--grey);
-        font-family: 'Red Hat Display';
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 30px;
-        @media (max-width: 767px) {
-          margin-top: 23px;
-        }
-      }
-      .form-control {
-        padding: 10px 20px;
-        margin-bottom: 20px;
-        height: 43px;
-        border-radius: 10px;
-        border: 1px solid var(--gray-darken);
-        background-color: var(--black-lighter);
-        color: var(--white);
-        font-family: 'Red Hat Display';
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        -webkit-appearance: none;
-        background-image:
-                linear-gradient(45deg, transparent 50%, var(--white) 50%),
-                linear-gradient(135deg, var(--white) 50%, transparent 50%);
-        background-position:
-                calc(100% - 20px) calc(1em + 2px),
-                calc(100% - 15px) calc(1em + 2px);
-        background-size:
-                5px 5px,
-                5px 5px;
-        background-repeat: no-repeat;
-        &:focus{
-          box-shadow: 0 0 5px 0 var(--green);
-        }
-      }
       .input-group {
         justify-content: space-between;
         height: 43px;
@@ -222,6 +184,103 @@
       }
       span {
 
+      }
+      .tabs_header {
+        @media (max-width: 767px) {
+          border-bottom: 1px solid #434359;
+        }
+        .nav-tabs {
+          border-bottom: 1px solid rgba(99, 99, 120, 0.2);
+          margin-top: 68px;
+          display: flex;
+          justify-content: space-between;
+          @media (max-width: 767px) {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            margin-top: 24px;
+            border-bottom: none;
+          }
+          .nav-link {
+            color: var(--gray);
+            font-family: Montserrat-Medium;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.6px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            padding:0 20px 21px 20px;
+            @media (max-width: 767px) {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              padding: 8px 16px;
+            }
+            &:hover{
+              border-bottom: 2px solid var(--green);
+              color: var(--white);
+            }
+            &.active {
+              background-color: transparent;
+              border-bottom: 2px solid var(--green);
+              color: var(--white);
+              @media (max-width: 767px) {
+                border-bottom: 2px solid var(--green);
+              }
+            }
+          }
+        }
+      }
+      .tab-content {
+        .isoImage {
+          .tabs_header {
+            .nav-tabs {
+              margin-top: 0;
+              border-bottom: none;
+              .nav-link {
+                width: 140px;
+                height: 140px;
+                border-radius: 10px;
+                border: 1px solid var(--grey-darken);
+                background-color: var(--black-lighter);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                color: var(--gray);
+                font-family: 'Red Hat Display';
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-transform: capitalize;
+                padding: 0;
+                svg {
+                  fill: #4d4d66;
+                  margin-bottom: 16px;
+                }
+                &:hover {
+                  border-color: var(--green);
+                  color: var(--white);
+                  svg {
+                    fill: var(--white);
+                  }
+                }
+                &.active {
+                  border-color: var(--green);
+                  color: var(--white);
+                  svg {
+                    fill: var(--white);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .tab-pane {
+          padding-top: 40px;
+        }
       }
     }
     .hiddenBlock {
