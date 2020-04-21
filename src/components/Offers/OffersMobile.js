@@ -9,12 +9,12 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import Decentralization from '../Icon/icons/Decentralization'
-import Security from '../Icon/icons/Security'
-import Interoperability from '../Icon/icons/Interoperability'
-import Persistence from '../Icon/icons/Persistence'
-import Coverage from '../Icon/icons/Coverage'
-import Intelligence from '../Icon/icons/Intelligence'
+import Decentralization from '../SvgIcon/icons/Decentralization'
+import Security from '../SvgIcon/icons/Security'
+import Interoperability from '../SvgIcon/icons/Interoperability'
+import Persistence from '../SvgIcon/icons/Persistence'
+import Coverage from '../SvgIcon/icons/Coverage'
+import Intelligence from '../SvgIcon/icons/Intelligence'
 
 import './Offers.scss'
 
