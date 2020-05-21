@@ -38,7 +38,7 @@ export default class GetStarted extends PureComponent{
         let headers = document.querySelectorAll('.hiddenBlock')
         let headersMap = []
         for (let header of headers) {
-            let headerHeight = header.offsetTop + 250
+            let headerHeight = header.offsetTop + 365
             let headerId = header.id
             headersMap.push([headerHeight, headerId])
         }
@@ -79,12 +79,12 @@ export default class GetStarted extends PureComponent{
         return(
             <div className='getStarted'>
                 <Row className='getStarted_row'>
-                    <Col sm='3' md='4' xl='4' className='hidden-xs getStarted_menu'>
+                    <Col md='3' xl='4' className='hidden-xs getStarted_menu'>
                         <div className=''>
                             <ul>{GETSTARTED.menuLinks.map(this.renderLinks)}</ul>
                         </div>
                     </Col>
-                    <Col sm='9'md={{ size: 8, offset: 4 }} xl={{ size: 7, offset: 4 }} className='getStarted_content'>
+                    <Col md={{ size: 9, offset: 3 }} xl={{ size: 7, offset: 4 }} className='getStarted_content'>
                         <Container>
                             <Row>
                                 <Col>

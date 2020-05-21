@@ -19,27 +19,27 @@ export default class LanguagePage extends PureComponent{
         setLanguage: func,
     }
 
-    renderLanguageBlock = (language, index) => (
-        <Col xs='12' sm='4' lg='3' key={index}>
-            <a className='languagePage_block' onClick={() => {this.props.setLanguage(language.index)}}>
+    renderLanguageBlock = (language) => (
+        <Col xs='12' sm='4' lg='3' key={language.code}>
+            <button className='languagePage_block' onClick={() => {this.props.setLanguage(language.code)}}>
                 <Check/>
                 <div className='languagePage_block__text'>
                     <p>{language.englishName}</p>
                     <span>{language.nativeName}</span>
                 </div>
-            </a>
+            </button>
         </Col>
     )
 
-    renderLanguageInProgress = (language, index) => (
-        <Col xs='12' sm='4' lg='3' key={index}>
-            <a className='languagePage_block big'>
+    renderLanguageInProgress = (language) => (
+        <Col xs='12' sm='4' lg='3' key={language.englishName}>
+            <button className='languagePage_block big'>
                 <div className='languagePage_block__text'>
                     <p>{language.englishName}</p>
                     <span>{language.nativeName}</span>
                     <AnimatedArrow url='' text={this.props.translate.LANGUAGE_PAGE.contribute} />
                 </div>
-            </a>
+            </button>
         </Col>
     )
 

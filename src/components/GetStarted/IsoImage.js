@@ -13,6 +13,10 @@ import Button from '../Button'
 import CopyInput from '../CopyInput'
 import Download from '../SvgIcon/icons/Download'
 import Torrent from '../SvgIcon/icons/Torrent'
+import Ubuntu from '../SvgIcon/icons/Ubuntu'
+import Debian from '../SvgIcon/icons/Debian'
+import Fedora from '../SvgIcon/icons/Fedora'
+import CentOS from '../SvgIcon/icons/CentOS'
 
 import './GetStarted.scss'
 
@@ -38,6 +42,16 @@ export class IsoImage extends PureComponent{
         }
     }
 
+    getIcon = (title) => {
+      const iconMap = {
+        Ubuntu: <Ubuntu/>,
+        Dedian: <Debian/>,
+        Fedora: <Fedora/>,
+        CentOS: <CentOS/>,
+      }
+      return iconMap[title]
+    }
+
     renderTabName = ( tab) => {
         const { activeTab } = this.state
 
@@ -47,7 +61,7 @@ export class IsoImage extends PureComponent{
                     className={activeTab === tab.title ? 'active' : ''}
                     onClick={() => { this.toggle(tab.title); }}
                 >
-                    {tab.icon}
+                    {this.getIcon(tab.title)}
                     {tab.title}
                 </NavLink>
             </NavItem>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import SpaceAgencies from './images/space.jpg'
 import Supply from './images/supply.jpg'
 import Trading from './images/trading.jpg'
@@ -12,10 +10,6 @@ import Education from './images/education.jpg'
 import GIS from './images/GIS.jpg'
 import Telecommunications from './images/telecomunications.jpg'
 import Tokenization from './images/tokenization.jpg'
-import Ubuntu from './components/SvgIcon/icons/Ubuntu'
-import Debian from './components/SvgIcon/icons/Debian'
-import Fedora from './components/SvgIcon/icons/Fedora'
-import CentOS from './components/SvgIcon/icons/CentOS'
 
 export const LOCALIZED_STRINGS = {
     en: {
@@ -206,11 +200,11 @@ export const LOCALIZED_STRINGS = {
                 {
                     englishName: 'English',
                     nativeName: 'English',
-                    index: 'en',
+                    code: 'en',
                 }, {
                     englishName: 'Slovak',
                     nativeName: 'Slovenčina',
-                    index: 'sk',
+                    code: 'sk',
                 },
             ],
             languagesInProgress: [
@@ -296,7 +290,7 @@ export const LOCALIZED_STRINGS = {
                 downloadBtn: 'Download',
                 torrentButton: 'Download via torrent',
                 publicKey: 'Public key',
-                key: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                OpenSSlKey: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 publicKeyDescription: 'As a reminder, all release binaries are signed. You can manually verify the signatures with the command:',
                 linkToDownLoad: 'You can download the key',
                 here: 'here',
@@ -328,28 +322,24 @@ export const LOCALIZED_STRINGS = {
             isoImage: [
                 {
                     title: 'Ubuntu',
-                    icon: <Ubuntu/>,
                     downloadLink: '',
                     torrentLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 },
                 {
                     title: 'Debian',
-                    icon: <Debian/>,
                     downloadLink: '',
                     torrentLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 },
                 {
                     title: 'Fedora',
-                    icon: <Fedora/>,
                     downloadLink: '',
                     torrentLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 },
                 {
                     title: 'CentOS',
-                    icon: <CentOS/>,
                     downloadLink: '',
                     torrentLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
@@ -580,11 +570,11 @@ export const LOCALIZED_STRINGS = {
                 {
                     englishName: 'English',
                     nativeName: 'English',
-                    index: 'en',
+                  code: 'en',
                 }, {
                     englishName: 'Slovak',
                     nativeName: 'Slovenčina',
-                    index: 'sk',
+                code: 'sk',
                 },
             ],
             languagesInProgress: [
@@ -603,6 +593,163 @@ export const LOCALIZED_STRINGS = {
                 },
             ],
             contribute: 'Contribute',
+        },
+      GETSTARTED: {
+        menuLinks: [
+          {
+            link: 'get_started',
+            label: 'Get started',
+          }, {
+            link: 'core_network',
+            label: 'Core Network',
+          }, {
+            link: 'core_foundation',
+            label: 'Core Foundation',
+          }, {
+            link: 'for_developers',
+            label: 'For developers',
+          }, {
+            link: 'core_mining',
+            label: 'Core Mining',
+          }, {
+            link: 'node_distributions',
+            label: 'Node Distributions',
+          }, {
+            link: 'faq',
+            label: 'FAQ',
+          }
+        ],
+        coreSoftware: 'get',
+        coreSoftwareHighlight: 'core software',
+        coreSoftwareDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+        CoreWalletBlock: {
+          title: 'Core Wallet',
+          description: 'The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.',
+          dropdownLabel: 'Choose your operating system:',
+          osList: [
+            {
+              title: 'Windows 10 (x64)',
+              linkToDownLoad: '',
+              torrentLink: '',
+            },
+            {
+              title: 'Windows 10 (x32)',
+              linkToDownLoad: '',
+              torrentLink: '',
+            },
+          ],
+          downloadBtn: 'Download',
+          torrentButton: 'Download via torrent',
+        },
+        CoreDaemonSoftware: {
+          title: 'Core Daemon software',
+          description: 'Go-core is the the command line interface for running a full Core node implemented in Go.',
+          dropdownLabel: 'Choose your operating system:',
+          osList: [
+            {
+              title: 'Windows 10 (x64)',
+              linkToDownLoad: '',
+              torrentLink: '',
+            },
+            {
+              title: 'Windows 10 (x32)',
+              linkToDownLoad: '',
+              torrentLink: '',
+            },
+          ],
+          downloadBtn: 'Download',
+          torrentButton: 'Download via torrent',
+          publicKey: 'Public key',
+          OpenSSlKey: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+          publicKeyDescription: 'As a reminder, all release binaries are signed. You can manually verify the signatures with the command:',
+          linkToDownLoad: 'You can download the key',
+          here: 'here',
+        },
+        coreNetworkHightlight: 'core',
+        coreNetwork: 'network',
+        coreNetworkDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+        NodeStatus: {
+          title: 'Nodes status',
+          description: 'Charts and metrics for the Core network.',
+          link: 'Core stats'
+        },
+        CoreTransaction: {
+          title: 'Core transaction Explorer',
+          description: 'Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.',
+          link: 'core explorer'
+        },
+
+        nodeDistributionTitle: 'Node distribution',
+        nodeDistributionTabName: [
+          'ISO Image',
+          'Node distributor',
+          'Packages tool',
+        ],
+        downloadBtn: 'Download',
+        torrentButton: 'Download via torrent',
+        downloadScriptText: 'Verify your download by running this script:',
+        goToMarketplace: 'Go to marketplace',
+        isoImage: [
+          {
+            title: 'Ubuntu',
+            downloadLink: '',
+            torrentLink: '',
+            script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+          },
+          {
+            title: 'Debian',
+            downloadLink: '',
+            torrentLink: '',
+            script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+          },
+          {
+            title: 'Fedora',
+            downloadLink: '',
+            torrentLink: '',
+            script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+          },
+          {
+            title: 'CentOS',
+            downloadLink: '',
+            torrentLink: '',
+            script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+          },
+        ],
+        nodeDistr: [
+          {
+            title: 'Kubernetes',
+            link: '',
+          },
+          {
+            title: 'item',
+            link: '',
+          },
+        ],
+        packageTool: [
+          {
+            title: 'Advanced Package Tool [APT] (Ubuntu, Debian)',
+          },
+          {
+            title: 'Advanced Package Tool [APT] (Ubuntu)',
+          },
+          {
+            title: 'Advanced Package Tool [APT] (Debian)',
+          },
+        ],
+        packageToolScript: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+        coreMiningHightlight: 'core',
+        coreMining: 'Mining',
+        coreMiningDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+        CpuMiners: {
+          title: 'Core CPU miner',
+          description: 'Sentinel is a high performance Core (XCE) CPU miner written in C++.',
+          link: 'core explorer'
+        },
+        AndroidMiners: {
+          title: 'Android miner',
+          description: 'Auton miner based on Android system and support devices with ARM64 architecture.',
+          link: 'core explorer'
         }
+      },
     }, //sk end
 }

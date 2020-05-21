@@ -22,7 +22,7 @@ export default class Tabs extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: 'Space Agencies'
+            activeTab: this.props.translate.TABS.tabs[0].tabsName
         }
     }
     static propTypes = {
