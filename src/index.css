@@ -72,6 +72,8 @@ body {
   font-weight: 400;
   letter-spacing: 6.4px;
   line-height: 22px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .description {

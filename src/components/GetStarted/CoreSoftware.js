@@ -49,7 +49,7 @@ static propTypes = {
                     <hr/>
                     <h4>{translate.CoreDaemonSoftware.publicKey}</h4>
                     <p>{translate.CoreDaemonSoftware.publicKeyDescription}</p>
-                    <CopyInput value={translate.CoreDaemonSoftware.key}/>
+                    <CopyInput value={translate.CoreDaemonSoftware.OpenSSlKey}/>
                     <p>{translate.CoreDaemonSoftware.linkToDownLoad} <a href=''>{translate.CoreDaemonSoftware.here}</a></p>
                 </div>
             </>

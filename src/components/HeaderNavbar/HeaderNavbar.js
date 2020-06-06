@@ -84,7 +84,7 @@ export default class HeaderNavbar extends PureComponent{
         const { translate: { MENULINKS } } = this.props
         const { isMenuOpen } = this.state
 
-        const isMobile = window.innerWidth <= 500;
+        const isMobile = window.innerWidth <= 768;
 
         return(
             <div className='headerNavbar'>
@@ -119,6 +119,8 @@ export default class HeaderNavbar extends PureComponent{
                                                         size='extraSmall'
                                                         hover={false}
                                                         href='/language'
+                                                        type='router'
+                                                        onClick={this.onCloseSidebar}
                                                     />
                                                 </div>
                                                 <Button mobileFullWidth text='Developer' />

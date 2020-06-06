@@ -7,16 +7,21 @@
   background-color: var(--black);
   width: 100%;
   z-index: 2;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   transition: transform 0.4s;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     height: 68px;
     .navbar-brand {
       img {
         width: 141px;
+      }
+    }
+    .navbar-expand-md {
+      .navbar-nav {
+        flex-direction: column;
       }
     }
   }

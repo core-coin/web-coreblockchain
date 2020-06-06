@@ -9,6 +9,7 @@
   line-height: 24px;
   cursor: pointer;
   transition: all 0.2s;
+  text-transform: uppercase;
   &.center {
     justify-content: center;
   }
@@ -27,7 +28,6 @@
   .the-arrow {
     width: 17px;
     transition: all 0.2s;
-    padding-top: 2px;
     padding-left: 10px;
     & .shaft {
       width: 17px;

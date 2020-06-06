@@ -68,7 +68,7 @@ export default class Button extends PureComponent {
 
         if (type === 'router') {
             return (
-                <Link to={href} className={className}>
+                <Link to={href} className={className} onClick={onClick}>
                     {this.renderBody()}
                 </Link>
             )

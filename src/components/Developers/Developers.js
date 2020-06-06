@@ -19,7 +19,7 @@ export default class Developers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: 'Core Standards'
+            activeTab: this.props.translate.DEVELOPERS.tabs[0].tabName,
         }
     }
     static propTypes = {

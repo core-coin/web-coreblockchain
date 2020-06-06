@@ -26,7 +26,7 @@ export default class HeroHeader extends PureComponent{
         return(
             <div className='heroHeader'>
                 <Container>
-                    <Row>
+                    <Row className='heroHeader_bg'>
                         <Col sm='12' lg={{ size: 10, offset: 1 }}>
                             <h1 className='title'>{HEROHEADER.title} <span>{HEROHEADER.highlightTitle}</span></h1>
                         </Col>
