@@ -28,4 +28,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please, make sure to sign your commits.
 
 ## License
-[MIT License](LICENSE.md) CORE FOUNDATION, nadácia
+
+This documentation is licensed under the CC0 1.0 Universal License - see the [LICENSE](LICENSE.md) file for details.
