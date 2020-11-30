@@ -1,132 +1,153 @@
-import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
-import {
-    Container,
-    Row,
-    Col
-} from 'reactstrap'
+import React, { PureComponent } from 'react' 
+import { object, string } from 'prop-types' 
+import { Container, Row, Col } from 'reactstrap' 
 
-import { CoreSoftware } from './CoreSoftware'
-import { CoreNetwork } from './CoreNetwork'
-import { CoreMiners } from './CoreMiners'
+import { CoreSoftware } from './CoreSoftware' 
+import { CoreNetwork } from './CoreNetwork' 
+import { CoreMiners } from './CoreMiners' 
 
-import './GetStarted.scss'
+import './GetStarted.scss' 
 
-export default class GetStarted extends PureComponent{
-    constructor(props) {
-        super(props)
-        this.state = {
-            activeLink: 'get_started',
-            headersList: [],
-            linksList: [],
-            textToCopy: '',
-        }
+export default class GetStarted extends PureComponent {
+  constructor(props) {
+    super(props) 
+    this.state = {
+      activeLink: 'get_started',
+      headersList: [],
+      linksList: [],
+      textToCopy: '',
+    } 
+  }
+
+  static propTypes = {
+    translate: object,
+    language: string,
+  } 
+
+  renderLinks = (links, index) => (
+    <li
+      key={index}
+      className={this.state.activeLink === links.link ? 'active' : ''}
+    >
+      <a href={'#' + links.link}>{links.label}</a>
+    </li>
+  ) 
+
+  collectHeightMap = () => {
+    let headers = document.querySelectorAll('.hiddenBlock') 
+    let headersMap = [] 
+    for (let header of headers) {
+      let headerHeight = header.offsetTop + 365 
+      let headerId = header.id 
+      headersMap.push([headerHeight, headerId]) 
     }
+    this.state.headersList = headersMap.reverse() 
+  } 
 
-    static propTypes = {
-        translate: object,
-        language: string,
+  updateActiveLink = (offset) => {
+    for (let headerInfo of this.state.headersList) {
+      if (headerInfo[0] <= offset) {
+        let headerId = headerInfo[1] 
+        this.setState({
+          activeLink: headerId,
+        }) 
+        return 
+      }
     }
+  } 
 
-    renderLinks = (links, index) => (
-        <li key={index} className={this.state.activeLink === links.link ? 'active' : ''}>
-            <a href={'#'+links.link}>{links.label}</a>
-        </li>
-    )
+  componentDidMount() {
+    this.collectHeightMap() 
+    window.addEventListener('scroll', () => {
+      this.updateActiveLink(window.scrollY) 
+    }) 
+    this.updateActiveLink(window.scrollY) 
+  }
 
-    collectHeightMap = () => {
-        let headers = document.querySelectorAll('.hiddenBlock')
-        let headersMap = []
-        for (let header of headers) {
-            let headerHeight = header.offsetTop + 365
-            let headerId = header.id
-            headersMap.push([headerHeight, headerId])
-        }
-        this.state.headersList = headersMap.reverse()
-    }
+  componentDidUpdate() {
+    this.collectHeightMap() 
+  }
 
-    updateActiveLink = (offset) => {
-        for (let headerInfo of this.state.headersList) {
-            if (headerInfo[0] <= offset) {
-                let headerId = headerInfo[1]
-                this.setState({
-                    activeLink: headerId
-                })
-                return
-            }
-        }
-    }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', () => {}) 
+  }
 
-    componentDidMount(){
-        this.collectHeightMap()
-        window.addEventListener('scroll', () => {
-            this.updateActiveLink(window.scrollY)
-        })
-        this.updateActiveLink(window.scrollY)
-    }
+  render() {
+    const {
+      translate: { GETSTARTED },
+      language,
+    } = this.props 
 
-    componentDidUpdate(){
-        this.collectHeightMap()
-    }
+    return (
+      <div className='getStarted'>
+        <Container>
+          <Row className='getStarted_row'>
+            <Col md='3' xl='4' className='hidden-xs getStarted_menu'>
+              <div className=''>
+                <ul>{GETSTARTED.menuLinks.map(this.renderLinks)}</ul>
+              </div>
+            </Col>
+            <Col
+              md={{ size: 9, offset: 3 }}
+              xl={{ size: 8, offset: 4 }}
+              className='getStarted_content'
+            >
+              <Row>
+                <Col>
+                  <div className='getStarted_content__block'>
+                    <span id='get_started' className='hiddenBlock'></span>
+                    <CoreSoftware language={language} translate={GETSTARTED} />
+                  </div>
+                  <div className='getStarted_content__block'>
+                    <span id='core_network' className='hiddenBlock'></span>
+                    <CoreNetwork language={language} translate={GETSTARTED} />
+                  </div>
 
-    componentWillUnmount(){
-        window.removeEventListener('scroll', () => {})
-    }
+                  <div
+                    className='getStarted_content__block'
+                    style={{ height: 300 + 'px' }}
+                  >
+                    <span id='core_foundation' className='hiddenBlock'></span>
+                    <h1 className='title'>core_foundation</h1>
+                  </div>
 
-    render(){
-        const { translate: { GETSTARTED }, language } = this.props
+                  <div
+                    className='getStarted_content__block'
+                    style={{ height: 300 + 'px' }}
+                  >
+                    <span id='for_developers' className='hiddenBlock'></span>
+                    <h1 className='title'>for_developers</h1>
+                  </div>
 
-        return(
-            <div className='getStarted'>
-                <Row className='getStarted_row'>
-                    <Col md='3' xl='4' className='hidden-xs getStarted_menu'>
-                        <div className=''>
-                            <ul>{GETSTARTED.menuLinks.map(this.renderLinks)}</ul>
-                        </div>
-                    </Col>
-                    <Col md={{ size: 9, offset: 3 }} xl={{ size: 7, offset: 4 }} className='getStarted_content'>
-                        <Container>
-                            <Row>
-                                <Col>
-                                    <div className='getStarted_content__block'>
-                                        <span id='get_started' className='hiddenBlock'></span>
-                                        <CoreSoftware language={language} translate={GETSTARTED}/>
-                                    </div>
-                                    <div className='getStarted_content__block'>
-                                        <span id='core_network' className='hiddenBlock'></span>
-                                        <CoreNetwork language={language} translate={GETSTARTED}/>
-                                    </div>
+                  <div className='getStarted_content__block'>
+                    <span id='core_mining' className='hiddenBlock'></span>
+                    <CoreMiners language={language} translate={GETSTARTED} />
+                  </div>
 
-                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
-                                        <span id='core_foundation' className='hiddenBlock'></span>
-                                        <h1 className="title">core_foundation</h1>
-                                    </div>
+                  <div
+                    className='getStarted_content__block'
+                    style={{ height: 300 + 'px' }}
+                  >
+                    <span
+                      id='node_distributions'
+                      className='hiddenBlock'
+                    ></span>
+                    <h1 className='title'>node_distributions</h1>
+                  </div>
 
-                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
-                                        <span id='for_developers' className='hiddenBlock'></span>
-                                        <h1 className="title">for_developers</h1>
-                                    </div>
-
-                                    <div className='getStarted_content__block'>
-                                        <span id='core_mining' className='hiddenBlock'></span>
-                                        <CoreMiners language={language} translate={GETSTARTED}/>
-                                    </div>
-
-                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
-                                        <span id='node_distributions' className='hiddenBlock'></span>
-                                        <h1 className="title">node_distributions</h1>
-                                    </div>
-
-                                    <div className='getStarted_content__block' style={{height: 300+'px'}}>
-                                        <span id='faq' className='hiddenBlock'></span>
-                                        <h1 className="title">faq</h1>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Container>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
+                  <div
+                    className='getStarted_content__block'
+                    style={{ height: 300 + 'px' }}
+                  >
+                    <span id='faq' className='hiddenBlock'></span>
+                    <h1 className='title'>faq</h1>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    ) 
+  }
 }

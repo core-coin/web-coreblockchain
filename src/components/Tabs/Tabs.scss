@@ -42,6 +42,7 @@
           border: none;
           background-color: transparent;
           cursor: pointer;
+          color: var(--grey);
           &::before{
             @media (max-width: 767px) {
               content: none;

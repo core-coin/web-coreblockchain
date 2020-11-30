@@ -6,30 +6,29 @@ import {
     Col
 } from 'reactstrap'
 
-import Button from '../Button'
-import AnimatedArrow from '../AnimatedArrow'
-
 import './NodeCoverage.scss'
+import Luna from '../SvgIcon/icons/Luna'
 
 export default class NodeCoverage extends PureComponent{
     static propTypes = {
         nodesOnline: number,
         totalTransactions: number,
+        nodeStatistics: string,
         totalBlocks: number,
-        volume: number,
-        pricePerCoin: number,
-        walletAddresses: number,
+        blocktime: number,
+        marketCap: number,
+        price: number,
         language: string,
         translate: object,
     }
 
     static defaultProps = {
-        nodesOnline: 1074,
+        nodesOnline: 100,
         totalTransactions: 548.076,
         totalBlocks: 8.266707,
-        volume: 8453,
-        pricePerCoin: 0.0193,
-        walletAddresses: 85.491,
+        blocktime: 5,
+        marketCap: 100000000,
+        price: 0.01,
     }
 
     renderDigit = (item, index) => (
@@ -39,7 +38,7 @@ export default class NodeCoverage extends PureComponent{
     )
 
     render(){
-        const { totalTransactions, totalBlocks, volume, pricePerCoin, walletAddresses, nodesOnline, translate: { NODECOVERAGE } } = this.props
+        const { totalTransactions, totalBlocks, blocktime, marketCap, price, nodesOnline, translate: { NODECOVERAGE } } = this.props
 
         return(
             <div className='nodeCoverage'>
@@ -47,7 +46,7 @@ export default class NodeCoverage extends PureComponent{
                     <Row>
                         <Col sm='12' lg={{ size: 8, offset: 2 }}>
                             <h3 className='preTitle'>{NODECOVERAGE.preTitle}</h3>
-                            <h1 className='title'>{NODECOVERAGE.title} <span>{NODECOVERAGE.highlightTitle}</span></h1>
+                            <h1 className='title'><span>{NODECOVERAGE.prehighlightTitle}</span>{NODECOVERAGE.title} <span>{NODECOVERAGE.highlightTitle}</span></h1>
                             <p className='description'>{NODECOVERAGE.description}</p>
                         </Col>
                         <Col sm='12' lg={{ size: 10, offset: 1 }}>
@@ -57,8 +56,19 @@ export default class NodeCoverage extends PureComponent{
                                         <h2>{NODECOVERAGE.nodesOnline}</h2>
                                         <div className='nodeCoverage_block__cards'>
                                             {nodesOnline.toString().split('').map(Number).map(this.renderDigit)}
+                                            <div className='nodeCoverage_block__cards-card'>
+                                                <span>k</span>
+                                            </div>
+                                            <div className='nodeCoverage_block__cards-card'>
+                                                <span>m</span>
+                                            </div>
                                         </div>
-                                        <AnimatedArrow centerMode text='node statistics' url=''/>
+                                       <div className='text-center'>
+                                       <span>{NODECOVERAGE.nodeStatistics}</span>
+                                       <div className='text-center nodeCoverage_block-img'>
+                                            <Luna />
+                                       </div>
+                                       </div>
                                     </div>
                                 </Col>
                                 <Col sm='12' md='6'>
@@ -74,27 +84,19 @@ export default class NodeCoverage extends PureComponent{
                                                 <span>{totalBlocks}</span>
                                             </li>
                                             <li>
-                                                {NODECOVERAGE.volume}
-                                                <span>{volume}</span>
+                                                {NODECOVERAGE.blocktime}
+                                                <span>{blocktime} sec.</span>
                                             </li>
                                             <li>
-                                                {NODECOVERAGE.pricePerCoin}
-                                                <span>$ {pricePerCoin}</span>
+                                                {NODECOVERAGE.marketCap}
+                                                <span>€ {marketCap}</span>
                                             </li>
                                             <li>
-                                                {NODECOVERAGE.walletAddresses}
-                                                <span>{walletAddresses}</span>
+                                                {NODECOVERAGE.price}
+                                                <span>€ {price}</span>
                                             </li>
                                         </ul>
                                     </div>
-                                </Col>
-                                <Col className='text-center'>
-                                    <Button
-                                        theme='green'
-                                        size='normal'
-                                        text={NODECOVERAGE.transactionExplorer}
-                                        href=''
-                                    />
                                 </Col>
                             </Row>
                         </Col>

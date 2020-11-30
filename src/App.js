@@ -9,6 +9,7 @@ import Layout from './components/Layout'
 import PageContainer from './containers/PageContainer/PageContainer'
 import LanguagePageContainer from './containers/LanguagePageContainer/LanguagePageContainer'
 import GetStartedContainer from './containers/GetStartedContainer/GetStartedContainer'
+import DevelopersContainer from './containers/DevelopersContainer'
 
 const store = Store()
 
@@ -27,6 +28,9 @@ export default class App extends PureComponent {
                             </Route>
                             <Route path='/get-started'>
                                 <GetStartedContainer/>
+                            </Route>
+                            <Route path='/developers'>
+                                <DevelopersContainer/>
                             </Route>
                         </Switch>
                     </Layout>

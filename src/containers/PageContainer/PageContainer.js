@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, func, object, string } from 'prop-types'
+import { number, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 

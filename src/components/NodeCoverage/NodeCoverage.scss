@@ -34,13 +34,19 @@
   &_block {
     border-radius: 14px;
     border: 1px solid #323242;
-    padding: 13% 15%;
+    padding: 13% 10%;
     margin-top: 10%;
     margin-bottom: 20%;
     backdrop-filter: blur(10px);
     @media (max-width: 767px) {
       padding: 12% 5%;
       margin-bottom: 0;
+    }
+    &-img {
+      padding: 16px 0 0 62px;
+    }
+    span {
+      color: var(--grey);
     }
     h4 {
       color: var(--white);
@@ -100,6 +106,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        margin: 0 4px;
         &::before {
           content: '';
           border-bottom: 1px solid #323242;

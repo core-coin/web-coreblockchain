@@ -28,16 +28,16 @@ export default class Contacts extends PureComponent{
 
     static propTypes = {
         blockTime: number,
-        networkHashrate: number,
+        algorithm: string,
         difficulty: number,
         translate: object,
         language: string,
     }
 
     static defaultProps = {
-        blockTime: 13.60,
-        networkHashrate: 143.1,
-        difficulty: 0.00,
+        blockTime: 200,
+        algorithm: 'RandomY',
+        difficulty: 333,
     }
 
     onToggleContact = () => {
@@ -53,7 +53,7 @@ export default class Contacts extends PureComponent{
     }
 
     render(){
-        const { blockTime, networkHashrate, difficulty, translate: { CONTACTS } } = this.props
+        const { blockTime, algorithm, difficulty, translate: { CONTACTS } } = this.props
 
         const { isContactOpen, isLinksOpen } = this.state
 
@@ -67,15 +67,17 @@ export default class Contacts extends PureComponent{
                             <h2>{CONTACTS.getInTouch}</h2>
                             <div className='contacts_left__block'>
                                 <p>{CONTACTS.contact}</p>
-                                <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
+                                <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
                             </div><div className='contacts_left__block'>
                             <p>{CONTACTS.development}</p>
-                            <a href='mailto:developer@.corecoin.cc'>developer@.corecoin.cc</a>
-                        </div><div className='contacts_left__block'>
-                            <p>{CONTACTS.usefulLinks}</p>
+                            <a href=''>{CONTACTS.developerPortals}</a>
                             <a href=''>{CONTACTS.improvementProposals}</a>
-                            <a href=''>{CONTACTS.coreFoundation}</a>
                             <a href=''>{CONTACTS.coreTalk}</a>
+                        </div><div className='contacts_left__block'>
+                            <p>{CONTACTS.usefulLinks}</p> 
+                            <a href=''>{CONTACTS.openSource}</a>
+                            <a href=''>{CONTACTS.reportBug}</a>
+                            <a href=''>{CONTACTS.tradeMark}</a>
                             <a href=''>{CONTACTS.brandIdentity}</a>
                         </div>
                             <div className='contacts_left__icons'>
@@ -87,21 +89,21 @@ export default class Contacts extends PureComponent{
                             </div>
                         </Col>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
-                            <h3 className='preTitle'>{CONTACTS.getStarted}</h3>
+                            <h3 className='preTitle'>{CONTACTS.random}</h3>
                             <h1 className='title'>{CONTACTS.core} <span>{CONTACTS.mining}</span></h1>
                             <p className='description'>{CONTACTS.description}</p>
                             <div className='contacts_right__info'>
                                 <div className='contacts_right__info-block'>
                                     <p>{CONTACTS.blockTime}</p>
-                                    <span>{blockTime}s</span>
+                                    <span>{blockTime} H/s</span>
                                 </div>
                                 <div className='contacts_right__info-block'>
-                                    <p>{CONTACTS.networkHashrate}</p>
-                                    <span>{networkHashrate} TH/s</span>
+                                    <p>{CONTACTS.algorithm}</p>
+                                    <span>{algorithm}</span>
                                 </div>
                                 <div className='contacts_right__info-block'>
                                     <p>{CONTACTS.difficulty}</p>
-                                    <span>{difficulty} H</span>
+                                    <span>{difficulty} TH/s</span>
                                 </div>
                             </div>
                             <div className='contacts_right__button'>
