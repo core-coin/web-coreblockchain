@@ -31,18 +31,6 @@ export default class LanguagePage extends PureComponent{
         </Col>
     )
 
-    renderLanguageInProgress = (language) => (
-        <Col xs='12' sm='4' lg='3' key={language.englishName}>
-            <button className='languagePage_block big'>
-                <div className='languagePage_block__text'>
-                    <p>{language.englishName}</p>
-                    <span>{language.nativeName}</span>
-                    <AnimatedArrow url='' text={this.props.translate.LANGUAGE_PAGE.contribute} />
-                </div>
-            </button>
-        </Col>
-    )
-
     render(){
         const { translate: { LANGUAGE_PAGE } } = this.props
 
@@ -60,11 +48,10 @@ export default class LanguagePage extends PureComponent{
                                 {LANGUAGE_PAGE.languages.map(this.renderLanguageBlock)}
                             </Row>
                         </Col>
-                        <Col xs='12'sm='12' md='12' xl='10' className='languagePage_inProgress'>
-                            <p className='description'>{LANGUAGE_PAGE.languageInProgress}</p>
-                            <Row>
-                                {LANGUAGE_PAGE.languagesInProgress.map(this.renderLanguageInProgress)}
-                            </Row>
+                        <Col xs='12'sm='12' md='12' xl='10' className='languagePage_program'>
+                            <h3>{LANGUAGE_PAGE.translationProgram}</h3>
+                                <p className='description'>{LANGUAGE_PAGE.translationDescription}</p>
+                            <AnimatedArrow text={LANGUAGE_PAGE.translationProgram} url='/language-program'/>
                         </Col>
                     </Row>
                 </Container>

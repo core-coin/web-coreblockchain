@@ -1,4 +1,17 @@
 .search {
+  width: min-content;
+  &__overlay {
+    width: 98vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  @media (min-width: 1200px) {
+    &__overlay {
+      left: -67vw;
+    }
+  }
   .search_box {
     position:relative;
     min-width:43px;
@@ -8,7 +21,7 @@
     overflow:hidden;
     transition: width 0.5s;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 9px;
     @media (max-width: 768px) {
       width: 95%;
       float: left;
@@ -64,6 +77,11 @@
       .search_box__submit {
         border-radius: 0 10px 10px 0;
         border-left: none;
+      }
+    }
+    @media (min-width: 900px) {
+      &__open {
+        width: 575%;
       }
     }
   }

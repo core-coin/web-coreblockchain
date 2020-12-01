@@ -24,8 +24,6 @@ export default class Search extends PureComponent{
         })
     }
 
-
-
     onSearchSubmit = () => {
         this.props.onSearch(this.searchInput.current.value)
     }
@@ -35,6 +33,7 @@ export default class Search extends PureComponent{
 
         return(
             <div className='search'>
+                <div className={isSearchBarOpen ? 'search__overlay' : 'd-none'}  onClick={this.openSearchBar}></div>
                 <label className={isSearchBarOpen ? 'search_box search_box__open' : 'search_box'} >
                     <input
                         type='search'

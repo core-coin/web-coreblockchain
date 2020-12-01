@@ -81,7 +81,7 @@ export default class HeaderNavbar extends PureComponent{
     }
 
     render(){
-        const { translate: { MENULINKS } } = this.props
+        const { translate: { MENULINKS, HEROHEADER } } = this.props
         const { isMenuOpen } = this.state
 
         const isMobile = window.innerWidth <= 768;
@@ -144,7 +144,12 @@ export default class HeaderNavbar extends PureComponent{
                                                 href='/language'
                                                 type='router'
                                             />
-                                            <Button text='Developer' />
+                                            <Button 
+                                             theme='green'
+                                             text={HEROHEADER.actionBtn}
+                                             type='router'
+                                             href='/get-started'
+                                              />
                                         </div>
                                     </div>
                                 }

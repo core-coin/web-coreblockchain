@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 
 import PageContainer from './containers/PageContainer/PageContainer'
 import LanguagePageContainer from './containers/LanguagePageContainer/LanguagePageContainer'
+import LanguageTranslatePageContainer from './containers/LanguageTranslatePageContainer/LanguageTranslatePageContainer'
 import GetStartedContainer from './containers/GetStartedContainer/GetStartedContainer'
 import DevelopersContainer from './containers/DevelopersContainer'
 
@@ -25,6 +26,9 @@ export default class App extends PureComponent {
                             </Route>
                             <Route path='/language'>
                                 <LanguagePageContainer/>
+                            </Route>
+                            <Route path='/language-program'>
+                                <LanguageTranslatePageContainer/>
                             </Route>
                             <Route path='/get-started'>
                                 <GetStartedContainer/>

@@ -6,7 +6,7 @@ import {
     Col
 } from 'reactstrap'
 
-import FooterLogo from '../SvgIcon/icons/FooterLogo'
+import Logo from '../../images/logo.png'
 
 import './Footer.scss'
 
@@ -26,7 +26,9 @@ export default class Footer extends PureComponent{
                     <Row>
                         <Col>
                             <div className='text-center footer_logo'>
-                                <FooterLogo/>
+                                <div>
+                                    <img src={Logo} alt="Core Chain"/>
+                                </div>
                                 <p className='text-center'>{FOOTER.copyRights}</p>
                                 <p className='text-center'>{FOOTER.websiteUpdate}</p>
                             </div>

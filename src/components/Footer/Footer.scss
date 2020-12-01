@@ -1,11 +1,10 @@
 .footer {
-  border-top: 1px solid #292936;
   background-color: var(--black-darken);
   background-image: url(../../images/sphere_footer_3.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
-  padding-bottom: 20%;
+  padding-bottom: 26%;
   z-index: 1;
   position: relative;
   @media (max-width: 767px) {

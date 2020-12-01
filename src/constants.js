@@ -198,9 +198,12 @@ export const LOCALIZED_STRINGS = {
         },
         LANGUAGE_PAGE: {
             title: 'Language Support',
-            description: 'Core Coin is a global project, and it is critical that corecoin.cc is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.',
+            description: 'We are serving all people Worldwide, any language any nationality. Please, contribute to translations to make this vision a reality.',
             languageInProgress: 'The following language translations are in progress:',
             selectLanguage: 'Select your language:',
+            translationProgram: 'Translation Program',
+            translationDescription: 'Core Blockchain translators are always translating pages in as many languages as possible. To see what they\'re working on right now or to sign up or to join them.',
+            translationText: 'Interested in translating? Get involved! We\'re seeking volunteers to join translation community.',
             languages: [
                 {
                     englishName: 'English',
@@ -214,20 +217,37 @@ export const LOCALIZED_STRINGS = {
             ],
             languagesInProgress: [
                 {
-                    englishName: 'African',
+                    englishName: 'Africaans',
                     nativeName: 'Africans',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 }, {
                     englishName: 'Czech',
                     nativeName: 'čeština',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 }, {
                     englishName: 'Russian',
                     nativeName: 'Rusky',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 }, {
                     englishName: 'Polish',
                     nativeName: 'Polski',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 },
             ],
             contribute: 'Contribute',
+            toJoin: 'How to join?',
+            joinListLink: 'Open an issue.',
+            joinListOne: 'Join our translation instance.',
+            joinListTwo: 'You will need to create a Translate account if you don’t already have one.',
+            joinListThree: 'Find the language you want to translate and select a document.',
+            joinListFour: 'If translation progress is below 100%, please contribute! Don’t see your language listed?',
+            joinListFive: 'Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.',
+            joinListSix: 'Once the review is complete (i.e. review progress is 100%), we will add it to the website.',
+            translationInProgress: 'In-progress translations',
         },
         GETSTARTED: {
             menuLinks: [
@@ -572,10 +592,12 @@ export const LOCALIZED_STRINGS = {
             websiteUpdate: 'Stránka naposledy aktualizovaná: 31. januára 2020',
         },
         LANGUAGE_PAGE: {
-            title: 'Language Support',
-            description: 'Core Coin is a global project, and it is critical that corecoin.cc is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.',
-            languageInProgress: 'The following language translations are in progress:',
-            selectLanguage: 'Select your language:',
+            title: 'Podpora jazyka',
+            description: 'Slúžime všetkým ľuďom na celom svete v akomkoľvek jazyku akejkoľvek národnosti. Prispejte prosím k prekladom, aby sa táto vízia stala skutočnosťou.',
+            languageInProgress: 'Nasledujúce jazykové preklady sú v príprave:',
+            selectLanguage: 'Vyberte si jazyk:',
+            translationProgram: '',
+            translationDescription: '',
             languages: [
                 {
                     englishName: 'English',
@@ -603,6 +625,17 @@ export const LOCALIZED_STRINGS = {
                 },
             ],
             contribute: 'Contribute',
+            toJoin: 'How to join?',
+            joinListLink: 'Open an issue.',
+            joinListOne: 'Join our translation instance.',
+            joinListTwo: 'You will need to create a Translate account if you don’t already have one.',
+            joinListThree: 'Find the language you want to translate and select a document.',
+            joinListFour: 'If translation progress is below 100%, please contribute! Don’t see your language listed?',
+            joinListFive: 'Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.',
+            joinListSix: 'Once the review is complete (i.e. review progress is 100%), we will add it to the website.',
+            translationInProgress: 'In-progress translations',
+            translationProgress: 'Translation progress',
+            reviewProgress: 'Review progress',
         },
       GETSTARTED: {
         menuLinks: [
