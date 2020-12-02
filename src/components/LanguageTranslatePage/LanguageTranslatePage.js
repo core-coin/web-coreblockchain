@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
-import { object, string, func } from 'prop-types'
+import { object, string, func, number } from 'prop-types'
 import {
     Container,
     Row,
     Col
 } from 'reactstrap'
 
-import Check from '../SvgIcon/icons/Check'
 import AnimatedArrow from '../AnimatedArrow'
 
 import '../LanguagePage/LanguagePage.scss'
@@ -17,27 +16,22 @@ export default class LanguageTranslatePage extends PureComponent{
         translate: object,
         language: string,
         setLanguage: func,
+        translationProgress: number,
+        reviewProgress: number,
     }
 
-    renderLanguageBlock = (language) => (
-        <Col xs='12' sm='4' lg='3' key={language.code}>
-            <button className='languagePage_block' onClick={() => {this.props.setLanguage(language.code)}}>
-                <Check/>
-                <div className='languagePage_block__text'>
-                    <p>{language.englishName}</p>
-                    <span>{language.nativeName}</span>
-                </div>
-            </button>
-        </Col>
-    )
+    static defaultProps = {
+        translationProgress: 80,
+        reviewProgress: 10,
+    }
 
     renderLanguageInProgress = (language) => (
         <Col xs='12' sm='4' lg='3' key={language.englishName}>
             <button className='languagePage_block big'>
                 <div className='languagePage_block__text'>
                     <p>{language.englishName}</p>
-                    <span>{language.translationProgress}:</span>
-                    <span>{language.reviewProgress}:</span>
+                    <span>{language.translationProgress}: {this.props.translationProgress}%</span>
+                    <span>{language.reviewProgress}: {this.props.reviewProgress}%</span>
                     <AnimatedArrow url='' text={this.props.translate.LANGUAGE_PAGE.contribute} />
                 </div>
             </button>
@@ -64,7 +58,7 @@ export default class LanguageTranslatePage extends PureComponent{
                                </li>
                                <li>
                                    <p className='description'>{LANGUAGE_PAGE.joinListThree}</p>
-                                   <p className='description'>{LANGUAGE_PAGE.joinListFour}<a href="/" className='description'>{LANGUAGE_PAGE.joinListLink}</a></p>
+                                   <p className='description'>{LANGUAGE_PAGE.joinListFour}<a href="/" className='description'>{ LANGUAGE_PAGE.joinListLink }</a></p>
                                </li>
                                <li>
                                    <p className='description'>{LANGUAGE_PAGE.joinListFive}</p>

@@ -5,6 +5,7 @@ import {
     Row,
     Col,
 } from 'reactstrap'
+import styled from 'styled-components'
 
 import Decentralization from '../SvgIcon/icons/Decentralization'
 import Security from '../SvgIcon/icons/Security'
@@ -14,6 +15,16 @@ import Coverage from '../SvgIcon/icons/Coverage'
 import Intelligence from '../SvgIcon/icons/Intelligence'
 
 import './Offers.scss'
+
+const Block = styled.div`
+position:relative;
+div::before{
+    background-color: yellow;
+    position: absolute;
+width: 50px;
+height: 50px;
+}
+`
 
 export default class Offers extends PureComponent{
     constructor(props) {
@@ -28,22 +39,20 @@ export default class Offers extends PureComponent{
         language: string,
     }
 
-    componentDidMount() {
-        let x =  20
-        this.setState({ x })
-        let y =  20
-        this.setState({ y })
+    handleMouseMove = e => {
+        this.setState({
+          //x: (e.pageX - e.target.offsetLeft) / 4 ,
+          x: e.screenX - 150,
+          y: e.screenY - 200 ,
+        })
       }
     
     render(){
         const { translate: { OFFERS }} = this.props
         let { x, y } = this.state
-        const style = {
-                left: x,
-                top: y,            
-        }
-
+        
         return(
+            
             <div className='offers'>
                 <Container>
                     <Row>
@@ -56,7 +65,16 @@ export default class Offers extends PureComponent{
                                 <Col sm='12'>
                                     <Row>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block offers_block__low'>
+                                            <div className='offers_block offers_block__low' onMouseMove={this.handleMouseMove.bind(this)}>
+                                            <style dangerouslySetInnerHTML={{
+                                                    __html: [
+                                                        '.offers_block:before {',
+                                                        ` left: ${x}px;`,
+                                                        ` top: ${y}px;`,
+                                                        '}'
+                                                        ].join('\n')
+                                                    }}>
+                                                    </style>
                                                <div className='offers_block-box text-center'>
                                                 <Decentralization />
                                                     <h4>{OFFERS.decentralization}</h4>

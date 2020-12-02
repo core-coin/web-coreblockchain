@@ -2,6 +2,10 @@
   background-color: var(--black);
   padding-top: 100px;
   padding-bottom: 118px;
+  border-bottom: 1px solid var(--grey-darken);
+  .title {
+    text-transform: inherit;
+  }
   @media (max-width: 768px) {
     padding: 100px 0;
   }
@@ -34,7 +38,7 @@
   &_block {
     display: flex;
     align-items: center;
-    padding: 0 32px;
+    padding: 0 20px;
     height: 105px;
     border-radius: 6px;
     border: 1px solid var(--grey-darken);
@@ -89,6 +93,9 @@
       }
       a {
         color: var(--green);
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }

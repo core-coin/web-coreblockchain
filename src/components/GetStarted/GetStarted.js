@@ -5,8 +5,11 @@ import { Container, Row, Col } from 'reactstrap'
 import { CoreSoftware } from './CoreSoftware' 
 import { CoreNetwork } from './CoreNetwork' 
 import { CoreMiners } from './CoreMiners' 
+import { CoreClient } from './CoreClient'
+import { Distribution } from './Distribution'
 
 import './GetStarted.scss' 
+
 
 export default class GetStarted extends PureComponent {
   constructor(props) {
@@ -98,11 +101,22 @@ export default class GetStarted extends PureComponent {
                     <span id='get_started' className='hiddenBlock'></span>
                     <CoreSoftware language={language} translate={GETSTARTED} />
                   </div>
-                  <div className='getStarted_content__block'>
-                    <span id='core_network' className='hiddenBlock'></span>
-                    <CoreNetwork language={language} translate={GETSTARTED} />
+                  <div
+                    className='getStarted_content__block'
+                  >
+                    <span id='for_developers' className='hiddenBlock'></span>
+                    <CoreClient language={language} translate={GETSTARTED} />
                   </div>
-
+                  
+                  <div
+                    className='getStarted_content__block'
+                  >
+                    <span
+                      id='node_distributions'
+                      className='hiddenBlock'
+                    ></span>
+                  <Distribution language={language} translate={GETSTARTED}/>
+                  </div>
                   <div
                     className='getStarted_content__block'
                     style={{ height: 300 + 'px' }}
@@ -111,29 +125,14 @@ export default class GetStarted extends PureComponent {
                     <h1 className='title'>core_foundation</h1>
                   </div>
 
-                  <div
-                    className='getStarted_content__block'
-                    style={{ height: 300 + 'px' }}
-                  >
-                    <span id='for_developers' className='hiddenBlock'></span>
-                    <h1 className='title'>for_developers</h1>
-                  </div>
+                 
 
                   <div className='getStarted_content__block'>
                     <span id='core_mining' className='hiddenBlock'></span>
                     <CoreMiners language={language} translate={GETSTARTED} />
                   </div>
 
-                  <div
-                    className='getStarted_content__block'
-                    style={{ height: 300 + 'px' }}
-                  >
-                    <span
-                      id='node_distributions'
-                      className='hiddenBlock'
-                    ></span>
-                    <h1 className='title'>node_distributions</h1>
-                  </div>
+                 
 
                   <div
                     className='getStarted_content__block'
@@ -141,6 +140,10 @@ export default class GetStarted extends PureComponent {
                   >
                     <span id='faq' className='hiddenBlock'></span>
                     <h1 className='title'>faq</h1>
+                  </div>
+                  <div className='getStarted_content__block'>
+                    <span id='core_network' className='hiddenBlock'></span>
+                    <CoreNetwork language={language} translate={GETSTARTED} />
                   </div>
                 </Col>
               </Row>

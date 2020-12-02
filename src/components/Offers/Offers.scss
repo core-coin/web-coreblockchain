@@ -59,20 +59,20 @@
     outline: none;
     overflow: hidden;
     transition: 0.3s;
-
+    
     &:before {
       --size: 0;
       --x: 0;
       --y: 0;
       content: "";
       position: absolute;
-      left: var(--x);
-      top: var(--y);
+      left: 0;
+      top: 0;
       width: var(--size);
-      height: var(--size);
-      background: radial-gradient(circle closest-side, #46b549, #77778c);
+      height: var(--size); 
+      background: radial-gradient(circle closest-side at 250px 250px,#2ee533, #303040);
       transform: translate(-50%, -50%);
-      transition: width 0.8s ease, height 0.9s ease;
+      transition: width 0.5s ease, height 0.5s ease;
     }
 
     @media (max-width: 767px) {
@@ -94,30 +94,30 @@
       border: 1px solid transparent;
 
       &::before {
-        --size: 990px;
-        --x: 180px;
-        --y: 170px;
+        --size: 500px;
+        // --x: 180px;
+        // --y: 170px;
       }
 
-      &::after {
-        content: '';
-        background: linear-gradient(45deg,
-            var(--grey-darken),
-            var(--grey-darken),
-            var(--green),
-            var(--green),
-            var(--green),
-            var(--green),
-            var(--grey-darken),
-            var(--grey-darken));
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        filter: blur(2px);
-        z-index: -1;
-      }
+      // &::after {
+      //   content: '';
+      //   background: linear-gradient(45deg,
+      //       var(--grey-darken),
+      //       var(--grey-darken),
+      //       var(--green),
+      //       var(--green),
+      //       var(--green),
+      //       var(--green),
+      //       var(--grey-darken),
+      //       var(--grey-darken));
+      //   position: absolute;
+      //   top: -2px;
+      //   left: -2px;
+      //   width: calc(100% + 2px);
+      //   height: calc(100% + 2px);
+      //   filter: blur(2px);
+      //   z-index: -1;
+      // }
     }
 
     &-box {

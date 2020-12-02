@@ -201,7 +201,7 @@ export const LOCALIZED_STRINGS = {
             description: 'We are serving all people Worldwide, any language any nationality. Please, contribute to translations to make this vision a reality.',
             languageInProgress: 'The following language translations are in progress:',
             selectLanguage: 'Select your language:',
-            translationProgram: 'Translation Program',
+            translationProgram: 'TRANSLATION PROGRam',
             translationDescription: 'Core Blockchain translators are always translating pages in as many languages as possible. To see what they\'re working on right now or to sign up or to join them.',
             translationText: 'Interested in translating? Get involved! We\'re seeking volunteers to join translation community.',
             languages: [
@@ -240,7 +240,7 @@ export const LOCALIZED_STRINGS = {
             ],
             contribute: 'Contribute',
             toJoin: 'How to join?',
-            joinListLink: 'Open an issue.',
+            joinListLink: ' Open an issue.',
             joinListOne: 'Join our translation instance.',
             joinListTwo: 'You will need to create a Translate account if you don’t already have one.',
             joinListThree: 'Find the language you want to translate and select a document.',
@@ -255,23 +255,23 @@ export const LOCALIZED_STRINGS = {
                     link: 'get_started',
                     label: 'Get started',
                 }, {
-                    link: 'core_network',
-                    label: 'Core Network',
+                    link: 'for_developers',
+                    label: 'Core Client',
+                }, {
+                    link: 'node_distributions',
+                    label: 'Boid Distributions',
                 }, {
                     link: 'core_foundation',
                     label: 'Core Foundation',
                 }, {
-                    link: 'for_developers',
-                    label: 'For developers',
-                }, {
                     link: 'core_mining',
                     label: 'Core Mining',
                 }, {
-                    link: 'node_distributions',
-                    label: 'Node Distributions',
-                }, {
                     link: 'faq',
                     label: 'FAQ',
+                }, {
+                    link: 'core_network',
+                    label: 'Core Network',
                 }
             ],
             coreSoftware: 'get',
@@ -297,7 +297,7 @@ export const LOCALIZED_STRINGS = {
                 torrentButton: 'Download via torrent',
             },
             CoreDaemonSoftware: {
-                title: 'Core Daemon software',
+                title: 'Core Client Boid',
                 description: 'Go-core is the the command line interface for running a full Core node implemented in Go.',
                 dropdownLabel: 'Choose your operating system:',
                 osList: [
@@ -613,15 +613,23 @@ export const LOCALIZED_STRINGS = {
                 {
                     englishName: 'African',
                     nativeName: 'Africans',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 }, {
                     englishName: 'Czech',
                     nativeName: 'čeština',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 }, {
                     englishName: 'Russian',
                     nativeName: 'Rusky',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 }, {
                     englishName: 'Polish',
                     nativeName: 'Polski',
+                    translationProgress: 'Translation progress',
+                    reviewProgress: 'Review progress',
                 },
             ],
             contribute: 'Contribute',
@@ -643,23 +651,23 @@ export const LOCALIZED_STRINGS = {
             link: 'get_started',
             label: 'Get started',
           }, {
-            link: 'core_network',
-            label: 'Core Network',
+            link: 'for_developers',
+            label: 'Core Client',
+          },  {
+            link: 'node_distributions',
+            label: 'Boid Distributions',
           }, {
             link: 'core_foundation',
             label: 'Core Foundation',
           }, {
-            link: 'for_developers',
-            label: 'For developers',
-          }, {
             link: 'core_mining',
             label: 'Core Mining',
           }, {
-            link: 'node_distributions',
-            label: 'Node Distributions',
-          }, {
             link: 'faq',
             label: 'FAQ',
+          },  {
+            link: 'core_network',
+            label: 'Core Network',
           }
         ],
         coreSoftware: 'get',
@@ -685,7 +693,7 @@ export const LOCALIZED_STRINGS = {
           torrentButton: 'Download via torrent',
         },
         CoreDaemonSoftware: {
-          title: 'Core Daemon software',
+          title: 'Core Client Boid',
           description: 'Go-core is the the command line interface for running a full Core node implemented in Go.',
           dropdownLabel: 'Choose your operating system:',
           osList: [

@@ -74,37 +74,7 @@ export class CoreNetwork extends PureComponent{
                     <p>{translate.CoreTransaction.description}</p>
                     <AnimatedArrow url='' text={translate.CoreTransaction.link}/>
                 </div>
-                <div className='downloadBlock'>
-                    <h3>{translate.nodeDistributionTitle}</h3>
-                    <div className='tabs_header'>
-                        <Nav tabs>
-                            {translate.nodeDistributionTabName.map(this.renderTabName)}
-                        </Nav>
-                    </div>
-                    <div>
-                        <TabContent activeTab={activeTab}>
-                            <TabPane tabId='ISO Image'>
-                                <IsoImage translate={translate}/>
-                            </TabPane>
-                            <TabPane tabId='Node distributor'>
-                                <Select
-                                    type='button'
-                                    id='NodeDistributor'
-                                    items={translate.nodeDistr}
-                                    greenBtnText={translate.goToMarketplace}
-                                />
-                            </TabPane>
-                            <TabPane tabId='Packages tool'>
-                                <Select
-                                    type='select'
-                                    id='packageTool'
-                                    items={translate.packageTool}
-                                />
-                                <CopyInput value={translate.packageToolScript}/>
-                            </TabPane>
-                        </TabContent>
-                    </div>
-                </div>
+              
             </>
         )
     }

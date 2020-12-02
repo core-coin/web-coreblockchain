@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react'
 import { func } from 'prop-types'
+import { lunr } from 'lunr';
 
 import SearchIcon from '../SvgIcon/icons/Search'
 
 import './Search.scss'
+  
 
 export default class Search extends PureComponent{
     constructor(props) {
@@ -19,6 +21,8 @@ export default class Search extends PureComponent{
     }
 
     openSearchBar = () => {
+        let searchValue = this.searchInput.current.value
+        console.log(searchValue)
         this.setState({
             isSearchBarOpen: !this.state.isSearchBarOpen,
         })
@@ -26,6 +30,7 @@ export default class Search extends PureComponent{
 
     onSearchSubmit = () => {
         this.props.onSearch(this.searchInput.current.value)
+        console.log('submit')
     }
 
     render(){
