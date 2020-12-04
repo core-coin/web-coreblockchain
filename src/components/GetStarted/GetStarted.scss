@@ -6,7 +6,7 @@
   }
   &_menu {
     border-right: 1px solid var(--grey-darken);
-    padding-top: 365px;
+    padding-top: 345px;
     display: flex;
     justify-content: flex-end;
     padding-right: 50px;
@@ -66,7 +66,7 @@
   &_content {
     flex: 1;
     height: 100%;
-    padding: 252px 10px;
+    padding: 225px 10px;
     position: relative;
     @media (max-width: 767px) {
       padding: 100px 10px;
@@ -79,12 +79,30 @@
       border: 1px solid var(--grey-darken);
       background: var(--black-lighter);
       background-size: contain;
-      padding: 74px;
+      padding: 60px 70px;
       margin-top: 40px;
       @media (max-width: 767px) {
         padding: 20px;
         button {
           margin-bottom: 20px;
+        }
+      }
+      .theme_ghost {
+        min-width: 90px;
+        padding: 0 14px;
+        margin: 0 5px;
+      }
+      .button {
+        .body_text {
+          padding-left: 7px;
+          text-transform: capitalize;
+        }
+
+      }
+      .version-links {
+        padding: 30px 0 0;
+        a {
+          padding-top: 20px;
         }
       }
       &.coreWallet {
@@ -133,7 +151,7 @@
         }
       }
       hr {
-        margin: 50px 0 40px;
+        margin: 40px 0 30px;
         border-color: var(--grey-darken);
       }
       .input-group {
@@ -201,10 +219,9 @@
             font-size: 20px;
             font-weight: 700;
             letter-spacing: -0.6px;
-            text-transform: uppercase;
             cursor: pointer;
             border: none;
-            padding:0 15px 21px 15px;
+            padding:0 8px 21px 8px;
             @media (max-width: 767px) {
               font-size: 16px;
               font-weight: 400;
@@ -235,9 +252,45 @@
             .nav-tabs {
               margin-top: 0;
               border-bottom: none;
+              overflow-x: scroll;
+              overflow-y: hidden;
+              white-space: nowrap;
+              flex-wrap: nowrap;
+              margin-top: 24px;
+              border-bottom: none;
+              &::-webkit-scrollbar {
+                padding-top: 20px;
+                width: 10px;
+                height: 8px;
+              }
+              &::-webkit-scrollbar-track {
+                margin-top: 20px;
+                background: var(--grey-darken); 
+              }
+              &::-webkit-scrollbar-thumb {
+                background: var(--grey-dark); 
+                transition: .5s;
+                width: 20px       ;
+              }
+              &::-webkit-scrollbar-thumb:hover {
+                background:var(--green); 
+              }
+              .nav-item {
+                margin-bottom: 20px;
+              }
+              @media (min-width: 968px) {
+                .nav-item {
+                  padding-right: 17px;
+                 
+                  &:last-child {
+                    padding-right: 0;
+                  }
+                }
+              }
               @media (max-width: 767px) {
                 .nav-item {
                   padding-right: 10px;
+                 
                   &:last-child {
                     padding-right: 0;
                   }
@@ -250,8 +303,8 @@
                 }
               }
               .nav-link {
-                width: 140px;
-                height: 140px;
+                width: 130px;
+                height: 130px;
                 border-radius: 10px;
                 border: 1px solid var(--grey-darken);
                 background-color: var(--black-lighter);
@@ -266,6 +319,7 @@
                 line-height: 24px;
                 text-transform: capitalize;
                 padding: 0;
+                
                 @media (max-width: 767px) {
                   width: 120px;
                   height: 120px;

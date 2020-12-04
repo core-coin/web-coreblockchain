@@ -9,6 +9,7 @@ import { CoreClient } from './CoreClient'
 import { Distribution } from './Distribution'
 
 import './GetStarted.scss' 
+import { Devices } from './Devices'
 
 
 export default class GetStarted extends PureComponent {
@@ -27,11 +28,18 @@ export default class GetStarted extends PureComponent {
     language: string,
   } 
 
+  toggle = link => {
+    if(this.state.activeLink !== link) {
+        this.setState({activeLink: link})
+    }
+ }
+
   renderLinks = (links, index) => (
     <li
       key={index}
       className={this.state.activeLink === links.link ? 'active' : ''}
-    >
+      onClick={() => { this.toggle(links.link); }}
+      >
       <a href={'#' + links.link}>{links.label}</a>
     </li>
   ) 
@@ -44,7 +52,7 @@ export default class GetStarted extends PureComponent {
       let headerId = header.id 
       headersMap.push([headerHeight, headerId]) 
     }
-    this.state.headersList = headersMap.reverse() 
+    this.setState.headersList = headersMap.reverse() 
   } 
 
   updateActiveLink = (offset) => {
@@ -118,29 +126,16 @@ export default class GetStarted extends PureComponent {
                   <Distribution language={language} translate={GETSTARTED}/>
                   </div>
                   <div
-                    className='getStarted_content__block'
-                    style={{ height: 300 + 'px' }}
-                  >
-                    <span id='core_foundation' className='hiddenBlock'></span>
-                    <h1 className='title'>core_foundation</h1>
+                    className='getStarted_content__block'>
+                    <span id='devices' className='hiddenBlock'></span>
+                    <Devices language={language} translate={GETSTARTED}/>
                   </div>
-
-                 
 
                   <div className='getStarted_content__block'>
                     <span id='core_mining' className='hiddenBlock'></span>
                     <CoreMiners language={language} translate={GETSTARTED} />
                   </div>
 
-                 
-
-                  <div
-                    className='getStarted_content__block'
-                    style={{ height: 300 + 'px' }}
-                  >
-                    <span id='faq' className='hiddenBlock'></span>
-                    <h1 className='title'>faq</h1>
-                  </div>
                   <div className='getStarted_content__block'>
                     <span id='core_network' className='hiddenBlock'></span>
                     <CoreNetwork language={language} translate={GETSTARTED} />

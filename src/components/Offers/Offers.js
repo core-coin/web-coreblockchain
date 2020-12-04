@@ -42,8 +42,8 @@ export default class Offers extends PureComponent{
     handleMouseMove = e => {
         this.setState({
           //x: (e.pageX - e.target.offsetLeft) / 4 ,
-          x: e.screenX - 150,
-          y: e.screenY - 200 ,
+          x: e.screenX - 300,
+          y: e.screenY - 300,
         })
       }
     

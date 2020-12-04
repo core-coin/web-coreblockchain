@@ -13,15 +13,21 @@ import Button from '../Button'
 import CopyInput from '../CopyInput'
 import Download from '../SvgIcon/icons/Download'
 import Torrent from '../SvgIcon/icons/Torrent'
-import Ubuntu from '../SvgIcon/icons/Ubuntu'
-import Debian from '../SvgIcon/icons/Debian'
-import Fedora from '../SvgIcon/icons/Fedora'
-import CentOS from '../SvgIcon/icons/CentOS'
+import Chain from '../SvgIcon/icons/Chain'
+import Apt from '../SvgIcon/icons/Apt'
+import Rpm from '../SvgIcon/icons/Rpm'
+import Docker from '../SvgIcon/icons/Docker'
+import AptIpfs from '../SvgIcon/icons/AptIpfs'
+import Kubernetes from '../SvgIcon/icons/Kubernetes'
+import Google from '../SvgIcon/icons/Google'
+import Amazon from '../SvgIcon/icons/Amazon'
+import Copy from '../SvgIcon/icons/Copy'
 
 import './GetStarted.scss'
 
 const DownloadIcon = <Download/>
-const TorrentIcon = <Torrent/>
+const CopyIcon = <Copy/>
+const ChainIcon = <Chain/>
 
 export class IsoImage extends PureComponent{
     constructor(props) {
@@ -44,10 +50,13 @@ export class IsoImage extends PureComponent{
 
     getIcon = (title) => {
       const iconMap = {
-        Ubuntu: <Ubuntu/>,
-        Dedian: <Debian/>,
-        Fedora: <Fedora/>,
-        CentOS: <CentOS/>,
+        'Apt-Get': <Apt/>,
+        'RPM': <Rpm/>,
+        'Docker Repo': <Docker/>,
+        'APT-IPFS': <AptIpfs/>,
+        'Kubernetes': <Kubernetes/>,
+        'GSP': <Google/>,
+        'AWS': <Amazon/>
       }
       return iconMap[title]
     }
@@ -76,19 +85,17 @@ export class IsoImage extends PureComponent{
                     theme='green'
                     size='small'
                     href={tab.downloadLink}
-                    text={this.props.translate.downloadBtn}
-                    icon={DownloadIcon}
+                    text={this.props.translate.openLinkBtn}
+                    icon={ChainIcon}
                 />
-                <Button
+                  <Button
                     mobileFullWidth
-                    theme='green'
+                    theme='ghost'
                     size='small'
-                    href={tab.torrentLink}
-                    text={this.props.translate.torrentButton}
-                    icon={TorrentIcon}
+                    href={tab.downloadLink}
+                    text={this.props.translate.copyBtn}
+                    icon={CopyIcon}
                 />
-                <hr/>
-                <p>{this.props.translate.downloadScriptText}</p>
                 <CopyInput value={tab.script}/>
             </TabPane>
         )

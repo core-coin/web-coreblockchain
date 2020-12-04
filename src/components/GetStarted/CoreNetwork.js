@@ -2,20 +2,11 @@ import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
 
 import {
-    TabContent,
-    TabPane,
-    Nav,
     NavItem,
     NavLink
 } from 'reactstrap'
 
-import Select from '../Select'
-import CopyInput from '../CopyInput'
-
 import AnimatedArrow from '../AnimatedArrow'
-
-import { IsoImage } from './IsoImage'
-
 
 import './GetStarted.scss'
 

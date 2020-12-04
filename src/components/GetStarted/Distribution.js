@@ -72,7 +72,7 @@ export class Distribution extends PureComponent{
                             <TabPane tabId='ISO Image'>
                                 <IsoImage translate={translate}/>
                             </TabPane>
-                            <TabPane tabId='Node distributor'>
+                            <TabPane tabId='Distributor'>
                                 <Select
                                     type='button'
                                     id='NodeDistributor'
@@ -81,6 +81,14 @@ export class Distribution extends PureComponent{
                                 />
                             </TabPane>
                             <TabPane tabId='Packages tool'>
+                                <Select
+                                    type='select'
+                                    id='packageTool'
+                                    items={translate.packageTool}
+                                />
+                                <CopyInput value={translate.packageToolScript}/>
+                            </TabPane>
+                            <TabPane tabId='Containers'>
                                 <Select
                                     type='select'
                                     id='packageTool'
