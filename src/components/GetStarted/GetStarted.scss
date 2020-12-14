@@ -66,7 +66,7 @@
   &_content {
     flex: 1;
     height: 100%;
-    padding: 225px 10px;
+    padding: 225px 10px 80px;
     position: relative;
     @media (max-width: 767px) {
       padding: 100px 10px;
@@ -113,10 +113,39 @@
         }
       }
       &.nodeStatus {
-        background: var(--black-lighter) url('../../images/coreStatus.png') no-repeat center;
+        background: var(--black-lighter) url('../../images/coreStatus.png');
+        padding-bottom: 25px;
+        background-repeat: repeat;
+        background-size: 35%;
+        .animatedArrow {
+          padding: 15px 0 35px;
+        }
+        .button {
+          margin-left: 0;
+        }
+        @media (min-width: 968px) {
+          p {
+            width: 50%;
+          }
+        }  
       }
       &.cpuMiners {
-        background: var(--black-lighter) url('../../images/cpuMiners.png') no-repeat center;
+        background: var(--black-lighter) url('../../images/luna.png') no-repeat 87% 13%;
+        .animatedArrow {
+          padding-top: 20px;
+        }
+        ul {
+          padding-left: 15px;
+          li {
+            &::marker {
+              color:var(--grey);
+              font-size: 10px;
+            }
+            p {
+              margin-bottom: 0px;
+            }
+          }
+        }
       }
       &.androidMiners {
         background: var(--black-lighter) url('../../images/androidscreen.png') no-repeat right center;
@@ -344,10 +373,17 @@
                 }
               }
             }
+            .tabs-noscroll {
+              overflow-x: auto;
+              justify-content: start;
+            }
           }
         }
         .tab-pane {
-          padding-top: 40px;
+          padding-top: 10px;
+          .button {
+            margin-top: 25px;
+          }
         }
       }
     }
@@ -356,4 +392,5 @@
       top: -365px;
     }
   }
+
 }

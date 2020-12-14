@@ -6,7 +6,6 @@ import {
     Col
 } from 'reactstrap'
 
-import Check from '../SvgIcon/icons/Check'
 import AnimatedArrow from '../AnimatedArrow'
 
 import './LanguagePage.scss'
@@ -20,14 +19,13 @@ export default class LanguagePage extends PureComponent{
     }
 
     renderLanguageBlock = (language) => (
-        <Col xs='12' sm='4' lg='3' key={language.code}>
-            <button className='languagePage_block' onClick={() => {this.props.setLanguage(language.code)}}>
-                <Check/>
+        <Col xs='12' sm='4' lg='4' key={language.code}>
+            <div className='languagePage_block' onClick={() => {this.props.setLanguage(language.code)}}>
                 <div className='languagePage_block__text'>
                     <p>{language.englishName}</p>
                     <span>{language.nativeName}</span>
                 </div>
-            </button>
+            </div>
         </Col>
     )
 

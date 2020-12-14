@@ -5,7 +5,6 @@ import {
     Row,
     Col,
 } from 'reactstrap'
-import styled from 'styled-components'
 
 import Decentralization from '../SvgIcon/icons/Decentralization'
 import Security from '../SvgIcon/icons/Security'
@@ -16,22 +15,16 @@ import Intelligence from '../SvgIcon/icons/Intelligence'
 
 import './Offers.scss'
 
-const Block = styled.div`
-position:relative;
-div::before{
-    background-color: yellow;
-    position: absolute;
-width: 50px;
-height: 50px;
-}
-`
-
 export default class Offers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            x: 0,
-            y: 0,
+            x0: 0,
+            y0: 0,
+            x1: 0,
+            y1: 0,
+            x2: 0,
+            x3: 0,
         }
     }
     static propTypes = {
@@ -39,18 +32,51 @@ export default class Offers extends PureComponent{
         language: string,
     }
 
-    handleMouseMove = e => {
+    handleMouseEnter = e => {
         this.setState({
-          //x: (e.pageX - e.target.offsetLeft) / 4 ,
-          x: e.screenX - 300,
-          y: e.screenY - 300,
+          x0: e.screenX - 250 + 'px',
+          y0: e.screenY - 250  + 'px',
+          x1: e.screenX - 400  + 'px',
+          y1: e.screenY - 150 + 'px',
+          x2: e.screenX - 650 + 'px',
+          x3: e.screenX - 1000 + 'px',
+        })
+      }
+
+      handleMouseLeave = e => {
+        this.setState({
+          x0: 0,
+          y0: 0,
+          x1: 0,
+          y1: 0,
+          x2: 0,
+          x3: 0,
         })
       }
     
     render(){
         const { translate: { OFFERS }} = this.props
-        let { x, y } = this.state
-        
+        let { x0, y0, x1, y1, x2, x3 } = this.state
+        const style = {
+          style1: {
+            top: y0,
+            left: x0,
+          },
+          style2: {
+            top: y0,
+            left: x1,
+          },
+          style3: {
+            top: y1,
+            left: x2,
+          },
+          style4: {
+            top: y1,
+            left: x3,
+          },
+        }
+             
+
         return(
             
             <div className='offers'>
@@ -65,16 +91,10 @@ export default class Offers extends PureComponent{
                                 <Col sm='12'>
                                     <Row>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block offers_block__low' onMouseMove={this.handleMouseMove.bind(this)}>
-                                            <style dangerouslySetInnerHTML={{
-                                                    __html: [
-                                                        '.offers_block:before {',
-                                                        ` left: ${x}px;`,
-                                                        ` top: ${y}px;`,
-                                                        '}'
-                                                        ].join('\n')
-                                                    }}>
-                                                    </style>
+                                            <div className='offers_block offers_block__low' 
+                                            onMouseMove={this.handleMouseEnter.bind(this)}
+                                            onMouseLeave={this.handleMouseLeave.bind(this)}>
+                                            <div className='before' style={style.style1}></div>
                                                <div className='offers_block-box text-center'>
                                                 <Decentralization />
                                                     <h4>{OFFERS.decentralization}</h4>
@@ -83,7 +103,9 @@ export default class Offers extends PureComponent{
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block'>
+                                            <div className='offers_block' onMouseMove={this.handleMouseEnter.bind(this)}
+                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
+                                            <div className='before' style={style.style2}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Security/>
                                                     <h4>{OFFERS.security}</h4>
@@ -100,7 +122,10 @@ export default class Offers extends PureComponent{
                                 <Col sm='12'>
                                     <Row>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block offers_block__lower'>
+                                            <div className='offers_block offers_block__lower' 
+                                            onMouseMove={this.handleMouseEnter.bind(this)}
+                                            onMouseLeave={this.handleMouseLeave.bind(this)}>
+                                            <div className='before' style={style.style3}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Interoperability/>
                                                     <h4>{OFFERS.interoperability}</h4>
@@ -109,7 +134,10 @@ export default class Offers extends PureComponent{
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block'>
+                                            <div className='offers_block' 
+                                             onMouseMove={this.handleMouseEnter.bind(this)}
+                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
+                                            <div className='before' style={style.style4}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Coverage/>
                                                     <h4>{OFFERS.coverage}</h4>
@@ -118,7 +146,10 @@ export default class Offers extends PureComponent{
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block'>
+                                            <div className='offers_block'
+                                            onMouseMove={this.handleMouseEnter.bind(this)}
+                                            onMouseLeave={this.handleMouseLeave.bind(this)}>
+                                            <div className='before' style={style.style3}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Persistence/>
                                                     <h4>{OFFERS.persistence}</h4>
@@ -127,7 +158,10 @@ export default class Offers extends PureComponent{
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block offers_block__high'>
+                                            <div className='offers_block offers_block__high'
+                                             onMouseMove={this.handleMouseEnter.bind(this)}
+                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
+                                            <div className='before' style={style.style4}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Intelligence/>
                                                     <h4>{OFFERS.swarmIntelligence}</h4>

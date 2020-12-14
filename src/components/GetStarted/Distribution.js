@@ -9,19 +9,21 @@ import {
     NavLink
 } from 'reactstrap'
 
-import Select from '../Select'
-import CopyInput from '../CopyInput'
-
-import { IsoImage } from './IsoImage'
-
+import { Image } from './Image'
+import { TabContainers } from './TabContainers'
+import { Deployment } from './Deployment'
+import { Repos } from './Repos'
+import Key from '../SvgIcon/icons/Key'
 
 import './GetStarted.scss'
+
+const KeyIcon = <Key />
 
 export class Distribution extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: 'ISO Image'
+            activeTab: 'Repos'
         }
     }
 
@@ -69,32 +71,18 @@ export class Distribution extends PureComponent{
                     </div>
                     <div>
                         <TabContent activeTab={activeTab}>
-                            <TabPane tabId='ISO Image'>
-                                <IsoImage translate={translate}/>
+                            <TabPane tabId='Repos'>
+                                <Repos translate={translate}/>
                             </TabPane>
-                            <TabPane tabId='Distributor'>
-                                <Select
-                                    type='button'
-                                    id='NodeDistributor'
-                                    items={translate.nodeDistr}
-                                    greenBtnText={translate.goToMarketplace}
-                                />
+                            <TabPane tabId='Deployment'>
+                                <Deployment translate={translate}/>
                             </TabPane>
-                            <TabPane tabId='Packages tool'>
-                                <Select
-                                    type='select'
-                                    id='packageTool'
-                                    items={translate.packageTool}
-                                />
-                                <CopyInput value={translate.packageToolScript}/>
+                            <TabPane tabId='Images'>
+                                <Image translate={translate}/>
                             </TabPane>
                             <TabPane tabId='Containers'>
-                                <Select
-                                    type='select'
-                                    id='packageTool'
-                                    items={translate.packageTool}
-                                />
-                                <CopyInput value={translate.packageToolScript}/>
+                                <TabContainers translate={translate}/>
+                
                             </TabPane>
                         </TabContent>
                     </div>

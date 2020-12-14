@@ -4,20 +4,18 @@ import { object, string } from 'prop-types'
 import Select from '../Select'
 import CopyInput from '../CopyInput'
 import AnimatedArrow from '../AnimatedArrow'
-import Button from '../Button'
-import Key from '../SvgIcon/icons/Key'
+import InputKey from '../InputKey'
 
 import './GetStarted.scss'
 
-const KeyIcon = <Key />
 
 export class CoreClient extends PureComponent{
+    
 static propTypes = {
         translate: object,
         language: string,
         ghostBtnText: string,
     }
-
 
     render(){
         const { translate } = this.props
@@ -29,6 +27,7 @@ static propTypes = {
                     <p>{translate.CoreDaemonSoftware.description}</p>
                     <Select
                         type='buttons'
+                        download
                         id='daemonSoftware'
                         labelText={translate.CoreDaemonSoftware.dropdownLabel}
                         items={translate.CoreDaemonSoftware.osList}
@@ -45,14 +44,7 @@ static propTypes = {
                     <h4>{translate.CoreDaemonSoftware.publicKey}</h4>
                     <p>{translate.CoreDaemonSoftware.publicKeyDescription}</p>
                     <CopyInput value={translate.CoreDaemonSoftware.OpenSSlKey}/>
-                    <Button
-                        mobileFullWidth
-                        theme='ghost'
-                        size='small'
-                        href=''
-                        text={translate.CoreDaemonSoftware.keyBtn}
-                        icon={KeyIcon}
-                    />
+                    <InputKey theme='ghost' text={translate.CoreDaemonSoftware.keyBtn}/> 
                 </div>
             </>
         )

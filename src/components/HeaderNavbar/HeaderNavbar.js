@@ -123,7 +123,13 @@ export default class HeaderNavbar extends PureComponent{
                                                         onClick={this.onCloseSidebar}
                                                     />
                                                 </div>
-                                                <Button mobileFullWidth text='Developer' />
+                                                <Button 
+                                                mobileFullWidth
+                                             theme='green'
+                                             text={HEROHEADER.actionBtn}
+                                             type='router'
+                                             href='/get-started'
+                                              />
                                             </Container>
                                         </div>
                                     </div>

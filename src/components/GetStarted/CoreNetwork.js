@@ -5,10 +5,14 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
+import Button from '../Button'
+import Torrent from '../SvgIcon/icons/Torrent'
 
 import AnimatedArrow from '../AnimatedArrow'
 
 import './GetStarted.scss'
+
+const TorrentIcon = <Torrent/>
 
 export class CoreNetwork extends PureComponent{
     constructor(props) {
@@ -53,12 +57,20 @@ export class CoreNetwork extends PureComponent{
 
         return(
             <>
-                <h1 className='title'><span>{translate.coreNetworkHightlight}</span> {translate.coreNetwork}</h1>
+                <h1 className='title'>{translate.coreNetwork}<span>{translate.coreNetworkHightlight}</span></h1>
                 <p className='description'>{translate.coreNetworkDescription}</p>
                 <div className='downloadBlock nodeStatus'>
                     <h3>{translate.NodeStatus.title}</h3>
                     <p>{translate.NodeStatus.description}</p>
                     <AnimatedArrow url='' text={translate.NodeStatus.link}/>
+                    <Button
+                    mobileFullWidth
+                    theme='ghost'
+                    size='small'
+                    href={translate.NodeStatus.buttonLink}
+                    text={translate.NodeStatus.button}
+                    icon={TorrentIcon}
+                />
                 </div>
                 <div className='downloadBlock'>
                     <h3>{translate.CoreTransaction.title}</h3>

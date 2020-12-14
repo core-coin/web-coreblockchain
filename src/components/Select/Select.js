@@ -67,6 +67,7 @@ export default class Select extends PureComponent{
                     {SELECT}
                     <Button
                         mobileFullWidth
+                        download
                         theme='green'
                         size='small'
                         href={selectedItem.linkToDownLoad}
@@ -75,6 +76,7 @@ export default class Select extends PureComponent{
                     />
                     <Button
                         mobileFullWidth
+                        download
                         theme='ghost'
                         size='small'
                         href={selectedItem.ipfsLink}
@@ -83,6 +85,7 @@ export default class Select extends PureComponent{
                     />
                     <Button
                         mobileFullWidth
+                        download
                         theme='ghost'
                         size='small'
                         href={selectedItem.onionLink}

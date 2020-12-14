@@ -26,7 +26,7 @@ export default class Footer extends PureComponent{
                     <Row>
                         <Col>
                             <div className='text-center footer_logo'>
-                                <div>
+                                <div className='footer_logo-img'>
                                     <img src={Logo} alt="Core Chain"/>
                                 </div>
                                 <p className='text-center'>{FOOTER.copyRights}</p>

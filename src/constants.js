@@ -15,19 +15,19 @@ export const LOCALIZED_STRINGS = {
     en: {
         MENULINKS: [
             {
-                link: '',
+                link: 'overview',
                 label: 'overview'
             }, {
-                link: '',
+                link: 'learn',
                 label: 'learn'
             }, {
                 link: 'developers',
                 label: 'developers'
             }, {
-                link: 'solutions',
+                link: 'enterprises',
                 label: 'enterprises'
             }, {
-                link: '',
+                link: 'community',
                 label: 'community'
             }
         ],
@@ -273,7 +273,7 @@ export const LOCALIZED_STRINGS = {
             ],
             coreSoftware: 'get',
             coreSoftwareHighlight: 'core software',
-            coreSoftwareDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+            coreSoftwareDescription: 'Join the Borderless network anywhere in the World run on various networks.',
             CoreWalletBlock: {
                 title: 'Core Wallet',
                 description: 'The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.',
@@ -327,66 +327,95 @@ export const LOCALIZED_STRINGS = {
                 OpenSSlKey: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 publicKeyDescription: 'As a reminder, all release binaries are signed. You can manually verify the signatures with the command:',
             },
-            coreNetworkHightlight: 'core',
-            coreNetwork: 'network',
-            coreNetworkDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
-            NodeStatus: {
-                title: 'Nodes status',
-                description: 'Charts and metrics for the Core network.',
-                link: 'Core stats'
-            },
-            CoreTransaction: {
-                title: 'Core transaction Explorer',
-                description: 'Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.',
-                link: 'core explorer'
-            },
-
-            nodeDistributionTitle: 'Node distribution',
+            nodeDistributionTitle: 'Boid distributions',
             nodeDistributionTabName: [
-                'ISO Image',
-                'Distributor',
-                'Packages tool',
+                'Repos',
+                'Deployment',
+                'Images',
                 'Containers',
             ],
             openLinkBtn: 'Open link',
             copyBtn: 'Copy command',
+            download: 'Download',
+            magnetLink: 'Magnet Link',
             goToMarketplace: 'Go to marketplace',
-            isoImage: [
+            repos: [
                 {
                     title: 'Apt-Get',
-                    downloadLink: '',
-                    torrentLink: '',
+                    openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 }, {
                     title: 'RPM',
-                    downloadLink: '',
-                    torrentLink: '',
+                    openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 }, {
                     title: 'Docker Repo',
-                    downloadLink: '',
-                    torrentLink: '',
+                    openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 }, {
                     title: 'APT-IPFS',
-                    downloadLink: '',
-                    torrentLink: '',
+                    openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 }, {
                     title: 'Kubernetes',
-                    downloadLink: '',
-                    torrentLink: '',
+                    openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 }, {
                     title: 'GSP',
-                    downloadLink: '',
-                    torrentLink: '',
+                    openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 }, {
                     title: 'AWS',
-                    downloadLink: '',
-                    torrentLink: '',
+                    openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                },
+            ],
+            deployment: [
+                {
+                    title: 'Ansible',
+                    openLink: '',
+                }, {
+                    title: 'Bash',
+                    openLink: '',
+                }, {
+                    title: 'Docker Comp',
+                    openLink: '',
+                },
+            ],
+            images: [
+                {
+                    title: 'Ubuntu',
+                    downloadLink: '#',
+                    magnetLink: '',
+                }, {
+                    title: 'Debian',
+                    downloadLink: '',
+                    magnetLink: '',
+                }, {
+                    title: 'CentOS',
+                    downloadLink: '',
+                    magnetLink: '',
+                }, {
+                    title: 'Fedora',
+                    downloadLink: '',
+                    magnetLink: '',
+                }, {
+                    title: 'Ubuntu IoT',
+                    downloadLink: '',
+                    magnetLink: '',
+                }, {
+                    title: 'Raspberry OS',
+                    downloadLink: '',
+                    magnetLink: '',
+                },
+            ],
+            tabContainers: [
+                {
+                    title: 'Docker',
+                    openLink: '',
+                }, {
+                    title: 'Helm',
+                    openLink: '',
                 },
             ],
             nodeDistr: [
@@ -411,6 +440,8 @@ export const LOCALIZED_STRINGS = {
                 },
             ],
             packageToolScript: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+            distributionImageScript: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+            distributionImageText: 'Verify your download by running this script:',
             coreMiningHightlight: 'Ecosystem',
             coreMining: 'Core',
             coreMiningDescription: 'Join Core Blockchain ecosystem and enjoy all its benefits',
@@ -425,32 +456,48 @@ export const LOCALIZED_STRINGS = {
                 'Just-in-time //JIT// compilation',
                 '4 cores CPU',
                 '2GB RAM //4GB recommended//',
-                'assive or Active cooler',
+                'Passive or Active cooler',
                 'Antenna & Amplifier //required by Luna° mesh connectivity//',
               ],
             AndroidMiners: {
-                title: 'Android miner',
-                description: 'Auton miner based on Android system and support devices with ARM64 architecture.',
-                link: 'core explorer'
-            }
+                title: 'Core CPU miners',
+                description: 'By mining, you can earn cryptocurrency with your CPU hashing power. CPU-based miners to start dig your Ores.',
+                link: 'Mining pools'
+            },
+            coreNetworkHightlight: ' network',
+            coreNetwork: 'core',
+            coreNetworkDescription: 'We are monitoring network and provide the tools to monitor the health and track your transactions',
+            NodeStatus: {
+                title: 'Nodes status',
+                description: 'Charts and metrics for the Core network. Explore our Boid locations Worldwide.',
+                link: 'Core stats',
+                button: 'Download Blockchain from torrent',
+                buttonLink: '',
+            },
+            CoreTransaction: {
+                title: 'Transaction Explorer',
+                description: 'Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.',
+                link: 'CORE explorer'
+            },
+
         },
     }, //en end
     sk: {
         MENULINKS: [
             {
-                link: '',
+                link: 'overview',
                 label: 'o Core'
             }, {
-                link: '',
-                label: 'learn'
+                link: 'learn',
+                label: 'Dozvedieť sa'
             }, {
                 link: 'developers',
                 label: 'vývojari'
             }, {
-                link: '',
-                label: 'enterprise'
+                link: 'enterprises',
+                label: 'Organizácie'
             }, {
-                link: '',
+                link: 'community',
                 label: 'community'
             }
         ],
@@ -624,8 +671,8 @@ export const LOCALIZED_STRINGS = {
             description: 'Slúžime všetkým ľuďom na celom svete v akomkoľvek jazyku akejkoľvek národnosti. Prispejte prosím k prekladom, aby sa táto vízia stala skutočnosťou.',
             languageInProgress: 'Nasledujúce jazykové preklady sú v príprave:',
             selectLanguage: 'Vyberte si jazyk:',
-            translationProgram: '',
-            translationDescription: '',
+            translationProgram: 'Prekladateľský program',
+            translationDescription: 'Core Blockchain prekladatelia sa snažia vždy prekladať stránky v jazykoch, ktoré su len možné. Ak si chcete pozrieť na čom pracujú, pripojte sa.',
             languages: [
                 {
                     englishName: 'English',
@@ -641,63 +688,63 @@ export const LOCALIZED_STRINGS = {
                 {
                     englishName: 'African',
                     nativeName: 'Africans',
-                    translationProgress: 'Translation progress',
-                    reviewProgress: 'Review progress',
+                    translationProgress: 'Priebeh prekladu',
+                    reviewProgress: 'Priebeh revízie',
                 }, {
                     englishName: 'Czech',
                     nativeName: 'čeština',
-                    translationProgress: 'Translation progress',
-                    reviewProgress: 'Review progress',
+                    translationProgress: 'Priebeh prekladu',
+                    reviewProgress: 'Priebeh revízie',
                 }, {
                     englishName: 'Russian',
                     nativeName: 'Rusky',
-                    translationProgress: 'Translation progress',
-                    reviewProgress: 'Review progress',
+                    translationProgress: 'Priebeh prekladu',
+                    reviewProgress: 'Priebeh revízie',
                 }, {
                     englishName: 'Polish',
                     nativeName: 'Polski',
-                    translationProgress: 'Translation progress',
-                    reviewProgress: 'Review progress',
+                    translationProgress: 'Priebeh prekladu',
+                    reviewProgress: 'Priebeh revízie',
                 },
             ],
-            contribute: 'Contribute',
-            toJoin: 'How to join?',
-            joinListLink: 'Open an issue.',
-            joinListOne: 'Join our translation instance.',
-            joinListTwo: 'You will need to create a Translate account if you don’t already have one.',
-            joinListThree: 'Find the language you want to translate and select a document.',
-            joinListFour: 'If translation progress is below 100%, please contribute! Don’t see your language listed?',
-            joinListFive: 'Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.',
-            joinListSix: 'Once the review is complete (i.e. review progress is 100%), we will add it to the website.',
-            translationInProgress: 'In-progress translations',
-            translationProgress: 'Translation progress',
-            reviewProgress: 'Review progress',
+            contribute: 'Prispieť',
+            toJoin: 'Ako sa pripojiť?',
+            joinListLink: 'Vytvorť podnet.',
+            joinListOne: 'Pripojte sa k našemu systému prekladania.',
+            joinListTwo: 'Budete si musieť vytvoriť účet v systéme prekladania ak ho ešte nemáte.',
+            joinListThree: 'Nájdite jazyk, ktorý si želáte preložiť a zvoľte dokument.',
+            joinListFour: 'Ak priebeh prekladu nedosahuje 100%, prosím prispejte! Nevidíte svoj jazyk?',
+            joinListFive: 'Keď bude preklad ukončený, náš profesionálny tím tlmočníkov začne revíziu (prípadne pozmení) obsah.',
+            joinListSix: 'Keď bude revízia ukončená (napr. revízia dosiahla 100%), pridáme ju do webstránky.',
+            translationInProgress: 'Preklady v priebehu',
+            translationProgress: 'Priebeh prekladu',
+            reviewProgress: 'Priebeh revízie',
         },
       GETSTARTED: {
         menuLinks: [
           {
             link: 'get_started',
-            label: 'Get started',
+            label: 'Začať',
           }, {
             link: 'for_developers',
-            label: 'Core Client',
+            label: 'Core klient',
           },  {
             link: 'node_distributions',
-            label: 'Boid Distributions',
+            label: 'Boid distribúcie',
           }, {
             link: 'devices',
-            label: 'IoT Devices',
+            label: 'IoT zariadenia',
           }, {
             link: 'core_mining',
-            label: 'Core Mining',
+            label: 'Core ťažba',
           }, {
             link: 'core_network',
-            label: 'Core Network',
+            label: 'Core sieť',
           }
         ],
-        coreSoftware: 'get',
-        coreSoftwareHighlight: 'core software',
-        coreSoftwareDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
+        coreSoftware: 'Získať ',
+        coreSoftwareHighlight: 'Core softvér',
+        coreSoftwareDescription: 'Join the Borderless network anywhere in the World run on various networks.',
         CoreWalletBlock: {
           title: 'Core Wallet',
           description: 'The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.',
@@ -718,9 +765,9 @@ export const LOCALIZED_STRINGS = {
           torrentButton: 'Download via torrent',
         },
         CoreDaemonSoftware: {
-          title: 'Core Client Boid',
-          description: 'Go-core is the the command line interface for running a full Core node implemented in Go.',
-          dropdownLabel: 'Choose your operating system:',
+          title: 'Core klient Boid',
+          description: 'Go-core je rozhranie príkazového riadku na spustenie celého uzla //Boid// implementovaného v Go.',
+          dropdownLabel: 'Vyberte si operačný systém:',
           osList: [
             {
                 title: 'Linux Ubuntu[deb]',
@@ -741,41 +788,29 @@ export const LOCALIZED_STRINGS = {
                 onion: '',
             },
           ],
-          downloadBtn: 'Download',
+          downloadBtn: 'Stiahnuť',
           ipfsButton: 'IPFS',
           onionButton: 'Onion',
-          previousLink: 'Previous versions',
-          sourceLink: 'Source code',
-          publicKey: 'Public key',
-          keyBtn: 'Public key',
+          previousLink: 'Predošlé verzie',
+          sourceLink: 'Zdrojový kód',
+          publicKey: 'Verejný kľúč',
+          keyBtn: 'Verejný kľúč',
           OpenSSlKey: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
-          publicKeyDescription: 'As a reminder, all release binaries are signed. You can manually verify the signatures with the command:',
+          publicKeyDescription: 'Pripomíname, že všetky binárne súbory sú podpísané. Podpisy môžete ručne overiť pomocou príkazu:',
         },
-        coreNetworkHightlight: 'core',
-        coreNetwork: 'network',
-        coreNetworkDescription: 'Manage data and decentralize algorithmic and automated decision-making.',
-        NodeStatus: {
-          title: 'Nodes status',
-          description: 'Charts and metrics for the Core network.',
-          link: 'Core stats'
-        },
-        CoreTransaction: {
-          title: 'Core transaction Explorer',
-          description: 'Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.',
-          link: 'core explorer'
-        },
-
-        nodeDistributionTitle: 'Node distribution',
+        nodeDistributionTitle: 'Boid distribúcie',
         nodeDistributionTabName: [
-          'ISO Image',
-          'Distributor',
-          'Packages tool',
+          'Repos',
+          'Deployment',
+          'Images',
           'Containers',
         ],
-        openLinkBtn: 'Open link',
-        copyBtn: 'Copy command',
+        openLinkBtn: 'Otvoriť odkaz',
+        copyBtn: 'Skopírovať príkaz',
+        download: 'Stiahnuť',
+        magnetLink: 'Magnet odkaz',
         goToMarketplace: 'Go to marketplace',
-        isoImage: [
+        repos: [
             {
                 title: 'Apt-Get',
                 downloadLink: '',
@@ -835,14 +870,14 @@ export const LOCALIZED_STRINGS = {
           },
         ],
         packageToolScript: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
-        coreMiningHightlight: 'Ecosystem',
+        coreMiningHightlight: 'ekosystém',
         coreMining: 'Core',
-        coreMiningDescription: 'Join Core Blockchain ecosystem and enjoy all its benefits',
+        coreMiningDescription: 'Pripojte sa k ekosystému Core Blockchain a využívajte všetky jeho výhody.',
         CpuMiners: {
-          title: 'IoT Devices',
-          description: 'Minimum requirements:',
-          link: 'Build Your Own & Connect to Blockchain network',
-          linkUnder: 'Tested Devices List',
+          title: 'IoT zariadenia',
+          description: 'Minimálne požiadavky:',
+          link: 'Vytvorte si vlastnú sieť a pripojte sa k sieti Blockchain',
+          linkUnder: 'List testovaných zariadení',
         },
         devicesList: [
             '64-bit architecture',
@@ -853,10 +888,25 @@ export const LOCALIZED_STRINGS = {
             'Antenna & Amplifier //required by Luna° mesh connectivity//',
           ],
         AndroidMiners: {
-          title: 'Android miner',
-          description: 'Auton miner based on Android system and support devices with ARM64 architecture.',
-          link: 'core explorer'
-        }
+          title: 'Core CPU ťažiari',
+          description: 'Ťažbou môžete zarobiť kryptomenu pomocou hashovacej sily procesora. Použite ťažiarov založených na CPU a začnite kopať svoje rudy.',
+          link: 'CORE prieskumník'
+        },
+        coreNetworkHightlight: 'core',
+        coreNetwork: 'sieť',
+        coreNetworkDescription: 'Monitorujeme sieť a poskytujeme nástroje na sledovanie stavu a sledovanie vašej transakcie.',
+        NodeStatus: {
+          title: 'Stav uzlov',
+          description: 'Grafy a metriky pre sieť Core. Preskúmajte naše umiestnenia Boid po celom svete.',
+          link: 'Core štatistiky',
+          button: 'Download Blockchain from torrent',
+          buttonLink: '',
+        },
+        CoreTransaction: {
+          title: 'Prieskumník transakcií',
+          description: 'Core prieskumník blokov je webový nástroj, ktorý poskytuje podrobné informácie o základných blokoch, adresách a transakciách.',
+          link: 'CORE prieskumník'
+        },
       },
     }, //sk end
 }

@@ -13,23 +13,19 @@ import Button from '../Button'
 import CopyInput from '../CopyInput'
 import Download from '../SvgIcon/icons/Download'
 import Torrent from '../SvgIcon/icons/Torrent'
-import Chain from '../SvgIcon/icons/Chain'
 import Apt from '../SvgIcon/icons/Apt'
-import Rpm from '../SvgIcon/icons/Rpm'
-import Docker from '../SvgIcon/icons/Docker'
-import AptIpfs from '../SvgIcon/icons/AptIpfs'
-import Kubernetes from '../SvgIcon/icons/Kubernetes'
-import Google from '../SvgIcon/icons/Google'
-import Amazon from '../SvgIcon/icons/Amazon'
-import Copy from '../SvgIcon/icons/Copy'
+import CentOS from '../SvgIcon/icons/CentOS'
+import Fedora from '../SvgIcon/icons/Fedora'
+import Raspberry from '../SvgIcon/icons/Raspberry'
+import Ubuntu from '../SvgIcon/icons/Ubuntu'
+import InputKey from '../InputKey'
 
 import './GetStarted.scss'
 
 const DownloadIcon = <Download/>
-const CopyIcon = <Copy/>
-const ChainIcon = <Chain/>
+const TorrentIcon = <Torrent/>
 
-export class IsoImage extends PureComponent{
+export class Image extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -50,13 +46,12 @@ export class IsoImage extends PureComponent{
 
     getIcon = (title) => {
       const iconMap = {
-        'Apt-Get': <Apt/>,
-        'RPM': <Rpm/>,
-        'Docker Repo': <Docker/>,
-        'APT-IPFS': <AptIpfs/>,
-        'Kubernetes': <Kubernetes/>,
-        'GSP': <Google/>,
-        'AWS': <Amazon/>
+        'Ubuntu': <Ubuntu/>,
+        'Debian': <Apt/>,
+        'CentOS': <CentOS/>,
+        'Fedora': <Fedora/>,
+        'Ubuntu IoT': <Ubuntu/>,
+        'Raspberry OS': <Raspberry/>,
       }
       return iconMap[title]
     }
@@ -82,21 +77,25 @@ export class IsoImage extends PureComponent{
             <TabPane key={index} tabId={tab.title}>
                 <Button
                     mobileFullWidth
+                    download
                     theme='green'
                     size='small'
                     href={tab.downloadLink}
-                    text={this.props.translate.openLinkBtn}
-                    icon={ChainIcon}
+                    text={this.props.translate.download}
+                    icon={DownloadIcon}
                 />
                   <Button
                     mobileFullWidth
                     theme='ghost'
                     size='small'
                     href={tab.downloadLink}
-                    text={this.props.translate.copyBtn}
-                    icon={CopyIcon}
+                    text={this.props.translate.magnetLink}
+                    icon={TorrentIcon}
                 />
-                <CopyInput value={tab.script}/>
+                <hr></hr>
+                <p>{this.props.translate.distributionImageText}</p>
+                 <CopyInput value={this.props.translate.distributionImageScript}/>
+                 <InputKey theme='ghost' text={this.props.translate.CoreDaemonSoftware.keyBtn}/> 
             </TabPane>
         )
     }
@@ -110,12 +109,12 @@ export class IsoImage extends PureComponent{
             <div className='isoImage'>
                 <div className='tabs_header'>
                     <Nav tabs>
-                        {translate.isoImage.map(this.renderTabName)}
+                        {translate.images.map(this.renderTabName)}
                     </Nav>
                 </div>
                 <div>
                     <TabContent activeTab={activeTab}>
-                        {translate.isoImage.map(this.renderTabContent)}
+                        {translate.images.map(this.renderTabContent)}
                     </TabContent>
                 </div>
             </div>

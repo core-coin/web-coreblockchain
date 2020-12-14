@@ -8,7 +8,6 @@ import {
 
 import Arrow from '../SvgIcon/icons/Arrow'
 
-
 import MouseIcon from './MouseIcon'
 
 import './HeroHeader.scss'

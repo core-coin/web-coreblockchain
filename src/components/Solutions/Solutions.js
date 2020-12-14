@@ -14,7 +14,6 @@ export default class Solutions extends PureComponent{
     static propTypes = {
         translate: object,
         language: string,
-        activeLink: 'solutions',
     }
 
     render(){

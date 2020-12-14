@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { func } from 'prop-types'
-import { lunr } from 'lunr';
 
 import SearchIcon from '../SvgIcon/icons/Search'
 

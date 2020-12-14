@@ -11,9 +11,9 @@ import { setLanguage } from './actions'
 const initialState = {
     language: null,
     translate: new LocalizedStrings(LOCALIZED_STRINGS),
-    blockTime: '13.60',
-    networkHashrate: '143.1',
-    difficulty: '0.00',
+    blockTime: 200,
+    algorithm: 'RandomY',
+    difficulty: 333,
 }
 
 const handleSetLanguage = (state, newLanguage) => {

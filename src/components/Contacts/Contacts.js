@@ -109,6 +109,7 @@ export default class Contacts extends PureComponent{
                             <div className='contacts_right__button'>
                                 <Button
                                     theme='green'
+                                    download
                                     size='normal'
                                     text={CONTACTS.downloadMiner}
                                     href=''
