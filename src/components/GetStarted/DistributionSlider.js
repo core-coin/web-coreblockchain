@@ -1,17 +1,6 @@
 import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
 
-import {
-    TabContent,
-    TabPane,
-    Nav,
-    NavItem,
-    NavLink
-} from 'reactstrap'
-
-import Button from '../Button'
-import CopyInput from '../CopyInput/CopyInput'
-import Chain from '../SvgIcon/icons/Chain'
 import Apt from '../SvgIcon/icons/Apt'
 import Rpm from '../SvgIcon/icons/Rpm'
 import Docker from '../SvgIcon/icons/Docker'
@@ -29,33 +18,12 @@ import 'slick-carousel/slick/slick-theme.css'
 
 import './GetStarted.scss'
 
-const CopyIcon = <Copy/>
-const ChainIcon = <Chain/>
 
 export class DistributionSlider extends PureComponent{
-    constructor(props) {
-        super(props)
-        this.state = {
-            activeTab: '',
-            isActiveBtn: false,
-        }
-    }
 
     static propTypes = {
         translate: object,
         language: string,
-    }
-
-    toggle = tab => {
-        if(this.state.activeTab !== tab) {
-            this.setState({activeTab: tab})
-        }
-    }
-
-    onToggleBtn = () => {
-        this.setState({
-            isActiveBtn: true,
-        })
     }
 
     getIcon = (title) => {
@@ -74,53 +42,22 @@ export class DistributionSlider extends PureComponent{
     }
 
     renderTabName = ( tab) => {
-        const { activeTab } = this.state
 
         return(
-            <NavItem key={tab.title}>
-                <NavLink
-                    className={activeTab === tab.title ? 'active' : ''}
-                    onClick={() => { this.toggle(tab.title); }}
+            <div key={tab.title}>
+                <div
+                    className='downloadBlock'
+                    
                 >
                     {this.getIcon(tab.title)}
                     {tab.title}
-                </NavLink>
-            </NavItem>
-        )
-    }
-
-    renderTabContent = ( tab, index ) => {
-        return(
-            <TabPane key={index} tabId={tab.title}>
-                <Button
-                    mobileFullWidth
-                    theme='green'
-                    size='small'
-                    href={tab.openLink}
-                    text={this.props.translate.openLinkBtn}
-                    icon={ChainIcon}
-                />
-                  <Button
-                    mobileFullWidth
-                    theme='ghost'
-                    size='small'
-                    href={tab.downloadLink}
-                    text={this.props.translate.copyBtn}
-                    icon={CopyIcon}
-                    value={tab.script}
-                    onClick={this.onToggleBtn}
-                />
-                <div className={this.state.isActiveBtn ? 'd-block' : 'd-none'}>  <CopyInput  
-                value={tab.script}/></div>
-              
-            </TabPane>
+                </div>
+            </div>
         )
     }
 
     render(){
         const { translate } = this.props
-
-        const { activeTab } = this.state
 
         const settings = {
           dots: true,
