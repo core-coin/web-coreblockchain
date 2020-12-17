@@ -36,6 +36,7 @@ export const LOCALIZED_STRINGS = {
             highlightTitle: 'Decentralized World',
             subtitle: 'Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.',
             actionBtn: 'get started',
+            language: 'Language',
             infoBtn: 'learn more',
         },
         OFFERS: {
@@ -128,7 +129,7 @@ export const LOCALIZED_STRINGS = {
             description: 'Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform. We are creating an Inclusion program suited for all people.',
             coreFoundation: 'Core Foundation',
             text: 'A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.',
-            link: ''
+            link: 'Learn more'
         },
         DEVELOPERS: {
             preTitle: 'connect with dev community',
@@ -167,7 +168,7 @@ export const LOCALIZED_STRINGS = {
             blocktime: 'Block time:',
             marketCap: 'Market Cap:',
             price: 'Price:',
-            transactionExplorer: ''
+            transactionExplorer: 'Transaction explorer',
         },
         CONTACTS: {
             getInTouch: 'Get in touch',
@@ -175,7 +176,7 @@ export const LOCALIZED_STRINGS = {
             development: 'Development',
             developerPortals: 'Developer Portal',
             usefulLinks: 'Useful links',
-            improvementProposals:'Core Improvement proposals',
+            improvementProposals:'Core Improvement Proposals',
             coreFoundation: 'Core Foundation',
             coreTalk: 'Core talk',
             brandIdentity: 'Brand identity',
@@ -190,7 +191,7 @@ export const LOCALIZED_STRINGS = {
             algorithm: 'Algorithm',
             difficulty: 'Difficulty',
             downloadMiner: 'download miner',
-            miningPools: 'mining pools',
+            miningPools: 'Build hardware',
         },
         FOOTER: {
             copyRights: 'Copyright © 2018-2020 Core Foundation. All Rights Reserved.',
@@ -201,7 +202,7 @@ export const LOCALIZED_STRINGS = {
             description: 'We are serving all people Worldwide, any language any nationality. Please, contribute to translations to make this vision a reality.',
             languageInProgress: 'The following language translations are in progress:',
             selectLanguage: 'Select your language:',
-            translationProgram: 'TRANSLATION PROGRam',
+            translationProgram: 'Translation Program',
             translationDescription: 'Core Blockchain translators are always translating pages in as many languages as possible. To see what they\'re working on right now or to sign up or to join them.',
             translationText: 'Interested in translating? Get involved! We\'re seeking volunteers to join translation community.',
             languages: [
@@ -343,15 +344,15 @@ export const LOCALIZED_STRINGS = {
                 {
                     title: 'Apt-Get',
                     openLink: '',
-                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig get',
                 }, {
                     title: 'RPM',
                     openLink: '',
-                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig rpm',
                 }, {
                     title: 'Docker Repo',
                     openLink: '',
-                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig docker',
                 }, {
                     title: 'APT-IPFS',
                     openLink: '',
@@ -368,7 +369,16 @@ export const LOCALIZED_STRINGS = {
                     title: 'AWS',
                     openLink: '',
                     script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                }, {
+                    title: 'Azure',
+                    openLink: '',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
+                }, {
+                    title: 'OVH',
+                    openLink: '',
+                    script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
                 },
+
             ],
             deployment: [
                 {
@@ -506,6 +516,7 @@ export const LOCALIZED_STRINGS = {
             highlightTitle: 'decentralizovaný svet',
             subtitle: 'Core Blockchain je open-source, nezastaviteľná celosvetová finančná a smart-kontraktová sieť.',
             actionBtn: 'začať',
+            language: 'jazyk',
             infoBtn: 'zistiť viac',
         },
         OFFERS: {
@@ -813,50 +824,91 @@ export const LOCALIZED_STRINGS = {
         repos: [
             {
                 title: 'Apt-Get',
-                downloadLink: '',
-                torrentLink: '',
+                openLink: '',
                 script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             }, {
                 title: 'RPM',
-                downloadLink: '',
-                torrentLink: '',
+                openLink: '',
                 script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             }, {
                 title: 'Docker Repo',
-                downloadLink: '',
-                torrentLink: '',
+                openLink: '',
                 script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             }, {
                 title: 'APT-IPFS',
-                downloadLink: '',
-                torrentLink: '',
+                openLink: '',
                 script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             }, {
                 title: 'Kubernetes',
-                downloadLink: '',
-                torrentLink: '',
+                openLink: '',
                 script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             }, {
                 title: 'GSP',
-                downloadLink: '',
-                torrentLink: '',
+                openLink: '',
                 script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             }, {
                 title: 'AWS',
-                downloadLink: '',
-                torrentLink: '',
+                openLink: '',
                 script: 'openssl dgst -sha256 -verify core.pem -signature core.sig core',
             },
         ],
+        deployment: [
+            {
+                title: 'Ansible',
+                openLink: '',
+            }, {
+                title: 'Bash',
+                openLink: '',
+            }, {
+                title: 'Docker Comp',
+                openLink: '',
+            },
+        ],
+        images: [
+            {
+                title: 'Ubuntu',
+                downloadLink: '#',
+                magnetLink: '',
+            }, {
+                title: 'Debian',
+                downloadLink: '',
+                magnetLink: '',
+            }, {
+                title: 'CentOS',
+                downloadLink: '',
+                magnetLink: '',
+            }, {
+                title: 'Fedora',
+                downloadLink: '',
+                magnetLink: '',
+            }, {
+                title: 'Ubuntu IoT',
+                downloadLink: '',
+                magnetLink: '',
+            }, {
+                title: 'Raspberry OS',
+                downloadLink: '',
+                magnetLink: '',
+            },
+        ],
+        tabContainers: [
+            {
+                title: 'Docker',
+                openLink: '',
+            }, {
+                title: 'Helm',
+                openLink: '',
+            },
+        ],
         nodeDistr: [
-          {
-            title: 'Kubernetes',
-            link: '',
-          },
-          {
-            title: 'item',
-            link: '',
-          },
+            {
+               title: 'Kubernetes',
+               link: '',
+            },
+            {
+                title: 'item',
+                link: '',
+            },
         ],
         packageTool: [
           {

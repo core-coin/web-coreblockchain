@@ -6,8 +6,11 @@ import {
     Col
 } from 'reactstrap'
 
-import './NodeCoverage.scss'
 import Luna from '../SvgIcon/icons/Luna'
+import Button from '../Button'
+
+import './NodeCoverage.scss'
+
 
 export default class NodeCoverage extends PureComponent{
     static propTypes = {
@@ -97,6 +100,14 @@ export default class NodeCoverage extends PureComponent{
                                             </li>
                                         </ul>
                                     </div>
+                                </Col>
+                                <Col className='text-center'>
+                                    <Button
+                                        theme='green'
+                                        size='normal'
+                                        text={NODECOVERAGE.transactionExplorer}
+                                        href=''
+                                    />
                                 </Col>
                             </Row>
                         </Col>

@@ -3,8 +3,7 @@ import { number, object, string } from 'prop-types'
 import {
     Container,
     Row,
-    Col,
-    Collapse
+    Col
 } from 'reactstrap'
 
 import Cube from '../SvgIcon/icons/Cube'
@@ -18,13 +17,6 @@ import Button from '../Button'
 import './Contacts.scss'
 
 export default class Contacts extends PureComponent{
-    constructor(props) {
-        super(props);
-        this.state = {
-            isContactOpen: false,
-            isLinksOpen: false
-        }
-    }
 
     static propTypes = {
         blockTime: number,
@@ -40,24 +32,8 @@ export default class Contacts extends PureComponent{
         difficulty: 333,
     }
 
-    onToggleContact = () => {
-        this.setState({
-            isContactOpen: !this.state.isContactOpen,
-        })
-    }
-
-    onToggleLinks = () => {
-        this.setState({
-            isLinksOpen: !this.state.isLinksOpen,
-        })
-    }
-
     render(){
         const { blockTime, algorithm, difficulty, translate: { CONTACTS } } = this.props
-
-        const { isContactOpen, isLinksOpen } = this.state
-
-        const isMobile = window.innerWidth <= 500;
 
         return(
             <div className='contacts'>
@@ -122,34 +98,6 @@ export default class Contacts extends PureComponent{
                                 />
                             </div>
                         </Col>
-                        {isMobile && (
-                            <Col sm='12'>
-                                <Row>
-                                    <Col xs='12' className={isContactOpen ? 'toggle open' : 'toggle'}>
-                                        <a onClick={this.onToggleContact} className='toggle_header'>{CONTACTS.contact} <Plus/></a>
-                                        <Collapse isOpen={isContactOpen} className='toggle_content'>
-                                            <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
-                                        </Collapse>
-                                    </Col>
-                                    <Col xs='12' className={isLinksOpen ? 'toggle open' : 'toggle'}>
-                                        <a onClick={this.onToggleLinks} className='toggle_header'>{CONTACTS.usefulLinks}<Plus/></a>
-                                        <Collapse isOpen={isLinksOpen} className='toggle_content'>
-                                            <a href=''>{CONTACTS.improvementProposals}</a>
-                                            <a href=''>{CONTACTS.coreFoundation}</a>
-                                            <a href=''>{CONTACTS.coreTalk}</a>
-                                            <a href=''>{CONTACTS.brandIdentity}</a>
-                                            <div className='icons'>
-                                                <a href=''><Cube/></a>
-                                                <a href=''><Cryptohub/></a>
-                                                <a href=''><Github/></a>
-                                                <a href=''><Discord/></a>
-                                                <a href=''><Twitter/></a>
-                                            </div>
-                                        </Collapse>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        )}
                     </Row>
                 </Container>
             </div>

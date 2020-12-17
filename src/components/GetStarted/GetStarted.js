@@ -10,6 +10,7 @@ import { Distribution } from './Distribution'
 
 import './GetStarted.scss' 
 import { Devices } from './Devices'
+import { DistributionSlider } from './DistributionSlider'
 
 
 export default class GetStarted extends PureComponent {
@@ -88,6 +89,8 @@ export default class GetStarted extends PureComponent {
       translate: { GETSTARTED },
       language,
     } = this.props 
+    
+    const isMobile = window.innerWidth <= 767;
 
     return (
       <div className='getStarted'>
@@ -108,14 +111,18 @@ export default class GetStarted extends PureComponent {
                   <div className='getStarted_content__block'>
                     <span id='get_started' className='hiddenBlock'></span>
                     <CoreSoftware language={language} translate={GETSTARTED} />
+                    {isMobile && (
+                     <DistributionSlider language={language} translate={GETSTARTED}/>
+                     )}
                   </div>
-                  <div
+                  {!isMobile && (<div
                     className='getStarted_content__block'
                   >
                     <span id='for_developers' className='hiddenBlock'></span>
                     <CoreClient language={language} translate={GETSTARTED} />
                   </div>
-                  
+                   )}
+                    {!isMobile && (
                   <div
                     className='getStarted_content__block'
                   >
@@ -123,8 +130,10 @@ export default class GetStarted extends PureComponent {
                       id='node_distributions'
                       className='hiddenBlock'
                     ></span>
-                  <Distribution language={language} translate={GETSTARTED}/>
+                 <Distribution language={language} translate={GETSTARTED}/>
+                 
                   </div>
+                   )}
                   <div
                     className='getStarted_content__block'>
                     <span id='devices' className='hiddenBlock'></span>

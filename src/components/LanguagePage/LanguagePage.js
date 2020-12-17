@@ -19,8 +19,12 @@ export default class LanguagePage extends PureComponent{
     }
 
     renderLanguageBlock = (language) => (
+
         <Col xs='12' sm='4' lg='4' key={language.code}>
-            <div className='languagePage_block' onClick={() => {this.props.setLanguage(language.code)}}>
+            <div className='languagePage_block' 
+            onClick={() => {this.props.setLanguage(language.code)}}
+           >
+                <div className='before'></div>
                 <div className='languagePage_block__text'>
                     <p>{language.englishName}</p>
                     <span>{language.nativeName}</span>
@@ -30,7 +34,7 @@ export default class LanguagePage extends PureComponent{
     )
 
     render(){
-        const { translate: { LANGUAGE_PAGE } } = this.props
+        const { translate: { LANGUAGE_PAGE } } = this.props     
 
         return(
             <div className='languagePage'>

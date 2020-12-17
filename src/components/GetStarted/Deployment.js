@@ -10,23 +10,12 @@ import {
 } from 'reactstrap'
 
 import Button from '../Button'
-import CopyInput from '../CopyInput'
-import Download from '../SvgIcon/icons/Download'
-import Torrent from '../SvgIcon/icons/Torrent'
 import Chain from '../SvgIcon/icons/Chain'
-import Apt from '../SvgIcon/icons/Apt'
-import Rpm from '../SvgIcon/icons/Rpm'
-import Docker from '../SvgIcon/icons/Docker'
-import AptIpfs from '../SvgIcon/icons/AptIpfs'
 import DockerComp from '../SvgIcon/icons/DockerComp'
 import Bash from '../SvgIcon/icons/Bash'
 import Ansible from '../SvgIcon/icons/Ansible'
-import Copy from '../SvgIcon/icons/Copy'
-
 import './GetStarted.scss'
 
-const DownloadIcon = <Download/>
-const CopyIcon = <Copy/>
 const ChainIcon = <Chain/>
 
 export class Deployment extends PureComponent{

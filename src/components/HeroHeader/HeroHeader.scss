@@ -9,6 +9,12 @@
     background-repeat: no-repeat;
     background-position: left top;
     padding-top: 300px;
+    @media (max-width: 767px) {
+      background-image: url(../../images/sphere_header_3.png);
+      background-position: 0 -78px;
+      background-size: 126%;
+      padding-top: 170px;
+    }
   }
   .title {
     font-size: 50px;

@@ -112,9 +112,8 @@ export default class HeaderNavbar extends PureComponent{
                                                     {MENULINKS.map(this.renderLink)}
                                                 </Nav>
                                                 <div className='headerNavbar_sidebar__search'>
-                                                    <Search />
                                                     <Button
-                                                        icon={LanguageIcon}
+                                                        text={HEROHEADER.language}
                                                         theme='ghost'
                                                         size='extraSmall'
                                                         hover={false}
@@ -125,11 +124,11 @@ export default class HeaderNavbar extends PureComponent{
                                                 </div>
                                                 <Button 
                                                 mobileFullWidth
-                                             theme='green'
-                                             text={HEROHEADER.actionBtn}
-                                             type='router'
-                                             href='/get-started'
-                                              />
+                                                theme='green'
+                                                text={HEROHEADER.actionBtn}
+                                                type='router'
+                                                href='/get-started'
+                                                />
                                             </Container>
                                         </div>
                                     </div>

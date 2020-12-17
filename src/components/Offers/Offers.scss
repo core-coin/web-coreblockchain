@@ -12,16 +12,25 @@
   }
 
   @media (max-width: 767px) {
+    padding: 30% 0 2%;
     .preTitle,
     .title {
       margin-left: 10px;
+      margin-bottom: 25px;
     }
+    .preTitle {
+      margin-bottom: 0;
+    }
+    &__col {
+      padding: 0;
+    }
+
   }
 
   @media (min-width: 1200px) {
     .preTitle {
       padding-top: 80px;
-      margin-bottom: 10px;
+      margin-left: 5px;
     }
 
     .preTitle,
@@ -94,8 +103,10 @@
       display: flex !important;
       height: 201px;
       border-radius: 14px;
-      width: calc(100% - 20px) !important;
+      width: calc(100% - 14px) !important;
       margin: 0 auto 19px;
+      margin-left: 30px;
+      box-shadow: 0px 3px 13px 0px #0000004f;
 
       &:hover {
         &::after {
@@ -172,6 +183,7 @@
         .offers_block {
           transition: transform 0.4s;
           height: 233px;
+          box-shadow: 0px 4px 18px 0px #000000d1;
         }
       }
     }

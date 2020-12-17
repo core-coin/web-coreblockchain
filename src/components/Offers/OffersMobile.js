@@ -47,7 +47,7 @@ export default class Offers extends PureComponent{
                             <h3 className='preTitle'>{OFFERS.preTitle}</h3>
                             <h1 className='title'>{OFFERS.title} <span>{OFFERS.highlightTitle}</span></h1>
                         </Col>
-                        <Col>
+                        <Col className='offers__col'>
                             <Slider {...settings}>
                                 <div className='offers_block'>
                                     <Decentralization />

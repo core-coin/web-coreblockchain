@@ -53,8 +53,6 @@ export class CoreNetwork extends PureComponent{
     render(){
         const { translate } = this.props
 
-        const { activeTab } = this.state
-
         return(
             <>
                 <h1 className='title'>{translate.coreNetwork}<span>{translate.coreNetworkHightlight}</span></h1>
@@ -65,6 +63,7 @@ export class CoreNetwork extends PureComponent{
                     <AnimatedArrow url='' text={translate.NodeStatus.link}/>
                     <Button
                     mobileFullWidth
+                    download
                     theme='ghost'
                     size='small'
                     href={translate.NodeStatus.buttonLink}

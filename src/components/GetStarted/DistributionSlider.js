@@ -23,12 +23,16 @@ import Aws from '../SvgIcon/icons/Aws'
 import Azure from '../SvgIcon/icons/Azure'
 import Ovh from '../SvgIcon/icons/Ovh'
 
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import './GetStarted.scss'
 
 const CopyIcon = <Copy/>
 const ChainIcon = <Chain/>
 
-export class Repos extends PureComponent{
+export class DistributionSlider extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -118,18 +122,26 @@ export class Repos extends PureComponent{
 
         const { activeTab } = this.state
 
+        const settings = {
+          dots: true,
+          infinite: false,
+          className: 'center',
+          centerMode: true,
+          centerPadding: '20px',
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+      }
+
         return(
             <div className='isoImage'>
                 <div className='tabs_header'>
-                    <Nav tabs>
+                <Slider {...settings}>
                         {translate.repos.map(this.renderTabName)}
-                    </Nav>
+                   </Slider>
                 </div>
-                <div>
-                    <TabContent activeTab={activeTab}>
-                        {translate.repos.map(this.renderTabContent)}
-                    </TabContent>
-                </div>
+              
             </div>
         )
     }
