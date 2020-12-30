@@ -1,54 +1,79 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
+import docs from './docs.json'
 import lunr from 'lunr'
-import { useLunr } from 'react-lunr'
-import { Formik, Form, Field } from 'formik'
+import { keyBy } from 'lodash'
+import './Search.scss'
 
-const docs = {
-  title: 'Twelfth-Night',
-  body: 'If music be the food of love, play on: Give me excess of it…',
-  author: 'William Shakespeare',
-  id: '1'
-}
+import SearchIcon from '../SvgIcon/icons/Search'
 
-const index = lunr(function() {
-    this.field('title')
-    this.field('body')
-  
-    this.add(docs)
+const index = keyBy(docs, 'id')
+
+var idx = lunr(function () {
+  this.ref('id')
+  this.field('title')
+  this.field('description')
+
+  docs.forEach((doc) => {
+    this.add({
+      id: doc.id,
+      title: doc.title.toLowerCase(),
+      description: doc.description,
+    })
   })
+})
 
-const store = {
-  1: { id: 1, title: 'Document 1' },
-  2: { id: 2, title: 'Document 2' },
-  3: { id: 3, title: 'Document 3' },
-}
- 
 const SearchBar = () => {
-  const [query, setQuery] = useState(null)
-  const results = useLunr(query, index, store)
- 
-  return (
-    <>
-      <Formik
-        initialValues={{ query: '' }}
-        onSubmit={(values, { setSubmitting }) => {
-          setQuery(values.query);
-          setSubmitting(false);
-        }}
-      >
-        <Form>
-          <Field name='query' />
-        </Form>
-      </Formik>
-      <h1>Results</h1>
-      <ul>
-        {results.map(result => (
-          <li key={result.id}>{result.title}</li>
-        ))}
-      </ul>
-    </>
-  )
+  const [results, setResults] = useState([])
+  let [isOpen, setIsOpen] = useState(false)
 
+  function handleStatusChange() {
+    setIsOpen(!isOpen)
+    console.log(isOpen)
+  }
+
+  return (
+    <div className='search'>
+      <div
+        className={isOpen ? 'search__overlay' : 'd-none'}
+        onClick={handleStatusChange}
+      ></div>
+      <label className={isOpen ? 'search_box search_box__open' : 'search_box'}>
+        <input
+          type='search'
+          placeholder='Search for a term or phrase...'
+          name='search'
+          className='search_box__input'
+          onChange={useCallback((e) => {
+            const res = idx.search(`${e.target.value}`)
+            const searchRes = res.map((i) => index[i.ref])
+
+            setResults(searchRes)
+          }, [])}
+        />
+        <input
+          type='text'
+          className='search_box__submit'
+          onChange={useCallback((e) => {
+            const res = idx.search(`${e.target.value}`)
+            const searchRes = res.map((i) => index[i.ref])
+
+            setResults(searchRes)
+          }, [])}
+        />
+        <span className='search_box__icon' onClick={handleStatusChange}>
+          <SearchIcon />
+        </span>
+      </label>
+      <div className='results'>
+        {results.map((prod) => (
+          <div key={prod.id}>
+            <h3>{prod.title}</h3>
+            <p>{prod.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default SearchBar

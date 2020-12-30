@@ -20,7 +20,9 @@ export class Devices extends PureComponent {
   }
 
   render() {
-    const { translate } = this.props;
+    const { translate } = this.props
+
+    const isMobile = window.innerWidth <= 767
 
     return (
       <>
@@ -32,8 +34,8 @@ export class Devices extends PureComponent {
           <h3>{translate.CpuMiners.title}</h3>
           <p>{translate.CpuMiners.description}</p>
           <ul>{translate.devicesList.map(this.renderList)}</ul>
-          <AnimatedArrow url='' text={translate.CpuMiners.link} />
-          <AnimatedArrow url='' text={translate.CpuMiners.linkUnder} />
+          <AnimatedArrow url='' text={isMobile ? translate.CpuMiners.link : translate.CpuMiners.linkMobile} />
+          {(!isMobile && <AnimatedArrow url='' text={translate.CpuMiners.linkUnder} /> )}
         </div>
       </>
     )

@@ -77,10 +77,18 @@
       }
     }
     &__block {
-      margin-bottom: 88px;
+      @media (max-width: 767px) {
+        margin-top: 45px;
+      }
+      @media (min-width: 768px) {
+        margin-bottom: 88px;
+      }
     }
     .animatedArrow {
       text-transform: uppercase;
+      @media (max-width: 767px) {
+        letter-spacing: inherit;
+      }
     }
     .downloadBlock {
       border-radius: 6px;
@@ -90,9 +98,25 @@
       padding: 60px 70px;
       margin-top: 40px;
       @media (max-width: 767px) {
-        padding: 20px;
+        padding: 30px 20px;
         button {
           margin-bottom: 20px;
+        }
+        &_slider {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          margin: 20px -5px 20px 23px;
+          text-align: center;
+          font-family: 'Montserrat-Medium';
+          color: #fff;
+          height: 200px;
+          svg {
+            fill: #fff;
+            margin: 0 auto;
+            height: 100px!important;
+            width: 80px!important;
+          }
         }
       }
       .theme_ghost {
@@ -121,7 +145,9 @@
         }
       }
       &.nodeStatus {
-        background: var(--black-lighter) url('../../images/coreStatus.png');
+        @media (min-width: 768px) {
+          background: var(--black-lighter) url('../../images/coreStatus.png');
+        }
         padding-bottom: 5px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -131,6 +157,9 @@
         .button {
           margin-left: 0;
           margin-bottom: 15px;
+          @media (max-width: 767px) {
+            display: none;
+          }
         }
         @media (min-width: 968px) {
           p {
@@ -139,7 +168,9 @@
         }  
       }
       &.cpuMiners {
-        background: var(--black-lighter) url('../../images/luna.png') no-repeat 87% 13%;
+        @media (min-width: 768px) {
+          background: var(--black-lighter) url('../../images/luna.png') no-repeat 87% 13%;
+        }
         .animatedArrow {
           padding-top: 20px;
         }
@@ -157,7 +188,9 @@
         }
       }
       &.androidMiners {
-        background: var(--black-lighter) url('../../images/distribution.jpg') no-repeat right center;
+        @media (min-width: 768px) {
+          background: var(--black-lighter) url('../../images/distribution.jpg') no-repeat right center;
+        }
         a {
           padding-top: 25px;
         }
@@ -169,6 +202,10 @@
         letter-spacing: -0.96px;
         line-height: 36px;
         text-transform: uppercase;
+        @media (max-width: 767px) {
+          font-size: 22px;
+          font-family: 'Montserrat-Medium';
+        }
       }
       h4 {
         color: var(--white);
@@ -404,5 +441,43 @@
       top: -365px;
     }
   }
-
 }
+  //slider
+.slick-slider {
+  .slick-list {
+    padding-left: 0 !important;
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+
+      .slick-active {
+        .downloadBlock_slider {
+          transition: transform 0.4s;
+          height: 233px;
+          box-shadow: 0px 4px 18px 0px #000000d1;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    li {
+      &.slick-active {
+        button {
+          &::before {
+            color: var(--white)
+          }
+        }
+      }
+
+      button {
+        &::before {
+          color: #43434c;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+

@@ -7,11 +7,10 @@ import { CoreNetwork } from './CoreNetwork'
 import { CoreMiners } from './CoreMiners' 
 import { CoreClient } from './CoreClient'
 import { Distribution } from './Distribution'
-
-import './GetStarted.scss' 
 import { Devices } from './Devices'
 import { DistributionSlider } from './DistributionSlider'
 
+import './GetStarted.scss' 
 
 export default class GetStarted extends PureComponent {
   constructor(props) {
@@ -90,7 +89,7 @@ export default class GetStarted extends PureComponent {
       language,
     } = this.props 
     
-    const isMobile = window.innerWidth <= 767;
+    const isMobile = window.innerWidth <= 767
 
     return (
       <div className='getStarted'>

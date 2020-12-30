@@ -11,7 +11,6 @@ import Cryptohub from '../SvgIcon/icons/Cryptohub'
 import Github from '../SvgIcon/icons/Github'
 import Discord from '../SvgIcon/icons/Discord'
 import Twitter from '../SvgIcon/icons/Twitter'
-import Plus from '../SvgIcon/icons/Plus'
 import Button from '../Button'
 
 import './Contacts.scss'

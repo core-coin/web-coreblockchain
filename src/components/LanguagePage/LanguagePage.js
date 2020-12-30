@@ -34,6 +34,7 @@ export default class LanguagePage extends PureComponent{
     )
 
     render(){
+        
         const { translate: { LANGUAGE_PAGE } } = this.props     
 
         return(

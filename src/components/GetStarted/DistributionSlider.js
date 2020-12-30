@@ -7,17 +7,14 @@ import Docker from '../SvgIcon/icons/Docker'
 import AptIpfs from '../SvgIcon/icons/AptIpfs'
 import Kubernetes from '../SvgIcon/icons/Kubernetes'
 import Google from '../SvgIcon/icons/Google'
-import Copy from '../SvgIcon/icons/Copy'
 import Aws from '../SvgIcon/icons/Aws'
 import Azure from '../SvgIcon/icons/Azure'
 import Ovh from '../SvgIcon/icons/Ovh'
-
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import './GetStarted.scss'
-
 
 export class DistributionSlider extends PureComponent{
 
@@ -45,10 +42,7 @@ export class DistributionSlider extends PureComponent{
 
         return(
             <div key={tab.title}>
-                <div
-                    className='downloadBlock'
-                    
-                >
+                <div className='downloadBlock downloadBlock_slider'>
                     {this.getIcon(tab.title)}
                     {tab.title}
                 </div>

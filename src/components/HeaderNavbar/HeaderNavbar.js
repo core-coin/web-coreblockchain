@@ -12,8 +12,7 @@ import {
 } from 'reactstrap'
 
 import Logo from '../../images/logo.png'
-
-import Search from '../Search'
+import SearchBar from '../SearchBar/SearchBar'
 import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
 import Close from '../SvgIcon/icons/Close'
@@ -140,7 +139,7 @@ export default class HeaderNavbar extends PureComponent{
                                             </Nav>
                                         </div>
                                         <div className='headerNavbar_left'>
-                                            <Search />
+                                            <SearchBar/>
                                             <Button
                                                 icon={LanguageIcon}
                                                 theme='ghost'

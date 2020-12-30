@@ -13,11 +13,8 @@ import { Image } from './Image'
 import { TabContainers } from './TabContainers'
 import { Deployment } from './Deployment'
 import { Repos } from './Repos'
-import Key from '../SvgIcon/icons/Key'
 
 import './GetStarted.scss'
-
-const KeyIcon = <Key />
 
 export class Distribution extends PureComponent{
     constructor(props) {

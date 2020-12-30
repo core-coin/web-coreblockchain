@@ -458,7 +458,8 @@ export const LOCALIZED_STRINGS = {
             CpuMiners: {
                 title: 'IoT Devices',
                 description: 'Minimum requirements:',
-                link: 'Build Your Own & Connect to Blockchain network',
+                link: 'Build Your Own',
+                linkMobile: 'Build Your Own',
                 linkUnder: 'Tested Devices List',
             },
             devicesList: [
@@ -491,6 +492,23 @@ export const LOCALIZED_STRINGS = {
             },
 
         },
+        COMMUNITY: {
+            menuLinks: [
+                {
+                    link: 'get_started',
+                    label: 'Heading 1',
+                }, {
+                    link: 'for_developers',
+                    label: 'Heading 2',
+                }, {
+                    link: 'node_distributions',
+                    label: 'Heading 3',
+                }, {
+                    link: 'devices',
+                    label: 'Heading 4',
+                }
+            ],
+        }
     }, //en end
     sk: {
         MENULINKS: [
@@ -731,7 +749,7 @@ export const LOCALIZED_STRINGS = {
             translationProgress: 'Priebeh prekladu',
             reviewProgress: 'Priebeh revízie',
         },
-      GETSTARTED: {
+        GETSTARTED: {
         menuLinks: [
           {
             link: 'get_started',
@@ -929,6 +947,7 @@ export const LOCALIZED_STRINGS = {
           title: 'IoT zariadenia',
           description: 'Minimálne požiadavky:',
           link: 'Vytvorte si vlastnú sieť a pripojte sa k sieti Blockchain',
+          linkMobile: 'Vytvorte si vlastnú',
           linkUnder: 'List testovaných zariadení',
         },
         devicesList: [
@@ -959,6 +978,23 @@ export const LOCALIZED_STRINGS = {
           description: 'Core prieskumník blokov je webový nástroj, ktorý poskytuje podrobné informácie o základných blokoch, adresách a transakciách.',
           link: 'CORE prieskumník'
         },
-      },
+        },
+        COMMUNITY: {
+            menuLinks: [
+                {
+                    link: 'get_started',
+                    label: 'Heading 1',
+                }, {
+                    link: 'for_developers',
+                    label: 'Heading 2',
+                }, {
+                    link: 'node_distributions',
+                    label: 'Heading 3',
+                }, {
+                    link: 'devices',
+                    label: 'Heading 4',
+                }
+            ],
+        },
     }, //sk end
 }

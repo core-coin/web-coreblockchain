@@ -11,6 +11,7 @@ import LanguagePageContainer from './containers/LanguagePageContainer/LanguagePa
 import LanguageTranslatePageContainer from './containers/LanguageTranslatePageContainer/LanguageTranslatePageContainer'
 import GetStartedContainer from './containers/GetStartedContainer/GetStartedContainer'
 import DevelopersContainer from './containers/DevelopersContainer'
+import CommunityContainer from './containers/CommunityContainer'
 
 const store = Store()
 
@@ -35,6 +36,9 @@ export default class App extends PureComponent {
                             </Route>
                             <Route path='/developers'>
                                 <DevelopersContainer/>
+                            </Route>
+                            <Route path='/community'>
+                                <CommunityContainer/>
                             </Route>
                         </Switch>
                     </Layout>
