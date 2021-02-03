@@ -1,0 +1,16 @@
+[0121/100933.258:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[0121/224507.385:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0121/224507.432:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0121/224507.385:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0121/224507.791:ERROR:exception_snapshot_win.cc(99)] thread ID 1604 not found in process
+[0121/224507.791:ERROR:exception_snapshot_win.cc(99)] thread ID 5184 not found in process
+[0121/224507.791:ERROR:exception_snapshot_win.cc(99)] thread ID 10624 not found in process
+[0121/224507.385:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0121/224507.416:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0121/224508.323:ERROR:exception_snapshot_win.cc(99)] thread ID 11420 not found in process
+[0121/224508.323:ERROR:exception_snapshot_win.cc(99)] thread ID 12868 not found in process
+[0122/204415.169:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[0123/072803.710:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0123/072803.710:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0123/072803.945:ERROR:exception_snapshot_win.cc(99)] thread ID 1604 not found in process
+[0123/072803.945:ERROR:exception_snapshot_win.cc(99)] thread ID 8680 not found in process

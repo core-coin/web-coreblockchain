@@ -7,6 +7,8 @@ node_modules/
 .idea/
 .idea/*
 build/
+.prettierrc.json
+debug.log
 
 ### macOS ###
 # General
