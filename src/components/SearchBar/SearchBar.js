@@ -46,7 +46,7 @@ const SearchBar = () => {
           onChange={useCallback((e) => {
             const res = idx.search(`${e.target.value}`)
             const searchRes = res.map((i) => index[i.ref])
-
+console.log('change')
             setResults(searchRes)
           }, [])}
         />

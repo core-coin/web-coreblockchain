@@ -75,16 +75,16 @@ export class Image extends PureComponent {
         <Button
           mobileFullWidth
           download
-          theme="green"
-          size="small"
+          theme='green'
+          size='small'
           href={tab.downloadLink}
           text={this.props.translate.download}
           icon={DownloadIcon}
         />
         <Button
           mobileFullWidth
-          theme="ghost"
-          size="small"
+          theme='ghost'
+          size='small'
           href={tab.downloadLink}
           text={this.props.translate.magnetLink}
           icon={TorrentIcon}
@@ -94,9 +94,9 @@ export class Image extends PureComponent {
         <CopyInput value={this.props.translate.distributionImageScript} />
 
         <Button
-          theme="ghost"
+          theme='ghost'
           mobileFullWidth
-          size="small"
+          size='small'
           href={'#'}
           text={this.props.translate.CoreDaemonSoftware.keyBtn}
           icon={KeyIcon}
@@ -111,8 +111,8 @@ export class Image extends PureComponent {
     const { activeTab } = this.state
 
     return (
-      <div className="isoImage">
-        <div className="tabs_header">
+      <div className='isoImage'>
+        <div className='tabs_header'>
           <Nav tabs>{translate.images.map(this.renderTabName)}</Nav>
         </div>
         <div>
