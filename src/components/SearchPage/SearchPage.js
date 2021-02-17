@@ -5,7 +5,8 @@ import {
     Row,
     Col
 } from 'reactstrap'
-import blogTemplate from '../../templates/blogTemplate.js'
+import Button from '../Button'
+import BlogTemplate from '../../templates/blogTemplate.js'
 
 import './SearchPage.scss'
 
@@ -31,7 +32,7 @@ export default class SearchPage extends PureComponent{
                       <Col>
                       <h3>
                           Search Results
-                          <blogTemplate />
+                          <BlogTemplate />
                       </h3>
                       </Col>
                     </Row>

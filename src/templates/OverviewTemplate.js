@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import ReactMarkdown from 'react-markdown'
-import blog from '../markdown-pages/post-1.md'
+import blogOverview from '../markdown-pages/post-2.md'
+import hashtag from 'markdown-it-hashtag'
 
 export default class Template extends PureComponent{
   static propTypes = {}
@@ -10,13 +11,14 @@ export default class Template extends PureComponent{
   constructor(props) {
     super(props);
     this.state = {
-      markdown: null
+      markdown: null,
+      hashtag: ''
     }
   }
 
   componentDidMount() {
-    console.log(blog)
-    fetch(blog)
+    console.log(blogOverview)
+    fetch(blogOverview)
       .then(res => res.text())
       .then(markdown => this.setState((state) => ({ ...state, markdown })))
       .catch((err) => console.error(err));
@@ -28,7 +30,7 @@ export default class Template extends PureComponent{
     const { markdown } = this.state
 
     return(
-      <ReactMarkdown source={markdown} />
+      <ReactMarkdown source={markdown} hashtag={hashtag} />
 
     )
   }
