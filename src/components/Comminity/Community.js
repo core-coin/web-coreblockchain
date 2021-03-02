@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
 import { Container, Row, Col } from 'reactstrap'
 
+import SidebarTemplate from '../../templates/withSidbarTemplate'
+
 import './Community.scss'
 
 export default class Community extends PureComponent {
@@ -86,50 +88,10 @@ export default class Community extends PureComponent {
     const isMobile = window.innerWidth <= 767
 
     return (
-      <div className='community'>
+      <div>
         <Container>
           <Row>
-            <Col
-              md={{ size: 9 }}
-              xl={{ size: 8 }}
-              className='community_content'
-            >
-              <Row>
-                <Col>
-                  <div className='getStarted_content__block'>
-                    <span id='get_started' className='hiddenBlock'></span>
-                    <div>block 1</div>
-                  </div>
-                  <div className='getStarted_content__block'>
-                    <span
-                      id='node_distributions'
-                      className='hiddenBlock'
-                    ></span>
-                    <div>block 2</div>
-                  </div>
-                  <div className='getStarted_content__block'>
-                    <span id='devices' className='hiddenBlock'></span>
-                    <div>block 3</div>
-                  </div>
-
-                  <div className='getStarted_content__block'>
-                    <span id='core_mining' className='hiddenBlock'></span>
-                    <div>block 4</div>
-                  </div>
-
-                  <div className='getStarted_content__block'>
-                    <span id='core_network' className='hiddenBlock'></span>
-                    <div>block 5</div>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            <Col md={{ size: 3 }} xl={{ size: 4 }} className='community_menu'>
-              <div className=''>
-                  <h2>On this page</h2>
-                <ul>{COMMUNITY.menuLinks.map(this.renderLinks)}</ul>
-              </div>
-            </Col>
+            <SidebarTemplate/>
           </Row>
         </Container>
       </div>

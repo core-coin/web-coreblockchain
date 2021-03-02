@@ -1,35 +1,78 @@
 import React, {PureComponent} from 'react'
-import ReactMarkdown from 'react-markdown'
-import blog from '../markdown-pages/post-1.md'
+import { string } from 'prop-types'
+import {
+  Container,
+  Row,
+  Col
+} from 'reactstrap'
+import Markdown, { compiler } from 'markdown-to-jsx'
 
-export default class Template extends PureComponent{
-  static propTypes = {}
+import './md.scss'
+
+export default class BlogTemplate extends PureComponent{
+  static propTypes = {
+    source: string,
+  }
 
   static defaultProps = {}
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      markdown: null
+      markdown: '',
+      toc: [],
     }
   }
 
   componentDidMount() {
-    console.log(blog)
-    fetch(blog)
+    fetch(this.props.source)
       .then(res => res.text())
-      .then(markdown => this.setState((state) => ({ ...state, markdown })))
+      .then(markdown => this.setState((state) => ({ ...state, markdown, toc: this.buildToc(markdown) })))
       .catch((err) => console.error(err));
   }
 
+  buildToc = source => {
+    const headings = []
+    compiler(source, {
+      createElement(type, props, children) {
+        if ( type === 'h1' || type === 'h2' || type === 'h3' ) {
+          const id = props.id
+          props = {
+            ...props,
+            id: null,
+            className: 'toc-' + type,
+            onClick: () => {
+              let target = document.getElementById(id)
+              target && target.scrollIntoView()
+            }
+          }
+          headings.push(React.createElement('a', props, children))
+        }
+        return (
+          React.createElement(type, props, children)
+        )
+      },
+    })
+    return headings
+  }
 
   render(){
 
-    const { markdown } = this.state
-
     return(
-      <ReactMarkdown source={markdown} />
-
+      <Container>
+        <Row>
+          <Col md='9' className='content'>
+            <Markdown>
+              {this.state.markdown}
+            </Markdown>
+          </Col>
+          <Col md='3' className='content-sidebar'>
+            <ul>
+              { this.state.toc.map((entry, index) => ( <li key={index}>{entry}</li> ))}
+            </ul>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 } 
