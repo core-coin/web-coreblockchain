@@ -6,6 +6,7 @@ import {
   Col
 } from 'reactstrap'
 import Markdown, { compiler } from 'markdown-to-jsx'
+import metadataParser from 'markdown-yaml-metadata-parser'
 
 import './md.scss'
 
@@ -21,13 +22,16 @@ export default class BlogTemplate extends PureComponent{
     this.state = {
       markdown: '',
       toc: [],
+      metadata: [],
     }
   }
 
   componentDidMount() {
     fetch(this.props.source)
       .then(res => res.text())
-      .then(markdown => this.setState((state) => ({ ...state, markdown, toc: this.buildToc(markdown) })))
+      .then(markdown => {
+        let md = metadataParser(markdown)
+        this.setState((state) => ({ ...state, markdown: md.content, toc: this.buildToc(md.content), metadata: md.metadata }))})
       .catch((err) => console.error(err));
   }
 

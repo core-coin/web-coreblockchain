@@ -20,6 +20,7 @@
     "lunr": "^2.3.9",
     "markdown-it-hashtag": "^0.4.0",
     "markdown-to-jsx": "^7.1.1",
+    "markdown-yaml-metadata-parser": "^3.0.0",
     "node-sass": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
