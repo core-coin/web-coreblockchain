@@ -7,6 +7,7 @@ import {
 } from 'reactstrap'
 import Markdown, { compiler } from 'markdown-to-jsx'
 import metadataParser from 'markdown-yaml-metadata-parser'
+import MetaTags from 'react-meta-tags'
 
 import './md.scss'
 
@@ -62,21 +63,32 @@ export default class BlogTemplate extends PureComponent{
 
   render(){
 
+    const { markdown, toc, metadata} = this.state
+
     return(
-      <Container>
-        <Row>
-          <Col md='9' className='content'>
-            <Markdown>
-              {this.state.markdown}
-            </Markdown>
-          </Col>
-          <Col md='3' className='content-sidebar'>
-            <ul>
-              { this.state.toc.map((entry, index) => ( <li key={index}>{entry}</li> ))}
-            </ul>
-          </Col>
-        </Row>
-      </Container>
+      <>
+        <MetaTags>
+          <title>{metadata.title}</title>
+          <meta name='description' content={metadata.description} />
+          <meta property='og:title' content={metadata.title} />
+          <meta name='keywords' content={metadata.keywords} />
+          <meta name='language' content={metadata.lang} />
+        </MetaTags>
+        <Container>
+          <Row>
+            <Col md='9' className='content'>
+              <Markdown>
+                {markdown}
+              </Markdown>
+            </Col>
+            <Col md='3' className='content-sidebar'>
+              <ul>
+                { toc.map((entry, index) => ( <li key={index}>{entry}</li> ))}
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </>
     )
   }
 } 
