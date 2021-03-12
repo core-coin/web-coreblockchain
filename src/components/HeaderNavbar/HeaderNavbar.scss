@@ -62,15 +62,19 @@
   &_flex {
     display: flex;
     margin-left: 0.8rem;
+    position: relative;
   }
   &_left {
     display: flex;
     position: relative;
     .theme_green {
-      margin-right: 10px;
+      margin-left: 10px;
       text-transform: capitalize;
       padding: 0 8px;
       min-width: 110px;
+    }
+    .theme_ghost {
+      width: 30px;
     }
   }
   &_sidebar {

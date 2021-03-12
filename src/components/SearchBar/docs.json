@@ -1,17 +1,22 @@
 [
   {
-    "title": "Twelfth-Night",
-    "description": "If music be the food of love, play on: Give me excess of it…",
-    "id": 133502501
+    "title": "What is a blockchain? ",
+    "description": "A blockchain is best described as a public database that is updated and shared across many computers in a network. 'Block' refers to the fact that data and state is stored in sequential batches or 'blocks'. If you send ETH to someone else, the transaction data needs to be added to a block for it to be successful refers to the fact that each block cryptographically references its parent. A block's data cannot be changed without changing all subsequent blocks, which would require the consensus of the entire network.           Each new block and the chain as a whole must be agreed upon by every node in the network. This is so everyone has the same data. For this to work, blockchains need a consensus mechanism.",
+    "basename": 133502501                              
   },
   {
-    "title": "Twenty",
-    "description": "Launches the test runner in the interactive watch mode.",
-    "id": 133502502
+    "title": " What is Ethereum? ",
+    "description": "Ethereum currently uses a proof-of-work consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that you need a lot of computing power to work on. Solving the puzzle 'proves' that you have spent the computational resources. Doing this is known as [mining](/en/developers/docs/consensus-mechanisms/pow/mining/). Mining can be trial and error but adding a block successfully is rewarded in ETH. On the other hand, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block.",
+    "basename": 133502502
   },
   {
-    "title": "Third",
-    "description": "The build is minified and the filenames include the hashes.",
-    "id": 133502505
+    "title": "What is ether?",
+    "description": "The purpose of Ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction. Any participant who broadcasts a transaction request must also offer some amount of ether to the network, as a bounty to be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.The amount of ether paid is a function of the length of the computation. This also prevents malicious participants from intentionally clogging the network by requesting execution of infinite loops or resource-intense scripts, as these actors will be continually charged.",
+    "basename": 133502505
+  },
+  {
+    "title": " Nodes",
+    "description": "The real-life machines which are storing the EVM state. Nodes communicate with each other to propagate information about the EVM state and new state changes. Any user can also request execution of code by broadcasting code execution request from a node. The Ethereum network itself is the aggregate of all Ethereum nodes and their communications.",
+    "basename": 133502507
   }
 ]

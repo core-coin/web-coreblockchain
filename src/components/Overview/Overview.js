@@ -26,7 +26,7 @@ export default class Overview extends PureComponent{
     render(){
 
         return(
-            <div className='developers'>
+            <div>
                 <Container>
                     <Row>
                       <Col md='9' className='content'>

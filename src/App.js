@@ -18,7 +18,9 @@ import OverviewContainer from './containers/OverviewContainer'
 const store = Store()
 
 export default class App extends PureComponent {
+
   render() {
+    
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
