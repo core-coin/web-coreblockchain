@@ -18,7 +18,6 @@ export default class SearchPage extends PureComponent {
   }
 
   render() {
-
     return (
       <div className="search-page">
         <Container>
