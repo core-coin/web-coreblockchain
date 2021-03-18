@@ -1,7 +1,7 @@
 .search {
   width: min-content;
   &__overlay {
-    width: 98vw;
+    width: 97vw;
     height: 100vh;
     position: absolute;
     left: 0;
@@ -89,8 +89,21 @@
     position: absolute;
     top: 100%;
     color: var(--white);
+    left: -143%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    backdrop-filter: blur(10px);
+    mark {
+      padding: 0;
+      background-color: inherit;
+      color: var(--green);
+    }
     p {
       
+    font-family: 'Red Hat Display';
+    font-size: 21px;
+    color: var(--grey)
     }
   }
 }

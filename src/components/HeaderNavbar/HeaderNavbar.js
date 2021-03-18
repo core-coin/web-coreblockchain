@@ -12,15 +12,16 @@ import {
 } from 'reactstrap'
 
 import Logo from '../../images/logo.png'
-import SearchBar from '../SearchBar/SearchBar'
 import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
+import Search from '../SvgIcon/icons/Search'
 import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
 
 import './HeaderNavbar.scss'
 
 const LanguageIcon = <Language/>
+const SearchIcon = <Search/>
 
 const body = document.body
 const scrollUp = 'scroll-up'
@@ -139,7 +140,14 @@ export default class HeaderNavbar extends PureComponent{
                                             </Nav>
                                         </div>
                                         <div className='headerNavbar_left'>
-                                            <SearchBar/>
+                                            <Button 
+                                             icon={SearchIcon}
+                                             theme='ghost'
+                                             size='extraSmall'
+                                             hover={false}
+                                             href='/search'
+                                             type='router'/>
+                                            
                                             <Button
                                                 icon={LanguageIcon}
                                                 theme='ghost'

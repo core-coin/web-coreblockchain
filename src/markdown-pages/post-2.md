@@ -6,16 +6,6 @@ lang: en
 ---
 
 
-* Lists
-* [ ] todo
-* [x] done
-
-A table:
-
-| a | b |
-| - | - |
-
-
 ## What is a blockchain?
 
 A blockchain is best described as a public database that is updated and shared across many computers in a network.

@@ -1,23 +1,26 @@
 import React, { useCallback, useState } from 'react'
-import docs from './docs.json'
+import docs from '../../markdown-pages/docs.json'
 import lunr from 'lunr'
 import { keyBy } from 'lodash'
 import './Search.scss'
 
 import SearchIcon from '../SvgIcon/icons/Search'
 
-const index = keyBy(docs, 'id')
+const index = keyBy(docs, 'basename')
 
 var idx = lunr(function () {
-  this.ref('id')
+  this.ref('basename')
   this.field('title')
   this.field('description')
 
+  this.metadataWhitelist = ['position']
+
   docs.forEach((doc) => {
     this.add({
-      id: doc.id,
+      basename: doc.basename,
       title: doc.title.toLowerCase(),
       description: doc.description,
+      metadataWhitelist: doc.basename,
     })
   })
 })
@@ -28,31 +31,17 @@ const SearchBar = () => {
 
   function handleStatusChange() {
     setIsOpen(!isOpen)
-    console.log(isOpen)
   }
 
   return (
-    <div className='search'>
-      <div
-        className={isOpen ? 'search__overlay' : 'd-none'}
-        onClick={handleStatusChange}
-      ></div>
-      <label className={isOpen ? 'search_box search_box__open' : 'search_box'}>
+    <div className="search">
+      <label className="search_box search_box__open">
         <input
-          type='search'
-          placeholder='Search for a term or phrase...'
-          name='search'
-          className='search_box__input'
-          onChange={useCallback((e) => {
-            const res = idx.search(`${e.target.value}`)
-            const searchRes = res.map((i) => index[i.ref])
-console.log('change')
-            setResults(searchRes)
-          }, [])}
-        />
-        <input
-          type='text'
-          className='search_box__submit'
+          type="search"
+          placeholder="Search for a term or phrase..."
+          name="search"
+          autoFocus={true}
+          className="search_box__input"
           onChange={useCallback((e) => {
             const res = idx.search(`${e.target.value}`)
             const searchRes = res.map((i) => index[i.ref])
@@ -60,16 +49,19 @@ console.log('change')
             setResults(searchRes)
           }, [])}
         />
-        <span className='search_box__icon' onClick={handleStatusChange}>
+        <span className="search_box__icon" onClick={handleStatusChange}>
           <SearchIcon />
         </span>
       </label>
-      <div className='results'>
-        {results.map((prod) => (
-          <div key={prod.id}>
-            <h3>{prod.title}</h3>
-            <p>{prod.description}</p>
-          </div>
+      <div className="results" id="results">
+        {results.map((doc) => (
+          <a href={doc.slug} key={doc.basename}>
+            <h3>{doc.title}</h3>
+            <p>
+              {doc.description.substr(0, 220)}
+              ...
+            </p>
+          </a>
         ))}
       </div>
     </div>
