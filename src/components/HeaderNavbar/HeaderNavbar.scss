@@ -24,6 +24,23 @@
         flex-direction: column;
       }
     }
+    .button {
+      text-transform: capitalize;
+      width: 100%;
+      margin: 0;
+      letter-spacing: 0.07em;
+    }
+  }
+  @media (max-width: 1199px) and (min-width: 992px) {
+    .navbar-brand {
+      width: 100%;
+      padding-bottom: 14px;
+
+      img {
+        width: 100%;
+      }
+    }
+
   }
   .navbar {
     justify-content: space-between;
@@ -39,16 +56,25 @@
       line-height: 28px;
       text-transform: capitalize;
       cursor: pointer;
+      white-space: nowrap;
     }
   }
   &_flex {
     display: flex;
+    margin-left: 0.8rem;
+    position: relative;
   }
   &_left {
     display: flex;
     position: relative;
-    button {
-      margin-right: 10px;
+    .theme_green {
+      margin-left: 10px;
+      text-transform: capitalize;
+      padding: 0 8px;
+      min-width: 110px;
+    }
+    .theme_ghost {
+      width: 30px;
     }
   }
   &_sidebar {
@@ -75,6 +101,13 @@
       button {
         margin-right: 0;
       }
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        .search {
+          width: 100%;
+        }
+      }
     }
     &.open {
       overflow-x: visible;
@@ -82,6 +115,7 @@
     }
     .container {
       flex-direction: column;
+      background: var(--black);
     }
     .navbar-nav {
       text-align: center;

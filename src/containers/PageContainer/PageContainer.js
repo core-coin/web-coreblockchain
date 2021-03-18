@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, func, object, string } from 'prop-types'
+import { number, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -20,9 +20,9 @@ class PageContainer extends PureComponent {
         nodesOnline: number,
         totalTransactions: number,
         totalBlocks: number,
-        volume: number,
-        pricePerCoin: number,
-        walletAddresses: number,
+        blocktime: number,
+        marketCap: number,
+        price: number,
         translate: object,
         language: string,
     }
@@ -33,9 +33,9 @@ class PageContainer extends PureComponent {
         const {
             totalTransactions,
             totalBlocks,
-            volume,
-            pricePerCoin,
-            walletAddresses,
+            blocktime,
+            marketCap,
+            price,
             blockTimer,
             networkHashrate,
             difficulty,
@@ -55,9 +55,9 @@ class PageContainer extends PureComponent {
                 <NodeCoverage
                     totalTransactions={totalTransactions}
                     totalBlocks={totalBlocks}
-                    volume={volume}
-                    pricePerCoin={pricePerCoin}
-                    walletAddresses={walletAddresses}
+                    blocktime={blocktime}
+                    marketCap={marketCap}
+                    price={price}
                     language={language}
                     translate={translate}
                 />

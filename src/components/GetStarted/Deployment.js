@@ -10,20 +10,15 @@ import {
 } from 'reactstrap'
 
 import Button from '../Button'
-import CopyInput from '../CopyInput'
-import Download from '../SvgIcon/icons/Download'
-import Torrent from '../SvgIcon/icons/Torrent'
-import Ubuntu from '../SvgIcon/icons/Ubuntu'
-import Debian from '../SvgIcon/icons/Debian'
-import Fedora from '../SvgIcon/icons/Fedora'
-import CentOS from '../SvgIcon/icons/CentOS'
-
+import Chain from '../SvgIcon/icons/Chain'
+import DockerComp from '../SvgIcon/icons/DockerComp'
+import Bash from '../SvgIcon/icons/Bash'
+import Ansible from '../SvgIcon/icons/Ansible'
 import './GetStarted.scss'
 
-const DownloadIcon = <Download/>
-const TorrentIcon = <Torrent/>
+const ChainIcon = <Chain/>
 
-export class IsoImage extends PureComponent{
+export class Deployment extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -44,10 +39,9 @@ export class IsoImage extends PureComponent{
 
     getIcon = (title) => {
       const iconMap = {
-        Ubuntu: <Ubuntu/>,
-        Dedian: <Debian/>,
-        Fedora: <Fedora/>,
-        CentOS: <CentOS/>,
+        'Ansible': <Ansible/>,
+        'Bash': <Bash/>,
+        'Docker Comp': <DockerComp/>,
       }
       return iconMap[title]
     }
@@ -75,21 +69,10 @@ export class IsoImage extends PureComponent{
                     mobileFullWidth
                     theme='green'
                     size='small'
-                    href={tab.downloadLink}
-                    text={this.props.translate.downloadBtn}
-                    icon={DownloadIcon}
+                    href={tab.openLink}
+                    text={this.props.translate.openLinkBtn}
+                    icon={ChainIcon}
                 />
-                <Button
-                    mobileFullWidth
-                    theme='green'
-                    size='small'
-                    href={tab.torrentLink}
-                    text={this.props.translate.torrentButton}
-                    icon={TorrentIcon}
-                />
-                <hr/>
-                <p>{this.props.translate.downloadScriptText}</p>
-                <CopyInput value={tab.script}/>
             </TabPane>
         )
     }
@@ -102,13 +85,13 @@ export class IsoImage extends PureComponent{
         return(
             <div className='isoImage'>
                 <div className='tabs_header'>
-                    <Nav tabs>
-                        {translate.isoImage.map(this.renderTabName)}
+                    <Nav tabs className='tabs-noscroll'>
+                        {translate.deployment.map(this.renderTabName)}
                     </Nav>
                 </div>
                 <div>
                     <TabContent activeTab={activeTab}>
-                        {translate.isoImage.map(this.renderTabContent)}
+                        {translate.deployment.map(this.renderTabContent)}
                     </TabContent>
                 </div>
             </div>

@@ -1,7 +1,11 @@
 .languagePage {
   background-color: var(--black);
-  padding-top: 250px;
+  padding-top: 100px;
   padding-bottom: 118px;
+  border-bottom: 1px solid var(--grey-darken);
+  .animatedArrow {
+    text-transform: uppercase;
+  }
   @media (max-width: 768px) {
     padding: 100px 0;
   }
@@ -12,7 +16,7 @@
     }
   }
   h3 {
-    padding: 78px 0 32px;
+    padding: 50px 0 25px;
     color: var(--white);
     font-family: 'Red Hat Display';
     font-size: 22px;
@@ -24,7 +28,6 @@
     }
   }
   &_inProgress {
-    padding-top: 77px;
     @media (max-width: 767px) {
       padding-top: 32px;
     }
@@ -35,21 +38,31 @@
   &_block {
     display: flex;
     align-items: center;
-    padding: 0 32px;
-    height: 120px;
+    padding: 1.5px;
+    height: 105px;
     border-radius: 6px;
     border: 1px solid var(--grey-darken);
     background-color: var(--black-lighter);
     margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
+    transition: .8s;
     @media (max-width: 768px) {
       width: 100%;
     }
     &.big {
       height: 160px;
+      width: 100%;
+      text-align: left;
     }
     &__text {
-      padding-left: 16px;
+      position: absolute;
+      padding: 22px;
+      background: var(--black-lighter);
+      width: 99%;
+      height: 99%;
+      border-radius: 6px;
       p {
         color: var(--white);
         font-family: Montserrat-Regular;
@@ -67,7 +80,51 @@
         display: block;
       }
       a {
-        padding-top: 25px;
+        padding-top: 20px;
+      }
+    }
+    .before {
+      --size: 0;
+      --x: 0;
+      --y: 0;
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      width: var(--size);
+      height: var(--size); 
+      background: radial-gradient(circle closest-side at 200px 200px,#2ee533, #303040);
+      transform: translate(-50%, -50%);
+      transition: width 0.9s ease, height 0.9s ease;
+    }
+    &:hover {
+      border: 1px solid transparent;
+      .before {
+        --size: 500px;
+        --x: 150px;
+        --y: 50px
+      }
+    }
+  }
+  ol {
+    counter-reset: mycounter;
+    list-style-type: decimal-leading-zero;
+    padding-inline-start: 30px;
+    li {
+      padding: 0 0 15px 10px;
+     &::marker { 
+      color: var(--white);
+      font-family: 'Red Hat Display';
+      font-size: 22px;
+      font-weight: 400;
+    }
+      p {
+        margin-bottom: 0;
+      }
+      a {
+        color: var(--green);
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }

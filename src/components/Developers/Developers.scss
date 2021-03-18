@@ -48,10 +48,10 @@
         font-size: 20px;
         font-weight: 700;
         letter-spacing: -0.6px;
-        text-transform: uppercase;
         cursor: pointer;
         border: none;
         padding:0 20px 21px 20px;
+        text-transform: uppercase;
         @media (max-width: 767px) {
           font-size: 16px;
           font-weight: 400;
@@ -65,7 +65,7 @@
         &.active {
           background-color: transparent;
           border-bottom: 2px solid var(--green);
-          color: var(--white);
+          color: var(--green);
           @media (max-width: 767px) {
             border-bottom: 2px solid var(--green);
           }

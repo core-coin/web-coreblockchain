@@ -13,8 +13,9 @@ export default class Button extends PureComponent {
         theme: oneOf(['green', 'ghost']),
         text: string,
         href: string,
+        download: bool,
         size: oneOf(['normal', 'small', 'extraSmall']),
-        type: oneOf(['router', 'button']),
+        type: oneOf(['router', 'button', 'a']),
         onClick: func,
         icon: node,
         hover: bool,
@@ -31,6 +32,7 @@ export default class Button extends PureComponent {
         onClick: () => {},
         icon: null,
         hover: true,
+        download: false,
         margin: '10',
         mobileFullWidth: false,
     }
@@ -52,6 +54,7 @@ export default class Button extends PureComponent {
             size,
             theme,
             href,
+            download,
             onClick,
             hover,
             margin,
@@ -71,6 +74,14 @@ export default class Button extends PureComponent {
                 <Link to={href} className={className} onClick={onClick}>
                     {this.renderBody()}
                 </Link>
+            )
+        }
+        
+        if (download) {
+            return (
+                <a className={className} href={href} download={download}>
+                    {this.renderBody()}
+                </a>
             )
         }
 

@@ -1,18 +1,56 @@
 .offers {
   background-color: var(--black);
-  padding: 8% 0;
-  @media (max-width: 767px) {
-    .preTitle,
-    .title {
-      margin-left: 10px;
-    }
-  }
+  padding: 5% 0 2%;
+
   .title {
-    margin-bottom: 25px;
+    margin-bottom: 125px;
+    padding-top: 15px;
   }
+
   .zIndex {
     z-index: 1;
   }
+
+  @media (max-width: 767px) {
+    padding: 30% 0 2%;
+    .preTitle,
+    .title {
+      margin-left: 10px;
+      margin-bottom: 25px;
+    }
+    .preTitle {
+      margin-bottom: 0;
+    }
+    &__col {
+      padding: 0;
+    }
+
+  }
+
+  @media (min-width: 1200px) {
+    .preTitle {
+      padding-top: 80px;
+      margin-left: 5px;
+    }
+
+    .preTitle,
+    .title {
+      padding-left: 25px;
+    }
+
+    .title {
+      padding-top: 0;
+    }
+
+    .title span {
+      white-space: nowrap;
+    }
+
+    .title {
+      margin-bottom: 105px;
+    }
+  }
+
   &_block {
     position: relative;
     height: 300px;
@@ -26,47 +64,91 @@
     align-items: center;
     padding: 0 23px;
     margin-bottom: 19px;
+    appearance: none;
+    outline: none;
+    overflow: hidden;
+    transition: 0.3s;
+    
+     .before {
+      --size: 0;
+      --x: 0;
+      --y: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: var(--size);
+      height: var(--size); 
+      background: radial-gradient(circle closest-side at 200px 200px,#2ee533, #303040);
+      transform: translate(-50%, -50%);
+      transition: width 0.9s ease, height 0.9s ease;
+    }
+    &__low {
+      margin-top: 50px;
+    }
+
+    &__lower {
+      margin-top: 90px;
+      margin-bottom: 30px;
+    }
+
+    &__high {
+      margin-top: -90px;
+    }
+
+    &__higher {
+      margin-top: -50px;
+    }
+
     @media (max-width: 767px) {
       display: flex !important;
       height: 201px;
       border-radius: 14px;
-      width: calc(100% - 20px) !important;
+      width: calc(100% - 14px) !important;
       margin: 0 auto 19px;
+      margin-left: 30px;
+      box-shadow: 0px 3px 13px 0px #0000004f;
+
       &:hover {
         &::after {
           contain: none;
           background: none;
         }
       }
+
     }
+    @media (max-width: 768px) {
+      &__high {
+        margin-top: 0;
+      }
+  
+    }
+
     &:hover {
-      &::after {
-        content: '';
-        background: linear-gradient(45deg,
-                var(--grey-darken),
-                var(--grey-darken),
-                var(--green),
-                var(--green),
-                var(--green),
-                var(--green),
-                var(--grey-darken),
-                var(--grey-darken));
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        width: calc(100% + 2px);
-        height: calc(100% + 2px);
-        filter: blur(2px);
-        z-index: -1;
+      border: 1px solid transparent;
+
+      .before {
+        --size: 500px;
+
       }
     }
 
-    &__lower {
-      margin-top: 50px;
+    &-box {
+      border-radius: 6px;
+      position: relative;
+      pointer-events: none;
+      background: #1c1c24;
+      display: block;
+      line-height: 40px;
+      width: 121%;
+      height: 99%;
+      padding: 55px 25px;
+      }
+       @media (max-width: 1199px) {
+        &-box {
+          width: 126%;
+        }
     }
-    &__higher {
-      margin-top: -50px;
-    }
+
     h4 {
       color: var(--white);
       font-family: Montserrat-Regular;
@@ -75,6 +157,7 @@
       letter-spacing: -0.6px;
       margin-top: 22px;
     }
+
     p {
       color: var(--grey);
       font-family: 'Red Hat Display';
@@ -85,35 +168,41 @@
     }
   }
 
-  //slider
-  .slick-slider {
-    .slick-list {
-      padding-left: 0 !important;
-      .slick-track {
-        display: flex;
-        align-items: center;
-        .slick-active {
-          .offers_block {
-            transition: transform 0.4s;
-            height: 233px;
-          }
+}
+
+//slider
+.slick-slider {
+  .slick-list {
+    padding-left: 0 !important;
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+
+      .slick-active {
+        .offers_block {
+          transition: transform 0.4s;
+          height: 233px;
+          box-shadow: 0px 4px 18px 0px #000000d1;
         }
       }
     }
-    .slick-dots {
-      li {
-        &.slick-active {
-          button {
-            &::before {
-              color: var(--white)
-            }
-          }
-        }
+  }
+
+  .slick-dots {
+    li {
+      &.slick-active {
         button {
           &::before {
-            color: #43434c;
-            opacity: 1;
+            color: var(--white)
           }
+        }
+      }
+
+      button {
+        &::before {
+          color: #43434c;
+          opacity: 1;
         }
       }
     }

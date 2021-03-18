@@ -3,7 +3,6 @@
   padding: 8% 0;
   h3 {
     color: var(--white);
-    font-family: Montserrat-Medium;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: -0.96px;
@@ -14,6 +13,7 @@
     @media (max-width: 767px) {
       font-size: 22px;
       letter-spacing: -0.66px;
+      padding: 8% 5% 3%;
     }
   }
   .tabs_header {
@@ -42,6 +42,7 @@
           border: none;
           background-color: transparent;
           cursor: pointer;
+          color: var(--grey);
           &::before{
             @media (max-width: 767px) {
               content: none;
@@ -53,7 +54,7 @@
             width: 1em;
           }
           &.active {
-            color: var(--white);
+            color: var(--green);
             @media (max-width: 767px) {
               border-bottom: 2px solid var(--green);
             }
@@ -61,11 +62,16 @@
               @media (max-width: 767px) {
                 content: none;
               }
-              content: '\2022';
-              color: var(--green);
+              background: var(--green);
               font-weight: bold;
               display: inline-block;
-              width: 1em;
+              width: 5px;
+              height: 5px;
+              box-shadow: -1px 2px 14px 3px #248b385c; 
+              margin-right: 18px;
+              overflow: visible;
+              border-radius: 50%;
+              vertical-align: middle;
             }
           }
         }

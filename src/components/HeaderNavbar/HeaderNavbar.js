@@ -12,16 +12,16 @@ import {
 } from 'reactstrap'
 
 import Logo from '../../images/logo.png'
-
-import Search from '../Search'
 import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
+import Search from '../SvgIcon/icons/Search'
 import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
 
 import './HeaderNavbar.scss'
 
 const LanguageIcon = <Language/>
+const SearchIcon = <Search/>
 
 const body = document.body
 const scrollUp = 'scroll-up'
@@ -81,7 +81,7 @@ export default class HeaderNavbar extends PureComponent{
     }
 
     render(){
-        const { translate: { MENULINKS } } = this.props
+        const { translate: { MENULINKS, HEROHEADER } } = this.props
         const { isMenuOpen } = this.state
 
         const isMobile = window.innerWidth <= 768;
@@ -112,9 +112,8 @@ export default class HeaderNavbar extends PureComponent{
                                                     {MENULINKS.map(this.renderLink)}
                                                 </Nav>
                                                 <div className='headerNavbar_sidebar__search'>
-                                                    <Search />
                                                     <Button
-                                                        icon={LanguageIcon}
+                                                        text={HEROHEADER.language}
                                                         theme='ghost'
                                                         size='extraSmall'
                                                         hover={false}
@@ -123,7 +122,13 @@ export default class HeaderNavbar extends PureComponent{
                                                         onClick={this.onCloseSidebar}
                                                     />
                                                 </div>
-                                                <Button mobileFullWidth text='Developer' />
+                                                <Button 
+                                                mobileFullWidth
+                                                theme='green'
+                                                text={HEROHEADER.actionBtn}
+                                                type='router'
+                                                href='/get-started'
+                                                />
                                             </Container>
                                         </div>
                                     </div>
@@ -135,7 +140,14 @@ export default class HeaderNavbar extends PureComponent{
                                             </Nav>
                                         </div>
                                         <div className='headerNavbar_left'>
-                                            <Search />
+                                            <Button 
+                                             icon={SearchIcon}
+                                             theme='ghost'
+                                             size='extraSmall'
+                                             hover={false}
+                                             href='/search'
+                                             type='router'/>
+                                            
                                             <Button
                                                 icon={LanguageIcon}
                                                 theme='ghost'
@@ -144,7 +156,12 @@ export default class HeaderNavbar extends PureComponent{
                                                 href='/language'
                                                 type='router'
                                             />
-                                            <Button text='Developer' />
+                                            <Button 
+                                             theme='green'
+                                             text={HEROHEADER.actionBtn}
+                                             type='router'
+                                             href='/get-started'
+                                              />
                                         </div>
                                     </div>
                                 }

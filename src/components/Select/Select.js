@@ -4,12 +4,14 @@ import { Label, Input } from 'reactstrap'
 
 import Button from '../Button'
 import Download from '../SvgIcon/icons/Download'
-import Torrent from '../SvgIcon/icons/Torrent'
+import Ipfs from '../SvgIcon/icons/Ipfs'
+import Onion from '../SvgIcon/icons/Onion'
 
 import './Select.scss'
 
 const DownloadIcon = <Download/>
-const TorrentIcon = <Torrent/>
+const OnionIcon = <Onion />
+const IpfsIcon = <Ipfs />
 
 export default class Select extends PureComponent{
     constructor(props) {
@@ -25,6 +27,7 @@ export default class Select extends PureComponent{
         items: array,
         greenBtnText: string,
         ghostBtnText: string,
+        addBtnText: string,
     }
 
     renderOption = (option, index) => (
@@ -38,7 +41,7 @@ export default class Select extends PureComponent{
     }
 
     render(){
-        const { id, labelText, items, greenBtnText, ghostBtnText, type } = this.props
+        const { id, labelText, items, greenBtnText, ghostBtnText, addBtnText, type } = this.props
 
         let selectedItem = this.props.items.filter((item) => item.title === this.state.value)[0]
 
@@ -64,6 +67,7 @@ export default class Select extends PureComponent{
                     {SELECT}
                     <Button
                         mobileFullWidth
+                        download
                         theme='green'
                         size='small'
                         href={selectedItem.linkToDownLoad}
@@ -72,11 +76,21 @@ export default class Select extends PureComponent{
                     />
                     <Button
                         mobileFullWidth
+                        download
                         theme='ghost'
                         size='small'
-                        href={selectedItem.torrentLink}
+                        href={selectedItem.ipfsLink}
                         text={ghostBtnText}
-                        icon={TorrentIcon}
+                        icon={IpfsIcon}
+                    />
+                    <Button
+                        mobileFullWidth
+                        download
+                        theme='ghost'
+                        size='small'
+                        href={selectedItem.onionLink}
+                        text={addBtnText}
+                        icon={OnionIcon}
                     />
                 </>
             )

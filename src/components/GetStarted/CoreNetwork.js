@@ -2,22 +2,17 @@ import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
 
 import {
-    TabContent,
-    TabPane,
-    Nav,
     NavItem,
     NavLink
 } from 'reactstrap'
-
-import Select from '../Select'
-import CopyInput from '../CopyInput'
+import Button from '../Button'
+import Torrent from '../SvgIcon/icons/Torrent'
 
 import AnimatedArrow from '../AnimatedArrow'
 
-import { IsoImage } from './IsoImage'
-
-
 import './GetStarted.scss'
+
+const TorrentIcon = <Torrent/>
 
 export class CoreNetwork extends PureComponent{
     constructor(props) {
@@ -58,53 +53,30 @@ export class CoreNetwork extends PureComponent{
     render(){
         const { translate } = this.props
 
-        const { activeTab } = this.state
-
         return(
             <>
-                <h1 className='title'><span>{translate.coreNetworkHightlight}</span> {translate.coreNetwork}</h1>
+                <h1 className='title'>{translate.coreNetwork}<span>{translate.coreNetworkHightlight}</span></h1>
                 <p className='description'>{translate.coreNetworkDescription}</p>
                 <div className='downloadBlock nodeStatus'>
                     <h3>{translate.NodeStatus.title}</h3>
                     <p>{translate.NodeStatus.description}</p>
                     <AnimatedArrow url='' text={translate.NodeStatus.link}/>
+                    <Button
+                    mobileFullWidth
+                    download
+                    theme='ghost'
+                    size='small'
+                    href={translate.NodeStatus.buttonLink}
+                    text={translate.NodeStatus.button}
+                    icon={TorrentIcon}
+                />
                 </div>
                 <div className='downloadBlock'>
                     <h3>{translate.CoreTransaction.title}</h3>
                     <p>{translate.CoreTransaction.description}</p>
                     <AnimatedArrow url='' text={translate.CoreTransaction.link}/>
                 </div>
-                <div className='downloadBlock'>
-                    <h3>{translate.nodeDistributionTitle}</h3>
-                    <div className='tabs_header'>
-                        <Nav tabs>
-                            {translate.nodeDistributionTabName.map(this.renderTabName)}
-                        </Nav>
-                    </div>
-                    <div>
-                        <TabContent activeTab={activeTab}>
-                            <TabPane tabId='ISO Image'>
-                                <IsoImage translate={translate}/>
-                            </TabPane>
-                            <TabPane tabId='Node distributor'>
-                                <Select
-                                    type='button'
-                                    id='NodeDistributor'
-                                    items={translate.nodeDistr}
-                                    greenBtnText={translate.goToMarketplace}
-                                />
-                            </TabPane>
-                            <TabPane tabId='Packages tool'>
-                                <Select
-                                    type='select'
-                                    id='packageTool'
-                                    items={translate.packageTool}
-                                />
-                                <CopyInput value={translate.packageToolScript}/>
-                            </TabPane>
-                        </TabContent>
-                    </div>
-                </div>
+              
             </>
         )
     }

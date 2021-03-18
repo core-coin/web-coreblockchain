@@ -8,8 +8,6 @@ import {
 
 import Button from '../Button'
 import Arrow from '../SvgIcon/icons/Arrow'
-
-
 import MouseIcon from './MouseIcon'
 
 import './HeroHeader.scss'
