@@ -49,9 +49,6 @@ const SearchBar = () => {
             const searchRes = res.map((i) => index[i.ref])
             value = e.target.value
             setValue(value)
-            //
-        console.log(value)
-            //
             setResults(searchRes)
           }, [])}
         />
