@@ -1,0 +1,129 @@
+.content {
+  color: var(--grey);
+  padding: 80px 10px;
+  h1 {
+    font-size: 44px;
+    color: var(--white);
+    font-family: 'Montserrat-Bold';
+  }
+  h2 {
+    font-size: 30px;
+    color: var(--white);
+    font-family: 'Montserrat-Bold';
+  }
+  h3 {
+    font-size: 22px;
+    color: var(--white);
+    font-family: 'Montserrat-Bold';
+  }
+  p {
+    font-family: 'Red Hat Display';
+    font-size: 21px;
+  }
+  a, a:hover, a:visited {
+    color: var(--green);
+    text-decoration: none;
+  }
+  ul {
+    list-style: disk;
+    font-family: 'Red Hat Display';
+    font-size: 21px;
+  }
+  &-sidebar {
+    padding: 80px 10px;
+    ul {
+      list-style: disk;
+      font-family: 'Red Hat Display';
+      font-size: 21px;
+      li {
+        a {
+          color: var(--grey);
+          font-size: 18px;
+          &:hover, &:active {
+            color: var(--green);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs_docs {
+  border-right: 1px solid var(--grey-darken);
+  padding-top: 345px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-image: url('../images/sphere.png');
+  background-size: 800px 800px;
+  background-repeat: no-repeat;
+  background-position: left 100px;
+  background-attachment: fixed;
+  .nav-tabs {
+    color: var(--grey);
+    font-family: 'Red Hat Display';
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.22px;
+    flex-direction: column;
+    border: none;
+    @media (max-width: 767px) {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      height: 42px;
+      font-size: 16px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      .nav-link {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--grey);
+        &::before{
+          @media (max-width: 767px) {
+            content: none;
+          }
+          content: '\2022';
+          color: transparent;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+        }
+        &.active {
+          color: var(--green);
+          @media (max-width: 767px) {
+            border-bottom: 2px solid var(--green);
+          }
+          &::before{
+            @media (max-width: 767px) {
+              content: none;
+            }
+            background: var(--green);
+            font-weight: bold;
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            box-shadow: -1px 2px 14px 3px #248b385c;
+            margin-right: 18px;
+            overflow: visible;
+            border-radius: 50%;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  &-body {
+    flex: 1 1;
+    height: 100%;
+    position: relative;
+  }
+}

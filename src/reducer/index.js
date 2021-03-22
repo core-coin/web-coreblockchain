@@ -1,16 +1,15 @@
 import { createReducer } from 'redux-act'
-import LocalizedStrings from 'react-localization'
 import { Cmd, loop } from 'redux-loop'
 import { goBack } from 'connected-react-router'
 
-import { LOCALIZED_STRINGS } from '../constants'
+import LocalizedStrings from '../locale'
 
 import { setLanguage } from './actions'
 
 
 const initialState = {
     language: null,
-    translate: new LocalizedStrings(LOCALIZED_STRINGS),
+    translate: LocalizedStrings,
     blockTime: 200,
     algorithm: 'RandomY',
     difficulty: 333,

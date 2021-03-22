@@ -13,6 +13,7 @@ import GetStartedContainer from './containers/GetStartedContainer/GetStartedCont
 import DevelopersContainer from './containers/DevelopersContainer'
 import SearchContainer from './containers/SearchContainer'
 import OverviewContainer from './containers/OverviewContainer'
+import CommunityContainer from './containers/CommunityContainer'
 
 const store = Store()
 
@@ -32,6 +33,7 @@ export default class App extends PureComponent {
               <Route path='/developers' component={DevelopersContainer} />
               <Route path='/search' component={SearchContainer} />
               <Route path='/overview' component={OverviewContainer} />
+              <Route path='/community' component={CommunityContainer} />
             </Switch>
           </Layout>
         </ConnectedRouter>
