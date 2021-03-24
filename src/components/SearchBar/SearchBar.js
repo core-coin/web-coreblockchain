@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react'
 import docs from '../../markdown-pages/docs.json'
 import lunr from 'lunr'
 import { keyBy } from 'lodash'
+import { Marker } from 'react-mark.js'
 import './Search.scss'
 
 import SearchIcon from '../SvgIcon/icons/Search'
@@ -28,6 +29,7 @@ var idx = lunr(function () {
 const SearchBar = () => {
   const [results, setResults] = useState([])
   let [isOpen, setIsOpen] = useState(false)
+  let [value, setValue] = useState([])
 
   function handleStatusChange() {
     setIsOpen(!isOpen)
@@ -45,7 +47,8 @@ const SearchBar = () => {
           onChange={useCallback((e) => {
             const res = idx.search(`${e.target.value}`)
             const searchRes = res.map((i) => index[i.ref])
-
+            value = e.target.value
+            setValue(value)
             setResults(searchRes)
           }, [])}
         />
@@ -55,13 +58,16 @@ const SearchBar = () => {
       </label>
       <div className="results" id="results">
         {results.map((doc) => (
+           <Marker mark={value}>
           <a href={doc.slug} key={doc.basename}>
             <h3>{doc.title}</h3>
             <p>
-              {doc.description.substr(0, 220)}
+              {doc.description.substr(0, 280)}
               ...
             </p>
+          
           </a>
+          </Marker>
         ))}
       </div>
     </div>
