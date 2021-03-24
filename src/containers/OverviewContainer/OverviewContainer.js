@@ -3,7 +3,9 @@ import { func, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {setLanguage} from '../../reducer/actions'
-import Overview from '../../components/Overview'
+import blogOverview from '../../markdown-pages/post-2.md'
+
+import BlogTemplate from '../../templates/blogTemplate'
 
 class OverviewContainer extends PureComponent {
     static propTypes = {
@@ -22,11 +24,7 @@ class OverviewContainer extends PureComponent {
         } = this.props
 
         return(
-            <Overview
-                language={language}
-                translate={translate}
-                setLanguage={setLanguage}
-            />
+          <BlogTemplate source={blogOverview}/>
         )
     }
 }
