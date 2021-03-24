@@ -1,31 +1,9 @@
-import React, { useCallback, useState } from 'react'
-import docs from '../../markdown-pages/docs.json'
-import lunr from 'lunr'
-import { keyBy } from 'lodash'
+import React, { useState } from 'react'
 import './Search.scss'
 
 import SearchIcon from '../SvgIcon/icons/Search'
 
-const index = keyBy(docs, 'basename')
-
-var idx = lunr(function () {
-  this.ref('basename')
-  this.field('title')
-  this.field('description')
-
-  this.metadataWhitelist = ['position']
-
-  docs.forEach((doc) => {
-    this.add({
-      basename: doc.basename,
-      title: doc.title.toLowerCase(),
-      description: doc.description,
-      metadataWhitelist: doc.basename,
-    })
-  })
-})
-
-const SearchBar = () => {
+const SearchBar = ({searchIndex, searchDocs}) => {
   const [results, setResults] = useState([])
   let [isOpen, setIsOpen] = useState(false)
 
@@ -42,12 +20,12 @@ const SearchBar = () => {
           name="search"
           autoFocus={true}
           className="search_box__input"
-          onChange={useCallback((e) => {
-            const res = idx.search(`${e.target.value}`)
-            const searchRes = res.map((i) => index[i.ref])
+          onChange={(e) => {
+            const res = searchIndex.search(`${e.target.value}`)
+            const searchRes = res.map((i) => searchDocs[i.ref])
 
             setResults(searchRes)
-          }, [])}
+          }}
         />
         <span className="search_box__icon" onClick={handleStatusChange}>
           <SearchIcon />
@@ -55,7 +33,7 @@ const SearchBar = () => {
       </label>
       <div className="results" id="results">
         {results.map((doc) => (
-          <a href={doc.slug} key={doc.basename}>
+          <a href={doc.link} key={doc.ref}>
             <h3>{doc.title}</h3>
             <p>
               {doc.description.substr(0, 220)}

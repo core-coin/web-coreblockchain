@@ -15,6 +15,8 @@ export default class SearchPage extends PureComponent {
   static propTypes = {
     language: string,
     translate: object,
+    searchIndex: object,
+    searchDocs: object,
   }
 
   render() {
@@ -24,7 +26,7 @@ export default class SearchPage extends PureComponent {
           <Row>
             <Col className="content">
               <h3>Search Results</h3>
-              <SearchBar />
+              <SearchBar searchIndex={this.props.searchIndex} searchDocs={this.props.searchDocs}/>
             </Col>
           </Row>
         </Container>
