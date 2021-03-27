@@ -2,9 +2,30 @@ import { docs as originDocsList } from '../sidebar'
 import lunr from 'lunr'
 import metadataParser from 'markdown-yaml-metadata-parser'
 import { fillSearchIndex } from './actions'
+import { trim } from 'lodash'
 
 let ID = () => {
   return Math.floor(Math.random() * 10000000000)
+}
+
+let splitDocs = docs => {
+  let result = []
+  docs.forEach(item => {
+    let textBlocks = item.content.split(/\n##\s/).map(i => trim(i))
+      textBlocks.forEach(block => {
+        if (block.length == 0) {
+          return
+        }
+        let description = block.split(/\n\n/)
+        let title = description.shift().toLowerCase()
+        result.push({
+          title: title,
+          description: description.join(),
+          link: item.link,
+        })
+      })
+  })
+  return result
 }
 
 let createSearchIndex = store => {
@@ -16,17 +37,22 @@ let createSearchIndex = store => {
   })
   .then(mdxList => {
 
-    let docs = mdxList.map(md => {
+    let contents = splitDocs(
+      mdxList.map(md => {
+        return {
+          link: md.metadata.link,
+          content: md.content,
+        }})
+    )
+
+    let docs = contents.map(item => {
       let searchId = ID()
       return {
-      title: md.metadata.title.toLowerCase(),
-      description: md.metadata.description,
-      keyword: md.metadata.keyword,
-      link: md.metadata.link,
-      ref: searchId,
-      content: md.content,
-      metadataWhitelist: searchId,
-    }})
+        ...item,
+        ref: searchId,
+        metadataWhitelist: searchId,
+      }
+    })
 
     let docsMap = {}
 
@@ -38,9 +64,7 @@ let createSearchIndex = store => {
       this.ref('ref')
       this.field('title')
       this.field('description')
-      this.field('keyword')
       this.field('link')
-      this.field('content')
 
       this.metadataWhitelist = ['position']
 
