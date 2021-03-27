@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import { Marker } from 'react-mark.js'
 import './Search.scss'
 
@@ -22,13 +22,13 @@ const SearchBar = ({searchIndex, searchDocs}) => {
           name="search"
           autoFocus={true}
           className="search_box__input"
-          onChange={useCallback((e) => {
+          onChange={(e) => {
             const res = searchIndex.search(`${e.target.value}`)
             const searchRes = res.map((i) => searchDocs[i.ref])
             value = e.target.value
             setValue(value)
             setResults(searchRes)
-          }, [])}
+          }}
         />
         <span className="search_box__icon" onClick={handleStatusChange}>
           <SearchIcon />
