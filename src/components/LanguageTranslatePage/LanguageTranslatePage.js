@@ -5,12 +5,13 @@ import {
     Row,
     Col
 } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import AnimatedArrow from '../AnimatedArrow'
 
 import '../LanguagePage/LanguagePage.scss'
 
-export default class LanguageTranslatePage extends PureComponent{
+class LanguageTranslatePage extends PureComponent{
 
     static propTypes = {
         translate: object,
@@ -39,35 +40,35 @@ export default class LanguageTranslatePage extends PureComponent{
     )
 
     render(){
-        const { translate: { LANGUAGE_PAGE } } = this.props
+        const { translate: { LANGUAGE_PAGE }, t } = this.props
 
         return(
             <div className='languagePage'>
                 <Container>
                     <Row>
                         <Col xs='12' sm='12' lg='12'>
-                            <h1 className='title'>{LANGUAGE_PAGE.translationProgram}</h1>
-                            <p className='description translate-description'>{LANGUAGE_PAGE.translationText}</p>
+                            <h1 className='title'>{t('Translation Program')}</h1>
+                            <p className='description translate-description'>{t('Interested in translating? Get involved! We\'re seeking volunteers to join translation community.')}</p>
                         </Col>
                         <Col xs='12' sm='12' md='12'>
-                            <h3>{LANGUAGE_PAGE.toJoin}</h3>
+                            <h3>{t('How to join?')}</h3>
                            <ol>
                                <li>
-                                   <a href='/' className='description'>{LANGUAGE_PAGE.joinListOne}</a>
-                                   <p className='description'>{LANGUAGE_PAGE.joinListTwo}</p>
+                                   <a href='/' className='description'>{t('Join our translation instance.')}</a>
+                                   <p className='description'>{t('You will need to create a Translate account if you don’t already have one.')}</p>
                                </li>
                                <li>
-                                   <p className='description'>{LANGUAGE_PAGE.joinListThree}</p>
-                                   <p className='description'>{LANGUAGE_PAGE.joinListFour}<a href="/" className='description'>{ LANGUAGE_PAGE.joinListLink }</a></p>
+                                   <p className='description'>{t('Find the language you want to translate and select a document.')}</p>
+                                   <p className='description'>{t('If translation progress is below 100%, please contribute! Don’t see your language listed?')}<a href="/" className='description'>{t('Open an issue.')}</a></p>
                                </li>
                                <li>
-                                   <p className='description'>{LANGUAGE_PAGE.joinListFive}</p>
-                                   <p className='description'>{LANGUAGE_PAGE.joinListSix}</p>
+                                   <p className='description'>{t('Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.')}</p>
+                                   <p className='description'>{t('Once the review is complete (i.e. review progress is 100%), we will add it to the website.')}</p>
                                </li>
                            </ol>
                         </Col>
                         <Col xs='12'sm='12' md='12' className='languagePage_inProgress'>
-                            <h3>{LANGUAGE_PAGE.languageInProgress}</h3>
+                            <h3>{t('The following language translations are in progress')}:</h3>
                             <Row>
                                 {LANGUAGE_PAGE.languagesInProgress.map(this.renderLanguageInProgress)}
                             </Row>
@@ -78,3 +79,5 @@ export default class LanguageTranslatePage extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(LanguageTranslatePage)

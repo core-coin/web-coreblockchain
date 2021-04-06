@@ -5,14 +5,14 @@ import {
     Row,
     Col
 } from 'reactstrap'
+import { withNamespaces, Trans } from 'react-i18next'
 
 import Luna from '../SvgIcon/icons/Luna'
 import Button from '../Button'
-
 import './NodeCoverage.scss'
 
 
-export default class NodeCoverage extends PureComponent{
+class NodeCoverage extends PureComponent{
     static propTypes = {
         nodesOnline: number,
         totalTransactions: number,
@@ -41,22 +41,26 @@ export default class NodeCoverage extends PureComponent{
     )
 
     render(){
-        const { totalTransactions, totalBlocks, blocktime, marketCap, price, nodesOnline, translate: { NODECOVERAGE } } = this.props
+        const { t, totalTransactions, totalBlocks, blocktime, marketCap, price, nodesOnline } = this.props
 
         return(
             <div className='nodeCoverage'>
                 <Container>
                     <Row>
                         <Col sm='12' lg={{ size: 12 }}>
-                            <h3 className='preTitle'>{NODECOVERAGE.preTitle}</h3>
-                            <h1 className='title'><span>{NODECOVERAGE.prehighlightTitle}</span>{NODECOVERAGE.title} <span>{NODECOVERAGE.highlightTitle}</span></h1>
-                            <p className='description'>{NODECOVERAGE.description}</p>
+                            <h3 className='preTitle'>{t('Core Network reach')}</h3>
+                            <h1 className='title'>
+                                <Trans i18nKey='Planet covered by Blockchain'>
+                                <em>Planet</em> covered by <em>Blockchain</em>
+                                </Trans>
+                            </h1>
+                            <p className='description'>{t('Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.')}</p>
                         </Col>
                         <Col sm='12' lg={{ size: 10, offset: 1 }}>
                             <Row>
                                 <Col sm='12' md='6'>
                                     <div className='nodeCoverage_block'>
-                                        <h2>{NODECOVERAGE.nodesOnline}</h2>
+                                        <h2>{t('Boid Hop Reach')}</h2>
                                         <div className='nodeCoverage_block__cards'>
                                             {nodesOnline.toString().split('').map(Number).map(this.renderDigit)}
                                             <div className='nodeCoverage_block__cards-card'>
@@ -67,7 +71,7 @@ export default class NodeCoverage extends PureComponent{
                                             </div>
                                         </div>
                                        <div className='text-center'>
-                                       <span>{NODECOVERAGE.nodeStatistics}</span>
+                                       <span>{t('Network Powered by')}:</span>
                                        <div className='text-center nodeCoverage_block-img'>
                                             <Luna />
                                        </div>
@@ -76,26 +80,26 @@ export default class NodeCoverage extends PureComponent{
                                 </Col>
                                 <Col sm='12' md='6'>
                                     <div className='nodeCoverage_block'>
-                                        <h2>{NODECOVERAGE.lastPerformance}</h2>
+                                        <h2>{t('Statistics')}</h2>
                                         <ul>
                                             <li>
-                                                {NODECOVERAGE.totalTransactions}
+                                                {t('Total transactions')}:
                                                 <span>{totalTransactions}</span>
                                             </li>
                                             <li>
-                                                {NODECOVERAGE.totalBlocks}
+                                                {t('Total blocks')}:
                                                 <span>{totalBlocks}</span>
                                             </li>
                                             <li>
-                                                {NODECOVERAGE.blocktime}
+                                                {t('Block time')}:
                                                 <span>{blocktime} sec.</span>
                                             </li>
                                             <li>
-                                                {NODECOVERAGE.marketCap}
+                                                {t('Market cap')}:
                                                 <span>€ {marketCap}</span>
                                             </li>
                                             <li>
-                                                {NODECOVERAGE.price}
+                                                {t('Price')}:
                                                 <span>€ {price}</span>
                                             </li>
                                         </ul>
@@ -105,7 +109,7 @@ export default class NodeCoverage extends PureComponent{
                                     <Button
                                         theme='green'
                                         size='normal'
-                                        text={NODECOVERAGE.transactionExplorer}
+                                        text={t('Transaction Explorer')}
                                         href=''
                                     />
                                 </Col>
@@ -117,3 +121,5 @@ export default class NodeCoverage extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(NodeCoverage)

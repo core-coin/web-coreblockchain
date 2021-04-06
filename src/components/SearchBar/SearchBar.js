@@ -4,6 +4,7 @@ import lunr from 'lunr'
 import { keyBy } from 'lodash'
 import { Marker } from 'react-mark.js'
 import './Search.scss'
+import { withNamespaces, Trans } from 'react-i18next'
 
 import SearchIcon from '../SvgIcon/icons/Search'
 
@@ -26,7 +27,7 @@ var idx = lunr(function () {
   })
 })
 
-const SearchBar = () => {
+const SearchBar = ({t}) => {
   const [results, setResults] = useState([])
   let [isOpen, setIsOpen] = useState(false)
   let [value, setValue] = useState([])
@@ -36,14 +37,14 @@ const SearchBar = () => {
   }
 
   return (
-    <div className="search">
-      <label className="search_box search_box__open">
+    <div className='search'>
+      <label className='search_box search_box__open'>
         <input
-          type="search"
-          placeholder="Search for a term or phrase..."
-          name="search"
+          type='search'
+          placeholder='Search for a term or phrase...'
+          name='search'
           autoFocus={true}
-          className="search_box__input"
+          className='search_box__input'
           onChange={useCallback((e) => {
             const res = idx.search(`${e.target.value}`)
             const searchRes = res.map((i) => index[i.ref])
@@ -52,11 +53,21 @@ const SearchBar = () => {
             setResults(searchRes)
           }, [])}
         />
-        <span className="search_box__icon" onClick={handleStatusChange}>
+        <span className='search_box__icon' onClick={handleStatusChange}>
           <SearchIcon />
         </span>
       </label>
-      <div className="results" id="results">
+      <div className='results' id='results'>
+      <Trans i18nKey="list_map">
+  My dogs are named:
+  <ul i18nIsDynamicList>
+     {['rupert', 'max'].map(dog => (<li><a href='/'>{dog}</a></li>))}
+  </ul>
+</Trans>
+<Trans i18nKey="list_map">My List:<ul>
+  {['one', 'two'].map((item) => <li key={item}><a>{item}</a></li>)
+  }
+  </ul></Trans>
         {results.map((doc) => (
            <Marker mark={value}>
           <a href={doc.slug} key={doc.basename}>
@@ -74,4 +85,4 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+export default  withNamespaces()(SearchBar)

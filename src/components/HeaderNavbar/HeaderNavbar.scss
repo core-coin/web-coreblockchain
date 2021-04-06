@@ -45,6 +45,11 @@
   .navbar {
     justify-content: space-between;
     width: 100%;
+    ul {
+      li{
+        color: var(--white);
+      }
+    }
   }
   .nav-item {
     .nav-link {

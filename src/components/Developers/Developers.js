@@ -10,12 +10,12 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
+import { withNamespaces, Trans } from 'react-i18next'
 
 import Button from '../Button'
-
 import './Developers.scss'
 
-export default class Developers extends PureComponent{
+class Developers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -76,8 +76,8 @@ export default class Developers extends PureComponent{
 
 
     render(){
-        const { translate: { DEVELOPERS } } = this.props
-
+        const { t, translate: { DEVELOPERS } } = this.props
+       
         const { activeTab } = this.state
 
         return(
@@ -85,8 +85,12 @@ export default class Developers extends PureComponent{
                 <Container>
                     <Row>
                         <Col sm='12'>
-                            <h3 className='preTitle'>{DEVELOPERS.preTitle}</h3>
-                            <h1 className='title'>{DEVELOPERS.title} <span>{DEVELOPERS.highlightTitle}</span></h1>
+                            <h3 className='preTitle'>{t('connect with dev community')}</h3>
+                            <h1 className='title'>
+                                <Trans i18nKey='designed for developers'>
+                                    designed for <em>developers</em>
+                                </Trans>
+                            </h1>
                         </Col>
                         <Col sm='12' lg='9' xl='8' className='tabs_header'>
                             <Nav tabs>
@@ -104,3 +108,5 @@ export default class Developers extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(Developers)

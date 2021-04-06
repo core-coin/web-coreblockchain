@@ -11,7 +11,7 @@ import {
 
 import { Image } from './Image'
 import { TabContainers } from './TabContainers'
-import { Deployment } from './Deployment'
+import Deployment from './Deployment'
 import { Repos } from './Repos'
 
 import './GetStarted.scss'

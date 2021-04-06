@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
-
 import {
     TabContent,
     TabPane,
@@ -8,6 +7,7 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import Button from '../Button'
 import Chain from '../SvgIcon/icons/Chain'
@@ -18,7 +18,7 @@ import './GetStarted.scss'
 
 const ChainIcon = <Chain/>
 
-export class Deployment extends PureComponent{
+class Deployment extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -78,7 +78,7 @@ export class Deployment extends PureComponent{
     }
 
     render(){
-        const { translate } = this.props
+        const { translate, t } = this.props
 
         const { activeTab } = this.state
 
@@ -98,3 +98,5 @@ export class Deployment extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(Deployment)

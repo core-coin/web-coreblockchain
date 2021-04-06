@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
+import { withNamespaces } from 'react-i18next'
 
 import Select from '../Select'
 import CopyInput from '../CopyInput'
@@ -11,7 +12,7 @@ import './GetStarted.scss'
 
 const KeyIcon = <Key />
 
-export class CoreClient extends PureComponent {
+class CoreClient extends PureComponent {
   static propTypes = {
     translate: object,
     language: string,
@@ -19,44 +20,44 @@ export class CoreClient extends PureComponent {
   }
 
   render() {
-    const { translate } = this.props
+    const { translate, t } = this.props
 
     return (
       <>
         <div className="downloadBlock">
-          <h3>{translate.CoreDaemonSoftware.title}</h3>
-          <p>{translate.CoreDaemonSoftware.description}</p>
+          <h3>{t('Core client boid')}</h3>
+          <p>{t('Go-core is the the command line interface for running a full Core node implemented in Go.')}</p>
           <Select
             type="buttons"
             download
             id="daemonSoftware"
-            labelText={translate.CoreDaemonSoftware.dropdownLabel}
+            labelText={t('Choose your operating system')+ ':'} 
             items={translate.CoreDaemonSoftware.osList}
-            greenBtnText={translate.CoreDaemonSoftware.downloadBtn}
-            ghostBtnText={translate.CoreDaemonSoftware.ipfsButton}
-            addBtnText={translate.CoreDaemonSoftware.onionButton}
+            greenBtnText={t('Download')}
+            ghostBtnText={t('IPFS')}
+            addBtnText={t('Onion')}
           />
           <div className="version-links">
             <AnimatedArrow
               url=""
-              text={translate.CoreDaemonSoftware.previousLink}
+              text={t('Previous version')}
             />
             <AnimatedArrow
               url=""
-              text={translate.CoreDaemonSoftware.sourceLink}
+              text={t('Source code')}
             />
           </div>
           <hr />
-          <h4>{translate.CoreDaemonSoftware.publicKey}</h4>
-          <p>{translate.CoreDaemonSoftware.publicKeyDescription}</p>
-          <CopyInput value={translate.CoreDaemonSoftware.OpenSSlKey} />
+          <h4>{t('Public key')}</h4>
+          <p>{t('As a reminder, all release binaries are signed. You can manually verify the signatures with the command')}:</p>
+          <CopyInput value='openssl dgst -sha256 -verify core.pem -signature core.sig core' />
           <div className="downloadBlock_key">
             <Button
               theme="ghost"
               mobileFullWidth
               size="small"
               href={'#'}
-              text={translate.CoreDaemonSoftware.keyBtn}
+              text={t('Public Key')}
               icon={KeyIcon}
             />
           </div>
@@ -65,3 +66,6 @@ export class CoreClient extends PureComponent {
     )
   }
 }
+
+export default withNamespaces()(CoreClient)
+

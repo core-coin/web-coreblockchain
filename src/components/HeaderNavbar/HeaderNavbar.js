@@ -10,6 +10,7 @@ import {
     Row,
     Col
 } from 'reactstrap'
+import { withNamespaces, Trans } from 'react-i18next'
 
 import Logo from '../../images/logo.png'
 import Button from '../Button'
@@ -28,9 +29,9 @@ const scrollUp = 'scroll-up'
 const scrollDown = 'scroll-down'
 let lastScroll = 0
 
-export default class HeaderNavbar extends PureComponent{
+class HeaderNavbar extends PureComponent{
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             isMenuOpen: false,
         }
@@ -81,9 +82,8 @@ export default class HeaderNavbar extends PureComponent{
     }
 
     render(){
-        const { translate: { MENULINKS, HEROHEADER } } = this.props
+        const {t} = this.props
         const { isMenuOpen } = this.state
-
         const isMobile = window.innerWidth <= 768;
 
         return(
@@ -91,10 +91,10 @@ export default class HeaderNavbar extends PureComponent{
                 <Container>
                     <Row>
                         <Col>
-                            <Navbar expand="md">
+                            <Navbar expand='md'>
                                 <div>
-                                    <NavbarBrand href="/">
-                                        <img src={Logo} alt="Core Chain"/>
+                                    <NavbarBrand href='/'>
+                                        <img src={Logo} alt='Core Chain'/>
                                     </NavbarBrand>
                                 </div>
                                 {isMobile ?
@@ -103,18 +103,18 @@ export default class HeaderNavbar extends PureComponent{
                                         <div className={isMenuOpen ? 'headerNavbar_sidebar open' : 'headerNavbar_sidebar'}>
                                             <Container>
                                                 <Col className='headerNavbar_sidebar__header'>
-                                                    <NavbarBrand href="/">
-                                                        <img src={Logo} alt="Core Chain"/>
+                                                    <NavbarBrand href='/'>
+                                                        <img src={Logo} alt='Core Chain'/>
                                                     </NavbarBrand>
                                                     <a onClick={this.onCloseSidebar}><Close/></a>
                                                 </Col>
                                                 <Nav navbar>
-                                                    {MENULINKS.map(this.renderLink)}
+                                                    {/* {MENULINKS.map(this.renderLink)} */}
                                                 </Nav>
                                                 <div className='headerNavbar_sidebar__search'>
                                                     <Button
-                                                        text={HEROHEADER.language}
-                                                        theme='ghost'
+                                                        text={t('language')}
+                                                        theme='ghosMAt'
                                                         size='extraSmall'
                                                         hover={false}
                                                         href='/language'
@@ -125,7 +125,7 @@ export default class HeaderNavbar extends PureComponent{
                                                 <Button 
                                                 mobileFullWidth
                                                 theme='green'
-                                                text={HEROHEADER.actionBtn}
+                                                text={t('get started')}
                                                 type='router'
                                                 href='/get-started'
                                                 />
@@ -135,8 +135,17 @@ export default class HeaderNavbar extends PureComponent{
                                 :
                                     <div className='headerNavbar_flex'>
                                         <div>
-                                            <Nav navbar>
-                                                {MENULINKS.map(this.renderLink)}
+                                            <Nav navbar i18nIsDynamicList>
+                                                {/* {MENULINKS.map(this.renderLink)} */}
+                                                
+                                                <Trans i18nKey='list_map'>
+                                                My cats are named:
+                                                <ul>
+                                                    <li><a href='/'>Milo</a></li>
+                                                    <li><a href='/'>Simba</a></li>
+                                                </ul>
+                                                
+                                                </Trans>
                                             </Nav>
                                         </div>
                                         <div className='headerNavbar_left'>
@@ -154,14 +163,15 @@ export default class HeaderNavbar extends PureComponent{
                                                 size='extraSmall'
                                                 hover={false}
                                                 href='/language'
-                                                type='router'
+                                                type='router' 
                                             />
                                             <Button 
                                              theme='green'
-                                             text={HEROHEADER.actionBtn}
+                                             text={t('Get started')}
                                              type='router'
                                              href='/get-started'
                                               />
+                                             
                                         </div>
                                     </div>
                                 }
@@ -173,3 +183,5 @@ export default class HeaderNavbar extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(HeaderNavbar)

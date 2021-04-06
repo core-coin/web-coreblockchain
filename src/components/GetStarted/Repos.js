@@ -49,14 +49,14 @@ export class Repos extends PureComponent {
   getIcon = (title) => {
     const iconMap = {
       'Apt-Get': <Apt />,
-      RPM: <Rpm />,
+      'RPM': <Rpm />,
       'Docker Repo': <Docker />,
       'APT-IPFS': <AptIpfs />,
-      Kubernetes: <Kubernetes />,
-      GSP: <Google />,
-      AWS: <Aws />,
-      Azure: <Azure />,
-      OVH: <Ovh />,
+      'Kubernetes': <Kubernetes />,
+      'GSP': <Google />,
+      'AWS': <Aws />,
+      'Azure': <Azure />,
+      'OVH': <Ovh />,
     }
     return iconMap[title]
   }

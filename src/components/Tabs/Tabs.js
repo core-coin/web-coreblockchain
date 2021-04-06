@@ -10,7 +10,7 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
-
+import { withNamespaces } from 'react-i18next'
 import Button from '../Button'
 import Pdf from '../SvgIcon/icons/Pdf'
 
@@ -18,7 +18,7 @@ import './Tabs.scss'
 
 const PdfIcon = <Pdf/>
 
-export default class Tabs extends PureComponent{
+class Tabs extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -54,7 +54,7 @@ export default class Tabs extends PureComponent{
     renderTabContent = (tab, index) => (
         <TabPane tabId={tab.tabsName} key={index}>
             <Row>
-                <Col sm="12">
+                <Col sm='12'>
                     <img src={tab.tabsImage} alt={tab.tabsName} className='img-responsive'/>
                     <h2>{tab.tabsName}</h2>
                     <p>{tab.tabsContent}</p>
@@ -101,3 +101,5 @@ export default class Tabs extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(Tabs)
