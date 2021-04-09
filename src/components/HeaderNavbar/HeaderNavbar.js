@@ -10,7 +10,9 @@ import {
     Row,
     Col
 } from 'reactstrap'
-import { withNamespaces, Trans } from 'react-i18next'
+import _ from 'lodash'
+import { withNamespaces, Trans, translate } from 'react-i18next'
+import i18n from 'i18next'
 
 import Logo from '../../images/logo.png'
 import Button from '../Button'
@@ -28,6 +30,19 @@ const body = document.body
 const scrollUp = 'scroll-up'
 const scrollDown = 'scroll-down'
 let lastScroll = 0
+
+const ResourcesMedia = [
+    {
+        title: 'sometitleKey',
+        description: 'somedescriptionKey',
+        href: 'somelink'
+    },
+    {
+        title: 'sometitleKey1',
+        description: 'somedescriptionKey',
+        href: 'somelink'
+    }
+  ]
 
 class HeaderNavbar extends PureComponent{
     constructor(props) {
@@ -80,6 +95,29 @@ class HeaderNavbar extends PureComponent{
             isMenuOpen: false,
         })
     }
+
+    list1 = [   
+        {
+            "label": "<0><1></1><0>overview",
+            "link": "overview"
+          },
+          {
+            "label": "<0><1></1><0>learn",
+            "link": "learn"
+          },
+          {
+            "label": "<0><1></1><0>developers",
+            "link": "developers"
+          },
+          {
+            "label": "<0><1></1><0>enterprises",
+            "link": "enterprises"
+          },
+          {
+            "label": "<0><1></1><0>community",
+            "link": "community"
+          }
+    ]
 
     render(){
         const {t} = this.props
@@ -136,16 +174,20 @@ class HeaderNavbar extends PureComponent{
                                     <div className='headerNavbar_flex'>
                                         <div>
                                             <Nav navbar i18nIsDynamicList>
+                                            {this.list1.map((item) => (
+                                                <Trans
+                                                i18nKey={item.label}
+                                                defaults={item.label} 
+                                                components={[<li className='nav-item'><a className='nav-link' href={item.link}>one</a></li>]}>
+                                                   <li className='nav-item'><a className='nav-link' href={item.link}>one</a></li> 
+                                                </Trans>)
+                                                )}
+
+{/* {(t('list'))} */}
+
+{(Object.keys(t('list', { returnObjects: true }))).map((key) => [key])}
                                                 {/* {MENULINKS.map(this.renderLink)} */}
-                                                
-                                                <Trans i18nKey='list_map'>
-                                                My cats are named:
-                                                <ul>
-                                                    <li><a href='/'>Milo</a></li>
-                                                    <li><a href='/'>Simba</a></li>
-                                                </ul>
-                                                
-                                                </Trans>
+                                       
                                             </Nav>
                                         </div>
                                         <div className='headerNavbar_left'>
@@ -167,7 +209,7 @@ class HeaderNavbar extends PureComponent{
                                             />
                                             <Button 
                                              theme='green'
-                                             text={t('Get started')}
+                                             text={t('get started')}
                                              type='router'
                                              href='/get-started'
                                               />

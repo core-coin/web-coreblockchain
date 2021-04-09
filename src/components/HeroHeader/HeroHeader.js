@@ -39,14 +39,14 @@ class HeroHeader extends PureComponent{
                             <Button
                                 theme='green'
                                 size='normal'
-                                text={t('Get started')}
+                                text={t('get started')}
                                 type='router'
                                 href='/get-started'
                             />
                             <Button
                                 theme='ghost'
                                 size='normal'
-                                text={t('Learn more')}
+                                text={t('learn more')}
                             />
                         </Col>
                         <Col sm='12' md='12' className='hidden-xs'>

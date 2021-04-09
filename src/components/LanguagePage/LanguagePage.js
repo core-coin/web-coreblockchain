@@ -19,6 +19,11 @@ class LanguagePage extends PureComponent{
         setLanguage: func,
     }
 
+    changeLanguage = (lng, el) => {          
+        el.changeLanguage(lng)
+        this.props.setLanguage(lng)
+        }
+
     renderLanguageBlock = (language) => (
 
         <Col xs='12' sm='4' lg='4' key={language.code}>
@@ -36,7 +41,11 @@ class LanguagePage extends PureComponent{
 
     render(){
         
-        const { translate: { LANGUAGE_PAGE }, t } = this.props     
+        const { translate: { LANGUAGE_PAGE }, t, i18n, language } = this.props     
+        const changeLanguage = lng => {          
+         i18n.changeLanguage(lng)
+         this.props.setLanguage(lng)
+        }
 
         return(
             <div className='languagePage'>
@@ -48,7 +57,9 @@ class LanguagePage extends PureComponent{
                         </Col>
                         <Col xs='12' sm='12' md='12' xl='10'>
                             <h3>{t('Select your language')}:</h3>
-                            <Row>
+                            <button onClick={() => changeLanguage('en')}>EN</button>
+                            <button onClick={() => changeLanguage('sk')}>SK</button>
+                            <Row>      
                                 {LANGUAGE_PAGE.languages.map(this.renderLanguageBlock)}
                             </Row>
                         </Col>

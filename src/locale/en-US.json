@@ -1,5 +1,27 @@
 {  
-  "list_map": "My dogs are named: <1><0>Ace</0><0>Diesel</0><0>Finn</0></1> ",
+  "list_map": "My dogs are named: <1><2>Ace</2></1><3><4>Diesel</4></3><5><6>Finn</6></5> ",
+  "list": [
+    {
+      "label": "<0><1></1><0>overview",
+      "link": "overview"
+    },
+    {
+      "label": "<0><1></1><0>learn",
+      "link": "learn"
+    },
+    {
+      "label": "<0><1></1><0>developers",
+      "link": "developers"
+    },
+    {
+      "label": "<0><1></1><0>enterprises",
+      "link": "enterprises"
+    },
+    {
+      "label": "<0><1></1><0>community",
+      "link": "community"
+    }
+  ],
   "get started": "get started",
   "learn more": "learn more",
   "Language": "Language",
@@ -23,7 +45,7 @@
   "Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform. We are creating an Inclusion program suited for all people.": "Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform. We are creating an Inclusion program suited for all people.",
   "Core Ecosystem": "Core <1>Ecosystem</1>",
   "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.": "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.",
-  "Core Blockchain <em>Social Impact</em>": "Core Blockchain <em>Social Impact</em>",
+  "Core Blockchain Social Impact": "Core Blockchain <1>Social Impact</1>",
   "industries": "industries",
   "connect with dev community": "connect with dev community",
   "designed for developers": "designed for <1>developers</1>",
