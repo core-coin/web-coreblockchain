@@ -3,6 +3,8 @@ import { func, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {setLanguage} from '../../reducer/actions'
+import Loading from '../../components/Loading'
+import PageNotFound from '../../components/PageNotFound'
 
 import BlogTemplate from '../../templates/blogTemplate'
 
@@ -27,22 +29,21 @@ class OverviewContainer extends PureComponent {
         } = this.props
 
       if (!mdFiles) {
-            return(
-              <div>sorry dcw</div>
-            )
+        return(
+         <Loading/>
+        )
       }
 
       let file = mdFiles[match.url]
       if (file === undefined ){
-            console.log(mdFiles, match.url)
-            return (
-              <div>sorry unde</div>
-            )
+        return (
+          <PageNotFound/>
+        )
       }
 
-        return(
-          <BlogTemplate mdFile={file}/>
-        )
+      return(
+        <BlogTemplate mdFile={file}/>
+      )
     }
 }
 

@@ -24,21 +24,21 @@ export default class Template extends PureComponent{
       this.setState({activeTab: tab})
     }
   }
-
-
   renderTabName = ( file ) => {
-    const { activeTab } = this.state
+    if (file.metadata.sidebar) {
+      const { activeTab } = this.state
 
-    return(
-      <NavItem key={file.metadata.title}>
-        <NavLink
-          className={activeTab === file.metadata.title ? 'active' : ''}
-          onClick={() => { this.toggle(file.metadata.title); }}
-        >
-          {file.metadata.title}
-        </NavLink>
-      </NavItem>
-    )
+      return(
+        <NavItem key={file.metadata.title}>
+          <NavLink
+            className={activeTab === file.metadata.title ? 'active' : ''}
+            onClick={() => { this.toggle(file.metadata.title); }}
+          >
+            {file.metadata.title}
+          </NavLink>
+        </NavItem>
+      )
+    }
   }
 
   renderTabContent = (file, index) => (

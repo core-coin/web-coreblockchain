@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {setLanguage} from '../../reducer/actions'
 import Community from '../../components/Comminity'
+import Loading from '../../components/Loading'
 
 class CommunityContainer extends PureComponent {
   static propTypes = {
@@ -25,7 +26,7 @@ class CommunityContainer extends PureComponent {
 
     if (!mdFiles) {
       return(
-        <div>sorry</div>
+        <Loading/>
       )
     }
 

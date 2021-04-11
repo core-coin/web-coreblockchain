@@ -4,6 +4,7 @@ description: A blockchain is best described as a public database that is updated
 keywords: blockchain
 link: /overview
 lang: en
+sidebar: true
 ---
 
 
