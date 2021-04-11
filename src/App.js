@@ -4,6 +4,7 @@ import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route } from 'react-router-dom'
 import Store, { history } from './store'
 import createSearchIndex from './reducer/search'
+import createMarkdownIndex from './reducer/mdFiles'
 
 import Layout from './components/Layout'
 
@@ -17,7 +18,9 @@ import OverviewContainer from './containers/OverviewContainer'
 import CommunityContainer from './containers/CommunityContainer'
 
 const store = Store()
-createSearchIndex(store)
+let mdFilesPromise = createMarkdownIndex(store)
+createSearchIndex(store, mdFilesPromise)
+
 
 export default class App extends PureComponent {
 
@@ -34,8 +37,8 @@ export default class App extends PureComponent {
               <Route path='/get-started' component={GetStartedContainer} />
               <Route path='/developers' component={DevelopersContainer} />
               <Route path='/search' component={SearchContainer} />
-              <Route path='/overview' component={OverviewContainer} />
               <Route path='/community' component={CommunityContainer} />
+              <Route path='*' component={OverviewContainer}/>
             </Switch>
           </Layout>
         </ConnectedRouter>

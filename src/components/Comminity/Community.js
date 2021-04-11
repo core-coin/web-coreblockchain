@@ -20,25 +20,8 @@ export default class Community extends PureComponent {
   static propTypes = {
     translate: object,
     language: string,
+    mdFiles: object,
   }
-
-  toggle = (link) => {
-    if (this.state.activeLink !== link) {
-      this.setState({ activeLink: link })
-    }
-  }
-
-  renderLinks = (links, index) => (
-    <li
-      key={index}
-      className={this.state.activeLink === links.link ? 'active' : ''}
-      onClick={() => {
-        this.toggle(links.link)
-      }}
-    >
-      <a href={'#' + links.link}>{links.label}</a>
-    </li>
-  )
 
   collectHeightMap = () => {
     let headers = document.querySelectorAll('.hiddenBlock')
@@ -83,6 +66,7 @@ export default class Community extends PureComponent {
     const {
       translate: { COMMUNITY },
       language,
+      mdFiles
     } = this.props
 
     const isMobile = window.innerWidth <= 767
@@ -91,7 +75,7 @@ export default class Community extends PureComponent {
       <div>
         <Container>
           <Row>
-            <SidebarTemplate/>
+            <SidebarTemplate mdFiles={mdFiles}/>
           </Row>
         </Container>
       </div>

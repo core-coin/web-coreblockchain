@@ -3,7 +3,6 @@ import { func, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {setLanguage} from '../../reducer/actions'
-import blogOverview from '../../markdown-pages/post-2.md'
 
 import BlogTemplate from '../../templates/blogTemplate'
 
@@ -12,6 +11,8 @@ class OverviewContainer extends PureComponent {
         setLanguage: func,
         translate: object,
         language: string,
+        match: object,
+        mdFiles: object,
     }
 
     static defaultProps = {}
@@ -20,11 +21,27 @@ class OverviewContainer extends PureComponent {
         const {
             translate,
             language,
-            setLanguage
+            setLanguage,
+            mdFiles,
+            match
         } = this.props
 
+      if (!mdFiles) {
+            return(
+              <div>sorry dcw</div>
+            )
+      }
+
+      let file = mdFiles[match.url]
+      if (file === undefined ){
+            console.log(mdFiles, match.url)
+            return (
+              <div>sorry unde</div>
+            )
+      }
+
         return(
-          <BlogTemplate source={blogOverview}/>
+          <BlogTemplate mdFile={file}/>
         )
     }
 }
@@ -33,6 +50,7 @@ function mapStateToProps(state) {
     return{
         translate: state.index.translate,
         language: state.index.language,
+        mdFiles: state.index.markdownFiles,
     }
 }
 

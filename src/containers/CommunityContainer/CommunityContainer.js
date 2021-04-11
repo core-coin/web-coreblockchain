@@ -10,6 +10,7 @@ class CommunityContainer extends PureComponent {
     setLanguage: func,
     translate: object,
     language: string,
+    mdFiles: object,
   }
 
   static defaultProps = {}
@@ -18,14 +19,22 @@ class CommunityContainer extends PureComponent {
     const {
       translate,
       language,
-      setLanguage
+      setLanguage,
+      mdFiles,
     } = this.props
+
+    if (!mdFiles) {
+      return(
+        <div>sorry</div>
+      )
+    }
 
     return(
       <Community
         language={language}
         translate={translate}
         setLanguage={setLanguage}
+        mdFiles={mdFiles}
       />
     )
   }
@@ -35,6 +44,7 @@ function mapStateToProps(state) {
   return{
     translate: state.index.translate,
     language: state.index.language,
+    mdFiles: state.index.markdownFiles,
   }
 }
 
