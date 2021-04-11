@@ -11,6 +11,13 @@ import {MathpixMarkdown, MathpixLoader} from 'mathpix-markdown-it'
 
 import './md.scss'
 
+let scrollTo = id => {
+  let header = document.getElementById(id)
+  if (header) {
+    header.scrollIntoView({block: 'center', behavior: "smooth"})
+  }
+}
+
 export default class BlogTemplate extends PureComponent{
   static propTypes = {
     mdFile: object
@@ -26,19 +33,22 @@ export default class BlogTemplate extends PureComponent{
     }
   }
 
+
+
   buildToc = source => {
     const headings = []
+
     compiler(source, {
       createElement(type, props, children) {
         if ( type === 'h1' || type === 'h2' || type === 'h3' ) {
           const id = props.id
-          console.log(children)
-          let title = children[0].toLowerCase().replace(/\s+/g, '-').replace(/[!\.\?,:;\"']/g, '')
           props = {
             ...props,
             id: null,
             className: 'toc-' + type,
-            href: `#${title}`,
+            onClick: () => {
+              scrollTo(id)
+            }
           }
           headings.push(React.createElement('a', props, children))
         }
