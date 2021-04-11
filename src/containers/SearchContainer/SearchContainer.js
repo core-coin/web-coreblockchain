@@ -11,6 +11,8 @@ class SearchContainer extends PureComponent {
         setLanguage: func,
         translate: object,
         language: string,
+        searchIndex: object,
+        searchDocs: object,
     }
 
     static defaultProps = {}
@@ -19,7 +21,9 @@ class SearchContainer extends PureComponent {
         const {
             translate,
             language,
-            setLanguage
+            setLanguage,
+            searchIndex,
+            searchDocs
         } = this.props
 
         return(
@@ -27,6 +31,8 @@ class SearchContainer extends PureComponent {
                 language={language}
                 translate={translate}
                 setLanguage={setLanguage}
+                searchIndex={searchIndex}
+                searchDocs={searchDocs}
             />
         )
     }
@@ -37,6 +43,8 @@ function mapStateToProps(state) {
     return{
         translate: state.index.translate,
         language: state.index.language,
+        searchIndex: state.index.searchIndex,
+        searchDocs: state.index.searchDocs,
     }
 }
 
