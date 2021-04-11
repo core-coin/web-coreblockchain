@@ -9,6 +9,7 @@ node_modules/
 build/
 .prettierrc.json
 debug.log
+.eslintcache
 
 ### macOS ###
 # General
