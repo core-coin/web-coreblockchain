@@ -96,29 +96,6 @@ class HeaderNavbar extends PureComponent{
         })
     }
 
-    list1 = [   
-        {
-            "label": "<0><1></1><0>overview",
-            "link": "overview"
-          },
-          {
-            "label": "<0><1></1><0>learn",
-            "link": "learn"
-          },
-          {
-            "label": "<0><1></1><0>developers",
-            "link": "developers"
-          },
-          {
-            "label": "<0><1></1><0>enterprises",
-            "link": "enterprises"
-          },
-          {
-            "label": "<0><1></1><0>community",
-            "link": "community"
-          }
-    ]
-
     render(){
         const {t} = this.props
         const { isMenuOpen } = this.state
@@ -174,7 +151,7 @@ class HeaderNavbar extends PureComponent{
                                     <div className='headerNavbar_flex'>
                                         <div>
                                             <Nav navbar i18nIsDynamicList>
-                                            {this.list1.map((item) => (
+                                            {t('menuItemList', { returnObjects: true }).map((item) => (
                                                 <Trans
                                                 i18nKey={item.label}
                                                 defaults={item.label} 
@@ -185,7 +162,6 @@ class HeaderNavbar extends PureComponent{
 
 {/* {(t('list'))} */}
 
-{(Object.keys(t('list', { returnObjects: true }))).map((key) => [key])}
                                                 {/* {MENULINKS.map(this.renderLink)} */}
                                        
                                             </Nav>
