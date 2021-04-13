@@ -7,7 +7,7 @@ import {
     Collapse
 } from 'reactstrap'
 
-import Logo from '../../images/logo.png'
+import Logo from '../../images/logo.webp'
 import Plus from '../SvgIcon/icons/Plus'
 import Cube from '../SvgIcon/icons/Cube'
 import Cryptohub from '../SvgIcon/icons/Cryptohub'

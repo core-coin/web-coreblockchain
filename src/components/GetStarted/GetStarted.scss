@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-image: url(../../images/sphere.png);
+    background-image: url(../../images/sphere.webp);
     background-size: 800px 800px;
     background-repeat: no-repeat;
     background-position: left 100px;
@@ -140,7 +140,7 @@
         }
       }
       &.coreWallet {
-        background: var(--black-lighter) url("../../images/coreWallet.png")
+        background: var(--black-lighter) url("../../images/coreWallet.webp")
           no-repeat left bottom;
         padding-bottom: 390px;
         @media (max-width: 767px) {
@@ -149,7 +149,7 @@
       }
       &.nodeStatus {
         @media (min-width: 768px) {
-          background: var(--black-lighter) url("../../images/coreStatus.png");
+          background: var(--black-lighter) url("../../images/coreStatus.webp");
         }
         padding-bottom: 5px;
         background-repeat: no-repeat;
@@ -172,7 +172,7 @@
       }
       &.cpuMiners {
         @media (min-width: 768px) {
-          background: var(--black-lighter) url("../../images/luna.png")
+          background: var(--black-lighter) url("../../images/luna.webp")
             no-repeat 87% 13%;
         }
         .animatedArrow {
@@ -193,7 +193,7 @@
       }
       &.androidMiners {
         @media (min-width: 768px) {
-          background: var(--black-lighter) url("../../images/distribution.jpg")
+          background: var(--black-lighter) url("../../images/distribution.webp")
             no-repeat right center;
         }
         a {

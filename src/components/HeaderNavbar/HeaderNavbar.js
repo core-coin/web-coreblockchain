@@ -11,7 +11,7 @@ import {
     Col
 } from 'reactstrap'
 
-import Logo from '../../images/logo.png'
+import Logo from '../../images/logo.webp'
 import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
 import Search from '../SvgIcon/icons/Search'
