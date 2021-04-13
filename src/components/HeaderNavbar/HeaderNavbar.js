@@ -133,37 +133,37 @@ export default class HeaderNavbar extends PureComponent{
                                         </div>
                                     </div>
                                 :
-                                    <div className='headerNavbar_flex'>
-                                        <div>
-                                            <Nav navbar>
-                                                {MENULINKS.map(this.renderLink)}
-                                            </Nav>
-                                        </div>
-                                        <div className='headerNavbar_left'>
-                                            <Button 
-                                             icon={SearchIcon}
-                                             theme='ghost'
-                                             size='extraSmall'
-                                             hover={false}
-                                             href='/search'
-                                             type='router'/>
-                                            
-                                            <Button
-                                                icon={LanguageIcon}
-                                                theme='ghost'
-                                                size='extraSmall'
-                                                hover={false}
-                                                href='/language'
-                                                type='router'
-                                            />
-                                            <Button 
-                                             theme='green'
-                                             text={HEROHEADER.actionBtn}
-                                             type='router'
-                                             href='/get-started'
-                                              />
-                                        </div>
+                                  <>
+                                    <div>
+                                      <Nav navbar>
+                                        {MENULINKS.map(this.renderLink)}
+                                      </Nav>
                                     </div>
+                                    <div className='headerNavbar_left'>
+                                      <Button
+                                        icon={SearchIcon}
+                                        theme='ghost'
+                                        size='extraSmall'
+                                        hover={false}
+                                        href='/search'
+                                        type='router'/>
+
+                                      <Button
+                                        icon={LanguageIcon}
+                                        theme='ghost'
+                                        size='extraSmall'
+                                        hover={false}
+                                        href='/language'
+                                        type='router'
+                                      />
+                                      <Button
+                                        theme='green'
+                                        text={HEROHEADER.actionBtn}
+                                        type='router'
+                                        href='/get-started'
+                                      />
+                                    </div>
+                                  </>
                                 }
                             </Navbar>
                         </Col>

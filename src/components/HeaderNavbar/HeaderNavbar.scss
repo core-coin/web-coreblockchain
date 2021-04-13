@@ -12,6 +12,11 @@
   left: 0;
   right: 0;
   transition: transform 0.4s;
+  .navbar-brand {
+    img {
+      width: 295px;
+    }
+  }
   @media (max-width: 768px) {
     height: 68px;
     .navbar-brand {
@@ -45,6 +50,7 @@
   .navbar {
     justify-content: space-between;
     width: 100%;
+    padding: 0;
   }
   .nav-item {
     .nav-link {
