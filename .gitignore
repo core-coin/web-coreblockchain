@@ -1,14 +1,10 @@
-_site
-.sass-cache
-.jekyll-metadata
-vendor
-.bundle
 node_modules/
 .idea/
 .idea/*
 build/
 .prettierrc.json
 debug.log
+.eslintcache
 
 ### macOS ###
 # General
