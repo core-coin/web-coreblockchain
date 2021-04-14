@@ -61,13 +61,13 @@ const SearchBar = ({t}) => {
       <Trans i18nKey="list_map">
   My dogs are named:
   <ul i18nIsDynamicList>
-     {['rupert', 'max'].map(dog => (<li><a href='/'>{dog}</a></li>))}
+     {t('menuItemList', { returnObjects: true }).map(dog => (<li><a href='/'>{dog}</a></li>))}
   </ul>
 </Trans>
-<Trans i18nKey="list_map">My List:<ul>
-  {['one', 'two'].map((item) => <li key={item}><a>{item}</a></li>)
-  }
-  </ul></Trans>
+
+
+
+
         {results.map((doc) => (
            <Marker mark={value}>
           <a href={doc.slug} key={doc.basename}>

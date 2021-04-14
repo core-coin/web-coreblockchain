@@ -19,26 +19,6 @@ class LanguagePage extends PureComponent{
         setLanguage: func,
     }
 
-    changeLanguage = (lng, el) => {          
-        el.changeLanguage(lng)
-        this.props.setLanguage(lng)
-        }
-
-    renderLanguageBlock = (language) => (
-
-        <Col xs='12' sm='4' lg='4' key={language.code}>
-            <div className='languagePage_block' 
-            onClick={() => {this.props.setLanguage(language.code)}}
-           >
-                <div className='before'></div>
-                <div className='languagePage_block__text'>
-                    <p>{language.englishName}</p>
-                    <span>{language.nativeName}</span>
-                </div>
-            </div>
-        </Col>
-    )
-
     render(){
         
         const { translate: { LANGUAGE_PAGE }, t, i18n, language } = this.props     
@@ -46,6 +26,7 @@ class LanguagePage extends PureComponent{
          i18n.changeLanguage(lng)
          this.props.setLanguage(lng)
         }
+        const list = Array.from(t('languages', { returnObjects: true }))
 
         return(
             <div className='languagePage'>
@@ -57,10 +38,21 @@ class LanguagePage extends PureComponent{
                         </Col>
                         <Col xs='12' sm='12' md='12' xl='10'>
                             <h3>{t('Select your language')}:</h3>
-                            <button onClick={() => changeLanguage('en')}>EN</button>
-                            <button onClick={() => changeLanguage('sk')}>SK</button>
                             <Row>      
-                                {LANGUAGE_PAGE.languages.map(this.renderLanguageBlock)}
+                                {list.map((language) => (
+
+                                <Col xs='12' sm='4' lg='4' key={language.code}>
+                                    <div className='languagePage_block' 
+                                    onClick={() => {changeLanguage(language.code)}}
+                                >
+                                        <div className='before'></div>
+                                        <div className='languagePage_block__text'>
+                                            <p>{language.englishName}</p>
+                                            <span>{language.nativeName}</span>
+                                        </div>
+                                    </div>
+                                </Col>
+                                ))}
                             </Row>
                         </Col>
                         <Col xs='12'sm='12' md='12' xl='10' className='languagePage_program'>

@@ -11,6 +11,7 @@ import {
     NavLink
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
+import i18next from 'i18next'
 
 import Button from '../Button'
 import './Developers.scss'
@@ -19,7 +20,7 @@ class Developers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: this.props.translate.DEVELOPERS.tabs[0].tabName,
+            activeTab: i18next.t('developers tabs', { returnObjects: true })[0].tabName
         }
     }
     static propTypes = {
@@ -79,6 +80,7 @@ class Developers extends PureComponent{
         const { t, translate: { DEVELOPERS } } = this.props
        
         const { activeTab } = this.state
+        const list = Array.from(t('developers tabs', { returnObjects: true }))
 
         return(
             <div className='developers'>
@@ -94,12 +96,50 @@ class Developers extends PureComponent{
                         </Col>
                         <Col sm='12' lg='9' xl='8' className='tabs_header'>
                             <Nav tabs>
-                                {DEVELOPERS.tabs.map(this.renderTabName)}
+                                {/* {DEVELOPERS.tabs.map(this.renderTabName)} */}                      
+                                {list.map((tab) => (
+                                    <Trans
+                                    i18nKey={tab.tabName}
+                                    defaults={tab.tabName}
+                                    >
+                                    <NavItem key={tab.tabName} className="nav-item">  
+                                        <NavLink className={activeTab === tab.tabName ? 'active' : ''} 
+                                        onClick={() => { this.toggle(tab.tabName)}}>
+                                        one
+                                        </NavLink>
+                                    </NavItem>
+                                    </Trans>
+                                ))}
                             </Nav>
                         </Col>
                         <Col sm='12' lg='9' xl='8'>
                             <TabContent activeTab={activeTab}>
-                                {DEVELOPERS.tabs.map(this.renderTabContent)}
+                                {/* {DEVELOPERS.tabs.map(this.renderTabContent)} */}
+                                {list.map((tab, index) => (
+                                    <TabPane tabId={tab.tabName} key={index}>
+                                        <Row>
+                                            <Col sm="12">
+                                                <p>{tab.tabText}</p>
+                                                <div>
+                                                    <Button
+                                                        theme='green'
+                                                        size='normal'
+                                                        text={tab.tabGreenBtn}
+                                                        margin='35'
+                                                        href=''
+                                                    />
+                                                    <Button
+                                                        theme='ghost'
+                                                        size='normal'
+                                                        text={tab.tabGhostBtn}
+                                                        href=''
+                                                    />
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </TabPane>
+                                )
+                            )}
                             </TabContent>
                         </Col>
                     </Row>

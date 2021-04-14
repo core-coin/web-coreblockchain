@@ -124,25 +124,25 @@
   "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.": "Decentralizovaná štruktúra v rámci celého ekosystému, ktorá umožňuje hlasovanie prostredníctvom CORE FOUNDATION. Pozývame akékoľvek nové nápady pre Blockchain. Blockchain má program na oceňovanie projektov — Core Community Fund //CCF// — považované za prospešné pre sieť.",
   "Core Blockchain Social Impact": "Core Blockchain <1>sociálny dopad</1>",
   "industries": "odvetvia",
-  "MENULINKS": [
+  "menuItemList": [
     {
-      "label": "o Core",
+      "label": "<0><1></1><0>o Core",
       "link": "overview"
     },
     {
-      "label": "Dozvedieť sa",
+      "label": "<0><1></1><0>Dozvedieť sa",
       "link": "learn"
     },
     {
-      "label": "vývojari",
+      "label": "<0><1></1><0>vývojari",
       "link": "developers"
     },
     {
-      "label": "Organizácie",
+      "label": "<0><1></1><0>Organizácie",
       "link": "enterprises"
     },
     {
-      "label": "community",
+      "label": "<0><1></1><0>community",
       "link": "community"
     }
   ],
@@ -242,19 +242,19 @@
     {
       "tabGhostBtn": "Nahlásiť chybu",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "Portál pre vývojárov",
+      "tabName": "<0><1></1><0>Portál pre vývojárov",
       "tabText": "Preskúmajte rozhranie medzi sadou API, SDK alebo iných interaktívnych digitálnych nástrojov a ich rôznymi zainteresovanými stranami. Pripojte Blockchain pomocou Oracles k svojmu aktívnemu systému. Interakujte s celosvetovou sieťou Blockchain."
     },
     {
       "tabGhostBtn": "Nové vlákno",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "Core ◆ Diskusia",
+      "tabName": "<0><1></1><0>Core ◆ Diskusia",
       "tabText": "Diskutujte a otvorte nové otázky-a-odpovede v komunitnej diskusii. Vývojári, ako aj ďalší členovia komunity vám pomôžu odpovedať na vaše otázky."
     },
     {
       "tabGhostBtn": "Otvoriť nový návrh",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "Core štandardy",
+      "tabName": "<0><1></1><0>Core štandardy",
       "tabText": "Komunita Core prijala veľa štandardov, ktoré sú užitočné pre vývojárov. Spravidla sa tieto návrhy zavádzajú ako Core Improvement Proposals //CIP//. CIP popisuje štandardy pre platformu Core vrátane špecifikácií základných protokolov, rozhraní API klienta a zmluvných štandardov."
     }
   ],

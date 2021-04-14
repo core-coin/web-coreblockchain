@@ -1,27 +1,6 @@
 {  
-  "list_map": "My dogs are named: <1><2>Ace</2></1><3><4>Diesel</4></3><5><6>Finn</6></5> ",
-  "list": [
-    {
-      "label": "<0><1></1><0>overview",
-      "link": "overview"
-    },
-    {
-      "label": "<0><1></1><0>learn",
-      "link": "learn"
-    },
-    {
-      "label": "<0><1></1><0>developers",
-      "link": "developers"
-    },
-    {
-      "label": "<0><1></1><0>enterprises",
-      "link": "enterprises"
-    },
-    {
-      "label": "<0><1></1><0>community",
-      "link": "community"
-    }
-  ],
+  "list_map": "<1><2>one</2><3><4></4>two</3></1>",
+
   "get started": "get started",
   "learn more": "learn more",
   "Language": "Language",
@@ -134,28 +113,6 @@
   "Find the language you want to translate and select a document.": "Find the language you want to translate and select a document.",
   "You will need to create a Translate account if you don’t already have one.": "You will need to create a Translate account if you don’t already have one.",
   "The following language translations are in progress": "The following language translations are in progress",
-  "MENULINKS": [
-    {
-      "label": "overview",
-      "link": "overview"
-    },
-    {
-      "label": "learn",
-      "link": "learn"
-    },
-    {
-      "label": "developers",
-      "link": "developers"
-    },
-    {
-      "label": "enterprises",
-      "link": "enterprises"
-    },
-    {
-      "label": "community",
-      "link": "community"
-    }
-  ],
   "main tabs": [
     {
       "tabsContent": "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empowers Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.",
@@ -230,23 +187,45 @@
       "tabsName": "Telecommunications"
     }
   ],
+  "menuItemList": [
+    {
+      "label": "<0><1></1><0>overview",
+      "link": "overview"
+    },
+    {
+      "label": "<0><1></1><0>learn",
+      "link": "learn"
+    },
+    {
+      "label": "<0><1></1><0>developers",
+      "link": "developers"
+    },
+    {
+      "label": "<0><1></1><0>enterprises",
+      "link": "enterprises"
+    },
+    {
+      "label": "<0><1></1><0>community",
+      "link": "community"
+    }
+  ],
   "developers tabs": [
     {
       "tabGhostBtn": "Report bug",
       "tabGreenBtn": "Visit",
-      "tabName": "Developer portal",
+      "tabName": "<0><1></1><0>Developer portal",
       "tabText": "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network."
     },
     {
       "tabGhostBtn": "New thread",
       "tabGreenBtn": "Visit",
-      "tabName": "Core ◆ Talk",
+      "tabName": "<0><1></1><0>Core ◆ Talk",
       "tabText": "Discuss and open new QA in the Talk community. Developers as well as another community members will assist you answer your questions."
     },
     {
       "tabGhostBtn": "Open new Proposal",
       "tabGreenBtn": "Visit",
-      "tabName": "Core Standards",
+      "tabName": "<0><1></1><0>Core Standards",
       "tabText": "The Core community has adopted many standards that are helpful for developers. Typically these are introduced as Core Improvement Proposals //CIP//. CIP's describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards."
     }
   ],
