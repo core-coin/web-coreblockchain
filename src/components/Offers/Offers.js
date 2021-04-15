@@ -40,10 +40,13 @@ class Offers extends PureComponent{
           y1: e.screenY - 150 + 'px',
           x2: e.screenX - 650 + 'px',
           x3: e.screenX - 1000 + 'px',
+          x4: e.screenX - 1750 + 'px',
+          x5: e.screenX - 2100 + 'px',
+          x6: e.screenX - 1700 + 'px',
         })
       }
 
-      handleMouseLeave = e => {
+    handleMouseLeave = e => {
         this.setState({
           x0: 0,
           y0: 0,
@@ -51,12 +54,15 @@ class Offers extends PureComponent{
           y1: 0,
           x2: 0,
           x3: 0,
+          x4: 0,
+          x5: 0,
+          x6: 0
         })
       }
     
     render(){
-        const { t, translate } = this.props
-        let { x0, y0, x1, y1, x2, x3 } = this.state
+        const { t } = this.props
+        let { x0, y0, x1, y1, x2, x3, x4, x5, x6 } = this.state
         const style = {
           style1: {
             top: y0,
@@ -74,8 +80,20 @@ class Offers extends PureComponent{
             top: y1,
             left: x3,
           },
+          style5: {
+            top: y0,
+            left: x4,
+          },
+          style6: {
+            top: y0,
+            left: x5,
+          },
+          style7: {
+            top: y1,
+            left: x6,
+          },
         }
-             
+        const isLarge = window.innerWidth >= 1740    
 
         return(
             
@@ -98,7 +116,7 @@ class Offers extends PureComponent{
                                             <div className='offers_block offers_block__low' 
                                             onMouseMove={this.handleMouseEnter.bind(this)}
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={style.style1}></div>
+                                            <div className='before' style={isLarge ? style.style5 : style.style1}></div>
                                                <div className='offers_block-box text-center'>
                                                 <Decentralization />
                                                     <h4>{t('Decentralization')}</h4>
@@ -109,7 +127,7 @@ class Offers extends PureComponent{
                                         <Col sm='12' lg='6' className='zIndex'>
                                             <div className='offers_block' onMouseMove={this.handleMouseEnter.bind(this)}
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={style.style2}></div>
+                                            <div className='before' style={isLarge ? style.style6 : style.style2}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Security/>
                                                     <h4>{t('Security')}</h4>
@@ -129,7 +147,7 @@ class Offers extends PureComponent{
                                             <div className='offers_block offers_block__lower' 
                                             onMouseMove={this.handleMouseEnter.bind(this)}
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={style.style3}></div>
+                                            <div className='before' style={isLarge ? style.style7 : style.style3}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Interoperability/>
                                                     <h4>{t('Interoperability')}</h4>
