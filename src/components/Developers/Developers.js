@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { string, object } from 'prop-types'
 import {
     Container,
     Row,
@@ -23,11 +22,6 @@ class Developers extends PureComponent{
             activeTab: i18next.t('developers tabs', { returnObjects: true })[0].tabName
         }
     }
-    static propTypes = {
-        language: string,
-        translate: object,
-    }
-
 
     toggle = tab => {
         if(this.state.activeTab !== tab) {
@@ -35,20 +29,19 @@ class Developers extends PureComponent{
         }
     }
 
-    renderTabName = ( tab ) => {
-        const { activeTab } = this.state
-
-        return(
-            <NavItem key={tab.tabName}>
-                <NavLink
-                    className={activeTab === tab.tabName ? 'active' : ''}
-                    onClick={() => { this.toggle(tab.tabName); }}
-                >
-                    {tab.tabName}
-                </NavLink>
-            </NavItem>
-        )
-    }
+    renderTabName = (tab) => (
+        <Trans
+        i18nKey={tab.tabName}
+        defaults={tab.tabName}
+        >
+        <NavItem key={tab.tabName} className="nav-item">  
+            <NavLink className={this.state.activeTab === tab.tabName ? 'active' : ''} 
+            onClick={() => { this.toggle(tab.tabName)}}>
+            one
+            </NavLink>
+        </NavItem>
+        </Trans>
+    )
 
     renderTabContent = (tab, index) => (
         <TabPane tabId={tab.tabName} key={index}>
@@ -75,10 +68,8 @@ class Developers extends PureComponent{
         </TabPane>
     )
 
-
     render(){
-        const { t, translate: { DEVELOPERS } } = this.props
-       
+        const { t } = this.props
         const { activeTab } = this.state
         const list = Array.from(t('developers tabs', { returnObjects: true }))
 
@@ -95,51 +86,13 @@ class Developers extends PureComponent{
                             </h1>
                         </Col>
                         <Col sm='12' lg='9' xl='8' className='tabs_header'>
-                            <Nav tabs>
-                                {/* {DEVELOPERS.tabs.map(this.renderTabName)} */}                      
-                                {list.map((tab) => (
-                                    <Trans
-                                    i18nKey={tab.tabName}
-                                    defaults={tab.tabName}
-                                    >
-                                    <NavItem key={tab.tabName} className="nav-item">  
-                                        <NavLink className={activeTab === tab.tabName ? 'active' : ''} 
-                                        onClick={() => { this.toggle(tab.tabName)}}>
-                                        one
-                                        </NavLink>
-                                    </NavItem>
-                                    </Trans>
-                                ))}
+                            <Nav tabs>                    
+                                {list.map(this.renderTabName)}
                             </Nav>
                         </Col>
                         <Col sm='12' lg='9' xl='8'>
                             <TabContent activeTab={activeTab}>
-                                {/* {DEVELOPERS.tabs.map(this.renderTabContent)} */}
-                                {list.map((tab, index) => (
-                                    <TabPane tabId={tab.tabName} key={index}>
-                                        <Row>
-                                            <Col sm="12">
-                                                <p>{tab.tabText}</p>
-                                                <div>
-                                                    <Button
-                                                        theme='green'
-                                                        size='normal'
-                                                        text={tab.tabGreenBtn}
-                                                        margin='35'
-                                                        href=''
-                                                    />
-                                                    <Button
-                                                        theme='ghost'
-                                                        size='normal'
-                                                        text={tab.tabGhostBtn}
-                                                        href=''
-                                                    />
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </TabPane>
-                                )
-                            )}
+                                {list.map(this.renderTabContent)}
                             </TabContent>
                         </Col>
                     </Row>

@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import { withNamespaces } from 'react-i18next'
 
 import Select from '../Select'
@@ -13,14 +12,11 @@ import './GetStarted.scss'
 const KeyIcon = <Key />
 
 class CoreClient extends PureComponent {
-  static propTypes = {
-    translate: object,
-    language: string,
-    ghostBtnText: string,
-  }
 
   render() {
-    const { translate, t } = this.props
+    const { t } = this.props
+    const list = Array.from(t('CoreDaemonSoftware osList', { returnObjects: true }))
+
 
     return (
       <>
@@ -32,7 +28,7 @@ class CoreClient extends PureComponent {
             download
             id="daemonSoftware"
             labelText={t('Choose your operating system')+ ':'} 
-            items={translate.CoreDaemonSoftware.osList}
+            items={list}
             greenBtnText={t('Download')}
             ghostBtnText={t('IPFS')}
             addBtnText={t('Onion')}

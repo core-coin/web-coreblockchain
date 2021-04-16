@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import { withNamespaces, Trans } from 'react-i18next'
 
 import AnimatedArrow from '../AnimatedArrow'
@@ -7,10 +6,6 @@ import AnimatedArrow from '../AnimatedArrow'
 import './GetStarted.scss'
 
 class Devices extends PureComponent {
-  static propTypes = {
-    translate: object,
-    language: string,
-  }
 
   renderList = (item, idx) => {
     return (
@@ -21,7 +16,9 @@ class Devices extends PureComponent {
   }
 
   render() {
-    const { translate, t } = this.props
+    const { t } = this.props
+
+    const list = Array.from(t('devicesList', { returnObjects: true }))
 
     const isMobile = window.innerWidth <= 767
 
@@ -36,7 +33,7 @@ class Devices extends PureComponent {
         <div className='downloadBlock cpuMiners'>
           <h3>{t('IoT Devices')}</h3>
           <p>{t('Minimum requirements')}:</p>
-          <ul>{translate.devicesList.map(this.renderList)}</ul>
+          <ul>{list.map(this.renderList)}</ul>
           <AnimatedArrow url='' text={t('Build Your Own')} />
           {(!isMobile && <AnimatedArrow url='' text={t('Tested Devices List')} /> )}
         </div>

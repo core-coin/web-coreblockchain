@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import {
   Navbar,
   NavbarBrand,
@@ -10,9 +9,7 @@ import {
   Row,
   Col,
 } from 'reactstrap'
-import _ from 'lodash'
-import { withNamespaces, Trans, i18nIsDynamicList } from 'react-i18next'
-import i18n from 'i18next'
+import { withNamespaces, Trans } from 'react-i18next'
 
 import Logo from '../../images/logo.png'
 import Button from '../Button'
@@ -31,29 +28,12 @@ const scrollUp = 'scroll-up'
 const scrollDown = 'scroll-down'
 let lastScroll = 0
 
-const ResourcesMedia = [
-  {
-    title: 'sometitleKey',
-    description: 'somedescriptionKey',
-    href: 'somelink',
-  },
-  {
-    title: 'sometitleKey1',
-    description: 'somedescriptionKey',
-    href: 'somelink',
-  },
-]
-
 class HeaderNavbar extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
       isMenuOpen: false,
     }
-  }
-  static propTypes = {
-    translate: object,
-    language: string,
   }
 
   renderLink = ({ link, label }, index) => (
@@ -99,8 +79,21 @@ class HeaderNavbar extends PureComponent {
     })
   }
 
+  renderNavbar = (item, index) => (
+    <Trans
+      i18nKey={item.label}
+      defaults={item.label}
+    >
+      <li key={index} className="nav-item">  
+        <a className="nav-link" href={item.link}>
+          one
+        </a>
+      </li>
+    </Trans>
+  )
+
   render() {
-    const { t, i18nIsDynamicList } = this.props
+    const { t } = this.props
     const { isMenuOpen } = this.state
     const isMobile = window.innerWidth <= 768
     const list = Array.from(t('menuItemList', { returnObjects: true }))
@@ -137,28 +130,9 @@ class HeaderNavbar extends PureComponent {
                             <Close />
                           </a>
                         </Col>
-                        {/* {t('menuItemList', { returnObjects: true }).map((item, index) => (
-                          <Trans
-                            i18nKey={item.label}
-                            defaults={item.label}
-                            components={[
-                              <li key={index} className="nav-item">
-                                <a className="nav-link" href={item.link}>
-                                  one
-                                </a>
-                              </li>,
-                            ]}
-                          >
-                            <Nav navbar i18nIsDynamicList>
-                              <li key={index} className="nav-item">
-                                <a className="nav-link" href={item.link}>
-                                  one
-                                </a>
-                              </li>
-                            </Nav>
-                          </Trans>
-                        ))}  */}
-
+                        <Nav navbar >
+                          {list.map(this.renderNavbar)}
+                        </Nav> 
                         <div className="headerNavbar_sidebar__search">
                           <Button
                             text={t('language')}
@@ -183,20 +157,7 @@ class HeaderNavbar extends PureComponent {
                 ) : (
                   <div className="headerNavbar_flex">
                   <Nav navbar >
-                      {list.map((item, index) => (
-                        <Trans
-                          i18nKey={item.label}
-                          defaults={item.label}
-                          // components={[<li key={index} className='nav-item'><a className='nav-link' href={item.link}>one</a></li>]}
-                        >
-                          <li key={item.link} className="nav-item">  
-                            <a className="nav-link" href={item.link}>
-                              one
-                            </a>
-                          </li>
-                        </Trans>
-                      ))}
-                     
+                      {list.map(this.renderNavbar)} 
                     </Nav> 
                     <div className="headerNavbar_left">
                       <Button

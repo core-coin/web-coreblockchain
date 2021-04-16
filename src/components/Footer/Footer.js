@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import {
     Container,
     Row,
     Col,
     Collapse
 } from 'reactstrap'
-import { withNamespaces, Trans } from 'react-i18next'
+import { withNamespaces } from 'react-i18next'
 
 import Logo from '../../images/logo.png'
 import Plus from '../SvgIcon/icons/Plus'
@@ -26,11 +25,6 @@ class Footer extends PureComponent{
             isLinksOpen: false,
             isDevOpen: false,
         }
-    }
-
-    static propTypes = {
-        translate: object,
-        language: string,
     }
 
     onToggleContact = () => {

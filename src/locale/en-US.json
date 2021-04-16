@@ -108,6 +108,8 @@
   "Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.": "Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.",
   "If translation progress is below 100%, please contribute! Don’t see your language listed?": "If translation progress is below 100%, please contribute! Don’t see your language listed?",
   "Open an issue.": " Open an issue.",
+  "Open link": "Open link",
+  "Boid distributions": "Boid distributions",
   "Join our translation instance.": "Join our translation instance.",
   "Once the review is complete (i.e. review progress is 100%), we will add it to the website.": "Once the review is complete (i.e. review progress is 100%), we will add it to the website.",
   "Find the language you want to translate and select a document.": "Find the language you want to translate and select a document.",
@@ -118,73 +120,73 @@
       "tabsContent": "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empowers Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.",
       "tabsImage": "/static/media/trading.8a69fe7c.jpg",
       "tabsLink": "",
-      "tabsName": "Finance & Payments"
+      "tabsName": "<0><1></1><0>Finance & Payments"
     },
     {
       "tabsContent": "Protection and automatization of medical data and active participation in research for medicine or treatment. Monitoring and tracking diseases with verified data.",
       "tabsImage": "/static/media/healthcare.55e332ad.jpg",
       "tabsLink": "",
-      "tabsName": "Healthcare & Wellness"
+      "tabsName": "<0><1></1><0>Healthcare & Wellness"
     },
     {
       "tabsContent": "Aerospace operators could share data about aircraft history, maintenance, and operations with verified Blockchain messages.",
       "tabsImage": "/static/media/space.92ae34c3.jpg",
       "tabsLink": "Visit Blog",
-      "tabsName": "Aerospace"
+      "tabsName": "<0><1></1><0>Aerospace"
     },
     {
       "tabsContent": "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with structure LIFO //Last-In-First-Out//.",
       "tabsImage": "/static/media/energy.564adc98.jpg",
       "tabsLink": "",
-      "tabsName": "Energy"
+      "tabsName": "<0><1></1><0>Energy"
     },
     {
       "tabsContent": "Management and Resilience in Supply Chain to track, monitor, and alert using Blockchain-based verified information. Blockchain reduces the length of the chain to some extent by cutting down on middlemen or 3rd party organizations.",
       "tabsImage": "/static/media/supply.2ec5e181.jpg",
       "tabsLink": "",
-      "tabsName": "Supply Chain"
+      "tabsName": "<0><1></1><0>Supply Chain"
     },
     {
       "tabsContent": "Blockchain-based transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served Worldwide.",
       "tabsImage": "/static/media/egov.df9c8a76.jpg",
       "tabsLink": "",
-      "tabsName": "eGovernment & DAO’s"
+      "tabsName": "<0><1></1><0>eGovernment & DAO’s"
     },
     {
       "tabsContent": "Enable Indie-producers //Low-budget// and microfinance for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments.",
       "tabsImage": "/static/media/massmedia.ea16e7eb.jpg",
       "tabsLink": "",
-      "tabsName": "Mass Media"
+      "tabsName": "<0><1></1><0>Mass Media"
     },
     {
       "tabsContent": "Core Blockchain is contributing to Geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries.",
       "tabsImage": "/static/media/GIS.f9d207fd.jpg",
       "tabsLink": "",
-      "tabsName": "GIScience"
+      "tabsName": "<0><1></1><0>GIScience"
     },
     {
       "tabsContent": "Core Blockchain is able to serve for an Autonomous Pod Data Transport //APDT// and connect multiple devices with the reliable and secure Core Blockchain Network globally.",
       "tabsImage": "/static/media/defense.ee6d20c2.jpg",
       "tabsLink": "",
-      "tabsName": "Defence & Security"
+      "tabsName": "<0><1></1><0>Defence & Security"
     },
     {
       "tabsContent": "Following the concept of using Blockchain technology to secure assets and host multiple securities on the Core Blockchain platform.",
       "tabsImage": "/static/media/tokenization.5a26a828.jpg",
       "tabsLink": "",
-      "tabsName": "Asset Tokenization"
+      "tabsName": "<0><1></1><0>Asset Tokenization"
     },
     {
       "tabsContent": "Blockchain can actively contribute to education by involving the process of learning facilitation, or the acquisition of knowledge, skills, values, beliefs, and habits.",
       "tabsImage": "/static/media/education.4a70b5bf.jpg",
       "tabsLink": "",
-      "tabsName": "Education"
+      "tabsName": "<0><1></1><0>Education"
     },
     {
       "tabsContent": "Blockchain messages and data distribution within different types of communication - including radio-frequency //RF//, mesh network //meshnet// and laser transmission.",
       "tabsImage": "/static/media/telecomunications.8c1d5d0b.jpg",
       "tabsLink": "",
-      "tabsName": "Telecommunications"
+      "tabsName": "<0><1></1><0>Telecommunications"
     }
   ],
   "menuItemList": [
@@ -229,22 +231,68 @@
       "tabText": "The Core community has adopted many standards that are helpful for developers. Typically these are introduced as Core Improvement Proposals //CIP//. CIP's describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards."
     }
   ],
-  "COMMUNITY menuLinks": [
+  "languages": [
     {
-      "label": "Heading 1",
+      "code": "en",
+      "englishName": "English",
+      "nativeName": "English"
+    },
+    {
+      "code": "sk",
+      "englishName": "Slovak",
+      "nativeName": "Slovenčina"
+    }
+  ],
+  "languagesInProgress": [
+    {
+      "englishName": "Africaans",
+      "nativeName": "Africans",
+      "reviewProgress": "Review progress",
+      "translationProgress": "Translation progress"
+    },
+    {
+      "englishName": "Czech",
+      "nativeName": "čeština",
+      "reviewProgress": "Review progress",
+      "translationProgress": "Translation progress"
+    },
+    {
+      "englishName": "Russian",
+      "nativeName": "Rusky",
+      "reviewProgress": "Review progress",
+      "translationProgress": "Translation progress"
+    },
+    {
+      "englishName": "Polish",
+      "nativeName": "Polski",
+      "reviewProgress": "Review progress",
+      "translationProgress": "Translation progress"
+    }
+  ],
+  "Get started menuLinks": [
+    {
+      "label": "Get started",
       "link": "get_started"
     },
     {
-      "label": "Heading 2",
+      "label": "Core Client",
       "link": "for_developers"
     },
     {
-      "label": "Heading 3",
+      "label": "Boid Distributions",
       "link": "node_distributions"
     },
     {
-      "label": "Heading 4",
+      "label": "IoT Devices",
       "link": "devices"
+    },
+    {
+      "label": "Core Mining",
+      "link": "core_mining"
+    },
+    {
+      "label": "Core Network",
+      "link": "core_network"
     }
   ],
   "repos": [
@@ -294,70 +342,7 @@
       "title": "OVH"
     }
   ],
-  "tabContainers": [
-    {
-      "openLink": "",
-      "title": "Docker"
-    },
-    {
-      "openLink": "",
-      "title": "Helm"
-    }
-  ],
-  "CoreDaemonSoftware osList": [
-    {
-      "ipfsLink": "",
-      "linkToDownLoad": "",
-      "onion": "",
-      "title": "Linux Ubuntu[deb]"
-    },
-    {
-      "ipfsLink": "",
-      "linkToDownLoad": "",
-      "onion": "",
-      "title": "Windows 10 (x64)"
-    },
-    {
-      "ipfsLink": "",
-      "linkToDownLoad": "",
-      "onion": "",
-      "title": "Windows 10 (x32)"
-    }
-  ],
-  "CoreWalletBlock osList": [
-    {
-      "linkToDownLoad": "",
-      "title": "Windows 10 (x64)",
-      "torrentLink": ""
-    },
-    {
-      "linkToDownLoad": "",
-      "title": "Windows 10 (x32)",
-      "torrentLink": ""
-    }
-  ],
-  "deployment": [
-    {
-      "openLink": "",
-      "title": "Ansible"
-    },
-    {
-      "openLink": "",
-      "title": "Bash"
-    },
-    {
-      "openLink": "",
-      "title": "Docker Comp"
-    }
-  ],
-  "devicesList": [
-    "64-bit architecture",
-    "Just-in-time //JIT// compilation",
-    "4 cores CPU",
-    "2GB RAM //4GB recommended//",
-    "Passive or Active cooler",
-    "Antenna & Amplifier //required by Luna° mesh connectivity//"
-  ],
+  "nodeDistributionTabName": ["Repos", "Deployment", "Images", "Containers"],
   "images": [
     {
       "downloadLink": "#",
@@ -390,32 +375,73 @@
       "title": "Raspberry OS"
     }
   ],
-  "Get started menuLinks": [
+  "tabContainers": [
     {
-      "label": "Get started",
-      "link": "get_started"
+      "openLink": "",
+      "title": "Docker"
     },
     {
-      "label": "Core Client",
-      "link": "for_developers"
-    },
-    {
-      "label": "Boid Distributions",
-      "link": "node_distributions"
-    },
-    {
-      "label": "IoT Devices",
-      "link": "devices"
-    },
-    {
-      "label": "Core Mining",
-      "link": "core_mining"
-    },
-    {
-      "label": "Core Network",
-      "link": "core_network"
+      "openLink": "",
+      "title": "Helm"
     }
   ],
+  "deployment": [
+    {
+      "openLink": "",
+      "title": "Ansible"
+    },
+    {
+      "openLink": "",
+      "title": "Bash"
+    },
+    {
+      "openLink": "",
+      "title": "Docker Comp"
+    }
+  ],
+
+  "CoreDaemonSoftware osList": [
+    {
+      "ipfsLink": "",
+      "linkToDownLoad": "",
+      "onion": "",
+      "title": "Linux Ubuntu[deb]"
+    },
+    {
+      "ipfsLink": "",
+      "linkToDownLoad": "",
+      "onion": "",
+      "title": "Windows 10 (x64)"
+    },
+    {
+      "ipfsLink": "",
+      "linkToDownLoad": "",
+      "onion": "",
+      "title": "Windows 10 (x32)"
+    }
+  ],
+  "CoreWalletBlock osList": [
+    {
+      "linkToDownLoad": "",
+      "title": "Windows 10 (x64)",
+      "torrentLink": ""
+    },
+    {
+      "linkToDownLoad": "",
+      "title": "Windows 10 (x32)",
+      "torrentLink": ""
+    }
+  ],
+  "devicesList": [
+    "64-bit architecture",
+    "Just-in-time //JIT// compilation",
+    "4 cores CPU",
+    "2GB RAM //4GB recommended//",
+    "Passive or Active cooler",
+    "Antenna & Amplifier //required by Luna° mesh connectivity//"
+  ],
+ 
+  
   "nodeDistr": [
     {
       "link": "",
@@ -426,7 +452,7 @@
       "title": "item"
     }
   ],
-  "nodeDistributionTabName": ["Repos", "Deployment", "Images", "Containers"],
+  
   "packageTool": [
     {
       "title": "Advanced Package Tool [APT] (Ubuntu, Debian)"
@@ -438,47 +464,27 @@
       "title": "Advanced Package Tool [APT] (Debian)"
     }
   ],
-  "languages": [
+
+  "COMMUNITY menuLinks": [
     {
-      "code": "en",
-      "englishName": "English",
-      "nativeName": "English"
+      "label": "Heading 1",
+      "link": "get_started"
     },
     {
-      "code": "sk",
-      "englishName": "Slovak",
-      "nativeName": "Slovenčina"
-    }
-  ],
-  "languagesInProgress": [
-    {
-      "englishName": "Africaans",
-      "nativeName": "Africans",
-      "reviewProgress": "Review progress",
-      "translationProgress": "Translation progress"
+      "label": "Heading 2",
+      "link": "for_developers"
     },
     {
-      "englishName": "Czech",
-      "nativeName": "čeština",
-      "reviewProgress": "Review progress",
-      "translationProgress": "Translation progress"
+      "label": "Heading 3",
+      "link": "node_distributions"
     },
     {
-      "englishName": "Russian",
-      "nativeName": "Rusky",
-      "reviewProgress": "Review progress",
-      "translationProgress": "Translation progress"
-    },
-    {
-      "englishName": "Polish",
-      "nativeName": "Polski",
-      "reviewProgress": "Review progress",
-      "translationProgress": "Translation progress"
+      "label": "Heading 4",
+      "link": "devices"
     }
   ],
   "Magnet Link": "Magnet Link",
-  "distributionImageScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core",
-  "Verify your download by running this script:": "Verify your download by running this script:",
+  "Verify your download by running this script": "Verify your download by running this script",
   "Go to marketplace": "Go to marketplace",
   "packageToolScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core"
 }

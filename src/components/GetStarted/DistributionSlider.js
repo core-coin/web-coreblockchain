@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
+import { withNamespaces } from 'react-i18next'
 
 import Apt from '../SvgIcon/icons/Apt'
 import Rpm from '../SvgIcon/icons/Rpm'
@@ -16,7 +17,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 import './GetStarted.scss'
 
-export class DistributionSlider extends PureComponent{
+class DistributionSlider extends PureComponent{
 
     static propTypes = {
         translate: object,
@@ -51,7 +52,7 @@ export class DistributionSlider extends PureComponent{
     }
 
     render(){
-        const { translate } = this.props
+        const { t } = this.props
 
         const settings = {
           dots: true,
@@ -65,11 +66,13 @@ export class DistributionSlider extends PureComponent{
           arrows: false,
       }
 
+      const list = Array.from(t('repos', { returnObjects: true }))
+
         return(
             <div className='isoImage'>
                 <div className='tabs_header'>
                 <Slider {...settings}>
-                        {translate.repos.map(this.renderTabName)}
+                        {list.map(this.renderTabName)}
                    </Slider>
                 </div>
               
@@ -77,3 +80,5 @@ export class DistributionSlider extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(DistributionSlider)

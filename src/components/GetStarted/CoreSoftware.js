@@ -1,15 +1,9 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import { withNamespaces, Trans } from 'react-i18next'
 
 import './GetStarted.scss'
 
 class CoreSoftware extends PureComponent{
-static propTypes = {
-        translate: object,
-        language: string,
-    }
-
 
     render(){
         const { t } = this.props

@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import { withNamespaces } from 'react-i18next'
 
 import AnimatedArrow from '../AnimatedArrow'
@@ -7,10 +6,6 @@ import AnimatedArrow from '../AnimatedArrow'
 import './GetStarted.scss'
 
 class CoreMiners extends PureComponent{
-static propTypes = {
-        translate: object,
-        language: string,
-    }
 
     render(){
         const { t } = this.props

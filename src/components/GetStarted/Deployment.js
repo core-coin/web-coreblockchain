@@ -62,36 +62,36 @@ class Deployment extends PureComponent{
         )
     }
 
-    renderTabContent = ( tab, index ) => {
-        return(
-            <TabPane key={index} tabId={tab.title}>
-                <Button
-                    mobileFullWidth
-                    theme='green'
-                    size='small'
-                    href={tab.openLink}
-                    text={this.props.translate.openLinkBtn}
-                    icon={ChainIcon}
-                />
-            </TabPane>
-        )
-    }
-
     render(){
-        const { translate, t } = this.props
+        const { t } = this.props
 
         const { activeTab } = this.state
+
+        const list = Array.from(t('deployment', { returnObjects: true }))
 
         return(
             <div className='isoImage'>
                 <div className='tabs_header'>
                     <Nav tabs className='tabs-noscroll'>
-                        {translate.deployment.map(this.renderTabName)}
+                        {list.map(this.renderTabName)}
                     </Nav>
                 </div>
                 <div>
                     <TabContent activeTab={activeTab}>
-                        {translate.deployment.map(this.renderTabContent)}
+                        {list.map(( tab, index ) => {
+                            return(
+                                <TabPane key={index} tabId={tab.title}>
+                                    <Button
+                                        mobileFullWidth
+                                        theme='green'
+                                        size='small'
+                                        href={tab.openLink}
+                                        text={t('Open link')}
+                                        icon={ChainIcon}
+                                    />
+                                </TabPane>
+                            )
+                        })}
                     </TabContent>
                 </div>
             </div>

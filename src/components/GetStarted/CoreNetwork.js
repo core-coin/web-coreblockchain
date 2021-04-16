@@ -1,9 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
-import {
-    NavItem,
-    NavLink
-} from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
 
 import Button from '../Button'
@@ -21,34 +16,6 @@ class CoreNetwork extends PureComponent{
         this.state = {
             activeTab: 'ISO Image'
         }
-    }
-
-    static propTypes = {
-        translate: object,
-        language: string,
-    }
-
-    toggle = tab => {
-        if(this.state.activeTab !== tab) {
-            this.setState({activeTab: tab})
-        }
-    }
-
-    renderTabName = ( tab ) => {
-        const {activeTab} = this.state
-
-        return (
-            <NavItem key={tab}>
-                <NavLink
-                    className={activeTab === tab ? 'active' : ''}
-                    onClick={() => {
-                        this.toggle(tab);
-                    }}
-                >
-                    {tab}
-                </NavLink>
-            </NavItem>
-        )
     }
 
     render(){

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { object, string, func } from 'prop-types'
+import { func } from 'prop-types'
 import {
     Container,
     Row,
@@ -14,14 +14,12 @@ import './LanguagePage.scss'
 class LanguagePage extends PureComponent{
 
     static propTypes = {
-        translate: object,
-        language: string,
         setLanguage: func,
     }
 
     render(){
         
-        const { translate: { LANGUAGE_PAGE }, t, i18n, language } = this.props     
+        const { t, i18n } = this.props     
         const changeLanguage = lng => {          
          i18n.changeLanguage(lng)
          this.props.setLanguage(lng)

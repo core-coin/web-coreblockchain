@@ -58,16 +58,6 @@ const SearchBar = ({t}) => {
         </span>
       </label>
       <div className='results' id='results'>
-      <Trans i18nKey="list_map">
-  My dogs are named:
-  <ul i18nIsDynamicList>
-     {t('menuItemList', { returnObjects: true }).map(dog => (<li><a href='/'>{dog}</a></li>))}
-  </ul>
-</Trans>
-
-
-
-
         {results.map((doc) => (
            <Marker mark={value}>
           <a href={doc.slug} key={doc.basename}>

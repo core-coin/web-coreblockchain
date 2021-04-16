@@ -8,15 +8,16 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
-import { Image } from './Image'
-import { TabContainers } from './TabContainers'
+import Image from './Image'
+import TabContainers from './TabContainers'
 import Deployment from './Deployment'
-import { Repos } from './Repos'
+import Repos from './Repos'
 
 import './GetStarted.scss'
 
-export class Distribution extends PureComponent{
+class Distribution extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
@@ -53,32 +54,34 @@ export class Distribution extends PureComponent{
     }
 
     render(){
-        const { translate } = this.props
+        const { t } = this.props
 
         const { activeTab } = this.state
+
+        const list = Array.from(t('nodeDistributionTabName', { returnObjects: true }))
 
         return(
             <>
                 <div className='downloadBlock'>
-                    <h3>{translate.nodeDistributionTitle}</h3>
+                    <h3>{t('Boid distributions')}</h3>
                     <div className='tabs_header'>
                         <Nav tabs>
-                            {translate.nodeDistributionTabName.map(this.renderTabName)}
+                            {list.map(this.renderTabName)}
                         </Nav>
                     </div>
                     <div>
                         <TabContent activeTab={activeTab}>
                             <TabPane tabId='Repos'>
-                                <Repos translate={translate}/>
+                                <Repos />
                             </TabPane>
                             <TabPane tabId='Deployment'>
-                                <Deployment translate={translate}/>
+                                <Deployment />
                             </TabPane>
                             <TabPane tabId='Images'>
-                                <Image translate={translate}/>
+                                <Image />
                             </TabPane>
                             <TabPane tabId='Containers'>
-                                <TabContainers translate={translate}/>
+                                <TabContainers />
                 
                             </TabPane>
                         </TabContent>
@@ -88,3 +91,5 @@ export class Distribution extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(Distribution)

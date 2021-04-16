@@ -63,7 +63,6 @@
   "get": "Získať ",
   "Join the Borderless network anywhere in the World run on various networks.": "Join the Borderless network anywhere in the World run on various networks.",
   "core software": "Core softvér",
-  "Verify your download by running this script:": "Go to marketplace",
   "distributionImageScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core",
   "Go to marketplace": "Go to marketplace", 
   "Boid distributions": "Boid distribúcie",
@@ -124,6 +123,7 @@
   "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.": "Decentralizovaná štruktúra v rámci celého ekosystému, ktorá umožňuje hlasovanie prostredníctvom CORE FOUNDATION. Pozývame akékoľvek nové nápady pre Blockchain. Blockchain má program na oceňovanie projektov — Core Community Fund //CCF// — považované za prospešné pre sieť.",
   "Core Blockchain Social Impact": "Core Blockchain <1>sociálny dopad</1>",
   "industries": "odvetvia",
+  "Verify your download by running this script": "Go to marketplace",
   "menuItemList": [
     {
       "label": "<0><1></1><0>o Core",
@@ -151,73 +151,73 @@
       "tabsContent": "Zabezpečená služba finančných správ v sieti Core Blockchain na odosielanie a prijímanie šifrovaných správ a tiež na uskutočňovanie platieb bez hraníc. Bezpečné smart-kontrakty — Ylem — umožňujú Core Blockchain k prenosu / digitalizácii hodnoty vo výkonnej sieti Core Blockchain.",
       "tabsImage": "/static/media/trading.8a69fe7c.jpg",
       "tabsLink": "",
-      "tabsName": "Financie a Platby"
+      "tabsName": "<0><1></1><0>Financie a Platby"
     },
     {
       "tabsContent": "Ochrana a automatizácia lekárskych údajov a aktívna účasť na výskume medicíny alebo liečby. Monitorovanie a sledovanie chorôb s overenými údajmi.",
       "tabsImage": "/static/media/healthcare.55e332ad.jpg",
       "tabsLink": "",
-      "tabsName": "Zdravotníctvo a wellness"
+      "tabsName": "<0><1></1><0>Zdravotníctvo a wellness"
     },
     {
       "tabsContent": "Prevádzkovatelia letectva a kozmonautiky môžu zdieľať údaje o histórii lietadiel, údržbe a prevádzke s overenými správami Blockchain.",
       "tabsImage": "/static/media/space.92ae34c3.jpg",
       "tabsLink": "Dozvedieť sa viac",
-      "tabsName": "Aerospace"
+      "tabsName": "<0><1></1><0>Aerospace"
     },
     {
       "tabsContent": "Optimalizácia IoT a malých zariadení podieľajúcich sa na sieti pre ťažbu a algoritme //RandomY//. Používame ZERO-waste - 0W - energiu so štruktúrou LIFO //Last-In First-Out//.",
       "tabsImage": "/static/media/energy.564adc98.jpg",
       "tabsLink": "",
-      "tabsName": "Energia"
+      "tabsName": "<0><1></1><0>Energia"
     },
     {
       "tabsContent": "Riadenie a pružnosť v dodávateľskom reťazci na stopovanie, sledovanie a varovanie pomocou overených informácií založených na blockchaine. Blockchain do istej miery skracuje dĺžku reťazca znižovaním sprostredkovateľov alebo organizácií tretích strán.",
       "tabsImage": "/static/media/supply.2ec5e181.jpg",
       "tabsLink": "",
-      "tabsName": "Zásobovací reťazec"
+      "tabsName": "<0><1></1><0>Zásobovací reťazec"
     },
     {
       "tabsContent": "Transparentné, nemenné eGov //digitálna vláda// riešenie založené na blockchaine pre služby G2 //vládna pre// poskytované po celom svete.",
       "tabsImage": "/static/media/egov.df9c8a76.jpg",
       "tabsLink": "",
-      "tabsName": "eVláda a DAO"
+      "tabsName": "<0><1></1><0>eVláda a DAO"
     },
     {
       "tabsContent": "Povoliť Indie-producentom //nízkorozpočtové// a mikrofinancovanie pre filmy a zábavu. Speňažujte obsah pomocou rýchlych a bezpečných platieb Core v reálnom čase.",
       "tabsImage": "/static/media/massmedia.ea16e7eb.jpg",
       "tabsLink": "",
-      "tabsName": "Masmédiá"
+      "tabsName": "<0><1></1><0>Masmédiá"
     },
     {
       "tabsContent": "Core Blockchain prispieva k geografickej informačnej vede //GIScience// k budovaniu digitálnej dôveryhodnej platformy, ktorú je možné použiť pre rôzne odvetvia.",
       "tabsImage": "/static/media/GIS.f9d207fd.jpg",
       "tabsLink": "",
-      "tabsName": "Geografická informatika"
+      "tabsName": "<0><1></1><0>Geografická informatika"
     },
     {
       "tabsContent": "Core Blockchain je schopný slúžiť pre Autonomous Pod Data Transport //APDT// a prepojiť viac zariadení so spoľahlivou a bezpečnou sieťou Core Blockchain po celom svete.",
       "tabsImage": "/static/media/defense.ee6d20c2.jpg",
       "tabsLink": "",
-      "tabsName": "Obrana a bezpečnosť"
+      "tabsName": "<0><1></1><0>Obrana a bezpečnosť"
     },
     {
       "tabsContent": "Nasledujeme koncepciu využívania technológie Blockchain na zabezpečenie aktív a hostenie viacerých cenných papierov na platforme Core Blockchain.",
       "tabsImage": "/static/media/tokenization.5a26a828.jpg",
       "tabsLink": "",
-      "tabsName": "Tokenizácia majetku"
+      "tabsName": "<0><1></1><0>Tokenizácia majetku"
     },
     {
       "tabsContent": "Blockchain môže aktívne prispievať k vzdelávaniu zapojením procesu uľahčovania učenia alebo získavania vedomostí, zručností, hodnôt, viery a návykov.",
       "tabsImage": "/static/media/education.4a70b5bf.jpg",
       "tabsLink": "",
-      "tabsName": "Vzdelávanie"
+      "tabsName": "<0><1></1><0>Vzdelávanie"
     },
     {
       "tabsContent": "Blockchainové správy a distribúcia dát v rámci rôznych typov komunikácie - vrátane vysokofrekvenčných //RF//, mesh sietí //meshnet// a laserového prenosu.",
       "tabsImage": "/static/media/telecomunications.8c1d5d0b.jpg",
       "tabsLink": "",
-      "tabsName": "Telekomunikácie"
+      "tabsName": "<0><1></1><0>Telekomunikácie"
     }
   ],
   "COMMUNITY menuLinks": [

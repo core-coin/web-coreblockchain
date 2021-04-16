@@ -42,7 +42,8 @@ class Offers extends PureComponent{
           x3: e.screenX - 1000 + 'px',
           x4: e.screenX - 1750 + 'px',
           x5: e.screenX - 2100 + 'px',
-          x6: e.screenX - 1700 + 'px',
+          x6: e.screenX - 2500 + 'px',
+          x7: e.screenX - 2800 + 'px'
         })
       }
 
@@ -56,13 +57,14 @@ class Offers extends PureComponent{
           x3: 0,
           x4: 0,
           x5: 0,
-          x6: 0
+          x6: 0,
+          x7: 0
         })
       }
     
     render(){
         const { t } = this.props
-        let { x0, y0, x1, y1, x2, x3, x4, x5, x6 } = this.state
+        let { x0, y0, x1, y1, x2, x3, x4, x5, x6, x7 } = this.state
         const style = {
           style1: {
             top: y0,
@@ -91,6 +93,10 @@ class Offers extends PureComponent{
           style7: {
             top: y1,
             left: x6,
+          },
+          style8: {
+            top: y1,
+            left: x7,
           },
         }
         const isLarge = window.innerWidth >= 1740    
@@ -159,7 +165,7 @@ class Offers extends PureComponent{
                                             <div className='offers_block' 
                                              onMouseMove={this.handleMouseEnter.bind(this)}
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={style.style4}></div>
+                                            <div className='before' style={isLarge ? style.style8 : style.style4}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Coverage/>
                                                     <h4>{t('Coverage')}</h4>
@@ -171,7 +177,7 @@ class Offers extends PureComponent{
                                             <div className='offers_block'
                                             onMouseMove={this.handleMouseEnter.bind(this)}
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={style.style3}></div>
+                                            <div className='before' style={isLarge ? style.style7 : style.style3}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Persistence/>
                                                     <h4>{t('Persistence')}</h4>
@@ -183,7 +189,7 @@ class Offers extends PureComponent{
                                             <div className='offers_block offers_block__high'
                                              onMouseMove={this.handleMouseEnter.bind(this)}
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={style.style4}></div>
+                                            <div className='before' style={isLarge ? style.style8 : style.style4}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Intelligence/>
                                                     <h4>{t('Swarm Intelligence')}</h4>

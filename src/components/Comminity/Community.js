@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
-import { Container, Row, Col } from 'reactstrap'
+import { Container, Row } from 'reactstrap'
 
 import SidebarTemplate from '../../templates/withSidbarTemplate'
 
@@ -15,11 +14,6 @@ export default class Community extends PureComponent {
       linksList: [],
       textToCopy: '',
     }
-  }
-
-  static propTypes = {
-    translate: object,
-    language: string,
   }
 
   toggle = (link) => {
@@ -80,12 +74,6 @@ export default class Community extends PureComponent {
   }
 
   render() {
-    const {
-      translate: { COMMUNITY },
-      language,
-    } = this.props
-
-    const isMobile = window.innerWidth <= 767
 
     return (
       <div>
