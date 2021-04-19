@@ -25,11 +25,11 @@ class Offers extends PureComponent{
             y1: 0,
             x2: 0,
             x3: 0,
+            x4: 0,
+            x5: 0,
+            x6: 0,
+            x7: 0
         }
-    }
-    static propTypes = {
-        translate: object,
-        language: string,
     }
 
     handleMouseEnter = e => {

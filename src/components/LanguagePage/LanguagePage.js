@@ -38,12 +38,10 @@ class LanguagePage extends PureComponent{
                             <h3>{t('Select your language')}:</h3>
                             <Row>      
                                 {list.map((language) => (
-
                                 <Col xs='12' sm='4' lg='4' key={language.code}>
                                     <div className='languagePage_block' 
                                     onClick={() => {changeLanguage(language.code)}}
                                 >
-                                        <div className='before'></div>
                                         <div className='languagePage_block__text'>
                                             <p>{language.englishName}</p>
                                             <span>{language.nativeName}</span>

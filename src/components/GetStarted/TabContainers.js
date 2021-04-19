@@ -27,11 +27,6 @@ class TabContainers extends PureComponent{
         }
     }
 
-    static propTypes = {
-        translate: object,
-        language: string,
-    }
-
     toggle = tab => {
         if(this.state.activeTab !== tab) {
             this.setState({activeTab: tab})

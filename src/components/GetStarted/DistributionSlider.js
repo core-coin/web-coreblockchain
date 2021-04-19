@@ -19,11 +19,6 @@ import './GetStarted.scss'
 
 class DistributionSlider extends PureComponent{
 
-    static propTypes = {
-        translate: object,
-        language: string,
-    }
-
     getIcon = (title) => {
       const iconMap = {
         'Apt-Get': <Apt/>,

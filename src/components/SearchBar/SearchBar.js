@@ -4,7 +4,7 @@ import lunr from 'lunr'
 import { keyBy } from 'lodash'
 import { Marker } from 'react-mark.js'
 import './Search.scss'
-import { withNamespaces, Trans } from 'react-i18next'
+import { withNamespaces } from 'react-i18next'
 
 import SearchIcon from '../SvgIcon/icons/Search'
 
@@ -41,7 +41,7 @@ const SearchBar = ({t}) => {
       <label className='search_box search_box__open'>
         <input
           type='search'
-          placeholder='Search for a term or phrase...'
+          placeholder={t('Search for a term or phrase...')}
           name='search'
           autoFocus={true}
           className='search_box__input'

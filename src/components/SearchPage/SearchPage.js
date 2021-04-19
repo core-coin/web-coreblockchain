@@ -12,17 +12,13 @@ export default class SearchPage extends PureComponent {
       activeTab: this.props.translate.DEVELOPERS.tabs[0].tabName,
     }
   }
-  static propTypes = {
-    language: string,
-    translate: object,
-  }
-
+  
   render() {
     return (
-      <div className="search-page">
+      <div className='search-page'>
         <Container>
           <Row>
-            <Col className="content">
+            <Col className='content'>
               <h3>Search Results</h3>
               <SearchBar />
             </Col>

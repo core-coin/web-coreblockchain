@@ -81,11 +81,11 @@ class HeaderNavbar extends PureComponent {
 
   renderNavbar = (item, index) => (
     <Trans
-      i18nKey={item.label}
+      i18nKey={index}
       defaults={item.label}
     >
-      <li key={index} className="nav-item">  
-        <a className="nav-link" href={item.link}>
+      <li key={index} className='nav-item'>  
+        <a className='nav-link' href={item.link}>
           one
         </a>
       </li>
@@ -99,14 +99,14 @@ class HeaderNavbar extends PureComponent {
     const list = Array.from(t('menuItemList', { returnObjects: true }))
 
     return (
-      <div className="headerNavbar">
+      <div className='headerNavbar'>
         <Container>
           <Row>
             <Col>
-              <Navbar expand="md">
+              <Navbar expand='md'>
                 <div>
-                  <NavbarBrand href="/">
-                    <img src={Logo} alt="Core Chain" />
+                  <NavbarBrand href='/'>
+                    <img src={Logo} alt='Core Chain' />
                   </NavbarBrand>
                 </div>
                 {isMobile ? (
@@ -122,9 +122,9 @@ class HeaderNavbar extends PureComponent {
                       }
                     >
                       <Container>
-                        <Col className="headerNavbar_sidebar__header">
-                          <NavbarBrand href="/">
-                            <img src={Logo} alt="Core Chain" />
+                        <Col className='headerNavbar_sidebar__header'>
+                          <NavbarBrand href='/'>
+                            <img src={Logo} alt='Core Chain' />
                           </NavbarBrand>
                           <a onClick={this.onCloseSidebar}>
                             <Close />
@@ -133,55 +133,55 @@ class HeaderNavbar extends PureComponent {
                         <Nav navbar >
                           {list.map(this.renderNavbar)}
                         </Nav> 
-                        <div className="headerNavbar_sidebar__search">
+                        <div className='headerNavbar_sidebar__search'>
                           <Button
                             text={t('language')}
-                            theme="ghosMAt"
-                            size="extraSmall"
+                            theme='ghosMAt'
+                            size='extraSmall'
                             hover={false}
-                            href="/language"
-                            type="router"
+                            href='/language'
+                            type='router'
                             onClick={this.onCloseSidebar}
                           />
                         </div>
                         <Button
                           mobileFullWidth
-                          theme="green"
+                          theme='green'
                           text={t('get started')}
-                          type="router"
-                          href="/get-started"
+                          type='router'
+                          href='/get-started'
                         />
                       </Container>
                     </div>
                   </div>
                 ) : (
-                  <div className="headerNavbar_flex">
+                  <div className='headerNavbar_flex'>
                   <Nav navbar >
                       {list.map(this.renderNavbar)} 
                     </Nav> 
-                    <div className="headerNavbar_left">
+                    <div className='headerNavbar_left'>
                       <Button
                         icon={SearchIcon}
-                        theme="ghost"
-                        size="extraSmall"
+                        theme='ghost'
+                        size='extraSmall'
                         hover={false}
-                        href="/search"
-                        type="router"
+                        href='/search'
+                        type='router'
                       />
 
                       <Button
                         icon={LanguageIcon}
-                        theme="ghost"
-                        size="extraSmall"
+                        theme='ghost'
+                        size='extraSmall'
                         hover={false}
-                        href="/language"
-                        type="router"
+                        href='/language'
+                        type='router'
                       />
                       <Button
-                        theme="green"
+                        theme='green'
                         text={t('get started')}
-                        type="router"
-                        href="/get-started"
+                        type='router'
+                        href='/get-started'
                       />
                     </div>
                   </div>

@@ -123,7 +123,8 @@
   "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.": "Decentralizovaná štruktúra v rámci celého ekosystému, ktorá umožňuje hlasovanie prostredníctvom CORE FOUNDATION. Pozývame akékoľvek nové nápady pre Blockchain. Blockchain má program na oceňovanie projektov — Core Community Fund //CCF// — považované za prospešné pre sieť.",
   "Core Blockchain Social Impact": "Core Blockchain <1>sociálny dopad</1>",
   "industries": "odvetvia",
-  "Verify your download by running this script": "Go to marketplace",
+  "Verify your download by running this script": "Overte si súbor pomocou skriptu",
+  "Search for a term or phrase...": "Search for a term or phrase...",
   "menuItemList": [
     {
       "label": "<0><1></1><0>o Core",
@@ -427,7 +428,7 @@
       "title": "OVH"
     }
   ],
-  "nodeDistributionTabName": ["Repos", "Deployment", "Images", "Containers"],
+  "nodeDistributionTabName": ["Repos", "Nasadenie", "Obrazy", "Kontajnery"],
   "tabContainers": [
     {
       "openLink": "",

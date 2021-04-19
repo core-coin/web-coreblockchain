@@ -34,7 +34,7 @@ class Developers extends PureComponent{
         i18nKey={tab.tabName}
         defaults={tab.tabName}
         >
-        <NavItem key={tab.tabName} className="nav-item">  
+        <NavItem key={tab.tabName} className='nav-item'>  
             <NavLink className={this.state.activeTab === tab.tabName ? 'active' : ''} 
             onClick={() => { this.toggle(tab.tabName)}}>
             one
@@ -46,7 +46,7 @@ class Developers extends PureComponent{
     renderTabContent = (tab, index) => (
         <TabPane tabId={tab.tabName} key={index}>
             <Row>
-                <Col sm="12">
+                <Col sm='12'>
                     <p>{tab.tabText}</p>
                     <div>
                         <Button

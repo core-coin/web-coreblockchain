@@ -11,10 +11,6 @@ import AnimatedArrow from '../AnimatedArrow'
 import './Solutions.scss'
 
 class Solutions extends PureComponent{
-    static propTypes = {
-        translate: object,
-        language: string,
-    }
 
     render(){
         const { t } = this.props

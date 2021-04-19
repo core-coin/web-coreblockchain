@@ -20,26 +20,26 @@ class CoreClient extends PureComponent {
 
     return (
       <>
-        <div className="downloadBlock">
+        <div className='downloadBlock'>
           <h3>{t('Core client boid')}</h3>
           <p>{t('Go-core is the the command line interface for running a full Core node implemented in Go.')}</p>
           <Select
-            type="buttons"
+            type='buttons'
             download
-            id="daemonSoftware"
+            id='daemonSoftware'
             labelText={t('Choose your operating system')+ ':'} 
             items={list}
             greenBtnText={t('Download')}
             ghostBtnText={t('IPFS')}
             addBtnText={t('Onion')}
           />
-          <div className="version-links">
+          <div className='version-links'>
             <AnimatedArrow
-              url=""
+              url=''
               text={t('Previous version')}
             />
             <AnimatedArrow
-              url=""
+              url=''
               text={t('Source code')}
             />
           </div>
@@ -47,11 +47,11 @@ class CoreClient extends PureComponent {
           <h4>{t('Public key')}</h4>
           <p>{t('As a reminder, all release binaries are signed. You can manually verify the signatures with the command')}:</p>
           <CopyInput value='openssl dgst -sha256 -verify core.pem -signature core.sig core' />
-          <div className="downloadBlock_key">
+          <div className='downloadBlock_key'>
             <Button
-              theme="ghost"
+              theme='ghost'
               mobileFullWidth
-              size="small"
+              size='small'
               href={'#'}
               text={t('Public Key')}
               icon={KeyIcon}

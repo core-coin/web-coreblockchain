@@ -21,8 +21,6 @@ class NodeCoverage extends PureComponent{
         blocktime: number,
         marketCap: number,
         price: number,
-        language: string,
-        translate: object,
     }
 
     static defaultProps = {

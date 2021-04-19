@@ -13,10 +13,6 @@ import MouseIcon from './MouseIcon'
 import './HeroHeader.scss'
 
 class HeroHeader extends PureComponent{
-    static propTypes = {
-        translate: object,
-        language: string,
-    }
 
     render(){
         const { t } = this.props
