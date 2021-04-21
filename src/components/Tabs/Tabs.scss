@@ -1,19 +1,28 @@
 .tabs {
   background-color: var(--black);
-  padding: 8% 0;
+  padding: 7% 0;
+  @media (max-width: 1440px){
+    padding: 8% 0;
+  }
   h3 {
     color: var(--white);
-    font-size: 32px;
-    font-weight: 700;
+    font-family: Montserrat-Bold;
+    font-size: 26px;
+    font-weight: 900;
     letter-spacing: -0.96px;
     line-height: 36px;
-    padding: 0 9% 9%;
+    padding: 0 9% 5%;
     margin: 0;
     text-transform: uppercase;
     @media (max-width: 767px) {
       font-size: 22px;
       letter-spacing: -0.66px;
       padding: 8% 5% 3%;
+    }
+    @media (max-width: 1440px){
+      font-size: 32px;
+      font-weight: 700;
+      padding: 0 9% 9%;
     }
   }
   .tabs_header {
@@ -43,6 +52,8 @@
           background-color: transparent;
           cursor: pointer;
           color: var(--grey);
+          font-size: 17px;
+          padding: 9px 0 3px 0;
           &::before{
             @media (max-width: 767px) {
               content: none;
@@ -52,6 +63,7 @@
             font-weight: bold;
             display: inline-block;
             width: 1em;
+            margin-right: 12px;
           }
           &.active {
             color: var(--green);
@@ -68,7 +80,7 @@
               width: 5px;
               height: 5px;
               box-shadow: -1px 2px 14px 3px #248b385c; 
-              margin-right: 18px;
+              margin-right: 24px;
               overflow: visible;
               border-radius: 50%;
               vertical-align: middle;
@@ -85,31 +97,45 @@
     .tab-pane {
       img {
         border-radius: 9px;
-        margin-bottom: 9%;
+        margin: 11px 0 44px;
+        height: 261px;
+        @media (max-width: 1440px){
+          margin-bottom: 9%;
+        }
       }
       h2 {
         color: var(--white);
-        font-family: Montserrat-Medium;
-        font-size: 44px;
+        font-family: Montserrat-Bold;
+        font-size: 34px;
         font-weight: 700;
         letter-spacing: -1.32px;
-        line-height: 48px;
+        line-height: 42px;
+        margin-bottom: 3px;
+        text-transform: uppercase;
         @media (max-width: 767px) {
           font-size: 18px;
           line-height: 1.2;
+        }
+        @media (max-width: 1440px){
+          font-size: 44px;
+          line-height: 48px;
         }
       }
       p {
         color: var(--grey);
         font-family: 'Red Hat Display';
-        font-size: 22px;
+        font-size: 17px;
         font-weight: 400;
         letter-spacing: -0.22px;
-        line-height: 28px;
+        line-height: 22px;
         margin-bottom: 8%;
         @media (max-width: 767px) {
           font-size: 16px;
           line-height: 1.2;
+        }
+        @media (max-width: 1440px){
+          font-size: 22px;
+          line-height: 28px;
         }
       }
     }

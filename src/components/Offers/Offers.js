@@ -96,7 +96,7 @@ export default class Offers extends PureComponent{
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={style.style1}></div>
                                                <div className='offers_block-box text-center'>
-                                                <Decentralization />
+                                                <Decentralization width={37} height={37}/>
                                                     <h4>{OFFERS.decentralization}</h4>
                                                     <p>{OFFERS.decentralizationText}</p>
                                                </div>
@@ -107,7 +107,7 @@ export default class Offers extends PureComponent{
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={style.style2}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Security/>
+                                                    <Security width={29} height={42}/>
                                                     <h4>{OFFERS.security}</h4>
                                                     <p>{OFFERS.securityText}</p>
                                                 </div>
@@ -127,7 +127,7 @@ export default class Offers extends PureComponent{
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={style.style3}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Interoperability/>
+                                                    <Interoperability width={37} height={37}/>
                                                     <h4>{OFFERS.interoperability}</h4>
                                                     <p>{OFFERS.interoperabilityText}</p>
                                                 </div>
@@ -139,7 +139,7 @@ export default class Offers extends PureComponent{
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={style.style4}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Coverage/>
+                                                    <Coverage  width={39} height={56}/>
                                                     <h4>{OFFERS.coverage}</h4>
                                                     <p>{OFFERS.coverageText}</p>
                                                 </div>
@@ -151,7 +151,7 @@ export default class Offers extends PureComponent{
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={style.style3}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Persistence/>
+                                                    <Persistence  width={50} height={45}/>
                                                     <h4>{OFFERS.persistence}</h4>
                                                     <p>{OFFERS.persistenceText}</p>
                                                 </div>
@@ -163,7 +163,7 @@ export default class Offers extends PureComponent{
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={style.style4}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Intelligence/>
+                                                    <Intelligence  width={44} height={44}/>
                                                     <h4>{OFFERS.swarmIntelligence}</h4>
                                                     <p>{OFFERS.swarmIntelligenceText}</p>
                                                 </div>

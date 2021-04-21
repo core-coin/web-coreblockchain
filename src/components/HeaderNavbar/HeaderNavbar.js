@@ -88,7 +88,7 @@ export default class HeaderNavbar extends PureComponent{
 
         return(
             <div className='headerNavbar'>
-                <Container>
+                <Container fluid>
                     <Row>
                         <Col>
                             <Navbar expand="md">

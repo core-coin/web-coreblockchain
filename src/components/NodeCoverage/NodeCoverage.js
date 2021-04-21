@@ -69,7 +69,7 @@ export default class NodeCoverage extends PureComponent{
                                        <div className='text-center'>
                                        <span>{NODECOVERAGE.nodeStatistics}</span>
                                        <div className='text-center nodeCoverage_block-img'>
-                                            <Luna />
+                                            <Luna width={193} height={46}/>
                                        </div>
                                        </div>
                                     </div>

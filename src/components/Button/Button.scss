@@ -33,13 +33,13 @@
   }
   &.size {
     &_normal {
-      height: 67px;
-      min-width: 238px;
+      height: 50px;
+      min-width: 180px;
       border-radius: 14px;
-      font-size: 14px;
+      font-size: 10px;
       color: #ffffff;
       font-family: Montserrat-Regular;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 2.1px;
       line-height: 24px;
       @media (max-width: 767px) {
@@ -47,6 +47,12 @@
         width: 100%;
         margin-bottom: 20px;
         margin-right: 0;
+      }
+      @media (max-width: 1440px){
+        height: 67px;
+        min-width: 238px;
+        font-size: 14px;
+        font-weight: 700;
       }
     }
     &_small {

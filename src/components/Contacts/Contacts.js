@@ -56,11 +56,11 @@ export default class Contacts extends PureComponent{
                             <a href=''>{CONTACTS.brandIdentity}</a>
                         </div>
                             <div className='contacts_left__icons'>
-                                <a href=''><Cube/></a>
-                                <a href=''><Cryptohub/></a>
-                                <a href=''><Github/></a>
-                                <a href=''><Discord/></a>
-                                <a href=''><Twitter/></a>
+                                <a href=''><Cube width={25} height={25} /></a>
+                                <a href=''><Cryptohub width={14}/></a>
+                                <a href=''><Github width={23} height={26}/></a>
+                                <a href=''><Discord width={24}/></a>
+                                <a href=''><Twitter width={22}/></a>
                             </div>
                         </Col>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>

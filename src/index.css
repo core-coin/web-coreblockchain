@@ -50,14 +50,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
 }
-
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 970px;
+  }
+}
 .title {
   color: var(--white);
   font-family: Montserrat-Medium;
-  font-size: 44px;
+  font-size: 33px;
   font-weight: 700;
-  letter-spacing: -1.32px;
-  line-height: 48px;
+  letter-spacing: -0.8px;
+  line-height: 37px;
   text-transform: uppercase;
 }
 
@@ -68,12 +72,12 @@ body {
 .preTitle {
   color: var(--grey-lighter);
   font-family: Montserrat-Regular;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 6.4px;
-  line-height: 22px;
+  letter-spacing: 4.1px;
+  line-height: 23px;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 16px;
 }
 
 .description {
@@ -119,6 +123,19 @@ body {
   .description {
     font-size: 16px;
     line-height: 22px;
+  }
+}
+@media (max-width: 1440px){
+  .title {
+    font-size: 44px;
+    letter-spacing: -1.32px;
+    line-height: 48px;
+  }
+  .preTitle {
+    font-size: 16px;
+    letter-spacing: 6.4px;
+    line-height: 22px;
+    margin-bottom: 35px;
   }
 }
 
