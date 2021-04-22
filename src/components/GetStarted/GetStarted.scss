@@ -140,7 +140,7 @@
         }
       }
       &.coreWallet {
-        background: var(--black-lighter) url("../../images/coreWallet.png")
+        background: var(--black-lighter) url("../../images/core-wallet.png")
           no-repeat left bottom;
         padding-bottom: 390px;
         @media (max-width: 767px) {
@@ -149,7 +149,7 @@
       }
       &.nodeStatus {
         @media (min-width: 768px) {
-          background: var(--black-lighter) url("../../images/coreStatus.png");
+          background: var(--black-lighter) url("../../images/core-status.png");
         }
         padding-bottom: 5px;
         background-repeat: no-repeat;

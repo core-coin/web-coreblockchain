@@ -4,7 +4,7 @@ import { goBack } from 'connected-react-router'
 
 import LocalizedStrings from '../locale'
 
-import { setLanguage } from './actions'
+import { setLanguage, fillSearchIndex } from './actions'
 
 
 const initialState = {
@@ -13,6 +13,8 @@ const initialState = {
     blockTime: 200,
     algorithm: 'RandomY',
     difficulty: 333,
+    searchIndex: null,
+    searchDocs: null,
 }
 
 const handleSetLanguage = (state, newLanguage) => {
@@ -30,8 +32,15 @@ const handleSetLanguage = (state, newLanguage) => {
     }
 }
 
+const handleFillSearchIndex = (state, {docsMap, idx}) => ({
+  ...state,
+  searchIndex: idx,
+  searchDocs: docsMap,
+})
+
 const actions ={
     [setLanguage]: handleSetLanguage,
+    [fillSearchIndex]: handleFillSearchIndex,
 }
 
 const reducer = createReducer(actions, initialState)

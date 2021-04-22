@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route } from 'react-router-dom'
 import Store, { history } from './store'
+import createSearchIndex from './reducer/search'
 
 import Layout from './components/Layout'
 
@@ -16,17 +17,17 @@ import OverviewContainer from './containers/OverviewContainer'
 import CommunityContainer from './containers/CommunityContainer'
 
 const store = Store()
+createSearchIndex(store)
 
 export default class App extends PureComponent {
 
   render() {
-    
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <Layout>
             <Switch>
-              <Route exact path='/' component={PageContainer} /> 
+              <Route exact path='/' component={PageContainer} />
               <Route path='/language' component={LanguagePageContainer} />
               <Route path='/language-program' component={LanguageTranslatePageContainer} />
               <Route path='/get-started' component={GetStartedContainer} />

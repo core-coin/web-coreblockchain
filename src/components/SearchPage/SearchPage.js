@@ -12,7 +12,13 @@ export default class SearchPage extends PureComponent {
       activeTab: this.props.translate.DEVELOPERS.tabs[0].tabName,
     }
   }
-  
+  static propTypes = {
+    language: string,
+    translate: object,
+    searchIndex: object,
+    searchDocs: object,
+  }
+
   render() {
     return (
       <div className='search-page'>
@@ -20,7 +26,7 @@ export default class SearchPage extends PureComponent {
           <Row>
             <Col className='content'>
               <h3>Search Results</h3>
-              <SearchBar />
+              <SearchBar searchIndex={this.props.searchIndex} searchDocs={this.props.searchDocs}/>
             </Col>
           </Row>
         </Container>

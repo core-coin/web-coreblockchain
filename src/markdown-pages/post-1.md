@@ -1,5 +1,14 @@
+---
+title: What is a blockchain?
+description: A blockchain is best described as a public database that is updated and shared across many computers in a network.
+keywords: blockchain
+link: /overview
+lang: en
+---
+
 # Dillinger
 ## _The Last Markdown Editor, Ever_
+
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 

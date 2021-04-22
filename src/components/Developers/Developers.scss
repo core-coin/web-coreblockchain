@@ -1,7 +1,7 @@
 .developers {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  background-image: url(../../images/screendouble.png);
+  background-image: url(../../images/screen-double.png);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 45%;
@@ -9,7 +9,7 @@
   @media (max-width: 767px) {
     border-top: none;
     background-color: var(--black-darken);
-    background-image: url(../../images/screen_for-mobile.png);
+    background-image: url(../../images/screen-mobile.png);
     background-position: 30% top;
     background-size: 613px 432px;
     .container {
