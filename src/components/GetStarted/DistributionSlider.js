@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import { withNamespaces } from 'react-i18next'
 
 import Apt from '../SvgIcon/icons/Apt'

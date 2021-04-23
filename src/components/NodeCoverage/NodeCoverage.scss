@@ -48,6 +48,10 @@
     margin-top: 10%;
     margin-bottom: 20%;
     backdrop-filter: blur(10px);
+    @-moz-document url-prefix() {
+      border: 1px solid var(--grey-darken);
+      background-color: rgba(28, 28, 36, 0.98); 
+    }
     @media (min-width: 1000px) {
       height: 380px;
     }

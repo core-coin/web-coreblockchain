@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 
 import {
     TabContent,
