@@ -8,6 +8,7 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import Button from '../Button'
 import Chain from '../SvgIcon/icons/Chain'
@@ -18,17 +19,12 @@ import './GetStarted.scss'
 
 const ChainIcon = <Chain/>
 
-export class TabContainers extends PureComponent{
+class TabContainers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
             activeTab: '',
         }
-    }
-
-    static propTypes = {
-        translate: object,
-        language: string,
     }
 
     toggle = tab => {
@@ -61,39 +57,42 @@ export class TabContainers extends PureComponent{
         )
     }
 
-    renderTabContent = ( tab, index ) => {
-        return(
-            <TabPane key={index} tabId={tab.title}>
-                <Button
-                    mobileFullWidth
-                    theme='green'
-                    size='small'
-                    href={tab.downloadLink}
-                    text={this.props.translate.openLinkBtn}
-                    icon={ChainIcon}
-                />
-            </TabPane>
-        )
-    }
-
     render(){
-        const { translate } = this.props
+        const { t } = this.props
 
         const { activeTab } = this.state
+
+        const list = Array.from(t('tabContainers', { returnObjects: true }))
 
         return(
             <div className='isoImage'>
                 <div className='tabs_header'>
                     <Nav tabs className='tabs-noscroll'>
-                        {translate.tabContainers.map(this.renderTabName)}
+                        {list.map(this.renderTabName)}
                     </Nav>
                 </div>
                 <div>
                     <TabContent activeTab={activeTab}>
-                        {translate.tabContainers.map(this.renderTabContent)}
+                        {list.map(( tab, index ) => {
+                            return(
+                                <TabPane key={index} tabId={tab.title}>
+                                    <Button
+                                        mobileFullWidth
+                                        theme='green'
+                                        size='small'
+                                        href={tab.downloadLink}
+                                        text={t('Open link')}
+                                        icon={ChainIcon}
+                                    />
+                                </TabPane>
+                            )
+                        }
+                        )}
                     </TabContent>
                 </div>
             </div>
         )
     }
 }
+
+export default withNamespaces()(TabContainers)

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Marker } from 'react-mark.js'
 import './Search.scss'
+import { withNamespaces } from 'react-i18next'
 
 import SearchIcon from '../SvgIcon/icons/Search'
 
@@ -8,18 +9,19 @@ const SearchBar = ({searchIndex, searchDocs}) => {
   const [results, setResults] = useState([])
   let [isOpen, setIsOpen] = useState(false)
   let [value, setValue] = useState([])
+  const {t} = this.props 
 
   function handleStatusChange() {
     setIsOpen(!isOpen)
   }
 
   return (
-    <div className="search">
-      <label className="search_box search_box__open">
+    <div className='search'>
+      <label className='search_box search_box__open'>
         <input
-          type="search"
-          placeholder="Search for a term or phrase..."
-          name="search"
+          type='search'
+          placeholder={t('Search for a term or phrase...')}
+          name='search'
           autoFocus={true}
           className="search_box__input"
           onChange={(e) => {
@@ -30,11 +32,11 @@ const SearchBar = ({searchIndex, searchDocs}) => {
             setResults(searchRes)
           }}
         />
-        <span className="search_box__icon" onClick={handleStatusChange}>
+        <span className='search_box__icon' onClick={handleStatusChange}>
           <SearchIcon />
         </span>
       </label>
-      <div className="results" id="results">
+      <div className='results' id='results'>
         {results.map((doc) => (
            <Marker mark={value}>
           <a href={doc.link} key={doc.ref}>
@@ -51,4 +53,4 @@ const SearchBar = ({searchIndex, searchDocs}) => {
   )
 }
 
-export default SearchBar
+export default  withNamespaces()(SearchBar)
