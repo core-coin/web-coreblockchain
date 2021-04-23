@@ -6,21 +6,27 @@
   }
   &_menu {
     border-right: 1px solid var(--grey-darken);
-    padding-top: 345px;
+    padding-top: 283px;
     display: flex;
     justify-content: flex-end;
-    padding-right: 50px;
+    padding-right: 85px;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     background-image: url(../../images/sphere.webp);
-    background-size: 800px 800px;
-    background-repeat: no-repeat;
-    background-position: left 100px;
+    background-size: contain;
     background-attachment: fixed;
+    background-position: -57px 16px;
+    background-repeat: no-repeat;
     @media (min-width: 768px) and (max-width: 1024px) {
       background-position: -160px 100px;
+    }
+    @media (min-width: 1441px) {
+      padding-top: 345px;
+      padding-right: 50px;
+      background-size: 800px 800px;
+      background-position: left 100px;
     }
     ul {
       list-style: none;
@@ -40,11 +46,15 @@
         a {
           color: var(--grey);
           font-family: "Red Hat Display";
-          font-size: 22px;
-          font-weight: 400;
-          letter-spacing: -0.22px;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: -0.5px;
           flex-direction: column;
           cursor: pointer;
+          @media (min-width: 1441px){
+            font-size: 22px;
+            letter-spacing: -0.22px;
+          }
           &:hover {
             color: var(--white);
             text-decoration: none;
@@ -58,6 +68,10 @@
             font-weight: bold;
             display: inline-block;
             width: 1em;
+            margin-right: 15px;
+            @media (min-width: 1441px){
+              margin-right: 0;
+            }
           }
         }
       }
@@ -66,8 +80,12 @@
   &_content {
     flex: 1;
     height: 100%;
-    padding: 225px 10px 80px;
+    padding: 199px 0px 80px 43px;
     position: relative;
+    .description {
+      font-size: 15px;
+      letter-spacing: 0.23px;
+    }
     @media (max-width: 767px) {
       padding: 60px 10px;
       h1 {
@@ -76,12 +94,19 @@
         line-height: 1.5;
       }
     }
+    @media (min-width: 1441px){
+      padding: 225px 10px 80px;
+
+    }
     &__block {
       @media (max-width: 767px) {
         margin-top: 45px;
       }
       @media (min-width: 768px) {
-        margin-bottom: 88px;
+        margin-bottom: 30px;
+      }
+      @media (min-width: 1441px) {
+        margin-bottom: 78px;
       }
     }
     .animatedArrow {
@@ -95,7 +120,7 @@
       border: 1px solid var(--grey-darken);
       background: var(--black-lighter);
       background-size: contain;
-      padding: 60px 70px;
+      padding: 45px 59px 42px;
       margin-top: 40px;
       @media (max-width: 767px) {
         padding: 30px 20px;
@@ -119,8 +144,17 @@
           }
         }
       }
+      @media (min-width: 1441px){
+        padding: 60px 70px;
+      }
       &_key {
-        padding: 25px 0;
+        padding: 14px 0;
+        .theme_ghost {
+          margin: 0 !important;
+        }
+        @media (min-width: 1441px){
+          padding: 25px 0;
+        }
       }
       .theme_ghost {
         min-width: 90px;
@@ -134,9 +168,15 @@
         }
       }
       .version-links {
-        padding: 40px 0 0;
+        padding: 34px 0 0;
+        @media (min-width: 1441px){
+          padding: 40px 0 0;
+        }
         a {
-          padding-top: 12px;
+          padding-top: 5px;
+          @media (min-width: 1441px){
+            padding-top: 12px;
+          }
         }
       }
       &.coreWallet {
@@ -202,29 +242,41 @@
       }
       h3 {
         color: var(--white);
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: -0.96px;
+        font-size: 24px;
+        font-family: 'Montserrat-ExtraBold';
+        letter-spacing: -0.8px;
         line-height: 36px;
         text-transform: uppercase;
+        margin-bottom: 13px;
         @media (max-width: 767px) {
           font-size: 22px;
           font-family: "Montserrat-Medium";
+        }
+        @media (min-width: 1441px){
+          font-size: 32px;
+          letter-spacing: -0.96px;
         }
       }
       h4 {
         color: var(--white);
         font-family: Montserrat-Medium;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 700;
         letter-spacing: -0.6px;
+        @media (min-width: 1441px){
+          font-size: 20px;
+        }
       }
       p {
         color: var(--grey);
         font-family: "Red Hat Display";
-        font-size: 15px;
+        font-size: 11px;
         font-weight: 400;
-        line-height: 22px;
+        line-height: 17px;
+        @media (min-width: 1441px){
+          font-size: 15px;
+          line-height: 22px;
+        }
         a {
           color: var(--white);
           text-decoration: none;
@@ -234,28 +286,41 @@
         }
       }
       hr {
-        margin: 40px 0 30px;
+        margin: 22px 0 27px;
         border-color: var(--grey-darken);
+        @media (min-width: 1441px){
+          margin: 40px 0 30px;
+        }
       }
       .input-group {
         justify-content: space-between;
-        height: 43px;
-        border-radius: 10px;
+        height: 32px;
+        border-radius: 8px;
         border: 1px solid var(--gray-darken);
         background-color: var(--black-lighter);
-        margin-top: 20px;
+        margin-top: 26px;
+        @media (min-width: 1441px){
+          height: 43px;
+          margin-top: 20px;
+          border-radius: 10px;
+        }
         input {
           color: var(--green);
           font-family: "Red Hat Display";
-          font-size: 15px;
+          font-size: 11px;
           font-weight: 400;
           line-height: 22px;
           border: none;
           border-radius: 10px 0 0 10px;
           background-color: var(--black-lighter);
-          padding-left: 20px;
+          padding-left: 14px;
           padding-right: 10px;
-          width: calc(100% - 62px);
+          width: calc(100% - 47px);
+          @media (min-width: 1441px){
+            font-size: 15px;
+            padding-left: 20px;
+            width: calc(100% - 62px);
+          }
           &:focus {
             outline: none;
           }
@@ -264,9 +329,21 @@
           background-color: var(--black-lighter);
           border: none;
           border-radius: 0 10px 10px 0;
-          padding-right: 20px;
-          padding-left: 20px;
+          padding-right: 16px;
+          padding-left: 15px;
           margin-bottom: 0;
+          svg {
+            width: 12px !important;
+            height: 12px !important;
+            @media (min-width: 1441px){
+              width: 16px !important;
+              height: 16px !important;
+            }
+          }
+          @media (min-width: 1441px){
+            padding-right: 20px;
+            padding-left: 20px;
+          }
           &:focus {
             outline: none;
             box-shadow: 0 0 5px 0 var(--green);
@@ -285,9 +362,12 @@
         }
         .nav-tabs {
           border-bottom: 1px solid rgba(99, 99, 120, 0.2);
-          margin-top: 68px;
+          margin-top: 37px;
           display: flex;
           justify-content: space-between;
+          @media (min-width: 1441px){
+            margin-top: 68px;
+          }
           @media (max-width: 767px) {
             overflow-x: scroll;
             overflow-y: hidden;
@@ -298,18 +378,22 @@
           }
           .nav-link {
             color: var(--gray);
-            font-size: 20px;
+            font-size: 15px;
             font-family: Montserrat-Medium;
             font-weight: 700;
             letter-spacing: -0.6px;
             cursor: pointer;
             border: none;
-            padding: 0 8px 21px 8px;
+            padding: 0 8px 15px 0px;
             @media (max-width: 767px) {
               font-size: 16px;
               font-weight: 400;
               line-height: 24px;
               padding: 8px 16px;
+            }
+            @media (min-width: 1441px){
+              padding: 0 8px 21px 8px;
+              font-size: 20px;
             }
             &:hover {
               border-bottom: 2px solid var(--green);
@@ -344,7 +428,10 @@
               &::-webkit-scrollbar {
                 padding-top: 20px;
                 width: 10px;
-                height: 8px;
+                height: 5px;
+                @media (min-width: 1441px){
+                  height: 8px;
+                }
               }
               &::-webkit-scrollbar-track {
                 margin-top: 20px;
@@ -359,7 +446,10 @@
                 background: var(--green);
               }
               .nav-item {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
+                @media (min-width: 1441px){
+                  margin-bottom: 20px;
+                }
               }
               @media (min-width: 968px) {
                 .nav-item {
@@ -386,8 +476,8 @@
                 }
               }
               .nav-link {
-                width: 130px;
-                height: 130px;
+                width: 105px;
+                height: 105px;
                 border-radius: 10px;
                 border: 1px solid var(--grey-darken);
                 background-color: var(--black-lighter);
@@ -397,7 +487,7 @@
                 flex-direction: column;
                 color: var(--gray);
                 font-family: "Red Hat Display";
-                font-size: 16px;
+                font-size: 12px;
                 font-weight: 400;
                 line-height: 24px;
                 text-transform: capitalize;
@@ -406,6 +496,11 @@
                 @media (max-width: 767px) {
                   width: 120px;
                   height: 120px;
+                }
+                @media (min-width: 1441px){
+                  width: 130px;
+                  height: 130px;
+                  font-size: 16px;
                 }
                 svg {
                   fill: #4d4d66;
@@ -434,7 +529,10 @@
           }
         }
         .tab-pane {
-          padding-top: 10px;
+          padding-top: 6px;
+          @media (min-width: 1441px){
+            padding-top: 10px;
+          }
           .button {
             margin-top: 25px;
           }

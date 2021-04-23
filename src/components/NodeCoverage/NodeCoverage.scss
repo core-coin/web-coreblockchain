@@ -22,7 +22,7 @@
       padding: 0 30px;
     }
   }
-  @media (max-width: 1440px){
+  @media (min-width: 1441px){
     padding: 8% 0 12%;
   }
   .preTitle,
@@ -44,7 +44,7 @@
     @media (max-width: 767px) {
       font-size: 16px;
     }
-    @media (max-width: 1440px){
+    @media (min-width: 1441px){
       font-size: 22px;
     }
   }
@@ -62,13 +62,13 @@
       padding: 12% 5%;
       margin-bottom: 0;
     }
-    @media (max-width: 1440px){
+    @media (min-width: 1441px){
       padding: 13% 10%;
       margin-bottom: 20%;
     }
     &-img {
       padding: 10px 0 0 68px;
-      @media (max-width: 1440px){
+      @media (min-width: 1441px){
         padding: 16px 0 0 62px;
       }
     }
@@ -88,7 +88,7 @@
       list-style: none;
       margin-bottom: 0;
       padding: 0 0 0 10px;
-      @media (max-width: 1440px){
+      @media (min-width: 1441px){
         padding: 0;
       }
       li {
@@ -101,7 +101,7 @@
         border-top: 1px solid #323242;
         display: flex;
         justify-content: space-between;
-        @media (max-width: 1440px){
+        @media (min-width: 1441px){
           font-size: 15px;
           line-height: 41px;
         }
@@ -126,7 +126,7 @@
         letter-spacing: -0.54px;
         text-align: left;
       }
-      @media (max-width: 1440px){
+      @media (min-width: 1441px){
         font-size: 32px;
         letter-spacing: -0.96px;
         line-height: 36px;
@@ -136,7 +136,7 @@
       display: flex;
       justify-content: space-around;
       margin-bottom: 9%;
-      @media (max-width: 1440px){
+      @media (min-width: 1441px){
         margin-bottom: 10%;
       }
       &-card {
@@ -150,7 +150,7 @@
         justify-content: center;
         position: relative;
         margin: 0 4px;
-        @media (max-width: 1440px){
+        @media (min-width: 1441px){
           width: 70px;
           height: 70px;
         }
@@ -167,7 +167,7 @@
           font-size: 24px;
           letter-spacing: -0.96px;
           line-height: 22px;
-          @media (max-width: 1440px){
+          @media (min-width: 1441px){
             font-size: 32px;
           }
         }

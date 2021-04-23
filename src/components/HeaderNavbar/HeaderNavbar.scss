@@ -12,13 +12,13 @@
   left: 0;
   right: 0;
   transition: transform 0.4s;
-  @media (max-width: 1440px){
+  @media (min-width: 1441px){
     height: 113px;
   }
   .navbar-brand {
     img {
       width: 275px;
-      @media (max-width: 1440px){
+      @media (min-width: 1441px){
         width: 295px;
       }
     }

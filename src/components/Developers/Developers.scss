@@ -18,7 +18,7 @@
       margin-top: 200px;
     }
   }
-  @media (max-width: 1440px){
+  @media (min-width: 1441px){
     padding: 8% 0;
   }
   .preTitle {
@@ -27,7 +27,7 @@
       margin-top: 24px;
       margin-bottom: 10px;
     }
-    @media (max-width: 1440px){
+    @media (min-width: 1441px){
       margin-bottom: 21px;
     }
   }
@@ -70,7 +70,7 @@
           line-height: 24px;
           padding: 8px 16px;
         }
-        @media (max-width: 1440px){
+        @media (min-width: 1441px){
           font-size: 20px;
           letter-spacing: -0.6px;
           padding:0 20px 21px 20px;
@@ -96,7 +96,7 @@
       @media (max-width: 767px) {
         margin-top: 24px;
       }
-      @media (max-width: 1440px){
+      @media (min-width: 1441px){
         margin-top: 42px;
       }
       p {
@@ -113,7 +113,7 @@
           margin-bottom: 24px;
 
         }
-        @media (max-width: 1440px){
+        @media (min-width: 1441px){
           font-size: 22px;
           line-height: 32px;
         }

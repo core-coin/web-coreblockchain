@@ -48,7 +48,7 @@
         margin-bottom: 20px;
         margin-right: 0;
       }
-      @media (max-width: 1440px){
+      @media (min-width: 1441px){
         height: 67px;
         min-width: 238px;
         font-size: 14px;
@@ -56,15 +56,21 @@
       }
     }
     &_small {
-      min-width: 120px;
-      height: 43px;
-      border-radius: 10px;
-      font-size: 16px;
+      min-width: 111px;
+      height: 33px;
+      border-radius: 8px;
+      font-size: 12px;
       color: #ffffff;
       font-family: "Red Hat Display";
       font-weight: 400;
       letter-spacing: -0.16px;
       line-height: 24px;
+      @media (min-width: 1441px){
+        min-width: 120px;
+        height: 43px;
+        border-radius: 10px;
+        font-size: 16px;
+      }
     }
     &_extraSmall {
       min-width: 43px;
