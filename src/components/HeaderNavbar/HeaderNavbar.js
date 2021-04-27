@@ -80,16 +80,13 @@ class HeaderNavbar extends PureComponent {
   }
 
   renderNavbar = (item, index) => (
-    <Trans
-      i18nKey={index}
-      defaults={item.label}
-    >
+  
       <li key={index} className='nav-item'>  
         <a className='nav-link' href={item.link}>
-          one
+          {item.label}
         </a>
       </li>
-    </Trans>
+    
   )
 
   render() {

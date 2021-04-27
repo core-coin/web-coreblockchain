@@ -127,23 +127,23 @@
   "Search for a term or phrase...": "Search for a term or phrase...",
   "menuItemList": [
     {
-      "label": "<0><1></1><0>o Core",
+      "label": "o Core",
       "link": "overview"
     },
     {
-      "label": "<0><1></1><0>Dozvedieť sa",
+      "label": "Dozvedieť sa",
       "link": "learn"
     },
     {
-      "label": "<0><1></1><0>vývojari",
+      "label": "vývojari",
       "link": "developers"
     },
     {
-      "label": "<0><1></1><0>Organizácie",
+      "label": "Organizácie",
       "link": "enterprises"
     },
     {
-      "label": "<0><1></1><0>community",
+      "label": "community",
       "link": "community"
     }
   ],
@@ -152,73 +152,73 @@
       "tabsContent": "Zabezpečená služba finančných správ v sieti Core Blockchain na odosielanie a prijímanie šifrovaných správ a tiež na uskutočňovanie platieb bez hraníc. Bezpečné smart-kontrakty — Ylem — umožňujú Core Blockchain k prenosu / digitalizácii hodnoty vo výkonnej sieti Core Blockchain.",
       "tabsImage": "/static/media/trading.8a69fe7c.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Financie a Platby"
+      "tabsName": "Financie a Platby"
     },
     {
       "tabsContent": "Ochrana a automatizácia lekárskych údajov a aktívna účasť na výskume medicíny alebo liečby. Monitorovanie a sledovanie chorôb s overenými údajmi.",
       "tabsImage": "/static/media/healthcare.55e332ad.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Zdravotníctvo a wellness"
+      "tabsName": "Zdravotníctvo a wellness"
     },
     {
       "tabsContent": "Prevádzkovatelia letectva a kozmonautiky môžu zdieľať údaje o histórii lietadiel, údržbe a prevádzke s overenými správami Blockchain.",
       "tabsImage": "/static/media/space.92ae34c3.jpg",
       "tabsLink": "Dozvedieť sa viac",
-      "tabsName": "<0><1></1><0>Aerospace"
+      "tabsName": "Aerospace"
     },
     {
       "tabsContent": "Optimalizácia IoT a malých zariadení podieľajúcich sa na sieti pre ťažbu a algoritme //RandomY//. Používame ZERO-waste - 0W - energiu so štruktúrou LIFO //Last-In First-Out//.",
       "tabsImage": "/static/media/energy.564adc98.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Energia"
+      "tabsName": "Energia"
     },
     {
       "tabsContent": "Riadenie a pružnosť v dodávateľskom reťazci na stopovanie, sledovanie a varovanie pomocou overených informácií založených na blockchaine. Blockchain do istej miery skracuje dĺžku reťazca znižovaním sprostredkovateľov alebo organizácií tretích strán.",
       "tabsImage": "/static/media/supply.2ec5e181.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Zásobovací reťazec"
+      "tabsName": "Zásobovací reťazec"
     },
     {
       "tabsContent": "Transparentné, nemenné eGov //digitálna vláda// riešenie založené na blockchaine pre služby G2 //vládna pre// poskytované po celom svete.",
       "tabsImage": "/static/media/egov.df9c8a76.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>eVláda a DAO"
+      "tabsName": "eVláda a DAO"
     },
     {
       "tabsContent": "Povoliť Indie-producentom //nízkorozpočtové// a mikrofinancovanie pre filmy a zábavu. Speňažujte obsah pomocou rýchlych a bezpečných platieb Core v reálnom čase.",
       "tabsImage": "/static/media/massmedia.ea16e7eb.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Masmédiá"
+      "tabsName": "Masmédiá"
     },
     {
       "tabsContent": "Core Blockchain prispieva k geografickej informačnej vede //GIScience// k budovaniu digitálnej dôveryhodnej platformy, ktorú je možné použiť pre rôzne odvetvia.",
       "tabsImage": "/static/media/GIS.f9d207fd.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Geografická informatika"
+      "tabsName": "Geografická informatika"
     },
     {
       "tabsContent": "Core Blockchain je schopný slúžiť pre Autonomous Pod Data Transport //APDT// a prepojiť viac zariadení so spoľahlivou a bezpečnou sieťou Core Blockchain po celom svete.",
       "tabsImage": "/static/media/defense.ee6d20c2.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Obrana a bezpečnosť"
+      "tabsName": "Obrana a bezpečnosť"
     },
     {
       "tabsContent": "Nasledujeme koncepciu využívania technológie Blockchain na zabezpečenie aktív a hostenie viacerých cenných papierov na platforme Core Blockchain.",
       "tabsImage": "/static/media/tokenization.5a26a828.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Tokenizácia majetku"
+      "tabsName": "Tokenizácia majetku"
     },
     {
       "tabsContent": "Blockchain môže aktívne prispievať k vzdelávaniu zapojením procesu uľahčovania učenia alebo získavania vedomostí, zručností, hodnôt, viery a návykov.",
       "tabsImage": "/static/media/education.4a70b5bf.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Vzdelávanie"
+      "tabsName": "Vzdelávanie"
     },
     {
       "tabsContent": "Blockchainové správy a distribúcia dát v rámci rôznych typov komunikácie - vrátane vysokofrekvenčných //RF//, mesh sietí //meshnet// a laserového prenosu.",
       "tabsImage": "/static/media/telecomunications.8c1d5d0b.jpg",
       "tabsLink": "",
-      "tabsName": "<0><1></1><0>Telekomunikácie"
+      "tabsName": "Telekomunikácie"
     }
   ],
   "COMMUNITY menuLinks": [
