@@ -4,12 +4,14 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {setLanguage} from '../../reducer/actions'
 import Community from '../../components/Comminity'
+import Loading from '../../components/Loading'
 
 class CommunityContainer extends PureComponent {
   static propTypes = {
     setLanguage: func,
     translate: object,
     language: string,
+    mdFiles: object,
   }
 
   static defaultProps = {}
@@ -18,14 +20,22 @@ class CommunityContainer extends PureComponent {
     const {
       translate,
       language,
-      setLanguage
+      setLanguage,
+      mdFiles,
     } = this.props
+
+    if (!mdFiles) {
+      return(
+        <Loading/>
+      )
+    }
 
     return(
       <Community
         language={language}
         translate={translate}
         setLanguage={setLanguage}
+        mdFiles={mdFiles}
       />
     )
   }
@@ -35,6 +45,7 @@ function mapStateToProps(state) {
   return{
     translate: state.index.translate,
     language: state.index.language,
+    mdFiles: state.index.markdownFiles,
   }
 }
 
