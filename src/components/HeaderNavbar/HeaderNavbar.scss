@@ -57,6 +57,11 @@
     justify-content: space-between;
     width: 100%;
     padding: 0;
+    ul {
+      li{
+        color: var(--white);
+      }
+    }
   }
   .nav-item {
     .nav-link {

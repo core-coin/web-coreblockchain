@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import {
     Container,
     Row,
     Col,
     Collapse
 } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import Logo from '../../images/logo.webp'
 import Plus from '../SvgIcon/icons/Plus'
@@ -17,7 +17,7 @@ import Twitter from '../SvgIcon/icons/Twitter'
 
 import './Footer.scss'
 
-export default class Footer extends PureComponent{
+class Footer extends PureComponent{
     constructor(props) {
         super(props);
         this.state = {
@@ -25,12 +25,6 @@ export default class Footer extends PureComponent{
             isLinksOpen: false,
             isDevOpen: false,
         }
-    }
-
-
-    static propTypes = {
-        translate: object,
-        language: string,
     }
 
     onToggleContact = () => {
@@ -52,7 +46,7 @@ export default class Footer extends PureComponent{
     }
 
     render(){
-        const { translate: { FOOTER, CONTACTS } } = this.props
+        const { t } = this.props
 
         const { isContactOpen, isDevOpen, isLinksOpen } = this.state
 
@@ -66,26 +60,26 @@ export default class Footer extends PureComponent{
                             <Col sm='12'>
                                 <Row>
                                     <Col xs='12' className={isContactOpen ? 'toggle open' : 'toggle'}>
-                                        <a onClick={this.onToggleContact} className='toggle_header'>{CONTACTS.contact} <Plus/></a>
+                                        <a onClick={this.onToggleContact} className='toggle_header'>{t('Contact')} <Plus/></a>
                                         <Collapse isOpen={isContactOpen} className='toggle_content'>
                                             <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
                                         </Collapse>
                                     </Col>
                                     <Col xs='12' className={isDevOpen ? 'toggle open' : 'toggle'}>
-                                        <a onClick={this.onToggleDev} className='toggle_header'>{CONTACTS.development} <Plus/></a>
+                                        <a onClick={this.onToggleDev} className='toggle_header'>{t('Development')} <Plus/></a>
                                         <Collapse isOpen={isDevOpen} className='toggle_content'>
-                                            <a href=''>{CONTACTS.developerPortals}</a>
-                                            <a href=''>{CONTACTS.improvementProposals}</a>
-                                            <a href=''>{CONTACTS.coreTalk}</a>
+                                            <a href=''>{t('Developer Portal')}</a>
+                                            <a href=''>{t('mprovementProposals')}</a>
+                                            <a href=''>{t('Core Talk')}</a>
                                         </Collapse>
                                     </Col>
                                     <Col xs='12' className={isLinksOpen ? 'toggle open' : 'toggle'}>
-                                        <a onClick={this.onToggleLinks} className='toggle_header'>{CONTACTS.usefulLinks}<Plus/></a>
+                                        <a onClick={this.onToggleLinks} className='toggle_header'>{t('Useful links')}<Plus/></a>
                                         <Collapse isOpen={isLinksOpen} className='toggle_content'>
-                                            <a href=''>{CONTACTS.openSource}</a>
-                                            <a href=''>{CONTACTS.reportBug}</a>
-                                            <a href=''>{CONTACTS.tradeMark}</a>
-                                            <a href=''>{CONTACTS.brandIdentity}</a>
+                                            <a href=''>{t('Open-source License')}</a>
+                                            <a href=''>{t('Report bug')}</a>
+                                            <a href=''>{t('tradeMark')}</a>
+                                            <a href=''>{t('Brand identity')}</a>
                                             <div className='icons'>
                                                 <a href=''><Cube/></a>
                                                 <a href=''><Cryptohub/></a>
@@ -103,8 +97,8 @@ export default class Footer extends PureComponent{
                                 <div className='footer_logo-img'>
                                     <img src={Logo} alt="Core Chain"/>
                                 </div>
-                                <p className='text-center'>{FOOTER.copyRights}</p>
-                                <p className='text-center'>{FOOTER.websiteUpdate}</p>
+                                <p className='text-center'>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
+                                <p className='text-center'>{t('Website last updated Jan 31, 2021')}</p>
                             </div>
                         </Col>
                     </Row>
@@ -113,3 +107,5 @@ export default class Footer extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(Footer)

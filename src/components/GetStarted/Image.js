@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
-
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import Button from '../Button'
 import CopyInput from '../CopyInput'
@@ -20,17 +19,12 @@ const DownloadIcon = <Download />
 const TorrentIcon = <Torrent />
 const KeyIcon = <Key />
 
-export class Image extends PureComponent {
+class Image extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
       activeTab: '',
     }
-  }
-
-  static propTypes = {
-    translate: object,
-    language: string,
   }
 
   toggle = (tab) => {
@@ -69,58 +63,60 @@ export class Image extends PureComponent {
     )
   }
 
-  renderTabContent = (tab, index) => {
-    return (
-      <TabPane key={index} tabId={tab.title}>
-        <Button
-          mobileFullWidth
-          download
-          theme='green'
-          size='small'
-          href={tab.downloadLink}
-          text={this.props.translate.download}
-          icon={DownloadIcon}
-        />
-        <Button
-          mobileFullWidth
-          theme='ghost'
-          size='small'
-          href={tab.downloadLink}
-          text={this.props.translate.magnetLink}
-          icon={TorrentIcon}
-        />
-        <hr></hr>
-        <p>{this.props.translate.distributionImageText}</p>
-        <CopyInput value={this.props.translate.distributionImageScript} />
-
-        <Button
-          theme='ghost'
-          mobileFullWidth
-          size='small'
-          href={'#'}
-          text={this.props.translate.CoreDaemonSoftware.keyBtn}
-          icon={KeyIcon}
-        />
-      </TabPane>
-    )
-  }
-
   render() {
-    const { translate } = this.props
+    const { t } = this.props
 
     const { activeTab } = this.state
+
+    const list = Array.from(t('images', { returnObjects: true }))
 
     return (
       <div className='isoImage'>
         <div className='tabs_header'>
-          <Nav tabs>{translate.images.map(this.renderTabName)}</Nav>
+          <Nav tabs>{list.map(this.renderTabName)}</Nav>
         </div>
         <div>
           <TabContent activeTab={activeTab}>
-            {translate.images.map(this.renderTabContent)}
+            {list.map((tab, index) => {
+              return (
+                <TabPane key={index} tabId={tab.title}>
+                  <Button
+                    mobileFullWidth
+                    download
+                    theme='green'
+                    size='small'
+                    href={tab.downloadLink}
+                    text={t('Download')}
+                    icon={DownloadIcon}
+                  />
+                  <Button
+                    mobileFullWidth
+                    theme='ghost'
+                    size='small'
+                    href={tab.downloadLink}
+                    text={t('Magnet Link')}
+                    icon={TorrentIcon}
+                  />
+                  <hr></hr>
+                  <p>{t('Verify your download by running this script')}:</p>
+                  <CopyInput value='openssl dgst -sha256 -verify core.pem -signature core.sig core' />
+
+                  <Button
+                    theme='ghost'
+                    mobileFullWidth
+                    size='small'
+                    href={'#'}
+                    text={t('Public key')}
+                    icon={KeyIcon}
+                  />
+                </TabPane>
+              )
+            })}
           </TabContent>
         </div>
       </div>
     )
   }
 }
+
+export default withNamespaces()(Image)

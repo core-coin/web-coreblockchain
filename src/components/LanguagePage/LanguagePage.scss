@@ -106,27 +106,7 @@
         padding-top: 20px;
       }
     }
-    .before {
-      --size: 0;
-      --x: 0;
-      --y: 0;
-      position: absolute;
-      left: var(--x);
-      top: var(--y);
-      width: var(--size);
-      height: var(--size); 
-      background: radial-gradient(circle closest-side at 200px 200px,#2ee533, #303040);
-      transform: translate(-50%, -50%);
-      transition: width 0.9s ease, height 0.9s ease;
-    }
-    &:hover {
-      border: 1px solid transparent;
-      .before {
-        --size: 500px;
-        --x: 150px;
-        --y: 50px
-      }
-    }
+
   }
   ol {
     counter-reset: mycounter;

@@ -22,13 +22,12 @@ createSearchIndex(store)
 export default class App extends PureComponent {
 
   render() {
-    
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <Layout>
             <Switch>
-              <Route exact path='/' component={PageContainer} /> 
+              <Route exact path='/' component={PageContainer} />
               <Route path='/language' component={LanguagePageContainer} />
               <Route path='/language-program' component={LanguageTranslatePageContainer} />
               <Route path='/get-started' component={GetStartedContainer} />

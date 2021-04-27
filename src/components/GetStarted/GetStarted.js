@@ -1,18 +1,18 @@
-import React, { PureComponent } from 'react' 
-import { object, string } from 'prop-types' 
+import React, { PureComponent } from 'react'
 import { Container, Row, Col } from 'reactstrap' 
+import { withNamespaces } from 'react-i18next'
 
-import { CoreSoftware } from './CoreSoftware' 
-import { CoreNetwork } from './CoreNetwork' 
-import { CoreMiners } from './CoreMiners' 
-import { CoreClient } from './CoreClient'
-import { Distribution } from './Distribution'
-import { Devices } from './Devices'
-import { DistributionSlider } from './DistributionSlider'
+import CoreSoftware from './CoreSoftware' 
+import CoreNetwork from './CoreNetwork' 
+import CoreMiners from './CoreMiners' 
+import CoreClient from './CoreClient'
+import Distribution from './Distribution'
+import Devices from './Devices'
+import DistributionSlider from './DistributionSlider'
 
 import './GetStarted.scss' 
 
-export default class GetStarted extends PureComponent {
+class GetStarted extends PureComponent {
   constructor(props) {
     super(props) 
     this.state = {
@@ -22,11 +22,6 @@ export default class GetStarted extends PureComponent {
       textToCopy: '',
     } 
   }
-
-  static propTypes = {
-    translate: object,
-    language: string,
-  } 
 
   toggle = link => {
     if(this.state.activeLink !== link) {
@@ -84,10 +79,10 @@ export default class GetStarted extends PureComponent {
   }
 
   render() {
-    const {
-      translate: { GETSTARTED },
-      language,
-    } = this.props 
+
+    const { t } = this.props  
+
+    const list = Array.from(t('Get started menuLinks', { returnObjects: true }))
     
     const isMobile = window.innerWidth <= 767
 
@@ -97,7 +92,7 @@ export default class GetStarted extends PureComponent {
           <Row className='getStarted_row'>
             <Col md='3' xl='4' className='hidden-xs getStarted_menu'>
               <div className=''>
-                <ul>{GETSTARTED.menuLinks.map(this.renderLinks)}</ul>
+                <ul>{list.map(this.renderLinks)}</ul>
               </div>
             </Col>
             <Col
@@ -109,16 +104,16 @@ export default class GetStarted extends PureComponent {
                 <Col>
                   <div className='getStarted_content__block'>
                     <span id='get_started' className='hiddenBlock'></span>
-                    <CoreSoftware language={language} translate={GETSTARTED} />
+                    <CoreSoftware />
                     {isMobile && (
-                     <DistributionSlider language={language} translate={GETSTARTED}/>
+                     <DistributionSlider />
                      )}
                   </div>
                   {!isMobile && (<div
                     className='getStarted_content__block'
                   >
                     <span id='for_developers' className='hiddenBlock'></span>
-                    <CoreClient language={language} translate={GETSTARTED} />
+                    <CoreClient />
                   </div>
                    )}
                     {!isMobile && (
@@ -129,24 +124,24 @@ export default class GetStarted extends PureComponent {
                       id='node_distributions'
                       className='hiddenBlock'
                     ></span>
-                 <Distribution language={language} translate={GETSTARTED}/>
+                 <Distribution />
                  
                   </div>
                    )}
                   <div
                     className='getStarted_content__block'>
                     <span id='devices' className='hiddenBlock'></span>
-                    <Devices language={language} translate={GETSTARTED}/>
+                    <Devices />
                   </div>
 
                   <div className='getStarted_content__block'>
                     <span id='core_mining' className='hiddenBlock'></span>
-                    <CoreMiners language={language} translate={GETSTARTED} />
+                    <CoreMiners />
                   </div>
 
                   <div className='getStarted_content__block'>
                     <span id='core_network' className='hiddenBlock'></span>
-                    <CoreNetwork language={language} translate={GETSTARTED} />
+                    <CoreNetwork />
                   </div>
                 </Col>
               </Row>
@@ -157,3 +152,5 @@ export default class GetStarted extends PureComponent {
     ) 
   }
 }
+
+export default withNamespaces()(GetStarted)

@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
 import { string, object } from 'prop-types'
 import { Container, Row, Col } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import './SearchPage.scss'
 import SearchBar from '../SearchBar/SearchBar'
 
-export default class SearchPage extends PureComponent {
+class SearchPage extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
@@ -21,10 +22,10 @@ export default class SearchPage extends PureComponent {
 
   render() {
     return (
-      <div className="search-page">
+      <div className='search-page'>
         <Container>
           <Row>
-            <Col className="content">
+            <Col className='content'>
               <h3>Search Results</h3>
               <SearchBar searchIndex={this.props.searchIndex} searchDocs={this.props.searchDocs}/>
             </Col>
@@ -34,3 +35,5 @@ export default class SearchPage extends PureComponent {
     )
   }
 }
+
+export default withNamespaces()(SearchPage)

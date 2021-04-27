@@ -5,6 +5,7 @@ import {
     Row,
     Col
 } from 'reactstrap'
+import { withNamespaces, Trans } from 'react-i18next'
 
 import Cube from '../SvgIcon/icons/Cube'
 import Cryptohub from '../SvgIcon/icons/Cryptohub'
@@ -15,7 +16,7 @@ import Button from '../Button'
 
 import './Contacts.scss'
 
-export default class Contacts extends PureComponent{
+class Contacts extends PureComponent{
 
     static propTypes = {
         blockTime: number,
@@ -32,28 +33,28 @@ export default class Contacts extends PureComponent{
     }
 
     render(){
-        const { blockTime, algorithm, difficulty, translate: { CONTACTS } } = this.props
+        const { t, blockTime, algorithm, difficulty } = this.props
 
         return(
             <div className='contacts'>
                 <Container>
                     <Row>
                         <Col sm='12' lg='5' className='contacts_left hidden-xs'>
-                            <h2>{CONTACTS.getInTouch}</h2>
+                            <h2>{t('Get in touch')}</h2>
                             <div className='contacts_left__block'>
-                                <p>{CONTACTS.contact}</p>
+                                <p>{t('Contact')}</p>
                                 <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
                             </div><div className='contacts_left__block'>
-                            <p>{CONTACTS.development}</p>
-                            <a href=''>{CONTACTS.developerPortals}</a>
-                            <a href=''>{CONTACTS.improvementProposals}</a>
-                            <a href=''>{CONTACTS.coreTalk}</a>
+                            <p>{t('Development')}</p>
+                            <a href=''>{t('Developer Portal')}</a>
+                            <a href=''>{t('Core Improvement Proposals')}</a>
+                            <a href=''>{t('Core talk')}</a>
                         </div><div className='contacts_left__block'>
-                            <p>{CONTACTS.usefulLinks}</p> 
-                            <a href=''>{CONTACTS.openSource}</a>
-                            <a href=''>{CONTACTS.reportBug}</a>
-                            <a href=''>{CONTACTS.tradeMark}</a>
-                            <a href=''>{CONTACTS.brandIdentity}</a>
+                            <p>{t('Useful links')}</p> 
+                            <a href=''>{t('Open-source License')}</a>
+                            <a href=''>{t('Report bug')}</a>
+                            <a href=''>{t('tradeMark')}</a>
+                            <a href=''>{t('Brand identity')}</a>
                         </div>
                             <div className='contacts_left__icons'>
                                 <a href=''><Cube width={25} height={25} /></a>
@@ -64,20 +65,24 @@ export default class Contacts extends PureComponent{
                             </div>
                         </Col>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
-                            <h3 className='preTitle'>{CONTACTS.random}</h3>
-                            <h1 className='title'>{CONTACTS.core} <span>{CONTACTS.mining}</span></h1>
-                            <p className='description'>{CONTACTS.description}</p>
+                            <h3 className='preTitle'>{t('Random-Y')}</h3>
+                            <h1 className='title'>
+                                <Trans i18nKey='core mining'>
+                                    core <em>mining</em>
+                                </Trans>
+                            </h1>
+                            <p className='description'>{t('We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem. Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices.')}</p>
                             <div className='contacts_right__info'>
                                 <div className='contacts_right__info-block'>
-                                    <p>{CONTACTS.blockTime}</p>
+                                    <p>{t('Block Time')}</p>
                                     <span>{blockTime} H/s</span>
                                 </div>
                                 <div className='contacts_right__info-block'>
-                                    <p>{CONTACTS.algorithm}</p>
+                                    <p>{t('Algorithm')}</p>
                                     <span>{algorithm}</span>
                                 </div>
                                 <div className='contacts_right__info-block'>
-                                    <p>{CONTACTS.difficulty}</p>
+                                    <p>{t('Difficulty')}</p>
                                     <span>{difficulty} TH/s</span>
                                 </div>
                             </div>
@@ -86,13 +91,13 @@ export default class Contacts extends PureComponent{
                                     theme='green'
                                     download
                                     size='normal'
-                                    text={CONTACTS.downloadMiner}
+                                    text={t('download miner')}
                                     href=''
                                 />
                                 <Button
                                     theme='ghost'
                                     size='normal'
-                                    text={CONTACTS.miningPools}
+                                    text={t('Build hardware')}
                                     href=''
                                 />
                             </div>
@@ -103,3 +108,5 @@ export default class Contacts extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(Contacts)
