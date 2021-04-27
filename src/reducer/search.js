@@ -1,6 +1,4 @@
-import { docs as originDocsList } from '../sidebar'
 import lunr from 'lunr'
-import metadataParser from 'markdown-yaml-metadata-parser'
 import { fillSearchIndex } from './actions'
 import { trim } from 'lodash'
 
@@ -21,21 +19,16 @@ let splitDocs = docs => {
         result.push({
           title: title,
           description: description.join(),
-          link: item.link,
+          link: `${item.link}#${title.toLowerCase().split(' ').join('-')}`,
         })
       })
   })
   return result
 }
 
-let createSearchIndex = store => {
-  let mainPromise = getAllDocs()
-  mainPromise.then(docsList => {
-    return docsList.map(item => {
-      return metadataParser(item)
-    })
-  })
-  .then(mdxList => {
+let createSearchIndex = (store, mdFilesPromise) => {
+
+  mdFilesPromise.then(mdxList => {
 
     let contents = splitDocs(
       mdxList.map(md => {
@@ -77,12 +70,6 @@ let createSearchIndex = store => {
   .then(idx => {
     store.dispatch(fillSearchIndex(idx))
   })
-}
-
-let getAllDocs = () => {
-  return Promise.all(originDocsList.map(item => {
-    return fetch(item.link).then(res => res.text())
-  }))
 }
 
 export default createSearchIndex
