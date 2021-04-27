@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, object, string } from 'prop-types'
+import { number, object, string, func } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -25,6 +25,7 @@ class PageContainer extends PureComponent {
         price: number,
         translate: object,
         language: string,
+        setLanguage: func,
     }
 
     static defaultProps = {}
@@ -41,13 +42,14 @@ class PageContainer extends PureComponent {
             difficulty,
             translate,
             language,
+            setLanguage,
         } = this.props
 
         const isMobile = window.innerWidth <= 500;
 
         return(
             <>
-                <HeroHeader language={language} translate={translate}/>
+                <HeroHeader language={language} translate={translate} setLanguage={setLanguage}/>
                 {isMobile? <OffersMobile language={language} translate={translate}/> : <Offers language={language} translate={translate}/>}
                 <Tabs language={language} translate={translate}/>
                 <Solutions language={language} translate={translate}/>

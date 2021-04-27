@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Marker } from 'react-mark.js'
 import './Search.scss'
-import { useTranslation } from 'react-i18next';
 
 import SearchIcon from '../SvgIcon/icons/Search'
 
@@ -9,8 +8,6 @@ const SearchBar = ({searchIndex, searchDocs}) => {
   const [results, setResults] = useState([])
   let [isOpen, setIsOpen] = useState(false)
   let [value, setValue] = useState([])
-  //const [t, i18n] = useTranslation();
-
 
   function handleStatusChange() {
     setIsOpen(!isOpen)
@@ -18,7 +15,8 @@ const SearchBar = ({searchIndex, searchDocs}) => {
 
   return (
     <div className='search'>
-      <label className='search_box search_box__open'>
+      <div className={isOpen ? 'search__overlay' : 'd-none'} onClick={handleStatusChange}></div>
+      <label className={isOpen ? 'search_box search_box__open' : 'search_box'} >
         <input
           type='search'
           placeholder={'Search for a term or phrase...'}
@@ -37,13 +35,13 @@ const SearchBar = ({searchIndex, searchDocs}) => {
           <SearchIcon />
         </span>
       </label>
-      <div className='results' id='results'>
+      <div className={results.length > 0 && isOpen && value ? 'results' : 'd-none'} id='results'>
         {results.map((doc) => (
            <Marker mark={value}>
           <a href={doc.link} key={doc.ref}>
-            <h3>{doc.title}</h3>
+            <h3>{}</h3>
             <p>
-              {doc.description.substr(0, 280)}
+              {doc.title.substr(0, 180)}
               ...
             </p>
           </a>

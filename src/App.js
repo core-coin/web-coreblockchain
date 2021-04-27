@@ -12,7 +12,6 @@ import LanguagePageContainer from './containers/LanguagePageContainer/LanguagePa
 import LanguageTranslatePageContainer from './containers/LanguageTranslatePageContainer/LanguageTranslatePageContainer'
 import GetStartedContainer from './containers/GetStartedContainer/GetStartedContainer'
 import DevelopersContainer from './containers/DevelopersContainer'
-import SearchContainer from './containers/SearchContainer'
 import OverviewContainer from './containers/OverviewContainer'
 import CommunityContainer from './containers/CommunityContainer'
 
@@ -32,7 +31,6 @@ export default class App extends PureComponent {
               <Route path='/language-program' component={LanguageTranslatePageContainer} />
               <Route path='/get-started' component={GetStartedContainer} />
               <Route path='/developers' component={DevelopersContainer} />
-              <Route path='/search' component={SearchContainer} />
               <Route path='/overview' component={OverviewContainer} />
               <Route path='/community' component={CommunityContainer} />
             </Switch>

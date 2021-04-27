@@ -15,6 +15,7 @@ import Deployment from './Deployment'
 import Repos from './Repos'
 
 import './GetStarted.scss'
+import i18next from 'i18next'
 
 class Distribution extends PureComponent{
     constructor(props) {
@@ -49,7 +50,7 @@ class Distribution extends PureComponent{
 
     render(){
         const { t } = this.props
-
+        const isEn = i18next.language
         const { activeTab } = this.state
 
         const list = Array.from(t('nodeDistributionTabName', { returnObjects: true }))
@@ -57,7 +58,7 @@ class Distribution extends PureComponent{
         return(
             <>
                 <div className='downloadBlock'>
-                    <h3>{t('Boid distributions')}</h3>
+                    <h3>{t('Boid distributions')} {isEn}</h3>
                     <div className='tabs_header'>
                         <Nav tabs>
                             {list.map(this.renderTabName)}
@@ -68,13 +69,13 @@ class Distribution extends PureComponent{
                             <TabPane tabId='Repos'>
                                 <Repos />
                             </TabPane>
-                            <TabPane tabId='Deployment'>
+                            <TabPane tabId={isEn === 'en' ?  'Deployment' : 'Nasadenie'}>
                                 <Deployment />
                             </TabPane>
-                            <TabPane tabId='Images'>
+                            <TabPane tabId={isEn === 'en' ?  'Images' : `Obrazy`}>
                                 <Image />
                             </TabPane>
-                            <TabPane tabId='Containers'>
+                            <TabPane tabId={isEn === 'en' ?  'Containers' : `Kontajnery`}>
                                 <TabContainers />
                 
                             </TabPane>

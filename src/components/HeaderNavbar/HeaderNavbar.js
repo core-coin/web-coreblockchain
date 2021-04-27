@@ -21,7 +21,6 @@ import Language from '../SvgIcon/icons/Language'
 import './HeaderNavbar.scss'
 
 const LanguageIcon = <Language />
-const SearchIcon = <Search />
 
 const body = document.body
 const scrollUp = 'scroll-up'
@@ -157,15 +156,6 @@ class HeaderNavbar extends PureComponent {
                       {list.map(this.renderNavbar)} 
                     </Nav> 
                     <div className='headerNavbar_left'>
-                      <Button
-                        icon={SearchIcon}
-                        theme='ghost'
-                        size='extraSmall'
-                        hover={false}
-                        href='/search'
-                        type='router'
-                      />
-
                       <Button
                         icon={LanguageIcon}
                         theme='ghost'

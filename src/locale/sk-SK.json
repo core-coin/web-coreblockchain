@@ -150,73 +150,61 @@
   "main tabs": [
     {
       "tabsContent": "Zabezpečená služba finančných správ v sieti Core Blockchain na odosielanie a prijímanie šifrovaných správ a tiež na uskutočňovanie platieb bez hraníc. Bezpečné smart-kontrakty — Ylem — umožňujú Core Blockchain k prenosu / digitalizácii hodnoty vo výkonnej sieti Core Blockchain.",
-      "tabsImage": "/static/media/trading.8a69fe7c.jpg",
       "tabsLink": "",
       "tabsName": "Financie a Platby"
     },
     {
       "tabsContent": "Ochrana a automatizácia lekárskych údajov a aktívna účasť na výskume medicíny alebo liečby. Monitorovanie a sledovanie chorôb s overenými údajmi.",
-      "tabsImage": "/static/media/healthcare.55e332ad.jpg",
       "tabsLink": "",
       "tabsName": "Zdravotníctvo a wellness"
     },
     {
       "tabsContent": "Prevádzkovatelia letectva a kozmonautiky môžu zdieľať údaje o histórii lietadiel, údržbe a prevádzke s overenými správami Blockchain.",
-      "tabsImage": "/static/media/space.92ae34c3.jpg",
       "tabsLink": "Dozvedieť sa viac",
       "tabsName": "Aerospace"
     },
     {
       "tabsContent": "Optimalizácia IoT a malých zariadení podieľajúcich sa na sieti pre ťažbu a algoritme //RandomY//. Používame ZERO-waste - 0W - energiu so štruktúrou LIFO //Last-In First-Out//.",
-      "tabsImage": "/static/media/energy.564adc98.jpg",
       "tabsLink": "",
       "tabsName": "Energia"
     },
     {
       "tabsContent": "Riadenie a pružnosť v dodávateľskom reťazci na stopovanie, sledovanie a varovanie pomocou overených informácií založených na blockchaine. Blockchain do istej miery skracuje dĺžku reťazca znižovaním sprostredkovateľov alebo organizácií tretích strán.",
-      "tabsImage": "/static/media/supply.2ec5e181.jpg",
       "tabsLink": "",
       "tabsName": "Zásobovací reťazec"
     },
     {
       "tabsContent": "Transparentné, nemenné eGov //digitálna vláda// riešenie založené na blockchaine pre služby G2 //vládna pre// poskytované po celom svete.",
-      "tabsImage": "/static/media/egov.df9c8a76.jpg",
       "tabsLink": "",
       "tabsName": "eVláda a DAO"
     },
     {
       "tabsContent": "Povoliť Indie-producentom //nízkorozpočtové// a mikrofinancovanie pre filmy a zábavu. Speňažujte obsah pomocou rýchlych a bezpečných platieb Core v reálnom čase.",
-      "tabsImage": "/static/media/massmedia.ea16e7eb.jpg",
       "tabsLink": "",
       "tabsName": "Masmédiá"
     },
     {
       "tabsContent": "Core Blockchain prispieva k geografickej informačnej vede //GIScience// k budovaniu digitálnej dôveryhodnej platformy, ktorú je možné použiť pre rôzne odvetvia.",
-      "tabsImage": "/static/media/GIS.f9d207fd.jpg",
       "tabsLink": "",
       "tabsName": "Geografická informatika"
     },
     {
       "tabsContent": "Core Blockchain je schopný slúžiť pre Autonomous Pod Data Transport //APDT// a prepojiť viac zariadení so spoľahlivou a bezpečnou sieťou Core Blockchain po celom svete.",
-      "tabsImage": "/static/media/defense.ee6d20c2.jpg",
       "tabsLink": "",
       "tabsName": "Obrana a bezpečnosť"
     },
     {
       "tabsContent": "Nasledujeme koncepciu využívania technológie Blockchain na zabezpečenie aktív a hostenie viacerých cenných papierov na platforme Core Blockchain.",
-      "tabsImage": "/static/media/tokenization.5a26a828.jpg",
       "tabsLink": "",
       "tabsName": "Tokenizácia majetku"
     },
     {
       "tabsContent": "Blockchain môže aktívne prispievať k vzdelávaniu zapojením procesu uľahčovania učenia alebo získavania vedomostí, zručností, hodnôt, viery a návykov.",
-      "tabsImage": "/static/media/education.4a70b5bf.jpg",
       "tabsLink": "",
       "tabsName": "Vzdelávanie"
     },
     {
       "tabsContent": "Blockchainové správy a distribúcia dát v rámci rôznych typov komunikácie - vrátane vysokofrekvenčných //RF//, mesh sietí //meshnet// a laserového prenosu.",
-      "tabsImage": "/static/media/telecomunications.8c1d5d0b.jpg",
       "tabsLink": "",
       "tabsName": "Telekomunikácie"
     }
@@ -243,19 +231,19 @@
     {
       "tabGhostBtn": "Nahlásiť chybu",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "<0><1></1><0>Portál pre vývojárov",
+      "tabName": "Portál pre vývojárov",
       "tabText": "Preskúmajte rozhranie medzi sadou API, SDK alebo iných interaktívnych digitálnych nástrojov a ich rôznymi zainteresovanými stranami. Pripojte Blockchain pomocou Oracles k svojmu aktívnemu systému. Interakujte s celosvetovou sieťou Blockchain."
     },
     {
       "tabGhostBtn": "Nové vlákno",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "<0><1></1><0>Core ◆ Diskusia",
+      "tabName": "Core ◆ Diskusia",
       "tabText": "Diskutujte a otvorte nové otázky-a-odpovede v komunitnej diskusii. Vývojári, ako aj ďalší členovia komunity vám pomôžu odpovedať na vaše otázky."
     },
     {
       "tabGhostBtn": "Otvoriť nový návrh",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "<0><1></1><0>Core štandardy",
+      "tabName": "Core štandardy",
       "tabText": "Komunita Core prijala veľa štandardov, ktoré sú užitočné pre vývojárov. Spravidla sa tieto návrhy zavádzajú ako Core Improvement Proposals //CIP//. CIP popisuje štandardy pre platformu Core vrátane špecifikácií základných protokolov, rozhraní API klienta a zmluvných štandardov."
     }
   ],

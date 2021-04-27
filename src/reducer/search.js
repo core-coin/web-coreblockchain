@@ -20,7 +20,7 @@ let splitDocs = docs => {
         let title = description.shift().toLowerCase()
         result.push({
           title: title,
-          description: description.join(),
+          description: description,
           link: item.link,
         })
       })

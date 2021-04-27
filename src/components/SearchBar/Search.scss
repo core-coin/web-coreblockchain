@@ -93,17 +93,24 @@
     padding: 15px 10px;
     border-radius: 5px;
     border: 1px solid var(--grey);
+    background: rgba(28, 28, 36, 0.9);
     backdrop-filter: blur(10px);
-    mark {
-      padding: 0;
-      background-color: inherit;
-      color: var(--green);
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+      mark {
+        padding: 0;
+        background-color: inherit;
+        color: var(--green);
+      }
+      p {
+      font-family: 'Red Hat Display';
+      font-size: 18px;
+      color: var(--grey)
+      }
     }
-    p {
-      
-    font-family: 'Red Hat Display';
-    font-size: 21px;
-    color: var(--grey)
-    }
+
   }
 }
