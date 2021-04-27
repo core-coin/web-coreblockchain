@@ -16,6 +16,7 @@
     "classnames": "^2.2.6",
     "connected-react-router": "^6.8.0",
     "eslint": "^7.14.0",
+    "i18next": "^20.2.1",
     "lodash": "^4.17.20",
     "lunr": "^2.3.9",
     "markdown-to-jsx": "^7.1.1",
@@ -26,6 +27,7 @@
     "react": "^17.0.1",
     "react-autosuggest": "^10.1.0",
     "react-dom": "^17.0.1",
+    "react-i18next": "^9.0.10",
     "react-localization": "^1.0.15",
     "react-mark.js": "^1.0.2",
     "react-meta-tags": "^1.0.1",
@@ -41,9 +43,9 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -64,6 +66,7 @@
   "devDependencies": {
     "file-loader": "^6.2.0",
     "mark.js": "^8.11.1",
-    "raw-loader": "^4.0.2"
+    "raw-loader": "^4.0.2",
+    "react-app-rewired": "^2.1.8"
   }
 }

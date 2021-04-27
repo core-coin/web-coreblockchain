@@ -99,6 +99,11 @@ body {
   transform: none;
 }
 
+em {
+  font-style: normal;
+  color: var(--green);
+}
+
 /*media*/
 
 @media (max-width: 767px) {

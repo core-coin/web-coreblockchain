@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { string, object } from 'prop-types'
 import {
     Container,
     Row,
@@ -10,23 +9,19 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
+import { withNamespaces, Trans } from 'react-i18next'
+import i18next from 'i18next'
 
 import Button from '../Button'
-
 import './Developers.scss'
 
-export default class Developers extends PureComponent{
+class Developers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: this.props.translate.DEVELOPERS.tabs[0].tabName,
+            activeTab: i18next.t('developers tabs', { returnObjects: true })[0].tabName
         }
     }
-    static propTypes = {
-        language: string,
-        translate: object,
-    }
-
 
     toggle = tab => {
         if(this.state.activeTab !== tab) {
@@ -34,25 +29,24 @@ export default class Developers extends PureComponent{
         }
     }
 
-    renderTabName = ( tab ) => {
-        const { activeTab } = this.state
-
-        return(
-            <NavItem key={tab.tabName}>
-                <NavLink
-                    className={activeTab === tab.tabName ? 'active' : ''}
-                    onClick={() => { this.toggle(tab.tabName); }}
-                >
-                    {tab.tabName}
-                </NavLink>
-            </NavItem>
-        )
-    }
+    renderTabName = (tab) => (
+        <Trans
+        i18nKey={tab.tabName}
+        defaults={tab.tabName}
+        >
+        <NavItem key={tab.tabName} className='nav-item'>  
+            <NavLink className={this.state.activeTab === tab.tabName ? 'active' : ''} 
+            onClick={() => { this.toggle(tab.tabName)}}>
+            one
+            </NavLink>
+        </NavItem>
+        </Trans>
+    )
 
     renderTabContent = (tab, index) => (
         <TabPane tabId={tab.tabName} key={index}>
             <Row>
-                <Col sm="12">
+                <Col sm='12'>
                     <p>{tab.tabText}</p>
                     <div>
                         <Button
@@ -74,28 +68,31 @@ export default class Developers extends PureComponent{
         </TabPane>
     )
 
-
     render(){
-        const { translate: { DEVELOPERS } } = this.props
-
+        const { t } = this.props
         const { activeTab } = this.state
+        const list = Array.from(t('developers tabs', { returnObjects: true }))
 
         return(
             <div className='developers'>
                 <Container>
                     <Row>
                         <Col sm='12'>
-                            <h3 className='preTitle'>{DEVELOPERS.preTitle}</h3>
-                            <h1 className='title'>{DEVELOPERS.title} <span>{DEVELOPERS.highlightTitle}</span></h1>
+                            <h3 className='preTitle'>{t('connect with dev community')}</h3>
+                            <h1 className='title'>
+                                <Trans i18nKey='designed for developers'>
+                                    designed for <em>developers</em>
+                                </Trans>
+                            </h1>
                         </Col>
                         <Col sm='12' lg='9' xl='8' className='tabs_header'>
-                            <Nav tabs>
-                                {DEVELOPERS.tabs.map(this.renderTabName)}
+                            <Nav tabs>                    
+                                {list.map(this.renderTabName)}
                             </Nav>
                         </Col>
                         <Col sm='12' lg='9' xl='8'>
                             <TabContent activeTab={activeTab}>
-                                {DEVELOPERS.tabs.map(this.renderTabContent)}
+                                {list.map(this.renderTabContent)}
                             </TabContent>
                         </Col>
                     </Row>
@@ -104,3 +101,5 @@ export default class Developers extends PureComponent{
         )
     }
 }
+
+export default withNamespaces()(Developers)

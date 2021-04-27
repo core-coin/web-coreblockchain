@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
-import { Container, Row, Col } from 'reactstrap'
+import { object } from 'prop-types'
+import { Container, Row } from 'reactstrap'
 
 import SidebarTemplate from '../../templates/withSidbarTemplate'
 
@@ -18,8 +18,6 @@ export default class Community extends PureComponent {
   }
 
   static propTypes = {
-    translate: object,
-    language: string,
     mdFiles: object,
   }
 

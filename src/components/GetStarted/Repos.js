@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
 
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import Button from '../Button'
 import CopyInput from '../CopyInput/CopyInput'
@@ -20,7 +21,7 @@ import './GetStarted.scss'
 
 const ChainIcon = <Chain />
 
-export class Repos extends PureComponent {
+class Repos extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
@@ -49,14 +50,14 @@ export class Repos extends PureComponent {
   getIcon = (title) => {
     const iconMap = {
       'Apt-Get': <Apt />,
-      RPM: <Rpm />,
+      'RPM': <Rpm />,
       'Docker Repo': <Docker />,
       'APT-IPFS': <AptIpfs />,
-      Kubernetes: <Kubernetes />,
-      GSP: <Google />,
-      AWS: <Aws />,
-      Azure: <Azure />,
-      OVH: <Ovh />,
+      'Kubernetes': <Kubernetes />,
+      'GSP': <Google />,
+      'AWS': <Aws />,
+      'Azure': <Azure />,
+      'OVH': <Ovh />,
     }
     return iconMap[title]
   }
@@ -79,38 +80,40 @@ export class Repos extends PureComponent {
     )
   }
 
-  renderTabContent = (tab, index) => {
-    return (
-      <TabPane key={index} tabId={tab.title} className="node_distributions-btn">
-        <Button
-          mobileFullWidth
-          theme="green"
-          size="small"
-          href={tab.openLink}
-          text={this.props.translate.openLinkBtn}
-          icon={ChainIcon}
-        />
-        <CopyInput value={tab.script} />
-      </TabPane>
-    )
-  }
-
   render() {
-    const { translate } = this.props
+    const { t } = this.props
 
     const { activeTab } = this.state
 
+    const list = Array.from(t('repos', { returnObjects: true }))
+
     return (
-      <div className="isoImage">
-        <div className="tabs_header">
-          <Nav tabs>{translate.repos.map(this.renderTabName)}</Nav>
+      <div className='isoImage'>
+        <div className='tabs_header'>
+          <Nav tabs>{list.map(this.renderTabName)}</Nav>
         </div>
         <div>
           <TabContent activeTab={activeTab}>
-            {translate.repos.map(this.renderTabContent)}
+            {list.map((tab, index) => {
+              return (
+                <TabPane key={index} tabId={tab.title} className='node_distributions-btn'>
+                  <Button
+                    mobileFullWidth
+                    theme='green'
+                    size='small'
+                    href={tab.openLink}
+                    text={t('Open link')}
+                    icon={ChainIcon}
+                  />
+                  <CopyInput value={tab.script} />
+                </TabPane>
+              )
+            })}
           </TabContent>
         </div>
       </div>
     )
   }
 }
+
+export default withNamespaces()(Repos)

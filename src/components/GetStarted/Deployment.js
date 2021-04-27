@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { object, string } from 'prop-types'
-
 import {
     TabContent,
     TabPane,
@@ -8,6 +7,7 @@ import {
     NavItem,
     NavLink
 } from 'reactstrap'
+import { withNamespaces } from 'react-i18next'
 
 import Button from '../Button'
 import Chain from '../SvgIcon/icons/Chain'
@@ -18,17 +18,12 @@ import './GetStarted.scss'
 
 const ChainIcon = <Chain/>
 
-export class Deployment extends PureComponent{
+class Deployment extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
             activeTab: '',
         }
-    }
-
-    static propTypes = {
-        translate: object,
-        language: string,
     }
 
     toggle = tab => {
@@ -62,39 +57,41 @@ export class Deployment extends PureComponent{
         )
     }
 
-    renderTabContent = ( tab, index ) => {
-        return(
-            <TabPane key={index} tabId={tab.title}>
-                <Button
-                    mobileFullWidth
-                    theme='green'
-                    size='small'
-                    href={tab.openLink}
-                    text={this.props.translate.openLinkBtn}
-                    icon={ChainIcon}
-                />
-            </TabPane>
-        )
-    }
-
     render(){
-        const { translate } = this.props
+        const { t } = this.props
 
         const { activeTab } = this.state
+
+        const list = Array.from(t('deployment', { returnObjects: true }))
 
         return(
             <div className='isoImage'>
                 <div className='tabs_header'>
                     <Nav tabs className='tabs-noscroll'>
-                        {translate.deployment.map(this.renderTabName)}
+                        {list.map(this.renderTabName)}
                     </Nav>
                 </div>
                 <div>
                     <TabContent activeTab={activeTab}>
-                        {translate.deployment.map(this.renderTabContent)}
+                        {list.map(( tab, index ) => {
+                            return(
+                                <TabPane key={index} tabId={tab.title}>
+                                    <Button
+                                        mobileFullWidth
+                                        theme='green'
+                                        size='small'
+                                        href={tab.openLink}
+                                        text={t('Open link')}
+                                        icon={ChainIcon}
+                                    />
+                                </TabPane>
+                            )
+                        })}
                     </TabContent>
                 </div>
             </div>
         )
     }
 }
+
+export default withNamespaces()(Deployment)

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { func, object, string } from 'prop-types'
+import { object } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {setLanguage} from '../../reducer/actions'
@@ -10,9 +10,6 @@ import BlogTemplate from '../../templates/blogTemplate'
 
 class OverviewContainer extends PureComponent {
     static propTypes = {
-        setLanguage: func,
-        translate: object,
-        language: string,
         match: object,
         mdFiles: object,
     }
@@ -21,9 +18,6 @@ class OverviewContainer extends PureComponent {
 
     render() {
         const {
-            translate,
-            language,
-            setLanguage,
             mdFiles,
             match
         } = this.props
@@ -49,14 +43,12 @@ class OverviewContainer extends PureComponent {
 
 function mapStateToProps(state) {
     return{
-        translate: state.index.translate,
-        language: state.index.language,
         mdFiles: state.index.markdownFiles,
     }
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    setLanguage: setLanguage,
+
 }, dispatch)
 
 

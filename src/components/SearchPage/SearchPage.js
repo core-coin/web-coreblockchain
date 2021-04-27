@@ -21,10 +21,10 @@ export default class SearchPage extends PureComponent {
 
   render() {
     return (
-      <div className="search-page">
+      <div className='search-page'>
         <Container>
           <Row>
-            <Col className="content">
+            <Col className='content'>
               <h3>Search Results</h3>
               <SearchBar searchIndex={this.props.searchIndex} searchDocs={this.props.searchDocs}/>
             </Col>
