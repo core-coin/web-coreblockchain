@@ -8,7 +8,7 @@ import { setLanguage, fillSearchIndex, setMarkdownFiles } from './actions'
 
 
 const initialState = {
-    language: null,
+    language: 'en',
     translate: LocalizedStrings,
     blockTime: 200,
     algorithm: 'RandomY',
@@ -22,14 +22,11 @@ const handleSetLanguage = (state, newLanguage) => {
     if(state.language !== newLanguage) {
         const translate = state.translate
         translate.setLanguage(newLanguage)
-        return loop (
-            {
-                ...state,
-                language: newLanguage,
-                translate: translate,
-            },
-            Cmd.action(goBack())
-        )
+        return {
+          ...state,
+          language: newLanguage,
+          translate: translate,
+        }
     }
 }
 
