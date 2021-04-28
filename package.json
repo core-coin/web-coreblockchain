@@ -64,6 +64,7 @@
     ]
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^6.3.2",
     "file-loader": "^6.2.0",
     "mark.js": "^8.11.1",
     "raw-loader": "^4.0.2",
