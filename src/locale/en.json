@@ -35,73 +35,73 @@
         "tabsName": "Finance & Payments",
         "tabsContent": "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empowers Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.",
         "tabsLink": "",
-        "tabsImage": "/static/media/trading.webp"
+        "tabsImage": "/static/media/tabs/trading.webp"
       },
       {
         "tabsName": "Healthcare & Wellness",
         "tabsContent": "Protection and automatization of medical data and active participation in research for medicine or treatment. Monitoring and tracking diseases with verified data.",
         "tabsLink": "",
-        "tabsImage": "/static/media/healthcare.webp"
+        "tabsImage": "/static/media/tabs/healthcare.webp"
       },
       {
         "tabsName": "Aerospace",
         "tabsContent": "Aerospace operators could share data about aircraft history, maintenance, and operations with verified Blockchain messages.",
         "tabsLink": "Visit Blog",
-        "tabsImage": "/static/media/space.webp"
+        "tabsImage": "/static/media/tabs/space.webp"
       },
       {
         "tabsName": "Energy",
         "tabsContent": "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with structure LIFO //Last-In-First-Out//.",
         "tabsLink": "",
-        "tabsImage": "/static/media/energy.webp"
+        "tabsImage": "/static/media/tabs/energy.webp"
       },
       {
         "tabsName": "Supply Chain",
         "tabsContent": "Management and Resilience in Supply Chain to track, monitor, and alert using Blockchain-based verified information. Blockchain reduces the length of the chain to some extent by cutting down on middlemen or 3rd party organizations.",
         "tabsLink": "",
-        "tabsImage": "/static/media/supply.webp"
+        "tabsImage": "/static/media/tabs/supply.webp"
       },
       {
         "tabsName": "eGovernment & DAO’s",
         "tabsContent": "Blockchain-based transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served Worldwide.",
         "tabsLink": "",
-        "tabsImage": "/static/media/egov.webp"
+        "tabsImage": "/static/media/tabs/egov.webp"
       },
       {
         "tabsName": "Mass Media",
         "tabsContent": "Enable Indie-producers //Low-budget// and microfinance for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments.",
         "tabsLink": "",
-        "tabsImage": "/static/media/massmedia.ea16e7eb.jpg"
+        "tabsImage": "/static/media/tabs/massmedia.ea16e7eb.jpg"
       },
       {
         "tabsName": "GIScience",
         "tabsContent": "Core Blockchain is contributing to Geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries.",
         "tabsLink": "",
-        "tabsImage": "/static/media/GIS.webp"
+        "tabsImage": "/static/media/tabs/GIS.webp"
       },
       {
         "tabsName": "Defence & Security",
         "tabsContent": "Core Blockchain is able to serve for an Autonomous Pod Data Transport //APDT// and connect multiple devices with the reliable and secure Core Blockchain Network globally.",
         "tabsLink": "",
-        "tabsImage": "/static/media/defense.webp"
+        "tabsImage": "/static/media/tabs/defense.webp"
       },
       {
         "tabsName": "Asset Tokenization",
         "tabsContent": "Following the concept of using Blockchain technology to secure assets and host multiple securities on the Core Blockchain platform.",
         "tabsLink": "",
-        "tabsImage": "/static/media/tokenization.webp"
+        "tabsImage": "/static/media/tabs/tokenization.webp"
       },
       {
         "tabsName": "Education",
         "tabsContent": "Blockchain can actively contribute to education by involving the process of learning facilitation, or the acquisition of knowledge, skills, values, beliefs, and habits.",
         "tabsLink": "",
-        "tabsImage": "/static/media/education.webp"
+        "tabsImage": "/static/media/tabs/education.webp"
       },
       {
         "tabsName": "Telecommunications",
         "tabsContent": "Blockchain messages and data distribution within different types of communication - including radio-frequency //RF//, mesh network //meshnet// and laser transmission.",
         "tabsLink": "",
-        "tabsImage": "/static/media/telecomunications.webp"
+        "tabsImage": "/static/media/tabs/telecomunications.webp"
       }
     ]
   },
