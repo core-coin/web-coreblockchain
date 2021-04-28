@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { func, number } from 'prop-types'
+import { number } from 'prop-types'
 import {
     Container,
     Row,
@@ -14,7 +14,6 @@ import '../LanguagePage/LanguagePage.scss'
 class LanguageTranslatePage extends PureComponent{
 
     static propTypes = {
-        setLanguage: func,
         translationProgress: number,
         reviewProgress: number,
     }

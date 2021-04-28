@@ -1,15 +1,10 @@
 import { createReducer } from 'redux-act'
-import { Cmd, loop } from 'redux-loop'
-import { goBack } from 'connected-react-router'
-
-import LocalizedStrings from '../locale'
 
 import { setLanguage, fillSearchIndex, setMarkdownFiles } from './actions'
 
 
 const initialState = {
     language: 'en',
-    translate: LocalizedStrings,
     blockTime: 200,
     algorithm: 'RandomY',
     difficulty: 333,
@@ -20,12 +15,9 @@ const initialState = {
 
 const handleSetLanguage = (state, newLanguage) => {
     if(state.language !== newLanguage) {
-        const translate = state.translate
-        translate.setLanguage(newLanguage)
         return {
           ...state,
           language: newLanguage,
-          translate: translate,
         }
     }
 }

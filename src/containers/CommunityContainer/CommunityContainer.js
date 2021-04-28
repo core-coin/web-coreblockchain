@@ -1,16 +1,12 @@
 import React, { PureComponent } from 'react'
-import { func, object, string } from 'prop-types'
+import { object } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {setLanguage} from '../../reducer/actions'
 import Community from '../../components/Comminity'
 import Loading from '../../components/Loading'
 
 class CommunityContainer extends PureComponent {
   static propTypes = {
-    setLanguage: func,
-    translate: object,
-    language: string,
     mdFiles: object,
   }
 
@@ -18,9 +14,6 @@ class CommunityContainer extends PureComponent {
 
   render() {
     const {
-      translate,
-      language,
-      setLanguage,
       mdFiles,
     } = this.props
 
@@ -32,9 +25,6 @@ class CommunityContainer extends PureComponent {
 
     return(
       <Community
-        language={language}
-        translate={translate}
-        setLanguage={setLanguage}
         mdFiles={mdFiles}
       />
     )
@@ -43,14 +33,12 @@ class CommunityContainer extends PureComponent {
 
 function mapStateToProps(state) {
   return{
-    translate: state.index.translate,
-    language: state.index.language,
     mdFiles: state.index.markdownFiles,
   }
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  setLanguage: setLanguage,
+
 }, dispatch)
 
 

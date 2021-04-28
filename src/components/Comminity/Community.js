@@ -62,8 +62,6 @@ export default class Community extends PureComponent {
 
   render() {
     const {
-      translate: { COMMUNITY },
-      language,
       mdFiles
     } = this.props
 

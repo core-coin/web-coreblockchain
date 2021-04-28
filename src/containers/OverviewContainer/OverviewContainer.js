@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { object } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {setLanguage} from '../../reducer/actions'
 import Loading from '../../components/Loading'
 import PageNotFound from '../../components/PageNotFound'
 
@@ -29,6 +28,7 @@ class OverviewContainer extends PureComponent {
       }
 
       let file = mdFiles[match.url]
+
       if (file === undefined ){
         return (
           <PageNotFound/>

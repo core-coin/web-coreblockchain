@@ -10,6 +10,8 @@ import {
   Col,
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
+import {Link} from  'react-router-dom'
+import { string } from 'prop-types'
 
 import Logo from '../../images/logo.png'
 import Button from '../Button'
@@ -35,6 +37,9 @@ class HeaderNavbar extends PureComponent {
       isMenuOpen: false,
     }
   }
+	static propTypes = {
+		language: string,
+	}
 
   renderLink = ({ link, label }, index) => (
     <NavItem key={index}>
@@ -82,15 +87,15 @@ class HeaderNavbar extends PureComponent {
   renderNavbar = (item, index) => (
   
       <li key={index} className='nav-item'>  
-        <a className='nav-link' href={item.link}>
+        <Link className='nav-link' to={`/${this.props.language}/${item.link}`}>
           {item.label}
-        </a>
+        </Link>
       </li>
     
   )
 
   render() {
-    const { t } = this.props
+    const { t, language } = this.props
     const { isMenuOpen } = this.state
     const isMobile = window.innerWidth <= 768
     const list = Array.from(t('menuItemList', { returnObjects: true }))
@@ -128,7 +133,7 @@ class HeaderNavbar extends PureComponent {
                           </a>
                         </Col>
                         <Nav navbar >
-                          {list.map(this.renderNavbar)}
+                          {list.map(this.renderLink)}
                         </Nav> 
                         <div className='headerNavbar_sidebar__search'>
                           <Button
@@ -136,7 +141,7 @@ class HeaderNavbar extends PureComponent {
                             theme='ghosMAt'
                             size='extraSmall'
                             hover={false}
-                            href='/language'
+                            href={`/${language}/language`}
                             type='router'
                             onClick={this.onCloseSidebar}
                           />
@@ -146,7 +151,7 @@ class HeaderNavbar extends PureComponent {
                           theme='green'
                           text={t('get started')}
                           type='router'
-                          href='/get-started'
+                          href={`/${language}/get-started`}
                         />
                       </Container>
                     </div>
@@ -162,7 +167,7 @@ class HeaderNavbar extends PureComponent {
                         theme='ghost'
                         size='extraSmall'
                         hover={false}
-                        href='/search'
+                        href={`/${language}/search`}
                         type='router'
                       />
 
@@ -171,14 +176,14 @@ class HeaderNavbar extends PureComponent {
                         theme='ghost'
                         size='extraSmall'
                         hover={false}
-                        href='/language'
+                        href={`/${language}/language`}
                         type='router'
                       />
                       <Button
                         theme='green'
                         text={t('get started')}
                         type='router'
-                        href='/get-started'
+                        href={`/${language}/get-started`}
                       />
                     </div>
                   </div>

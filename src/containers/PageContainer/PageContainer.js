@@ -1,8 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, object, string } from 'prop-types'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
+import { number } from 'prop-types'
 import HeroHeader from '../../components/HeroHeader'
 import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
@@ -23,8 +20,6 @@ class PageContainer extends PureComponent {
         blocktime: number,
         marketCap: number,
         price: number,
-        translate: object,
-        language: string,
     }
 
     static defaultProps = {}
@@ -39,49 +34,34 @@ class PageContainer extends PureComponent {
             blockTimer,
             networkHashrate,
             difficulty,
-            translate,
-            language,
         } = this.props
 
         const isMobile = window.innerWidth <= 500;
 
         return(
             <>
-                <HeroHeader language={language} translate={translate}/>
-                {isMobile? <OffersMobile language={language} translate={translate}/> : <Offers language={language} translate={translate}/>}
-                <Tabs language={language} translate={translate}/>
-                <Solutions language={language} translate={translate}/>
-                <Developers language={language} translate={translate}/>
+                <HeroHeader />
+                {isMobile? <OffersMobile /> : <Offers />}
+                <Tabs />
+                <Solutions />
+                <Developers />
                 <NodeCoverage
                     totalTransactions={totalTransactions}
                     totalBlocks={totalBlocks}
                     blocktime={blocktime}
                     marketCap={marketCap}
                     price={price}
-                    language={language}
-                    translate={translate}
+
                 />
                 <Contacts
                     blockTime={blockTimer}
                     networkHashrate={networkHashrate}
                     difficulty={difficulty}
-                    language={language}
-                    translate={translate}
                 />
             </>
         )
     }
 }
 
-function mapStateToProps(state) {
-    return{
-       translate: state.index.translate,
-       language: state.index.language,
-    }
-}
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-}, dispatch)
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(PageContainer)
+export default PageContainer
