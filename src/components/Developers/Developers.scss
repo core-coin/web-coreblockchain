@@ -1,15 +1,15 @@
 .developers {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  background-image: url(../../images/screen-double.png);
+  background-image: url(../../images/screendouble.webp);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 45%;
-  padding: 8% 0;
+  padding: 10% 0;
   @media (max-width: 767px) {
     border-top: none;
     background-color: var(--black-darken);
-    background-image: url(../../images/screen-mobile.png);
+    background-image: url(../../images/screen_for-mobile.webp);
     background-position: 30% top;
     background-size: 613px 432px;
     .container {
@@ -18,12 +18,21 @@
       margin-top: 200px;
     }
   }
+  @media (min-width: 1441px){
+    padding: 8% 0;
+  }
   .preTitle {
-    margin-bottom: 21px;
+    padding-left: 29px;
     @media (max-width: 767px) {
       margin-top: 24px;
       margin-bottom: 10px;
     }
+    @media (min-width: 1441px){
+      margin-bottom: 21px;
+    }
+  }
+  .title {
+    padding-left: 29px;
   }
   .tabs_header {
     @media (max-width: 767px) {
@@ -31,7 +40,7 @@
     }
     .nav-tabs {
       border-bottom: 1px solid rgba(99, 99, 120, 0.2);
-      margin-top: 68px;
+      margin-top: 43px;
       display: flex;
       justify-content: space-between;
       @media (max-width: 767px) {
@@ -42,21 +51,29 @@
         margin-top: 24px;
         border-bottom: none;
       }
+      .title {
+        margin-top: 68px;
+      }
       .nav-link {
         color: var(--gray);
         font-family: Montserrat-Medium;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: 700;
-        letter-spacing: -0.6px;
+        letter-spacing: 0.4px;
         cursor: pointer;
         border: none;
-        padding:0 20px 21px 20px;
+        padding: 0 20px 16px 20px;
         text-transform: uppercase;
         @media (max-width: 767px) {
           font-size: 16px;
           font-weight: 400;
           line-height: 24px;
           padding: 8px 16px;
+        }
+        @media (min-width: 1441px){
+          font-size: 20px;
+          letter-spacing: -0.6px;
+          padding:0 20px 21px 20px;
         }
         &:hover{
           border-bottom: 2px solid var(--green);
@@ -75,23 +92,30 @@
   }
   .tab-content {
     .tab-pane {
-      margin-top: 42px;
+      margin-top: 19px;
       @media (max-width: 767px) {
         margin-top: 24px;
+      }
+      @media (min-width: 1441px){
+        margin-top: 42px;
       }
       p {
         color: var(--grey);
         font-family: 'Red Hat Display';
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 400;
         letter-spacing: -0.22px;
-        line-height: 32px;
+        line-height: 25px;
         margin-bottom: 50px;
         @media (max-width: 767px) {
           font-size: 16px;
           line-height: 22px;
           margin-bottom: 24px;
 
+        }
+        @media (min-width: 1441px){
+          font-size: 22px;
+          line-height: 32px;
         }
       }
     }

@@ -1,12 +1,12 @@
 .nodeCoverage {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  background-image: url(../../images/map.png);
+  background-image: url(../../images/map.webp);
   background-size: auto;
   background-position: center bottom;
   background-repeat: no-repeat;
   display: flex;
-  padding: 8% 0 12%;
+  padding: 10% 0 12%;
   @media (max-width: 767px) {
     background-position: center top;
     background-size: contain;
@@ -22,6 +22,9 @@
       padding: 0 30px;
     }
   }
+  @media (min-width: 1441px){
+    padding: 8% 0 12%;
+  }
   .preTitle,
   .title,
   .description {
@@ -31,38 +34,50 @@
     }
   }
   .description {
-    font-size: 22px;
+    font-size: 17px;
     margin-top: 45px;
+    line-height: 21px;
     @media (min-width: 767px) {
-     margin: 45px auto 20px;
-     width: 65%;
+     margin: 14px auto 0;
+     width: 59%;
     }
     @media (max-width: 767px) {
       font-size: 16px;
+    }
+    @media (min-width: 1441px){
+      font-size: 22px;
     }
   }
   &_block {
     border-radius: 14px;
     border: 1px solid #323242;
-    padding: 13% 10%;
+    padding: 8% 9%;
     margin-top: 10%;
-    margin-bottom: 20%;
+    margin-bottom: 24%;
     backdrop-filter: blur(10px);
     @-moz-document url-prefix() {
       border: 1px solid var(--grey-darken);
       background-color: rgba(28, 28, 36, 0.98); 
     }
     @media (min-width: 1000px) {
-      height: 380px;
+      height: 291px;
     }
     @media (max-width: 767px) {
       padding: 12% 5%;
       margin-bottom: 0;
     }
+    @media (min-width: 1441px){
+      padding: 13% 10%;
+      margin-bottom: 20%;
+    }
     &-img {
-      padding: 16px 0 0 62px;
+      padding: 10px 0 0 68px;
+      @media (min-width: 1441px){
+        padding: 16px 0 0 62px;
+      }
     }
     span {
+      font-size: 11px;
       color: var(--grey);
     }
     h4 {
@@ -76,16 +91,24 @@
     ul {
       list-style: none;
       margin-bottom: 0;
-      padding: 0;
+      padding: 0 0 0 10px;
+      @media (min-width: 1441px){
+        padding: 0;
+      }
       li {
         color: var(--grey);
         font-family: 'Red Hat Display';
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 400;
-        line-height: 41px;
+        line-height: 30px;
+        letter-spacing: -0.3px;
         border-top: 1px solid #323242;
         display: flex;
         justify-content: space-between;
+        @media (min-width: 1441px){
+          font-size: 15px;
+          line-height: 41px;
+        }
         span {
           color: var(--white-darken);
         }
@@ -96,9 +119,10 @@
     }
     h2 {
       color: var(--white);
-      font-size: 32px;
-      letter-spacing: -0.96px;
-      line-height: 36px;
+      font-family: Montserrat-Bold;
+      font-size: 25px;
+      letter-spacing: -1px;
+      line-height: 34px;
       text-align: center;
       margin-bottom: 21px;
       @media (max-width: 767px) {
@@ -106,14 +130,22 @@
         letter-spacing: -0.54px;
         text-align: left;
       }
+      @media (min-width: 1441px){
+        font-size: 32px;
+        letter-spacing: -0.96px;
+        line-height: 36px;
+      }
     }
     &__cards {
       display: flex;
       justify-content: space-around;
-      margin-bottom: 10%;
+      margin-bottom: 9%;
+      @media (min-width: 1441px){
+        margin-bottom: 10%;
+      }
       &-card {
-        width: 70px;
-        height: 70px;
+        width: 53px;
+        height: 53px;
         border-radius: 6px;
         border: 1px solid #323242;
         background-color: rgba(25, 25, 32, 0.6);
@@ -122,6 +154,10 @@
         justify-content: center;
         position: relative;
         margin: 0 4px;
+        @media (min-width: 1441px){
+          width: 70px;
+          height: 70px;
+        }
         &::before {
           content: '';
           border-bottom: 1px solid #323242;
@@ -131,10 +167,13 @@
         }
         span {
           color: var(--white);
-          font-family: Montserrat-Medium;
-          font-size: 32px;
+          font-family: 'Montserrat-Bold';
+          font-size: 24px;
           letter-spacing: -0.96px;
           line-height: 22px;
+          @media (min-width: 1441px){
+            font-size: 32px;
+          }
         }
       }
     }

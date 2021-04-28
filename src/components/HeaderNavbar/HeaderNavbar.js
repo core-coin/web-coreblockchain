@@ -11,7 +11,7 @@ import {
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
 
-import Logo from '../../images/logo.png'
+import Logo from '../../images/logo.webp'
 import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
 import Search from '../SvgIcon/icons/Search'
@@ -80,13 +80,13 @@ class HeaderNavbar extends PureComponent {
   }
 
   renderNavbar = (item, index) => (
-  
-      <li key={index} className='nav-item'>  
+
+      <li key={index} className='nav-item'>
         <a className='nav-link' href={item.link}>
           {item.label}
         </a>
       </li>
-    
+
   )
 
   render() {
@@ -97,7 +97,7 @@ class HeaderNavbar extends PureComponent {
 
     return (
       <div className='headerNavbar'>
-        <Container>
+        <Container fluid>
           <Row>
             <Col>
               <Navbar expand='md'>
@@ -129,7 +129,7 @@ class HeaderNavbar extends PureComponent {
                         </Col>
                         <Nav navbar >
                           {list.map(this.renderNavbar)}
-                        </Nav> 
+                        </Nav>
                         <div className='headerNavbar_sidebar__search'>
                           <Button
                             text={t('language')}
@@ -154,8 +154,8 @@ class HeaderNavbar extends PureComponent {
                 ) : (
                   <div className='headerNavbar_flex'>
                   <Nav navbar >
-                      {list.map(this.renderNavbar)} 
-                    </Nav> 
+                      {list.map(this.renderNavbar)}
+                    </Nav>
                     <div className='headerNavbar_left'>
                       <Button
                         icon={SearchIcon}
