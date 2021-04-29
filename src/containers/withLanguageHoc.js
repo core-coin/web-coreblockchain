@@ -28,11 +28,7 @@ const withLanguageHoc = (WrappedComponent) => {
       const {i18n } = this.props
       let urlLang = this.props.match.params.lang
       let storeLang = this.props.language
-
-
-      console.log('if', urlLang, storeLang)
       if (urlLang !== storeLang) {
-        console.log('change lang to', urlLang)
         i18n.changeLanguage(urlLang)
         this.props.setLanguage(urlLang)
       }

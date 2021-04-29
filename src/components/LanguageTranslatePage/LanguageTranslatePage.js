@@ -73,9 +73,9 @@ class LanguageTranslatePage extends PureComponent{
                                         <button className='languagePage_block big'>
                                             <div className='languagePage_block__text'>
                                                 <p>{language.englishName}</p>
-                                                <span>{language.translationProgress}: {this.props.translationProgress}%</span>
-                                                <span>{language.reviewProgress}: {this.props.reviewProgress}%</span>
-                                                <AnimatedArrow url='' text={t('Contribute')} />
+                                                {/*<span>{language.translationProgress}: {this.props.translationProgress}%</span>*/}
+                                                {/*<span>{language.reviewProgress}: {this.props.reviewProgress}%</span>*/}
+                                                <AnimatedArrow url='https://lang.lol/app/projects/d2eda44e-3714-441a-91f7-fbbf132ed757' text={t('Contribute')} />
                                             </div>
                                         </button>
                                     </Col>
