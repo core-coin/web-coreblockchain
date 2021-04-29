@@ -13,7 +13,7 @@ import { withNamespaces, Trans } from 'react-i18next'
 import {Link} from  'react-router-dom'
 import { string } from 'prop-types'
 
-import Logo from '../../images/logo.png'
+import Logo from '../../images/logo.webp'
 import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
 import Search from '../SvgIcon/icons/Search'
@@ -102,7 +102,7 @@ class HeaderNavbar extends PureComponent {
 
     return (
       <div className='headerNavbar'>
-        <Container>
+        <Container fluid>
           <Row>
             <Col>
               <Navbar expand='md'>
@@ -159,8 +159,8 @@ class HeaderNavbar extends PureComponent {
                 ) : (
                   <div className='headerNavbar_flex'>
                   <Nav navbar >
-                      {list.map(this.renderNavbar)} 
-                    </Nav> 
+                      {list.map(this.renderNavbar)}
+                    </Nav>
                     <div className='headerNavbar_left'>
                       <Button
                         icon={SearchIcon}
