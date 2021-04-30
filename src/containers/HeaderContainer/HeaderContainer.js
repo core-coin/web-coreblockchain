@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
+import { string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
@@ -7,7 +7,6 @@ import Navbar from '../../components/HeaderNavbar'
 
 class HeaderContainer extends PureComponent {
     static propTypes = {
-        translate: object,
         language: string,
     }
 
@@ -15,19 +14,17 @@ class HeaderContainer extends PureComponent {
 
     render() {
         const {
-            translate,
             language,
         } = this.props
 
         return(
-            <Navbar language={language} translate={translate}/>
+            <Navbar language={language} />
         )
     }
 }
 
 function mapStateToProps(state) {
     return{
-        translate: state.index.translate,
         language: state.index.language,
     }
 }

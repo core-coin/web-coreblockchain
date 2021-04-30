@@ -7,12 +7,6 @@ import './SearchPage.scss'
 import SearchBar from '../SearchBar/SearchBar'
 
 class SearchPage extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = {
-      activeTab: this.props.translate.DEVELOPERS.tabs[0].tabName,
-    }
-  }
   static propTypes = {
     language: string,
     translate: object,

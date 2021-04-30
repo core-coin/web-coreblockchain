@@ -22,8 +22,6 @@ class Contacts extends PureComponent{
         blockTime: number,
         algorithm: string,
         difficulty: number,
-        translate: object,
-        language: string,
     }
 
     static defaultProps = {
