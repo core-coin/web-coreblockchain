@@ -88,7 +88,7 @@ class GetStarted extends PureComponent {
 
     return (
       <div className='getStarted'>
-        <Container>
+        <Container fluid>
           <Row className='getStarted_row'>
             <Col md='3' xl='4' className='hidden-xs getStarted_menu'>
               <div className=''>
@@ -96,8 +96,8 @@ class GetStarted extends PureComponent {
               </div>
             </Col>
             <Col
-              md={{ size: 9, offset: 3 }}
-              xl={{ size: 8, offset: 4 }}
+              md={{ size: 9 }}
+              xl={{ size: 8 }}
               className='getStarted_content'
             >
               <Row>

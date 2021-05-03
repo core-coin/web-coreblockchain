@@ -32,7 +32,7 @@ export default class App extends PureComponent {
               <Route path='/get-started' component={GetStartedContainer} />
               <Route path='/developers' component={DevelopersContainer} />
               <Route path='/overview' component={OverviewContainer} />
-              <Route path='/community' component={CommunityContainer} />
+              <Route path='*' component={OverviewContainer}/>
             </Switch>
           </Layout>
         </ConnectedRouter>

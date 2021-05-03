@@ -16,19 +16,6 @@ import Pdf from '../SvgIcon/icons/Pdf'
 
 import './Tabs.scss'
 
-import SpaceAgencies from '../../images/industry-space.jpg'
-import Supply from '../../images/industry-supply.jpg'
-import Trading from '../../images/industry-trading.jpg'
-import Healthcare from '../../images/industry-healthcare.jpg'
-import Energy from '../../images/industry-energy.jpg'
-import Governmen from '../../images/industry-egov.jpg'
-import Massmedia from '../../images/industry-massmedia.jpg'
-import Defence from '../../images/industry-defense.jpg'
-import Education from '../../images/industry-education.jpg'
-import GIS from '../../images/industry-gis.jpg'
-import Telecommunications from '../../images/industry-telecomunications.jpg'
-import Tokenization from '../../images/industry-tokenization.jpg'
-
 const PdfIcon = <Pdf />
 
 class Tabs extends PureComponent {
@@ -37,37 +24,6 @@ class Tabs extends PureComponent {
     this.state = {
         activeTab: i18next.t('main tabs', { returnObjects: true })[0].tabsName
     }
-  }
-
-  getImage = (title) => {
-    let isEn = i18next.language === 'en'
-    const trading = isEn ? 'Finance & Payments' : 'Financie a Platby'
-    const healthcare = isEn ? 'Healthcare & Wellness' : 'Zdravotníctvo a wellness'
-    const energy = isEn ? 'Energy' : 'Energia'
-    const supply = isEn ? 'Supply Chain' : 'Zásobovací reťazec'
-    const goverment = isEn ? 'eGovernment & DAO’s' : 'eVláda a DAO'
-    const massmedia = isEn ? 'Mass Media' : 'Masmédiá'
-    const gis = isEn ? 'GIScience' : 'Geografická informatika'
-    const defence = isEn ? 'Defence & Security' : 'Obrana a bezpečnosť'
-    const token = isEn ? 'Asset Tokenization' : 'Tokenizácia majetku'
-    const education = isEn ? 'Education' : 'Vzdelávanie'
-    const telecomunications = isEn ? 'Telecommunications' : 'Telekomunikácie'
-
-    const imageMap = {
-      [trading]: Trading,
-      [healthcare]: Healthcare,
-      'Aerospace': SpaceAgencies,
-      [energy]: Energy,
-      [supply]: Supply,
-      [goverment]: Governmen,
-      [massmedia]: Massmedia,
-      [gis]: GIS,
-      [defence]: Defence,
-      [token]: Tokenization,
-      [education]: Education,
-      [telecomunications]: Telecommunications   
-    }
-    return imageMap[title]
   }
 
   toggle = (tab) => {
@@ -97,7 +53,7 @@ class Tabs extends PureComponent {
         <Row>
           <Col sm='12'>
             <img
-              src={this.getImage(tab.tabsName)}
+              src={tab.tabsImage}
               alt={tab.tabsName}
               className='img-responsive'
             />  

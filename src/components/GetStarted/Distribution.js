@@ -50,7 +50,7 @@ class Distribution extends PureComponent{
 
     render(){
         const { t } = this.props
-        const isEn = i18next.language
+        
         const { activeTab } = this.state
 
         const list = Array.from(t('nodeDistributionTabName', { returnObjects: true }))
@@ -58,7 +58,7 @@ class Distribution extends PureComponent{
         return(
             <>
                 <div className='downloadBlock'>
-                    <h3>{t('Boid distributions')} {isEn}</h3>
+                    <h3>{t('Boid distributions')}</h3>
                     <div className='tabs_header'>
                         <Nav tabs>
                             {list.map(this.renderTabName)}
@@ -69,15 +69,14 @@ class Distribution extends PureComponent{
                             <TabPane tabId='Repos'>
                                 <Repos />
                             </TabPane>
-                            <TabPane tabId={isEn === 'en' ?  'Deployment' : 'Nasadenie'}>
+                            <TabPane tabId={t('Deployment')}>
                                 <Deployment />
                             </TabPane>
-                            <TabPane tabId={isEn === 'en' ?  'Images' : `Obrazy`}>
+                            <TabPane tabId={t('Images')}>
                                 <Image />
                             </TabPane>
-                            <TabPane tabId={isEn === 'en' ?  'Containers' : `Kontajnery`}>
-                                <TabContainers />
-                
+                            <TabPane tabId={t('Containers')}>
+                                <TabContainers />            
                             </TabPane>
                         </TabContent>
                     </div>
