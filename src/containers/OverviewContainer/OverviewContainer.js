@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { object } from 'prop-types'
+import { object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Loading from '../../components/Loading'
@@ -11,6 +11,7 @@ class OverviewContainer extends PureComponent {
     static propTypes = {
         match: object,
         mdFiles: object,
+        language: string,
     }
 
     static defaultProps = {}
@@ -18,7 +19,8 @@ class OverviewContainer extends PureComponent {
     render() {
         const {
             mdFiles,
-            match
+            match,
+            language,
         } = this.props
 
       if (!mdFiles) {
@@ -31,7 +33,7 @@ class OverviewContainer extends PureComponent {
 
       if (file === undefined ){
         return (
-          <PageNotFound/>
+          <PageNotFound language={language}/>
         )
       }
 
@@ -44,6 +46,7 @@ class OverviewContainer extends PureComponent {
 function mapStateToProps(state) {
     return{
         mdFiles: state.index.markdownFiles,
+        language: state.index.language,
     }
 }
 

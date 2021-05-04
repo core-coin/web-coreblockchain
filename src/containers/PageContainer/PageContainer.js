@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
-import { number, object, string, func } from 'prop-types'
-
+import { number, object, string } from 'prop-types'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import HeroHeader from '../../components/HeroHeader'
 import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
@@ -23,7 +24,6 @@ class PageContainer extends PureComponent {
         price: number,
         translate: object,
         language: string,
-        setLanguage: func,
     }
 
     static defaultProps = {}
@@ -38,13 +38,14 @@ class PageContainer extends PureComponent {
             blockTimer,
             networkHashrate,
             difficulty,
+            language,
         } = this.props
 
         const isMobile = window.innerWidth <= 500;
 
         return(
             <>
-                <HeroHeader />
+                <HeroHeader language={language}/>
                 {isMobile? <OffersMobile /> : <Offers />}
                 <Tabs />
                 <Solutions />
@@ -67,5 +68,14 @@ class PageContainer extends PureComponent {
     }
 }
 
+function mapStateToProps(state) {
+	return{
+		language: state.index.language,
+	}
+}
 
-export default PageContainer
+const mapDispatchToProps = dispatch => bindActionCreators({
+}, dispatch)
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(PageContainer)
