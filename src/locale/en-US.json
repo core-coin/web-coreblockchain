@@ -120,20 +120,20 @@
   "main tabs": [
     {
       "tabsContent": "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empowers Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.",
+      "tabsImage": "/static/media/tabs/trading.webp",
       "tabsLink": "",
-      "tabsImage": "/static/media/tabs/industry-trading.webp",
       "tabsName": "Finance & Payments"
     },
     {
       "tabsContent": "Protection and automatization of medical data and active participation in research for medicine or treatment. Monitoring and tracking diseases with verified data.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/healthcare.webp",
+      "tabsLink": "",
       "tabsName": "Healthcare & Wellness"
     },
     {
       "tabsContent": "Aerospace operators could share data about aircraft history, maintenance, and operations with verified Blockchain messages.",
-      "tabsLink": "Visit Blog",
       "tabsImage": "/static/media/tabs/space.webp",
+      "tabsLink": "Visit Blog",
       "tabsName": "Aerospace"
     },
     {

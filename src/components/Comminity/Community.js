@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { object } from 'prop-types'
 import { Container, Row } from 'reactstrap'
 
 import SidebarTemplate from '../../templates/withSidbarTemplate'
@@ -16,23 +17,9 @@ export default class Community extends PureComponent {
     }
   }
 
-  toggle = (link) => {
-    if (this.state.activeLink !== link) {
-      this.setState({ activeLink: link })
-    }
+  static propTypes = {
+    mdFiles: object,
   }
-
-  renderLinks = (links, index) => (
-    <li
-      key={index}
-      className={this.state.activeLink === links.link ? 'active' : ''}
-      onClick={() => {
-        this.toggle(links.link)
-      }}
-    >
-      <a href={'#' + links.link}>{links.label}</a>
-    </li>
-  )
 
   collectHeightMap = () => {
     let headers = document.querySelectorAll('.hiddenBlock')
@@ -74,12 +61,17 @@ export default class Community extends PureComponent {
   }
 
   render() {
+    const {
+      mdFiles
+    } = this.props
+
+    const isMobile = window.innerWidth <= 767
 
     return (
       <div>
         <Container>
           <Row>
-            <SidebarTemplate/>
+            <SidebarTemplate mdFiles={mdFiles}/>
           </Row>
         </Container>
       </div>

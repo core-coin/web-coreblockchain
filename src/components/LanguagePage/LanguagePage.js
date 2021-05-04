@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
-import { func } from 'prop-types'
 import {
     Container,
     Row,
     Col
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
+import {Link} from  'react-router-dom'
 
 import AnimatedArrow from '../AnimatedArrow'
 
@@ -13,17 +13,9 @@ import './LanguagePage.scss'
 
 class LanguagePage extends PureComponent{
 
-    static propTypes = {
-        setLanguage: func,
-    }
-
     render(){
         
-        const { t, i18n } = this.props     
-        const changeLanguage = lng => {          
-         i18n.changeLanguage(lng)
-         this.props.setLanguage(lng)
-        }
+        const { t, i18n, language } = this.props
         const list = Array.from(t('languages', { returnObjects: true }))
 
         return(
@@ -39,14 +31,14 @@ class LanguagePage extends PureComponent{
                             <Row>      
                                 {list.map((language) => (
                                 <Col xs='12' sm='4' lg='4' key={language.code}>
-                                    <div className='languagePage_block' 
-                                    onClick={() => {changeLanguage(language.code)}}
+                                    <Link className='languagePage_block'
+                                    to={`/${language.code}/language`}
                                 >
                                         <div className='languagePage_block__text'>
                                             <p>{language.englishName}</p>
                                             <span>{language.nativeName}</span>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </Col>
                                 ))}
                             </Row>
@@ -54,7 +46,7 @@ class LanguagePage extends PureComponent{
                         <Col xs='12'sm='12' md='12' xl='10' className='languagePage_program'>
                             <h3>{t('Translation Program')}</h3>
                                 <p className='description'>{t('Core Blockchain translators are always translating pages in as many languages as possible. To see what they\'re working on right now or to sign up or to join them.')}</p>
-                            <AnimatedArrow text={t('Translation Program')} url='/language-program'/>
+                            <AnimatedArrow text={t('Translation Program')} url={`/${language}/language-program`}/>
                         </Col>
                     </Row>
                 </Container>

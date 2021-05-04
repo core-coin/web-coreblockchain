@@ -51,7 +51,7 @@ class Tabs extends PureComponent {
   renderTabContent = (tab, index) => (
       <TabPane tabId={tab.tabsName} key={index}>
         <Row>
-          <Col sm='12'>
+          <Col sm={{ size: 11, offset: 1 }}>
             <img
               src={tab.tabsImage}
               alt={tab.tabsName}
@@ -59,13 +59,13 @@ class Tabs extends PureComponent {
             />  
             <h2>{tab.tabsName}</h2>
             <p>{tab.tabsContent}</p>
-            <Button
-              theme='green'
-              size='normal'
-              text={tab.tabsLink}
-              href=''
-              icon={PdfIcon}
-            />
+            {/*<Button*/}
+              {/*theme='green'*/}
+              {/*size='normal'*/}
+              {/*text={tab.tabsLink}*/}
+              {/*href=''*/}
+              {/*icon={PdfIcon}*/}
+            {/*/>*/}
           </Col>
         </Row>
       </TabPane>

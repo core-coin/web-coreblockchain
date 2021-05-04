@@ -1,19 +1,27 @@
 import React, {PureComponent} from 'react'
-import { string } from 'prop-types'
+import { object } from 'prop-types'
 import {
   Container,
   Row,
   Col
 } from 'reactstrap'
-import Markdown, { compiler } from 'markdown-to-jsx'
-import metadataParser from 'markdown-yaml-metadata-parser'
+import { compiler } from 'markdown-to-jsx'
 import MetaTags from 'react-meta-tags'
+import {MathpixMarkdown, MathpixLoader} from 'mathpix-markdown-it'
 
 import './md.scss'
 
+let scrollTo = id => {
+  let header = document.getElementById(id)
+  if (header) {
+    header.scrollIntoView({block: 'center', behavior: "smooth"})
+  }
+}
+
 export default class BlogTemplate extends PureComponent{
   static propTypes = {
-    source: string,
+    mdFile: object
+
   }
 
   static defaultProps = {}
@@ -21,23 +29,15 @@ export default class BlogTemplate extends PureComponent{
   constructor(props) {
     super(props)
     this.state = {
-      markdown: '',
-      toc: [],
-      metadata: [],
+      toc: this.buildToc(props.mdFile.content),
     }
   }
 
-  componentDidMount() {
-    fetch(this.props.source)
-      .then(res => res.text())
-      .then(markdown => {
-        let md = metadataParser(markdown)
-        this.setState((state) => ({ ...state, markdown: md.content, toc: this.buildToc(md.content), metadata: md.metadata }))})
-      .catch((err) => console.error(err));
-  }
+
 
   buildToc = source => {
     const headings = []
+
     compiler(source, {
       createElement(type, props, children) {
         if ( type === 'h1' || type === 'h2' || type === 'h3' ) {
@@ -47,8 +47,7 @@ export default class BlogTemplate extends PureComponent{
             id: null,
             className: 'toc-' + type,
             onClick: () => {
-              let target = document.getElementById(id)
-              target && target.scrollIntoView()
+              scrollTo(id)
             }
           }
           headings.push(React.createElement('a', props, children))
@@ -63,7 +62,8 @@ export default class BlogTemplate extends PureComponent{
 
   render(){
 
-    const { markdown, toc, metadata} = this.state
+    const {mdFile: {metadata, content}} = this.props
+    const { toc } = this.state
 
     return(
       <>
@@ -77,13 +77,13 @@ export default class BlogTemplate extends PureComponent{
         <Container>
           <Row>
             <Col md='9' className='content'>
-              <Markdown>
-                {markdown}
-              </Markdown>
+              <MathpixLoader>
+                <MathpixMarkdown text={content} />
+              </MathpixLoader>
             </Col>
             <Col md='3' className='content-sidebar'>
               <ul>
-                { toc.map((entry, index) => ( <li key={index}>{entry}</li> ))}
+                {toc.map((entry, index) => ( <li key={index}>{entry}</li> ))}
               </ul>
             </Col>
           </Row>

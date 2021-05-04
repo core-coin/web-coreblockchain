@@ -15,7 +15,6 @@ import Deployment from './Deployment'
 import Repos from './Repos'
 
 import './GetStarted.scss'
-import i18next from 'i18next'
 
 class Distribution extends PureComponent{
     constructor(props) {

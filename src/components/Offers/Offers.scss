@@ -1,7 +1,9 @@
 .offers {
   background-color: var(--black);
-  padding: 5% 0 2%;
-
+  padding: 4% 0 2%;
+  @media (max-width: 1440px){
+    padding: 5% 0 2%;
+  }
   .title {
     margin-bottom: 125px;
     padding-top: 15px;
@@ -9,6 +11,7 @@
 
   .zIndex {
     z-index: 1;
+    padding-right: 3px;
   }
 
   @media (max-width: 767px) {
@@ -47,13 +50,18 @@
     }
 
     .title {
+      margin-bottom: 85px;
+    }
+  }
+  @media (min-width: 1441px){
+    .title {
       margin-bottom: 105px;
     }
   }
 
   &_block {
     position: relative;
-    height: 300px;
+    height: 226px;
     width: 100%;
     border-radius: 6px;
     border: 1px solid var(--grey-darken);
@@ -62,12 +70,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 23px;
+    padding: 0 20px;
     margin-bottom: 19px;
     appearance: none;
     outline: none;
     overflow: hidden;
     transition: 0.3s;
+    @media (min-width: 1441px){
+      height: 300px;
+    }
     
      .before {
       --size: 0;
@@ -83,12 +94,18 @@
       transition: width 0.9s ease, height 0.9s ease;
     }
     &__low {
-      margin-top: 50px;
+      margin-top: 36px;
+      @media (min-width: 1441px){
+        margin-top: 50px;
+      }
     }
 
     &__lower {
       margin-top: 90px;
-      margin-bottom: 30px;
+      margin-bottom: 13px;
+      @media (min-width: 1441px){
+        margin-bottom: 30px;
+      }
     }
 
     &__high {
@@ -141,30 +158,42 @@
       line-height: 40px;
       width: 121%;
       height: 99%;
-      padding: 55px 25px;
+      padding: 56px 14px;
+      @media (min-width: 1441px){
+        padding: 55px 25px;
+      }
       }
        @media (max-width: 1199px) {
         &-box {
-          width: 126%;
+          width: 125%;
         }
     }
 
     h4 {
       color: var(--white);
       font-family: Montserrat-Regular;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: -0.6px;
-      margin-top: 22px;
+      margin-top: 14px;
+      margin-bottom: 3px;
+      @media (min-width: 1441px){
+        font-size: 20px;
+        margin-top: 22px;
+      }
     }
 
     p {
       color: var(--grey);
       font-family: 'Red Hat Display';
-      font-size: 15px;
+      font-size: 11px;
       font-weight: 400;
-      line-height: 22px;
+      line-height: 16px;
       text-align: center;
+      @media (min-width: 1441px){
+        font-size: 15px;
+        line-height: 22px;
+      }
     }
   }
 

@@ -153,74 +153,74 @@
   "main tabs": [
     {
       "tabsContent": "Zabezpečená služba finančných správ v sieti Core Blockchain na odosielanie a prijímanie šifrovaných správ a tiež na uskutočňovanie platieb bez hraníc. Bezpečné smart-kontrakty — Ylem — umožňujú Core Blockchain k prenosu / digitalizácii hodnoty vo výkonnej sieti Core Blockchain.",
+      "tabsImage": "/static/media/tabs/trading.webp",
       "tabsLink": "",
-      "tabsImage": "/static/media/tabs/industry-trading.jpg",
       "tabsName": "Financie a Platby"
     },
     {
       "tabsContent": "Ochrana a automatizácia lekárskych údajov a aktívna účasť na výskume medicíny alebo liečby. Monitorovanie a sledovanie chorôb s overenými údajmi.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/healthcare.webp",
+      "tabsLink": "",
       "tabsName": "Zdravotníctvo a wellness"
     },
     {
       "tabsContent": "Prevádzkovatelia letectva a kozmonautiky môžu zdieľať údaje o histórii lietadiel, údržbe a prevádzke s overenými správami Blockchain.",
-      "tabsLink": "Dozvedieť sa viac",
       "tabsImage": "/static/media/tabs/space.webp",
+      "tabsLink": "Dozvedieť sa viac",
       "tabsName": "Aerospace"
     },
     {
       "tabsContent": "Optimalizácia IoT a malých zariadení podieľajúcich sa na sieti pre ťažbu a algoritme //RandomY//. Používame ZERO-waste - 0W - energiu so štruktúrou LIFO //Last-In First-Out//.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/energy.webp",
+      "tabsLink": "",
       "tabsName": "Energia"
     },
     {
       "tabsContent": "Riadenie a pružnosť v dodávateľskom reťazci na stopovanie, sledovanie a varovanie pomocou overených informácií založených na blockchaine. Blockchain do istej miery skracuje dĺžku reťazca znižovaním sprostredkovateľov alebo organizácií tretích strán.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/supply.webp",
+      "tabsLink": "",
       "tabsName": "Zásobovací reťazec"
     },
     {
       "tabsContent": "Transparentné, nemenné eGov //digitálna vláda// riešenie založené na blockchaine pre služby G2 //vládna pre// poskytované po celom svete.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/egov.webp",
+      "tabsLink": "",
       "tabsName": "eVláda a DAO"
     },
     {
       "tabsContent": "Povoliť Indie-producentom //nízkorozpočtové// a mikrofinancovanie pre filmy a zábavu. Speňažujte obsah pomocou rýchlych a bezpečných platieb Core v reálnom čase.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/massmedia.webp",
+      "tabsLink": "",
       "tabsName": "Masmédiá"
     },
     {
       "tabsContent": "Core Blockchain prispieva k geografickej informačnej vede //GIScience// k budovaniu digitálnej dôveryhodnej platformy, ktorú je možné použiť pre rôzne odvetvia.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/GIS.webp",
+      "tabsLink": "",
       "tabsName": "Geografická informatika"
     },
     {
       "tabsContent": "Core Blockchain je schopný slúžiť pre Autonomous Pod Data Transport //APDT// a prepojiť viac zariadení so spoľahlivou a bezpečnou sieťou Core Blockchain po celom svete.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/defense.webp",
+      "tabsLink": "",
       "tabsName": "Obrana a bezpečnosť"
     },
     {
       "tabsContent": "Nasledujeme koncepciu využívania technológie Blockchain na zabezpečenie aktív a hostenie viacerých cenných papierov na platforme Core Blockchain.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/tokenization.webp",
+      "tabsLink": "",
       "tabsName": "Tokenizácia majetku"
     },
     {
       "tabsContent": "Blockchain môže aktívne prispievať k vzdelávaniu zapojením procesu uľahčovania učenia alebo získavania vedomostí, zručností, hodnôt, viery a návykov.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/education.webp",
+      "tabsLink": "",
       "tabsName": "Vzdelávanie"
     },
     {
       "tabsContent": "Blockchainové správy a distribúcia dát v rámci rôznych typov komunikácie - vrátane vysokofrekvenčných //RF//, mesh sietí //meshnet// a laserového prenosu.",
-      "tabsLink": "",
       "tabsImage": "/static/media/tabs/telecomunications.webp",
+      "tabsLink": "",
       "tabsName": "Telekomunikácie"
     }
   ],

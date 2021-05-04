@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
 import {
     Container,
     Row,
@@ -20,25 +19,21 @@ import Intelligence from '../SvgIcon/icons/Intelligence'
 import './Offers.scss'
 
 class Offers extends PureComponent{
-    static propTypes = {
-        translate: object,
-        language: string,
-    }
 
     render(){
         const { t } = this.props
 
-        const settings = {
-            dots: true,
-            infinite: false,
-            className: 'center',
-            centerMode: true,
-            centerPadding: '20px',
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-        }
+      const settings = {
+        dots: true,
+        infinite: false,
+        className: 'center',
+        centerMode: true,
+        centerPadding: '20px',
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      }
 
         return(
             <div className='offers'>

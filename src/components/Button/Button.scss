@@ -33,13 +33,13 @@
   }
   &.size {
     &_normal {
-      height: 67px;
-      min-width: 238px;
+      height: 50px;
+      min-width: 180px;
       border-radius: 14px;
-      font-size: 14px;
+      font-size: 10px;
       color: #ffffff;
       font-family: Montserrat-Regular;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 2.1px;
       line-height: 24px;
       @media (max-width: 767px) {
@@ -48,17 +48,29 @@
         margin-bottom: 20px;
         margin-right: 0;
       }
+      @media (min-width: 1441px){
+        height: 67px;
+        min-width: 238px;
+        font-size: 14px;
+        font-weight: 700;
+      }
     }
     &_small {
-      min-width: 120px;
-      height: 43px;
-      border-radius: 10px;
-      font-size: 16px;
+      min-width: 111px;
+      height: 33px;
+      border-radius: 8px;
+      font-size: 12px;
       color: #ffffff;
       font-family: "Red Hat Display";
       font-weight: 400;
       letter-spacing: -0.16px;
       line-height: 24px;
+      @media (min-width: 1441px){
+        min-width: 120px;
+        height: 43px;
+        border-radius: 10px;
+        font-size: 16px;
+      }
     }
     &_extraSmall {
       min-width: 43px;
