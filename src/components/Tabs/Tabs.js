@@ -11,12 +11,12 @@ import {
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
 import i18next from 'i18next'
-import Button from '../Button'
+// import Button from '../Button'
 import Pdf from '../SvgIcon/icons/Pdf'
 
 import './Tabs.scss'
 
-const PdfIcon = <Pdf />
+// const PdfIcon = <Pdf />
 
 class Tabs extends PureComponent {
   constructor(props) {
@@ -32,48 +32,48 @@ class Tabs extends PureComponent {
     }
   }
 
-  renderTabName = (tab) => {
-    const { activeTab } = this.state
-    return (
-      <Trans i18nKey={tab.tabName} defaults={tab.tabName}>
-        <NavItem key={tab.tabsName}>
-          <NavLink
-            className={activeTab === tab.tabsName ? 'active' : ''}
-            onClick={() => {
-              this.toggle(tab.tabsName)
-            }}
-          >
-            {tab.tabsName}
-          </NavLink>
-        </NavItem>
-      </Trans>
-    )
-  }
-
-  renderTabContent = (tab, index) => (
-    <Trans i18nKey={tab.tabName} defaults={tab.tabName}>
-      <TabPane tabId={tab.tabsName} key={index}>
-        <Row>
-          <Col sm={{ size: 11, offset: 1 }}>
-            <img
-              src={tab.tabsImage}
-              alt={tab.tabsName}
-              className='img-responsive'
-            />
-            <h2>{tab.tabsName}</h2>
-            <p>{tab.tabsContent}</p>
-            {/*<Button*/}
-              {/*theme='green'*/}
-              {/*size='normal'*/}
-              {/*text={tab.tabsLink}*/}
-              {/*href=''*/}
-              {/*icon={PdfIcon}*/}
-            {/*/>*/}
-          </Col>
-        </Row>
-      </TabPane>
-    </Trans>
-  )
+  // renderTabName = (tab) => {
+  //   const { activeTab } = this.state
+  //   return (
+  //     <Trans i18nKey={tab.tabName} defaults={tab.tabName}>
+  //       <NavItem key={tab.tabsName}>
+  //         <NavLink
+  //           className={activeTab === tab.tabsName ? 'active' : ''}
+  //           onClick={() => {
+  //             this.toggle(tab.tabsName)
+  //           }}
+  //         >
+  //           {tab.tabsName}
+  //         </NavLink>
+  //       </NavItem>
+  //     </Trans>
+  //   )
+  // }
+  //
+  // renderTabContent = (tab, index) => (
+  //   <Trans i18nKey={tab.tabName} defaults={tab.tabName}>
+  //     <TabPane tabId={tab.tabsName} key={index}>
+  //       <Row>
+  //         <Col sm={{ size: 11, offset: 1 }}>
+  //           <img
+  //             src={tab.tabsImage}
+  //             alt={tab.tabsName}
+  //             className='img-responsive'
+  //           />
+  //           <h2>{tab.tabsName}</h2>
+  //           <p>{tab.tabsContent}</p>
+  //           {/*<Button*/}
+  //             {/*theme='green'*/}
+  //             {/*size='normal'*/}
+  //             {/*text={tab.tabsLink}*/}
+  //             {/*href=''*/}
+  //             {/*icon={PdfIcon}*/}
+  //           {/*/>*/}
+  //         </Col>
+  //       </Row>
+  //     </TabPane>
+  //   </Trans>
+  // )
 
   render() {
     const { t } = this.props
@@ -122,13 +122,13 @@ class Tabs extends PureComponent {
                               />
                               <h2>{tab.tabsName}</h2>
                               <p>{tab.tabsContent}</p>
-                              <Button
-                                theme='green'
-                                size='normal'
-                                text={tab.tabsLink}
-                                href=''
-                                icon={PdfIcon}
-                              />
+                              {/*<Button*/}
+                                {/*theme='green'*/}
+                                {/*size='normal'*/}
+                                {/*text={tab.tabsLink}*/}
+                                {/*href=''*/}
+                                {/*icon={PdfIcon}*/}
+                              {/*/>*/}
                             </Col>
                           </Row>
                         </TabPane>
