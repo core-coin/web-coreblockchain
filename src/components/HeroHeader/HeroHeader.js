@@ -4,6 +4,7 @@ import {
     Row,
     Col
 } from 'reactstrap'
+import { string } from 'prop-types'
 import { withNamespaces, Trans } from 'react-i18next'
 import Button from '../Button'
 import Arrow from '../SvgIcon/icons/Arrow'
@@ -12,9 +13,12 @@ import MouseIcon from './MouseIcon'
 import './HeroHeader.scss'
 
 class HeroHeader extends PureComponent{
+	static propTypes = {
+		language: string,
+	}
 
     render(){
-        const { t } = this.props
+        const { t, language } = this.props
 
         return(
             <div className='heroHeader'>
@@ -36,7 +40,7 @@ class HeroHeader extends PureComponent{
                                 size='normal'
                                 text={t('get started')}
                                 type='router'
-                                href='/get-started'
+                                href={`/${language}/get-started`}
                             />
                             <Button
                                 theme='ghost'

@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import {
   Navbar,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -16,7 +15,7 @@ import { string } from 'prop-types'
 import Logo from '../../images/logo.webp'
 import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
-import Search from '../SvgIcon/icons/Search'
+// import Search from '../SvgIcon/icons/Search'
 import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
 
@@ -106,9 +105,9 @@ class HeaderNavbar extends PureComponent {
             <Col>
               <Navbar expand='md'>
                 <div>
-                  <NavbarBrand href='/'>
+                  <Link to={`/${language}`} className='navbar-brand'>
                     <img src={Logo} alt='Core Chain' />
-                  </NavbarBrand>
+                  </Link>
                 </div>
                 {isMobile ? (
                   <div>
@@ -124,9 +123,9 @@ class HeaderNavbar extends PureComponent {
                     >
                       <Container>
                         <Col className='headerNavbar_sidebar__header'>
-                          <NavbarBrand href='/'>
+                          <Link className='navbar-brand' to={`/${language}`}>
                             <img src={Logo} alt='Core Chain' />
-                          </NavbarBrand>
+                          </Link>
                           <a onClick={this.onCloseSidebar}>
                             <Close />
                           </a>
