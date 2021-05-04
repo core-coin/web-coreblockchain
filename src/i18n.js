@@ -4,7 +4,6 @@ import { reactI18nextModule } from "react-i18next"
 import translationEN from './locale/en-US.json'
 import translationSK from './locale/sk-SK.json'
 
-// the translations
 const resources = {
   en: {
     translation: translationEN

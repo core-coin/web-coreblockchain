@@ -49,7 +49,7 @@ class Distribution extends PureComponent{
 
     render(){
         const { t } = this.props
-
+        
         const { activeTab } = this.state
 
         const list = Array.from(t('nodeDistributionTabName', { returnObjects: true }))
@@ -68,15 +68,14 @@ class Distribution extends PureComponent{
                             <TabPane tabId='Repos'>
                                 <Repos />
                             </TabPane>
-                            <TabPane tabId='Deployment'>
+                            <TabPane tabId={t('Deployment')}>
                                 <Deployment />
                             </TabPane>
-                            <TabPane tabId='Images'>
+                            <TabPane tabId={t('Images')}>
                                 <Image />
                             </TabPane>
-                            <TabPane tabId='Containers'>
-                                <TabContainers />
-                
+                            <TabPane tabId={t('Containers')}>
+                                <TabContainers />            
                             </TabPane>
                         </TabContent>
                     </div>

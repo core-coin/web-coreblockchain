@@ -9,7 +9,7 @@ import {
   Row,
   Col,
 } from 'reactstrap'
-import { withNamespaces, Trans } from 'react-i18next'
+import { withNamespaces } from 'react-i18next'
 import {Link} from  'react-router-dom'
 import { string } from 'prop-types'
 
@@ -23,7 +23,6 @@ import Language from '../SvgIcon/icons/Language'
 import './HeaderNavbar.scss'
 
 const LanguageIcon = <Language />
-const SearchIcon = <Search />
 
 const body = document.body
 const scrollUp = 'scroll-up'
@@ -162,15 +161,6 @@ class HeaderNavbar extends PureComponent {
                       {list.map(this.renderNavbar)}
                     </Nav>
                     <div className='headerNavbar_left'>
-                      <Button
-                        icon={SearchIcon}
-                        theme='ghost'
-                        size='extraSmall'
-                        hover={false}
-                        href={`/${language}/search`}
-                        type='router'
-                      />
-
                       <Button
                         icon={LanguageIcon}
                         theme='ghost'

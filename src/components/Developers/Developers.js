@@ -30,17 +30,12 @@ class Developers extends PureComponent{
     }
 
     renderTabName = (tab) => (
-        <Trans
-        i18nKey={tab.tabName}
-        defaults={tab.tabName}
-        >
         <NavItem key={tab.tabName} className='nav-item'>  
             <NavLink className={this.state.activeTab === tab.tabName ? 'active' : ''} 
             onClick={() => { this.toggle(tab.tabName)}}>
-            one
+            {tab.tabName}
             </NavLink>
         </NavItem>
-        </Trans>
     )
 
     renderTabContent = (tab, index) => (

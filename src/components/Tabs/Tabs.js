@@ -90,23 +90,23 @@ class Tabs extends PureComponent {
               <Row>
                 <Col sm='4' md='5' lg='4' className='tabs_header'>
                   <h3>{t('Industries')}</h3>
-                  <Nav tabs>{list.map((tab, index) => {
-                    const { activeTab } = this.state
-                    return (
-                      <Trans i18nKey={index} defaults={tab.tabName}>
-                        <NavItem key={tab.tabsName}>
-                          <NavLink
-                            className={activeTab === tab.tabsName ? 'active' : ''}
-                            onClick={() => {
-                              this.toggle(tab.tabsName)
-                            }}
-                          >
-                            {tab.tabsName}
-                          </NavLink>
-                        </NavItem>
-                      </Trans>
-                    )
-                  })}</Nav>
+                  <Nav tabs>{list.map((tab) => {
+                                    const { activeTab } = this.state
+                                    return (     
+                                        <NavItem key={tab.tabsName}>
+                                          <NavLink
+                                            className={activeTab === tab.tabsName ? 'active' : ''}
+                                            onClick={() => {
+                                              this.toggle(tab.tabsName)
+                                            }}
+                                          >
+                                            {tab.tabsName}
+                                          </NavLink>
+                                        </NavItem>
+                                    )
+                                  }
+                             )}
+                   </Nav>
                 </Col>
                 <Col sm='12' md='7' lg='8'>
                   <TabContent activeTab={activeTab}>

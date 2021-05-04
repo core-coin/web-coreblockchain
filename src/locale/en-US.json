@@ -114,6 +114,9 @@
   "You will need to create a Translate account if you don’t already have one.": "You will need to create a Translate account if you don’t already have one.",
   "The following language translations are in progress": "The following language translations are in progress",
   "Search for a term or phrase": "Search for a term or phrase...",
+  "Deployment": "Deployment",
+  "Images": "Images",
+  "Containers": "Containers",
   "main tabs": [
     {
       "tabsContent": "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empowers Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.",
@@ -135,56 +138,56 @@
     },
     {
       "tabsContent": "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with structure LIFO //Last-In-First-Out//.",
-      "tabsImage": "/static/media/tabs/energy.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/energy.webp",
       "tabsName": "Energy"
     },
     {
       "tabsContent": "Management and Resilience in Supply Chain to track, monitor, and alert using Blockchain-based verified information. Blockchain reduces the length of the chain to some extent by cutting down on middlemen or 3rd party organizations.",
-      "tabsImage": "/static/media/tabs/egov.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/supply.webp",
       "tabsName": "Supply Chain"
     },
     {
       "tabsContent": "Blockchain-based transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served Worldwide.",
-      "tabsImage": "/static/media/tabs/egov.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/egov.webp",
       "tabsName": "eGovernment & DAO’s"
     },
     {
       "tabsContent": "Enable Indie-producers //Low-budget// and microfinance for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments.",
-      "tabsImage": "/static/media/tabs/massmedia.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/massmedia.webp",
       "tabsName": "Mass Media"
     },
     {
       "tabsContent": "Core Blockchain is contributing to Geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries.",
-      "tabsImage": "/static/media/tabs/GIS.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/GIS.webp",
       "tabsName": "GIScience"
     },
     {
       "tabsContent": "Core Blockchain is able to serve for an Autonomous Pod Data Transport //APDT// and connect multiple devices with the reliable and secure Core Blockchain Network globally.",
-      "tabsImage": "/static/media/tabs/defense.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/defense.webp",
       "tabsName": "Defence & Security"
     },
     {
       "tabsContent": "Following the concept of using Blockchain technology to secure assets and host multiple securities on the Core Blockchain platform.",
-      "tabsImage": "/static/media/tabs/tokenization.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/tokenization.webp",
       "tabsName": "Asset Tokenization"
     },
     {
       "tabsContent": "Blockchain can actively contribute to education by involving the process of learning facilitation, or the acquisition of knowledge, skills, values, beliefs, and habits.",
-      "tabsImage": "/static/media/tabs/education.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/education.webp",
       "tabsName": "Education"
     },
     {
       "tabsContent": "Blockchain messages and data distribution within different types of communication - including radio-frequency //RF//, mesh network //meshnet// and laser transmission.",
-      "tabsImage": "/static/media/tabs/telecomunications.webp",
       "tabsLink": "",
+      "tabsImage": "/static/media/tabs/telecomunications.webp",
       "tabsName": "Telecommunications"
     }
   ],
@@ -214,19 +217,19 @@
     {
       "tabGhostBtn": "Report bug",
       "tabGreenBtn": "Visit",
-      "tabName": "<0><1></1><0>Developer portal",
+      "tabName": "Developer portal",
       "tabText": "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network."
     },
     {
       "tabGhostBtn": "New thread",
       "tabGreenBtn": "Visit",
-      "tabName": "<0><1></1><0>Core ◆ Talk",
+      "tabName": "Core ◆ Talk",
       "tabText": "Discuss and open new QA in the Talk community. Developers as well as another community members will assist you answer your questions."
     },
     {
       "tabGhostBtn": "Open new Proposal",
       "tabGreenBtn": "Visit",
-      "tabName": "<0><1></1><0>Core Standards",
+      "tabName": "Core Standards",
       "tabText": "The Core community has adopted many standards that are helpful for developers. Typically these are introduced as Core Improvement Proposals //CIP//. CIP's describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards."
     }
   ],
@@ -341,7 +344,8 @@
       "title": "OVH"
     }
   ],
-  "nodeDistributionTabName": ["Repos", "Deployment", "Images", "Containers"],
+  "nodeDistributionTabName": ["Repols", "Deployment", "Images", "Containers"],
+
   "images": [
     {
       "downloadLink": "#",

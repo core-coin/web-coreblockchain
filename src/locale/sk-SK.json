@@ -125,6 +125,9 @@
   "industries": "odvetvia",
   "Verify your download by running this script": "Overte si súbor pomocou skriptu",
   "Search for a term or phrase...": "Search for a term or phrase...",
+  "Deployment": "Nasadenie",
+  "Images": "Obrazy",
+  "Containers": "Kontajnery",
   "menuItemList": [
     {
       "label": "o Core",
@@ -243,19 +246,19 @@
     {
       "tabGhostBtn": "Nahlásiť chybu",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "<0><1></1><0>Portál pre vývojárov",
+      "tabName": "Portál pre vývojárov",
       "tabText": "Preskúmajte rozhranie medzi sadou API, SDK alebo iných interaktívnych digitálnych nástrojov a ich rôznymi zainteresovanými stranami. Pripojte Blockchain pomocou Oracles k svojmu aktívnemu systému. Interakujte s celosvetovou sieťou Blockchain."
     },
     {
       "tabGhostBtn": "Nové vlákno",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "<0><1></1><0>Core ◆ Diskusia",
+      "tabName": "Core ◆ Diskusia",
       "tabText": "Diskutujte a otvorte nové otázky-a-odpovede v komunitnej diskusii. Vývojári, ako aj ďalší členovia komunity vám pomôžu odpovedať na vaše otázky."
     },
     {
       "tabGhostBtn": "Otvoriť nový návrh",
       "tabGreenBtn": "Navštíviť",
-      "tabName": "<0><1></1><0>Core štandardy",
+      "tabName": "Core štandardy",
       "tabText": "Komunita Core prijala veľa štandardov, ktoré sú užitočné pre vývojárov. Spravidla sa tieto návrhy zavádzajú ako Core Improvement Proposals //CIP//. CIP popisuje štandardy pre platformu Core vrátane špecifikácií základných protokolov, rozhraní API klienta a zmluvných štandardov."
     }
   ],

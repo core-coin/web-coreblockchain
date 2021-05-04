@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
-import { number } from 'prop-types'
+import { number, object, string, func } from 'prop-types'
+
 import HeroHeader from '../../components/HeroHeader'
 import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
@@ -20,6 +21,9 @@ class PageContainer extends PureComponent {
         blocktime: number,
         marketCap: number,
         price: number,
+        translate: object,
+        language: string,
+        setLanguage: func,
     }
 
     static defaultProps = {}
