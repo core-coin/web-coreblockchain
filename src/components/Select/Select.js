@@ -47,7 +47,7 @@ export default class Select extends PureComponent{
 
         const SELECT = (
             <>
-                {labelText && <Label className='select_label' for={id}>{labelText}</Label>}fbeshej
+                {labelText && <Label className='select_label' for={id}>{labelText}</Label>}
                 <Input
                     className='select_input'
                     type='select'

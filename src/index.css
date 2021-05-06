@@ -44,7 +44,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body { 
   margin: 0;
   font-family: Montserrat-Light;
   -webkit-font-smoothing: antialiased;

@@ -15,7 +15,7 @@ class LanguagePage extends PureComponent{
 
     render(){
         
-        const { t, i18n, language } = this.props
+        const { t, language } = this.props
         const list = Array.from(t('languages', { returnObjects: true }))
 
         return(

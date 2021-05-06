@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, object, string } from 'prop-types'
+import { number, string } from 'prop-types'
 import {
     Container,
     Row,

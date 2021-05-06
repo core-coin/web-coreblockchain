@@ -45,7 +45,7 @@ class CoreNetwork extends PureComponent{
                 </div>
                 <div className='downloadBlock'>
                     <h3>{t('Transaction explorer')}</h3>
-                    <p>{t('Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.')}</p>
+                    <p className='transaction-text'>{t('Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.')}</p>
                     <AnimatedArrow url='' text={t('Core explorer')}/>
                 </div>
               
