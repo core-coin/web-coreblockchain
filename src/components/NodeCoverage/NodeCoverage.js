@@ -107,7 +107,7 @@ class NodeCoverage extends PureComponent{
                                     <Button
                                         theme='green'
                                         size='normal'
-                                        text={'mjknj'}
+                                        text={t('Transaction Explorer')}
                                         href=''
                                     />
                                 </Col>
