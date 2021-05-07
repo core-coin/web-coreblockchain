@@ -72,7 +72,7 @@ class Contacts extends PureComponent{
                             <p className='description'>{t('We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem. Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices.')}</p>
                             <div className='contacts_right__info'>
                                 <div className='contacts_right__info-block'>
-                                    <p>{t('Block Time')}</p>
+                                    <p>{t('IoT Perfomance')}</p>
                                     <span>{blockTime} H/s</span>
                                 </div>
                                 <div className='contacts_right__info-block'>

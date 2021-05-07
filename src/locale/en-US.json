@@ -58,8 +58,8 @@
   "Report bug": "Report bug",
   "tradeMark": "tradeMark",
   "Useful links": "Useful links",
-  "Copyright © 2018-2020 Core Foundation. All Rights Reserved.": "Copyright © 2018-2020 Core Foundation. All Rights Reserved.",
-  "Website last updated: Jan 31, 2020": "Website last updated: Jan 31, 2020",
+  "Copyright © 2018-2021 Core Foundation. All Rights Reserved.": "Copyright © 2018-2021 Core Foundation. All Rights Reserved.",
+  "Website last updated: Jan 31, 2020": "Website last updated: Jan 31, 2021",
   "Previous versions": "Previous versions",
   "Public Key": "Public key",
   "As a reminder, all release binaries are signed. You can manually verify the signatures with the command": "As a reminder, all release binaries are signed. You can manually verify the signatures with the command",
@@ -117,6 +117,7 @@
   "Deployment": "Deployment",
   "Images": "Images",
   "Containers": "Containers",
+  "IoT Perfomance": "IoT Perfomance",
   "main tabs": [
     {
       "tabsContent": "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empowers Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.",

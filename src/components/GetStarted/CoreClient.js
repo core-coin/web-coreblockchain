@@ -21,13 +21,13 @@ class CoreClient extends PureComponent {
     return (
       <>
         <div className='downloadBlock'>
-          <h3>{t('Core client boid')}</h3>
+          <h3>{t('Core Client Boid')}</h3>
           <p>{t('Go-core is the the command line interface for running a full Core node implemented in Go.')}</p>
           <Select
             type='buttons'
             download
             id='daemonSoftware'
-            labelText={t('Choose your operating system')+ ':'} 
+            labelText={t('Choose your operating system') + ':'} 
             items={list}
             greenBtnText={t('Download')}
             ghostBtnText={t('IPFS')}
@@ -36,7 +36,7 @@ class CoreClient extends PureComponent {
           <div className='version-links'>
             <AnimatedArrow
               url=''
-              text={t('Previous version')}
+              text={t('Previous versions')}
             />
             <AnimatedArrow
               url=''

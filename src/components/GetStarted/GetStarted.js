@@ -127,12 +127,10 @@ class GetStarted extends PureComponent {
                     <span id='devices' className='hiddenBlock'></span>
                     <Devices />
                   </div>
-
                   <div className='getStarted_content__block'>
                     <span id='core_mining' className='hiddenBlock'></span>
                     <CoreMiners />
                   </div>
-
                   <div className='getStarted_content__block'>
                     <span id='core_network' className='hiddenBlock'></span>
                     <CoreNetwork />
