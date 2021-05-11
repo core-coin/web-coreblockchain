@@ -10,9 +10,6 @@
   cursor: pointer;
   transition: all 0.2s;
   text-transform: uppercase;
-  @media (min-width: 1441px){
-    font-size: 14px;
-  }
   &.center {
     justify-content: center;
   }
@@ -25,9 +22,6 @@
         -webkit-transition-delay: 0.1s;
         transition-delay: 0.1s;
         background-color: var(--green);
-        @media (min-width: 1441px){
-          width: 44px;
-        }
       }
     }
   }
@@ -35,9 +29,6 @@
     width: 13px;
     transition: all 0.2s;
     padding-left: 10px;
-    @media (min-width: 1440px){
-      width: 17px;
-    }
     & .shaft {
       width: 13px;
       background-color: var(--green);
@@ -47,9 +38,6 @@
       transition: all 0.2s;
       transition-delay: 0;
       will-change: transform;
-      @media (min-width: 1441px){
-        width: 17px;
-      }
       &:before,
       &:after {
         width: 5px;

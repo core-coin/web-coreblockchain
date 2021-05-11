@@ -9,10 +9,6 @@
   @media (max-width: 767px) {
     margin-top: 23px;
   }
-  @media (min-width: 1441px){
-    font-size: 15px;
-    margin-top: 20px;
-  }
 }
 .select_input {
   padding: 0 20px;
@@ -32,16 +28,6 @@
   background-position: calc(100% - 16px) 13px, calc(100% - 12px) 13px;
   background-size: 4px 4px, 4px 4px;
   background-repeat: no-repeat;
-  @media (min-width: 1441px){
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    height: 43px;
-    border-radius: 10px;
-    background-position: calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px);
-    background-size: 5px 5px,
-    5px 5px;
-  }
   &:focus {
     background-color: var(--black-lighter);
     color: var(--white);

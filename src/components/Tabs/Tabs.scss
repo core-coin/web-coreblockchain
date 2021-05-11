@@ -19,11 +19,6 @@
       letter-spacing: -0.66px;
       padding: 8% 5% 3%;
     }
-    @media (min-width: 1441px){
-      font-size: 32px;
-      font-weight: 700;
-      padding: 0 9% 9%;
-    }
   }
   .tabs_header {
     @media (max-width: 767px) {
@@ -47,6 +42,12 @@
       .nav-item {
         display: flex;
         align-items: center;
+        @media (max-width: 767px) {
+          padding-left: 15px;
+          &:first-of-type {
+            padding-left: 0;
+          }
+        }
         .nav-link {
           border: none;
           background-color: transparent;
@@ -99,9 +100,6 @@
         border-radius: 9px;
         margin: 11px 0 44px;
         height: 261px;
-        @media (min-width: 1441px){
-          margin-bottom: 9%;
-        }
       }
       h2 {
         color: var(--white);
@@ -116,10 +114,6 @@
           font-size: 18px;
           line-height: 1.2;
         }
-        @media (min-width: 1441px){
-          font-size: 44px;
-          line-height: 48px;
-        }
       }
       p {
         color: var(--grey);
@@ -132,10 +126,6 @@
         @media (max-width: 767px) {
           font-size: 16px;
           line-height: 1.2;
-        }
-        @media (min-width: 1441px){
-          font-size: 22px;
-          line-height: 28px;
         }
       }
     }

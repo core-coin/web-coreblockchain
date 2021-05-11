@@ -18,17 +18,11 @@
       margin-top: 200px;
     }
   }
-  @media (min-width: 1441px){
-    padding: 8% 0;
-  }
   .preTitle {
     padding-left: 29px;
     @media (max-width: 767px) {
       margin-top: 24px;
       margin-bottom: 10px;
-    }
-    @media (min-width: 1441px){
-      margin-bottom: 21px;
     }
   }
   .title {
@@ -70,11 +64,6 @@
           line-height: 24px;
           padding: 8px 16px;
         }
-        @media (min-width: 1441px){
-          font-size: 20px;
-          letter-spacing: -0.6px;
-          padding:0 20px 21px 20px;
-        }
         &:hover{
           border-bottom: 2px solid var(--green);
           color: var(--white);
@@ -96,9 +85,6 @@
       @media (max-width: 767px) {
         margin-top: 24px;
       }
-      @media (min-width: 1441px){
-        margin-top: 42px;
-      }
       p {
         color: var(--grey);
         font-family: 'Red Hat Display';
@@ -112,10 +98,6 @@
           line-height: 22px;
           margin-bottom: 24px;
 
-        }
-        @media (min-width: 1441px){
-          font-size: 22px;
-          line-height: 32px;
         }
       }
     }
