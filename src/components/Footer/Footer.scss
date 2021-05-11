@@ -25,6 +25,9 @@
       padding: 0 0 19px;
       img {
         height: 40px;
+        @media (max-width: 767px) {
+          height: auto;
+        }
       }
     }
     p {

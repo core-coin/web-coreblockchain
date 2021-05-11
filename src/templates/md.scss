@@ -10,11 +10,16 @@
     font-size: 30px;
     color: var(--white);
     font-family: 'Montserrat-Bold';
+    margin-top: 48px;
+    &:first-child {
+      margin-top: 0;
+    }
   }
   h3 {
     font-size: 22px;
     color: var(--white);
     font-family: 'Montserrat-Bold';
+    margin-top: 32px;
   }
   p {
     font-family: 'Red Hat Display';

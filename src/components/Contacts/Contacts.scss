@@ -111,6 +111,16 @@
       display: flex;
       @media (max-width: 767px) {
         margin: 30px 0;
+        justify-content: space-between;
+        .button {
+          &:first-child {
+            margin-right: 10px;
+          }
+          &.size_normal {
+            min-width: auto;
+            letter-spacing: 1.2px;
+          }
+        }
       }
     }
   }
