@@ -46,7 +46,7 @@ class Contacts extends PureComponent{
                             <p>{t('Development')}</p>
                             <a href=''>{t('Developer Portal')}</a>
                             <a href=''>{t('Core Improvement Proposals')}</a>
-                            <a href=''>{t('Core talk')}</a>
+                            <a href=''>{t('Core Talk')}</a>
                         </div><div className='contacts_left__block'>
                             <p>{t('Useful links')}</p> 
                             <a href=''>{t('Open-source License')}</a>
@@ -72,7 +72,7 @@ class Contacts extends PureComponent{
                             <p className='description'>{t('We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem. Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices.')}</p>
                             <div className='contacts_right__info'>
                                 <div className='contacts_right__info-block'>
-                                    <p>{t('Block Time')}</p>
+                                    <p>{t('Block time')}</p>
                                     <span>{blockTime} H/s</span>
                                 </div>
                                 <div className='contacts_right__info-block'>
