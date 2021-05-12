@@ -23,11 +23,11 @@
     }
     &-img {
       padding: 0 0 19px;
-      @media (min-width: 1441px){
-        padding: 0 0 25px;
-      }
       img {
         height: 40px;
+        @media (max-width: 767px) {
+          height: auto;
+        }
       }
     }
     p {

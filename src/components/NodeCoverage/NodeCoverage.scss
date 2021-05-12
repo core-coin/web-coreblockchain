@@ -22,9 +22,6 @@
       padding: 0 30px;
     }
   }
-  @media (min-width: 1441px){
-    padding: 8% 0 12%;
-  }
   .preTitle,
   .title,
   .description {
@@ -43,9 +40,6 @@
     }
     @media (max-width: 767px) {
       font-size: 16px;
-    }
-    @media (min-width: 1441px){
-      font-size: 22px;
     }
   }
   &_block {
@@ -66,16 +60,8 @@
       padding: 12% 5%;
       margin-bottom: 0;
     }
-    @media (min-width: 1441px){
-      padding: 13% 10%;
-      margin-bottom: 20%;
-      height: 350px;
-    }
     &-img {
       padding: 10px 0 0 68px;
-      @media (min-width: 1441px){
-        padding: 16px 0 0 62px;
-      }
     }
     span {
       font-size: 11px;
@@ -93,9 +79,6 @@
       list-style: none;
       margin-bottom: 0;
       padding: 0 0 0 10px;
-      @media (min-width: 1441px){
-        padding: 0;
-      }
       li {
         color: var(--grey);
         font-family: 'Red Hat Display';
@@ -106,10 +89,6 @@
         border-top: 1px solid #323242;
         display: flex;
         justify-content: space-between;
-        @media (min-width: 1441px){
-          font-size: 15px;
-          line-height: 41px;
-        }
         span {
           color: var(--white-darken);
         }
@@ -131,19 +110,11 @@
         letter-spacing: -0.54px;
         text-align: left;
       }
-      @media (min-width: 1441px){
-        font-size: 32px;
-        letter-spacing: -0.96px;
-        line-height: 36px;
-      }
     }
     &__cards {
       display: flex;
       justify-content: space-around;
       margin-bottom: 9%;
-      @media (min-width: 1441px){
-        margin-bottom: 10%;
-      }
       &-card {
         width: 53px;
         height: 53px;
@@ -155,10 +126,6 @@
         justify-content: center;
         position: relative;
         margin: 0 4px;
-        @media (min-width: 1441px){
-          width: 70px;
-          height: 70px;
-        }
         &::before {
           content: '';
           border-bottom: 1px solid #323242;
@@ -172,9 +139,6 @@
           font-size: 24px;
           letter-spacing: -0.96px;
           line-height: 22px;
-          @media (min-width: 1441px){
-            font-size: 32px;
-          }
         }
       }
     }

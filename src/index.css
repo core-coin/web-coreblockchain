@@ -77,6 +77,7 @@ body {
     max-width: 970px;
   }
 }
+
 .title {
   color: var(--white);
   font-family: Montserrat-Medium;
@@ -150,19 +151,6 @@ em {
   .description {
     font-size: 16px;
     line-height: 22px;
-  }
-}
-@media (min-width: 1441px){
-  .title {
-    font-size: 44px;
-    letter-spacing: -1.32px;
-    line-height: 48px;
-  }
-  .preTitle {
-    font-size: 16px;
-    letter-spacing: 6.4px;
-    line-height: 22px;
-    margin-bottom: 35px;
   }
 }
 

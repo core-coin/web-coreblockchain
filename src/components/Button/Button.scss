@@ -48,12 +48,6 @@
         margin-bottom: 20px;
         margin-right: 0;
       }
-      @media (min-width: 1441px){
-        height: 67px;
-        min-width: 238px;
-        font-size: 14px;
-        font-weight: 700;
-      }
     }
     &_small {
       min-width: 111px;
@@ -65,12 +59,6 @@
       font-weight: 400;
       letter-spacing: -0.16px;
       line-height: 24px;
-      @media (min-width: 1441px){
-        min-width: 120px;
-        height: 43px;
-        border-radius: 10px;
-        font-size: 16px;
-      }
     }
     &_extraSmall {
       min-width: 43px;
