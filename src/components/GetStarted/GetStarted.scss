@@ -177,9 +177,6 @@
       &.coreWallet {
         background: var(--black-lighter) url("../../images/coreWallet.webp")
           no-repeat left bottom;
-          @media (min-width: 1800px) {
-            background: var(--black-lighter) url("../../images/coreStatus.webp") 100% no-repeat;
-          }
         padding-bottom: 390px;
         @media (max-width: 767px) {
           padding-bottom: 100px;

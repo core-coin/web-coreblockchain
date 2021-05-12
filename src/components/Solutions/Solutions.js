@@ -18,15 +18,14 @@ class Solutions extends PureComponent{
             <div className='solutions'>
                 <Container>
                     <Row>
-                        <Col xs='7' sm='12' lg={{ size: 6, offset: 6 }}>
+                        <Col md='d-none' lg='6'><div className='solutions_background'></div></Col>
+                        <Col sm='12' lg={{ size: 6 }}>
                             <h3 className='preTitle'>{t('Ecosystem')}</h3>
                             <h1 className='title'>
                             <Trans i18nKey='Core Blockchain Social Impact'>
                                Core Blockchain <em>Social Impact</em>
                             </Trans>
                             </h1>
-                        </Col>
-                        <Col sm='12' lg={{ size: 6, offset: 6 }}>
                             <p className='description'>{t('Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform. We are creating an Inclusion program suited for all people.')}</p>
                             <div className='solutions_block'>
                                 <h4>{t('Core Foundation')}</h4>
