@@ -12,16 +12,7 @@
       max-width: 1140px;
     }
   }
-  @media (min-width: 1400px) {
-    .container, .container-sm, .container-md, .container-lg, .container-xl {
-      max-width: 1260px;
-    }
-  }
-  @media (min-width: 1800px) {
-    .container, .container-sm, .container-md, .container-lg, .container-xl {
-      max-width: 1460px;
-    }
-  }
+
   background-color: var(--black);
   position: relative;
   &_row {
@@ -29,7 +20,7 @@
   }
   &_menu {
     border-right: 1px solid var(--grey-darken);
-    padding-top: 130px;
+    padding-top: 158px;
     display: flex;
     justify-content: flex-end;
     padding-right: 75px;
@@ -41,12 +32,7 @@
     @media (min-width: 768px) and (max-width: 1024px) {
       background-position: -160px 100px;
     }
-    @media (min-width: 1441px) {
-      padding-top: 200px;
-      padding-right: 120px;
-      background-size: 800px 800px;
-      background-position: left 100px;
-    }
+ 
     ul {
       list-style: none;
       margin-bottom: 95px;
@@ -86,9 +72,6 @@
             display: inline-block;
             width: 1em;
             margin-right: 15px;
-            @media (min-width: 1441px){
-              margin-right: 0;
-            }
           }
         }
       }
@@ -119,9 +102,7 @@
         width: 100%;
       }
     }
-    @media (min-width: 1441px){
-      padding: 238px 0 80px 120px;
-    }
+
     
     &__block {
       @media (max-width: 767px) {
@@ -129,19 +110,9 @@
       }
       @media (min-width: 768px) {
         margin-bottom: 30px;
-        @media (min-width: 1441px) {
-          margin-bottom: 53px; 
-          .transaction-text {
-            padding-bottom: 30px;
-          }
-          }
         }
       }
-      &__block:nth-child(1) {
-        @media (min-width: 1441px) {
-          margin-bottom: 100px; 
-      }
-    }
+ 
     .animatedArrow {
       text-transform: uppercase;
       @media (max-width: 767px) {
@@ -180,16 +151,10 @@
       @media (min-width: 1025px){
         width: 87.5%;
       }
-      @media (min-width: 1441px){
-        padding: 60px 70px;
-      }
       &_key {
         padding: 14px 0;
         .theme_ghost {
           margin: 0 !important;
-        }
-        @media (min-width: 1441px){
-          padding: 25px 0;
         }
       }
       .theme_ghost {
