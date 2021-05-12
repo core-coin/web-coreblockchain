@@ -65,8 +65,6 @@ export default class Community extends PureComponent {
       mdFiles
     } = this.props
 
-    const isMobile = window.innerWidth <= 767
-
     return (
       <div>
         <Container>

@@ -29,7 +29,7 @@ class Devices extends PureComponent {
            Core <em>ecosystem</em>
           </Trans>
         </h1>
-        <p className='description'>{t('Join Core Blockchain ecosystem and enjoy all its ts')}</p>
+        <p className='description'>{t('Join Core Blockchain ecosystem and enjoy all its benefits')}</p>
         <div className='downloadBlock cpuMiners'>
           <h3>{t('IoT Devices')}</h3>
           <p>{t('Minimum requirements')}:</p>
