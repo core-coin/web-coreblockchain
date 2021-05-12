@@ -1,6 +1,26 @@
 .getStarted {
-  .container-fluid {
-    padding-left: 0;
+  
+  background-image: url(../../images/sphere.png);
+  background-size: 800px 800px;
+  background-repeat: no-repeat;
+  background-position: left 60px;
+  background-attachment: fixed;
+  background-position: -57px 16px;
+  background-repeat: no-repeat;
+  @media (min-width: 1200px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1260px;
+    }
+  }
+  @media (min-width: 1800px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1460px;
+    }
   }
   background-color: var(--black);
   position: relative;
@@ -18,13 +38,14 @@
     top: 0px;
     left: 0;
     height: 100vh;
-    background-image: url(../../images/sphere.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-attachment: fixed;
     @media (min-width: 768px) and (max-width: 1024px) {
       background-position: -160px 100px;
+    }
+    @media (min-width: 1441px) {
+      padding-top: 200px;
+      padding-right: 120px;
+      background-size: 800px 800px;
+      background-position: left 100px;
     }
     ul {
       list-style: none;
@@ -65,6 +86,9 @@
             display: inline-block;
             width: 1em;
             margin-right: 15px;
+            @media (min-width: 1441px){
+              margin-right: 0;
+            }
           }
         }
       }
@@ -73,8 +97,9 @@
   &_content {
     flex: 1;
     height: 100%;
-    padding: 174px 150px 80px 80px;
+    padding: 200px 60px 80px 110px;
     position: relative;
+    background-color: var(--black);
     h1 {
       padding-top: 26px;
     }
@@ -94,12 +119,27 @@
         width: 100%;
       }
     }
+    @media (min-width: 1441px){
+      padding: 238px 0 80px 120px;
+    }
+    
     &__block {
       @media (max-width: 767px) {
-        margin-top: 45px;
+        margin-top: 65px;
       }
       @media (min-width: 768px) {
         margin-bottom: 30px;
+        @media (min-width: 1441px) {
+          margin-bottom: 53px; 
+          .transaction-text {
+            padding-bottom: 30px;
+          }
+          }
+        }
+      }
+      &__block:nth-child(1) {
+        @media (min-width: 1441px) {
+          margin-bottom: 100px; 
       }
     }
     .animatedArrow {
@@ -140,10 +180,16 @@
       @media (min-width: 1025px){
         width: 87.5%;
       }
+      @media (min-width: 1441px){
+        padding: 60px 70px;
+      }
       &_key {
         padding: 14px 0;
         .theme_ghost {
           margin: 0 !important;
+        }
+        @media (min-width: 1441px){
+          padding: 25px 0;
         }
       }
       .theme_ghost {
@@ -166,6 +212,9 @@
       &.coreWallet {
         background: var(--black-lighter) url("../../images/coreWallet.webp")
           no-repeat left bottom;
+          @media (min-width: 1800px) {
+            background: var(--black-lighter) url("../../images/coreStatus.webp") 100% no-repeat;
+          }
         padding-bottom: 390px;
         @media (max-width: 767px) {
           padding-bottom: 100px;
