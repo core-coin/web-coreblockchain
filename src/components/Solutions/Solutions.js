@@ -18,7 +18,7 @@ class Solutions extends PureComponent{
             <div className='solutions'>
                 <Container>
                     <Row>
-                        <Col md='d-none' lg='6'><div className='solutions_background'></div></Col>
+                        <Col lg='6'><div className='solutions_background'></div></Col>
                         <Col sm='12' lg={{ size: 6 }}>
                             <h3 className='preTitle'>{t('Ecosystem')}</h3>
                             <h1 className='title'>

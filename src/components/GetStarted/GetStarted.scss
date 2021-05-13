@@ -73,6 +73,9 @@
             display: inline-block;
             width: 1em;
             margin-right: 15px;
+            @media (min-width: 768px) and (max-width: 991px) {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -83,14 +86,11 @@
     height: 100%;
     padding: 200px 60px 80px 110px;
     position: relative;
-    @media (min-width: 991px){
+    @media (min-width: 768px){
       background-color: var(--black);
     }
     @media (min-width: 768px) and (max-width: 991px){
       padding: 200px 60px 80px 41px;
-      .downloadBlock {
-        padding: 35px 35px 42px;
-      }
     }
   
     h1 {
@@ -160,6 +160,9 @@
       }
       @media (min-width: 1025px){
         width: 87.5%;
+      }
+      @media (min-width: 768px) and (max-width: 991px) {
+          padding: 35px 35px 42px;
       }
       &_key {
         padding: 14px 0;
@@ -432,7 +435,7 @@
               @media (min-width: 768px) and (max-width: 1024px) {
                 .nav-item {
                   padding-bottom: 20px;
-                  margin-bottom: 0;
+                  margin: 0 5px;
                 }
               }
               .nav-link {
