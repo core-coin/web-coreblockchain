@@ -1,17 +1,33 @@
 .solutions {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black-darken);
-  background-image: url(../../images/sphere_with_glow.webp);
-  background-size: contain;
-  background-position: left center;
-  background-repeat: no-repeat;
   display: flex;
-  padding: 8% 0;
-  @media (max-width: 767px) {
-    background-position: -26px 10%;
+  padding: 135px 0 220px;
+  @media (max-width: 991px) {
+    background-image: url(../../images/sphere_with_glow.webp);
+    background-repeat: no-repeat;
+    background-size: 520px;
+    background-position: 95px 0;
     padding-bottom: 15%;
     .container {
       padding-top: 210px;
+    }
+  }
+  @media (max-width: 767px) {
+    background-size: contain;
+    background-position: -26px 10%;
+  }
+  &_background {
+    @media (min-width: 991px) {
+    background-image: url(../../images/sphere_with_glow.webp);
+    background-size: 730px;
+    background-repeat: no-repeat;
+    padding-bottom: 15%;
+    height: 700px;
+    position: absolute;
+    top: -21px;
+    right: 117px;
+    width: 700px;     
     }
   }
   .title {

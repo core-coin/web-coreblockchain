@@ -136,7 +136,7 @@ class HeaderNavbar extends PureComponent {
                         <div className='headerNavbar_sidebar__search'>
                           <Button
                             text={t('language')}
-                            theme='ghosMAt'
+                            theme='ghost'
                             size='extraSmall'
                             hover={false}
                             href={`/${language}/language`}

@@ -345,7 +345,7 @@
       "title": "OVH"
     }
   ],
-  "nodeDistributionTabName": ["Repols", "Deployment", "Images", "Containers"],
+  "nodeDistributionTabName": ["Repos", "Deployment", "Images", "Containers"],
 
   "images": [
     {

@@ -11,8 +11,8 @@ const path = (
 );
 const Chain = createIcon(path, {
     width: 27,
-    height: 27,
-    viewBox: '0 0 27 27'
+    height: 23,
+    viewBox: '0 0 27 23'
 })
 
 export default Chain
