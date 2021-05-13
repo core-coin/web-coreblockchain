@@ -5,8 +5,8 @@
   padding: 135px 0 220px;
   @media (max-width: 991px) {
     background-image: url(../../images/sphere_with_glow.webp);
-    background-size: 520px;
     background-repeat: no-repeat;
+    background-size: 520px;
     background-position: 95px 0;
     padding-bottom: 15%;
     .container {
@@ -14,14 +14,8 @@
     }
   }
   @media (max-width: 767px) {
-    background-image: url(../../images/sphere_with_glow.webp);
     background-size: contain;
-    background-repeat: no-repeat;
     background-position: -26px 10%;
-    padding-bottom: 15%;
-    .container {
-      padding-top: 210px;
-    }
   }
   &_background {
     @media (min-width: 991px) {

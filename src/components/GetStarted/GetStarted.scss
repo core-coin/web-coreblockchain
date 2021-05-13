@@ -1,5 +1,4 @@
 .getStarted {
-  
   background-image: url(../../images/sphere.png);
   background-size: 800px 800px;
   background-repeat: no-repeat;
@@ -23,12 +22,14 @@
     padding-top: 158px;
     display: flex;
     justify-content: flex-end;
-    padding-right: 75px;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
     left: 0;
     height: 100vh;
+    @media (min-width: 991px) {
+      padding-right: 75px;
+    }
     @media (min-width: 768px) and (max-width: 1024px) {
       background-position: -160px 100px;
     }
@@ -82,7 +83,16 @@
     height: 100%;
     padding: 200px 60px 80px 110px;
     position: relative;
-    background-color: var(--black);
+    @media (min-width: 991px){
+      background-color: var(--black);
+    }
+    @media (min-width: 768px) and (max-width: 991px){
+      padding: 200px 60px 80px 41px;
+      .downloadBlock {
+        padding: 35px 35px 42px;
+      }
+    }
+  
     h1 {
       padding-top: 26px;
     }
