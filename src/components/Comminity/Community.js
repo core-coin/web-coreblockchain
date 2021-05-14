@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { object } from 'prop-types'
-import { Container, Row } from 'reactstrap'
 
 import SidebarTemplate from '../../templates/withSidbarTemplate'
 
@@ -66,13 +65,7 @@ export default class Community extends PureComponent {
     } = this.props
 
     return (
-      <div>
-        <Container>
-          <Row>
-            <SidebarTemplate mdFiles={mdFiles}/>
-          </Row>
-        </Container>
-      </div>
+	    <SidebarTemplate mdFiles={mdFiles}/>
     )
   }
 }

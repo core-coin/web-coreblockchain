@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { object, string, func } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { useLocation, withRouter } from 'react-router-dom'
 import {setLanguage} from '../reducer/actions'
 import { withNamespaces } from 'react-i18next'
 
@@ -10,6 +11,15 @@ function mapStateToProps(state) {
    language: state.index.language,
   }
 }
+
+function _ScrollToTop(props) {
+	const { pathname } = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+	return props.children
+}
+const ScrollToTop = withRouter(_ScrollToTop)
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   setLanguage,
@@ -34,14 +44,18 @@ const withLanguageHoc = (WrappedComponent) => {
       }
     }
 
+
+
     render() {
       return (
-        <WrappedComponent
-          {
-            ...this.props
-          }
-          language={this.props.match.params.lang}
-        />
+        <ScrollToTop>
+	        <WrappedComponent
+		        {
+			        ...this.props
+		        }
+		        language={this.props.match.params.lang}
+	        />
+        </ScrollToTop>
       )
     }
   }
