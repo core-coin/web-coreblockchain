@@ -8,7 +8,7 @@ sidebar: true
 ---
 
 
-## What is a blockchain?
+## What is a blockchain
 
 A blockchain is best described as a public database that is updated and shared across many computers in a network.
 
@@ -27,7 +27,7 @@ So to summarise, when you send ETH to someone, the transaction must be mined and
 Watch Austin walk you through blockchains:
 
 
-## What is Ethereum?
+## What is Ethereum
 
 In the Ethereum universe, there is a single, canonical computer (called the Ethereum Virtual Machine, or EVM) whose state everyone on the Ethereum network agrees on. Everyone who participates in the Ethereum network (every Ethereum node) keeps a copy of the state of this computer. Additionally, any participant can broadcast a request for this computer to perform arbitrary computation. Whenever such a request is broadcast, other participants on the network verify, validate, and carry out (“execute”) the computation. This causes a state change in the EVM, which is committed and propagated throughout the entire network.
 
@@ -35,7 +35,7 @@ Requests for computation are called transaction requests; the record of all tran
 
 Cryptographic mechanisms ensure that once transactions are verified as valid and added to the blockchain, they can’t be tampered with later; the same mechanisms also ensure that all transactions are signed and executed with appropriate “permissions” (no one should be able to send digital assets from Alice’s account, except for Alice herself).
 
-## What is ether?
+## What is ether
 
 The purpose of Ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction requests and to provide computational resources to the network.
 
@@ -43,7 +43,7 @@ Any participant who broadcasts a transaction request must also offer some amount
 
 The amount of ether paid is a function of the length of the computation. This also prevents malicious participants from intentionally clogging the network by requesting execution of infinite loops or resource-intense scripts, as these actors will be continually charged.
 
-## What are dapps?
+## What are dapps
 
 In practice, participants don’t write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM storage, and then users make requests for the execution of these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 

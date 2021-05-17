@@ -72,11 +72,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
 }
-@media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 970px;
-  }
-}
 
 .title {
   color: var(--white);

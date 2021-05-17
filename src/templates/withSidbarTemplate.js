@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react'
 import {object} from 'prop-types'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Container } from 'reactstrap'
 import BlogTemplate from './blogTemplate'
 
 import './md.scss'
@@ -56,22 +56,27 @@ export default class Template extends PureComponent{
     let filesList = Object.values(this.props.mdFiles)
 
     return(
-      <Row>
-        <Col sm='4' md='4' lg='3' className='tabs_docs'>
-          <Nav tabs>
-            {filesList.map(this.renderTabName)}
-          </Nav>
-        </Col>
-        <Col
-          sm='12'
-          md={{ size: 8, offset: 4 }}
-          lg={{ size: 9, offset: 3 }}
-          className='tabs_docs-body'>
-          <TabContent activeTab={activeTab}>
-            {filesList.map(this.renderTabContent)}
-          </TabContent>
-        </Col>
-      </Row>
+
+	    <div className='community'>
+		    <Container>
+			    <Row className='community_row'>
+				    <Col md='3' xl='4' className='hidden-xs community_menu'>
+					    <Nav tabs>
+						    {filesList.map(this.renderTabName)}
+					    </Nav>
+				    </Col>
+				    <Col
+					    md={{ size: 9 }}
+					    xl={{ size: 8 }}
+					    className='community_content'
+				    >
+					    <TabContent activeTab={activeTab}>
+						    {filesList.map(this.renderTabContent)}
+					    </TabContent>
+				    </Col>
+			    </Row>
+		    </Container>
+	    </div>
     )
   }
 } 

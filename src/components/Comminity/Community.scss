@@ -1,65 +1,101 @@
 .community {
-  color: var(--white);
-  padding: 20px 0 100px;
+  background-image: url(../../images/sphere.png);
+  background-size: 800px 800px;
+  background-repeat: no-repeat;
+  background-position: left 60px;
+  background-attachment: fixed;
+
+  background-color: var(--black);
+  position: relative;
+  &_row {
+    margin: 0;
+  }
   &_menu {
-    padding-top: 20px;
+    border-right: 1px solid var(--grey-darken);
+    padding-top: 196px;
     display: flex;
     justify-content: flex-end;
-    padding-right: 50px;
-    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
     left: 0;
-    ul {
-      list-style: none;
-      position: relative;
-      &::after {
-        position: absolute;
-        content: '';
-        display: block;
-        left: 0;
-        top: 0;
-        width: 1px;
-        height: 100%;
-        color: white;
-        z-index: 999;
+    height: 100vh;
+    @media (min-width: 991px) {
+      padding-right: 75px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      background-position: -160px 100px;
+    }
+    .nav-tabs {
+      color: var(--grey);
+      font-family: 'Red Hat Display';
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: -0.22px;
+      flex-direction: column;
+      border: none;
+      @media (max-width: 767px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        height: 42px;
+        font-size: 16px;
+        width: 100%;
       }
-      @media (min-width: 768px) and (max-width: 1024px){
-        padding-left: 0;
-      }
-      li {
-        padding-bottom: 10px;
-
-        &.active {
-          a {
-            color: var(--white);
-            &::before {
-              color: var(--green);
-            }
-          }
-        }
-        a {
-          color: var(--grey);
-          font-family: 'Red Hat Display';
-          font-size: 22px;
-          font-weight: 400;
-          letter-spacing: -0.22px;
-          flex-direction: column;
+      .nav-item {
+        display: flex;
+        align-items: center;
+        .nav-link {
+          border: none;
+          background-color: transparent;
           cursor: pointer;
-          &:hover {
-            color: var(--white);
-            text-decoration: none;
-            &::before {
-              color: var(--green);
+          color: var(--grey);
+          &::before{
+            @media (max-width: 767px) {
+              content: none;
             }
-          }
-          &::before {
             content: '\2022';
             color: transparent;
             font-weight: bold;
             display: inline-block;
             width: 1em;
           }
+          &.active {
+            color: var(--green);
+            @media (max-width: 767px) {
+              border-bottom: 2px solid var(--green);
+            }
+            &::before{
+              @media (max-width: 767px) {
+                content: none;
+              }
+              background: var(--green);
+              font-weight: bold;
+              display: inline-block;
+              width: 5px;
+              height: 5px;
+              box-shadow: -1px 2px 14px 3px #248b385c;
+              margin-right: 18px;
+              overflow: visible;
+              border-radius: 50%;
+              vertical-align: middle;
+            }
+          }
         }
       }
     }
   }
+  &_content {
+    flex: 1;
+    height: 100%;
+    padding: 125px 60px 80px;
+    position: relative;
+    @media (min-width: 768px) {
+      background-color: var(--black);
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding: 200px 60px 80px 41px;
+    }
+  }
 }
+
