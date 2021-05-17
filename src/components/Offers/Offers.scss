@@ -87,6 +87,9 @@
     }
     &__low {
       margin-top: 36px;
+      .text-center {
+        height: 99%;
+      }
     }
 
     &__lower {
@@ -142,10 +145,15 @@
       background: #1c1c24;
       display: block;
       line-height: 40px;
-      width: 121%;
-      height: 99%;
+      width: 117%;
+      height: 99.5%;
       padding: 56px 14px;
+      &:first-child {
+        height: 90%;
       }
+      }
+    
+    
        @media (max-width: 1199px) {
         &-box {
           width: 125%;
