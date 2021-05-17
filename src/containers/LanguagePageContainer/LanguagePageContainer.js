@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import MetaTags from 'react-meta-tags'
 
 import LanguagePage from '../../components/LanguagePage'
 
@@ -14,13 +15,20 @@ class LanguagePageContainer extends PureComponent {
 
     render() {
         const {
-            language,
+            language, t
         } = this.props
 
         return(
-            <LanguagePage
-                language={language}
-            />
+          <>
+	          <MetaTags>
+		          <title>
+			          {t('Language Support')}
+		          </title>
+	          </MetaTags>
+	          <LanguagePage
+		          language={language}
+	          />
+          </>
         )
     }
 }

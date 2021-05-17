@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 import { number, object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import MetaTags from 'react-meta-tags'
+
 import HeroHeader from '../../components/HeroHeader'
 import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
@@ -39,12 +41,18 @@ class PageContainer extends PureComponent {
             networkHashrate,
             difficulty,
             language,
+            t,
         } = this.props
 
         const isMobile = window.innerWidth <= 500;
 
         return(
             <>
+              <MetaTags>
+                <title>
+                  {t('Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.')}
+                </title>
+              </MetaTags>
                 <HeroHeader language={language}/>
                 {isMobile? <OffersMobile /> : <Offers />}
                 <Tabs />

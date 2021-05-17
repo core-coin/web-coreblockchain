@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { Row, Container } from 'reactstrap'
 import { string } from 'prop-types'
 import Button from '../Button'
+import MetaTags from 'react-meta-tags'
 
 import './PageNotFound.scss'
 
@@ -11,10 +12,15 @@ export default class PageNotFound extends PureComponent {
 	}
 
   render() {
-	  const { language } = this.props
+	  const { language, } = this.props
 
     return (
       <>
+	      <MetaTags>
+		      <title>
+			      404 page not found
+		      </title>
+	      </MetaTags>
         <div className='pageNotFound'>
           <Row>
             <Container>
