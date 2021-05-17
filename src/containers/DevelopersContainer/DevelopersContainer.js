@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react'
+import MetaTags from 'react-meta-tags'
+
 import Developers from '../../components/Developers'
 
 class DevelopersContainer extends PureComponent {
@@ -8,8 +10,17 @@ class DevelopersContainer extends PureComponent {
 
     render() {
 
+        const { t } = this.props
+
         return(
-            <Developers />
+          <>
+	          <MetaTags>
+		          <title>
+			          {t('connect with dev community')}
+		          </title>
+	          </MetaTags>
+	          <Developers />
+          </>
         )
     }
 }
