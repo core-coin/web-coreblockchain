@@ -114,6 +114,7 @@
     &.open {
       overflow-x: visible;
       width: 100%;
+      height: 100vh;
     }
     .container {
       flex-direction: column;
