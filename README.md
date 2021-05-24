@@ -29,4 +29,4 @@ Please, make sure to sign your commits.
 
 ## License
 
-This documentation is licensed under the CC0 1.0 Universal License - see the [LICENSE](LICENSE.md) file for details.
+This website is licensed under the CORE License - see the [LICENSE](LICENSE.md) file for details.
