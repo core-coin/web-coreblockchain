@@ -91,14 +91,14 @@ class GetStarted extends PureComponent {
       <div className='getStarted'>
         <Container>
           <Row className='getStarted_row'>
-            <Col md='3' xl='4' className='hidden-xs getStarted_menu'>
-              <div className=''>
+            <Col md='3' className='hidden-xs getStarted_menu'>
+              <div>
                 <ul>{list.map(this.renderLinks)}</ul>
               </div>
             </Col>
             <Col
               md={{ size: 9 }}
-              xl={{ size: 8 }}
+              xl={{ size: 8, offset:1 }}
               className='getStarted_content'
             >
               <Row>

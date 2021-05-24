@@ -76,10 +76,10 @@ body {
 .title {
   color: var(--white);
   font-family: Montserrat-Medium;
-  font-size: 33px;
+  font-size: 44px;
   font-weight: 700;
   letter-spacing: -0.8px;
-  line-height: 37px;
+  line-height: 48px;
   text-transform: uppercase;
 }
 
@@ -90,10 +90,10 @@ body {
 .preTitle {
   color: var(--grey-lighter);
   font-family: Montserrat-Regular;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
-  letter-spacing: 4.1px;
-  line-height: 23px;
+  letter-spacing: 6.3px;
+  line-height: 22px;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -149,6 +149,11 @@ em {
   }
 }
 
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1295px;
+  }
+}
 :root {
   --green: #46b549;
   --green-darken: #42b649;

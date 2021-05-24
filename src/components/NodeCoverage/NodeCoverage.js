@@ -71,7 +71,7 @@ class NodeCoverage extends PureComponent{
                                        <div className='text-center'>
                                        <span>{t('Network Powered by')}:</span>
                                        <div className='text-center nodeCoverage_block-img'>
-                                            <Luna width={193} height={46}/>
+                                            <Luna />
                                        </div>
                                        </div>
                                     </div>

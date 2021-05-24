@@ -2,7 +2,7 @@
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black-darken);
   display: flex;
-  padding: 135px 0 220px;
+  padding: 8.1% 0 13.2%;
   @media (max-width: 991px) {
     background-image: url(../../images/sphere_with_glow.webp);
     background-repeat: no-repeat;
@@ -20,45 +20,47 @@
   &_background {
     @media (min-width: 991px) {
     background-image: url(../../images/sphere_with_glow.webp);
-    background-size: 730px;
+    bbackground-size: 924px 834px;
     background-repeat: no-repeat;
     padding-bottom: 15%;
-    height: 700px;
+    height: 834px;
     position: absolute;
-    top: -21px;
-    right: 117px;
-    width: 700px;     
+    top: -45px;
+    width: 924px;
+    left: -378px;
     }
   }
   .title {
-    margin-bottom: 14px;
+    margin-bottom: 21px;
+    padding-top: 9px;
   }
   .description {
-    font-size: 17px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 32px;
   }
   &_block {
     margin-top: 11%;
     border-radius: 14px;
     border: 1px solid var(--grey-darken);
     background-color: rgba(28, 28, 36, 0.9);
-    padding: 6% 9%;
+    padding: 6.1% 10.3% 5.3%;
     h4 {
       color: var(--white);
       font-family: Montserrat-Bold;
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.6px;
       text-transform: uppercase;
-      margin-bottom: 13px;
+      margin-bottom: 17px;
+      line-height: 24px;
     }
     p {
       color: var(--grey);
       font-family: 'Red Hat Display';
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 16px;
-      margin-bottom: 19px;
+      line-height: 22px;
+      margin-bottom: 26px;
     }
   }
 }

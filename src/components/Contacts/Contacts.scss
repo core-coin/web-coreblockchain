@@ -9,33 +9,33 @@
     border: 1px solid var(--grey-darken);
     background-color: rgba(25, 25, 32, 0.5);
     border-radius: 15px;
-    padding: 7.5% 7.7% 4%;
-    height: 481px;
+    padding: 8% 7.7% 4%;
     h2 {
       text-transform: uppercase;
       font-family: Montserrat-Bold;
-      font-size: 25px;
+      font-size: 32px;
       letter-spacing: -1px;
       line-height: 36px;
       color: var(--white);
-      margin-bottom: 0;
+      margin-bottom: 13px;
     }
     &__block {
-      padding: 14px 0 5px;
+      padding: 14px 0;
       p {
         color: var(--white);
-        font-family: Montserrat-Medium;
-        font-size: 16px;
+        font-family: Montserrat-Bold;
+        font-size: 20px;
         letter-spacing: -0.6px;
         margin-bottom: 0;
+        line-height: 24px;
       }
       a {
         color: var(--grey);
         font-family: 'Red Hat Display';
-        font-size: 17px;
+        font-size: 22px;
         font-weight: 400;
         letter-spacing: -0.22px;
-        line-height: 20px;
+        line-height: 28px;
         display: block;
       }
     }
@@ -51,19 +51,19 @@
     }
   }
   &_right {
-    padding: 3.9% 0 0 0.8%;
+    padding: 4% 0 0 0.8%;
     @media (max-width: 767px) {
       padding: 0 15px;
     }
     .title {
-      margin-bottom: 1.2rem;
+      margin-bottom: 28px;
       @media (max-width: 767px) {
         margin: 15px 0;
       }
     }
     .description {
-      font-size: 19px;
-      line-height: 24px;
+      font-size: 22px;
+      line-height: 32px;
       letter-spacing: -1.3px;
       @media (max-width: 767px) {
         font-size: 16px;
@@ -72,15 +72,15 @@
     }
     &__info {
       display: flex;
-      padding-top: 1rem;
+      padding-top: 31px;
       justify-content: space-between;
       @media (max-width: 767px) {
         flex-direction: column;
       }
       &-block {
         border-left: 2px solid var(--green);
-        padding-left: 14px;
-        height: 37px;
+        padding-left: 20px;
+        height: 48px;
         margin-top: 9px;
         @media (max-width: 767px) {
           margin-top: 17px;
@@ -91,28 +91,36 @@
         p {
           color: var(--grey);
           font-family: 'Red Hat Display';
-          font-size: 11px;
+          font-size: 15px;
           font-weight: 400;
-          line-height: 1;
-          margin-bottom: 0;
+          line-height: 13px;
+          margin-bottom: 4px;
         }
         span {
           color: var(--white);
-          font-size: 25px;
+          font-size: 32px;
           font-weight: 900;
           letter-spacing: -0.96px;
-          line-height: 1.2;
+          line-height:39px;
           font-family: 'Montserrat-Bold';
         }
       }
     }
     &__button {
-      margin-top: 4rem;
+      margin-top: 87px;
       display: flex;
+      .button {
+        &.size_normal {
+          width: 300px;
+        }
+      }
       @media (max-width: 767px) {
         margin: 30px 0;
         justify-content: space-between;
         .button {
+          &.size_normal {
+            width: auto;
+          }
           &:first-child {
             margin-right: 10px;
           }
