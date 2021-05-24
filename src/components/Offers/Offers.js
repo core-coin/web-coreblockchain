@@ -33,12 +33,12 @@ class Offers extends PureComponent{
 
     handleMouseEnter = e => {
         this.setState({
-          x0: e.screenX - 250 + 'px',
+          x0: e.screenX - 130 + 'px',
           y0: e.screenY - 250  + 'px',
           x1: e.screenX - 400  + 'px',
           y1: e.screenY - 150 + 'px',
           x2: e.screenX - 650 + 'px',
-          x3: e.screenX - 1000 + 'px',
+          x3: e.screenX - 1100 + 'px',
           x4: e.screenX - 1750 + 'px',
           x5: e.screenX - 2100 + 'px',
           x6: e.screenX - 2500 + 'px',
@@ -133,7 +133,7 @@ class Offers extends PureComponent{
                                             <div className='offers_block' onMouseMove={this.handleMouseEnter.bind(this)}
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={isLarge ? style.style6 : style.style2}></div>
-                                                <div className='offers_block-box text-center'>
+                                                <div className='offers_block-box text-center low-height'>
                                                     <Security />
                                                     <h4>{t('Security')}</h4>
                                                     <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>

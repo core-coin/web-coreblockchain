@@ -88,9 +88,6 @@
     }
     &__low {
       margin-top: 49px;
-      .text-center {
-        height: 99%;
-      }
     }
 
     &__lower {
@@ -105,7 +102,11 @@
     &__higher {
       margin-top: -50px;
     }
-
+    
+    .low-height {
+      height: 99%;
+    }
+    
     @media (max-width: 767px) {
       display: flex !important;
       height: 201px;
@@ -146,8 +147,8 @@
       background: #1c1c24;
       display: block;
       line-height: 40px;
-      width: 117%;
-      height: 99%;
+      width: 302px;
+      height: 99.5%;
       padding: 29% 12% 23%;
       &:first-child {
         height: 90%;
