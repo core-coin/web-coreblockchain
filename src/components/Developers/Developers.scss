@@ -5,7 +5,7 @@
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 45%;
-  padding: 10% 0;
+  padding: 10.2% 0;
   @media (max-width: 767px) {
     border-top: none;
     background-color: var(--black-darken);
@@ -19,18 +19,24 @@
     }
   }
   .preTitle {
+    padding-left: 45px;
+    margin-bottom: 22px;
     @media (max-width: 767px) {
       margin-top: 24px;
       margin-bottom: 10px;
     }
   }
+  .title {
+    padding-left: 45px;
+  }
+
   .tabs_header {
     @media (max-width: 767px) {
       border-bottom: 1px solid #434359;
     }
     .nav-tabs {
       border-bottom: 1px solid rgba(99, 99, 120, 0.2);
-      margin-top: 43px;
+      margin-top: 64px;
       display: flex;
       justify-content: space-between;
       @media (max-width: 767px) {
@@ -47,12 +53,13 @@
       .nav-link {
         color: var(--gray);
         font-family: Montserrat-Medium;
-        font-size: 14px;
+        font-size: 20px;
+        line-height: 24px;
         font-weight: 700;
         letter-spacing: 0.4px;
         cursor: pointer;
         border: none;
-        padding: 0 20px 16px 20px;
+        padding: 0 20px 24px 20px;
         text-transform: uppercase;
         @media (max-width: 767px) {
           font-size: 16px;
@@ -77,18 +84,20 @@
   }
   .tab-content {
     .tab-pane {
-      margin-top: 19px;
+      padding-left: 45px;
+      margin-top: 33px;
       @media (max-width: 767px) {
         margin-top: 24px;
+        padding-left: 0;
       }
       p {
         color: var(--grey);
         font-family: 'Red Hat Display';
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 400;
         letter-spacing: -0.22px;
-        line-height: 25px;
-        margin-bottom: 50px;
+        line-height: 32px;
+        margin-bottom: 69px;
         @media (max-width: 767px) {
           font-size: 16px;
           line-height: 22px;

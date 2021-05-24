@@ -1,25 +1,25 @@
 .select_label {
-  margin-top: 12px;
+  margin-top: 28px;
   color: var(--grey);
   font-family: 'Red Hat Display';
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 30px;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
   @media (max-width: 767px) {
     margin-top: 23px;
   }
 }
 .select_input {
   padding: 0 20px;
-  margin-bottom: 15px;
-  height: 32px;
+  margin-bottom: 20px;
+  height: 43px;
   border-radius: 5px;
   border: 1px solid var(--gray-darken);
   background-color: var(--black-lighter);
   color: var(--white);
   font-family: 'Red Hat Display';
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   -webkit-appearance: none;

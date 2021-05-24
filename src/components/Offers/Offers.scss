@@ -1,6 +1,6 @@
 .offers {
   background-color: var(--black);
-  padding: 4% 0 2%;
+  padding: 6.2% 0 2%;
   @media (max-width: 1440px){
     padding: 5% 0 2%;
   }
@@ -34,11 +34,12 @@
     .preTitle {
       padding-top: 80px;
       margin-left: 5px;
+      margin-bottom: 26px;
     }
 
     .preTitle,
     .title {
-      padding-left: 15px;
+      padding-left: 41px;
     }
 
     .title {
@@ -50,13 +51,13 @@
     }
 
     .title {
-      margin-bottom: 85px;
+      margin-bottom: 115px;
     }
   }
 
   &_block {
     position: relative;
-    height: 226px;
+    height: 300px;
     width: 100%;
     border-radius: 6px;
     border: 1px solid var(--grey-darken);
@@ -86,7 +87,7 @@
       transition: width 0.9s ease, height 0.9s ease;
     }
     &__low {
-      margin-top: 36px;
+      margin-top: 49px;
       .text-center {
         height: 99%;
       }
@@ -147,7 +148,7 @@
       line-height: 40px;
       width: 117%;
       height: 99.5%;
-      padding: 56px 14px;
+      padding: 29% 12% 23%;
       &:first-child {
         height: 90%;
       }
@@ -163,19 +164,19 @@
     h4 {
       color: var(--white);
       font-family: Montserrat-Regular;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.6px;
-      margin-top: 14px;
+      margin-top: 24px;
       margin-bottom: 3px;
     }
 
     p {
       color: var(--grey);
       font-family: 'Red Hat Display';
-      font-size: 11px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 16px;
+      line-height: 22px;
       text-align: center;
     }
   }

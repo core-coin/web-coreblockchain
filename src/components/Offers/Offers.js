@@ -123,7 +123,7 @@ class Offers extends PureComponent{
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={isLarge ? style.style5 : style.style1}></div>
                                                <div className='offers_block-box text-center'>
-                                                <Decentralization width={37} height={37}/>
+                                                <Decentralization />
                                                     <h4>{t('Decentralization')}</h4>
                                                     <p>{t('Core distributed computing platform is reliable, secure and available for everyone.')}</p>
                                                </div>
@@ -134,7 +134,7 @@ class Offers extends PureComponent{
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={isLarge ? style.style6 : style.style2}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Security width={29} height={42}/>
+                                                    <Security />
                                                     <h4>{t('Security')}</h4>
                                                     <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
                                                 </div>
@@ -154,7 +154,7 @@ class Offers extends PureComponent{
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={isLarge ? style.style7 : style.style3}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Interoperability width={37} height={37}/>
+                                                    <Interoperability />
                                                     <h4>{t('Interoperability')}</h4>
                                                     <p>{t('Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.')}</p>
                                                 </div>
@@ -166,7 +166,7 @@ class Offers extends PureComponent{
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={isLarge ? style.style8 : style.style4}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Coverage  width={39} height={56}/>
+                                                    <Coverage />
                                                     <h4>{t('Coverage')}</h4>
                                                     <p>{t('Borderless network anywhere in the World run on various networks.')}</p>
                                                 </div>
@@ -178,7 +178,7 @@ class Offers extends PureComponent{
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={isLarge ? style.style7 : style.style3}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Persistence  width={50} height={45}/>
+                                                    <Persistence />
                                                     <h4>{t('Persistence')}</h4>
                                                     <p>{t('Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
                                                 </div>
@@ -190,7 +190,7 @@ class Offers extends PureComponent{
                                              onMouseLeave={this.handleMouseLeave.bind(this)}>
                                             <div className='before' style={isLarge ? style.style8 : style.style4}></div>
                                                 <div className='offers_block-box text-center'>
-                                                    <Intelligence  width={44} height={44}/>
+                                                    <Intelligence />
                                                     <h4>{t('Swarm Intelligence')}</h4>
                                                     <p>{t('Core Blockchain is using a self-organized system — Boids — to transact and route the data.')}</p>
                                                 </div>
