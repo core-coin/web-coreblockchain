@@ -74,12 +74,14 @@ class HeaderNavbar extends PureComponent {
     this.setState({
       isMenuOpen: true,
     })
+    document.body.style.overflow = 'hidden'
   }
 
   onCloseSidebar = () => {
     this.setState({
       isMenuOpen: false,
     })
+    document.body.style.overflow = ''
   }
 
   renderNavbar = (item, index) => (
