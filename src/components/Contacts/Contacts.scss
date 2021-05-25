@@ -118,15 +118,12 @@
         margin: 30px 0;
         justify-content: space-between;
         .button {
-          &.size_normal {
-            width: auto;
-          }
           &:first-child {
             margin-right: 10px;
           }
           &.size_normal {
             min-width: auto;
-            letter-spacing: 1.2px;
+            letter-spacing: normal;
           }
         }
       }
