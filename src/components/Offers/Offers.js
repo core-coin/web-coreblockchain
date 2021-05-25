@@ -22,6 +22,7 @@ class Offers extends PureComponent{
             y0: 0,
             x1: 0,
             y1: 0,
+            y2: 0,
             x2: 0,
             x3: 0,
             x4: 0,
@@ -36,7 +37,8 @@ class Offers extends PureComponent{
           x0: e.screenX - 130 + 'px',
           y0: e.screenY - 250  + 'px',
           x1: e.screenX - 400  + 'px',
-          y1: e.screenY - 150 + 'px',
+          y1: e.screenY - 180 + 'px',
+          y2: e.screenY - 0 + 'px',
           x2: e.screenX - 650 + 'px',
           x3: e.screenX - 1100 + 'px',
           x4: e.screenX - 1750 + 'px',
@@ -63,7 +65,7 @@ class Offers extends PureComponent{
     
     render(){
         const { t } = this.props
-        let { x0, y0, x1, y1, x2, x3, x4, x5, x6, x7 } = this.state
+        let { x0, y0, x1, y1, y2, x2, x3, x4, x5, x6, x7 } = this.state
         const style = {
           style1: {
             top: y0,
@@ -96,6 +98,10 @@ class Offers extends PureComponent{
           style8: {
             top: y1,
             left: x7,
+          },
+          style9: {
+            top: y2,
+            left: x6,
           },
         }
         const isLarge = window.innerWidth >= 1740
@@ -152,7 +158,7 @@ class Offers extends PureComponent{
                                             <div className='offers_block offers_block__lower' 
                                             onMouseMove={this.handleMouseEnter.bind(this)}
                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={isLarge ? style.style7 : style.style3}></div>
+                                            <div className='before' style={isLarge ? style.style9 : style.style3}></div>
                                                 <div className='offers_block-box text-center'>
                                                     <Interoperability />
                                                     <h4>{t('Interoperability')}</h4>
