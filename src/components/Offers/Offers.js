@@ -23,6 +23,7 @@ class Offers extends PureComponent{
             x1: 0,
             y1: 0,
             y2: 0,
+            y3: 0,
             x2: 0,
             x3: 0,
             x4: 0,
@@ -34,17 +35,29 @@ class Offers extends PureComponent{
 
     handleMouseEnter = e => {
         this.setState({
-          x0: e.screenX - 130 + 'px',
-          y0: e.screenY - 250  + 'px',
-          x1: e.screenX - 400  + 'px',
-          y1: e.screenY - 180 + 'px',
-          y2: e.screenY - 0 + 'px',
-          x2: e.screenX - 650 + 'px',
-          x3: e.screenX - 1100 + 'px',
-          x4: e.screenX - 1750 + 'px',
-          x5: e.screenX - 2100 + 'px',
-          x6: e.screenX - 2500 + 'px',
-          x7: e.screenX - 2800 + 'px'
+        //   x0: e.screenX - 0 + 'px',
+        //   y0: e.screenY - 250  + 'px',
+        //   x1: e.screenX - 400  + 'px',
+        //   y1: e.screenY - 180 + 'px',
+        //   y2: e.screenY - 0 + 'px',
+        //   x2: e.screenX - 650 + 'px',
+        //   x3: e.screenX - 1100 + 'px',
+        //   x4: e.screenX - 1750 + 'px',
+        //   x5: e.screenX - 2100 + 'px',
+        //   x6: e.screenX - 2500 + 'px',
+        //   x7: e.screenX - 2800 + 'px'
+        x0: e.screenX - 120 + 'px',
+        y0: e.screenY - 250  + 'px',
+        x1: e.screenX - 400  + 'px',
+        y1: e.screenY - 180 + 'px',
+        y2: e.screenY - 0 + 'px',
+        y3: e.screenY - 60 + 'px',
+        x2: e.screenX - 650 + 'px',
+        x3: e.screenX - 1100 + 'px',
+        x4: e.screenX - 1850 + 'px',
+        x5: e.screenX - 2200 + 'px',
+        x6: e.screenX - 2500 + 'px',
+        x7: e.screenX - 2800 + 'px',
         })
       }
 
@@ -54,6 +67,8 @@ class Offers extends PureComponent{
           y0: 0,
           x1: 0,
           y1: 0,
+          y2: 0,
+          y3: 0,
           x2: 0,
           x3: 0,
           x4: 0,
@@ -65,7 +80,7 @@ class Offers extends PureComponent{
     
     render(){
         const { t } = this.props
-        let { x0, y0, x1, y1, y2, x2, x3, x4, x5, x6, x7 } = this.state
+        let { x0, y0, x1, y1, y2, y3, x2, x3, x4, x5, x6, x7 } = this.state
         const style = {
           style1: {
             top: y0,
@@ -96,7 +111,7 @@ class Offers extends PureComponent{
             left: x6,
           },
           style8: {
-            top: y1,
+            top: y3,
             left: x7,
           },
           style9: {
