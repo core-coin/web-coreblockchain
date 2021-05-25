@@ -98,7 +98,7 @@ class GetStarted extends PureComponent {
             </Col>
             <Col
               md={{ size: 9 }}
-              xl={{ size: 8, offset:1 }}
+              xl={{ size: 9}}
               className='getStarted_content'
             >
               <Row>
