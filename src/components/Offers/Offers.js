@@ -15,111 +15,27 @@ import Intelligence from '../SvgIcon/icons/Intelligence'
 import './Offers.scss'
 
 class Offers extends PureComponent{
-    constructor(props) {
-        super(props)
-        this.state = {
-            x0: 0,
-            y0: 0,
-            x1: 0,
-            y1: 0,
-            y2: 0,
-            y3: 0,
-            x2: 0,
-            x3: 0,
-            x4: 0,
-            x5: 0,
-            x6: 0,
-            x7: 0
-        }
-    }
 
-    handleMouseEnter = e => {
-        this.setState({
-        //   x0: e.screenX - 0 + 'px',
-        //   y0: e.screenY - 250  + 'px',
-        //   x1: e.screenX - 400  + 'px',
-        //   y1: e.screenY - 180 + 'px',
-        //   y2: e.screenY - 0 + 'px',
-        //   x2: e.screenX - 650 + 'px',
-        //   x3: e.screenX - 1100 + 'px',
-        //   x4: e.screenX - 1750 + 'px',
-        //   x5: e.screenX - 2100 + 'px',
-        //   x6: e.screenX - 2500 + 'px',
-        //   x7: e.screenX - 2800 + 'px'
-        x0: e.screenX - 120 + 'px',
-        y0: e.screenY - 250  + 'px',
-        x1: e.screenX - 400  + 'px',
-        y1: e.screenY - 180 + 'px',
-        y2: e.screenY - 0 + 'px',
-        y3: e.screenY - 60 + 'px',
-        x2: e.screenX - 650 + 'px',
-        x3: e.screenX - 1100 + 'px',
-        x4: e.screenX - 1850 + 'px',
-        x5: e.screenX - 2200 + 'px',
-        x6: e.screenX - 2500 + 'px',
-        x7: e.screenX - 2800 + 'px',
-        })
-      }
+	componentDidMount(){
 
-    handleMouseLeave = e => {
-        this.setState({
-          x0: 0,
-          y0: 0,
-          x1: 0,
-          y1: 0,
-          y2: 0,
-          y3: 0,
-          x2: 0,
-          x3: 0,
-          x4: 0,
-          x5: 0,
-          x6: 0,
-          x7: 0
-        })
+
+		document.querySelectorAll('.offers_block').forEach(
+      element => {
+          element.onmousemove = (e) => {
+
+	          const x = e.offsetX - e.target.offsetLeft
+	          const y = e.offsetY - e.target.offsetTop
+
+	          element.style.setProperty('--x', `${ x }px`)
+	          element.style.setProperty('--y', `${ y }px`)
+
+          }
       }
+    )
+	}
     
     render(){
         const { t } = this.props
-        let { x0, y0, x1, y1, y2, y3, x2, x3, x4, x5, x6, x7 } = this.state
-        const style = {
-          style1: {
-            top: y0,
-            left: x0,
-          },
-          style2: {
-            top: y0,
-            left: x1,
-          },
-          style3: {
-            top: y1,
-            left: x2,
-          },
-          style4: {
-            top: y1,
-            left: x3,
-          },
-          style5: {
-            top: y0,
-            left: x4,
-          },
-          style6: {
-            top: y0,
-            left: x5,
-          },
-          style7: {
-            top: y1,
-            left: x6,
-          },
-          style8: {
-            top: y3,
-            left: x7,
-          },
-          style9: {
-            top: y2,
-            left: x6,
-          },
-        }
-        const isLarge = window.innerWidth >= 1740
 
         return(
             
@@ -139,23 +55,22 @@ class Offers extends PureComponent{
                                 <Col sm='12'>
                                     <Row>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block offers_block__low' 
-                                            onMouseMove={this.handleMouseEnter.bind(this)}
-                                            onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={isLarge ? style.style5 : style.style1}></div>
+                                            <div className='offers_block offers_block__low'>
                                                <div className='offers_block-box text-center'>
-                                                <Decentralization />
+                                                    <div>
+	                                                    <Decentralization />
+                                                    </div>
                                                     <h4>{t('Decentralization')}</h4>
                                                     <p>{t('Core distributed computing platform is reliable, secure and available for everyone.')}</p>
                                                </div>
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block' onMouseMove={this.handleMouseEnter.bind(this)}
-                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={isLarge ? style.style6 : style.style2}></div>
+                                            <div className='offers_block'>
                                                 <div className='offers_block-box text-center low-height'>
-                                                    <Security />
+                                                    <div>
+	                                                    <Security />
+                                                    </div>
                                                     <h4>{t('Security')}</h4>
                                                     <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
                                                 </div>
@@ -170,48 +85,44 @@ class Offers extends PureComponent{
                                 <Col sm='12'>
                                     <Row>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block offers_block__lower' 
-                                            onMouseMove={this.handleMouseEnter.bind(this)}
-                                            onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={isLarge ? style.style9 : style.style3}></div>
+                                            <div className='offers_block offers_block__lower'>
                                                 <div className='offers_block-box text-center'>
-                                                    <Interoperability />
+                                                    <div>
+	                                                    <Interoperability />
+                                                    </div>
                                                     <h4>{t('Interoperability')}</h4>
                                                     <p>{t('Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block' 
-                                             onMouseMove={this.handleMouseEnter.bind(this)}
-                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={isLarge ? style.style8 : style.style4}></div>
+                                            <div className='offers_block'>
                                                 <div className='offers_block-box text-center'>
-                                                    <Coverage />
+                                                    <div>
+	                                                    <Coverage />
+                                                    </div>
                                                     <h4>{t('Coverage')}</h4>
                                                     <p>{t('Borderless network anywhere in the World run on various networks.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block'
-                                            onMouseMove={this.handleMouseEnter.bind(this)}
-                                            onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={isLarge ? style.style7 : style.style3}></div>
+                                            <div className='offers_block'>
                                                 <div className='offers_block-box text-center'>
-                                                    <Persistence />
+                                                    <div>
+	                                                    <Persistence />
+                                                    </div>
                                                     <h4>{t('Persistence')}</h4>
                                                     <p>{t('Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
                                         <Col sm='12' lg='6' className='zIndex'>
-                                            <div className='offers_block offers_block__high'
-                                             onMouseMove={this.handleMouseEnter.bind(this)}
-                                             onMouseLeave={this.handleMouseLeave.bind(this)}>
-                                            <div className='before' style={isLarge ? style.style8 : style.style4}></div>
+                                            <div className='offers_block offers_block__high'>
                                                 <div className='offers_block-box text-center'>
-                                                    <Intelligence />
+                                                   <div>
+	                                                   <Intelligence />
+                                                   </div>
                                                     <h4>{t('Swarm Intelligence')}</h4>
                                                     <p>{t('Core Blockchain is using a self-organized system — Boids — to transact and route the data.')}</p>
                                                 </div>
