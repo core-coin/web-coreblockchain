@@ -57,34 +57,34 @@
 
   &_block {
     position: relative;
-    height: 300px;
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid var(--grey-darken);
-    background: var(--black-lighter);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    margin-bottom: 19px;
     appearance: none;
+    margin-bottom: 19px;
     outline: none;
     overflow: hidden;
     transition: 0.3s;
-    
-     .before {
-      --size: 0;
-      --x: 0;
-      --y: 0;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: var(--size);
-      height: var(--size); 
-      background: radial-gradient(circle closest-side at 200px 200px,#2ee533, #303040);
-      transform: translate(-50%, -50%);
-      transition: width 0.9s ease, height 0.9s ease;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: transparent;
+    padding: 1px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid transparent;
+
+    @media (min-width: 768px) and (max-width: 1025px)  {
+      width: 100%;
+    }
+     &::before {
+       --size: 0;
+
+       content: '';
+       position: absolute;
+       left: var(--x);
+       top: var(--y);
+       width: var(--size);
+       height: var(--size);
+       background: radial-gradient(circle closest-side at 200px 200px,#2ee533, #303040);
+       transform: translate(-50%, -50%);
+       transition: width 0.9s ease, height 0.9s ease;
     }
     &__low {
       margin-top: 49px;
@@ -102,16 +102,13 @@
     &__higher {
       margin-top: -50px;
     }
-    
-    .low-height {
-      height: 99%;
-      @media(min-width: 2000px) {
-        width: 298px;
-      }
-    }
-    
+
     @media (max-width: 767px) {
       display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
       height: 201px;
       border-radius: 14px;
       width: calc(100% - 14px) !important;
@@ -131,42 +128,28 @@
       &__high {
         margin-top: 0;
       }
-  
+
     }
 
     &:hover {
-      border: 1px solid transparent;
-
       .before {
-        --size: 500px;
+        --size: 400px;
 
       }
     }
 
     &-box {
+      display: flex;
+      flex-direction: column;
       border-radius: 6px;
       position: relative;
       pointer-events: none;
       background: #1c1c24;
-      display: block;
       line-height: 40px;
-      width: 302px;
-      height: 99.5%;
-      padding: 29% 12% 23%;
-      &:first-child {
-        height: 90%;
-      }
-      @media (min-width: 1600px) {
-        width: 300px;
-        height: 99%;
-      }
-      }
-    
-    
-       @media (max-width: 1199px) {
-        &-box {
-          width: 125%;
-        }
+      padding: 72px 25px;
+      border: 1px solid var(--grey-darken);
+      height: calc(100% - 1px);
+      width: 100%;
     }
 
     h4 {
@@ -227,5 +210,20 @@
         }
       }
     }
+  }
+}
+
+.offers_block {
+
+  &:hover {
+    &::before {
+      --size: 400px;
+    }
+  }
+  &-box {
+
+  }
+  &::before {
+
   }
 }
