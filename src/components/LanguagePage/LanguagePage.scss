@@ -20,10 +20,9 @@
     line-height: 28px;
     padding: 36px 0 15px;
     color: var(--white);
-    font-family: 'Red Hat Display';
+    font-family: var(--font-secondary);
     font-size: 17px;
-    font-weight: 400;
-    letter-spacing: -0.5px;
+    font-weight: var(--font-secondary-weight-normal);
     @media (max-width: 767px) {
       padding: 32px 0;
     }
@@ -66,17 +65,16 @@
       border-radius: 6px;
       p {
         color: var(--white);
-        font-family: Montserrat-Regular;
+        font-family: var(--font-primary);
+        font-weight: var(--font-primary-weight-normal);
         font-size: 16px;
-        font-weight: 700;
-        letter-spacing: -0.6px;
         margin-bottom: 0;
       }
       span {
         color: var(--grey);
-        font-family: 'Red Hat Display';
+        font-family: var(--font-secondary);
         font-size: 15px;
-        font-weight: 400;
+        font-weight: var(--font-secondary-weight-normal);
         line-height: 22px;
         display: block;
       }
@@ -92,11 +90,11 @@
     padding-inline-start: 30px;
     li {
       padding: 0 0 15px 10px;
-     &::marker { 
+     &::marker {
       color: var(--white);
-      font-family: 'Red Hat Display';
+      font-family: var(--font-secondary);
       font-size: 22px;
-      font-weight: 400;
+      font-weight: var(--font-secondary-weight-normal);
     }
       p {
         margin-bottom: 0;

@@ -19,7 +19,7 @@ export default class Button extends PureComponent {
         onClick: func,
         icon: node,
         hover: bool,
-        margin: oneOf(['10', '35']),
+        margin: oneOf(['15', '35']),
         mobileFullWidth: bool,
     }
 
@@ -33,7 +33,7 @@ export default class Button extends PureComponent {
         icon: null,
         hover: true,
         download: false,
-        margin: '10',
+        margin: '15',
         mobileFullWidth: false,
     }
 
@@ -76,7 +76,7 @@ export default class Button extends PureComponent {
                 </Link>
             )
         }
-        
+
         if (download) {
             return (
                 <a className={className} href={href} download={download}>

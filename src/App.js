@@ -3,8 +3,8 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import Store, { history } from './store'
-import createSearchIndex from './reducer/search'
-import createMarkdownIndex from './reducer/mdFiles'
+import CreateSearchIndex from './reducer/search'
+import CreateMarkdownIndex from './reducer/mdFiles'
 
 import Layout from './components/Layout'
 
@@ -15,11 +15,11 @@ import GetStartedContainer from './containers/GetStartedContainer/GetStartedCont
 import DevelopersContainer from './containers/DevelopersContainer'
 import OverviewContainer from './containers/OverviewContainer'
 import CommunityContainer from './containers/CommunityContainer'
-import withLanguageHoc from './containers/withLanguageHoc'
+import WithLanguageHoc from './containers/withLanguageHoc'
 
 const store = Store()
-let mdFilesPromise = createMarkdownIndex(store)
-createSearchIndex(store, mdFilesPromise)
+let mdFilesPromise = CreateMarkdownIndex(store)
+CreateSearchIndex(store, mdFilesPromise)
 
 
 export default class App extends PureComponent {
@@ -33,15 +33,15 @@ export default class App extends PureComponent {
         <ConnectedRouter history={history}>
           <Layout>
             <Switch>
-              <Route path='/:lang/language' component={withLanguageHoc(LanguagePageContainer)} />
-              <Route path='/:lang/language-program' component={withLanguageHoc(LanguageTranslatePageContainer)} />
-              <Route path='/:lang/get-started' component={withLanguageHoc(GetStartedContainer)} />
-              <Route path='/:lang/developers' component={withLanguageHoc(DevelopersContainer)} />
-              <Route path='/:lang/community' component={withLanguageHoc(CommunityContainer)} />
-              <Route path='/:lang/*' component={withLanguageHoc(OverviewContainer)}/>
+              <Route path='/:lang/language' component={WithLanguageHoc(LanguagePageContainer)} />
+              <Route path='/:lang/language-program' component={WithLanguageHoc(LanguageTranslatePageContainer)} />
+              <Route path='/:lang/get-started' component={WithLanguageHoc(GetStartedContainer)} />
+              <Route path='/:lang/developers' component={WithLanguageHoc(DevelopersContainer)} />
+              <Route path='/:lang/community' component={WithLanguageHoc(CommunityContainer)} />
+              <Route path='/:lang/*' component={WithLanguageHoc(OverviewContainer)}/>
               <Route
                 exact
-                path="/:lang/" component={withLanguageHoc(PageContainer)}
+                path="/:lang/" component={WithLanguageHoc(PageContainer)}
               />
               <Redirect to={lang}/>
             </Switch>

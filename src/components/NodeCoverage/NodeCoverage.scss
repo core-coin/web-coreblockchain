@@ -54,7 +54,7 @@
     backdrop-filter: blur(10px);
     @-moz-document url-prefix() {
       border: 1px solid var(--grey-darken);
-      background-color: rgba(28, 28, 36, 0.98); 
+      background-color: rgba(28, 28, 36, 0.98);
     }
     @media (min-width: 1000px) {
       height: 389px;
@@ -72,10 +72,9 @@
     }
     h4 {
       color: var(--white);
-      font-family: Montserrat-Regular;
+      font-family: var(--font-primary);
       font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.6px;
+      font-weight: var(--font-primary-weight-normal);
       margin-bottom: 28px;
     }
     ul {
@@ -84,11 +83,10 @@
       padding: 0 0 0 10px;
       li {
         color: var(--grey);
-        font-family: 'Red Hat Display';
+        font-family: var(--font-secondary);
         font-size: 15px;
-        font-weight: 400;
+        font-weight: var(--font-secondary-weight-normal);
         line-height: 41px;
-        letter-spacing: -0.3px;
         border-top: 1px solid #323242;
         display: flex;
         justify-content: space-between;
@@ -102,15 +100,14 @@
     }
     h2 {
       color: var(--white);
-      font-family: Montserrat-Bold;
+      font-family: var(--font-primary);
+      font-weight: var(--font-primary-weight-bold);
       font-size: 32px;
-      letter-spacing: -1px;
       line-height: 36px;
       text-align: center;
       margin-bottom: 33px;
       @media (max-width: 767px) {
         font-size: 18px;
-        letter-spacing: -0.54px;
         text-align: left;
       }
     }
@@ -138,13 +135,11 @@
         }
         span {
           color: var(--white);
-          font-family: 'Montserrat-Bold';
+          font-family: var(--font-primary);
           font-size: 32px;
-          letter-spacing: -0.96px;
           line-height: 30px;
         }
       }
     }
   }
 }
-

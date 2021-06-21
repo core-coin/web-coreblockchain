@@ -1,9 +1,9 @@
 .select_label {
   margin-top: 28px;
   color: var(--grey);
-  font-family: 'Red Hat Display';
+  font-family: var(--font-secondary);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: var(--font-secondary-weight-normal);
   line-height: 30px;
   margin-bottom: 5px;
   @media (max-width: 767px) {
@@ -18,9 +18,9 @@
   border: 1px solid var(--gray-darken);
   background-color: var(--black-lighter);
   color: var(--white);
-  font-family: 'Red Hat Display';
+  font-family: var(--font-secondary);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--font-secondary-weight-normal);
   line-height: 24px;
   -webkit-appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, var(--white) 50%),

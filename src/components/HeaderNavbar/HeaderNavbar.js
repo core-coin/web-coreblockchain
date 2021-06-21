@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import {
   Navbar,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -85,13 +84,13 @@ class HeaderNavbar extends PureComponent {
   }
 
   renderNavbar = (item, index) => (
-  
-      <li key={index} className='nav-item'>  
+
+      <li key={index} className='nav-item'>
         <Link className='nav-link' to={`/${this.props.language}/${item.link}`}>
           {item.label}
         </Link>
       </li>
-    
+
   )
 
   render() {
@@ -134,7 +133,7 @@ class HeaderNavbar extends PureComponent {
                         </Col>
                         <Nav navbar >
                           {list.map(this.renderLink)}
-                        </Nav> 
+                        </Nav>
                         <div className='headerNavbar_sidebar__search'>
                           <Button
                             text={t('language')}

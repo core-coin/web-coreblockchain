@@ -4,7 +4,7 @@
   user-select: none;
   border: 1px solid transparent;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 15px;
   padding: 0 20px;
   text-transform: uppercase;
   @media (max-width: 767px) {
@@ -27,21 +27,22 @@
     &_10 {
       margin-right: 10px;
     }
+    &_15 {
+      margin-right: 15px;
+    }
     &_35 {
       margin-right: 35px;
     }
   }
   &.size {
     &_normal {
-      height: 67px;
-      min-width: 238px;
+      height: 65px;
+      min-width: 230px;
       border-radius: 14px;
-      font-size: 14px;
+      font-size: .7em;
       color: #ffffff;
-      font-family: Montserrat-Regular;
-      font-weight: 900;
-      letter-spacing: 2.1px;
-      line-height: 24px;
+      font-family: var(--font-primary);
+      font-weight: var(--font-primary-weight-bold);
       @media (max-width: 767px) {
         font-size: 12px;
         height: 47px;
@@ -51,25 +52,22 @@
       }
     }
     &_small {
-      min-width: 111px;
+      min-width: 110px;
       height: 43px;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: .7em;
       color: #ffffff;
-      font-family: "Red Hat Display";
-      font-weight: 400;
-      letter-spacing: -0.16px;
-      line-height: 24px;
+      font-family: var(--font-secondary);
+      font-weight: var(--font-secondary-weight-normal);
     }
     &_extraSmall {
       min-width: 43px;
       height: 43px;
       border-radius: 10px;
-      font-size: 16px;
+      font-size: .7em;
       color: #ffffff;
-      font-family: "Red Hat Display";
-      font-weight: 400;
-      letter-spacing: -0.16px;
+      font-family: var(--font-secondary);
+      font-weight: var(--font-secondary-weight-normal);
       line-height: 24px;
     }
   }

@@ -28,10 +28,9 @@
     }
     .nav-tabs {
       color: var(--grey);
-      font-family: 'Red Hat Display';
+      font-family: var(--font-secondary);
       font-size: 22px;
-      font-weight: 400;
-      letter-spacing: -0.22px;
+      font-weight: var(--font-secondary-weight-normal);
       flex-direction: column;
       border: none;
       @media (max-width: 767px) {
@@ -98,4 +97,3 @@
     }
   }
 }
-

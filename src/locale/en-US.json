@@ -444,8 +444,8 @@
     "Passive or Active cooler",
     "Antenna & Amplifier //required by Luna° mesh connectivity//"
   ],
- 
-  
+
+
   "nodeDistr": [
     {
       "link": "",
@@ -456,7 +456,7 @@
       "title": "item"
     }
   ],
-  
+
   "packageTool": [
     {
       "title": "Advanced Package Tool [APT] (Ubuntu, Debian)"

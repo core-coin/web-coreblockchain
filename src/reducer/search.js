@@ -11,7 +11,7 @@ let splitDocs = docs => {
   docs.forEach(item => {
     let textBlocks = item.content.split(/\n##\s/).map(i => trim(i))
       textBlocks.forEach(block => {
-        if (block.length == 0) {
+        if (block.length === 0) {
           return
         }
         let description = block.split(/\n\n/)

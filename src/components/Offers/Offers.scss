@@ -62,7 +62,6 @@
     outline: none;
     overflow: hidden;
     transition: 0.3s;
-    cursor: pointer;
     border-radius: 6px;
     background-color: transparent;
     padding: 1px;
@@ -154,19 +153,18 @@
 
     h4 {
       color: var(--white);
-      font-family: Montserrat-Regular;
+      font-family: var(--font-primary);
       font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.6px;
+      font-weight: var(--font-primary-weight-normal);
       margin-top: 24px;
       margin-bottom: 3px;
     }
 
     p {
       color: var(--grey);
-      font-family: 'Red Hat Display';
+      font-family: var(--font-secondary);
       font-size: 15px;
-      font-weight: 400;
+      font-weight: var(--font-secondary-weight-normal);
       line-height: 22px;
       text-align: center;
     }

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { oneOfType, string, number } from 'prop-types'
 import SvgIcon from './SvgIcon'
 
-export default (path, props = {}) =>
+const IconFn = (path, props = {}) =>
     class Icon extends PureComponent {
         static propTypes = {
             width: oneOfType([number, string]),
@@ -33,3 +33,5 @@ export default (path, props = {}) =>
             )
         }
     }
+
+export default IconFn

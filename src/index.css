@@ -1,73 +1,14 @@
-@font-face {
-  font-family: 'Montserrat-Medium';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../src/fonts/Montserrat-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Montserrat-Light';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../src/fonts/Montserrat-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Montserrat-Bold';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../src/fonts/Montserrat-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../src/fonts/Montserrat-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Montserrat-ExtraBold';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../src/fonts/Montserrat-ExtraBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Montserrat-Regular';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../src/fonts/Montserrat-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Red Hat Display';
-  src: url('../src/fonts/RedHatDisplay-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Red Hat Display';
-  src: url('../src/fonts/RedHatDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Red Hat Display';
-  src: url('../src/fonts/RedHatDisplay-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Red+Hat+Display:wght@400&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
 
-body { 
+body {
   margin: 0;
-  font-family: Montserrat-Light;
+  font-family: var(--font-primary);
+  font-size: var(--font-primary-size);
+  font-weight: var(--font-primary-weight-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
@@ -75,10 +16,8 @@ body {
 
 .title {
   color: var(--white);
-  font-family: Montserrat-Medium;
   font-size: 44px;
   font-weight: 700;
-  letter-spacing: -0.8px;
   line-height: 48px;
   text-transform: uppercase;
 }
@@ -89,10 +28,8 @@ body {
 
 .preTitle {
   color: var(--grey-lighter);
-  font-family: Montserrat-Regular;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: 6.3px;
   line-height: 22px;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -100,10 +37,9 @@ body {
 
 .description {
   color: var(--grey);
-  font-family: 'Red Hat Display';
+  font-family: var(--font-secondary);
   font-size: 26px;
-  font-weight: 400;
-  letter-spacing: -0.26px;
+  font-weight: var(--font-secondary-weight-normal);
   line-height: 28px;
 }
 
@@ -135,13 +71,11 @@ em {
   .title {
     font-size: 22px;
     font-weight: 700;
-    letter-spacing: -0.66px;
     line-height: 1;
 
   }
   .preTitle {
     font-size: 9px;
-    letter-spacing: 3.6px;
   }
   .description {
     font-size: 16px;
@@ -154,6 +88,7 @@ em {
     max-width: 1295px;
   }
 }
+
 :root {
   --green: #46b549;
   --green-darken: #42b649;
@@ -169,4 +104,11 @@ em {
   --black: #18181f;
   --black-lighter: #1c1c24;
   --black-darken: #14141a;
+  --font-primary: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-primary-size: 20px;
+  --font-primary-weight-normal: 400;
+  --font-primary-weight-bold: 700;
+  --font-secondary: 'Red Hat Display', 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-secondary-size: 20px;
+  --font-secondary-weight-normal: 400;
 }

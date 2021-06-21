@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 111px;
+  height: 100px;
   border-bottom: 1px solid var(--grey-darken);
-  background-color: var(--black);
+  background-color: rgba(#18181f, .9);
   width: 100%;
   z-index: 2;
   position: sticky;
@@ -33,7 +33,6 @@
       text-transform: capitalize;
       width: 100%;
       margin: 0;
-      letter-spacing: 0.07em;
     }
   }
   .navbar {
@@ -49,10 +48,9 @@
   .nav-item {
     .nav-link {
       color: var(--grey-lighter);
-      font-family: 'Red Hat Display';
+      font-family: var(--font-secondary);
       font-size: 16px;
-      font-weight: 400;
-      letter-spacing: -0.16px;
+      font-weight: var(--font-secondary-weight-normal);
       line-height: 28px;
       text-transform: capitalize;
       cursor: pointer;

@@ -52,11 +52,10 @@
       }
       .nav-link {
         color: var(--gray);
-        font-family: Montserrat-Medium;
+        font-family: var(--font-primary);
         font-size: 20px;
         line-height: 24px;
-        font-weight: 700;
-        letter-spacing: 0.4px;
+        font-weight: var(--font-primary-weight-bold);
         cursor: pointer;
         border: none;
         padding: 0 20px 24px 20px;
@@ -92,10 +91,9 @@
       }
       p {
         color: var(--grey);
-        font-family: 'Red Hat Display';
+        font-family: var(--font-secondary);
         font-size: 22px;
-        font-weight: 400;
-        letter-spacing: -0.22px;
+        font-weight: var(--font-secondary-weight-normal);
         line-height: 32px;
         margin-bottom: 69px;
         @media (max-width: 767px) {

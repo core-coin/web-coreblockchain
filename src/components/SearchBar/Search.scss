@@ -43,10 +43,9 @@
       background-color: var(--black);
       border: 1px solid var(--gray-darken);
       color: var(--grey-lighter);
-      font-family: 'Red Hat Display';
+      font-family: var(--font-secondary);
       font-size: 16px;
-      font-weight: 400;
-      letter-spacing: -0.16px;
+      font-weight: var(--font-secondary-weight-normal);
       line-height: 28px;
       &::placeholder {
         color: var(--grey-lighter);
@@ -106,9 +105,10 @@
         color: var(--green);
       }
       p {
-      font-family: 'Red Hat Display';
-      font-size: 18px;
-      color: var(--grey)
+        font-family: var(--font-secondary);
+        font-size: 18px;
+        font-weight: var(--font-secondary-weight-normal);
+        color: var(--grey)
       }
     }
 

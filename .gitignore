@@ -5,6 +5,8 @@ build/
 .prettierrc.json
 debug.log
 .eslintcache
+.eslintcache~mobile-menu
+package-lock.json
 
 ### macOS ###
 # General

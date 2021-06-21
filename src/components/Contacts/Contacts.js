@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, object, string } from 'prop-types'
+import { number, string } from 'prop-types'
 import {
     Container,
     Row,
@@ -48,7 +48,7 @@ class Contacts extends PureComponent{
                             <a href=''>{t('Core Improvement Proposals')}</a>
                             <a href=''>{t('Core Talk')}</a>
                         </div><div className='contacts_left__block'>
-                            <p>{t('Useful links')}</p> 
+                            <p>{t('Useful links')}</p>
                             <a href=''>{t('Open-source License')}</a>
                             <a href=''>{t('Report bug')}</a>
                             <a href=''>{t('tradeMark')}</a>
