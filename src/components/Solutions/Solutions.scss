@@ -4,7 +4,7 @@
   display: flex;
   padding: 8.1% 0 13.2%;
   @media (max-width: 991px) {
-    background-image: url(../../images/sphere_with_glow.webp);
+    background-image: url(../../images/sphere-glow.webp);
     background-repeat: no-repeat;
     background-size: 520px;
     background-position: 95px 0;
@@ -19,7 +19,7 @@
   }
   &_background {
     @media (min-width: 991px) {
-    background-image: url(../../images/sphere_with_glow.webp);
+    background-image: url(../../images/sphere-glow.webp);
     bbackground-size: 924px 834px;
     background-repeat: no-repeat;
     padding-bottom: 15%;

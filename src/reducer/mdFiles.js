@@ -1,4 +1,3 @@
-import { docs as originDocsList } from '../markdownList'
 import metadataParser from 'markdown-yaml-metadata-parser'
 import { setMarkdownFiles } from './actions'
 

@@ -4,7 +4,6 @@ description: ED448-Goldilocks cryptography for Blockchain
 keywords: ed448,goldilocks,ec448,crypto,cryptography
 lang: en-US
 sidebar: false
-link: /en/crypto/ed448-goldilocks
 ---
 
 # ED448-Goldilocks

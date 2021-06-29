@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { object } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import Community from '../../components/Comminity'
+import Community from '../../components/Community'
 import Loading from '../../components/Loading'
 
 class CommunityContainer extends PureComponent {
