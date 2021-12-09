@@ -121,5 +121,87 @@
   "Magnet Link": "Magnet Link",
   "Verify your download by running this script": "Verify your download by running this script",
   "Go to marketplace": "Go to marketplace",
-  "packageToolScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core"
+  "packageToolScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core",
+  "main tabs": [
+    {
+      "tabName": "Finance & Payments",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Healthcare & Wellness",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Aerospace",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Energy",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Supply Chain",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "eGovernment & DAO’s",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Mass Media",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "GIScience",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Defence & Security",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Asset Tokenization",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Education",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    },
+    {
+      "tabName": "Telecommunications",
+      "tabImage": "/trading.png",
+      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
+    }
+  ],
+  "developers tabs": [
+    {
+      "tabName": "Developer portal",
+      "tabContent": "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
+      "tabGreenBtn": "learn more",
+      "tabGhostBtn": "report bug"
+    },
+    {
+      "tabName": "Core Talk",
+      "tabContent": "2Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
+      "tabGreenBtn": "learn more",
+      "tabGhostBtn": "report bug"
+    },
+    {
+      "tabName": "Core Standards",
+      "tabContent": "3Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
+      "tabGreenBtn": "learn more",
+      "tabGhostBtn": "report bug"
+    }
+  ]
 }

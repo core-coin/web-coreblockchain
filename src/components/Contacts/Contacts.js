@@ -44,22 +44,22 @@ class Contacts extends PureComponent{
                                 <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
                             </div><div className='contacts_left__block'>
                             <p>{t('Development')}</p>
-                            <a href=''>{t('Developer Portal')}</a>
-                            <a href=''>{t('Core Improvement Proposals')}</a>
-                            <a href=''>{t('Core Talk')}</a>
+                            <a href='/'>{t('Developer Portal')}</a>
+                            <a href='/'>{t('Core Improvement Proposals')}</a>
+                            <a href='/'>{t('Core Talk')}</a>
                         </div><div className='contacts_left__block'>
                             <p>{t('Useful links')}</p>
-                            <a href=''>{t('Open-source License')}</a>
-                            <a href=''>{t('Report bug')}</a>
-                            <a href=''>{t('tradeMark')}</a>
-                            <a href=''>{t('Brand identity')}</a>
+                            <a href='/'>{t('Open-source License')}</a>
+                            <a href='/'>{t('Report bug')}</a>
+                            <a href='/'>{t('tradeMark')}</a>
+                            <a href='/'>{t('Brand identity')}</a>
                         </div>
                             <div className='contacts_left__icons'>
-                                <a href=''><Cube /></a>
-                                <a href=''><Cryptohub /></a>
-                                <a href=''><Github /></a>
-                                <a href=''><Discord /></a>
-                                <a href=''><Twitter /></a>
+                                <a href='/'><Cube /></a>
+                                <a href='/'><Cryptohub /></a>
+                                <a href='/'><Github /></a>
+                                <a href='/'><Discord /></a>
+                                <a href='/'><Twitter /></a>
                             </div>
                         </Col>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>

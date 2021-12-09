@@ -18,7 +18,7 @@ class Tabs extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      activeTab: i18next.t('main tabs', { returnObjects: true })[0].tabsName,
+      activeTab: i18next.t('main tabs', { returnObjects: true })[0].tabName,
     }
   }
 
@@ -33,7 +33,9 @@ class Tabs extends PureComponent {
 
     const { activeTab } = this.state
 
-    const list = Array.from(t('main tabs', { returnObjects: true }))
+    const list = i18next.t('main tabs', { returnObjects: true })
+
+    console.log(activeTab)
 
     return (
       <div className='tabs'>
@@ -47,16 +49,16 @@ class Tabs extends PureComponent {
                     {list.map((tab) => {
                       const { activeTab } = this.state
                       return (
-                        <NavItem key={tab.tabsName}>
+                        <NavItem key={tab.tabName}>
                           <NavLink
                             className={
-                              activeTab === tab.tabsName ? 'active' : ''
+                              activeTab === tab.tabName ? 'active' : ''
                             }
                             onClick={() => {
-                              this.toggle(tab.tabsName)
+                              this.toggle(tab.tabName)
                             }}
                           >
-                            {tab.tabsName}
+                            {tab.tabName}
                           </NavLink>
                         </NavItem>
                       )
@@ -65,23 +67,25 @@ class Tabs extends PureComponent {
                 </Col>
                 <Col sm='12' md='7' lg='8'>
                   <TabContent activeTab={activeTab}>
-                    {list.map((tab, index) => (
-                      <Trans i18nKey={tab.tabName} defaults={tab.tabName}>
-                        <TabPane tabId={tab.tabsName} key={index}>
-                          <Row>
-                            <Col sm='12'>
-                              <img
-                                src={tab.tabsImage}
-                                alt={tab.tabsName}
-                                className='img-responsive'
-                              />
-                              <h2>{tab.tabsName}</h2>
-                              <p>{tab.tabsContent}</p>
-                            </Col>
-                          </Row>
-                        </TabPane>
-                      </Trans>
-                    ))}
+                    {list.map((tab) => {
+                      return (
+                        // <Trans i18nKey={tab.tabName} defaults={tab.tabName}>
+                        <TabPane tabId={tab.tabName} key={tab.tabName}>
+                        <Row>
+                          <Col sm='12'>
+                            <img
+                              src={tab.tabImage}
+                              alt={tab.tabName}
+                              className='img-responsive'
+                            />
+                            <h2>{tab.tabName}</h2>
+                            <p>{tab.tabContent}</p>
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      // </Trans>
+                      )
+                    })}
                   </TabContent>
                 </Col>
               </Row>

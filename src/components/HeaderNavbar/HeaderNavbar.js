@@ -112,7 +112,7 @@ class HeaderNavbar extends PureComponent {
                 </div>
                 {isMobile ? (
                   <div>
-                    <a onClick={this.onOpenSidebar}>
+                    <a onClick={this.onOpenSidebar} href='/'>
                       <Menu />
                     </a>
                     <div
@@ -127,7 +127,7 @@ class HeaderNavbar extends PureComponent {
                         <Link to={`/${language}`} className='navbar-brand'>
                           <img src={Logo} alt='Core Chain' />
                         </Link>
-                          <a onClick={this.onCloseSidebar}>
+                          <a onClick={this.onCloseSidebar} href='/'>
                             <Close />
                           </a>
                         </Col>

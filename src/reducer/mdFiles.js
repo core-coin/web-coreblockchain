@@ -1,6 +1,8 @@
 import metadataParser from 'markdown-yaml-metadata-parser'
 import { setMarkdownFiles } from './actions'
 
+const originDocsList = [];
+
 let createMarkdownIndex = store => {
   let mainPromise = getAllDocs()
   return mainPromise.then(docsList => {

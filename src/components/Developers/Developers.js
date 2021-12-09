@@ -30,8 +30,8 @@ class Developers extends PureComponent{
     }
 
     renderTabName = (tab) => (
-        <NavItem key={tab.tabName} className='nav-item'>  
-            <NavLink className={this.state.activeTab === tab.tabName ? 'active' : ''} 
+        <NavItem key={tab.tabName} className='nav-item'>
+            <NavLink className={this.state.activeTab === tab.tabName ? 'active' : ''}
             onClick={() => { this.toggle(tab.tabName)}}>
             {tab.tabName}
             </NavLink>
@@ -42,7 +42,7 @@ class Developers extends PureComponent{
         <TabPane tabId={tab.tabName} key={index}>
             <Row>
                 <Col sm='12'>
-                    <p>{tab.tabText}</p>
+                    <p>{tab.tabContent}</p>
                     <div>
                         <Button
                             theme='green'
@@ -66,14 +66,14 @@ class Developers extends PureComponent{
     render(){
         const { t } = this.props
         const { activeTab } = this.state
-        const list = Array.from(t('developers tabs', { returnObjects: true }))
+        const list = Array.from( i18next.t('developers tabs', { returnObjects: true }))
 
         return(
             <div className='developers'>
                 <Container>
                     <Row>
                         <Col sm='12'>
-                            <h3 className='preTitle'>{t('connect with dev community')}</h3>
+                            <h3 className='preTitle'>{i18next.t('connect with dev community')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='designed for developers'>
                                     designed for <em>developers</em>
@@ -81,7 +81,7 @@ class Developers extends PureComponent{
                             </h1>
                         </Col>
                         <Col sm='12' lg='9' xl='7' className='tabs_header'>
-                            <Nav tabs>                    
+                            <Nav tabs>
                                 {list.map(this.renderTabName)}
                             </Nav>
                         </Col>

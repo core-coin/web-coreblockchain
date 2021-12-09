@@ -12,6 +12,7 @@ import Tabs from '../../components/Tabs'
 import Offers from '../../components/Offers'
 import OffersMobile from '../../components/Offers/OffersMobile'
 import Contacts from '../../components/Contacts'
+import Industries  from '../../mockData/industriesData'
 
 class PageContainer extends PureComponent {
     static propTypes = {
@@ -55,7 +56,7 @@ class PageContainer extends PureComponent {
               </MetaTags>
                 <HeroHeader language={language}/>
                 {isMobile? <OffersMobile /> : <Offers />}
-                <Tabs />
+                <Tabs data={Industries}/>
                 <Solutions />
                 <Developers />
                 <NodeCoverage
