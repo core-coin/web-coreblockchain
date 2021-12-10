@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 import MetaTags from 'react-meta-tags'
 
 import LanguagePage from '../../components/LanguagePage'
+import i18next from 'i18next'
 
 class LanguagePageContainer extends PureComponent {
     static propTypes = {
@@ -22,7 +23,7 @@ class LanguagePageContainer extends PureComponent {
           <>
 	          <MetaTags>
 		          <title>
-			          {t('Language Support')}
+			          {i18next.t('Language Support')}
 		          </title>
 	          </MetaTags>
 	          <LanguagePage

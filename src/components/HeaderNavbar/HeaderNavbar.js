@@ -19,6 +19,7 @@ import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
 
 import './HeaderNavbar.scss'
+import i18next from 'i18next'
 
 const LanguageIcon = <Language />
 
@@ -97,7 +98,7 @@ class HeaderNavbar extends PureComponent {
     const { t, language } = this.props
     const { isMenuOpen } = this.state
     const isMobile = window.innerWidth <= 768
-    const list = Array.from(t('menuItemList', { returnObjects: true }))
+    const list = Array.from(i18next.t('menuItemList', { returnObjects: true }))
 
     return (
       <div className='headerNavbar'>

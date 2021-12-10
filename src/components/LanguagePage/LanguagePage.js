@@ -10,25 +10,26 @@ import {Link} from  'react-router-dom'
 import AnimatedArrow from '../AnimatedArrow'
 
 import './LanguagePage.scss'
+import i18next from 'i18next'
 
 class LanguagePage extends PureComponent{
 
     render(){
-        
+
         const { t, language } = this.props
-        const list = Array.from(t('languages', { returnObjects: true }))
+        const list = Array.from(i18next.t('languages', { returnObjects: true }))
 
         return(
             <div className='languagePage'>
                 <Container>
                     <Row>
                         <Col xs='12' sm='12' lg='10'>
-                            <h1 className='title'>{t('Language Support')}</h1>
-                            <p className='description'>{t('We are serving all people Worldwide, any language any nationality. Please, contribute to translations to make this vision a reality.')}</p>
+                            <h1 className='title'>{i18next.t('Language Support')}</h1>
+                            <p className='description'>{i18next.t('We are serving all people Worldwide, any language any nationality. Please, contribute to translations to make this vision a reality.')}</p>
                         </Col>
                         <Col xs='12' sm='12' md='12' xl='10'>
                             <h3>{t('Select your language')}:</h3>
-                            <Row>      
+                            <Row>
                                 {list.map((language) => (
                                 <Col xs='12' sm='4' lg='4' key={language.code}>
                                     <Link className='languagePage_block'
@@ -39,7 +40,7 @@ class LanguagePage extends PureComponent{
                                             <span>{language.nativeName}</span>
                                         </div>
                                     </Link>
-                                    
+
                                 </Col>
                                 ))}
                             </Row>

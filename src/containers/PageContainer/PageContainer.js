@@ -54,23 +54,24 @@ class PageContainer extends PureComponent {
                   {t('Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.')}
                 </title>
               </MetaTags>
-                <HeroHeader language={language}/>
+                <HeroHeader language={language} id="overview"/>
                 {isMobile? <OffersMobile /> : <Offers />}
-                <Tabs data={Industries}/>
-                <Solutions />
-                <Developers />
+                <Tabs data={Industries}  />
+                <Solutions id="learn" />
+                <Developers  id="developers" />
                 <NodeCoverage
                     totalTransactions={totalTransactions}
                     totalBlocks={totalBlocks}
                     blocktime={blocktime}
                     marketCap={marketCap}
                     price={price}
-
+                    id="enterprise"
                 />
                 <Contacts
                     blockTime={blockTimer}
                     networkHashrate={networkHashrate}
                     difficulty={difficulty}
+                    id="community"
                 />
             </>
         )

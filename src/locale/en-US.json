@@ -23,7 +23,7 @@
   "Core Ecosystem": "Core <1>Ecosystem</1>",
   "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.": "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.",
   "Core Blockchain Social Impact": "Core Blockchain <1>Social Impact</1>",
-  "industries": "industries",
+  "industries": "Targeted Industries",
   "connect with dev community": "connect with dev community",
   "designed for developers": "designed for <1>developers</1>",
   "Block time": "Block time",
@@ -202,6 +202,28 @@
       "tabContent": "3Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
       "tabGreenBtn": "learn more",
       "tabGhostBtn": "report bug"
+    }
+  ],
+  "menuItemList": [
+    {
+      "label": "Overview",
+      "link": "#"
+    },
+    {
+      "label": "Learn",
+      "link": "#"
+    },
+    {
+      "label": "Developers",
+      "link": "#"
+    },
+    {
+      "label": "Enterprises",
+      "link": "#"
+    },
+    {
+      "label": "Community",
+      "link": "#"
     }
   ]
 }
