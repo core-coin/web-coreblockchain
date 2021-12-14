@@ -7,7 +7,7 @@ import {
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
 
-import Logo from '../../images/logo.webp'
+// import Logo from '../../images/logo.webp'
 import Plus from '../SvgIcon/icons/Plus'
 import Cube from '../SvgIcon/icons/Cube'
 import Cryptohub from '../SvgIcon/icons/Cryptohub'

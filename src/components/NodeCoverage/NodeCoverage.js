@@ -49,7 +49,7 @@ class NodeCoverage extends PureComponent{
                             <h3 className='preTitle'>{t('Core Network reach')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='Planet covered by Blockchain'>
-                                <em>Planet</em> covered by <em>Blockchain</em>
+                               Planet covered by <em>Blockchain</em>
                                 </Trans>
                             </h1>
                             <p className='description'>{t('Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.')}</p>

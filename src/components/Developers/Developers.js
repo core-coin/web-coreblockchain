@@ -64,7 +64,7 @@ class Developers extends PureComponent{
     )
 
     render(){
-        const { t } = this.props
+        // const { t } = this.props
         const { activeTab } = this.state
         const list = Array.from( i18next.t('developers tabs', { returnObjects: true }))
 

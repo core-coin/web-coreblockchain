@@ -7,14 +7,15 @@
   }
   &_left {
     border: 1px solid var(--grey-darken);
-    background-color: rgba(25, 25, 32, 0.5);
+    background: linear-gradient(209.18deg, #24242E -3.47%, #1C1C24 98.64%);
     border-radius: 15px;
-    padding: 8% 7.7% 4%;
+    padding: 64px 64px 80px;
     h2 {
       text-transform: uppercase;
       font-family: var(--font-primary);
       font-size: 32px;
-      line-height: 36px;
+      line-height: 45px;
+      font-weight: var(--font-primary-weight-bold);
       color: var(--white);
       margin-bottom: 13px;
     }
@@ -23,16 +24,17 @@
       p {
         color: var(--white);
         font-family: var(--font-primary);
+        font-weight: var(--font-primary-weight-bold);
         font-size: 20px;
         margin-bottom: 0;
-        line-height: 24px;
+        line-height: 32px;
       }
       a {
         color: var(--grey);
         font-family: var(--font-secondary);
-        font-size: 22px;
+        font-size: 14px;
         font-weight: var(--font-secondary-weight-normal);
-        line-height: 28px;
+        line-height: 24px;
         display: block;
       }
     }
@@ -87,15 +89,15 @@
         p {
           color: var(--grey);
           font-family: var(--font-secondary);
-          font-size: 15px;
+          font-size: 14px;
           font-weight: var(--font-secondary-weight-normal);
-          line-height: 13px;
+          line-height: 24px;
           margin-bottom: 4px;
         }
         span {
           color: var(--white);
           font-size: 32px;
-          line-height: 39px;
+          line-height: 40px;
           font-family: var(--font-primary);
           font-weight: var(--font-primary-weight-bold);
         }

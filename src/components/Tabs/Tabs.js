@@ -9,7 +9,7 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap'
-import { withNamespaces, Trans } from 'react-i18next'
+import { withNamespaces } from 'react-i18next'
 import i18next from 'i18next'
 
 import './Tabs.scss'

@@ -63,13 +63,13 @@ class Contacts extends PureComponent{
                             </div>
                         </Col>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
-                            <h3 className='preTitle'>{t('Random-Y')}</h3>
+                            <h3 className='preTitle'>{t('How to get')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='core mining'>
                                     core <em>mining</em>
                                 </Trans>
                             </h1>
-                            <p className='description'>{t('We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem. Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices.')}</p>
+                            <p className='description'>{t('We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices')}</p>
                             <div className='contacts_right__info'>
                                 <div className='contacts_right__info-block'>
                                     <p>{t('Block time')}</p>

@@ -16,7 +16,7 @@ class LanguagePageContainer extends PureComponent {
 
     render() {
         const {
-            language, t
+            language
         } = this.props
 
         return(

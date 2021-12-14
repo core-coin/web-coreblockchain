@@ -35,15 +35,16 @@
     padding-top: 9px;
   }
   .description {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 32px;
   }
   &_block {
     margin-top: 11%;
     border-radius: 14px;
     border: 1px solid var(--grey-darken);
-    background-color: rgba(28, 28, 36, 0.9);
-    padding: 6.1% 10.3% 5.3%;
+    background: linear-gradient(209.18deg, #24242E -3.47%, #1C1C24 98.64%);
+    padding: 64px 64px 72px;
+
     h4 {
       color: var(--white);
       font-family: var(--font-primary);
@@ -56,9 +57,9 @@
     p {
       color: var(--grey);
       font-family: var(--font-secondary);
-      font-size: 15px;
+      font-size: 16px;
       font-weight: var(--font-secondary-weight-normal);
-      line-height: 22px;
+      line-height: 24px;
       margin-bottom: 26px;
     }
   }
