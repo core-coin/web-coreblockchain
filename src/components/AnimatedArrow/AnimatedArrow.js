@@ -20,9 +20,9 @@ export default class Solutions extends PureComponent{
 
         return(
             <Link to={url} className={centerMode ? 'animatedArrow center' : 'animatedArrow'}>{text}
-                <span className='the-arrow'>
-                    <span className='shaft'></span>
-                </span>
+                {/*<span className='the-arrow'>*/}
+                {/*    <span className='shaft'></span>*/}
+                {/*</span>*/}
             </Link>
         )
     }

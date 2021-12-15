@@ -27,7 +27,7 @@ body {
 }
 
 .preTitle {
-  color: var(--grey-lighter);
+  color: var(--grey);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -86,7 +86,8 @@ em {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1295px;
+    max-width: 1264px;
+    padding: 0;
   }
 }
 

@@ -5,7 +5,7 @@
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 45%;
-  padding: 10.2% 0;
+  padding: 246px 0 226px;
   @media (max-width: 767px) {
     border-top: none;
     background-color: var(--black-darken);
@@ -19,11 +19,14 @@
     }
   }
   .preTitle {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     @media (max-width: 767px) {
       margin-top: 24px;
       margin-bottom: 10px;
     }
+  }
+  .title {
+    margin-bottom: 0;
   }
 
   .tabs_header {
@@ -87,7 +90,7 @@
   .tab-content {
     transition: all 0.3s ease-in-out;
     .tab-pane {
-      margin-top: 33px;
+      margin-top: 32px;
       @media (max-width: 767px) {
         margin-top: 24px;
         padding-left: 0;

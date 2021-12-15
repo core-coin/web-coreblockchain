@@ -2,7 +2,7 @@
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black-darken);
   display: flex;
-  padding: 8.1% 0 13.2%;
+  padding: 188px 0 188px;
   @media (max-width: 991px) {
     background-image: url(../../images/sphere-glow.webp);
     background-repeat: no-repeat;
@@ -31,15 +31,15 @@
     }
   }
   .title {
-    margin-bottom: 21px;
-    padding-top: 9px;
+    margin-bottom: 24px;
   }
   .description {
     font-size: 20px;
     line-height: 32px;
+    margin-bottom: 0;
   }
   &_block {
-    margin-top: 11%;
+    margin-top: 56px;
     border-radius: 14px;
     border: 1px solid var(--grey-darken);
     background: linear-gradient(209.18deg, #24242E -3.47%, #1C1C24 98.64%);

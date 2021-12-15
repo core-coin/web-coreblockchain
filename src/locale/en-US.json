@@ -31,7 +31,7 @@
   "Statistics": "Statistics",
   "Market Cap": "Market Cap",
   "Network Powered by": "Network Powered by",
-  "Boid Hop Reach": "Boid Hop Reach",
+  "Boid Hop Reach": "Boid hop reach",
   "Core Network reach": "Core Network reach",
   "Price": "Price",
   "Planet covered by Blockchain": "Planet covered by <1>Blockchain</1>",
@@ -122,6 +122,7 @@
   "Verify your download by running this script": "Verify your download by running this script",
   "Go to marketplace": "Go to marketplace",
   "packageToolScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core",
+  "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry It has been the industry's standard dummy text" : "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry. It has been the industry's standard dummy text.",
   "main tabs": [
     {
       "tabName": "Finance & Payments",

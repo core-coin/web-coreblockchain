@@ -56,9 +56,10 @@ class NodeCoverage extends PureComponent{
                         </Col>
                         <Col sm='12' lg={{ size: 10, offset: 1 }}>
                             <Row>
-                                <Col sm='12' md='6'>
-                                    <div className='nodeCoverage_block'>
+                                <Col sm='12' md='6' className="block-container">
+                                    <div className='nodeCoverage_block nodeCoverage_block_first'>
                                         <h2>{t('Boid Hop Reach')}</h2>
+                                        <p>{t('Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry It has been the industry\'s standard dummy text')}</p>
                                         <div className='nodeCoverage_block__cards'>
                                             {nodesOnline.toString().split('').map(Number).map(this.renderDigit)}
                                             <div className='nodeCoverage_block__cards-card'>
@@ -68,7 +69,7 @@ class NodeCoverage extends PureComponent{
                                                 <span>m</span>
                                             </div>
                                         </div>
-                                       <div className='text-center'>
+                                       <div className='text-center power-by'>
                                        <span>{t('Network Powered by')}:</span>
                                        <div className='text-center nodeCoverage_block-img'>
                                             <Luna />
@@ -76,7 +77,7 @@ class NodeCoverage extends PureComponent{
                                        </div>
                                     </div>
                                 </Col>
-                                <Col sm='12' md='6'>
+                                <Col sm='12' md='6' className="block-container">
                                     <div className='nodeCoverage_block'>
                                         <h2>{t('Statistics')}</h2>
                                         <ul>
@@ -103,7 +104,7 @@ class NodeCoverage extends PureComponent{
                                         </ul>
                                     </div>
                                 </Col>
-                                <Col className='text-center'>
+                                <Col className='text-center transaction-explorer'>
                                     <Button
                                         theme='green'
                                         size='normal'

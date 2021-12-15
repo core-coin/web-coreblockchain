@@ -75,7 +75,7 @@
       padding-left: 6.1%;
       img {
         border-radius: 9px;
-        margin: 6px 0 55px;
+        margin: 0 0 48px;
         height: 347px;
         @media (max-width: 767px) {
           height: auto;
@@ -87,9 +87,8 @@
         font-size: 40px;
         font-weight: var(--font-primary-weight-bold);
         line-height: 48px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         text-transform: uppercase;
-        padding-top: 9px;
         @media (max-width: 767px) {
           font-size: 18px;
           line-height: 1.2;

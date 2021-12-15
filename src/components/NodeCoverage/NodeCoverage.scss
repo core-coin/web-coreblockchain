@@ -6,7 +6,7 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   display: flex;
-  padding: 10.2% 0 11%;
+  padding: 220px 0 275px;
   @media (max-width: 767px) {
     background-position: center top;
     background-size: contain;
@@ -38,7 +38,7 @@
     margin-top: 45px;
     line-height: 28px;
     @media (min-width: 767px) {
-     margin: 21px auto 0;
+     margin: 24px auto 120px;
      width: 58%;
     }
     @media (max-width: 767px) {
@@ -48,23 +48,22 @@
   &_block {
     border-radius: 14px;
     border: 1px solid #323242;
-    padding: 9.4% 9%;
-    margin-top: 9.7%;
-    margin-bottom: 24%;
+    padding: 64px 64px;
     background: linear-gradient(209.18deg, #24242E -3.47%, #1C1C24 98.64%);
     @-moz-document url-prefix() {
       border: 1px solid var(--grey-darken);
       background-color: rgba(28, 28, 36, 0.98);
     }
     @media (min-width: 1000px) {
-      height: 389px;
+      height: 408px;
+      width: 464px;
     }
     @media (max-width: 767px) {
       padding: 12% 5%;
       margin-bottom: 0;
     }
     &-img {
-      padding: 14px 0 0 68px;
+      padding: 0 0 0 19px;
     }
     span {
       font-size: 14px;
@@ -77,10 +76,18 @@
       font-weight: var(--font-primary-weight-normal);
       margin-bottom: 28px;
     }
+    p {
+      font-family: var(--font-primary);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: #77778C;
+    }
     ul {
       list-style: none;
       margin-bottom: 0;
-      padding: 0 0 0 10px;
+      padding: 20px 0 0 10px;
       li {
         color: var(--grey);
         font-family: var(--font-secondary);
@@ -97,15 +104,17 @@
           border-bottom: 1px solid #323242;
         }
       }
+      li:first-child {
+        border-top: none;
+      }
     }
     h2 {
       color: var(--white);
       font-family: var(--font-primary);
       font-weight: var(--font-primary-weight-bold);
-      font-size: 32px;
-      line-height: 36px;
-      text-align: center;
-      margin-bottom: 33px;
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 4px;
       @media (max-width: 767px) {
         font-size: 18px;
         text-align: left;
@@ -142,4 +151,17 @@
       }
     }
   }
+  &_block_first {
+    margin-left: 60px;
+  }
+}
+.transaction-explorer {
+  margin-top: 80px;
+}
+.power-by {
+  display: flex;
+  align-items: center;
+}
+.block-container {
+  padding: 0 8px;
 }
