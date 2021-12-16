@@ -85,11 +85,17 @@ class HeaderNavbar extends PureComponent {
     })
     document.body.style.overflow = ''
   }
+  closeSidebar = () => {
+    this.setState({
+      isMenuOpen: false,
+    })
+    document.body.style.overflow = ''
+  }
 
   renderNavbar = (item, index) => (
 
       <li key={index} className='nav-item'>
-        <Link className='nav-link' to={`/${this.props.language}/${item.link}`}>
+        <Link className='nav-link' to={`/${this.props.language}/${item.link}`} onClick={this.closeSidebar}>
           {item.label}
         </Link>
       </li>
@@ -127,7 +133,7 @@ class HeaderNavbar extends PureComponent {
                     >
                       <Container>
                         <Col className='headerNavbar_sidebar__header'>
-                        <Link to={`/${language}`} className='navbar-brand'>
+                        <Link to={`/${language}`} className='navbar-brand' onClick={this.closeSidebar}>
                           <img src={Logo} alt='Core Chain' />
                         </Link>
                           <a onClick={this.onCloseSidebar} href='/'>
@@ -145,7 +151,7 @@ class HeaderNavbar extends PureComponent {
                             hover={false}
                             href={`/${language}/language`}
                             type='router'
-                            onClick={this.onCloseSidebar}
+                            onClick={this.closeSidebar}
                           />
                         </div>
                         <Button
@@ -154,6 +160,7 @@ class HeaderNavbar extends PureComponent {
                           text={t('get started')}
                           type='router'
                           href={`/${language}/get-started`}
+                          onClick={this.closeSidebar}
                         />
                       </Container>
                     </div>

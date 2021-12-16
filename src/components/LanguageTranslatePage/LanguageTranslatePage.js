@@ -10,6 +10,7 @@ import { withNamespaces } from 'react-i18next'
 import AnimatedArrow from '../AnimatedArrow'
 
 import '../LanguagePage/LanguagePage.scss'
+import i18next from 'i18next'
 
 class LanguageTranslatePage extends PureComponent{
 
@@ -38,7 +39,7 @@ class LanguageTranslatePage extends PureComponent{
 
     render(){
         const { t } = this.props
-        const list = Array.from(t('languagesInProgress', { returnObjects: true }))
+        const list = Array.from(i18next.t('languagesInProgress', { returnObjects: true }))
 
         return(
             <div className='languagePage'>

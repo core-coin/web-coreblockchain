@@ -226,5 +226,18 @@
       "label": "Community",
       "link": "#"
     }
+  ],
+  "languages": [
+    {
+      "englishName": "English",
+      "code": "en",
+      "nativeName": "English"
+    },
+    {
+      "englishName": "Slovak",
+      "code": "sk",
+      "nativeName": "Slovak"
+    }
+
   ]
 }

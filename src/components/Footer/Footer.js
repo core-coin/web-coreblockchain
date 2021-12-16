@@ -27,19 +27,22 @@ class Footer extends PureComponent{
         }
     }
 
-    onToggleContact = () => {
+    onToggleContact = (e) => {
+        e.preventDefault()
         this.setState({
             isContactOpen: !this.state.isContactOpen,
         })
     }
 
-    onToggleDev = () => {
+    onToggleDev = (e) => {
+        e.preventDefault()
         this.setState({
             isDevOpen: !this.state.isDevOpen,
         })
     }
 
-    onToggleLinks = () => {
+    onToggleLinks = (e) => {
+        e.preventDefault()
         this.setState({
             isLinksOpen: !this.state.isLinksOpen,
         })

@@ -31,7 +31,7 @@
 
   .tabs_header {
     @media (max-width: 767px) {
-      border-bottom: 1px solid #434359;
+      border-bottom: 1px solid var(--grey-darken);
     }
     .nav-tabs {
       border-bottom: 1px solid rgba(99, 99, 120, 0.2);

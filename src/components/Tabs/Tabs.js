@@ -35,8 +35,6 @@ class Tabs extends PureComponent {
 
     const list = i18next.t('main tabs', { returnObjects: true })
 
-    console.log(activeTab)
-
     return (
       <div className='tabs'>
         <Container>

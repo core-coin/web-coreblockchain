@@ -9,12 +9,13 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import Decentralization from '../SvgIcon/icons/Decentralization'
-import Security from '../SvgIcon/icons/Security'
-import Interoperability from '../SvgIcon/icons/Interoperability'
-import Persistence from '../SvgIcon/icons/Persistence'
-import Coverage from '../SvgIcon/icons/Coverage'
-import Intelligence from '../SvgIcon/icons/Intelligence'
+import Decentralization2 from './imgs/descentralization.svg'
+import Security from './imgs/security.svg'
+import Interoperability from './imgs/interoperability.svg'
+import Persistence from './imgs/persistence.svg'
+import Coverage from './imgs/coverage.svg'
+import Intelligence from './imgs/coverage.svg'
+
 
 import './Offers.scss'
 
@@ -50,32 +51,32 @@ class Offers extends PureComponent{
                         <Col className='offers__col'>
                             <Slider {...settings}>
                                 <div className='offers_block'>
-                                    <Decentralization />
+                                    <img src={Decentralization2} className="img-fluid" alt="" />
                                     <h4>{t('Decentralization')}</h4>
                                     <p>{t('Core distributed computing platform is reliable, secure and available for everyone.')}</p>
                                 </div>
                                 <div className='offers_block'>
-                                    <Security/>
+                                  <img src={Security} className="img-fluid" alt="" />
                                     <h4>{t('Security')}</h4>
                                     <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
                                 </div>
                                 <div className='offers_block'>
-                                    <Interoperability/>
+                                    <img src={Interoperability} className="img-fluid" alt="" />
                                     <h4>{t('Interoperability')}</h4>
                                     <p>{t('Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.')}</p>
                                 </div>
                                 <div className='offers_block'>
-                                    <Coverage/>
+                                    <img src={Coverage} className="img-fluid" alt="" />
                                     <h4>{t('Coverage')}</h4>
                                     <p>{t('Borderless network anywhere in the World run on various networks.')}</p>
                                 </div>
                             <div className='offers_block'>
-                                <Persistence/>
+                                <img src={Persistence} className="img-fluid" alt="" />
                                 <h4>{t('Persistence')}</h4>
                                 <p>{t('Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
                             </div>
                             <div className='offers_block'>
-                                <Intelligence/>
+                                <img src={Intelligence} className="img-fluid" alt="" />
                                 <h4>{t('Swarm Intelligence')}</h4>
                                 <p>{t('Core Blockchain is using a self-organized system — Boids — to transact and route the data.')}</p>
                             </div>

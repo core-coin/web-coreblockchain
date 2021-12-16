@@ -18,12 +18,11 @@
   }
   .tabs_header {
     @media (max-width: 767px) {
-      border-bottom: 1px solid #434359;
+      border-bottom: 1px solid var(--grey-darken);
     }
     .nav-tabs {
       color: var(--grey);
       font-family: var(--font-secondary);
-      font-size: 22px;
       font-weight: var(--font-secondary-weight-normal);
       flex-direction: column;
       border: none;
@@ -31,8 +30,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
-        height: 39px;
-        font-size: 16px;
+        height: 60px;
       }
       .nav-item {
         display: flex;
@@ -56,12 +54,20 @@
           font-size: 20px;
           line-height: 40px;
           padding: 0 0 2px 16px;
-          @media (max-width: 767px) {
-            line-height: 36px;
-          }
           &.active {
             border-left: 1px solid var(--green);
             transition: color 0.1s linear;
+          }
+          @media (max-width: 767px) {
+            font-size: 16px;
+            border-left: none;
+            padding: 8px 16px;
+            &.active {
+              background-color: transparent;
+              color: var(--green);
+              border-left: none;
+              border-bottom: 2px solid var(--green);
+            }
           }
         }
       }
@@ -111,3 +117,6 @@
     }
   }
 }
+//::-webkit-scrollbar {
+//  transform: translateY(20px);
+//}
