@@ -116,43 +116,45 @@ class HeaderNavbar extends PureComponent {
                     <a className="hamburger-button" onClick={this.onOpenSidebar}>
                       <Menu />
                     </a>
-                    {
-                      isMenuOpen &&
-                      <div
-                        className='headerNavbar_sidebar open'>
-                        <Container>
-                          <Col className='headerNavbar_sidebar__header'>
-                            <Link to={`/${language}`} className='navbar-brand'>
-                              <img src={Logo} alt='Core Chain' />
-                            </Link>
-                            <a onClick={this.onCloseSidebar}>
-                              <Close />
-                            </a>
-                          </Col>
-                          <Nav navbar >
-                            {list.map(this.renderLink)}
-                          </Nav>
-                          <div className='headerNavbar_sidebar__search'>
-                            <Button
-                              text={t('language')}
-                              theme='ghost'
-                              size='extraSmall'
-                              hover={false}
-                              href={`/${language}/language`}
-                              type='router'
-                              onClick={this.onCloseSidebar}
-                            />
-                          </div>
+                    <div
+                      className={
+                        isMenuOpen
+                          ? 'headerNavbar_sidebar open'
+                          : 'headerNavbar_sidebar'
+                      }
+                    >
+                      <Container>
+                        <Col className='headerNavbar_sidebar__header'>
+                        <Link to={`/${language}`} className='navbar-brand'>
+                          <img src={Logo} alt='Core Chain' />
+                        </Link>
+                          <a onClick={this.onCloseSidebar}>
+                            <Close />
+                          </a>
+                        </Col>
+                        <Nav navbar >
+                          {list.map(this.renderLink)}
+                        </Nav>
+                        <div className='headerNavbar_sidebar__search'>
                           <Button
-                            mobileFullWidth
-                            theme='green'
-                            text={t('get started')}
+                            text={t('language')}
+                            theme='ghost'
+                            size='extraSmall'
+                            hover={false}
+                            href={`/${language}/language`}
                             type='router'
-                            href={`/${language}/get-started`}
+                            onClick={this.onCloseSidebar}
                           />
-                        </Container>
-                      </div>
-                    }
+                        </div>
+                        <Button
+                          mobileFullWidth
+                          theme='green'
+                          text={t('get started')}
+                          type='router'
+                          href={`/${language}/get-started`}
+                        />
+                      </Container>
+                    </div>
                   </div>
                 ) : (
                   <div className='headerNavbar_flex'>
