@@ -70,14 +70,16 @@ class HeaderNavbar extends PureComponent {
     window.removeEventListener('scroll', () => {})
   }
 
-  onOpenSidebar = () => {
+  onOpenSidebar = (e) => {
+    e.preventDefault()
     this.setState({
       isMenuOpen: true,
     })
     document.body.style.overflow = 'hidden'
   }
 
-  onCloseSidebar = () => {
+  onCloseSidebar = (e) => {
+    e.preventDefault()
     this.setState({
       isMenuOpen: false,
     })
@@ -113,7 +115,7 @@ class HeaderNavbar extends PureComponent {
                 </div>
                 {isMobile ? (
                   <div>
-                    <a className="hamburger-button" onClick={this.onOpenSidebar}>
+                    <a className="hamburger-button" onClick={this.onOpenSidebar} href='/'>
                       <Menu />
                     </a>
                     <div
@@ -128,7 +130,7 @@ class HeaderNavbar extends PureComponent {
                         <Link to={`/${language}`} className='navbar-brand'>
                           <img src={Logo} alt='Core Chain' />
                         </Link>
-                          <a onClick={this.onCloseSidebar}>
+                          <a onClick={this.onCloseSidebar} href='/'>
                             <Close />
                           </a>
                         </Col>
