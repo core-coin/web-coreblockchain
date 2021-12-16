@@ -12,8 +12,8 @@
     margin: 0;
     text-transform: uppercase;
     @media (max-width: 767px) {
-      font-size: 22px;
-      padding: 8% 5% 3%;
+      font-size: 24px;
+      line-height: 32px;
     }
   }
   .tabs_header {
@@ -90,9 +90,10 @@
         margin-bottom: 8px;
         text-transform: uppercase;
         @media (max-width: 767px) {
-          font-size: 18px;
-          line-height: 1.2;
+          font-size: 20px;
+          line-height: 32px;
           padding-top: 0;
+          letter-spacing: -0.02em;
         }
       }
       p {
@@ -103,8 +104,8 @@
         line-height: 32px;
         margin-bottom: 8%;
         @media (max-width: 767px) {
-          font-size: 16px;
-          line-height: 1.2;
+          font-size: 14px;
+          line-height: 24px;
         }
       }
     }

@@ -27,7 +27,12 @@ class Solutions extends PureComponent{
                                 BY  <em>CORE BLOCKCHAIN</em>
                             </Trans>
                             </h1>
-                            <p className='description'>{t('Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform We are creating an Inclusion program suited for all people')}</p>
+                            <p className='description'>
+                                <Trans i18nKey='Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform We are creating an Inclusion program suited for all people'>
+                                    Our mission is building a Global Decentralized Network (GDN) to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform.
+                                    <p className="secondary-p">We are creating an Inclusion program suited for all people.</p>
+                                </Trans>
+                            </p>
                             <div className='solutions_block'>
                                 <h4>{t('Core Foundation')}</h4>
                                 <p>{t('A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION We are inviting any new ideas for the Blockchain Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network')}</p>

@@ -11,6 +11,7 @@
   @media (max-width: 767px) {
     padding-bottom: 25%;
     border-top: none;
+    height: 202px;
   }
   &_logo {
     padding-top: 355px;
@@ -33,10 +34,11 @@
     p {
       color: var(--grey);
       font-family: var(--font-secondary);
-      font-size: 15px;
+      font-size: 14px;
       font-weight: var(--font-secondary-weight-normal);
-      line-height: 22px;
+      line-height: 24px;
       margin-bottom: 0;
+      width: 252px;
     }
   }
   .toggle {

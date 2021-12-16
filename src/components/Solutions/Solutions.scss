@@ -37,6 +37,10 @@
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 0;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
   &_block {
     margin-top: 56px;
@@ -48,11 +52,12 @@
     h4 {
       color: var(--white);
       font-family: var(--font-primary);
-      font-size: 20px;
       font-weight: var(--font-primary-weight-bold);
       text-transform: uppercase;
-      margin-bottom: 17px;
-      line-height: 24px;
+      margin-bottom: 4px;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -0.02em;
     }
     p {
       color: var(--grey);
@@ -60,7 +65,15 @@
       font-size: 16px;
       font-weight: var(--font-secondary-weight-normal);
       line-height: 24px;
-      margin-bottom: 26px;
+      margin-bottom: 16px;
+      @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
   }
+}
+.secondary-p{
+  margin-top: 40px;
+  margin-bottom: 0;
 }

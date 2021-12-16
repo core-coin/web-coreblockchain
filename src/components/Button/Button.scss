@@ -38,8 +38,8 @@
     &_normal {
       height: 65px;
       min-width: 230px;
-      border-radius: 14px;
-      font-size: .7em;
+      border-radius: 8px;
+      font-size: 14px;
       color: #ffffff;
       font-family: var(--font-primary);
       font-weight: var(--font-primary-weight-bold);
@@ -55,7 +55,7 @@
       min-width: 110px;
       height: 43px;
       border-radius: 8px;
-      font-size: .7em;
+      font-size: 14px;
       color: #ffffff;
       font-family: var(--font-secondary);
       font-weight: var(--font-secondary-weight-normal);
@@ -63,8 +63,8 @@
     &_extraSmall {
       min-width: 43px;
       height: 43px;
-      border-radius: 10px;
-      font-size: .7em;
+      border-radius: 8px;
+      font-size: 14px;
       color: #ffffff;
       font-family: var(--font-secondary);
       font-weight: var(--font-secondary-weight-normal);

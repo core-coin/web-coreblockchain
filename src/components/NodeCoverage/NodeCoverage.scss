@@ -46,7 +46,7 @@
     }
   }
   &_block {
-    border-radius: 14px;
+    border-radius: 8px;
     border: 1px solid #323242;
     padding: 64px 64px;
     background: linear-gradient(209.18deg, #24242E -3.47%, #1C1C24 98.64%);
@@ -59,14 +59,16 @@
       width: 464px;
     }
     @media (max-width: 767px) {
-      padding: 12% 5%;
-      margin-bottom: 0;
+      width: 335px;
+      height: 366px;
+      padding: 32px 24px;
     }
     &-img {
       padding: 0 0 0 19px;
     }
     span {
       font-size: 14px;
+      line-height: 24px;
       color: var(--grey);
     }
     h4 {
@@ -91,12 +93,14 @@
       li {
         color: var(--grey);
         font-family: var(--font-secondary);
-        font-size: 15px;
+        font-size: 14px;
         font-weight: var(--font-secondary-weight-normal);
-        line-height: 41px;
+        line-height: 24px;
         border-top: 1px solid #323242;
         display: flex;
         justify-content: space-between;
+        padding-top: 8px;
+        padding-bottom: 8px;
         span {
           color: var(--white-darken);
         }
@@ -116,7 +120,6 @@
       line-height: 32px;
       margin-bottom: 4px;
       @media (max-width: 767px) {
-        font-size: 18px;
         text-align: left;
       }
     }
@@ -153,6 +156,10 @@
   }
   &_block_first {
     margin-left: 60px;
+    @media (max-width: 767px) {
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
   }
 }
 .transaction-explorer {

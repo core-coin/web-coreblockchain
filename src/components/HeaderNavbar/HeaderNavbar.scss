@@ -22,7 +22,8 @@
     height: 68px;
     .navbar-brand {
       img {
-        width: 141px;
+        width: 215px;
+        height: 32px;
       }
     }
     .navbar-expand-md {
@@ -39,11 +40,14 @@
   .navbar {
     justify-content: space-between;
     width: 100%;
-    padding: 0 5px;
+    padding: 0 40px 0 25px;
     ul {
       li{
         color: var(--white);
       }
+    }
+    @media (max-width: 768px) {
+      padding: 0 5px 0 5px;
     }
   }
   .nav-item {
@@ -66,7 +70,7 @@
   &_left {
     display: flex;
     position: relative;
-    padding-left: 20px;
+    padding-left: 64px;
     .theme_green {
       margin-left: 10px;
       text-transform: capitalize;
@@ -79,7 +83,7 @@
   }
   &_sidebar {
     height: 100%;
-    width: 0;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -109,7 +113,7 @@
         }
       }
     }
-    &.open {
+    & .open {
       overflow-x: visible;
       width: 100%;
       height: 100vh;
@@ -127,4 +131,10 @@
       }
     }
   }
+}
+.hamburger-button {
+  padding: 13px 12px;
+  border: 1px solid var(--grey-darken);
+  border-radius: 8px;
+  display: flex;
 }

@@ -20,7 +20,8 @@
     font-family: var(--font-primary);
     margin-bottom: 24px;
     @media (max-width: 767px) {
-      font-size: 1.3em;
+      font-size: 24px;
+      line-height: 32px;
       text-align: left;
     }
   }
@@ -31,7 +32,8 @@
     margin-bottom: 72px;
     @media (max-width: 767px) {
       text-align: left;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 24px;
     }
   }
   .mouseIcon {
