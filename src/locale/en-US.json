@@ -238,6 +238,17 @@
       "code": "sk",
       "nativeName": "Slovak"
     }
-
+  ],
+  "languagesInProgress": [
+    {
+      "englishName": "Spanish",
+      "code": "es",
+      "nativeName": "Español"
+    },
+    {
+      "englishName": "Slovak",
+      "code": "sk",
+      "nativeName": "Slovak"
+    }
   ]
 }
