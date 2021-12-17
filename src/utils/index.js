@@ -1,3 +1,3 @@
-import { breakpoints, device } from "./breakpoints";
+import { breakpoints, device, isMobile } from "./breakpoints";
 
-export { device, breakpoints };
+export { device, breakpoints, isMobile };

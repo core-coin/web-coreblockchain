@@ -153,6 +153,10 @@
           font-size: 32px;
           line-height: 30px;
         }
+        @media (max-width: 767px) {
+          width: 48px;
+          height: 48px;
+        }
       }
     }
   }

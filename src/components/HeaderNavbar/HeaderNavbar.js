@@ -17,6 +17,7 @@ import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
 import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
+import { isMobile } from '../../utils'
 
 import './HeaderNavbar.scss'
 import i18next from 'i18next'
@@ -105,7 +106,6 @@ class HeaderNavbar extends PureComponent {
   render() {
     const { t, language } = this.props
     const { isMenuOpen } = this.state
-    const isMobile = window.innerWidth <= 768
     const list = Array.from(i18next.t('menuItemList', { returnObjects: true }))
 
     return (
