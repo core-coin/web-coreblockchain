@@ -56,45 +56,49 @@ class Footer extends PureComponent{
         const isMobile = window.innerWidth <= 767;
 
         return(
+          <div>
+              {isMobile && (
+                <Col sm='12'>
+                    <Row className="contact-container">
+                        <Col xs='12'>
+                            <p className="title">Get in touch</p>
+                        </Col>
+                        <Col xs='12' className={isContactOpen ? 'toggle open' : 'toggle'}>
+                            <a href='/' onClick={this.onToggleContact} className='toggle_header'>{t('Contact')} <Plus/></a>
+                            <Collapse isOpen={isContactOpen} className='toggle_content'>
+                                <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
+                            </Collapse>
+                        </Col>
+                        <Col xs='12' className={isDevOpen ? 'toggle open' : 'toggle'}>
+                            <a href='/' onClick={this.onToggleDev} className='toggle_header'>{t('Development')} <Plus/></a>
+                            <Collapse isOpen={isDevOpen} className='toggle_content'>
+                                <a href='/'>{t('Developer Portal')}</a>
+                                <a href='/'>{t('mprovementProposals')}</a>
+                                <a href='/'>{t('Core Talk')}</a>
+                            </Collapse>
+                        </Col>
+                        <Col xs='12' className={isLinksOpen ? 'toggle open' : 'toggle'}>
+                            <a href='/' onClick={this.onToggleLinks} className='toggle_header'>{t('Useful links')}<Plus/></a>
+                            <Collapse isOpen={isLinksOpen} className='toggle_content'>
+                                <a href='/'>{t('Open-source License')}</a>
+                                <a href='/'>{t('Report bug')}</a>
+                                <a href='/'>{t('tradeMark')}</a>
+                                <a href='/'>{t('Brand identity')}</a>
+                                <div className='icons'>
+                                    <a href='/'><Cube/></a>
+                                    <a href='/'><Cryptohub/></a>
+                                    <a href='/'><Github/></a>
+                                    <a href='/'><Discord/></a>
+                                    <a href='/'><Twitter/></a>
+                                </div>
+                            </Collapse>
+                        </Col>
+                    </Row>
+                </Col>
+              )}
             <div className='footer'>
                 <Container>
                     <Row>
-                    {isMobile && (
-                            <Col sm='12'>
-                                <Row>
-                                    <Col xs='12' className={isContactOpen ? 'toggle open' : 'toggle'}>
-                                        <a href='/' onClick={this.onToggleContact} className='toggle_header'>{t('Contact')} <Plus/></a>
-                                        <Collapse isOpen={isContactOpen} className='toggle_content'>
-                                            <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
-                                        </Collapse>
-                                    </Col>
-                                    <Col xs='12' className={isDevOpen ? 'toggle open' : 'toggle'}>
-                                        <a href='/' onClick={this.onToggleDev} className='toggle_header'>{t('Development')} <Plus/></a>
-                                        <Collapse isOpen={isDevOpen} className='toggle_content'>
-                                            <a href='/'>{t('Developer Portal')}</a>
-                                            <a href='/'>{t('mprovementProposals')}</a>
-                                            <a href='/'>{t('Core Talk')}</a>
-                                        </Collapse>
-                                    </Col>
-                                    <Col xs='12' className={isLinksOpen ? 'toggle open' : 'toggle'}>
-                                        <a href='/' onClick={this.onToggleLinks} className='toggle_header'>{t('Useful links')}<Plus/></a>
-                                        <Collapse isOpen={isLinksOpen} className='toggle_content'>
-                                            <a href='/'>{t('Open-source License')}</a>
-                                            <a href='/'>{t('Report bug')}</a>
-                                            <a href='/'>{t('tradeMark')}</a>
-                                            <a href='/'>{t('Brand identity')}</a>
-                                            <div className='icons'>
-                                                <a href='/'><Cube/></a>
-                                                <a href='/'><Cryptohub/></a>
-                                                <a href='/'><Github/></a>
-                                                <a href='/'><Discord/></a>
-                                                <a href='/'><Twitter/></a>
-                                            </div>
-                                        </Collapse>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        )}
                         <Col>
                             <div className='text-center footer_logo'>
                                 {/*<div className='footer_logo-img'>*/}
@@ -107,6 +111,7 @@ class Footer extends PureComponent{
                     </Row>
                 </Container>
             </div>
+          </div>
         )
     }
 }

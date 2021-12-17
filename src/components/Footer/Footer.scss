@@ -11,7 +11,7 @@
   @media (max-width: 767px) {
     padding-bottom: 25%;
     border-top: none;
-    height: 202px;
+    background-size: 1093px;
   }
   &_logo {
     padding-top: 355px;
@@ -38,51 +38,60 @@
       font-weight: var(--font-secondary-weight-normal);
       line-height: 24px;
       margin-bottom: 0;
-      width: 252px;
+      width: 100%;
     }
   }
-  .toggle {
-    height: auto;
-    border-bottom: 1px solid var(--gray-darken);
-    border-top: 1px solid var(--gray-darken);
-    &:last-child {
-      border-top: none;
+}
+.toggle {
+  height: auto;
+  border-bottom: 1px solid var(--gray-darken);
+  border-top: 1px solid var(--gray-darken);
+  &:last-child {
+    border-top: none;
+  }
+  &_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: var(--font-primary-weight-bold);
+    line-height: 24px;
+    height: 62px;
+    &:active,
+    &:hover,
+    &:focus {
+      color: var(--white);
+      text-decoration: none;
     }
-    &_header{
+  }
+  &_content {
+    padding-bottom: 30px;
+    a {
+      color: var(--grey);
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      font-weight: var(--font-secondary-weight-normal);
+      line-height: 22px;
+      display: block;
+    }
+    .icons {
+      padding-top: 15%;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      color: var(--white);
-      font-family: var(--font-primary);
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: var(--font-primary-weight-bold);
-      line-height: 24px;
-      height: 62px;
-      &:active,
-      &:hover,
-      &:focus {
-        color: var(--white);
-      }
-    }
-    &_content {
-      padding-bottom: 30px;
       a {
-        color: var(--grey);
-        font-family: var(--font-secondary);
-        font-size: 16px;
-        font-weight: var(--font-secondary-weight-normal);
-        line-height: 22px;
-        display: block;
-      }
-      .icons {
-        padding-top: 15%;
-        display: flex;
-        justify-content: space-between;
-        a {
-          color: var(--green);
-        }
+        color: var(--green);
       }
     }
   }
 }
+.contact-container {
+  padding-top: 60px;
+  background-color: var(--black-darken);
+  .title {
+    margin-bottom: 24px;
+  }
+}
+

@@ -8,13 +8,15 @@
   display: flex;
   padding: 220px 0 275px;
   @media (max-width: 767px) {
-    background-position: center top;
+    padding: 137px 0 72px;
+    background-image: url(../../images/map-mobile.svg);
+    background-position: 57% 4%;
     background-size: contain;
     .container {
       padding-top: 130px;
     }
     button {
-      margin-top: 10%;
+      margin-top: 0;
     }
   }
   @media (min-width: 768px) {
@@ -30,19 +32,18 @@
       text-align: left;
     }
   }
-  .title {
-    padding-top: 3px;
-  }
   .description {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 45px;
-    line-height: 28px;
+    line-height: 32px;
     @media (min-width: 767px) {
      margin: 24px auto 120px;
      width: 58%;
     }
     @media (max-width: 767px) {
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 16px auto 40px;
     }
   }
   &_block {
@@ -62,6 +63,7 @@
       width: 335px;
       height: 366px;
       padding: 32px 24px;
+      margin: 0 auto 24px;
     }
     &-img {
       padding: 0 0 0 19px;
@@ -157,13 +159,15 @@
   &_block_first {
     margin-left: 60px;
     @media (max-width: 767px) {
-      margin-left: 0;
-      margin-bottom: 24px;
+      margin: 0 auto 24px;
     }
   }
 }
 .transaction-explorer {
   margin-top: 80px;
+  @media (max-width: 767px) {
+    margin-top: 32px;
+  }
 }
 .power-by {
   display: flex;

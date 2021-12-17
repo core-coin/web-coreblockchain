@@ -2,6 +2,10 @@
   margin-top: 284px;
   margin-bottom: 144px;
   background-color: var(--black);
+  @media (max-width: 767px) {
+    margin-top: 96px;
+    margin-bottom: 64px;
+  }
   h3 {
     color: var(--white);
     font-family: var(--font-primary);
