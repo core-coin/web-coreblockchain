@@ -14,6 +14,7 @@ import Cryptohub from '../SvgIcon/icons/Cryptohub'
 import Github from '../SvgIcon/icons/Github'
 import Discord from '../SvgIcon/icons/Discord'
 import Twitter from '../SvgIcon/icons/Twitter'
+import { isMobile } from '../../utils'
 
 import './Footer.scss'
 
@@ -24,6 +25,7 @@ class Footer extends PureComponent{
             isContactOpen: false,
             isLinksOpen: false,
             isDevOpen: false,
+            isMobile: isMobile()
         }
     }
 
@@ -48,16 +50,24 @@ class Footer extends PureComponent{
         })
     }
 
+    updateIsMobile = () => {
+        this.setState({isMobile:isMobile()});
+    };
+    componentDidMount() {
+        window.addEventListener('resize', this.updateIsMobile);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateIsMobile);
+    }
+
     render(){
         const { t } = this.props
 
         const { isContactOpen, isDevOpen, isLinksOpen } = this.state
 
-        const isMobile = window.innerWidth <= 767;
-
         return(
           <div>
-              {isMobile && (
+              {this.state.isMobile && (
                 <Col sm='12'>
                     <Row className="contact-container">
                         <Col xs='12'>

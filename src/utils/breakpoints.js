@@ -12,4 +12,6 @@ export const device = {
   xl: `(min-width: ${breakpoints.xl}px)`,
 };
 
-export const isMobile = window.innerWidth <= 767;
+export function isMobile() {
+  return window.innerWidth <= 767
+}

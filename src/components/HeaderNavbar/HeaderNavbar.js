@@ -34,6 +34,7 @@ class HeaderNavbar extends PureComponent {
     super(props)
     this.state = {
       isMenuOpen: false,
+      isMobile: isMobile()
     }
   }
 	static propTypes = {
@@ -46,7 +47,12 @@ class HeaderNavbar extends PureComponent {
     </NavItem>
   )
 
+  updateIsMobile = () => {
+    this.setState({isMobile:isMobile()});
+  };
+
   componentDidMount() {
+    window.addEventListener('resize', this.updateIsMobile);
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset
       if (currentScroll === 0) {
@@ -69,6 +75,7 @@ class HeaderNavbar extends PureComponent {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', () => {})
+    window.removeEventListener('resize', this.updateIsMobile);
   }
 
   onOpenSidebar = (e) => {
@@ -119,7 +126,7 @@ class HeaderNavbar extends PureComponent {
                     <img src={Logo} alt='Core Chain' />
                   </Link>
                 </div>
-                {isMobile ? (
+                {this.state.isMobile ? (
                   <div>
                     <a className="hamburger-button" onClick={this.onOpenSidebar} href='/'>
                       <Menu />

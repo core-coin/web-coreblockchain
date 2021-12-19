@@ -14,7 +14,15 @@ import OffersMobile from '../../components/Offers/OffersMobile'
 import Contacts from '../../components/Contacts'
 import Industries  from '../../mockData/industriesData'
 
+import { isMobile } from '../../utils'
+
 class PageContainer extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: isMobile()
+    }
+  }
     static propTypes = {
         blockTime: number,
         networkHashrate: number,
@@ -31,6 +39,16 @@ class PageContainer extends PureComponent {
 
     static defaultProps = {}
 
+    updateIsMobile = () => {
+      this.setState({isMobile:isMobile()});
+    };
+    componentDidMount() {
+      window.addEventListener('resize', this.updateIsMobile);
+    }
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.updateIsMobile);
+    }
+
     render() {
         const {
             totalTransactions,
@@ -45,7 +63,6 @@ class PageContainer extends PureComponent {
             t,
         } = this.props
 
-        const isMobile = window.innerWidth <= 500;
 
         return(
             <>
@@ -55,7 +72,7 @@ class PageContainer extends PureComponent {
                 </title>
               </MetaTags>
                 <HeroHeader language={language} id="overview"/>
-                {isMobile? <OffersMobile /> : <Offers />}
+                {this.state.isMobile ? <OffersMobile /> : <Offers />}
                 <Tabs data={Industries}  />
                 <Solutions id="learn" />
                 <Developers  id="developers" />
