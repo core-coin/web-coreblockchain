@@ -68,58 +68,102 @@ class Footer extends PureComponent{
         return(
           <div>
               {this.state.isMobile && (
-                <Col sm='12'>
-                    <Row className="contact-container">
-                        <Col xs='12'>
-                            <p className="title">Get in touch</p>
-                        </Col>
-                        <Col xs='12' className={isContactOpen ? 'toggle open' : 'toggle'}>
-                            <a href='/' onClick={this.onToggleContact} className='toggle_header'>{t('Contact')} <Plus/></a>
-                            <Collapse isOpen={isContactOpen} className='toggle_content'>
+                <div>
+                    <Col sm='12'>
+                        <Row className="contact-container">
+                            <Col xs='12'>
+                                <p className="title">Get in touch</p>
+                            </Col>
+                            <Col xs='12' className={isContactOpen ? 'toggle open' : 'toggle'}>
+                                <a href='/' onClick={this.onToggleContact} className='toggle_header'>{t('Contact')} <Plus/></a>
+                                <Collapse isOpen={isContactOpen} className='toggle_content'>
+                                    <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
+                                </Collapse>
+                            </Col>
+                            <Col xs='12' className={isDevOpen ? 'toggle open' : 'toggle'}>
+                                <a href='/' onClick={this.onToggleDev} className='toggle_header'>{t('Development')} <Plus/></a>
+                                <Collapse isOpen={isDevOpen} className='toggle_content'>
+                                    <a href='/'>{t('Developer Portal')}</a>
+                                    <a href='/'>{t('mprovementProposals')}</a>
+                                    <a href='/'>{t('Core Talk')}</a>
+                                </Collapse>
+                            </Col>
+                            <Col xs='12' className={isLinksOpen ? 'toggle open' : 'toggle'}>
+                                <a href='/' onClick={this.onToggleLinks} className='toggle_header'>{t('Useful links')}<Plus/></a>
+                                <Collapse isOpen={isLinksOpen} className='toggle_content'>
+                                    <a href='/'>{t('Open-source License')}</a>
+                                    <a href='/'>{t('Report bug')}</a>
+                                    <a href='/'>{t('tradeMark')}</a>
+                                    <a href='/'>{t('Brand identity')}</a>
+                                    <div className='icons'>
+                                        <a href='/'><Cube/></a>
+                                        <a href='/'><Cryptohub/></a>
+                                        <a href='/'><Github/></a>
+                                        <a href='/'><Discord/></a>
+                                        <a href='/'><Twitter/></a>
+                                    </div>
+                                </Collapse>
+                            </Col>
+                        </Row>
+                    </Col>
+                    <div className='footer_mobile'>
+                        <Container>
+                            <Row>
+                                <Col>
+                                    <div className='text-center footer_logo'>
+                                        {/*<div className='footer_logo-img'>*/}
+                                        {/*    <img src={Logo} alt="Core Chain"/>*/}
+                                        {/*</div>*/}
+                                        <p className='text-center'>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
+                                        {/*<p className='text-center'>{t('Website last updated Jan 31, 2021')}</p>*/}
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </div>
+                </div>
+              )}
+            <div className='footer'>
+                <div className='footer_contact'>
+                    <Container>
+                        <Row>
+                            <Col md="4">
+                                <p className="title">Get in touch</p>
                                 <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
-                            </Collapse>
-                        </Col>
-                        <Col xs='12' className={isDevOpen ? 'toggle open' : 'toggle'}>
-                            <a href='/' onClick={this.onToggleDev} className='toggle_header'>{t('Development')} <Plus/></a>
-                            <Collapse isOpen={isDevOpen} className='toggle_content'>
-                                <a href='/'>{t('Developer Portal')}</a>
-                                <a href='/'>{t('mprovementProposals')}</a>
-                                <a href='/'>{t('Core Talk')}</a>
-                            </Collapse>
-                        </Col>
-                        <Col xs='12' className={isLinksOpen ? 'toggle open' : 'toggle'}>
-                            <a href='/' onClick={this.onToggleLinks} className='toggle_header'>{t('Useful links')}<Plus/></a>
-                            <Collapse isOpen={isLinksOpen} className='toggle_content'>
+                                <div className='footer_contact__icons'>
+                                    <a href='/'><Cube /></a>
+                                    <a href='/'><Cryptohub /></a>
+                                    <a href='/'><Github /></a>
+                                    <a href='/'><Discord /></a>
+                                    <a href='/'><Twitter /></a>
+                                </div>
+                            </Col>
+                            <Col md="4"/>
+                            <Col md="2" className='footer_contact_section'>
+                                <p className="title">{t('Useful links')}</p>
                                 <a href='/'>{t('Open-source License')}</a>
                                 <a href='/'>{t('Report bug')}</a>
                                 <a href='/'>{t('tradeMark')}</a>
                                 <a href='/'>{t('Brand identity')}</a>
-                                <div className='icons'>
-                                    <a href='/'><Cube/></a>
-                                    <a href='/'><Cryptohub/></a>
-                                    <a href='/'><Github/></a>
-                                    <a href='/'><Discord/></a>
-                                    <a href='/'><Twitter/></a>
-                                </div>
-                            </Collapse>
-                        </Col>
-                    </Row>
-                </Col>
-              )}
-            <div className='footer'>
-                <Container>
-                    <Row>
-                        <Col>
-                            <div className='text-center footer_logo'>
-                                {/*<div className='footer_logo-img'>*/}
-                                {/*    <img src={Logo} alt="Core Chain"/>*/}
-                                {/*</div>*/}
-                                <p className='text-center'>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
-                                {/*<p className='text-center'>{t('Website last updated Jan 31, 2021')}</p>*/}
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
+                            </Col>
+                            <Col md="2" className='footer_contact_section'>
+                                <p className="title">{t('Development')}</p>
+                                <a href='/'>{t('Developer Portal')}</a>
+                                <a href='/'>{t('Core Improvement Proposals')}</a>
+                                <a href='/'>{t('Core Talk')}</a>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+                <div className='footer_copyright'>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <p>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
             </div>
           </div>
         )

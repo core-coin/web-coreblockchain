@@ -1,7 +1,7 @@
 .contacts {
   border-top: 1px solid #292936;
   background-color: var(--black-darken);
-  padding: 182px 0 206px;
+  padding: 180px 0 265px;
   @media (max-width: 767px) {
     padding: 73px 21px 60px;
   }
@@ -52,7 +52,7 @@
   }
   &_right {
     padding: 84px 0 0 0;
-    margin-left: 176px;
+    margin-left: 0;
     max-width: 624px;
     @media (max-width: 767px) {
       padding: 0 15px;
@@ -72,6 +72,11 @@
         line-height: 24px;
         margin-bottom: 9px;
       }
+    }
+    .title,
+    .preTitle,
+    .description {
+      text-align: center;
     }
     &__info {
       display: flex;
@@ -179,5 +184,8 @@
         }
       }
     }
+  }
+  &_row {
+    justify-content: center;
   }
 }

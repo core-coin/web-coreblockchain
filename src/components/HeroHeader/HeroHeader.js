@@ -22,7 +22,7 @@ class HeroHeader extends PureComponent{
 
         return(
             <div className='heroHeader'>
-                <Container fluid>
+                <Container fluid className='heroHeader_container'>
                     <Row className='heroHeader_bg'>
                         <Col sm='12' lg={{ size: 10, offset: 1 }} xl={{ size: 6, offset: 3 }}>
                         <h1 className='title'>

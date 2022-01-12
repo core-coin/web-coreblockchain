@@ -1,4 +1,4 @@
-.footer {
+.footer_mobile {
   background-color: var(--black-darken);
   background-image: url(../../images/sphere-footer.webp);
   background-repeat: no-repeat;
@@ -92,6 +92,57 @@
   background-color: var(--black-darken);
   .title {
     margin-bottom: 24px;
+  }
+}
+.footer {
+  background-color: var(--black-darken);
+  border-top: 1px solid #292936;
+  &_contact {
+    padding: 32px 0 53px;
+    .title {
+      margin-bottom: 4px;
+      font-size: 20px;
+      line-height: 32px;
+    }
+    a {
+      color: var(--grey);
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      font-weight: var(--font-secondary-weight-normal);
+      line-height: 24px;
+    }
+    &__icons {
+      padding-top: 32px;
+      a {
+        color: var(--green);
+        padding-right: 6%;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    &_section {
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: 14px;
+        line-height: 32px;
+      }
+    }
+  }
+  &_copyright {
+    border-top: 1px solid #292936;
+    height: 72px;
+    padding: 24px 0;
+    p {
+      color: var(--grey);
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      font-weight: var(--font-secondary-weight-normal);
+      line-height: 24px;
+      margin-bottom: 0;
+      width: 100%;
+    }
   }
 }
 

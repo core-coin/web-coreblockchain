@@ -7,11 +7,6 @@ import {
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
 
-import Cube from '../SvgIcon/icons/Cube'
-import Cryptohub from '../SvgIcon/icons/Cryptohub'
-import Github from '../SvgIcon/icons/Github'
-import Discord from '../SvgIcon/icons/Discord'
-import Twitter from '../SvgIcon/icons/Twitter'
 import Button from '../Button'
 
 import './Contacts.scss'
@@ -36,34 +31,9 @@ class Contacts extends PureComponent{
         return(
             <div className='contacts'>
                 <Container>
-                    <Row>
-                        <Col sm='12' lg='5' className='contacts_left hidden-xs'>
-                            <h2>{t('Get in touch')}</h2>
-                            <div className='contacts_left__block'>
-                                <p>{t('Contact')}</p>
-                                <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
-                            </div><div className='contacts_left__block'>
-                            <p>{t('Development')}</p>
-                            <a href='/'>{t('Developer Portal')}</a>
-                            <a href='/'>{t('Core Improvement Proposals')}</a>
-                            <a href='/'>{t('Core Talk')}</a>
-                        </div><div className='contacts_left__block'>
-                            <p>{t('Useful links')}</p>
-                            <a href='/'>{t('Open-source License')}</a>
-                            <a href='/'>{t('Report bug')}</a>
-                            <a href='/'>{t('tradeMark')}</a>
-                            <a href='/'>{t('Brand identity')}</a>
-                        </div>
-                            <div className='contacts_left__icons'>
-                                <a href='/'><Cube /></a>
-                                <a href='/'><Cryptohub /></a>
-                                <a href='/'><Github /></a>
-                                <a href='/'><Discord /></a>
-                                <a href='/'><Twitter /></a>
-                            </div>
-                        </Col>
+                    <Row className='contacts_row'>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
-                            <h3 className='preTitle'>{t('How to get')}</h3>
+                            <h3 className='preTitle'>{t('HOW TO GET INVOLVED')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='core mining'>
                                     core <em>mining</em>

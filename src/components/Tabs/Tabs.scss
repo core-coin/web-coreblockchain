@@ -59,8 +59,10 @@
           line-height: 40px;
           padding: 0 0 2px 16px;
           &.active {
-            border-left: 1px solid var(--green);
+            border-left: 3px solid var(--green);
             transition: color 0.1s linear;
+            color: var(--green);
+            padding-left: 14px;
           }
           @media (max-width: 767px) {
             font-size: 16px;
