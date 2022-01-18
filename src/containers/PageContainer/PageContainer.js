@@ -63,7 +63,6 @@ class PageContainer extends PureComponent {
             t,
         } = this.props
 
-
         return(
             <>
               <MetaTags>

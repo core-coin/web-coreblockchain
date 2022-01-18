@@ -54,9 +54,9 @@ class NodeCoverage extends PureComponent{
                             </h1>
                             <p className='description'>{t('Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.')}</p>
                         </Col>
-                        <Col sm='12' lg={{ size: 10, offset: 1 }}>
-                            <Row>
-                                <Col sm='12' md='6' className="block-container">
+                        <div className='custom_col'>
+                            <div className='custom_row'>
+                                <div className="block-container">
                                     <div className='nodeCoverage_block nodeCoverage_block_first'>
                                         <h2>{t('Boid Hop Reach')}</h2>
                                         <p>{t('Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry It has been the industry\'s standard dummy text')}</p>
@@ -76,8 +76,8 @@ class NodeCoverage extends PureComponent{
                                        </div>
                                        </div>
                                     </div>
-                                </Col>
-                                <Col sm='12' md='6' className="block-container">
+                                </div>
+                                <div className="block-container">
                                     <div className='nodeCoverage_block'>
                                         <h2>{t('Statistics')}</h2>
                                         <ul>
@@ -103,17 +103,17 @@ class NodeCoverage extends PureComponent{
                                             </li>
                                         </ul>
                                     </div>
-                                </Col>
-                                <Col className='text-center transaction-explorer'>
-                                    <Button
-                                        theme='green'
-                                        size='normal'
-                                        text={t('Transaction Explorer')}
-                                        href=''
-                                    />
-                                </Col>
-                            </Row>
-                        </Col>
+                                </div>
+                            </div>
+                            <Col className='text-center transaction-explorer'>
+                                <Button
+                                  theme='green'
+                                  size='normal'
+                                  text={t('Transaction Explorer')}
+                                  href=''
+                                />
+                            </Col>
+                        </div>
                     </Row>
                 </Container>
             </div>

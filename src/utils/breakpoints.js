@@ -15,3 +15,13 @@ export const device = {
 export function isMobile() {
   return window.innerWidth <= 767
 }
+export function isSd() {
+  return window.innerWidth <= 1024 &&  767 < window.innerWidth
+}
+export function isMd() {
+  return 1024 < window.innerWidth && window.innerWidth <= 1366
+}
+export function isLg() {
+  return 1367 <= window.innerWidth
+}
+

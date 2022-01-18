@@ -6,6 +6,10 @@
     margin-top: 96px;
     margin-bottom: 64px;
   }
+  @media (max-width: 1366px) {
+    margin-top: 223px;
+    margin-bottom: 194px;
+  }
   h3 {
     color: var(--white);
     font-family: var(--font-primary);
@@ -63,6 +67,7 @@
             transition: color 0.1s linear;
             color: var(--green);
             padding-left: 14px;
+            margin-left: -1px;
           }
           @media (max-width: 767px) {
             font-size: 16px;

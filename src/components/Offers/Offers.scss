@@ -2,7 +2,7 @@
   background-color: var(--black);
   padding: 6.2% 0 0;
   @media (max-width: 1440px){
-    padding: 5% 0 2%;
+    padding: 5% 0 0;
   }
   .title {
     font-size: 40px;
@@ -40,7 +40,31 @@
 
   }
 
-  @media (min-width: 1180px) {
+  @media (min-width: 1025px) {
+    .preTitle {
+      padding-top: 80px;
+      margin-left: 5px;
+      margin-bottom: 26px;
+    }
+
+    .preTitle,
+    .title {
+      padding-left: 0;
+    }
+
+    .title {
+      padding-top: 0;
+    }
+
+    .title span {
+      white-space: nowrap;
+    }
+
+    .title {
+      margin-bottom: 16px;
+    }
+  }
+  @media (min-width: 1367px) {
     .preTitle {
       padding-top: 80px;
       margin-left: 5px;
@@ -111,6 +135,12 @@
 
     &__higher {
       margin-top: -50px;
+    }
+    &_md_lower {
+      margin-top: 208px;
+    }
+    &_md_low {
+      margin-top: 108px;
     }
 
     @media (max-width: 767px) {
@@ -239,4 +269,7 @@
   &::before {
 
   }
+}
+.vertical_row {
+  flex-direction: column;
 }
