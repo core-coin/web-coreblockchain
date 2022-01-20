@@ -9,18 +9,20 @@ import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
 import Solutions from '../../components/Solutions'
 import Tabs from '../../components/Tabs'
+import TabsSlider from '../../components/Tabs/TabsSlider'
 import Offers from '../../components/Offers'
 import OffersMobile from '../../components/Offers/OffersMobile'
 import Contacts from '../../components/Contacts'
 import Industries  from '../../mockData/industriesData'
 
-import { isMobile } from '../../utils'
+import { isMobile, isSd } from '../../utils'
 
 class PageContainer extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile: isMobile()
+      isMobile: isMobile(),
+      isSd: isSd()
     }
   }
     static propTypes = {
@@ -42,11 +44,16 @@ class PageContainer extends PureComponent {
     updateIsMobile = () => {
       this.setState({isMobile:isMobile()});
     };
+    updateIsSd = () => {
+    this.setState({isSd:isSd()});
+  };
     componentDidMount() {
       window.addEventListener('resize', this.updateIsMobile);
+      window.addEventListener('resize', this.updateIsSd);
     }
     componentWillUnmount() {
       window.removeEventListener('resize', this.updateIsMobile);
+      window.removeEventListener('resize', this.updateIsSd);
     }
 
     render() {
@@ -72,7 +79,7 @@ class PageContainer extends PureComponent {
               </MetaTags>
                 <HeroHeader language={language} id="overview"/>
                 {this.state.isMobile ? <OffersMobile /> : <Offers />}
-                <Tabs data={Industries}  />
+                {this.state.isMobile || this.state.isSd ? <TabsSlider data={Industries} /> : <Tabs data={Industries}  />}
                 <Solutions id="learn" />
                 <Developers  id="developers" />
                 <NodeCoverage

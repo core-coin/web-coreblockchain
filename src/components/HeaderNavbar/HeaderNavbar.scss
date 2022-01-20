@@ -41,6 +41,7 @@
     justify-content: space-between;
 
     width: 100%;
+    max-width: 1943px;
     padding: 0 40px 0 25px;
     ul {
       li{
@@ -49,6 +50,11 @@
     }
     @media (max-width: 768px) {
       padding: 0 5px 0 5px;
+    }
+    &_col {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
   .nav-item {
@@ -101,7 +107,7 @@
     }
     &__search {
       display: flex;
-      width: 100%;
+      //width: 100%;
       justify-content: space-between;
       button {
         margin-right: 0;
@@ -138,4 +144,11 @@
   border: 1px solid var(--grey-darken);
   border-radius: 8px;
   display: flex;
+}
+
+.navbar-expand-md .navbar-nav {
+  flex-direction: column;
+  @media (min-width: 1025px) {
+    flex-direction: row;
+  }
 }

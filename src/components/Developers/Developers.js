@@ -80,12 +80,12 @@ class Developers extends PureComponent{
                                 </Trans>
                             </h1>
                         </Col>
-                        <Col sm='12' lg='9' xl='7' className='tabs_header'>
+                        <Col sm='12' lg='12' xl='7' className='tabs_header'>
                             <Nav tabs>
                                 {list.map(this.renderTabName)}
                             </Nav>
                         </Col>
-                        <Col sm='12' lg='9' xl='7'>
+                        <Col sm='12' lg='12' xl='7'>
                             <TabContent activeTab={activeTab}>
                                 {list.map(this.renderTabContent)}
                             </TabContent>

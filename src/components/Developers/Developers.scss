@@ -12,11 +12,10 @@
     background-image: none;
     background-position: 30% top;
     background-size: 613px 432px;
-    padding-top: 0;
-    padding-bottom: 52px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     .container {
       background-color: var(--black);
-      border-top: 1px solid var(--grey-darken);
     }
   }
   @media (max-width: 1366px) {

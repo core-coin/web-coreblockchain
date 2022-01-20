@@ -17,7 +17,7 @@ import Button from '../Button'
 import Menu from '../SvgIcon/icons/Menu'
 import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
-import { isMobile } from '../../utils'
+import { isMobile, isSd } from '../../utils'
 
 import './HeaderNavbar.scss'
 import i18next from 'i18next'
@@ -34,7 +34,8 @@ class HeaderNavbar extends PureComponent {
     super(props)
     this.state = {
       isMenuOpen: false,
-      isMobile: isMobile()
+      isMobile: isMobile(),
+      isSd: isSd()
     }
   }
 	static propTypes = {
@@ -50,9 +51,13 @@ class HeaderNavbar extends PureComponent {
   updateIsMobile = () => {
     this.setState({isMobile:isMobile()});
   };
+  updateIsSd = () => {
+    this.setState({isSd:isSd()});
+  };
 
   componentDidMount() {
     window.addEventListener('resize', this.updateIsMobile);
+    window.addEventListener('resize', this.updateIsSd);
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset
       if (currentScroll === 0) {
@@ -76,6 +81,7 @@ class HeaderNavbar extends PureComponent {
   componentWillUnmount() {
     window.removeEventListener('scroll', () => {})
     window.removeEventListener('resize', this.updateIsMobile);
+    window.removeEventListener('resize', this.updateIsSd);
   }
 
   onOpenSidebar = (e) => {
@@ -119,14 +125,14 @@ class HeaderNavbar extends PureComponent {
       <div className='headerNavbar'>
         <Container fluid>
           <Row>
-            <Col>
+            <div className='navbar_col'>
               <Navbar expand='md' className="navbar-custom">
                 <div>
                   <Link className='navbar-brand' to={`/${language}`}>
                     <img src={Logo} alt='Core Chain' />
                   </Link>
                 </div>
-                {this.state.isMobile ? (
+                {this.state.isMobile || this.state.isSd ? (
                   <div>
                     <a className="hamburger-button" onClick={this.onOpenSidebar} href='/'>
                       <Menu />
@@ -196,7 +202,7 @@ class HeaderNavbar extends PureComponent {
                   </div>
                 )}
               </Navbar>
-            </Col>
+            </div>
           </Row>
         </Container>
       </div>
