@@ -24,6 +24,9 @@
     outline: none;
   }
   &.margin {
+    &_0 {
+      margin-right: 0;
+    }
     &_10 {
       margin-right: 10px;
     }

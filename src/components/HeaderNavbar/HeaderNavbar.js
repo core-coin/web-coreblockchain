@@ -156,7 +156,7 @@ class HeaderNavbar extends PureComponent {
                         <Nav navbar >
                           {list.map(this.renderLink)}
                         </Nav>
-                        <div className='headerNavbar_sidebar__search'>
+                        <div className='headerNavbar_sidebar__button'>
                           <Button
                             text={t('language')}
                             theme='ghost'
@@ -167,14 +167,16 @@ class HeaderNavbar extends PureComponent {
                             onClick={this.closeSidebar}
                           />
                         </div>
-                        <Button
-                          mobileFullWidth
-                          theme='green'
-                          text={t('get started')}
-                          type='router'
-                          href={`/${language}/get-started`}
-                          onClick={this.closeSidebar}
-                        />
+                        <div className='headerNavbar_sidebar__button'>
+                          <Button
+                            mobileFullWidth
+                            theme='green'
+                            text={t('get started')}
+                            type='router'
+                            href={`/${language}/get-started`}
+                            onClick={this.closeSidebar}
+                          />
+                        </div>
                       </Container>
                     </div>
                   </div>

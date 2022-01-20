@@ -105,12 +105,13 @@
       height: 69px;
       padding: 13px 23px 13px 11px;
     }
-    &__search {
+    &__button {
       display: flex;
       //width: 100%;
       justify-content: space-between;
-      button {
-        margin-right: 0;
+      margin-bottom: 20px;
+      a {
+        margin-right: 0 !important;
       }
       @media (max-width: 768px) {
         flex-wrap: wrap;

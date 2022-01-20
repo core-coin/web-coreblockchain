@@ -39,6 +39,7 @@
   }
   &_col_right {
     width: 100%;
+    z-index: 1;
     @media (min-width: 1025px) {
       width: 50%;
     }
