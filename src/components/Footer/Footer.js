@@ -126,7 +126,7 @@ class Footer extends PureComponent{
             <div className='footer'>
                 <div className='footer_contact'>
                     <Container>
-                        <Row>
+                        <div className='footer_container'>
                             <Col md="4">
                                 <p className="title">Get in touch</p>
                                 <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
@@ -138,21 +138,22 @@ class Footer extends PureComponent{
                                     <a href='/'><Twitter /></a>
                                 </div>
                             </Col>
-                            <Col md="4"/>
-                            <Col md="2" className='footer_contact_section'>
-                                <p className="title">{t('Useful links')}</p>
-                                <a href='/'>{t('Open-source License')}</a>
-                                <a href='/'>{t('Report bug')}</a>
-                                <a href='/'>{t('tradeMark')}</a>
-                                <a href='/'>{t('Brand identity')}</a>
-                            </Col>
-                            <Col md="2" className='footer_contact_section'>
-                                <p className="title">{t('Development')}</p>
-                                <a href='/'>{t('Developer Portal')}</a>
-                                <a href='/'>{t('Core Improvement Proposals')}</a>
-                                <a href='/'>{t('Core Talk')}</a>
-                            </Col>
-                        </Row>
+                            <Row>
+                                <Col md="6" className='footer_contact_section'>
+                                    <p className="title">{t('Useful links')}</p>
+                                    <a href='/'>{t('Open-source License')}</a>
+                                    <a href='/'>{t('Report bug')}</a>
+                                    <a href='/'>{t('tradeMark')}</a>
+                                    <a href='/'>{t('Brand identity')}</a>
+                                </Col>
+                                <Col md="6" className='footer_contact_section'>
+                                    <p className="title">{t('Development')}</p>
+                                    <a href='/'>{t('Developer Portal')}</a>
+                                    <a href='/'>{t('Core Improvement Proposals')}</a>
+                                    <a href='/'>{t('Core Talk')}</a>
+                                </Col>
+                            </Row>
+                        </div>
                     </Container>
                 </div>
                 <div className='footer_copyright'>
