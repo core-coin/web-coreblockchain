@@ -10,11 +10,11 @@
     background: url(../../images/sphere-hero.webp) no-repeat 17% -23%;
     padding-top: 30vh;
     max-width: 1943px;
-    @media (max-width: 767px) {
-      background-image: url(../../images/sphere-header.webp);
+    @media (max-width: 991px) {
+      background-image: url(../../images/sphere_hero_sm.png);
       background-position: 0 -78px;
-      background-size: 126%;
-      padding-top: 180px;
+      background-size: 100%;
+      padding-top: 350px;
     }
   }
   .title {

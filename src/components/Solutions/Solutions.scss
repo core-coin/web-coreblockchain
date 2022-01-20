@@ -3,7 +3,7 @@
   background-color: var(--black-darken);
   display: flex;
   padding: 188px 0 188px;
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     background-image: url(../../images/sphere-glow.webp);
     background-repeat: no-repeat;
     background-size: 520px;
