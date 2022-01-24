@@ -1,20 +1,19 @@
 .developers {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  background-image: url(../../images/map-mobile.svg);
-  background-position: 0;
+  //background-image: url(../../images/map-mobile.svg);
+  background-position: top;
   background-repeat: no-repeat;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 72px 15px 52px;
   @media (min-width: 768px) {
     border-top: none;
-    background-color: var(--black);
+    //background-color: var(--black);
     background-image: none;
     background-position: 30% top;
     background-size: 613px 432px;
     padding: 120px 0;
     .container {
-      background-color: var(--black);
+      //background-color: var(--black);
     }
   }
   @media (min-width: 1025px) {
@@ -29,7 +28,7 @@
   .preTitle {
     margin-bottom: 16px;
     @media (max-width: 767px) {
-      margin-top: 72px;
+      margin-top: 0;
       margin-bottom: 10px;
     }
   }

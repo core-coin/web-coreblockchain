@@ -1,14 +1,14 @@
 .tabs {
-  margin-top: 284px;
-  margin-bottom: 144px;
+  margin-top: 96px;
+  margin-bottom: 112px;
   background-color: var(--black);
-  @media (max-width: 767px) {
-    margin-top: 96px;
-    margin-bottom: 64px;
-  }
-  @media (max-width: 1366px) {
+  @media (min-width: 768px) {
     margin-top: 223px;
     margin-bottom: 194px;
+  }
+  @media (min-width: 1367px) {
+    margin-top: 284px;
+    margin-bottom: 144px;
   }
   h3 {
     color: var(--white);

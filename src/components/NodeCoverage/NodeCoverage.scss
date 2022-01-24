@@ -1,19 +1,14 @@
 .nodeCoverage {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  background-image: url(../../images/map.webp);
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
-  padding: 220px 0 275px;
+  background-repeat: no-repeat;
   @media (max-width: 767px) {
-    padding: 137px 0 72px;
+    padding: 267px 0 52px;
     background-image: url(../../images/map-mobile.svg);
     background-position: 57% 4%;
     background-size: contain;
     .container {
-      padding-top: 130px;
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -21,17 +16,19 @@
       margin-top: 0;
     }
   }
-  @media (max-width: 1024px) {
+  @media (min-width: 768px) {
     padding: 120px 0 120px;
     background-image: none;
     button {
       margin-top: 0;
-    }
-  }
-  @media (min-width: 768px) {
-    .button {
       padding: 0 30px;
     }
+  }
+  @media (min-width: 1025px) {
+    padding: 220px 0 275px;
+    background-image: url(../../images/map.webp);
+    background-size: auto;
+    background-position: center;
   }
   .preTitle,
   .title,
