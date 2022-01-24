@@ -67,7 +67,7 @@ class Footer extends PureComponent{
 
         return(
           <div>
-              {this.state.isMobile && (
+              {this.state.isMobile ? (
                 <div>
                     <Col sm='12'>
                         <Row className="contact-container">
@@ -122,50 +122,51 @@ class Footer extends PureComponent{
                         </Container>
                     </div>
                 </div>
-              )}
-            <div className='footer'>
-                <div className='footer_contact'>
-                    <Container>
-                        <div className='footer_container'>
-                            <Col md="4">
-                                <p className="title">Get in touch</p>
-                                <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
-                                <div className='footer_contact__icons'>
-                                    <a href='/'><Cube /></a>
-                                    <a href='/'><Cryptohub /></a>
-                                    <a href='/'><Github /></a>
-                                    <a href='/'><Discord /></a>
-                                    <a href='/'><Twitter /></a>
-                                </div>
-                            </Col>
-                            <Row>
-                                <Col md="6" className='footer_contact_section'>
-                                    <p className="title">{t('Useful links')}</p>
-                                    <a href='/'>{t('Open-source License')}</a>
-                                    <a href='/'>{t('Report bug')}</a>
-                                    <a href='/'>{t('tradeMark')}</a>
-                                    <a href='/'>{t('Brand identity')}</a>
+              ) : (
+                <div className='footer'>
+                    <div className='footer_contact'>
+                        <Container>
+                            <div className='footer_container'>
+                                <Col md="4">
+                                    <p className="title">Get in touch</p>
+                                    <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
+                                    <div className='footer_contact__icons'>
+                                        <a href='/'><Cube /></a>
+                                        <a href='/'><Cryptohub /></a>
+                                        <a href='/'><Github /></a>
+                                        <a href='/'><Discord /></a>
+                                        <a href='/'><Twitter /></a>
+                                    </div>
                                 </Col>
-                                <Col md="6" className='footer_contact_section'>
-                                    <p className="title">{t('Development')}</p>
-                                    <a href='/'>{t('Developer Portal')}</a>
-                                    <a href='/'>{t('Core Improvement Proposals')}</a>
-                                    <a href='/'>{t('Core Talk')}</a>
+                                <Row>
+                                    <Col md="6" className='footer_contact_section'>
+                                        <p className="title">{t('Useful links')}</p>
+                                        <a href='/'>{t('Open-source License')}</a>
+                                        <a href='/'>{t('Report bug')}</a>
+                                        <a href='/'>{t('tradeMark')}</a>
+                                        <a href='/'>{t('Brand identity')}</a>
+                                    </Col>
+                                    <Col md="6" className='footer_contact_section'>
+                                        <p className="title">{t('Development')}</p>
+                                        <a href='/'>{t('Developer Portal')}</a>
+                                        <a href='/'>{t('Core Improvement Proposals')}</a>
+                                        <a href='/'>{t('Core Talk')}</a>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Container>
+                    </div>
+                    <div className='footer_copyright'>
+                        <Container>
+                            <Row>
+                                <Col>
+                                    <p>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
                                 </Col>
                             </Row>
-                        </div>
-                    </Container>
+                        </Container>
+                    </div>
                 </div>
-                <div className='footer_copyright'>
-                    <Container>
-                        <Row>
-                            <Col>
-                                <p>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
-            </div>
+                  )}
           </div>
         )
     }

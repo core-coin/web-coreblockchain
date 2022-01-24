@@ -5,6 +5,9 @@
   &_container {
     display: flex;
     justify-content: center;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
   &_bg {
     background: url(../../images/sphere-hero.webp) no-repeat 17% -23%;
@@ -15,6 +18,10 @@
       background-position: 0 -78px;
       background-size: 100%;
       padding-top: 350px;
+    }
+    @media (max-width: 767px) {
+      background-position: 0 -28px;
+      padding-top: 180px;
     }
   }
   .title {

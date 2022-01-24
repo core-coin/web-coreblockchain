@@ -1,25 +1,27 @@
 .developers {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  background-image: url(../../images/developers-medium.webp);
-  background-position: 150% center;
+  background-image: url(../../images/map-mobile.svg);
+  background-position: 0;
   background-repeat: no-repeat;
-  background-size: 897px;
-  padding: 246px 0 226px;
-  @media (max-width: 1024px) {
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (min-width: 768px) {
     border-top: none;
     background-color: var(--black);
     background-image: none;
     background-position: 30% top;
     background-size: 613px 432px;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
     .container {
       background-color: var(--black);
     }
   }
-  @media (max-width: 1366px) {
+  @media (min-width: 1025px) {
+    background-image: url(../../images/developers-medium.webp);
     background-position: 150% center;
+    background-size: 897px;
+    padding: 246px 0 226px;
   }
   @media (min-width: 1367px) {
     background-position: 110% center;
