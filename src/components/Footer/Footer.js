@@ -107,19 +107,7 @@ class Footer extends PureComponent{
                         </Row>
                     </Col>
                     <div className='footer_mobile'>
-                        <Container>
-                            <Row>
-                                <Col>
-                                    <div className='text-center footer_logo'>
-                                        {/*<div className='footer_logo-img'>*/}
-                                        {/*    <img src={Logo} alt="Core Chain"/>*/}
-                                        {/*</div>*/}
-                                        <p className='text-center'>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
-                                        {/*<p className='text-center'>{t('Website last updated Jan 31, 2021')}</p>*/}
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Container>
+                        <p className='text-center footer_copyright_mobile'>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
                     </div>
                 </div>
               ) : (

@@ -7,7 +7,7 @@
   padding-bottom: 32px;
   z-index: 1;
   position: relative;
-  height: 414px;
+  height: 202px;
   @media (max-width: 767px) {
     padding-bottom: 25%;
     border-top: none;
@@ -93,6 +93,9 @@
   .title {
     margin-bottom: 24px;
   }
+  @media (max-width: 767px) {
+    padding-bottom: 100px;
+  }
 }
 .footer {
   background-color: var(--black-darken);
@@ -147,6 +150,17 @@
   &_container {
     display: flex;
     justify-content: space-between;
+  }
+  &_copyright_mobile {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 32px;
+    color: var(--grey);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: var(--font-secondary-weight-normal);
+    line-height: 24px;
+    width: 100%;
   }
 }
 
