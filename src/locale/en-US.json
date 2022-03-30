@@ -4,7 +4,7 @@
   "Language": "Language",
   "multiline": "Some newlines <1> would be </1> fine",
   "Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.": "Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.",
-  "The Value Custodian for a Decentralized World": "The Value Custodian for a <1>Decentralized World</1>",
+  "The Value Custodian for a Decentralized World": "The value custodian for a <1>decentralized world</1>",
   "Coverage": "Coverage",
   "Borderless network anywhere in the World run on various networks.": "Borderless network anywhere in the World run on various networks.",
   "Decentralization": "Decentralization",
@@ -18,14 +18,14 @@
   "Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.": "Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.",
   "Swarm Intelligence": "Swarm Intelligence",
   "Core Blockchain is using a self-organized system — Boids — to transact and route the data.": "Core Blockchain is using a self-organized system — Boids — to transact and route the data.",
-  "main benefits of core blockchain": "main benefits of <1>core blockchain</1>",
+  "main benefits of core blockchain": "Main benefits of <1>Core Blockchain</1>",
   "Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform We are creating an Inclusion program suited for all people": "Our mission is building a Global Decentralized Network (GDN) to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform.<1>We are creating an Inclusion program suited for all people.</1>",
   "Core Ecosystem": "Core <1>Ecosystem</1>",
   "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION We are inviting any new ideas for the Blockchain Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network": "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Our blockchain has a program called Core Community Fund (CCF) to award projects deemed to be beneficial for the network.",
-  "Core Blockchain Social Impact": "SOCIAL IMPACT PROVIDED BY <1>CORE BLOCKCHAIN</1>",
+  "Core Blockchain Social Impact": "Social impact provided by <1>Core Blockchain</1>",
   "industries": "Targeted Industries",
   "connect with dev community": "connect with dev community",
-  "designed for developers": "designed for <1>developers</1>",
+  "designed for developers": "Designed for <1>developers</1>",
   "Block time": "Block time",
   "Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.": "Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.",
   "Statistics": "Statistics",
@@ -42,7 +42,7 @@
   "IoT Performance": "IoT Performance",
   "Brand identity": "Brand identity",
   "Contact": "Contact",
-  "core mining": "GET A HEADSTART, START <1>CORE COIN MINING</1>",
+  "core mining": "Get a headstart, start <1>Core Coin mining</1>",
   "Core Foundation": "Core Foundation",
   "Core Talk": "Core talk",
   "We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices": "We optimize the mining algorithm to be more focused on small devices and connected to mesh network ecosystem. Meshnet is Blockchain topology, connecting nodes and transmit various data into established and new devices.",
@@ -62,9 +62,10 @@
   "Website last updated Jan 31, 2020": "Website last updated Jan 31, 2021",
   "Previous versions": "Previous versions",
   "Public Key": "Public key",
-  "As a reminder, all release binaries are signed. You can manually verify the signatures with the command": "As a reminder, all release binaries are signed. You can manually verify the signatures with the command",
+  "This download consist of all blocks that have been verified": "This download consist of all blocks that have been verified.",
   "Source code": "Source code",
-  "Core Client Boid": "Core Client Boid",
+  "Download the Core client": "Download the Core client",
+  "Get verified Core Blockchain data": "Get verified Core Blockchain data",
   "Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.": "Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.",
   "CORE explorer": "CORE explorer",
   "Transaction Explorer": "Transaction Explorer",
@@ -84,14 +85,27 @@
   "Copy command": "Copy command",
   "Core Wallet": "Core Wallet",
   "Download via torrent": "Download via torrent",
-  "Minimum requirements": "Minimum requirements",
+  "Minimum requirements": "Minimum requirements:",
+  "Unlock the Core Ecosystem®": "Unlock the <1>Core Ecosystem®</1>",
   "Build Your Own": "Build Your Own",
   "Tested Devices List": "Tested Devices List",
   "IoT Devices": "IoT Devices",
+  "How to get started with Core Mining": "How to get started with Core Mining",
+  "Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins": "Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins",
+  "View mining pools": "View mining pools",
+  "Safe storage for your digital assets": "Safe storage for your digital assets",
+  "Store your freshly mined assets securely.": "Store your freshly mined assets securely.",
+  "Core block Index & analytics": "Core block Index & analytics",
+  "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more.",
+  "browse transactions": "browse transactions",
+  "Open Hardware (IOT Devices)": "Open Hardware (IOT Devices)",
+  "Minimum requirements:": "Minimum requirements:",
+  "Build your own": "Build your own",
+  "Tested devices list": "Tested devices list",
   "Download Blockchain from torrent": "Download Blockchain from torrent",
   "Charts and metrics for the Core network. Explore our Boid locations Worldwide.": "Charts and metrics for the Core network. Explore our Boid locations Worldwide.",
   "Core stats": "Core stats",
-  "Get core software": "Get <1>core software</1>",
+  "Get core software": "Time to <1>get you started</1>",
   "Join Core Blockchain ecosystem and enjoy all its ts": "Join Core Blockchain ecosystem and enjoy all its ts",
   "Join the Borderless network anywhere in the World run on various networks.": "Join the Borderless network anywhere in the World run on various networks.",
   "Select your language": "Select your language",
@@ -107,7 +121,8 @@
   "If translation progress is below 100%, please contribute! Don’t see your language listed?": "If translation progress is below 100%, please contribute! Don’t see your language listed?",
   "Open an issue.": " Open an issue.",
   "Open link": "Open link",
-  "Boid distributions": "Boid distributions",
+  "Distribution clients": "Distribution clients",
+  "Specific download for distribution deployment": "Specific download for distribution deployment.",
   "Join our translation instance.": "Join our translation instance.",
   "Once the review is complete (i.e. review progress is 100%), we will add it to the website.": "Once the review is complete (i.e. review progress is 100%), we will add it to the website.",
   "Find the language you want to translate and select a document.": "Find the language you want to translate and select a document.",
@@ -123,6 +138,8 @@
   "Go to marketplace": "Go to marketplace",
   "packageToolScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core",
   "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry It has been the industry's standard dummy text" : "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry. It has been the industry's standard dummy text.",
+  "CorePass digital identity": "CorePass digital identity",
+  "First blockchain based decentralized digital identity. CorePass represents the foundation of the Core ecosystem, allowing users to access all the Core platforms and aplications quickly and easily with a push of a button.": "First blockchain based decentralized digital identity. CorePass represents the foundation of the Core ecosystem, allowing users to access all the Core platforms and aplications quickly and easily with a push of a button.",
   "main tabs": [
     {
       "tabName": "Finance & Payments",
@@ -216,7 +233,7 @@
     },
     {
       "label": "Developers",
-      "link": "#"
+      "link": "developers"
     },
     {
       "label": "Enterprises",
@@ -224,7 +241,7 @@
     },
     {
       "label": "Community",
-      "link": "#"
+      "link": "community"
     }
   ],
   "languages": [
@@ -250,5 +267,142 @@
       "code": "sk",
       "nativeName": "Slovak"
     }
+  ],
+  "Get started menuLinks" : [
+    {
+      "label": "Core Client",
+      "link": "coreClient"
+    },
+    {
+      "label": "Distribution clients",
+      "link": "distributionClients"
+    },
+    {
+      "label": "Core mining",
+      "link": "coreMining"
+    },
+    {
+      "label": "Block index",
+      "link": "blockIndex"
+    },
+    {
+      "label": "Open hardware",
+      "link": "openHardware"
+    },
+    {
+      "label": "CorePass",
+      "link": "corePass"
+    }
+  ],
+  "nodeDistributionTabName" : [
+    {
+      "tabName": "Repos",
+      "elements": [
+        {
+          "label": "Docker repo",
+          "id": "docker"
+        },
+        {
+          "label": "Kubernetes",
+          "id": "kubernetes"
+        },
+        {
+          "label": "Azure",
+          "id": "azure"
+        },
+        {
+          "label": "Amazon Web Service",
+          "id": "aws"
+        }
+      ]
+    },
+    {
+      "tabName": "Deployment",
+      "elements": [
+        {
+          "label": "Docker repo",
+          "id": "docker"
+        },
+        {
+          "label": "Kubernetes",
+          "id": "kubernetes"
+        },
+        {
+          "label": "Azure",
+          "id": "azure"
+        },
+        {
+          "label": "Amazon Web Service",
+          "id": "aws"
+        }
+      ]
+    },
+    {
+      "tabName": "Images",
+      "elements": [
+        {
+          "label": "Docker repo",
+          "id": "docker"
+        },
+        {
+          "label": "Kubernetes",
+          "id": "kubernetes"
+        },
+        {
+          "label": "Azure",
+          "id": "azure"
+        },
+        {
+          "label": "Amazon Web Service",
+          "id": "aws"
+        }
+      ]
+    },
+    {
+      "tabName": "Containers",
+      "elements": [
+        {
+          "label": "Docker repo",
+          "id": "docker"
+        },
+        {
+          "label": "Kubernetes",
+          "id": "kubernetes"
+        },
+        {
+          "label": "Azure",
+          "id": "azure"
+        },
+        {
+          "label": "Amazon Web Service",
+          "id": "aws"
+        }
+      ]
+    }
+  ],
+  "hardware requirements": [
+    "64-bit architecture",
+    "Just-in-time (JIT) compilation",
+    "4 cores CPU",
+    "4GB RAM (8GB recommended)",
+    "Passive or Active cooler"
+  ],
+  "operating systems list": [
+    {
+      "label": "Linux",
+      "value": "linux",
+      "linkToDownLoad": "/"
+    },
+    {
+      "label": "MacOS",
+      "value": "macOS",
+      "linkToDownLoad": "/"
+    },
+    {
+      "label": "Microsoft Windows",
+      "value": "windows",
+      "linkToDownLoad": "/"
+    }
   ]
+
 }

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { string } from 'prop-types'
 
-import Copy from '../SvgIcon/icons/Copy'
+import Copy from '../../images/getStarted/CopySimple.svg'
 
 import './CopyInput.scss'
 
@@ -25,15 +25,15 @@ export default class CopyInput extends PureComponent{
         const { value } = this.props
 
         return(
-            <div className='copyInput input-group'>
+            <div className='copyInput'>
                 <input
                     type='text'
                     value={value}
                     ref={this.textInput}
+                    style={{display: 'none'}}
                     readOnly
                 />
-                <hr className='vertical'/>
-                <button type='button' onClick={this.copyToClipboard}><Copy/></button>
+                <button className="copy-button" onClick={this.copyToClipboard}><img src={Copy} alt="copy icon" /></button>
             </div>
         )
     }

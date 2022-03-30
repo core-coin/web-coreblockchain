@@ -1,7 +1,14 @@
 import React, { PureComponent } from 'react'
 import MetaTags from 'react-meta-tags'
+import Content from '../../content/community.mdx'
+import '../../templates/md.scss'
 
-import Developers from '../../components/Developers'
+// import Developers from '../../components/Developers'
+
+const components = {
+  em: props => <p {...props} />
+}
+
 
 class DevelopersContainer extends PureComponent {
     static propTypes = {}
@@ -19,7 +26,10 @@ class DevelopersContainer extends PureComponent {
 			          {t('connect with dev community')}
 		          </title>
 	          </MetaTags>
-	          <Developers />
+            <div className="content-container">
+              <Content components={components} />
+            </div>
+	          {/*<Developers />*/}
           </>
         )
     }

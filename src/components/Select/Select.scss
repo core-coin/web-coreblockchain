@@ -35,3 +35,70 @@
     box-shadow: 0 0 5px 0 var(--green);
   }
 }
+.indicator-separator {
+  display: none;
+}
+.arrow-down {
+  margin: 8px 8px;
+}
+.arrow-down:hover{
+  filter: brightness(0) invert(1);
+}
+.select-container {
+  display: flex;
+  margin-top: 56px;
+  margin-bottom: 32px;
+}
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+}
+.button-menu {
+  cursor: pointer;
+  border: 1px solid #303040;
+  background: #18181F;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 17px;
+}
+.button-menu:hover {
+  border: 1px solid #77778C;
+}
+.button-menu:hover > img {
+  filter: brightness(0) invert(1);
+}
+.select {
+  width: 90%;
+}
+.menu{
+  position: absolute;
+  min-width: 200px;
+  z-index: 1;
+  display: block;
+  background: #24242E;
+  border: 1px solid #303040;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8px;
+  a {
+    padding: 4px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    //font-family: 'Red Hat Display';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #77778C;
+  }
+  a:hover {
+    background: #303040;
+    color: #fff;
+  }
+}

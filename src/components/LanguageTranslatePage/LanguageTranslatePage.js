@@ -6,14 +6,19 @@ import {
     Col
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
-
+import { getTaskList } from '../../services'
 import AnimatedArrow from '../AnimatedArrow'
 
 import '../LanguagePage/LanguagePage.scss'
 import i18next from 'i18next'
 
 class LanguageTranslatePage extends PureComponent{
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            tasks: []
+        }
+    }
     static propTypes = {
         translationProgress: number,
         reviewProgress: number,
@@ -22,6 +27,12 @@ class LanguageTranslatePage extends PureComponent{
     static defaultProps = {
         translationProgress: 80,
         reviewProgress: 10,
+    }
+
+    componentDidMount() {
+        const tasks = getTaskList();
+        this.setState({ tasks });
+        console.log(tasks)
     }
 
     renderLanguageInProgress = (language) => (

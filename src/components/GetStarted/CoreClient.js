@@ -2,60 +2,52 @@ import React, { PureComponent } from 'react'
 import { withNamespaces } from 'react-i18next'
 
 import Select from '../Select'
-import CopyInput from '../CopyInput'
 import AnimatedArrow from '../AnimatedArrow'
-import Button from '../Button'
-import Key from '../SvgIcon/icons/Key'
+import Shield from '../../images/getStarted/get-started-shield.png'
+import Link from '../../images/getStarted/get-started-link.svg'
 
 import './GetStarted.scss'
-
-const KeyIcon = <Key />
 
 class CoreClient extends PureComponent {
 
   render() {
     const { t } = this.props
-    const list = Array.from(t('CoreDaemonSoftware osList', { returnObjects: true }))
+    const list = Array.from(t('operating systems list', { returnObjects: true }))
 
 
     return (
       <>
         <div className='downloadBlock'>
-          <h3>{t('Core Client Boid')}</h3>
+          <img src={Link} alt="shield" className="icon-card"/>
+          <h3>{t('Download the Core clientt')}</h3>
           <p>{t('Go-core is the the command line interface for running a full Core node implemented in Go.')}</p>
           <Select
-            type='buttons'
-            download
             id='daemonSoftware'
-            labelText={t('Choose your operating system') + ':'} 
+            labelText={t('Choose your operating system') + ':'}
             items={list}
             greenBtnText={t('Download')}
-            ghostBtnText={t('IPFS')}
-            addBtnText={t('Onion')}
+            ghostBtnText={t('Source code')}
+            sourceCodeLink={'/'}
+            placeholder={t('Choose your operating system')}
           />
-          <div className='version-links'>
-            <AnimatedArrow
-              url=''
-              text={t('Previous versions')}
-            />
-            <AnimatedArrow
-              url=''
-              text={t('Source code')}
-            />
-          </div>
-          <hr />
-          <h4>{t('Public key')}</h4>
-          <p>{t('As a reminder, all release binaries are signed. You can manually verify the signatures with the command')}:</p>
-          <CopyInput value='openssl dgst -sha256 -verify core.pem -signature core.sig core' />
-          <div className='downloadBlock_key'>
-            <Button
-              theme='ghost'
-              mobileFullWidth
-              size='small'
-              href={'#'}
-              text={t('Public Key')}
-              icon={KeyIcon}
-            />
+          <div className='downloadBlock_card'>
+            <div>
+              <img src={Shield} alt="shield"/>
+            </div>
+            <div className="downloadBlock_card_card-content">
+              <h4>{t('Get verified Core Blockchain data')}</h4>
+              <p>{t('This download consist of all blocks that have been verified')}:</p>
+              <div className='version-links'>
+                <AnimatedArrow
+                  url=''
+                  text={t('Google Drive')}
+                />
+                <AnimatedArrow
+                  url=''
+                  text={t('Yandex')}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </>

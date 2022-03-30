@@ -27,7 +27,7 @@ class HeroHeader extends PureComponent{
                         <Col sm='12' lg={{ size: 10, offset: 1 }} xl={{ size: 6, offset: 3 }}>
                         <h1 className='title'>
                         <Trans i18nKey='The Value Custodian for a Decentralized World'>
-                            The Value Custodian for a <em>Decentralized World</em>
+                            The value custodian for a <em>decentralized world</em>
                         </Trans>
                         </h1>
                         </Col>

@@ -5,14 +5,13 @@ import {
     TabPane,
     Nav,
     NavItem,
-    NavLink
+    NavLink, Row, Col
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
-
-import Image from './Image'
-import TabContainers from './TabContainers'
-import Deployment from './Deployment'
-import Repos from './Repos'
+import Arrows from '../../images/getStarted/get-started-arrows.svg'
+import { getCloudImage } from '../../utils'
+import ArrowUpRight from '../../images/getStarted/ArrowUpRight.svg'
+import CopyInput from '../CopyInput'
 
 import './GetStarted.scss'
 
@@ -34,22 +33,46 @@ class Distribution extends PureComponent{
         const {activeTab} = this.state
 
         return (
-            <NavItem key={tab}>
+            <NavItem key={tab.tabName}>
                 <NavLink
-                    className={activeTab === tab ? 'active' : ''}
+                    className={activeTab === tab.tabName ? 'active' : ''}
                     onClick={() => {
-                        this.toggle(tab);
+                        this.toggle(tab.tabName);
                     }}
                 >
-                    {tab}
+                    {tab.tabName}
                 </NavLink>
             </NavItem>
         )
     }
+    renderTabContent = (tab, index) => (
+      <TabPane tabId={tab.tabName} key={index}>
+          <Row>
+              <Col sm='12'>
+                  {tab.elements.map(this.renderContent)}
+              </Col>
+          </Row>
+      </TabPane>
+    )
+
+    renderContent = (element) => (
+      <div className="tab-content-item">
+          <div className="tab-content-item-tag">
+              <img src={getCloudImage(element.id)} alt="repo icon"/>
+              <p className="tab-content-item-title">{element.label}</p>
+          </div>
+          <div className="tab-content-item-icons">
+              <a href="/" target="_blank" className="tab-content-item-link">
+                  <img src={ArrowUpRight} alt="arrow up right" />
+              </a>
+              <CopyInput />
+          </div>
+      </div>
+    )
 
     render(){
         const { t } = this.props
-        
+
         const { activeTab } = this.state
 
         const list = Array.from(t('nodeDistributionTabName', { returnObjects: true }))
@@ -57,7 +80,9 @@ class Distribution extends PureComponent{
         return(
             <>
                 <div className='downloadBlock'>
-                    <h3>{t('Boid distributions')}</h3>
+                    <img src={Arrows} alt='arrows' className="icon-card"/>
+                    <h3>{t('Distribution clients')}</h3>
+                    <p>{t('Specific download for distribution deployment')}</p>
                     <div className='tabs_header'>
                         <Nav tabs>
                             {list.map(this.renderTabName)}
@@ -65,18 +90,7 @@ class Distribution extends PureComponent{
                     </div>
                     <div>
                         <TabContent activeTab={activeTab}>
-                            <TabPane tabId='Repos'>
-                                <Repos />
-                            </TabPane>
-                            <TabPane tabId={t('Deployment')}>
-                                <Deployment />
-                            </TabPane>
-                            <TabPane tabId={t('Images')}>
-                                <Image />
-                            </TabPane>
-                            <TabPane tabId={t('Containers')}>
-                                <TabContainers />            
-                            </TabPane>
+                            {list.map(this.renderTabContent)}
                         </TabContent>
                     </div>
                 </div>

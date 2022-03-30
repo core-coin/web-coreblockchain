@@ -17,9 +17,8 @@ body {
 .title {
   color: var(--white);
   font-weight: 700;
-  text-transform: uppercase;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 48px;
+  line-height: 56px;
 }
 
 
@@ -131,7 +130,7 @@ em {
   --black: #18181f;
   --black-lighter: #1c1c24;
   --black-darken: #14141a;
-  --font-primary: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-primary: 'Red Hat Display', 'Open Sans', Helvetica, Arial, sans-serif;
   --font-primary-size: 20px;
   --font-primary-weight-normal: 400;
   --font-primary-weight-bold: 700;

@@ -1,45 +1,29 @@
 import React, { PureComponent } from 'react'
-import { object } from 'prop-types'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import Community from '../../components/Community'
-import Loading from '../../components/Loading'
+import Content from '../../content/community.mdx'
+import MetaTags from 'react-meta-tags'
+import '../../templates/md.scss'
+
+const components = {
+  em: props => <p {...props} />
+}
 
 class CommunityContainer extends PureComponent {
-  static propTypes = {
-    mdFiles: object,
-  }
-
-  static defaultProps = {}
 
   render() {
-    const {
-      mdFiles,
-    } = this.props
-
-    if (!mdFiles) {
-      return(
-        <Loading/>
-      )
-    }
-
+    const { t } = this.props
     return(
-      <Community
-        mdFiles={mdFiles}
-      />
+      <>
+        <MetaTags>
+          <title>
+            {t('connect with community')}
+          </title>
+        </MetaTags>
+        <div className="content-container">
+          <Content components={components} />
+        </div>
+        </>
     )
   }
 }
 
-function mapStateToProps(state) {
-  return{
-    mdFiles: state.index.markdownFiles,
-  }
-}
-
-const mapDispatchToProps = dispatch => bindActionCreators({
-
-}, dispatch)
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(CommunityContainer)
+export default CommunityContainer

@@ -3,11 +3,12 @@ import { Container, Row, Col } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
 
 import CoreSoftware from './CoreSoftware'
-import CoreNetwork from './CoreNetwork'
-import CoreMiners from './CoreMiners'
+import Hardware from './Hardware'
+import CoreBlock from './CoreBlock'
 import CoreClient from './CoreClient'
 import Distribution from './Distribution'
-import Devices from './Devices'
+import Mining from './Mining'
+import CorePass from './CorePass'
 import DistributionSlider from './DistributionSlider'
 
 import './GetStarted.scss'
@@ -16,7 +17,7 @@ class GetStarted extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      activeLink: 'get_started',
+      activeLink: 'coreClient',
       headersList: [],
       linksList: [],
       textToCopy: '',
@@ -91,14 +92,9 @@ class GetStarted extends PureComponent {
       <div className='getStarted'>
         <Container>
           <Row className='getStarted_row'>
-            <Col md='3' className='hidden-xs getStarted_menu'>
-              <div>
-                <ul>{list.map(this.renderLinks)}</ul>
-              </div>
-            </Col>
             <Col
-              md={{ size: 9 }}
-              xl={{ size: 9}}
+              md={{ size: 8 }}
+              xl={{ size: 8}}
               className='getStarted_content'
             >
               <Row>
@@ -109,13 +105,13 @@ class GetStarted extends PureComponent {
                     {isMobile && <DistributionSlider />}
                   </div>
                   {!isMobile && (
-                    <div className='getStarted_content__block'>
+                    <div className='getStarted_content__block' id="coreClient">
                       <span id='for_developers' className='hiddenBlock'></span>
                       <CoreClient />
                     </div>
                   )}
                   {!isMobile && (
-                    <div className='getStarted_content__block'>
+                    <div className='getStarted_content__block' id="distributionClients">
                       <span
                         id='node_distributions'
                         className='hiddenBlock'
@@ -123,20 +119,29 @@ class GetStarted extends PureComponent {
                       <Distribution />
                     </div>
                   )}
-                  <div className='getStarted_content__block'>
+                  <div className='getStarted_content__block' id="coreMining">
                     <span id='devices' className='hiddenBlock'></span>
-                    <Devices />
+                    <Mining />
                   </div>
-                  <div className='getStarted_content__block'>
+                  <div className='getStarted_content__block' id="blockIndex">
                     <span id='core_mining' className='hiddenBlock'></span>
-                    <CoreMiners />
+                    <CoreBlock />
                   </div>
-                  <div className='getStarted_content__block'>
+                  <div className='getStarted_content__block' id="openHardware">
                     <span id='core_network' className='hiddenBlock'></span>
-                    <CoreNetwork />
+                    <Hardware />
+                  </div>
+                  <div className='getStarted_content__block' id="corePass">
+                    <span id='core_network' className='hiddenBlock'></span>
+                    <CorePass />
                   </div>
                 </Col>
               </Row>
+            </Col>
+            <Col md='3' className='hidden-xs getStarted_menu'>
+              <div>
+                <ul>{list.map(this.renderLinks)}</ul>
+              </div>
             </Col>
           </Row>
         </Container>

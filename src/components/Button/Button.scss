@@ -7,6 +7,7 @@
   margin-right: 15px;
   padding: 0 20px;
   text-transform: uppercase;
+  text-decoration: none;
   @media (max-width: 767px) {
     &.mobileFullWidth {
       width: 100%;
@@ -100,4 +101,9 @@
       }
     }
   }
+}
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
 }

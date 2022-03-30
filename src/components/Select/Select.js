@@ -1,71 +1,185 @@
 import React, { PureComponent } from 'react'
-import { array, string, oneOf } from 'prop-types'
-import { Label, Input } from 'reactstrap'
+import { array, string } from 'prop-types'
+import ReactSelect, { components } from 'react-select'
 
 import Button from '../Button'
 import Download from '../SvgIcon/icons/Download'
-import Ipfs from '../SvgIcon/icons/Ipfs'
-import Onion from '../SvgIcon/icons/Onion'
+import ArrowDown from '../../images/arrow.svg'
+import Dots from '../../images/ListBullets.svg'
 
 import './Select.scss'
 
 const DownloadIcon = <Download/>
-const OnionIcon = <Onion />
-const IpfsIcon = <Ipfs />
 
 export default class Select extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            value: props.items[0].title,
+            value: '',
+            showMenu: false,
         }
     }
     static propTypes = {
-        type: oneOf(['buttons', 'button', 'select']),
         labelText: string,
         id: string,
         items: array,
         greenBtnText: string,
         ghostBtnText: string,
-        addBtnText: string,
+        sourceCodeLink: string,
+        placeholder: string
     }
 
-    renderOption = (option, index) => (
-        <option key={index} value={option.title}>{option.title}</option>
-    )
+    // renderOption = (option, index) => (
+    //     <option key={index} value={option.title}>{option.title}</option>
+    // )
 
-    onSelectChange = (event) => {
+    onSelectChange = (data) => {
         this.setState({
-            value: event.target.value
+            value: data.value
         })
     }
 
+  showMenu = (event) => {
+      event.preventDefault();
+      console.log(this.state.showMenu)
+      if (this.state.showMenu){
+        this.closeMenu()
+      } else {
+        this.setState({ showMenu: true }, () => {
+          document.addEventListener('click', this.closeMenu, true);
+        });
+      }
+  }
+
+  closeMenu = () => {
+        this.setState({ showMenu: false }, () => {
+          document.removeEventListener('click', this.closeMenu);
+        });
+  }
+
     render(){
-        const { id, labelText, items, greenBtnText, ghostBtnText, addBtnText, type } = this.props
+        const { items, greenBtnText, ghostBtnText, sourceCodeLink, placeholder } = this.props
 
-        let selectedItem = this.props.items.filter((item) => item.title === this.state.value)[0]
-
-        const SELECT = (
-            <>
-                {labelText && <Label className='select_label' for={id}>{labelText}</Label>}
-                <Input
-                    className='select_input'
-                    type='select'
-                    name='select'
-                    id={id}
-                    onChange={this.onSelectChange}
-                    value={this.state.value}
-                >
-                    {items.map(this.renderOption)}
-                </Input>
-            </>
+        let selectedItem = this.props.items.filter((item) => item.value === this.state.value)
+      const DropdownIndicator = (propsSelect) => {
+        return (
+          <components.DropdownIndicator {...propsSelect}>
+            <img src={ArrowDown} alt="arrow down" className='img-fluid arrow-down' />
+          </components.DropdownIndicator>
         )
+      }
+      const IndicatorSeparator = (propsSelect) => {
+        return <components.IndicatorSeparator className="indicator-separator" {...propsSelect} />
+      }
 
-        if (type === 'buttons') {
             return (
                 <>
-                    {SELECT}
-                    <Button
+                  <div className='select-container'>
+                    <div className="select">
+                      <ReactSelect
+                        options={items}
+                        placeholder={placeholder}
+                        components={{ DropdownIndicator, IndicatorSeparator }}
+                        isClearable={false}
+                        menuPlacement="auto"
+                        onChange={this.onSelectChange}
+                        value={items.find((o) => o.value === this.state.value)}
+                        styles={{
+                          control: (base) => ({
+                            ...base,
+                            boxShadow: 'none',
+                            border: '1px solid #303040',
+                            backgroundColor: '#18181F',
+                            borderRadius: '8px',
+                            paddingRight: '8px',
+                            height: '48px',
+                            "&:hover": {
+                              borderColor: "#77778C"
+                            }
+                          }),
+                          indicatorsContainer: (base) => ({
+                            ...base,
+                            '& > div': {
+                              padding: '0',
+                            },
+                          }),
+                          placeholder: (base) => ({
+                            ...base,
+                            color: '#77778C',
+                            fontSize: '16px',
+                          }),
+                          valueContainer: (base) => ({
+                            ...base,
+                            paddingLeft: '16px',
+                            paddingRight: '8px',
+                          }),
+                          singleValue: (base) => ({
+                            ...base,
+                            backgroundColor: '#18181F',
+                            color: '#fff',
+                            fontSize: '16px',
+                            fontWeight: 400,
+                            marginRight: '0',
+                            marginLeft: '0',
+                          }),
+                          dropdownIndicator: base => ({
+                            ...base,
+                            width: '32px',
+                            height: '32px',
+                            padding: '13px 11px',
+                            "&:hover": {
+                              backgroundColor: "#303040",
+                              borderRadius: '8px',
+                            }
+                          }),
+                          menu: (base) => ({
+                            ...base,
+                            backgroundColor: '#24242E',
+                            border: '1px solid #303040',
+                            color: '#77778C',
+                            padding: '8px'
+                          }),
+                          option: (styles, {isDisabled, isFocused, isSelected }) => {
+                            return {
+                              ...styles,
+                              fontSize: '14px',
+                              fontWeight: '400',
+                              borderRadius: '8px',
+                              backgroundColor: isDisabled
+                                ? undefined
+                                : isSelected
+                                ? '#303040'
+                                : isFocused
+                                ? '#303040'
+                                : undefined,
+                              color: isDisabled
+                                ? undefined
+                                : isSelected
+                                  ? '#fff'
+                                  : isFocused
+                                    ? '#fff'
+                                    : undefined,
+                            }
+                          }
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <div className="button-menu" onClick={this.showMenu}>
+                        <img src={Dots} alt="arrow down" className='img-fluid dots' />
+                      </div>
+                      {
+                        this.state.showMenu
+                          && (
+                            <div className="menu">
+                              <a href="/"> Get public key </a>
+                              <a href="/"> Previous versions </a>
+                            </div>
+                          )
+                      }
+                    </div>
+                  </div>
+                  <Button
                         mobileFullWidth
                         download
                         theme='green'
@@ -73,48 +187,17 @@ export default class Select extends PureComponent{
                         href={selectedItem.linkToDownLoad}
                         text={greenBtnText}
                         icon={DownloadIcon}
+                        disabled={this.state.value === ''}
                     />
                     <Button
                         mobileFullWidth
                         download
                         theme='ghost'
                         size='small'
-                        href={selectedItem.ipfsLink}
+                        href={sourceCodeLink}
                         text={ghostBtnText}
-                        icon={IpfsIcon}
-                    />
-                    <Button
-                        mobileFullWidth
-                        download
-                        theme='ghost'
-                        size='small'
-                        href={selectedItem.onionLink}
-                        text={addBtnText}
-                        icon={OnionIcon}
                     />
                 </>
             )
         }
-
-        if (type === 'button') {
-            return (
-                <>
-                    {SELECT}
-                    <Button
-                        mobileFullWidth
-                        theme='green'
-                        size='small'
-                        href={selectedItem.link}
-                        text={greenBtnText}
-                    />
-                </>
-            )
-        }
-
-        return(
-            <>
-                {SELECT}
-            </>
-        )
-    }
 }

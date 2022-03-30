@@ -6,7 +6,6 @@ import './GetStarted.scss'
 class CoreSoftware extends PureComponent{
 
     render(){
-        const { t } = this.props
 
         return(
             <>
@@ -15,7 +14,6 @@ class CoreSoftware extends PureComponent{
                     Get <em>core software</em>
                     </Trans>
                 </h1>
-                <p className='description'>{t('Join the Borderless network anywhere in the World run on various networks.')}</p>              
             </>
         )
     }
