@@ -63,7 +63,7 @@ export default class Select extends PureComponent{
         let selectedItem = this.props.items.filter((item) => item.value === this.state.value)
       const DropdownIndicator = (propsSelect) => {
         return (
-          <components.DropdownIndicator {...propsSelect}>
+          <components.DropdownIndicator className="dropdown-container" {...propsSelect}>
             <img src={ArrowDown} alt="arrow down" className='img-fluid arrow-down' />
           </components.DropdownIndicator>
         )
@@ -93,8 +93,18 @@ export default class Select extends PureComponent{
                             borderRadius: '8px',
                             paddingRight: '8px',
                             height: '48px',
+                            cursor: 'pointer',
                             "&:hover": {
                               borderColor: "#77778C"
+                            },
+                            "&:hover > * > *": {
+                              color: "#FFF"
+                            },
+                            "&:hover > * > .dropdown-container": {
+                              backgroundColor: "#303040",
+                            },
+                            "&:hover > * > .dropdown-container > .arrow-down": {
+                              filter: 'brightness(0) invert(1)',
                             }
                           }),
                           indicatorsContainer: (base) => ({
@@ -122,14 +132,18 @@ export default class Select extends PureComponent{
                             marginRight: '0',
                             marginLeft: '0',
                           }),
-                          dropdownIndicator: base => ({
+                          dropdownIndicator: (base, state) => ({
                             ...base,
                             width: '32px',
                             height: '32px',
                             padding: '13px 11px',
+                            borderRadius: '8px',
+                            '& > .arrow-down': {
+                              transition: 'all .2s ease',
+                              transform: state.selectProps.menuIsOpen  ? 'rotate(180deg)' : null,
+                            },
                             "&:hover": {
-                              backgroundColor: "#303040",
-                              borderRadius: '8px',
+                              backgroundColor: "#77778C !important",
                             }
                           }),
                           menu: (base) => ({
