@@ -140,6 +140,11 @@
   "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry It has been the industry's standard dummy text" : "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry. It has been the industry's standard dummy text.",
   "CorePass digital identity": "CorePass digital identity",
   "First blockchain based decentralized digital identity. CorePass represents the foundation of the Core ecosystem, allowing users to access all the Core platforms and aplications quickly and easily with a push of a button.": "First blockchain based decentralized digital identity. CorePass represents the foundation of the Core ecosystem, allowing users to access all the Core platforms and aplications quickly and easily with a push of a button.",
+  "connect with dev community": "Connect with dev community",
+  "connect with community": "Connect with community",
+  "Enterprises": "Enterprises",
+  "Learn": "Learn",
+  "Overview": "Overview",
   "main tabs": [
     {
       "tabName": "Finance & Payments",
@@ -225,11 +230,11 @@
   "menuItemList": [
     {
       "label": "Overview",
-      "link": "#"
+      "link": "overview"
     },
     {
       "label": "Learn",
-      "link": "#"
+      "link": "learn"
     },
     {
       "label": "Developers",
@@ -237,7 +242,7 @@
     },
     {
       "label": "Enterprises",
-      "link": "#"
+      "link": "enterprises"
     },
     {
       "label": "Community",

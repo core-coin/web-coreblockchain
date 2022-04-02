@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import Content from '../../content/overview.mdx'
+import Content from '../../content/learn.mdx'
 import MetaTags from 'react-meta-tags'
 import '../../templates/md.scss'
 
@@ -7,7 +7,7 @@ const components = {
   em: props => <p {...props} />
 }
 
-class OverviewContainer extends PureComponent {
+class LearnContainer extends PureComponent {
 
   render() {
     const { t } = this.props
@@ -15,15 +15,15 @@ class OverviewContainer extends PureComponent {
       <>
         <MetaTags>
           <title>
-            {t('Overview')}
+            {t('Learn')}
           </title>
         </MetaTags>
         <div className="content-container">
           <Content components={components} />
         </div>
-      </>
+        </>
     )
   }
 }
 
-export default OverviewContainer
+export default LearnContainer
