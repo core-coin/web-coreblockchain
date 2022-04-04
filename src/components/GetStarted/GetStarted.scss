@@ -165,13 +165,13 @@
       }
       .theme_ghost {
         min-width: 90px;
-        padding: 0 14px;
+        padding: 0 24px;
         margin: 0 5px;
       }
       .button {
         .body_text {
-          padding-left: 7px;
-          text-transform: capitalize;
+          padding-left: 0;
+          text-transform: uppercase;
         }
       }
       .version-links {
@@ -601,6 +601,20 @@
 }
 .storage-type {
   margin-top: 32px;
+}
+.safe-storage {
+  padding: 8px !important;
+}
+.safe-storage-title {
+  margin-left: 8px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+.safe-storage-icons {
+  margin: 0 !important;
+}
+.safe-storage-link {
+  margin: 0 !important;
 }
 .safe-storage:hover > .safe-storage-icons {
   visibility: visible;
