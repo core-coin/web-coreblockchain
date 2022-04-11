@@ -67,14 +67,27 @@
       font-weight: var(--font-primary-weight-bold);
     }
     &_extraSmall {
-      min-width: 43px;
-      height: 43px;
+      min-width: 40px;
+      height: 40px;
       border-radius: 8px;
       font-size: 14px;
       color: #ffffff;
       font-family: var(--font-primary);
       font-weight: var(--font-secondary-weight-normal);
       line-height: 24px;
+      padding: 11px;
+      .body{
+        height: 16px;
+        width: 16px;
+        .body_icon {
+          height: 16px;
+          width: 16px;
+          margin-right: 0;
+          svg {
+            margin-top: -10px;
+          }
+        }
+      }
     }
   }
   &.theme {
@@ -93,7 +106,7 @@
     margin-right: 0;
   }
   .body{
-    height: calc(100% - 2px);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -35,6 +35,7 @@ class CoreBlock extends PureComponent{
                       icon={DownloadIcon}
                     />
                     <Button
+                      mobileFullWidth
                       theme='ghost'
                       size='small'
                       hover={false}

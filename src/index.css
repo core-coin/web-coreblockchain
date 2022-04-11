@@ -70,8 +70,10 @@ em {
     display: none;
   }
   .title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.03em;
+    padding: 0 20px;
   }
   .preTitle {
     font-size: 12px;
@@ -132,6 +134,7 @@ em {
   --black-darken: #14141a;
   --font-primary: 'Red Hat Display', 'Open Sans', Helvetica, Arial, sans-serif;
   --font-primary-size: 20px;
+  --font-primary-weight-light: 300;
   --font-primary-weight-normal: 400;
   --font-primary-weight-bold: 700;
   --font-secondary: 'Red Hat Display', 'Open Sans', Helvetica, Arial, sans-serif;

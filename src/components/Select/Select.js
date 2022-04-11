@@ -194,6 +194,7 @@ export default class Select extends PureComponent{
                     </div>
                   </div>
                   <Button
+                        mobileFullWidth
                         download
                         theme='green'
                         size='small'

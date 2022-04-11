@@ -56,6 +56,11 @@
       }
     }
   }
+  &_col {
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
   &_content {
     flex: 1;
     height: 100%;
@@ -77,14 +82,10 @@
       line-height: 28px;
     }
     @media (max-width: 767px) {
-      padding: 60px 10px;
-      h1 {
-        width: 50%;
-        line-height: 1.5;
+      em {
+        display: block;
       }
-      .description {
-        width: 100%;
-      }
+      padding: 58px 0;
     }
 
 
@@ -94,7 +95,10 @@
         margin-bottom: 80px;
       }
         @media (max-width: 767px) {
-          margin-top: 65px;
+          margin-top: 0;
+          &:first-of-type {
+            margin-bottom: 48px;
+          }
         }
       }
 
@@ -104,11 +108,12 @@
       }
     }
     .downloadBlock {
+      max-width: 784px;
       border-radius: 6px;
       border: 1px solid var(--grey-darken);
       background: var(--black-lighter);
       background-size: contain;
-      padding: 67px 78px 120px;
+      padding: 80px 80px 120px;
       margin-top: 40px;
       .icon-card {
         margin-bottom: 32px;
@@ -126,13 +131,27 @@
         margin-top: 60px;
         padding: 40px 80px 48px 40px;
         &_card-content {
+          width: 100%;
           margin-left: 40px;
           h4 {
             margin-bottom: 8px;
           }
+          @media (max-width: 767px) {
+            margin-top: 38px;
+            margin-left: 0;
+          }
+        }
+        @media (max-width: 767px) {
+          flex-direction: column;
+          align-items: center;
+          padding: 24px 20px 56px;
         }
       }
       @media (max-width: 767px) {
+        border: none;
+        border-top: 1px solid var(--grey-darken);
+        background: none;
+        border-radius: 0;
         padding: 30px 20px;
         button {
           margin-bottom: 20px;
@@ -167,6 +186,10 @@
         min-width: 90px;
         padding: 0 24px;
         margin: 0 5px;
+        @media (max-width: 767px) {
+          padding: 0 0;
+          margin: 16px 0 0;
+        }
       }
       .button {
         .body_text {
@@ -228,7 +251,7 @@
               font-size: 10px;
             }
             p {
-              margin-bottom: 0px;
+              margin-bottom: 0;
             }
           }
         }
@@ -251,17 +274,23 @@
         margin-bottom: 8px;
         @media (max-width: 767px) {
           font-size: 22px;
-          font-weight: 400;
+          line-height: 32px;
+          letter-spacing: -0.03em;
         }
       }
       h4 {
         color: var(--white);
         font-family: var(--font-primary);
         font-size: 20px;
-        line-height: 24px;
+        line-height: 32px;
         font-weight: var(--font-primary-weight-bold);
+        @media (max-width: 767px) {
+          font-size: 22px;
+          line-height: 32px;
+          letter-spacing: -0.03em;
+        }
       }
-      p {
+      p, ul {
         color: var(--grey);
         font-family: var(--font-secondary);
         font-size: 16px;
@@ -275,6 +304,9 @@
             text-decoration: none;
           }
         }
+      }
+      ul {
+        padding-left: 20px;
       }
       hr {
         margin: 36px 0;
@@ -377,7 +409,7 @@
       }
       .tab-content {
         &-item {
-          height: 48px;
+          height: 50px;
           border: 1px solid #303040;
           border-radius: 8px;
           padding: 12px 10px;
@@ -400,6 +432,10 @@
             display: flex;
             visibility: hidden;
             margin: -4px 0;
+            @media (max-width: 767px) {
+              visibility: visible;
+
+            }
           }
           &-link {
             background: #303040;
@@ -622,9 +658,17 @@
 .safe-storage:hover > .safe-storage-icons img {
   filter: brightness(0) invert(1);
 }
+.safe-storage-icons img {
+  @media (max-width: 767px) {
+    filter: brightness(0) invert(1);
+  }
+}
 .safe-storage:hover > .safe-storage-tag > .safe-storage-title {
   color: #fff;
 }
 .button-container {
   margin-top: 36px;
+}
+.light-title {
+  font-weight: var(--font-primary-weight-light);
 }

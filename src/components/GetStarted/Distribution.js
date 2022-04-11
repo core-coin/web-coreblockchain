@@ -56,7 +56,7 @@ class Distribution extends PureComponent{
     )
 
     renderContent = (element) => (
-      <div className="tab-content-item">
+      <div className="tab-content-item" key={element.id}>
           <div className="tab-content-item-tag">
               <img src={getCloudImage(element.id)} alt="repo icon"/>
               <p className="tab-content-item-title">{element.label}</p>

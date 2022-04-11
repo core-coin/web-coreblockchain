@@ -18,6 +18,7 @@ class CoreBlock extends PureComponent{
                     <p>{t('Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more')}</p>
                     <div className="button-container">
                         <Button
+                          mobileFullWidth
                           theme='ghost'
                           size='small'
                           hover={false}

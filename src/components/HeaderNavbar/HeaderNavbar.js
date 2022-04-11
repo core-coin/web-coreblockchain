@@ -158,9 +158,10 @@ class HeaderNavbar extends PureComponent {
                         </Nav>
                         <div className='headerNavbar_sidebar__button'>
                           <Button
+                            mobileFullWidth
                             text={t('language')}
                             theme='ghost'
-                            size='extraSmall'
+                            size='small'
                             hover={false}
                             href={`/${language}/language`}
                             type='router'

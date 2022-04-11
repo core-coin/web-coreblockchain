@@ -22,6 +22,7 @@ class Mining extends PureComponent {
           <p>{t('Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins')}</p>
           <div className="button-container">
             <Button
+              mobileFullWidth
               theme='ghost'
               size='small'
               hover={false}

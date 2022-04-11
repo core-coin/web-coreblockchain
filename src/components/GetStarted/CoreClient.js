@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { withNamespaces } from 'react-i18next'
-
+import { isMobile } from '../../utils'
 import Select from '../Select'
 import AnimatedArrow from '../AnimatedArrow'
 import Shield from '../../images/getStarted/get-started-shield.png'
@@ -19,7 +19,7 @@ class CoreClient extends PureComponent {
       <>
         <div className='downloadBlock'>
           <img src={Link} alt="shield" className="icon-card"/>
-          <h3>{t('Download the Core clientt')}</h3>
+          <h3>{t('Download the Core client')}</h3>
           <p>{t('Go-core is the the command line interface for running a full Core node implemented in Go.')}</p>
           <Select
             id='daemonSoftware'
@@ -28,7 +28,7 @@ class CoreClient extends PureComponent {
             greenBtnText={t('Download')}
             ghostBtnText={t('Source code')}
             sourceCodeLink={'/'}
-            placeholder={t('Choose your operating system')}
+            placeholder={isMobile() ? t('Choose your operating system').slice(0, 16)+'...' : t('Choose your operating system')}
           />
           <div className='downloadBlock_card'>
             <div>

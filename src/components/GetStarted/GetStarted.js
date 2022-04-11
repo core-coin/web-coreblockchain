@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
+import Scrollspy from 'react-scrollspy'
 
 import CoreSoftware from './CoreSoftware'
 import Hardware from './Hardware'
@@ -9,7 +10,6 @@ import CoreClient from './CoreClient'
 import Distribution from './Distribution'
 import Mining from './Mining'
 import CorePass from './CorePass'
-import DistributionSlider from './DistributionSlider'
 
 import './GetStarted.scss'
 
@@ -42,51 +42,11 @@ class GetStarted extends PureComponent {
     </li>
   )
 
-  collectHeightMap = () => {
-    let headers = document.querySelectorAll('.hiddenBlock')
-    let headersMap = []
-    for (let header of headers) {
-      let headerHeight = header.offsetTop + 365
-      let headerId = header.id
-      headersMap.push([headerHeight, headerId])
-    }
-    this.setState.headersList = headersMap.reverse()
-  }
-
-  updateActiveLink = (offset) => {
-    for (let headerInfo of this.state.headersList) {
-      if (headerInfo[0] <= offset) {
-        let headerId = headerInfo[1]
-        this.setState({
-          activeLink: headerId,
-        })
-        return
-      }
-    }
-  }
-
-  componentDidMount() {
-    this.collectHeightMap()
-    window.addEventListener('scroll', () => {
-      this.updateActiveLink(window.scrollY)
-    })
-    this.updateActiveLink(window.scrollY)
-  }
-
-  componentDidUpdate() {
-    this.collectHeightMap()
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', () => {})
-  }
 
   render() {
     const { t } = this.props
 
     const list = Array.from(t('Get started menuLinks', { returnObjects: true }))
-
-    const isMobile = window.innerWidth <= 767
 
     return (
       <div className='getStarted'>
@@ -98,27 +58,22 @@ class GetStarted extends PureComponent {
               className='getStarted_content'
             >
               <Row>
-                <Col>
+                <Col className='getStarted_col'>
                   <div className='getStarted_content__block'>
                     <span id='get_started' className='hiddenBlock'></span>
                     <CoreSoftware />
-                    {isMobile && <DistributionSlider />}
                   </div>
-                  {!isMobile && (
-                    <div className='getStarted_content__block' id="coreClient">
-                      <span id='for_developers' className='hiddenBlock'></span>
-                      <CoreClient />
-                    </div>
-                  )}
-                  {!isMobile && (
-                    <div className='getStarted_content__block' id="distributionClients">
-                      <span
-                        id='node_distributions'
-                        className='hiddenBlock'
-                      ></span>
-                      <Distribution />
-                    </div>
-                  )}
+                  <div className='getStarted_content__block' id="coreClient">
+                    <span id='for_developers' className='hiddenBlock'></span>
+                    <CoreClient />
+                  </div>
+                  <div className='getStarted_content__block' id="distributionClients">
+                    <span
+                      id='node_distributions'
+                      className='hiddenBlock'
+                    ></span>
+                    <Distribution />
+                  </div>
                   <div className='getStarted_content__block' id="coreMining">
                     <span id='devices' className='hiddenBlock'></span>
                     <Mining />
@@ -140,7 +95,10 @@ class GetStarted extends PureComponent {
             </Col>
             <Col md='3' className='hidden-xs getStarted_menu'>
               <div>
-                <ul>{list.map(this.renderLinks)}</ul>
+                <Scrollspy
+                  items={ ['coreClient', 'distributionClients', 'coreMining', 'blockIndex', 'openHardware', 'corePass'] }
+                  currentClassName="active"
+                >{list.map(this.renderLinks)}</Scrollspy>
               </div>
             </Col>
           </Row>
