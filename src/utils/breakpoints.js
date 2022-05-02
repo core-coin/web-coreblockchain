@@ -25,3 +25,6 @@ export function isLg() {
   return 1367 <= window.innerWidth
 }
 
+export function isSmd() {
+  return window.innerWidth < 1200
+}

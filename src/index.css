@@ -16,24 +16,23 @@ body {
 
 .title {
   color: var(--white);
+  font-size: 44px;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
+  line-height: 48px;
+  text-transform: uppercase;
 }
-
 
 .title span {
   color: var(--green);
 }
 
 .preTitle {
-  color: var(--grey);
+  color: var(--grey-lighter);
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 22px;
   text-transform: uppercase;
   margin-bottom: 16px;
-  letter-spacing: 0.5em;
 }
 
 .description {
@@ -70,50 +69,23 @@ em {
     display: none;
   }
   .title {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: -0.03em;
-    padding: 0 20px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+
   }
   .preTitle {
-    font-size: 12px;
-    line-height: 20px;
-    margin-bottom: 8px;
+    font-size: 9px;
   }
   .description {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
-@media (max-width: 768px) {
+
+@media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 321px;
-    padding: 0;
-  }
-  .col-sm-12 {
-    padding: 0;
-  }
-  .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 624px;
-    padding: 0;
-  }
-}
-@media (min-width: 1025px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 944px;
-    padding: 0;
-  }
-}
-@media (min-width: 1367px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1264px;
-    padding: 0;
+    max-width: 1295px;
   }
 }
 
@@ -132,9 +104,8 @@ em {
   --black: #18181f;
   --black-lighter: #1c1c24;
   --black-darken: #14141a;
-  --font-primary: 'Red Hat Display', 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-primary: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
   --font-primary-size: 20px;
-  --font-primary-weight-light: 300;
   --font-primary-weight-normal: 400;
   --font-primary-weight-bold: 700;
   --font-secondary: 'Red Hat Display', 'Open Sans', Helvetica, Arial, sans-serif;

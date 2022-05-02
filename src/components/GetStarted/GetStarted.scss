@@ -7,6 +7,10 @@
   position: relative;
   &_row {
     margin: 0;
+    @media (max-width: 1200px) {
+      display: flex;
+      justify-content: center;
+    }
   }
   &_menu {
     padding-top: 208px;
@@ -76,12 +80,15 @@
 
     h1 {
       margin-bottom: 0;
+      @media (max-width: 1200px) {
+        margin-left: 20px;
+      }
     }
     .description {
       font-size: 22px;
       line-height: 28px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1200px) {
       em {
         display: block;
       }
@@ -94,7 +101,7 @@
       &:first-of-type {
         margin-bottom: 80px;
       }
-        @media (max-width: 767px) {
+        @media (max-width: 1200px) {
           margin-top: 0;
           &:first-of-type {
             margin-bottom: 48px;
@@ -103,7 +110,7 @@
       }
 
     .animatedArrow {
-      @media (max-width: 767px) {
+      @media (max-width: 1200px) {
         letter-spacing: inherit;
       }
     }
@@ -136,12 +143,12 @@
           h4 {
             margin-bottom: 8px;
           }
-          @media (max-width: 767px) {
+          @media (max-width: 1200px) {
             margin-top: 38px;
             margin-left: 0;
           }
         }
-        @media (max-width: 767px) {
+        @media (max-width: 1200px) {
           flex-direction: column;
           align-items: center;
           padding: 24px 20px 56px;
@@ -186,8 +193,9 @@
         min-width: 90px;
         padding: 0 24px;
         margin: 0 5px;
-        @media (max-width: 767px) {
-          padding: 0 0;
+        @media (max-width: 1200px) {
+          padding: 0 18px;
+          min-width: auto;
           margin: 16px 0 0;
         }
       }
@@ -213,7 +221,7 @@
         }
       }
       &.nodeStatus {
-        @media (min-width: 768px) {
+        @media (min-width: 1199px) {
           background: var(--black-lighter) url("../../images/core-status.webp");
         }
         padding-bottom: 5px;
@@ -225,7 +233,7 @@
         .button {
           margin-left: 0;
           margin-bottom: 15px;
-          @media (max-width: 767px) {
+          @media (max-width: 1200px) {
             display: none;
           }
         }
@@ -360,14 +368,14 @@
       }
       .tabs_header {
         margin-top: 56px;
-        @media (max-width: 767px) {
+        @media (max-width: 1200px) {
           border-bottom: 1px solid #434359;
         }
         .nav-tabs {
           border-bottom: 1px solid rgba(99, 99, 120, 0.2);
           margin-top: 59px;
           display: flex;
-          @media (max-width: 767px) {
+          @media (max-width: 1200px) {
             overflow-x: scroll;
             overflow-y: hidden;
             white-space: nowrap;
@@ -386,7 +394,7 @@
             font-size: 20px;
             line-height: 32px;
             letter-spacing: -0.02em;
-            @media (max-width: 767px) {
+            @media (max-width: 1200px) {
               font-size: 16px;
               font-weight: var(--font-primary-weight-normal);
               line-height: 24px;
@@ -400,7 +408,7 @@
               background-color: transparent;
               border-bottom: 1px solid var(--green);
               color: var(--green);
-              @media (max-width: 767px) {
+              @media (max-width: 1200px) {
                 border-bottom: 2px solid var(--green);
               }
             }
@@ -432,7 +440,7 @@
             display: flex;
             visibility: hidden;
             margin: -4px 0;
-            @media (max-width: 767px) {
+            @media (max-width: 1200px) {
               visibility: visible;
 
             }
@@ -466,7 +474,7 @@
         }
         .isoImage {
           .tabs_header {
-            @media (max-width: 767px) {
+            @media (max-width: 1200px) {
               border-bottom: none;
             }
             .nav-tabs {
@@ -507,7 +515,7 @@
                   }
                 }
               }
-              @media (max-width: 767px) {
+              @media (max-width: 1200px) {
                 .nav-item {
                   padding-right: 10px;
 
@@ -540,7 +548,7 @@
                 text-transform: capitalize;
                 padding: 0;
 
-                @media (max-width: 767px) {
+                @media (max-width: 1200px) {
                   width: 120px;
                   height: 120px;
                 }
@@ -606,7 +614,7 @@
         .downloadBlock_slider {
           transition: transform 0.4s;
           height: 233px;
-          box-shadow: 0px 4px 18px 0px #000000d1;
+          box-shadow: 0 4px 18px 0 #000000d1;
         }
       }
     }
@@ -659,7 +667,7 @@
   filter: brightness(0) invert(1);
 }
 .safe-storage-icons img {
-  @media (max-width: 767px) {
+  @media (max-width: 1200px) {
     filter: brightness(0) invert(1);
   }
 }

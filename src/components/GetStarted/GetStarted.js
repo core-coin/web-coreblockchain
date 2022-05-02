@@ -12,6 +12,7 @@ import Mining from './Mining'
 import CorePass from './CorePass'
 
 import './GetStarted.scss'
+import { isMobile, isSmd } from '../../utils'
 
 class GetStarted extends PureComponent {
   constructor(props) {
@@ -21,7 +22,18 @@ class GetStarted extends PureComponent {
       headersList: [],
       linksList: [],
       textToCopy: '',
+      isSmd: isSmd()
     }
+  }
+  updateIsSmd = () => {
+    this.setState({isSmd: isSmd()});
+  };
+  componentDidMount() {
+    window.addEventListener('resize', this.updateIsSmd);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateIsSmd);
   }
 
   toggle = (link) => {
@@ -53,7 +65,7 @@ class GetStarted extends PureComponent {
         <Container>
           <Row className='getStarted_row'>
             <Col
-              md={{ size: 8 }}
+              md={{ size: 11 }}
               xl={{ size: 8}}
               className='getStarted_content'
             >
@@ -93,14 +105,17 @@ class GetStarted extends PureComponent {
                 </Col>
               </Row>
             </Col>
-            <Col md='3' className='hidden-xs getStarted_menu'>
-              <div>
-                <Scrollspy
-                  items={ ['coreClient', 'distributionClients', 'coreMining', 'blockIndex', 'openHardware', 'corePass'] }
-                  currentClassName="active"
-                >{list.map(this.renderLinks)}</Scrollspy>
-              </div>
-            </Col>
+            {!this.state.isSmd && (
+              <Col md='3' className='hidden-xs getStarted_menu'>
+                <div>
+                  <Scrollspy
+                    items={ ['coreClient', 'distributionClients', 'coreMining', 'blockIndex', 'openHardware', 'corePass'] }
+                    currentClassName="active"
+                  >{list.map(this.renderLinks)}</Scrollspy>
+                </div>
+              </Col>
+            )
+            }
           </Row>
         </Container>
       </div>
