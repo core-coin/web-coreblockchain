@@ -46,6 +46,7 @@ class HeroHeader extends PureComponent{
                                 theme='ghost'
                                 size='normal'
                                 text={t('learn more')}
+                                href={'https://blog.coreblockchain.cc/'}
                             />
                         </Col>
                         <Col sm='12' md='12' className='hidden-xs'>

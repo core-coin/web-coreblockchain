@@ -229,24 +229,16 @@
   ],
   "menuItemList": [
     {
-      "label": "Overview",
-      "link": "overview"
-    },
-    {
-      "label": "Learn",
-      "link": "learn"
+      "label": "Blog",
+      "link": "https://blog.coreblockchain.cc/"
     },
     {
       "label": "Developers",
-      "link": "developers"
+      "link": "https://dev.coreblockchain.cc/"
     },
     {
-      "label": "Enterprises",
-      "link": "enterprises"
-    },
-    {
-      "label": "Community",
-      "link": "community"
+      "label": "Talk",
+      "link": "https://coretalk.info/"
     }
   ],
   "languages": [

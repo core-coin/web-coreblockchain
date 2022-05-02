@@ -109,9 +109,9 @@ class HeaderNavbar extends PureComponent {
   renderNavbar = (item, index) => (
 
       <li key={index} className='nav-item'>
-        <Link className='nav-link' to={`/${this.props.language}/${item.link}`} onClick={this.closeSidebar}>
+        <a className='nav-link' href={`${item.link}`} target='_blank' onClick={this.closeSidebar}>
           {item.label}
-        </Link>
+        </a>
       </li>
 
   )
