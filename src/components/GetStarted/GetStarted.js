@@ -12,7 +12,7 @@ import Mining from './Mining'
 import CorePass from './CorePass'
 
 import './GetStarted.scss'
-import { isMobile, isSmd } from '../../utils'
+import { isSmd } from '../../utils'
 
 class GetStarted extends PureComponent {
   constructor(props) {
@@ -72,34 +72,34 @@ class GetStarted extends PureComponent {
               <Row>
                 <Col className='getStarted_col'>
                   <div className='getStarted_content__block'>
-                    <span id='get_started' className='hiddenBlock'></span>
+                    <span id='get_started' className='hiddenBlock'/>
                     <CoreSoftware />
                   </div>
                   <div className='getStarted_content__block' id="coreClient">
-                    <span id='for_developers' className='hiddenBlock'></span>
+                    <span id='for_developers' className='hiddenBlock'/>
                     <CoreClient />
                   </div>
                   <div className='getStarted_content__block' id="distributionClients">
                     <span
                       id='node_distributions'
                       className='hiddenBlock'
-                    ></span>
+                    />
                     <Distribution />
                   </div>
                   <div className='getStarted_content__block' id="coreMining">
-                    <span id='devices' className='hiddenBlock'></span>
+                    <span id='devices' className='hiddenBlock'/>
                     <Mining />
                   </div>
                   <div className='getStarted_content__block' id="blockIndex">
-                    <span id='core_mining' className='hiddenBlock'></span>
+                    <span id='core_mining' className='hiddenBlock'/>
                     <CoreBlock />
                   </div>
                   <div className='getStarted_content__block' id="openHardware">
-                    <span id='core_network' className='hiddenBlock'></span>
+                    <span id='core_network' className='hiddenBlock'/>
                     <Hardware />
                   </div>
                   <div className='getStarted_content__block' id="corePass">
-                    <span id='core_network' className='hiddenBlock'></span>
+                    <span id='core_network' className='hiddenBlock'/>
                     <CorePass />
                   </div>
                 </Col>
