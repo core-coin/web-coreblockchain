@@ -401,7 +401,7 @@
               padding: 8px 16px;
             }
             &:hover {
-              border-bottom: 2px solid var(--green);
+              border-bottom: 1px solid var(--green);
               color: var(--white);
             }
             &.active {
@@ -478,7 +478,6 @@
               border-bottom: none;
             }
             .nav-tabs {
-              margin-top: 0;
               border-bottom: none;
               overflow-x: scroll;
               overflow-y: hidden;

@@ -3,8 +3,8 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import Store, { history } from './store'
-import CreateSearchIndex from './reducer/search'
-import CreateMarkdownIndex from './reducer/mdFiles'
+// import CreateSearchIndex from './reducer/search'
+// import CreateMarkdownIndex from './reducer/mdFiles'
 
 import Layout from './components/Layout'
 
@@ -20,8 +20,8 @@ import LearnContainer from './containers/LearnContainer'
 import WithLanguageHoc from './containers/withLanguageHoc'
 
 const store = Store()
-let mdFilesPromise = CreateMarkdownIndex(store)
-CreateSearchIndex(store, mdFilesPromise)
+// let mdFilesPromise = CreateMarkdownIndex(store)
+// CreateSearchIndex(store, mdFilesPromise)
 
 
 export default class App extends PureComponent {

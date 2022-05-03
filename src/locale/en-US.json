@@ -317,20 +317,9 @@
       "tabName": "Containers",
       "elements": [
         {
-          "label": "Docker repo",
-          "id": "docker"
-        },
-        {
-          "label": "Kubernetes",
-          "id": "kubernetes"
-        },
-        {
-          "label": "Azure",
-          "id": "azure"
-        },
-        {
-          "label": "Amazon Web Service",
-          "id": "aws"
+          "label": "docker pull ghcr.io/core-coin/go-core:latest",
+          "id": "docker",
+          "link": "https://github.com/core-coin/go-core/pkgs/container/go-core"
         }
       ]
     }
