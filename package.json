@@ -29,6 +29,7 @@
     "react": "^17.0.1",
     "react-app-rewire-frontmatter-markdown": "^1.4.0",
     "react-autosuggest": "^10.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^17.0.1",
     "react-i18next": "^9.0.10",
     "react-mark.js": "^1.0.2",

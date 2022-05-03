@@ -44,19 +44,21 @@
   "Contact": "Contact",
   "core mining": "Get a headstart, start <1>Core Coin mining</1>",
   "Core Foundation": "Core Foundation",
-  "Core Talk": "Core talk",
+  "Core Talk": "Core ◆ Talk",
   "We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices": "We optimize the mining algorithm to be more focused on small devices and connected to mesh network ecosystem. Meshnet is Blockchain topology, connecting nodes and transmit various data into established and new devices.",
   "Developer Portal": "Developer Portal",
   "Development": "Development",
-  "Difficulty": "Difficulty",
+  "Network Difficulty": "Network Difficulty",
   "download miner": "download miner",
   "Get in touch": "Get in touch",
-  "Core Improvement Proposals": "Core Improvement Proposals",
+  "Core Improvement Proposals": "CIP",
+  "Blog": "Blog",
   "Build hardware": "Build hardware",
-  "Open-source License": "Open-source License",
+  "Issues list": "Issues list",
+  "Pull requests": "Pull requests",
+  "Introduce project": "Introduce project",
   "HOW TO GET INVOLVED": "How to get involved",
   "Report bug": "Report bug",
-  "tradeMark": "tradeMark",
   "Useful links": "Useful links",
   "Copyright © 2018-2021 Core Foundation. All Rights Reserved.": "Copyright © 2018-2021 Core Foundation. All Rights Reserved.",
   "Website last updated Jan 31, 2020": "Website last updated Jan 31, 2021",
@@ -97,7 +99,7 @@
   "Core block Index & analytics": "Core block Index & analytics",
   "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more.",
   "browse transactions": "browse transactions",
-  "Open Hardware (IOT Devices)": "Open Hardware <1>(IOT Devices)</1>",
+  "Open Hardware (IOT Devices)": "Open Hardware <1>(IoT Devices)</1>",
   "Minimum requirements:": "Minimum requirements:",
   "Build your own": "Build your own",
   "Tested devices list": "Tested devices list",
@@ -209,20 +211,26 @@
     {
       "tabName": "Developer portal",
       "tabContent": "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
-      "tabGreenBtn": "learn more",
-      "tabGhostBtn": "report bug"
+      "tabGreenBtn": "Visit",
+      "tabGreenBtnLink": "https://dev.coreblockchain.cc/",
+      "tabGhostBtn": "report bug",
+      "tabGhostBtnLink": "https://dev.coreblockchain.cc/report/bug"
     },
     {
       "tabName": "Core Talk",
       "tabContent": "2Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
-      "tabGreenBtn": "learn more",
-      "tabGhostBtn": "report bug"
+      "tabGreenBtn": "Visit",
+      "tabGreenBtnLink": "https://coretalk.info/",
+      "tabGhostBtn": "report bug",
+      "tabGhostBtnLink": "https://dev.coreblockchain.cc/report/bug"
     },
     {
       "tabName": "Core Standards",
       "tabContent": "3Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
-      "tabGreenBtn": "learn more",
-      "tabGhostBtn": "report bug"
+      "tabGreenBtn": "Visit",
+      "tabGreenBtnLink": "https://cip.coreblockchain.cc/",
+      "tabGhostBtn": "report bug",
+      "tabGhostBtnLink": "https://dev.coreblockchain.cc/report/bug"
     }
   ],
   "menuItemList": [
@@ -283,75 +291,27 @@
     {
       "label": "Open hardware",
       "link": "openHardware"
-    },
-    {
-      "label": "CorePass",
-      "link": "corePass"
     }
   ],
   "nodeDistributionTabName" : [
     {
-      "tabName": "Repos",
-      "elements": [
-        {
-          "label": "Docker repo",
-          "id": "docker"
-        },
-        {
-          "label": "Kubernetes",
-          "id": "kubernetes"
-        },
-        {
-          "label": "Azure",
-          "id": "azure"
-        },
-        {
-          "label": "Amazon Web Service",
-          "id": "aws"
-        }
-      ]
-    },
-    {
       "tabName": "Deployment",
       "elements": [
         {
-          "label": "Docker repo",
-          "id": "docker"
+          "label": "Docker Compose",
+          "id": "docker",
+          "link": "https://github.com/core-coin/core-docker-compose"
         },
         {
-          "label": "Kubernetes",
-          "id": "kubernetes"
-        },
-        {
-          "label": "Azure",
-          "id": "azure"
-        },
-        {
-          "label": "Amazon Web Service",
-          "id": "aws"
+          "label": "Bash",
+          "id": "bash",
+          "link": "https://github.com/core-coin/core-bash"
         }
       ]
     },
     {
       "tabName": "Images",
-      "elements": [
-        {
-          "label": "Docker repo",
-          "id": "docker"
-        },
-        {
-          "label": "Kubernetes",
-          "id": "kubernetes"
-        },
-        {
-          "label": "Azure",
-          "id": "azure"
-        },
-        {
-          "label": "Amazon Web Service",
-          "id": "aws"
-        }
-      ]
+      "elements": []
     },
     {
       "tabName": "Containers",
@@ -386,17 +346,20 @@
     {
       "label": "Linux",
       "value": "linux",
-      "linkToDownLoad": "/"
+      "linkToDownLoad": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64",
+      "checksum": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64.checksum"
     },
     {
       "label": "MacOS",
       "value": "macOS",
-      "linkToDownLoad": "/"
+      "linkToDownLoad": "https://github.com/core-coin/go-core/releases/download/latest/gocore-darwin-x86_64",
+      "checksum": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64.checksum"
     },
     {
       "label": "Microsoft Windows",
       "value": "windows",
-      "linkToDownLoad": "/"
+      "linkToDownLoad": "https://github.com/core-coin/go-core/releases/download/latest/gocore-windows-x86_64.exe",
+      "checksum": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64.checksum"
     }
   ]
 

@@ -17,6 +17,7 @@ export default class Select extends PureComponent{
         this.state = {
             value: '',
             showMenu: false,
+            selectedItem: {}
         }
     }
     static propTypes = {
@@ -35,13 +36,13 @@ export default class Select extends PureComponent{
 
     onSelectChange = (data) => {
         this.setState({
-            value: data.value
+            value: data.value,
+            selectedItem: data
         })
     }
 
   showMenu = (event) => {
       event.preventDefault();
-      console.log(this.state.showMenu)
       if (this.state.showMenu){
         this.closeMenu()
       } else {
@@ -60,7 +61,6 @@ export default class Select extends PureComponent{
     render(){
         const { items, greenBtnText, ghostBtnText, sourceCodeLink, placeholder } = this.props
 
-        let selectedItem = this.props.items.filter((item) => item.value === this.state.value)
       const DropdownIndicator = (propsSelect) => {
         return (
           <components.DropdownIndicator className="dropdown-container" {...propsSelect}>
@@ -186,8 +186,8 @@ export default class Select extends PureComponent{
                         this.state.showMenu
                           && (
                             <div className="menu">
-                              <a href="/"> Get public key </a>
-                              <a href="/"> Previous versions </a>
+                              <a href={this.state.selectedItem.checksum}> Get public key </a>
+                              <a href="https://github.com/core-coin/go-core/releases"> Previous versions </a>
                             </div>
                           )
                       }
@@ -198,7 +198,7 @@ export default class Select extends PureComponent{
                         download
                         theme='green'
                         size='small'
-                        href={selectedItem.linkToDownLoad}
+                        href={this.state.selectedItem.linkToDownLoad}
                         text={greenBtnText}
                         icon={DownloadIcon}
                         disabled={this.state.value === ''}

@@ -49,13 +49,13 @@ class Developers extends PureComponent{
                             size='normal'
                             text={tab.tabGreenBtn}
                             margin='35'
-                            href=''
+                            href={tab.tabGreenBtnLink}
                         />
                         <Button
                             theme='ghost'
                             size='normal'
                             text={tab.tabGhostBtn}
-                            href=''
+                            href={tab.tabGhostBtnLink}
                         />
                     </div>
                 </Col>

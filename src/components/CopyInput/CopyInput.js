@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { string } from 'prop-types'
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import Copy from '../../images/getStarted/CopySimple.svg'
 
@@ -15,25 +16,15 @@ export default class CopyInput extends PureComponent{
         value: string,
     }
 
-    copyToClipboard = () => {
-        let textField = this.textInput.current
-        textField.select()
-        document.execCommand('copy')
-    }
 
     render(){
         const { value } = this.props
 
         return(
             <div className='copyInput'>
-                <input
-                    type='text'
-                    value={value}
-                    ref={this.textInput}
-                    style={{display: 'none'}}
-                    readOnly
-                />
-                <button className="copy-button" onClick={this.copyToClipboard}><img src={Copy} alt="copy icon" /></button>
+                <CopyToClipboard text={ value }>
+                    <div className="copy-button"><img src={Copy} alt="copy icon" /></div>
+                </CopyToClipboard>
             </div>
         )
     }

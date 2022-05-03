@@ -19,7 +19,7 @@ class Distribution extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: 'Repos'
+            activeTab: 'Deployment'
         }
     }
 
@@ -58,14 +58,14 @@ class Distribution extends PureComponent{
     renderContent = (element) => (
       <div className="tab-content-item" key={element.id}>
           <div className="tab-content-item-tag">
-              <img src={getCloudImage(element.id)} alt="repo icon"/>
+              <img src={getCloudImage(element.id)} alt=""/>
               <p className="tab-content-item-title">{element.label}</p>
           </div>
           <div className="tab-content-item-icons">
-              <a href="/" target="_blank" className="tab-content-item-link">
+              <a href={element.link} target="_blank" rel="noreferrer" className="tab-content-item-link">
                   <img src={ArrowUpRight} alt="arrow up right" />
               </a>
-              <CopyInput />
+              <CopyInput value={element.link}/>
           </div>
       </div>
     )

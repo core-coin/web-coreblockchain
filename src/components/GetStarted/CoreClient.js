@@ -27,7 +27,7 @@ class CoreClient extends PureComponent {
             items={list}
             greenBtnText={t('Download')}
             ghostBtnText={t('Source code')}
-            sourceCodeLink={'/'}
+            sourceCodeLink={'https://github.com/core-coin/go-core'}
             placeholder={isMobile() ? t('Choose your operating system').slice(0, 16)+'...' : t('Choose your operating system')}
           />
           <div className='downloadBlock_card'>
@@ -39,11 +39,11 @@ class CoreClient extends PureComponent {
               <p>{t('This download consist of all blocks that have been verified')}:</p>
               <div className='version-links'>
                 <AnimatedArrow
-                  url=''
+                  url='https://drive.google.com/drive/folders/1Yi_9Bb5BKF5GETPYA1jBfADyiH1BQ4dL?usp=sharing'
                   text={t('Google Drive')}
                 />
                 <AnimatedArrow
-                  url=''
+                  url='https://disk.yandex.com/d/tKo7gyXuB3asHA'
                   text={t('Yandex')}
                 />
               </div>

@@ -16,7 +16,7 @@ class LanguagePage extends PureComponent{
 
     render(){
 
-        const { t, language } = this.props
+        const { t } = this.props
         const list = Array.from(i18next.t('languages', { returnObjects: true }))
 
         return(
@@ -45,10 +45,10 @@ class LanguagePage extends PureComponent{
                                 ))}
                             </Row>
                         </Col>
-                        <Col xs='12'sm='12' md='12' xl='10' className='languagePage_program'>
+                        <Col xs='12' sm='12' md='12' xl='10' className='languagePage_program'>
                             <h3>{t('Translation Program')}</h3>
                             <p className='description'>{t('Core Blockchain translators are always translating pages in as many languages as possible. To see what they\'re working on right now or to sign up or to join them.')}</p>
-                            <AnimatedArrow text={t('Translation Program')} url={`/${language}/language-program`}/>
+                            <AnimatedArrow text={t('Translation Program')} url={`https://crowdin.com/project/coreblockchaincc`} targetBlack/>
                         </Col>
                     </Row>
                 </Container>

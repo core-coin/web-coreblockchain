@@ -81,7 +81,7 @@
     &__info {
       display: flex;
       padding-top: 31px;
-      justify-content: space-between;
+      justify-content: space-around;
       @media (max-width: 767px) {
         flex-wrap: wrap;
       }

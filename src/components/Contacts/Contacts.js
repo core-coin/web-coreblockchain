@@ -26,7 +26,7 @@ class Contacts extends PureComponent{
     }
 
     render(){
-        const { t, blockTime, algorithm, difficulty } = this.props
+        const { t, algorithm, difficulty } = this.props
 
         return(
             <div className='contacts'>
@@ -41,16 +41,16 @@ class Contacts extends PureComponent{
                             </h1>
                             <p className='description'>{t('We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices')}</p>
                             <div className='contacts_right__info'>
-                                <div className='contacts_right__info-block'>
-                                    <p>{t('Block time')}</p>
-                                    <span>{blockTime} H/s</span>
-                                </div>
+                                {/*<div className='contacts_right__info-block'>*/}
+                                {/*    <p>{t('Block time')}</p>*/}
+                                {/*    <span>{blockTime} H/s</span>*/}
+                                {/*</div>*/}
                                 <div className='contacts_right__info-block'>
                                     <p>{t('Algorithm')}</p>
                                     <span>{algorithm}</span>
                                 </div>
                                 <div className='contacts_right__info-block'>
-                                    <p>{t('Difficulty')}</p>
+                                    <p>{t('Network Difficulty')}</p>
                                     <span>{difficulty} TH/s</span>
                                 </div>
                             </div>
@@ -60,13 +60,13 @@ class Contacts extends PureComponent{
                                     download
                                     size='normal'
                                     text={t('download miner')}
-                                    href=''
+                                    href='https://github.com/catchthatrabbit/coreminer'
                                 />
                                 <Button
                                     theme='ghost'
                                     size='normal'
                                     text={t('Build hardware')}
-                                    href=''
+                                    href='https://www.thingiverse.com/groups/blockchain'
                                 />
                             </div>
                         </Col>

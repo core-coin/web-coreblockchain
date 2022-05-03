@@ -9,7 +9,6 @@ import CoreBlock from './CoreBlock'
 import CoreClient from './CoreClient'
 import Distribution from './Distribution'
 import Mining from './Mining'
-import CorePass from './CorePass'
 
 import './GetStarted.scss'
 import { isSmd } from '../../utils'
@@ -98,10 +97,10 @@ class GetStarted extends PureComponent {
                     <span id='core_network' className='hiddenBlock'/>
                     <Hardware />
                   </div>
-                  <div className='getStarted_content__block' id="corePass">
-                    <span id='core_network' className='hiddenBlock'/>
-                    <CorePass />
-                  </div>
+                  {/*<div className='getStarted_content__block' id="corePass">*/}
+                  {/*  <span id='core_network' className='hiddenBlock'/>*/}
+                  {/*  <CorePass />*/}
+                  {/*</div>*/}
                 </Col>
               </Row>
             </Col>
