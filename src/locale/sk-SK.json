@@ -174,9 +174,6 @@
   "Mobile wallet": "Mobile wallet",
   "Browse Transactions": "Browse Transactions",
   "Core block Index & analytics": "Core block Index & analytics",
-  "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more": {
-    "": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more."
-  },
   "Network Difficulty": "Network Difficulty",
   "Blog": "Blog",
   "Talk": "Talk",
@@ -190,5 +187,6 @@
   "This download consists of all blocks that have been verified.": "This download consists of all blocks that have been verified.",
   "Specific download for distribution deployment.": "Specific download for distribution deployment.",
   "How to get started with Core Mining": "How to get started with Core Mining",
-  "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.": "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores."
+  "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.": "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.",
+  "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more."
 }
