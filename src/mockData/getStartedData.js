@@ -82,7 +82,7 @@ const NodeDistributionData = [
     tabName: "Containers",
     elements: [
       {
-        label: "https://github.com/core-coin/go-core/pkgs/container/go-core",
+        label: "github.com/core-coin/go-core/pkgs/container/go-core",
         command: "docker pull ghcr.io/core-coin/go-core:latest",
         id: "docker",
         link: "https://github.com/core-coin/go-core/pkgs/container/go-core"
