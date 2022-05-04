@@ -36,7 +36,7 @@ class CoreClient extends PureComponent {
             </div>
             <div className="downloadBlock_card_card-content">
               <h4>{t('Get verified Core Blockchain data')}</h4>
-              <p>{t('This download consist of all blocks that have been verified')}:</p>
+              <p>{t('This download consists of all blocks that have been verified.')}</p>
               <div className='version-links'>
                 <AnimatedArrow
                   url='https://drive.google.com/drive/folders/1Yi_9Bb5BKF5GETPYA1jBfADyiH1BQ4dL?usp=sharing'
