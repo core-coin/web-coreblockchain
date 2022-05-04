@@ -73,7 +73,6 @@
   "Core distributed computing platform is reliable, secure, and available for everyone.": "Core distribuovaná výpočtová platforma je spoľahlivá, bezpečná a dostupná pre všetkých.",
   "Core Mining": "Core ťažba",
   "Core Network": "Core sieť",
-  "Core <1>Proof of Distributed Efficiency</1>": "Core <1>Dôkaz o distribuovanej účinnosti</1>",
   "Core Explorer": "Core prieskumník",
   "Core Stats": "Core štatistiky",
   "Core Standards": "Core štandardy",
@@ -188,5 +187,6 @@
   "How to get started with Core Mining": "How to get started with Core Mining",
   "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.": "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.",
   "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.",
-  "Open Hardware //IoT Devices//": "Open Hardware //IoT Devices//"
+  "Open Hardware //IoT Devices//": "Open Hardware //IoT Devices//",
+  "Core Proof of Distributed Efficiency": "Core <1>Dôkaz o distribuovanej účinnosti</1>"
 }
