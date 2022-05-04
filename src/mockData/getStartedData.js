@@ -57,7 +57,7 @@ const NodeDistributionData = [
       {
         label: "Docker Compose",
         id: "dockerCompose",
-        command: "docker pull ghcr.io/core-coin/go-core:latest",
+        command: "docker-compose -f docker-compose.yml up -d",
         link: "https://github.com/core-coin/core-docker-compose"
       },
       {
