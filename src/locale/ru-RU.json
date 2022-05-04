@@ -73,7 +73,6 @@
   "Core distributed computing platform is reliable, secure, and available for everyone.": "Core distributed computing platform is reliable, secure, and available for everyone.",
   "Core Mining": "Core Mining",
   "Core Network": "Core Network",
-  "Core <1>Proof of Distributed Efficiency</1>": "Core <1>Proof of Distributed Efficiency</1>",
   "Core Explorer": "Core Explorer",
   "Core Stats": "Core Stats",
   "Core Standards": "Core Standards",
@@ -188,5 +187,6 @@
   "How to get started with Core Mining": "How to get started with Core Mining",
   "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.": "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.",
   "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.",
-  "Open Hardware //IoT Devices//": "Open Hardware //IoT Devices//"
+  "Open Hardware //IoT Devices//": "Open Hardware //IoT Devices//",
+  "Core Proof of Distributed Efficiency": "Core Proof of Distributed Efficiency"
 }
