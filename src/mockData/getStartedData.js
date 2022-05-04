@@ -57,7 +57,7 @@ const NodeDistributionData = [
       {
         label: "Docker Compose",
         id: "docker",
-        command: "",
+        command: "docker pull ghcr.io/core-coin/go-core:latest",
         link: "https://github.com/core-coin/core-docker-compose"
       },
       {
@@ -65,6 +65,12 @@ const NodeDistributionData = [
         id: "bash",
         command: "",
         link: "https://github.com/core-coin/core-bash"
+      },
+      {
+        label: "Ansible ",
+        id: "ansible",
+        command: "",
+        link: "https://github.com/core-coin/core-playbook"
       }
     ]
   },
@@ -76,7 +82,7 @@ const NodeDistributionData = [
     tabName: "Containers",
     elements: [
       {
-        label: "docker pull ghcr.io/core-coin/go-core:latest",
+        label: "https://github.com/core-coin/go-core/pkgs/container/go-core",
         command: "docker pull ghcr.io/core-coin/go-core:latest",
         id: "docker",
         link: "https://github.com/core-coin/go-core/pkgs/container/go-core"

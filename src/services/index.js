@@ -1,1 +1,1 @@
-export { getTaskList } from './language'
+export { getStatistics } from './getStatistics'

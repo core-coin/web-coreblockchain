@@ -16,6 +16,7 @@ import Contacts from '../../components/Contacts'
 import { TargetIndustries } from '../../mockData'
 
 import { isMobile, isSd } from '../../utils'
+import { getStatistics } from '../../services'
 
 class PageContainer extends PureComponent {
   constructor(props) {
@@ -48,6 +49,7 @@ class PageContainer extends PureComponent {
     this.setState({isSd:isSd()});
   };
     componentDidMount() {
+      getStatistics()
       window.addEventListener('resize', this.updateIsMobile);
       window.addEventListener('resize', this.updateIsSd);
     }
