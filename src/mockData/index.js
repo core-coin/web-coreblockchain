@@ -1,4 +1,5 @@
-import DownloadLinks from './downloadLinks'
-import Industries from './industriesData'
+import { DownloadLinks, HardwareRequirements, SideBarMenu, NodeDistributionData } from './getStartedData'
+import { MenuItemList, TargetIndustries, DeveloperTabs } from './mainPageData'
+import LanguagesData from './languagesData'
 
-export { Industries, DownloadLinks }
+export { DownloadLinks, HardwareRequirements,SideBarMenu, NodeDistributionData, MenuItemList, TargetIndustries, DeveloperTabs, LanguagesData }

@@ -3,8 +3,10 @@ import { Trans, withNamespaces } from 'react-i18next'
 
 import Button from '../Button'
 import DesktopIcon from '../../images/getStarted/get-started-desktop.svg'
+import { HardwareRequirements } from '../../mockData'
 
 import './GetStarted.scss'
+import i18next from 'i18next'
 
 class Hardware extends PureComponent{
     constructor(props) {
@@ -16,24 +18,23 @@ class Hardware extends PureComponent{
 
     renderContent = (element) => (
         <li key={element}>
-          {element}
+          {i18next.t(element)}
         </li>
     )
 
     render(){
         const { t } = this.props
-        const list = Array.from(t('hardware requirements', { returnObjects: true }))
 
         return(
           <div className='downloadBlock'>
             <img src={DesktopIcon} alt='search_icon' className="icon-card" />
             <h3>
-                <Trans i18nKey='Open Hardware (IOT Devices)'>
+                <Trans i18nKey='Open Hardware (IoT Devices)'>
                     Open Hardware <span className="light-title">(IOT Devices)</span>
                 </Trans>
             </h3>
             <p>{t('Minimum requirements')}</p>
-            <ul>{list.map(this.renderContent)}</ul>
+            <ul>{HardwareRequirements.map(this.renderContent)}</ul>
             <div className="button-container">
                 <Button
                   mobileFullWidth

@@ -40,7 +40,7 @@ export default class Button extends PureComponent {
     }
 
     renderBody() {
-        const { icon, text } = this.props;
+        const { icon, text} = this.props;
 
         return (
             <span className={cx('body')}>

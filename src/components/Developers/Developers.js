@@ -11,7 +11,7 @@ import {
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
 import i18next from 'i18next'
-
+import { DeveloperTabs } from '../../mockData'
 import Button from '../Button'
 import './Developers.scss'
 
@@ -19,7 +19,7 @@ class Developers extends PureComponent{
     constructor(props) {
         super(props)
         this.state = {
-            activeTab: i18next.t('developers tabs', { returnObjects: true })[0].tabName
+            activeTab: DeveloperTabs[0].tabName
         }
     }
 
@@ -33,7 +33,7 @@ class Developers extends PureComponent{
         <NavItem key={tab.tabName} className='nav-item'>
             <NavLink className={this.state.activeTab === tab.tabName ? 'active' : ''}
             onClick={() => { this.toggle(tab.tabName)}}>
-            {tab.tabName}
+            {i18next.t(tab.tabName)}
             </NavLink>
         </NavItem>
     )
@@ -42,19 +42,19 @@ class Developers extends PureComponent{
         <TabPane tabId={tab.tabName} key={index}>
             <Row>
                 <Col sm='12'>
-                    <p>{tab.tabContent}</p>
+                    <p>{i18next.t(tab.tabContent)}</p>
                     <div>
                         <Button
                             theme='green'
                             size='normal'
-                            text={tab.tabGreenBtn}
+                            text={i18next.t(tab.tabGreenBtn)}
                             margin='35'
                             href={tab.tabGreenBtnLink}
                         />
                         <Button
                             theme='ghost'
                             size='normal'
-                            text={tab.tabGhostBtn}
+                            text={i18next.t(tab.tabGhostBtn)}
                             href={tab.tabGhostBtnLink}
                         />
                     </div>
@@ -66,28 +66,27 @@ class Developers extends PureComponent{
     render(){
         // const { t } = this.props
         const { activeTab } = this.state
-        const list = Array.from( i18next.t('developers tabs', { returnObjects: true }))
 
         return(
             <div className='developers'>
                 <Container>
                     <Row>
                         <Col sm='12'>
-                            <h3 className='preTitle'>{i18next.t('connect with dev community')}</h3>
+                            <h3 className='preTitle'>{i18next.t('Connect with Dev Community')}</h3>
                             <h1 className='title'>
-                                <Trans i18nKey='designed for developers'>
-                                    designed for <em>developers</em>
+                                <Trans i18nKey='Designed for Developers'>
+                                    Designed for <em>Developers</em>
                                 </Trans>
                             </h1>
                         </Col>
                         <Col sm='12' lg='12' xl='7' className='tabs_header'>
                             <Nav tabs>
-                                {list.map(this.renderTabName)}
+                                {DeveloperTabs.map(this.renderTabName)}
                             </Nav>
                         </Col>
                         <Col sm='12' lg='12' xl='7'>
                             <TabContent activeTab={activeTab}>
-                                {list.map(this.renderTabContent)}
+                                {DeveloperTabs.map(this.renderTabContent)}
                             </TabContent>
                         </Col>
                     </Row>

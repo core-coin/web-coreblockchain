@@ -13,7 +13,7 @@ import TabsSlider from '../../components/Tabs/TabsSlider'
 import Offers from '../../components/Offers'
 import OffersMobile from '../../components/Offers/OffersMobile'
 import Contacts from '../../components/Contacts'
-import Industries  from '../../mockData/industriesData'
+import { TargetIndustries } from '../../mockData'
 
 import { isMobile, isSd } from '../../utils'
 
@@ -79,7 +79,7 @@ class PageContainer extends PureComponent {
               </MetaTags>
                 <HeroHeader language={language} id="overview"/>
                 {this.state.isMobile ? <OffersMobile /> : <Offers />}
-                {this.state.isMobile || this.state.isSd ? <TabsSlider data={Industries} /> : <Tabs data={Industries}  />}
+                {this.state.isMobile || this.state.isSd ? <TabsSlider data={TargetIndustries} /> : <Tabs data={TargetIndustries}  />}
                 <Solutions id="learn" />
                 <Developers  id="developers" />
                 <NodeCoverage

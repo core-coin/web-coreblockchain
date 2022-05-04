@@ -38,14 +38,14 @@ class HeroHeader extends PureComponent{
                             <Button
                                 theme='green'
                                 size='normal'
-                                text={t('get started')}
+                                text={t('Get started')}
                                 type='router'
                                 href={`/${language}/get-started`}
                             />
                             <Button
                                 theme='ghost'
                                 size='normal'
-                                text={t('learn more')}
+                                text={t('Learn more')}
                                 href={'https://blog.coreblockchain.cc/'}
                             />
                         </Col>

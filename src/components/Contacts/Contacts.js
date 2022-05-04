@@ -33,13 +33,13 @@ class Contacts extends PureComponent{
                 <Container>
                     <Row className='contacts_row'>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
-                            <h3 className='preTitle'>{t('HOW TO GET INVOLVED')}</h3>
+                            <h3 className='preTitle'>{t('How to get involved')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='core mining'>
                                     core <em>mining</em>
                                 </Trans>
                             </h1>
-                            <p className='description'>{t('We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices')}</p>
+                            <p className='description'>{t('Core Blockchain represents a blockchain revolution as the first-ever next-generation Proof of Work, referred to as the Proof of Distributed Efficiency //PoDE//, in the world. Distributed Efficiency refers to transactions being confirmed on a network in any location. Using energy that could be waste energy, grid energy, or any other form of energy production, and or a combination thereof is not only environmentally friendly but also self-sustainable.')}</p>
                             <div className='contacts_right__info'>
                                 {/*<div className='contacts_right__info-block'>*/}
                                 {/*    <p>{t('Block time')}</p>*/}
@@ -59,13 +59,13 @@ class Contacts extends PureComponent{
                                     theme='green'
                                     download
                                     size='normal'
-                                    text={t('download miner')}
+                                    text={t('Download Miner')}
                                     href='https://github.com/catchthatrabbit/coreminer'
                                 />
                                 <Button
                                     theme='ghost'
                                     size='normal'
-                                    text={t('Build hardware')}
+                                    text={t('Build Hardware')}
                                     href='https://www.thingiverse.com/groups/blockchain'
                                 />
                             </div>

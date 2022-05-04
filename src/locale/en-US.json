@@ -1,354 +1,185 @@
 {
-  "get started": "get started",
-  "learn more": "learn more",
   "Language": "Language",
-  "multiline": "Some newlines <1> would be </1> fine",
-  "Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.": "Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.",
-  "The Value Custodian for a Decentralized World": "The value custodian for a <1>decentralized world</1>",
   "Coverage": "Coverage",
-  "Borderless network anywhere in the World run on various networks.": "Borderless network anywhere in the World run on various networks.",
   "Decentralization": "Decentralization",
-  "Core distributed computing platform is reliable, secure and available for everyone.": "Core distributed computing platform is reliable, secure and available for everyone.",
   "Interoperability": "Interoperability",
   "Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.": "Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.",
   "Persistence": "Persistence",
   "Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.": "Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.",
-  "highlights": "highlights",
   "Security": "Security",
-  "Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.": "Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.",
   "Swarm Intelligence": "Swarm Intelligence",
   "Core Blockchain is using a self-organized system — Boids — to transact and route the data.": "Core Blockchain is using a self-organized system — Boids — to transact and route the data.",
-  "main benefits of core blockchain": "Main benefits of <1>Core Blockchain</1>",
-  "Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform We are creating an Inclusion program suited for all people": "Our mission is building a Global Decentralized Network (GDN) to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform.<1>We are creating an Inclusion program suited for all people.</1>",
   "Core Ecosystem": "Core <1>Ecosystem</1>",
-  "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION We are inviting any new ideas for the Blockchain Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network": "A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Our blockchain has a program called Core Community Fund (CCF) to award projects deemed to be beneficial for the network.",
-  "Core Blockchain Social Impact": "Social impact provided by <1>Core Blockchain</1>",
-  "industries": "Targeted Industries",
-  "connect with dev community": "connect with dev community",
-  "designed for developers": "Designed for <1>developers</1>",
-  "Block time": "Block time",
+  "Core Blockchain Social Impact": "Core Blockchain <1>Social Impact</1>",
   "Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.": "Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.",
   "Statistics": "Statistics",
   "Market Cap": "Market Cap",
   "Network Powered by": "Network Powered by",
-  "Boid Hop Reach": "Boid hop reach",
-  "Core Network reach": "Core Network reach",
+  "Boid Hop Reach": "Boid Hop Reach",
   "Price": "Price",
-  "Planet covered by Blockchain": "Planet covered by <1>Blockchain</1>",
-  "Total blocks": "Total blocks",
-  "Total transactions": "Total transactions",
   "Transaction Explorer": "Transaction Explorer",
   "Algorithm": "Algorithm",
   "IoT Performance": "IoT Performance",
-  "Brand identity": "Brand identity",
   "Contact": "Contact",
-  "core mining": "Get a headstart, start <1>Core Coin mining</1>",
   "Core Foundation": "Core Foundation",
-  "Core Talk": "Core ◆ Talk",
-  "We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices": "We optimize the mining algorithm to be more focused on small devices and connected to mesh network ecosystem. Meshnet is Blockchain topology, connecting nodes and transmit various data into established and new devices.",
+  "We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem. Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices.": "We optimize the mining algorithm to be more focused on small devices //IoT// and connected to mesh network ecosystem. Meshnet is Blockchain topology - connecting nodes and transmit various data into established and new devices.",
   "Developer Portal": "Developer Portal",
   "Development": "Development",
-  "Network Difficulty": "Network Difficulty",
-  "download miner": "download miner",
+  "Difficulty": "Difficulty",
   "Get in touch": "Get in touch",
-  "Core Improvement Proposals": "CIP",
-  "Blog": "Blog",
-  "Build hardware": "Build hardware",
-  "Issues list": "Issues list",
-  "Pull requests": "Pull requests",
-  "Introduce project": "Introduce project",
-  "HOW TO GET INVOLVED": "How to get involved",
-  "Report bug": "Report bug",
-  "Useful links": "Useful links",
-  "Copyright © 2018-2021 Core Foundation. All Rights Reserved.": "Copyright © 2018-2021 Core Foundation. All Rights Reserved.",
-  "Website last updated Jan 31, 2020": "Website last updated Jan 31, 2021",
-  "Previous versions": "Previous versions",
-  "Public Key": "Public key",
-  "This download consist of all blocks that have been verified": "This download consist of all blocks that have been verified.",
-  "Source code": "Source code",
-  "Download the Core client": "Download the Core client",
-  "Get verified Core Blockchain data": "Get verified Core Blockchain data",
+  "Core Improvement Proposals": "Core Improvement Proposals",
+  "As a reminder, all release binaries are signed. You can manually verify the signatures with the command": "As a reminder, all release binaries are signed. You can manually verify the signatures with the command:",
+  "Core Client Boid": "Core Client Boid",
   "Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.": "Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.",
-  "CORE explorer": "CORE explorer",
-  "The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.": "The Core Wallet allows you to hold and secure Core and other crypto-assets built on Core, as well as write, deploy and use Smart Contracts.",
   "Choose your operating system": "Choose your operating system",
-  "Go-core is the the command line interface for running a full Core node implemented in Go.": "Go-core is the the command line interface for running a full Core node implemented in Go.",
   "Download": "Download",
-  "IPFS": "IPFS",
-  "Public key": "Public key",
   "Onion": "Onion",
-  "By mining, you can earn cryptocurrency with your CPU hashing power. CPU-based miners to start dig your Ores.": "By mining, you can earn cryptocurrency with your CPU hashing power. CPU-based miners to start dig your Ores.",
   "Mining pools": "Mining pools",
   "Core CPU miners": "Core CPU miners",
-  "Core network": "Core <1>network</1>",
-  "We are monitoring network and provide the tools to monitor the health and track your transactions": "We are monitoring network and provide the tools to monitor the health and track your transactions",
   "Nodes status": "Nodes status",
-  "Copy command": "Copy command",
-  "Core Wallet": "Core Wallet",
-  "Download via torrent": "Download via torrent",
-  "Minimum requirements": "Minimum requirements:",
-  "Unlock the Core Ecosystem®": "Unlock the <1>Core Ecosystem®</1>",
-  "Build Your Own": "Build Your Own",
+  "Minimum requirements": "Minimum requirements",
   "Tested Devices List": "Tested Devices List",
   "IoT Devices": "IoT Devices",
-  "How to get started with Core Mining": "How to get started with Core Mining",
-  "Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins": "Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins",
-  "View mining pools": "View mining pools",
-  "Safe storage for your digital assets": "Safe storage for your digital assets",
-  "Store your freshly mined assets securely.": "Store your freshly mined assets securely.",
-  "Core block Index & analytics": "Core block Index & analytics",
-  "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more.",
-  "browse transactions": "browse transactions",
-  "Open Hardware (IOT Devices)": "Open Hardware <1>(IoT Devices)</1>",
-  "Minimum requirements:": "Minimum requirements:",
-  "Build your own": "Build your own",
-  "Tested devices list": "Tested devices list",
-  "Download Blockchain from torrent": "Download Blockchain from torrent",
   "Charts and metrics for the Core network. Explore our Boid locations Worldwide.": "Charts and metrics for the Core network. Explore our Boid locations Worldwide.",
-  "Core stats": "Core stats",
-  "Get core software": "Time to <1>get you started</1>",
-  "Join Core Blockchain ecosystem and enjoy all its ts": "Join Core Blockchain ecosystem and enjoy all its ts",
-  "Join the Borderless network anywhere in the World run on various networks.": "Join the Borderless network anywhere in the World run on various networks.",
-  "Select your language": "Select your language",
   "Language Support": "Language Support",
   "How to join?": "How to join?",
-  "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them.": "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them.",
-  "In-progress translations": "In-progress translations",
   "Translation Program": "Translation Program",
-  "Interested in translating? Get involved! We're seeking volunteers to join translation community.": "Interested in translating? Get involved! We're seeking volunteers to join translation community.",
   "Contribute": "Contribute",
   "We are serving all people Worldwide, any language any nationality. Please, contribute to translations to make this vision a reality.": "We are serving all people Worldwide, any language any nationality. Please, contribute to translations to make this vision a reality.",
-  "Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.": "Once you’ve completed the translation, our professional translation service will review (and potentially edit) the content.",
-  "If translation progress is below 100%, please contribute! Don’t see your language listed?": "If translation progress is below 100%, please contribute! Don’t see your language listed?",
-  "Open an issue.": " Open an issue.",
   "Open link": "Open link",
-  "Distribution clients": "Distribution clients",
-  "Specific download for distribution deployment": "Specific download for distribution deployment.",
   "Join our translation instance.": "Join our translation instance.",
   "Once the review is complete (i.e. review progress is 100%), we will add it to the website.": "Once the review is complete (i.e. review progress is 100%), we will add it to the website.",
   "Find the language you want to translate and select a document.": "Find the language you want to translate and select a document.",
-  "You will need to create a Translate account if you don’t already have one.": "You will need to create a Translate account if you don’t already have one.",
   "The following language translations are in progress": "The following language translations are in progress",
-  "Search for a term or phrase": "Search for a term or phrase...",
   "Deployment": "Deployment",
   "Images": "Images",
   "Containers": "Containers",
-  "IoT Perfomance": "IoT Perfomance",
   "Magnet Link": "Magnet Link",
   "Verify your download by running this script": "Verify your download by running this script",
-  "Go to marketplace": "Go to marketplace",
-  "packageToolScript": "openssl dgst -sha256 -verify core.pem -signature core.sig core",
-  "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry It has been the industry's standard dummy text" : "Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry. It has been the industry's standard dummy text.",
-  "CorePass digital identity": "CorePass digital identity",
-  "First blockchain based decentralized digital identity. CorePass represents the foundation of the Core ecosystem, allowing users to access all the Core platforms and aplications quickly and easily with a push of a button.": "First blockchain based decentralized digital identity. CorePass represents the foundation of the Core ecosystem, allowing users to access all the Core platforms and aplications quickly and easily with a push of a button.",
-  "connect with community": "Connect with community",
-  "Enterprises": "Enterprises",
-  "Learn": "Learn",
+  "Open an issue": "Open an issue",
+  "4GB RAM //8GB recommended//": "4GB RAM //8GB recommended//",
+  "Planet covered by Blockchain": "<1>Planet</1> Covered by <1>Blockchain</1>",
+  "About": "About",
+  "Aerospace": "Aerospace",
+  "Antenna & Amplifier //required by Luna° mesh connectivity//": "Antenna & Amplifier //required by Luna° mesh connectivity//",
+  "Asset Tokenization": "Asset Tokenization",
+  "Borderless network anywhere in the world that runs on various networks.": "Borderless network anywhere in the world that runs on various networks.",
+  "By mining, you can earn cryptocurrency with your CPU hashing power. Use CPU-based miners to start digging your Ores.": "By mining, you can earn cryptocurrency with your CPU hashing power. Use CPU-based miners to start digging your Ores.",
+  "Community": "Community",
+  "Connect with Dev Community": "Connect with Dev Community",
+  "Core Foundation // Copyright and related rights waived via CC0.": "Core Foundation // Copyright and related rights waived via CC0.",
+  "Core Blockchain": "Core Blockchain",
+  "Core Client": "Core Client",
+  "Core distributed computing platform is reliable, secure, and available for everyone.": "Core distributed computing platform is reliable, secure, and available for everyone.",
+  "Core Mining": "Core Mining",
+  "Core Network": "Core Network",
+  "Core <1>Proof of Distributed Efficiency</1>": "Core <1>Proof of Distributed Efficiency</1>",
+  "Core Explorer": "Core Explorer",
+  "Core Stats": "Core Stats",
+  "Core Standards": "Core Standards",
+  "Core ◆ Talk": "Core ◆ Talk",
+  "Defence & Security": "Defence & Security",
+  "Designed for Developers": "Designed for <1>Developers</1>",
+  "Developers": "Developers",
+  "Download Blockchain": "Download Blockchain",
+  "Ecosystem": "Ecosystem",
+  "Education": "Education",
+  "eGovernment & DAOs": "eGovernment & DAOs",
+  "Energy": "Energy",
+  "Enterprise": "Enterprise",
+  "Finance & Payments": "Finance & Payments",
+  "Get Core Software": "Get <1>Core Software</1>",
+  "Get started": "Get started",
+  "GIScience": "GIScience",
+  "Go-core is the command-line interface for running a full Core node //Boid// implemented in Go.": "Go-core is the command-line interface for running a full Core node //Boid// implemented in Go.",
+  "Healthcare & Wellness": "Healthcare & Wellness",
+  "Highlights": "Highlights",
+  "If translation progress is below 100%, please contribute!": "If translation progress is below 100%, please contribute!",
+  "Don’t see your language listed?": "Don’t see your language listed?",
+  "Industries": "Industries",
+  "Join the Core Blockchain ecosystem and enjoy all its benefits": "Join the Core Blockchain ecosystem and enjoy all its benefits.",
+  "Just-In-Time //JIT// compilation": "Just-In-Time //JIT// compilation",
+  "Learn more": "Learn more",
+  "Main Benefits of Core Blockchain": "Main Benefits of <1>Core Blockchain</1>",
+  "Management and Resilience in Supply Chain to track, monitor, and alert using Blockchain-based verified information. Blockchain reduces the length of the chain to some extent by cutting down on the middlemen or 3rd party organizations": "Management and Resilience in Supply Chain to track, monitor, and alert using Blockchain-based verified information. Blockchain reduces the length of the chain to some extent by cutting down on the middlemen or 3rd party organizations.",
+  "Mass Media": "Mass Media",
+  "New thread": "New thread",
+  "Once the translation is completed, our professional translation service will review (and potentially edit) the content.": "Once the translation is completed, our professional translation service will review (and potentially edit) the content.",
   "Overview": "Overview",
-  "main tabs": [
-    {
-      "tabName": "Finance & Payments",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Healthcare & Wellness",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Aerospace",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Energy",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Supply Chain",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "eGovernment & DAO’s",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Mass Media",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "GIScience",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Defence & Security",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Asset Tokenization",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Education",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    },
-    {
-      "tabName": "Telecommunications",
-      "tabImage": "/trading.png",
-      "tabContent": "Blockchain messages and data distribution within different types of communication including radio-frequency (RF), mesh network (meshnet) and laser transmission."
-    }
-  ],
-  "developers tabs": [
-    {
-      "tabName": "Developer portal",
-      "tabContent": "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
-      "tabGreenBtn": "Visit",
-      "tabGreenBtnLink": "https://dev.coreblockchain.cc/",
-      "tabGhostBtn": "report bug",
-      "tabGhostBtnLink": "https://dev.coreblockchain.cc/report/bug"
-    },
-    {
-      "tabName": "Core Talk",
-      "tabContent": "2Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
-      "tabGreenBtn": "Visit",
-      "tabGreenBtnLink": "https://coretalk.info/",
-      "tabGhostBtn": "report bug",
-      "tabGhostBtnLink": "https://dev.coreblockchain.cc/report/bug"
-    },
-    {
-      "tabName": "Core Standards",
-      "tabContent": "3Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
-      "tabGreenBtn": "Visit",
-      "tabGreenBtnLink": "https://cip.coreblockchain.cc/",
-      "tabGhostBtn": "Open an issue",
-      "tabGhostBtnLink": "https://github.com/core-coin/cip/issues/new/choose"
-    }
-  ],
-  "menuItemList": [
-    {
-      "label": "Blog",
-      "link": "https://blog.coreblockchain.cc/"
-    },
-    {
-      "label": "Developers",
-      "link": "https://dev.coreblockchain.cc/"
-    },
-    {
-      "label": "Talk",
-      "link": "https://coretalk.info/"
-    }
-  ],
-  "languages": [
-    {
-      "englishName": "English",
-      "code": "en",
-      "nativeName": "English"
-    },
-    {
-      "englishName": "Slovak",
-      "code": "sk",
-      "nativeName": "Slovak"
-    }
-  ],
-  "languagesInProgress": [
-    {
-      "englishName": "Spanish",
-      "code": "es",
-      "nativeName": "Español"
-    },
-    {
-      "englishName": "Slovak",
-      "code": "sk",
-      "nativeName": "Slovak"
-    }
-  ],
-  "Get started menuLinks" : [
-    {
-      "label": "Core Client",
-      "link": "coreClient"
-    },
-    {
-      "label": "Distribution clients",
-      "link": "distributionClients"
-    },
-    {
-      "label": "Core mining",
-      "link": "coreMining"
-    },
-    {
-      "label": "Block index",
-      "link": "blockIndex"
-    },
-    {
-      "label": "Open hardware",
-      "link": "openHardware"
-    }
-  ],
-  "nodeDistributionTabName" : [
-    {
-      "tabName": "Deployment",
-      "elements": [
-        {
-          "label": "Docker Compose",
-          "id": "docker",
-          "link": "https://github.com/core-coin/core-docker-compose"
-        },
-        {
-          "label": "Bash",
-          "id": "bash",
-          "link": "https://github.com/core-coin/core-bash"
-        }
-      ]
-    },
-    {
-      "tabName": "Images",
-      "elements": []
-    },
-    {
-      "tabName": "Containers",
-      "elements": [
-        {
-          "label": "docker pull ghcr.io/core-coin/go-core:latest",
-          "id": "docker",
-          "link": "https://github.com/core-coin/go-core/pkgs/container/go-core"
-        }
-      ]
-    }
-  ],
-  "hardware requirements": [
-    "64-bit architecture",
-    "Just-in-time (JIT) compilation",
-    "4 cores CPU",
-    "4GB RAM (8GB recommended)",
-    "Passive or Active cooler"
-  ],
-  "operating systems list": [
-    {
-      "label": "Linux",
-      "value": "linux",
-      "linkToDownLoad": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64",
-      "checksum": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64.checksum"
-    },
-    {
-      "label": "MacOS",
-      "value": "macOS",
-      "linkToDownLoad": "https://github.com/core-coin/go-core/releases/download/latest/gocore-darwin-x86_64",
-      "checksum": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64.checksum"
-    },
-    {
-      "label": "Microsoft Windows",
-      "value": "windows",
-      "linkToDownLoad": "https://github.com/core-coin/go-core/releases/download/latest/gocore-windows-x86_64.exe",
-      "checksum": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64.checksum"
-    }
-  ]
+  "Packages": "Packages",
+  "Protection and automatization of medical data and active participation in research for medicine or treatment. Monitoring and tracking diseases with verified data.": "Protection and automatization of medical data and active participation in research for medicine or treatment. Monitoring and tracking diseases with verified data.",
+  "RandomY": "RandomY",
+  "Supply Chain": "Supply Chain",
+  "Technology": "Technology",
+  "Telecommunications": "Telecommunications",
+  "A New Sense of Integrity": "A New Sense of <1>Integrity.</1>",
+  "Trademark": "Trademark",
+  "Visit": "Visit",
+  "Core Blockchain represents a blockchain revolution as the first-ever next-generation Proof of Work, referred to as the Proof of Distributed Efficiency //PoDE//, in the world. Distributed Efficiency refers to transactions being confirmed on a network in any location. Using energy that could be waste energy, grid energy, or any other form of energy production, and or a combination thereof is not only environmentally friendly but also self-sustainable.": "Core Blockchain represents a blockchain revolution as the first-ever next-generation Proof of Work, referred to as the Proof of Distributed Efficiency //PoDE//, in the world. Distributed Efficiency refers to transactions being confirmed on a network in any location. Using energy that could be waste energy, grid energy, or any other form of energy production, and or a combination thereof is not only environmentally friendly but also self-sustainable.",
+  "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empower Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.": "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empower Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network.",
+  "Aerospace operators can share data about aircraft history, maintenance, and operations with verified Blockchain messages.": "Aerospace operators can share data about aircraft history, maintenance, and operations with verified Blockchain messages.",
+  "All Rights Reserved.": "All Rights Reserved.",
+  "Blockchain can actively contribute to education by involving the process of learning facilitation, or the acquisition of knowledge, skills, values, beliefs, and habits.": "Blockchain can actively contribute to education by involving the process of learning facilitation, or the acquisition of knowledge, skills, values, beliefs, and habits.",
+  "Blockchain messages and data distribution within different types of communication - including radio-frequency //RF//, mesh network //meshnet//, and laser transmission.": "Blockchain messages and data distribution within different types of communication - including radio-frequency //RF//, mesh network //meshnet//, and laser transmission.",
+  "Core Blockchain is contributing to Geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries.": "Core Blockchain is contributing to Geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries.",
+  "Discuss and open new QA in the Talk community. Developers as well as other community members will assist you to answer your questions.": "Discuss and open new QA in the Talk community. Developers as well as other community members will assist you to answer your questions.",
+  "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain to your running system using Oracles. Interact with Blockchain Worldwide network.": "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain to your running system using Oracles. Interact with Blockchain Worldwide network.",
+  "Following the concept of using Blockchain technology to secure assets and host multiple securities on the Core Blockchain platform.": "Following the concept of using Blockchain technology to secure assets and host multiple securities on the Core Blockchain platform.",
+  "We introduce a standard for crypto addresses — ICAN — with HRP and checksum, similar to what we all are using for current financial transactions.": "We introduce a standard for crypto addresses — ICAN — with HRP and checksum, similar to what we all are using for current financial transactions.",
+  "Download Checksum": "Download Checksum",
+  "4 Cores CPU": "4 Cores CPU",
+  "64-bit Architecture": "64-bit Architecture",
+  "A decentralized structure within the whole ecosystem allows for voting through the CORE FOUNDATION. We welcome any new ideas for the Blockchain. The blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.": "A decentralized structure within the whole ecosystem allows for voting through the CORE FOUNDATION. We welcome any new ideas for the Blockchain. The blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.",
+  "Block Time": "Block Time",
+  "Boid Distributions": "Boid Distributions",
+  "Brand Identity": "Brand Identity",
+  "Build Hardware": "Build Hardware",
+  "Build Your Own & Connect to Blockchain Network": "Build Your Own & Connect to Blockchain Network",
+  "Copy Command": "Copy Command",
+  "Core Blockchain can serve as an Autonomous Pod Data Transport //APDT// and connect multiple devices with the reliable and secure Core Blockchain Network globally.": "Core Blockchain can serve as an Autonomous Pod Data Transport //APDT// and connect multiple devices with the reliable and secure Core Blockchain Network globally.",
+  "Core Blockchain is a Worldwide, open-source, unstoppable, and financial Smart Contract network.": "Core Blockchain is a Worldwide, open-source, unstoppable, and financial Smart Contract network.",
+  "Core Blockchain translators are always translating pages into as many languages as possible. To see what they're working on right now join the team.": "Core Blockchain translators are always translating pages into as many languages as possible. To see what they're working on right now join the team.",
+  "Download Miner": "Download Miner",
+  "Enable Indie-producers //Low-budget// and microfinancing for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments.": "Enable Indie-producers //Low-budget// and microfinancing for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments.",
+  "In-progress Translations": "In-progress Translations",
+  "Join the Borderless network anywhere in the world run on various networks.": "Join the Borderless network anywhere in the world run on various networks.",
+  "Open New Proposal": "Open New Proposal",
+  "Open Source License": "Open Source License",
+  "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with the LIFO //Last-In-First-Out// structure.": "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with the LIFO //Last-In-First-Out// structure.",
+  "Our mission is to build a Global Decentralized Network //GDN// to cover all areas of the planet using multiple communication technologies along with the Core Blockchain platform. We are creating an Inclusion program suited for all the people.": "Our mission is to build a Global Decentralized Network //GDN// to cover all areas of the planet using multiple communication technologies along with the Core Blockchain platform. We are creating an Inclusion program suited for all the people.",
+  "Passive or Active Cooler": "Passive or Active Cooler",
+  "Previous Versions": "Previous Versions",
+  "Public Key": "Public Key",
+  "Report Bug": "Report Bug",
+  "Pull Requests": "Pull Requests",
+  "Review Progress": "Review Progress",
+  "Select Your Language": "Select Your Language",
+  "Source Code": "Source Code",
+  "The Core community has adopted many standards that are helpful for developers. Typically these are introduced as Core Improvement Proposals //CIP//. CIPs describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards.": "The Core community has adopted many standards that are helpful for developers. Typically these are introduced as Core Improvement Proposals //CIP//. CIPs describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards.",
+  "Total Blocks": "Total Blocks",
+  "Total Transactions": "Total Transactions",
+  "Translation Progress": "Translation Progress",
+  "Twisted Edwards Curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.": "Twisted Edwards Curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.",
+  "Useful Links": "Useful Links",
+  "We are monitoring the network and provide the tools to monitor the network's health and track your transactions.": "We are monitoring the network and provide the tools to monitor the network's health and track your transactions.",
+  "Website Last Updated": "Website Last Updated",
+  "ICAN Address": "ICAN Address",
+  "Issues List": "Issues List",
+  "Introduce Project": "Introduce Project",
+  "You will need to create a Translate account, if you don’t already have one.": "You will need to create a Translate account, if you don’t already have one.",
+  "Blockchain-based, transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served Worldwide.": "Blockchain-based, transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served Worldwide.",
+
+  "Network Difficulty": "Network Difficulty",
+  "The Value Custodian for a Decentralized World": "The value custodian for a <1>decentralized world</1>",
+  "Blog": "Blog",
+  "Talk": "Talk",
+  "Open Hardware (IoT Devices)": "Open Hardware <1>(IoT Devices)</1>",
+  "Distribution clients": "Distribution clients",
+  "Block index": "Block index",
+  "Open hardware": "Open hardware",
+  "Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.": "Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.",
+  "Core Talk": "Core Talk",
+  "How to get involved": "How to get involved",
+  "Core Network reach": "Core Network reach",
+  "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them.": "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them."
 }

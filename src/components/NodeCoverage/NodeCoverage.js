@@ -6,10 +6,9 @@ import {
     Col
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
-
-import Luna from '../SvgIcon/icons/Luna'
 import Button from '../Button'
 import './NodeCoverage.scss'
+import AnimatedArrow from '../AnimatedArrow/AnimatedArrow'
 
 
 class NodeCoverage extends PureComponent{
@@ -39,7 +38,7 @@ class NodeCoverage extends PureComponent{
     )
 
     render(){
-        const { t, totalTransactions, totalBlocks, blocktime, marketCap, price, nodesOnline } = this.props
+        const { t, totalTransactions, totalBlocks, blocktime, marketCap, price } = this.props
 
         return(
             <div className='nodeCoverage'>
@@ -58,22 +57,10 @@ class NodeCoverage extends PureComponent{
                             <div className='custom_row'>
                                 <div className="block-container">
                                     <div className='nodeCoverage_block nodeCoverage_block_first'>
-                                        <h2>{t('Boid Hop Reach')}</h2>
-                                        <p>{t('Boid hop reach represents the Lorem Ipsum dummy text of the printing and typesetting industry It has been the industry\'s standard dummy text')}</p>
-                                        <div className='nodeCoverage_block__cards'>
-                                            {nodesOnline.toString().split('').map(Number).map(this.renderDigit)}
-                                            <div className='nodeCoverage_block__cards-card'>
-                                                <span>k</span>
-                                            </div>
-                                            <div className='nodeCoverage_block__cards-card'>
-                                                <span>m</span>
-                                            </div>
-                                        </div>
+                                        <h2>{t('ICAN address')}</h2>
+                                        <p>{t('We introduce a standard for crypto addresses — ICAN — with HRP and checksum, similar to what we all are using for current financial transactions.')}</p>
                                        <div className='text-center power-by'>
-                                       <span>{t('Network Powered by')}:</span>
-                                       <div className='text-center nodeCoverage_block-img'>
-                                            <Luna />
-                                       </div>
+                                           <AnimatedArrow text={t('Generate ICAN address')} url='https://github.com/core-coin/wallet-generator'/>
                                        </div>
                                     </div>
                                 </div>
@@ -110,7 +97,7 @@ class NodeCoverage extends PureComponent{
                                   theme='green'
                                   size='normal'
                                   text={t('Transaction Explorer')}
-                                  href=''
+                                  href='https://blockindex.net/'
                                 />
                             </Col>
                         </div>

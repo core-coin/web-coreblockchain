@@ -18,6 +18,7 @@ import Menu from '../SvgIcon/icons/Menu'
 import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
 import { isMobile, isSd } from '../../utils'
+import { MenuItemList } from '../../mockData'
 
 import './HeaderNavbar.scss'
 import i18next from 'i18next'
@@ -44,7 +45,7 @@ class HeaderNavbar extends PureComponent {
 
   renderLink = ({ link, label }, index) => (
     <NavItem key={index}>
-      <NavLink href={link}>{label}</NavLink>
+      <NavLink href={link}>{i18next.t(label)}</NavLink>
     </NavItem>
   )
 
@@ -110,7 +111,7 @@ class HeaderNavbar extends PureComponent {
 
       <li key={index} className='nav-item'>
         <a className='nav-link' href={`${item.link}`} onClick={this.closeSidebar}>
-          {item.label}
+          {i18next.t(item.label)}
         </a>
       </li>
 
@@ -119,7 +120,6 @@ class HeaderNavbar extends PureComponent {
   render() {
     const { t, language } = this.props
     const { isMenuOpen } = this.state
-    const list = Array.from(i18next.t('menuItemList', { returnObjects: true }))
 
     return (
       <div className='headerNavbar'>
@@ -154,7 +154,7 @@ class HeaderNavbar extends PureComponent {
                           </a>
                         </Col>
                         <Nav navbar >
-                          {list.map(this.renderLink)}
+                          {MenuItemList.map(this.renderLink)}
                         </Nav>
                         <div className='headerNavbar_sidebar__button'>
                           <Button
@@ -172,7 +172,7 @@ class HeaderNavbar extends PureComponent {
                           <Button
                             mobileFullWidth
                             theme='green'
-                            text={t('get started')}
+                            text={t('Get started')}
                             type='router'
                             href={`/${language}/get-started`}
                             onClick={this.closeSidebar}
@@ -184,7 +184,7 @@ class HeaderNavbar extends PureComponent {
                 ) : (
                   <div className='headerNavbar_flex'>
                   <Nav navbar >
-                      {list.map(this.renderNavbar)}
+                      {MenuItemList.map(this.renderNavbar)}
                     </Nav>
                     <div className='headerNavbar_left'>
                       <Button
@@ -197,7 +197,7 @@ class HeaderNavbar extends PureComponent {
                       />
                       <Button
                         theme='green'
-                        text={t('get started')}
+                        text={t('Get started')}
                         type='router'
                         href={`/${language}/get-started`}
                       />

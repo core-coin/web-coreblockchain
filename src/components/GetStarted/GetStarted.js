@@ -9,9 +9,11 @@ import CoreBlock from './CoreBlock'
 import CoreClient from './CoreClient'
 import Distribution from './Distribution'
 import Mining from './Mining'
+import { SideBarMenu } from '../../mockData'
 
 import './GetStarted.scss'
 import { isSmd } from '../../utils'
+import i18next from 'i18next'
 
 class GetStarted extends PureComponent {
   constructor(props) {
@@ -49,15 +51,12 @@ class GetStarted extends PureComponent {
         this.toggle(links.link)
       }}
     >
-      <a href={'#' + links.link}>{links.label}</a>
+      <a href={'#' + links.link}>{i18next.t(links.label)}</a>
     </li>
   )
 
 
   render() {
-    const { t } = this.props
-
-    const list = Array.from(t('Get started menuLinks', { returnObjects: true }))
 
     return (
       <div className='getStarted'>
@@ -110,7 +109,7 @@ class GetStarted extends PureComponent {
                   <Scrollspy
                     items={ ['coreClient', 'distributionClients', 'coreMining', 'blockIndex', 'openHardware', 'corePass'] }
                     currentClassName="active"
-                  >{list.map(this.renderLinks)}</Scrollspy>
+                  >{SideBarMenu.map(this.renderLinks)}</Scrollspy>
                 </div>
               </Col>
             )

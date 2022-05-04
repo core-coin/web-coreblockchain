@@ -12,8 +12,10 @@ import Arrows from '../../images/getStarted/get-started-arrows.svg'
 import { getCloudImage } from '../../utils'
 import ArrowUpRight from '../../images/getStarted/ArrowUpRight.svg'
 import CopyInput from '../CopyInput'
+import { NodeDistributionData } from '../../mockData'
 
 import './GetStarted.scss'
+import i18next from 'i18next'
 
 class Distribution extends PureComponent{
     constructor(props) {
@@ -40,7 +42,7 @@ class Distribution extends PureComponent{
                         this.toggle(tab.tabName);
                     }}
                 >
-                    {tab.tabName}
+                    {i18next.t(tab.tabName)}
                 </NavLink>
             </NavItem>
         )
@@ -75,8 +77,6 @@ class Distribution extends PureComponent{
 
         const { activeTab } = this.state
 
-        const list = Array.from(t('nodeDistributionTabName', { returnObjects: true }))
-
         return(
             <>
                 <div className='downloadBlock'>
@@ -85,12 +85,12 @@ class Distribution extends PureComponent{
                     <p>{t('Specific download for distribution deployment')}</p>
                     <div className='tabs_header'>
                         <Nav tabs>
-                            {list.map(this.renderTabName)}
+                            {NodeDistributionData.map(this.renderTabName)}
                         </Nav>
                     </div>
                     <div>
                         <TabContent activeTab={activeTab}>
-                            {list.map(this.renderTabContent)}
+                            {NodeDistributionData.map(this.renderTabContent)}
                         </TabContent>
                     </div>
                 </div>

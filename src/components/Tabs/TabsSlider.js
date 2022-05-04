@@ -27,7 +27,7 @@ class TabsSlider extends PureComponent {
   }
 
   render() {
-    const { t } = this.props
+    const { t, data } = this.props
 
     const settings = {
       dots: true,
@@ -39,8 +39,6 @@ class TabsSlider extends PureComponent {
       arrows: false,
     }
 
-    const list = i18next.t('main tabs', { returnObjects: true })
-
     return (
       <div className='tabs'>
         <Container>
@@ -48,11 +46,11 @@ class TabsSlider extends PureComponent {
             <Col sm='12'>
               <Row>
                 <Col sm='12' md='12' lg='12' className='tabs_header'>
-                  <h3>{t('industries')}</h3>
+                  <h3>{t('Industries')}</h3>
                 </Col>
                 <Col sm='12' md='12' lg='12' className='tab-content'>
                   <Slider {...settings}>
-                    {list.map((tab) => {
+                    {data.map((tab) => {
                       return (
                         // <Trans i18nKey={tab.tabName} defaults={tab.tabName}>
                         <div key={tab.tabName} className="tab-pane">
@@ -62,8 +60,8 @@ class TabsSlider extends PureComponent {
                                 alt={tab.tabName}
                                 className='img-responsive'
                               />
-                              <h2>{tab.tabName}</h2>
-                              <p>{tab.tabContent}</p>
+                              <h2>{t(tab.tabName)}</h2>
+                              <p>{t(tab.tabContent)}</p>
                             </div>
                         </div>
                       // </Trans>
