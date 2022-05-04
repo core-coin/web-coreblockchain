@@ -177,7 +177,6 @@
   "Network Difficulty": "Network Difficulty",
   "Blog": "Blog",
   "Talk": "Talk",
-  "Open Hardware <1>//IoT Devices//</1>": "Open Hardware <1>//IoT Devices//</1>",
   "Distribution Clients": "Distribution Clients",
   "Block Index": "Block Index",
   "Open Hardware": "Open Hardware",
@@ -188,5 +187,6 @@
   "Specific download for distribution deployment.": "Specific download for distribution deployment.",
   "How to get started with Core Mining": "How to get started with Core Mining",
   "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.": "Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.",
-  "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more."
+  "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions, and more.",
+  "Open Hardware //IoT Devices//": "Open Hardware //IoT Devices//"
 }
