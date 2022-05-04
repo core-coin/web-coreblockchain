@@ -150,7 +150,7 @@ class Footer extends PureComponent{
                         <Container>
                             <Row>
                                 <Col>
-                                    <p>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
+                                    <p>{t('Copyright © 2018-2022 Core Foundation. All Rights Reserved.')}</p>
                                 </Col>
                             </Row>
                         </Container>

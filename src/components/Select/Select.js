@@ -156,9 +156,11 @@ export default class Select extends PureComponent{
                           option: (styles, {isDisabled, isFocused, isSelected }) => {
                             return {
                               ...styles,
+                              margin: '2px 0',
                               fontSize: '14px',
                               fontWeight: '400',
                               borderRadius: '8px',
+                              cursor: isFocused && 'pointer',
                               backgroundColor: isDisabled
                                 ? undefined
                                 : isSelected

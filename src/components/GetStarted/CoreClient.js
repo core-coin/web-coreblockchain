@@ -5,6 +5,7 @@ import Select from '../Select'
 import AnimatedArrow from '../AnimatedArrow'
 import Shield from '../../images/getStarted/get-started-shield.png'
 import Link from '../../images/getStarted/get-started-link.svg'
+import { DownloadLinks } from '../../mockData'
 
 import './GetStarted.scss'
 
@@ -12,7 +13,6 @@ class CoreClient extends PureComponent {
 
   render() {
     const { t } = this.props
-    const list = Array.from(t('operating systems list', { returnObjects: true }))
 
 
     return (
@@ -24,7 +24,7 @@ class CoreClient extends PureComponent {
           <Select
             id='daemonSoftware'
             labelText={t('Choose your operating system') + ':'}
-            items={list}
+            items={DownloadLinks}
             greenBtnText={t('Download')}
             ghostBtnText={t('Source code')}
             sourceCodeLink={'https://github.com/core-coin/go-core'}

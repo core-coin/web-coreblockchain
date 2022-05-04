@@ -229,8 +229,8 @@
       "tabContent": "3Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain using Oracles to your running system. Interact with Blockchain Worldwide network.",
       "tabGreenBtn": "Visit",
       "tabGreenBtnLink": "https://cip.coreblockchain.cc/",
-      "tabGhostBtn": "report bug",
-      "tabGhostBtnLink": "https://dev.coreblockchain.cc/report/bug"
+      "tabGhostBtn": "Open an issue",
+      "tabGhostBtnLink": "https://github.com/core-coin/cip/issues/new/choose"
     }
   ],
   "menuItemList": [
@@ -351,5 +351,4 @@
       "checksum": "https://github.com/core-coin/go-core/releases/download/latest/gocore-linux-x86_64.checksum"
     }
   ]
-
 }
