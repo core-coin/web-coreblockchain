@@ -37,7 +37,7 @@ class LanguagePage extends PureComponent{
                                 >
                                         <div className='languagePage_block__text'>
                                             <p>{language.englishName}</p>
-                                            <span>{language.nativeName}</span>
+                                            <span>{t(language.nativeName)}</span>
                                         </div>
                                     </Link>
 
@@ -47,7 +47,7 @@ class LanguagePage extends PureComponent{
                         </Col>
                         <Col xs='12' sm='12' md='12' xl='10' className='languagePage_program'>
                             <h3>{t('Translation Program')}</h3>
-                            <p className='description'>{t('Core Blockchain translators are always translating pages in as many languages as possible. To see what they\'re working on right now or to sign up or to join them.')}</p>
+                            <p className='description'>{t('Core Blockchain translators are always translating pages into as many languages as possible. To see what they\'re working on right now join the team.')}</p>
                             <AnimatedArrow text={t('Translation Program')} url={`https://crowdin.com/project/coreblockchaincc`} targetBlack/>
                         </Col>
                     </Row>

@@ -33,7 +33,7 @@ const SideBarMenu = [
     link: "coreClient"
   },
   {
-    label: "Distribution clients",
+    label: "Distribution Clients",
     link: "distributionClients"
   },
   {
@@ -41,11 +41,11 @@ const SideBarMenu = [
     link: "coreMining"
   },
   {
-    label: "Block index",
+    label: "Block Index",
     link: "blockIndex"
   },
   {
-    label: "Open hardware",
+    label: "Open Hardware",
     link: "openHardware"
   }
 ]

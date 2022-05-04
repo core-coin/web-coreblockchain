@@ -19,7 +19,7 @@ class Mining extends PureComponent {
         <div className='downloadBlock'>
           <img src={Rings} alt='icon' className="icon-card" />
           <h3>{t('How to get started with Core Mining')}</h3>
-          <p>{t('Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins')}</p>
+          <p>{t('Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.')}</p>
           <div className="button-container">
             <Button
               mobileFullWidth
@@ -28,7 +28,7 @@ class Mining extends PureComponent {
               hover={false}
               href={'https://catchthatrabbit.com/'}
               type='router'
-              text={t('View mining pools')}
+              text={t('Mining pools')}
             />
           </div>
           <div className='downloadBlock_card'>

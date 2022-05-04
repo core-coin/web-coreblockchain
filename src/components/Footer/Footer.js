@@ -118,7 +118,7 @@ class Footer extends PureComponent{
                             <div className='footer_container'>
                                 <Col md="4">
                                     <p className="title">{t('Get in touch')}</p>
-                                    <a href='mailto:contact@corecoin.cc'>contact@corecoin.cc</a>
+                                    <a href='mailto:contact@corecoin.cc'>contact@coreblockchain.cc</a>
                                     <div className='footer_contact__icons'>
                                         <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
