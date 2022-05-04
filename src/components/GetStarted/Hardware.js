@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Trans, withNamespaces } from 'react-i18next'
+import { withNamespaces } from 'react-i18next'
 
 import Button from '../Button'
 import DesktopIcon from '../../images/getStarted/get-started-desktop.svg'
@@ -29,9 +29,7 @@ class Hardware extends PureComponent{
           <div className='downloadBlock'>
             <img src={DesktopIcon} alt='search_icon' className="icon-card" />
             <h3>
-                <Trans i18nKey='Open Hardware //IoT Devices//'>
-                    Open Hardware <span className="light-title">//IoT Devices//</span>
-                </Trans>
+                {t('Open Hardware //IoT Devices//')}
             </h3>
             <p>{t('Minimum requirements')}</p>
             <ul>{HardwareRequirements.map(this.renderContent)}</ul>
