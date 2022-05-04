@@ -63,12 +63,14 @@ class Distribution extends PureComponent{
               <img src={getCloudImage(element.id)} alt=""/>
               <p className="tab-content-item-title">{element.label}</p>
           </div>
-          <div className="tab-content-item-icons">
-              <a href={element.link} target="_blank" rel="noreferrer" className="tab-content-item-link">
-                  <img src={ArrowUpRight} alt="arrow up right" />
-              </a>
-              <CopyInput value={element.link}/>
-          </div>
+        <div className="tab-content-item-icons">
+          <a href={element.link} target="_blank" rel="noreferrer" className="tab-content-item-link">
+            <img src={ArrowUpRight} alt="arrow up right" />
+          </a>
+        {element.command !== "" && (
+          <CopyInput value={element.command}/>
+        )}
+        </div>
       </div>
     )
 
