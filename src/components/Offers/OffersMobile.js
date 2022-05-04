@@ -41,9 +41,9 @@ class Offers extends PureComponent{
                 <Container>
                     <Row>
                         <Col sm='12'>
-                            <h3 className='preTitle'>{t('highlights')}</h3>
+                            <h3 className='preTitle'>{t('Highlights')}</h3>
                             <h1 className='title'>
-                                        <Trans i18nKey='main benefits of core blockchain'>
+                                        <Trans i18nKey='Main Benefits of Core Blockchain'>
                                             main benefits of <em>core blockchain</em>
                                         </Trans>
                                     </h1>

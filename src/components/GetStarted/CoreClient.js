@@ -19,14 +19,14 @@ class CoreClient extends PureComponent {
       <>
         <div className='downloadBlock'>
           <img src={Link} alt="shield" className="icon-card"/>
-          <h3>{t('Download the Core client')}</h3>
+          <h3>{t('Download the Core Client')}</h3>
           <p>{t('Go-core is the the command line interface for running a full Core node implemented in Go.')}</p>
           <Select
             id='daemonSoftware'
             labelText={t('Choose your operating system') + ':'}
             items={DownloadLinks}
             greenBtnText={t('Download')}
-            ghostBtnText={t('Source code')}
+            ghostBtnText={t('Source Code')}
             sourceCodeLink={'https://github.com/core-coin/go-core'}
             placeholder={isMobile() ? t('Choose your operating system').slice(0, 16)+'...' : t('Choose your operating system')}
           />

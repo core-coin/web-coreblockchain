@@ -22,7 +22,7 @@ class CoreBlock extends PureComponent{
                           theme='ghost'
                           size='small'
                           href={'https://blockindex.net/'}
-                          text={t('browse transactions')}
+                          text={t('Browse Transactions')}
                         />
                     </div>
                 </div>

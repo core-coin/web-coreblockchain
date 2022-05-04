@@ -8,6 +8,7 @@ import ArrowDown from '../../images/arrow.svg'
 import Dots from '../../images/ListBullets.svg'
 
 import './Select.scss'
+import i18n from 'i18next'
 
 const DownloadIcon = <Download/>
 
@@ -188,8 +189,8 @@ export default class Select extends PureComponent{
                         this.state.showMenu
                           && (
                             <div className="menu">
-                              <a href={this.state.selectedItem.checksum}> Get public key </a>
-                              <a href="https://github.com/core-coin/go-core/releases"> Previous versions </a>
+                              <a href={this.state.selectedItem.checksum}> {i18n.t("Get public key")} </a>
+                              <a href="https://github.com/core-coin/go-core/releases">{i18n.t("Previous Versions")} </a>
                             </div>
                           )
                       }

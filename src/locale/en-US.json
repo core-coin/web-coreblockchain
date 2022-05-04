@@ -181,5 +181,22 @@
   "Core Talk": "Core Talk",
   "How to get involved": "How to get involved",
   "Core Network reach": "Core Network reach",
-  "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them.": "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them."
+  "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them.": "Core Blockchain translators are always translating pages in as many languages as possible. To see what they're working on right now or to sign up or to join them.",
+  "Download the Core Client": "Download the Core Client",
+  "Go-core is the the command line interface for running a full Core node implemented in Go.": "Go-core is the the command line interface for running a full Core node implemented in Go.",
+  "Get public key": "Get public key",
+  "Get verified Core Blockchain data": "Get verified Core Blockchain data",
+  "This download consist of all blocks that have been verified": "This download consist of all blocks that have been verified",
+  "Specific download for distribution deployment": "Specific download for distribution deployment",
+  "How to get started with Core Mining": "How to get started with Core Mining",
+  "Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins": "Contribute to the Core Network with computation power of your CPU and recieve rewards in Core Coins",
+  "View mining pools": "View mining pools",
+
+  "Safe storage for your digital assets": "Safe storage for your digital assets",
+  "Store your freshly mined assets securely.": "Store your freshly mined assets securely.",
+  "Desktop wallet": "Desktop wallet",
+  "Mobile wallet": "Mobile wallet",
+  "Browse Transactions": "Browse Transactions",
+  "Core block Index & analytics": "Core block Index & analytics",
+  "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more": "Our Core block index is a web tool that provides you with detailed information about Core blocks, addresses, transactions and more"
 }

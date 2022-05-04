@@ -10,8 +10,8 @@ class CoreSoftware extends PureComponent{
         return(
             <>
                 <h1 className='title'>
-                    <Trans i18nKey='Get core software'>
-                    Get <em>core software</em>
+                    <Trans i18nKey='Get Core Software'>
+                    Get <em>Core Software</em>
                     </Trans>
                 </h1>
             </>
