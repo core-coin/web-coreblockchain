@@ -13,8 +13,10 @@ import { LanguagesData } from '../../mockData'
 import './LanguagePage.scss'
 import i18next from 'i18next'
 
-class LanguagePage extends PureComponent{
 
+const LanguageSort = LanguagesData.sort((a, b) => a.englishName.localeCompare(b.englishName))
+
+class LanguagePage extends PureComponent{
     render(){
 
         const { t } = this.props
@@ -30,7 +32,7 @@ class LanguagePage extends PureComponent{
                         <Col xs='12' sm='12' md='12' xl='10'>
                             <h3>{t('Select Your Language')}:</h3>
                             <Row>
-                                {LanguagesData.map((language) => (
+                                {LanguageSort.map((language) => (
                                 <Col xs='12' sm='4' lg='4' key={language.code}>
                                     <Link className='languagePage_block'
                                     to={`/${language.code}/language`}
