@@ -14,6 +14,8 @@ import Offers from '../../components/Offers'
 import OffersMobile from '../../components/Offers/OffersMobile'
 import Contacts from '../../components/Contacts'
 import { TargetIndustries } from '../../mockData'
+import Slogan from '../../images/core-blockchain-slogan.jpg'
+import TwitterImage from '../../images/core-blockchain-twitter.jpg'
 
 import { isMobile, isSd, numberToString, toStringDateTime, siFormat, numberFormat, toXCBPrice, ago } from '../../utils'
 import axios from 'axios'
@@ -80,8 +82,19 @@ class PageContainer extends PureComponent {
             <>
               <MetaTags>
                 <title>
-                  {t('Core Coin is an open source, public Blockchain application platform featuring one of the most secure smart contract functionality.')}
+                  {t('Core Blockchain')}
                 </title>
+                <meta name="description" content="A New Sense of Integrity" />
+                <meta name="keywords" content="core,blockchain,xcb,xce,xab,new,sense,of,integrity,smart,contract,network,open-source,open,source,mainnet,devin" />
+                <meta name="wallet:xcb" content="cb57bbbb54cdf60fa666fd741be78f794d4608d67109" />
+                <meta property="og:title" content="Core Blockchain" />
+                <meta property="og:description" content="A New Sense of Integrity" />
+                <meta property="og:image" content={Slogan} />
+                <meta property="og:type" content="website" />
+                <meta property="twitter:title" content="Core Blockchain" />
+                <meta property="twitter:description" content="A New Sense of Integrity" />
+                <meta property="twitter:image" content={TwitterImage} />
+                <meta property="twitter:card" content="summary" />
               </MetaTags>
                 <HeroHeader language={language} id="overview"/>
                 {this.state.isMobile ? <OffersMobile /> : <Offers />}

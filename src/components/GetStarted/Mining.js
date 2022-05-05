@@ -27,7 +27,7 @@ class Mining extends PureComponent {
               size='small'
               hover={false}
               href={'https://catchthatrabbit.com/'}
-              type='router'
+              type='href'
               text={t('Mining pools')}
             />
           </div>
@@ -44,7 +44,7 @@ class Mining extends PureComponent {
                     <p className="tab-content-item-title safe-storage-title ">{t("Desktop wallet")}</p>
                   </div>
                   <div className="tab-content-item-icons safe-storage-icons">
-                    <a href="https://github.com/core-coin/wallet-generator" className="tab-content-item-link safe-storage-link">
+                    <a href="https://github.com/core-coin/wallet-generator" className="tab-content-item-link safe-storage-link" target='_blank' rel="noreferrer">
                       <img src={Arrow} alt="arrow right" className="arrow-right" />
                     </a>
                   </div>
@@ -54,7 +54,7 @@ class Mining extends PureComponent {
                     <p className="tab-content-item-title safe-storage-title">{t("Mobile wallet")}</p>
                   </div>
                   <div className="tab-content-item-icons safe-storage-icons">
-                    <a href="https://corepass.net/" className="tab-content-item-link safe-storage-link">
+                    <a href="https://corepass.net/" className="tab-content-item-link safe-storage-link" target='_blank' rel="noreferrer">
                       <img src={Arrow} alt="arrow right" className="arrow-right" />
                     </a>
                   </div>

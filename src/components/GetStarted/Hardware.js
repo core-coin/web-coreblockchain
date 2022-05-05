@@ -36,11 +36,11 @@ class Hardware extends PureComponent{
             <div className="button-container">
                 <Button
                   mobileFullWidth
-                  download
                   theme='ghost'
                   size='small'
+                  type={'href'}
                   href='https://www.thingiverse.com/groups/blockchain'
-                  text={t('Build Your Own & Connect to Blockchain Network')}
+                  text={t('Build Your Own')}
                 />
                 {/*<Button*/}
                 {/*  mobileFullWidth*/}

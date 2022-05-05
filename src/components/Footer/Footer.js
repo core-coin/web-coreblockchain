@@ -15,6 +15,12 @@ import Github from '../SvgIcon/icons/Github'
 import Discord from '../SvgIcon/icons/Discord'
 import Twitter from '../SvgIcon/icons/Twitter'
 import { isMobile } from '../../utils'
+// import Facebook from '../SvgIcon/icons/Facebook'
+// import Instagram from '../SvgIcon/icons/Instagram'
+// import Youtube from '../SvgIcon/icons/Youtube'
+// import Linkedin from '../SvgIcon/icons/Linkedin'
+// import Reddit from '../SvgIcon/icons/Reddit'
+
 
 import './Footer.scss'
 
@@ -100,7 +106,7 @@ class Footer extends PureComponent{
                                         <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
                                         <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github/></a>
-                                        <a href='https://discord.gg/Vpmjgds' target='_blank' rel="noreferrer"><Discord/></a>
+                                        <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord/></a>
                                         <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter/></a>
                                     </div>
                                 </Collapse>
@@ -118,12 +124,12 @@ class Footer extends PureComponent{
                             <div className='footer_container'>
                                 <Col md="4">
                                     <p className="title">{t('Get in touch')}</p>
-                                    <a href='mailto:contact@corecoin.cc'>contact@coreblockchain.cc</a>
+                                    <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
                                     <div className='footer_contact__icons'>
                                         <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
                                         <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github/></a>
-                                        <a href='https://discord.gg/Vpmjgds' target='_blank' rel="noreferrer"><Discord/></a>
+                                        <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord/></a>
                                         <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter/></a>
                                     </div>
                                 </Col>

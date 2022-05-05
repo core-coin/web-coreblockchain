@@ -52,12 +52,23 @@ const SideBarMenu = [
 
 const NodeDistributionData = [
   {
+    tabName: "Containers",
+    elements: [
+      {
+        label: "Docker",
+        command: "docker pull ghcr.io/core-coin/go-core:latest",
+        id: "docker",
+        link: "https://github.com/core-coin/go-core/pkgs/container/go-core"
+      }
+    ]
+  },
+  {
     tabName: "Deployment",
     elements: [
       {
         label: "Docker Compose",
         id: "dockerCompose",
-        command: "docker-compose -f docker-compose.yml up -d",
+        command: "",
         link: "https://github.com/core-coin/core-docker-compose"
       },
       {
@@ -78,17 +89,6 @@ const NodeDistributionData = [
     tabName: "Images",
     elements: []
   },
-  {
-    tabName: "Containers",
-    elements: [
-      {
-        label: "Docker",
-        command: "docker pull ghcr.io/core-coin/go-core:latest",
-        id: "docker",
-        link: "https://github.com/core-coin/go-core/pkgs/container/go-core"
-      }
-    ]
-  }
 ]
 
 export { DownloadLinks, HardwareRequirements, SideBarMenu, NodeDistributionData }

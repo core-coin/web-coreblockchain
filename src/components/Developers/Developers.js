@@ -50,12 +50,14 @@ class Developers extends PureComponent{
                             text={i18next.t(tab.tabGreenBtn)}
                             margin='35'
                             href={tab.tabGreenBtnLink}
+                            type={'href'}
                         />
                         <Button
                             theme='ghost'
                             size='normal'
                             text={i18next.t(tab.tabGhostBtn)}
                             href={tab.tabGhostBtnLink}
+                            type={'href'}
                         />
                     </div>
                 </Col>

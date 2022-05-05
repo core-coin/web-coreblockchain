@@ -41,10 +41,12 @@ class CoreClient extends PureComponent {
                 <AnimatedArrow
                   url='https://drive.google.com/drive/folders/1Yi_9Bb5BKF5GETPYA1jBfADyiH1BQ4dL?usp=sharing'
                   text={t('Google Drive')}
+                  targetBlack
                 />
                 <AnimatedArrow
                   url='https://disk.yandex.com/d/tKo7gyXuB3asHA'
                   text={t('Yandex')}
+                  targetBlack
                 />
               </div>
             </div>

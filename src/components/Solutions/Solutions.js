@@ -32,7 +32,7 @@ class Solutions extends PureComponent{
                             <div className='solutions_block'>
                                 <h4>{t('Core Foundation')}</h4>
                                 <p>{t('A decentralized structure within the whole ecosystem allows for voting through the CORE FOUNDATION. We welcome any new ideas for the Blockchain. The blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.')}</p>
-                                <AnimatedArrow text={t('Learn more')} url='https://coretalk.info/c/projects/5/'/>
+                                <AnimatedArrow text={t('Introduce Project')} url='https://coretalk.info/c/projects/5/' targetBlack />
                             </div>
                         </div>
                     </Row>

@@ -15,7 +15,7 @@ export default class Button extends PureComponent {
         href: string,
         download: bool,
         size: oneOf(['normal', 'small', 'extraSmall']),
-        type: oneOf(['router', 'button', 'a']),
+        type: oneOf(['router', 'button', 'a', 'href']),
         onClick: func,
         icon: node,
         hover: bool,
@@ -91,7 +91,7 @@ export default class Button extends PureComponent {
 
         if (href) {
             return (
-                <a className={className} href={href}>
+                <a className={className} href={href} target='_blank' rel="noreferrer">
                     {this.renderBody()}
                 </a>
             )

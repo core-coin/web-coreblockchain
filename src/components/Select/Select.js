@@ -189,8 +189,8 @@ export default class Select extends PureComponent{
                         this.state.showMenu
                           && (
                             <div className="menu">
-                              <a href={this.state.selectedItem.checksum}> {i18n.t("Get public key")} </a>
-                              <a href="https://github.com/core-coin/go-core/releases">{i18n.t("Previous Versions")} </a>
+                              <a href={this.state.selectedItem.checksum}> {i18n.t("Download Checksum")} </a>
+                              <a href="https://github.com/core-coin/go-core/releases" target='_blank' rel="noreferrer">{i18n.t("Previous Versions")} </a>
                             </div>
                           )
                       }
@@ -208,9 +208,9 @@ export default class Select extends PureComponent{
                     />
                     <Button
                         mobileFullWidth
-                        download
                         theme='ghost'
                         size='small'
+                        type={'href'}
                         href={sourceCodeLink}
                         text={ghostBtnText}
                     />

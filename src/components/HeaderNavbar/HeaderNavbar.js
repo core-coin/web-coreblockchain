@@ -110,7 +110,7 @@ class HeaderNavbar extends PureComponent {
   renderNavbar = (item, index) => (
 
       <li key={index} className='nav-item'>
-        <a className='nav-link' href={`${item.link}`} onClick={this.closeSidebar}>
+        <a className='nav-link' href={`${item.link}`} onClick={this.closeSidebar} target='_blank' rel="noreferrer">
           {i18next.t(item.label)}
         </a>
       </li>

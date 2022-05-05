@@ -59,7 +59,7 @@ class GetStarted extends PureComponent {
   render() {
 
     return (
-      <div className='getStarted'>
+      <div className='getStarted page'>
         <Container>
           <Row className='getStarted_row'>
             <Col

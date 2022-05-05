@@ -21,6 +21,7 @@ class CoreBlock extends PureComponent{
                           mobileFullWidth
                           theme='ghost'
                           size='small'
+                          type={'href'}
                           href={'https://blockindex.net/'}
                           text={t('Browse Transactions')}
                         />

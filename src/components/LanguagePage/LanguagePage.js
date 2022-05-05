@@ -21,7 +21,7 @@ class LanguagePage extends PureComponent{
 
         const { t, i18n } = this.props
         return(
-            <div className='languagePage'>
+            <div className='languagePage page'>
                 <Container>
                     <Row>
                         <Col xs='12' sm='12' lg='10'>

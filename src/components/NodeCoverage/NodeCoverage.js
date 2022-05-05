@@ -57,7 +57,7 @@ class NodeCoverage extends PureComponent{
                                         <h2>{t('ICAN address')}</h2>
                                         <p>{t('We introduce a standard for crypto addresses — ICAN — with HRP and checksum, similar to what we all are using for current financial transactions.')}</p>
                                        <div className='text-center power-by'>
-                                           <AnimatedArrow text={t('Generate ICAN address')} url='https://github.com/core-coin/wallet-generator'/>
+                                           <AnimatedArrow text={t('Generate ICAN address')} url='https://github.com/core-coin/wallet-generator' targetBlack/>
                                        </div>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@ class NodeCoverage extends PureComponent{
                                             </li>
                                         </ul>
                                         <div className='text-center power-by'>
-                                            <AnimatedArrow text={t('Core Denomination Units')} url='https://github.com/core-coin/core-denomination/blob/master/units.json'/>
+                                            <AnimatedArrow text={t('Core Denomination Units')} url='https://github.com/core-coin/core-denomination/blob/master/units.json' targetBlack />
                                         </div>
                                     </div>
                                 </div>
@@ -97,6 +97,7 @@ class NodeCoverage extends PureComponent{
                                   theme='green'
                                   size='normal'
                                   text={t('Transaction Explorer')}
+                                  type={'href'}
                                   href='https://blockindex.net/'
                                 />
                             </Col>

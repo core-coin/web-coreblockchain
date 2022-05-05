@@ -46,6 +46,7 @@ class HeroHeader extends PureComponent{
                                 theme='ghost'
                                 size='normal'
                                 text={t('Learn more')}
+                                type={'href'}
                                 href={'https://blog.coreblockchain.cc/'}
                             />
                         </Col>

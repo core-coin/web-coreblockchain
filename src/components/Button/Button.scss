@@ -15,10 +15,10 @@
   }
   &.hover {
     transition: all .2s ease-in-out;
-    &:hover {
-      text-decoration: none;
-      //transform: scale(1.03);
-    }
+  }
+  &:hover {
+    text-decoration: none;
+    //transform: scale(1.03);
   }
   &:active,
   &:focus {

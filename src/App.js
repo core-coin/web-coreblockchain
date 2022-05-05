@@ -38,6 +38,7 @@ export default class App extends PureComponent {
               <Route path='/:lang/language' component={WithLanguageHoc(LanguagePageContainer)} />
               {/*<Route path='/:lang/language-program' component={WithLanguageHoc(LanguageTranslatePageContainer)} />*/}
               <Route path='/:lang/get-started' component={WithLanguageHoc(GetStartedContainer)} />
+              <Route path='/:lang/download' component={WithLanguageHoc(GetStartedContainer)} />
               {/*<Route path='/:lang/developers' component={WithLanguageHoc(DevelopersContainer)} />*/}
               {/*<Route path='/:lang/community' component={WithLanguageHoc(CommunityContainer)} />*/}
               {/*<Route path='/:lang/learn' component={WithLanguageHoc(LearnContainer)} />*/}

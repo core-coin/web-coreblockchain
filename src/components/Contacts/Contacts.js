@@ -55,15 +55,16 @@ class Contacts extends PureComponent{
                             <div className='contacts_right__button'>
                                 <Button
                                     theme='green'
-                                    download
                                     size='normal'
                                     text={t('Download Miner')}
+                                    type={'href'}
                                     href='https://github.com/catchthatrabbit/coreminer'
                                 />
                                 <Button
                                     theme='ghost'
                                     size='normal'
                                     text={t('Build Hardware')}
+                                    type={'href'}
                                     href='https://www.thingiverse.com/groups/blockchain'
                                 />
                             </div>
