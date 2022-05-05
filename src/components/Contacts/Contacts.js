@@ -49,7 +49,7 @@ class Contacts extends PureComponent{
                                 </div>
                                 <div className='contacts_right__info-block'>
                                     <p>{t('Network Difficulty')}</p>
-                                    <span>{difficulty} TH/s</span>
+                                    <span>{difficulty}h/s</span>
                                 </div>
                             </div>
                             <div className='contacts_right__button'>

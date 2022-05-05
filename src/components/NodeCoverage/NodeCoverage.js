@@ -70,15 +70,15 @@ class NodeCoverage extends PureComponent{
                                                 <span>{blockchainHeight}</span>
                                             </li>
                                             <li>
-                                                {t('Network hashrate')}:
+                                                {t('Network Hashrate')}:
                                                 <span>{networkHashrate}h/s</span>
                                             </li>
                                             <li>
-                                                {t('Network difficulty')}:
+                                                {t('Network Difficulty')}:
                                                 <span>{networkDifficulty}h/s</span>
                                             </li>
                                             <li>
-                                                {t('Block time')}:
+                                                {t('Block Time')}:
                                                 <span>{blockTime} sec</span>
                                             </li>
                                             <li>
@@ -86,6 +86,9 @@ class NodeCoverage extends PureComponent{
                                                 <span>{blockReward} XCB</span>
                                             </li>
                                         </ul>
+                                        <div className='text-center power-by'>
+                                            <AnimatedArrow text={t('Core Denomination Units')} url='https://github.com/core-coin/core-denomination/blob/master/units.json'/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
