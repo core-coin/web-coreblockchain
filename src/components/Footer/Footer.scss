@@ -123,6 +123,21 @@
           padding-right: 0;
         }
       }
+      &-container {
+        border: 1px solid #303040;
+        height: 32px;
+        width: 32px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 5%;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 32px;
+          width: 32px;
+        }
+      }
     }
     &_section {
       display: flex;

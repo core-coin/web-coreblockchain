@@ -15,11 +15,11 @@ import Github from '../SvgIcon/icons/Github'
 import Discord from '../SvgIcon/icons/Discord'
 import Twitter from '../SvgIcon/icons/Twitter'
 import { isMobile } from '../../utils'
-// import Facebook from '../SvgIcon/icons/Facebook'
-// import Instagram from '../SvgIcon/icons/Instagram'
-// import Youtube from '../SvgIcon/icons/Youtube'
-// import Linkedin from '../SvgIcon/icons/Linkedin'
-// import Reddit from '../SvgIcon/icons/Reddit'
+import Facebook from '../SvgIcon/icons/Facebook'
+import Instagram from '../SvgIcon/icons/Instagram'
+import Youtube from '../SvgIcon/icons/Youtube'
+import Linkedin from '../SvgIcon/icons/Linkedin'
+import Reddit from '../SvgIcon/icons/Reddit'
 
 
 import './Footer.scss'
@@ -131,6 +131,13 @@ class Footer extends PureComponent{
                                         <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github/></a>
                                         <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord/></a>
                                         <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter/></a>
+                                    </div>
+                                    <div className='footer_contact__icons d-flex'>
+                                        <div className="footer_contact__icons-container"><a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><Facebook/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.instagram.com/corecoincc/' target='_blank' rel="noreferrer"><Instagram/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.linkedin.com/company/core-blockchain' target='_blank' rel="noreferrer"><Linkedin/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.reddit.com/r/CoreCoinCC/' target='_blank' rel="noreferrer"><Reddit/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.youtube.com/channel/UCQ_X4HgniaUPpxL7b6O4KJQ' target='_blank' rel="noreferrer"><Youtube/></a></div>
                                     </div>
                                 </Col>
                                 <Row>
