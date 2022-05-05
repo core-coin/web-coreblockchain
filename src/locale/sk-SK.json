@@ -130,7 +130,6 @@
   "Boid Distributions": "Boid distribúcie",
   "Brand Identity": "Identita projektu",
   "Build Hardware": "Vytvorte si hardvér",
-  "Build Your Own & Connect to Blockchain Network": "Vytvorte si vlastnú a pripojte sa k sieti Blockchain",
   "Copy Command": "Skopírovať príkaz",
   "Core Blockchain can serve as an Autonomous Pod Data Transport //APDT// and connect multiple devices with the reliable and secure Core Blockchain Network globally.": "Core Blockchain je schopný slúžiť pre Autonomous Pod Data Transport //APDT// a prepojiť viac zariadení so spoľahlivou a bezpečnou sieťou Core Blockchain po celom svete.",
   "Core Blockchain translators are always translating pages into as many languages as possible. To see what they're working on right now join the team.": "Core Blockchain prekladatelia sa snažia vždy prekladať stránky vo všetkých možných jazykoch. Ak si chcete pozrieť na čom pracujú, pripojte sa k nášmu tímu.",
@@ -193,5 +192,6 @@
   "Following the concept of using blockchain technology to secure assets and host multiple securities on the Core Blockchain platform.": "Riadime sa koncepciou využívania technológie Blockchainu na zabezpečenie aktív a držanie mnohých cenných papierov na platforme Core Blockchain.",
   "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect blockchain to your running system using Oracles. Interact with blockchain worldwide network.": "Preskúmajte rozhranie v rámci API, SDK alebo iných interaktívnych digitálnych nástrojov a ich rôznych zainteresovaných strán. Pripojte Blockchain k svojmu aktívnemu systému pomocou Oracles. Interagujte s celosvetovou sieťou Blockchain.",
   "Generate ICAN address": "Vygenerovať ICAN adresu",
-  "Core Denomination Units": "Jednotky Core hodnoty"
+  "Core Denomination Units": "Jednotky Core hodnoty",
+  "Build Your Own": "Vytvorte si vlastný IoT"
 }
