@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, string } from 'prop-types'
+import { string } from 'prop-types'
 import {
     Container,
     Row,
@@ -14,15 +14,13 @@ import './Contacts.scss'
 class Contacts extends PureComponent{
 
     static propTypes = {
-        blockTime: number,
         algorithm: string,
-        difficulty: number,
+        difficulty: string,
     }
 
     static defaultProps = {
-        blockTime: 200,
         algorithm: 'RandomY',
-        difficulty: 333,
+        difficulty: "333",
     }
 
     render(){

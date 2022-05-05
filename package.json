@@ -77,6 +77,11 @@
     "file-loader": "^6.2.0",
     "mark.js": "^8.11.1",
     "raw-loader": "^4.0.2",
-    "react-app-rewired": "^2.1.8"
+    "react-app-rewired": "^2.1.8",
+    "react-error-overlay": "^6.0.9"
+  },
+  "resolutions": {
+    "//": "See https://github.com/facebook/create-react-app/issues/11773",
+    "react-error-overlay": "6.0.9"
   }
 }

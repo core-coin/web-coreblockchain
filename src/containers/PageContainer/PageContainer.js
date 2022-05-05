@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, object, string } from 'prop-types'
+import { object, string } from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import MetaTags from 'react-meta-tags'
@@ -15,27 +15,25 @@ import OffersMobile from '../../components/Offers/OffersMobile'
 import Contacts from '../../components/Contacts'
 import { TargetIndustries } from '../../mockData'
 
-import { isMobile, isSd } from '../../utils'
-import { getStatistics } from '../../services'
+import { isMobile, isSd, numberToString, toStringDateTime, siFormat, numberFormat, toXCBPrice, ago } from '../../utils'
+import axios from 'axios'
 
 class PageContainer extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       isMobile: isMobile(),
-      isSd: isSd()
+      isSd: isSd(),
+      statistics: {
+        blockchainHeight: "",
+        networkHashrate: "",
+        networkDifficulty: "",
+        blockTime: "",
+        blockReward: "",
+      }
     }
   }
     static propTypes = {
-        blockTime: number,
-        networkHashrate: number,
-        difficulty: number,
-        nodesOnline: number,
-        totalTransactions: number,
-        totalBlocks: number,
-        blocktime: number,
-        marketCap: number,
-        price: number,
         translate: object,
         language: string,
     }
@@ -48,8 +46,22 @@ class PageContainer extends PureComponent {
     updateIsSd = () => {
     this.setState({isSd:isSd()});
   };
+
     componentDidMount() {
-      getStatistics()
+      axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats')
+        .then(res => {
+          const networkDifficultyData = res.data.nodes[0].difficulty
+          const  blockTimeData = res.data.nodes[0].blocktime
+
+          const statisticsData =  {
+              blockchainHeight: numberToString(numberFormat(parseInt(res.data.nodes[0].height))),
+              networkHashrate: numberToString(siFormat((networkDifficultyData / blockTimeData).toFixed(2), 2)),
+              networkDifficulty: siFormat(parseInt(res.data.nodes[0].difficulty), 2),
+              blockTime: numberToString(ago(toStringDateTime(res.data.stats.lastBlockFound))),
+              blockReward: numberToString(numberFormat(toXCBPrice(parseInt(res.data.blockReward)))),
+          }
+          this.setState({ statistics:  statisticsData })
+        })
       window.addEventListener('resize', this.updateIsMobile);
       window.addEventListener('resize', this.updateIsSd);
     }
@@ -60,14 +72,6 @@ class PageContainer extends PureComponent {
 
     render() {
         const {
-            totalTransactions,
-            totalBlocks,
-            blocktime,
-            marketCap,
-            price,
-            blockTimer,
-            networkHashrate,
-            difficulty,
             language,
             t,
         } = this.props
@@ -85,17 +89,15 @@ class PageContainer extends PureComponent {
                 <Solutions id="learn" />
                 <Developers  id="developers" />
                 <NodeCoverage
-                    totalTransactions={totalTransactions}
-                    totalBlocks={totalBlocks}
-                    blocktime={blocktime}
-                    marketCap={marketCap}
-                    price={price}
+                    blockchainHeight={this.state.statistics.blockchainHeight}
+                    networkHashrate={this.state.statistics.networkHashrate}
+                    networkDifficulty={this.state.statistics.networkDifficulty}
+                    blockTime={this.state.statistics.blockTime}
+                    blockReward={this.state.statistics.blockReward}
                     id="enterprise"
                 />
                 <Contacts
-                    blockTime={blockTimer}
-                    networkHashrate={networkHashrate}
-                    difficulty={difficulty}
+                    difficulty={this.state.statistics.networkDifficulty}
                     id="community"
                 />
             </>

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { number, string } from 'prop-types'
+import { string } from 'prop-types'
 import {
     Container,
     Row,
@@ -13,22 +13,19 @@ import AnimatedArrow from '../AnimatedArrow/AnimatedArrow'
 
 class NodeCoverage extends PureComponent{
     static propTypes = {
-        nodesOnline: number,
-        totalTransactions: number,
-        nodeStatistics: string,
-        totalBlocks: number,
-        blocktime: number,
-        marketCap: number,
-        price: number,
+        blockchainHeight: string,
+        networkHashrate: string,
+        networkDifficulty: string,
+        blockTime: string,
+        blockReward: string,
     }
 
     static defaultProps = {
-        nodesOnline: 100,
-        totalTransactions: 548.076,
-        totalBlocks: 8.266707,
-        blocktime: 5,
-        marketCap: 100000000,
-        price: 0.01,
+        blockchainHeight: "",
+        networkHashrate: "",
+        networkDifficulty: "",
+        blockTime: "",
+        blockReward: "",
     }
 
     renderDigit = (item, index) => (
@@ -38,7 +35,7 @@ class NodeCoverage extends PureComponent{
     )
 
     render(){
-        const { t, totalTransactions, totalBlocks, blocktime, marketCap, price } = this.props
+        const { t, blockchainHeight, networkHashrate, networkDifficulty, blockTime, blockReward } = this.props
 
         return(
             <div className='nodeCoverage'>
@@ -69,24 +66,24 @@ class NodeCoverage extends PureComponent{
                                         <h2>{t('Statistics')}</h2>
                                         <ul>
                                             <li>
-                                                {t('Total transactions')}:
-                                                <span>{totalTransactions}</span>
+                                                {t('Blockchain Height')}:
+                                                <span>{blockchainHeight}</span>
                                             </li>
                                             <li>
-                                                {t('Total blocks')}:
-                                                <span>{totalBlocks}</span>
+                                                {t('Network hashrate')}:
+                                                <span>{networkHashrate}h/s</span>
+                                            </li>
+                                            <li>
+                                                {t('Network difficulty')}:
+                                                <span>{networkDifficulty}h/s</span>
                                             </li>
                                             <li>
                                                 {t('Block time')}:
-                                                <span>{blocktime} sec.</span>
+                                                <span>{blockTime} sec</span>
                                             </li>
                                             <li>
-                                                {t('Market cap')}:
-                                                <span>€ {marketCap}</span>
-                                            </li>
-                                            <li>
-                                                {t('Price')}:
-                                                <span>€ {price}</span>
+                                                {t('Block Reward')}:
+                                                <span>{blockReward} XCB</span>
                                             </li>
                                         </ul>
                                     </div>
