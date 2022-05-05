@@ -19,8 +19,7 @@ const LanguageSort = LanguagesData.sort((a, b) => a.englishName.localeCompare(b.
 class LanguagePage extends PureComponent{
     render(){
 
-        const { t } = this.props
-
+        const { t, i18n } = this.props
         return(
             <div className='languagePage'>
                 <Container>
@@ -34,7 +33,7 @@ class LanguagePage extends PureComponent{
                             <Row>
                                 {LanguageSort.map((language) => (
                                 <Col xs='12' sm='4' lg='4' key={language.code}>
-                                    <Link className='languagePage_block'
+                                    <Link className={i18n.language === language.code ? 'languagePage_block languagePage_block-active' : 'languagePage_block'}
                                     to={`/${language.code}/language`}
                                 >
                                         <div className='languagePage_block__text'>
