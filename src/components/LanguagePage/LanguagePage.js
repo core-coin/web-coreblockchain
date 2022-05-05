@@ -37,7 +37,7 @@ class LanguagePage extends PureComponent{
                                 >
                                         <div className='languagePage_block__text'>
                                             <p>{language.englishName}</p>
-                                            <span>{t(language.nativeName)}</span>
+                                            <span>{language.nativeName}</span>
                                         </div>
                                     </Link>
 

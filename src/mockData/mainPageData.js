@@ -16,62 +16,62 @@ const MenuItemList = [
 const TargetIndustries = [
   {
     tabName: "Finance & Payments",
-    tabImage: '/trading.png',
+    tabImage: '/images/trading.jpg',
     tabContent: "A secure financial messaging service on the Core Blockchain network to send and receive encrypted messages as well as make payments without borders. Secure Smart Contracts — Ylem — empower Core Blockchain to transfer/digitize that of value on the powerful Core Blockchain network."
   },
   {
     tabName: "Healthcare & Wellness",
-    tabImage: '/trading.png',
+    tabImage: '/images/healthcare.jpg',
     tabContent: "Protection and automatization of medical data and active participation in research for medicine or treatment. Monitoring and tracking diseases with verified data."
   },
   {
     tabName: "Aerospace",
-    tabImage: '/trading.png',
+    tabImage: '/images/space.jpg',
     tabContent: "Aerospace operators can share data about aircraft history, maintenance, and operations with verified Blockchain messages."
   },
   {
     tabName: "Energy",
-    tabImage: '/trading.png',
+    tabImage: '/images/energy.jpg',
     tabContent: "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with structure LIFO //Last-In-First-Out//."
   },
   {
     tabName: "Supply Chain",
-    tabImage: '/trading.png',
+    tabImage: '/images/supply.jpg',
     tabContent: "Management and Resilience in Supply Chain to track, monitor, and alert using Blockchain-based verified information. Blockchain reduces the length of the chain to some extent by cutting down on the middlemen or 3rd party organizations"
   },
   {
     tabName: "eGovernment & DAO’s",
-    tabImage: '/trading.png',
+    tabImage: '/images/egov.jpg',
     tabContent: "Blockchain-based transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served Worldwide"
   },
   {
     tabName: "Mass Media",
-    tabImage: '/trading.png',
+    tabImage: '/images/massmedia.jpg',
     tabContent: "Enable Indie-producers //Low-budget// and microfinance for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments."
   },
   {
     tabName: "GIScience",
-    tabImage: '/trading.png',
+    tabImage: '/images/GIS.jpg',
     tabContent: "Core Blockchain is contributing to Geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries."
   },
   {
     tabName: "Defence & Security",
-    tabImage: '/trading.png',
+    tabImage: '/images/defense.jpg',
     tabContent: "Core Blockchain can serve for an Autonomous Pod Data Transport…"
   },
   {
     tabName: "Asset Tokenization",
-    tabImage: '/trading.png',
+    tabImage: '/images/tokenization.jpg',
     tabContent: "Following the concept of using Blockchain technology to secure assets and host multiple securities on the Core Blockchain platform."
   },
   {
     tabName: "Education",
-    tabImage: '/trading.png',
+    tabImage: '/images/education.jpg',
     tabContent: "Blockchain can actively contribute to education by involving the process of learning facilitation, or the acquisition of knowledge, skills, values, beliefs, and habits."
   },
   {
     tabName: "Telecommunications",
-    tabImage: '/trading.png',
+    tabImage: '/images/telecomunications.jpg',
     tabContent: "Blockchain messages and data distribution within different types of communication - including radio-frequency //RF//, mesh network //meshnet//, and laser transmission."
   }
 ]

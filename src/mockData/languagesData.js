@@ -2,12 +2,12 @@ const LanguagesData = [
   {
     "englishName": "English",
     "code": "en",
-    "nativeName": "English"
+    "nativeName": "US English"
   },
   {
     "englishName": "Slovak",
     "code": "sk",
-    "nativeName": "Slovak"
+    "nativeName": "Slovenčina"
   }
 ]
 
