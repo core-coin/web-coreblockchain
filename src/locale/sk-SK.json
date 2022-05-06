@@ -3,9 +3,7 @@
   "Coverage": "Pokrytie",
   "Decentralization": "Decentralizácia",
   "Interoperability": "Interoperabilita",
-  "Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.": "Prepájanie sveta pomocou pripojení Oracles a distribúcia finančných nástrojov prostredníctvom smart-kontraktov.",
   "Persistence": "Stálosť",
-  "Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.": "Nezmeniteľné záznamy Blockchainu sú uložené v P2P účtovných knihách zabezpečených proti neoprávnenej manipulácii.",
   "Security": "Bezpečnosť",
   "Swarm Intelligence": "Inteligencia roja",
   "Core Blockchain is using a self-organized system — Boids — to transact and route the data.": "Core Blockchain používa samoorganizovaný systém — Boidy — na organizáciu a smerovanie údajov.",
@@ -193,5 +191,7 @@
   "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect blockchain to your running system using Oracles. Interact with blockchain worldwide network.": "Preskúmajte rozhranie v rámci API, SDK alebo iných interaktívnych digitálnych nástrojov a ich rôznych zainteresovaných strán. Pripojte Blockchain k svojmu aktívnemu systému pomocou Oracles. Interagujte s celosvetovou sieťou Blockchain.",
   "Generate ICAN address": "Vygenerovať ICAN adresu",
   "Core Denomination Units": "Jednotky Core hodnoty",
-  "Build Your Own": "Vytvorte si vlastný IoT"
+  "Build Your Own": "Vytvorte si vlastný IoT",
+  "Connecting the world using Oracles and distributing financial instruments through Smart Contracts.": "Prepájanie sveta pomocou pripojení Oracles a distribúcia finančných nástrojov prostredníctvom smart-kontraktov.",
+  "Immutable blockchain transactions are stored in tamper-proof P2P ledgers.": "Nezmeniteľné záznamy Blockchainu sú uložené v P2P účtovných knihách zabezpečených proti neoprávnenej manipulácii."
 }
