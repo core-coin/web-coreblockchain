@@ -3,9 +3,7 @@
   "Coverage": "Coverage",
   "Decentralization": "Decentralization",
   "Interoperability": "Interoperability",
-  "Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.": "Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.",
   "Persistence": "Persistence",
-  "Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.": "Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.",
   "Security": "Security",
   "Swarm Intelligence": "Swarm Intelligence",
   "Core Blockchain is using a self-organized system — Boids — to transact and route the data.": "Core Blockchain is using a self-organized system — Boids — to transact and route the data.",
@@ -193,5 +191,7 @@
   "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect blockchain to your running system using Oracles. Interact with blockchain worldwide network.": "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect blockchain to your running system using Oracles. Interact with blockchain worldwide network.",
   "Generate ICAN address": "Generate ICAN address",
   "Core Denomination Units": "Core Denomination Units",
-  "Build Your Own": "Build Your Own"
+  "Build Your Own": "Build Your Own",
+  "Connecting the world using Oracles and distributing financial instruments through Smart Contracts.": "Connecting the world using Oracles and distributing financial instruments through Smart Contracts.",
+  "Immutable blockchain transactions are stored in tamper-proof P2P ledgers.": "Immutable blockchain transactions are stored in tamper-proof P2P ledgers."
 }
