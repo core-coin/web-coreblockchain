@@ -1,58 +1,29 @@
 import React, { PureComponent } from 'react'
-import { object, string } from 'prop-types'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import Loading from '../../components/Loading'
-import PageNotFound from '../../components/PageNotFound'
+import Content from '../../content/overview.mdx'
+import MetaTags from 'react-meta-tags'
+import '../../templates/md.scss'
 
-import BlogTemplate from '../../templates/blogTemplate'
+const components = {
+  em: props => <p {...props} />
+}
 
 class OverviewContainer extends PureComponent {
-    static propTypes = {
-        match: object,
-        mdFiles: object,
-        language: string,
-    }
 
-    static defaultProps = {}
-
-    render() {
-        const {
-            mdFiles,
-            match,
-            language,
-        } = this.props
-
-      if (!mdFiles) {
-        return(
-         <Loading/>
-        )
-      }
-
-      let file = mdFiles[match.url]
-
-      if (file === undefined ){
-        return (
-          <PageNotFound language={language}/>
-        )
-      }
-
-      return(
-        <BlogTemplate mdFile={file}/>
-      )
-    }
+  render() {
+    const { t } = this.props
+    return(
+      <>
+        <MetaTags>
+          <title>
+            {t('Overview')}
+          </title>
+        </MetaTags>
+        <div className="content-container">
+          <Content components={components} />
+        </div>
+      </>
+    )
+  }
 }
 
-function mapStateToProps(state) {
-    return{
-        mdFiles: state.index.markdownFiles,
-        language: state.index.language,
-    }
-}
-
-const mapDispatchToProps = dispatch => bindActionCreators({
-
-}, dispatch)
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(OverviewContainer)
+export default OverviewContainer

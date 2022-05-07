@@ -1,44 +1,50 @@
 .developers {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  background-image: url(../../images/developers-medium.webp);
-  background-position: center right;
+  //background-image: url(../../images/map-mobile.svg);
+  background-position: top;
   background-repeat: no-repeat;
-  background-size: 45%;
-  padding: 10.2% 0;
-  @media (max-width: 767px) {
+  padding: 72px 15px 52px;
+  @media (min-width: 768px) {
     border-top: none;
-    background-color: var(--black-darken);
-    background-image: url(../../images/developers-mobile.webp);
+    //background-color: var(--black);
+    background-image: none;
     background-position: 30% top;
     background-size: 613px 432px;
+    padding: 120px 0;
     .container {
-      background-color: var(--black-darken);
-      border-top: 1px solid var(--grey-darken);
-      margin-top: 200px;
+      //background-color: var(--black);
     }
   }
+  @media (min-width: 1025px) {
+    background-image: url(../../images/developers-medium.webp);
+    background-position: 150% center;
+    background-size: 897px;
+    padding: 246px 0 226px;
+  }
+  @media (min-width: 1367px) {
+    background-position: 110% center;
+  }
   .preTitle {
-    padding-left: 45px;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
     @media (max-width: 767px) {
-      margin-top: 24px;
+      margin-top: 0;
       margin-bottom: 10px;
     }
   }
   .title {
-    padding-left: 45px;
+    margin-bottom: 0;
   }
 
   .tabs_header {
     @media (max-width: 767px) {
-      border-bottom: 1px solid #434359;
+      border-bottom: 1px solid var(--grey-darken);
     }
     .nav-tabs {
       border-bottom: 1px solid rgba(99, 99, 120, 0.2);
-      margin-top: 64px;
+      margin-top: 56px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       @media (max-width: 767px) {
         overflow-x: scroll;
         overflow-y: hidden;
@@ -54,16 +60,16 @@
         color: var(--gray);
         font-family: var(--font-primary);
         font-size: 20px;
-        line-height: 24px;
+        line-height: 32px;
         font-weight: var(--font-primary-weight-bold);
         cursor: pointer;
         border: none;
-        padding: 0 20px 24px 20px;
-        text-transform: uppercase;
+        padding: 0  0 24px 0;
+        transition: color 0.1s linear;
         @media (max-width: 767px) {
           font-size: 16px;
           font-weight: 400;
-          line-height: 24px;
+          line-height: 40px;
           padding: 8px 16px;
         }
         &:hover{
@@ -80,11 +86,18 @@
         }
       }
     }
+    .nav-item {
+      padding: 0 16px 0 16px;
+    }
+    .nav-item:first-child {
+      padding: 0 16px 0 0;
+    }
+
   }
   .tab-content {
+    transition: all 0.3s ease-in-out;
     .tab-pane {
-      padding-left: 45px;
-      margin-top: 33px;
+      margin-top: 32px;
       @media (max-width: 767px) {
         margin-top: 24px;
         padding-left: 0;
@@ -92,14 +105,14 @@
       p {
         color: var(--grey);
         font-family: var(--font-secondary);
-        font-size: 22px;
+        font-size: 20px;
         font-weight: var(--font-secondary-weight-normal);
         line-height: 32px;
         margin-bottom: 69px;
         @media (max-width: 767px) {
-          font-size: 16px;
-          line-height: 22px;
-          margin-bottom: 24px;
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 23px;
 
         }
       }

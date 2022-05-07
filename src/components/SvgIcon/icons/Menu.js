@@ -13,8 +13,8 @@ const path = (
     /* eslint-enable */
 );
 const Menu = createIcon(path, {
-    width: 18,
-    height: 12,
+    width: 16,
+    height: 14,
     viewBox: '0 0 18 12'
 })
 

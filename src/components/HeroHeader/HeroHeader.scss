@@ -2,36 +2,54 @@
   background-color: var(--black);
   display: flex;
   align-items: center;
+  &_container {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
   &_bg {
     background: url(../../images/sphere-hero.webp) no-repeat 17% -23%;
     padding-top: 30vh;
-    @media (max-width: 767px) {
-      background-image: url(../../images/sphere-header.webp);
+    max-width: 1943px;
+    @media (max-width: 991px) {
+      background-image: url(../../images/sphere_hero_sm.png);
       background-position: 0 -78px;
-      background-size: 126%;
-      padding-top: 10vh;
+      background-size: 100%;
+      padding-top: 350px;
+    }
+    @media (max-width: 767px) {
+      background-position: 0 -28px;
+      padding-top: 180px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
   .title {
-    font-size: 2.5em;
-    line-height: 1.1em;
+    font-size: 72px;
+    line-height: 80px;
+    letter-spacing: -0.03em;
     font-weight: var(--font-primary-weight-bold);
     text-align: center;
     font-family: var(--font-primary);
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    text-transform: none;
     @media (max-width: 767px) {
-      font-size: 1.3em;
+      font-size: 24px;
+      line-height: 32px;
       text-align: left;
     }
   }
   .description {
-    line-height: 34px;
-    font-size: 26px;
+    line-height: 32px;
+    font-size: 24px;
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 72px;
     @media (max-width: 767px) {
       text-align: left;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 24px;
     }
   }
   .mouseIcon {

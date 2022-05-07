@@ -6,13 +6,17 @@ import {
     Col
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
-
 import AnimatedArrow from '../AnimatedArrow'
 
 import '../LanguagePage/LanguagePage.scss'
 
 class LanguageTranslatePage extends PureComponent{
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            tasks: []
+        }
+    }
     static propTypes = {
         translationProgress: number,
         reviewProgress: number,
@@ -22,6 +26,7 @@ class LanguageTranslatePage extends PureComponent{
         translationProgress: 80,
         reviewProgress: 10,
     }
+
 
     renderLanguageInProgress = (language) => (
         <Col xs='12' sm='4' lg='3' key={language.englishName}>
@@ -38,7 +43,7 @@ class LanguageTranslatePage extends PureComponent{
 
     render(){
         const { t } = this.props
-        const list = Array.from(t('languagesInProgress', { returnObjects: true }))
+        // const list = Array.from(i18next.t('languagesInProgress', { returnObjects: true }))
 
         return(
             <div className='languagePage'>
@@ -65,21 +70,21 @@ class LanguageTranslatePage extends PureComponent{
                                </li>
                            </ol>
                         </Col>
-                        <Col xs='12'sm='12' md='12' className='languagePage_inProgress'>
+                        <Col xs='12' sm='12' md='12' className='languagePage_inProgress'>
                             <h3>{t('The following language translations are in progress')}:</h3>
                             <Row>
-                                {list.map((language) => (
-                                    <Col xs='12' sm='4' lg='3' key={language.englishName}>
-                                        <button className='languagePage_block big'>
-                                            <div className='languagePage_block__text'>
-                                                <p>{language.englishName}</p>
-                                                {/*<span>{language.translationProgress}: {this.props.translationProgress}%</span>}
-                                                {/*<span>{language.reviewProgress}: {this.props.reviewProgress}%</span>*/}
-                                                <AnimatedArrow url='https://lang.lol/app/projects/d2eda44e-3714-441a-91f7-fbbf132ed757' text={t('Contribute')} />
-                                            </div>
-                                        </button>
-                                    </Col>
-                                ))}
+                                {/*{list.map((language) => (*/}
+                                {/*    <Col xs='12' sm='4' lg='3' key={language.englishName}>*/}
+                                {/*        <button className='languagePage_block big'>*/}
+                                {/*            <div className='languagePage_block__text'>*/}
+                                {/*                <p>{language.englishName}</p>*/}
+                                {/*                /!*<span>{language.translationProgress}: {this.props.translationProgress}%</span>}*/}
+                                {/*                /!*<span>{language.reviewProgress}: {this.props.reviewProgress}%</span>*!/*/}
+                                {/*                <AnimatedArrow url='https://lang.lol/app/projects/d2eda44e-3714-441a-91f7-fbbf132ed757' text={t('Contribute')} />*/}
+                                {/*            </div>*/}
+                                {/*        </button>*/}
+                                {/*    </Col>*/}
+                                {/*))}*/}
                             </Row>
                         </Col>
                     </Row>

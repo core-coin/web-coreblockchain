@@ -22,8 +22,8 @@ const path = (
     /* eslint-enable */
 );
 const Luna = createIcon(path, {
-    width: 225,
-    height: 60,
+    width: 100,
+    height: 35,
     viewBox: '0 0 225 60'
 })
 

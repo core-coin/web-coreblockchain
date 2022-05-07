@@ -3,12 +3,14 @@
   align-items: center;
   color: var(--green);
   font-family: var(--font-primary);
-  font-size: 14px;
   font-weight: var(--font-primary-weight-bold);
-  line-height: 24px;
   cursor: pointer;
   transition: all 0.2s;
   text-transform: uppercase;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 32px;
+  letter-spacing: 0.1em;
   &.center {
     justify-content: center;
   }

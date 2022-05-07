@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import {
     Container,
     Row,
-    Col
 } from 'reactstrap'
 import { withNamespaces, Trans } from 'react-i18next'
 
@@ -18,21 +17,24 @@ class Solutions extends PureComponent{
             <div className='solutions'>
                 <Container>
                     <Row>
-                        <Col lg='6'><div className='solutions_background'></div></Col>
-                        <Col sm='12' lg={{ size: 6 }}>
+                        <div className='solutions_col_left'><div className='solutions_background'/></div>
+                        <div className='solutions_col_right'>
                             <h3 className='preTitle'>{t('Ecosystem')}</h3>
                             <h1 className='title'>
                             <Trans i18nKey='Core Blockchain Social Impact'>
-                               Core Blockchain <em>Social Impact</em>
+                                SOCIAL IMPACT PROVIDED
+                                BY  <em>CORE BLOCKCHAIN</em>
                             </Trans>
                             </h1>
-                            <p className='description'>{t('Our mission is building a Global Decentralized Network //GDN// to cover all areas on the planet using multiple communication technologies along with Core Blockchain platform. We are creating an Inclusion program suited for all people.')}</p>
+                            <p className='description'>
+                                {t('Our mission is to build a Global Decentralized Network //GDN// to cover all areas of the planet using multiple communication technologies along with the Core Blockchain platform. We are creating an inclusion program suited for all people.')}
+                            </p>
                             <div className='solutions_block'>
                                 <h4>{t('Core Foundation')}</h4>
-                                <p>{t('A decentralized structure within the whole ecosystem allowing voting through the CORE FOUNDATION. We are inviting any new ideas for the Blockchain. Blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.')}</p>
-                                <AnimatedArrow text={t('Learn more')} url=''/>
+                                <p>{t('A decentralized structure within the whole ecosystem allows for voting through the Core Foundation. We welcome any new ideas for the blockchain. The blockchain has a program to award projects — Core Community Fund //CCF// — deemed to be beneficial for the network.')}</p>
+                                <AnimatedArrow text={t('Introduce Project')} url='https://coretalk.info/c/projects/5/' targetBlack />
                             </div>
-                        </Col>
+                        </div>
                     </Row>
                 </Container>
             </div>

@@ -13,6 +13,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
 }
+.page {
+  min-height: calc(100vh - 454px);
+}
 
 .title {
   color: var(--white);

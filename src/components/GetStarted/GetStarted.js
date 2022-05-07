@@ -1,26 +1,40 @@
 import React, { PureComponent } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
+import Scrollspy from 'react-scrollspy'
 
 import CoreSoftware from './CoreSoftware'
-import CoreNetwork from './CoreNetwork'
-import CoreMiners from './CoreMiners'
+import Hardware from './Hardware'
+import CoreBlock from './CoreBlock'
 import CoreClient from './CoreClient'
 import Distribution from './Distribution'
-import Devices from './Devices'
-import DistributionSlider from './DistributionSlider'
+import Mining from './Mining'
+import { SideBarMenu } from '../../mockData'
 
 import './GetStarted.scss'
+import { isSmd } from '../../utils'
+import i18next from 'i18next'
 
 class GetStarted extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      activeLink: 'get_started',
+      activeLink: 'coreClient',
       headersList: [],
       linksList: [],
       textToCopy: '',
+      isSmd: isSmd()
     }
+  }
+  updateIsSmd = () => {
+    this.setState({isSmd: isSmd()});
+  };
+  componentDidMount() {
+    window.addEventListener('resize', this.updateIsSmd);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateIsSmd);
   }
 
   toggle = (link) => {
@@ -37,107 +51,69 @@ class GetStarted extends PureComponent {
         this.toggle(links.link)
       }}
     >
-      <a href={'#' + links.link}>{links.label}</a>
+      <a href={'#' + links.link}>{i18next.t(links.label)}</a>
     </li>
   )
 
-  collectHeightMap = () => {
-    let headers = document.querySelectorAll('.hiddenBlock')
-    let headersMap = []
-    for (let header of headers) {
-      let headerHeight = header.offsetTop + 365
-      let headerId = header.id
-      headersMap.push([headerHeight, headerId])
-    }
-    this.setState.headersList = headersMap.reverse()
-  }
-
-  updateActiveLink = (offset) => {
-    for (let headerInfo of this.state.headersList) {
-      if (headerInfo[0] <= offset) {
-        let headerId = headerInfo[1]
-        this.setState({
-          activeLink: headerId,
-        })
-        return
-      }
-    }
-  }
-
-  componentDidMount() {
-    this.collectHeightMap()
-    window.addEventListener('scroll', () => {
-      this.updateActiveLink(window.scrollY)
-    })
-    this.updateActiveLink(window.scrollY)
-  }
-
-  componentDidUpdate() {
-    this.collectHeightMap()
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', () => {})
-  }
 
   render() {
-    const { t } = this.props
-
-    const list = Array.from(t('Get started menuLinks', { returnObjects: true }))
-
-    const isMobile = window.innerWidth <= 767
 
     return (
-      <div className='getStarted'>
+      <div className='getStarted page'>
         <Container>
           <Row className='getStarted_row'>
-            <Col md='3' className='hidden-xs getStarted_menu'>
-              <div>
-                <ul>{list.map(this.renderLinks)}</ul>
-              </div>
-            </Col>
             <Col
-              md={{ size: 9 }}
-              xl={{ size: 9}}
+              md={{ size: 11 }}
+              xl={{ size: 8}}
               className='getStarted_content'
             >
               <Row>
-                <Col>
+                <Col className='getStarted_col'>
                   <div className='getStarted_content__block'>
-                    <span id='get_started' className='hiddenBlock'></span>
+                    <span id='get_started' className='hiddenBlock'/>
                     <CoreSoftware />
-                    {isMobile && <DistributionSlider />}
                   </div>
-                  {!isMobile && (
-                    <div className='getStarted_content__block'>
-                      <span id='for_developers' className='hiddenBlock'></span>
-                      <CoreClient />
-                    </div>
-                  )}
-                  {!isMobile && (
-                    <div className='getStarted_content__block'>
-                      <span
-                        id='node_distributions'
-                        className='hiddenBlock'
-                      ></span>
-                      <Distribution />
-                    </div>
-                  )}
-                  <div className='getStarted_content__block'>
-                    <span id='devices' className='hiddenBlock'></span>
-                    <Devices />
+                  <div className='getStarted_content__block' id="coreClient">
+                    <span id='for_developers' className='hiddenBlock'/>
+                    <CoreClient />
                   </div>
-                  <div className='getStarted_content__block'>
-                    <span id='core_mining' className='hiddenBlock'></span>
-                    <CoreMiners />
+                  <div className='getStarted_content__block' id="distributionClients">
+                    <span
+                      id='node_distributions'
+                      className='hiddenBlock'
+                    />
+                    <Distribution />
                   </div>
-                  <div className='getStarted_content__block'>
-                    <span id='core_network' className='hiddenBlock'></span>
-                    <CoreNetwork />
+                  <div className='getStarted_content__block' id="coreMining">
+                    <span id='devices' className='hiddenBlock'/>
+                    <Mining />
                   </div>
+                  <div className='getStarted_content__block' id="blockIndex">
+                    <span id='core_mining' className='hiddenBlock'/>
+                    <CoreBlock />
+                  </div>
+                  <div className='getStarted_content__block' id="openHardware">
+                    <span id='core_network' className='hiddenBlock'/>
+                    <Hardware />
+                  </div>
+                  {/*<div className='getStarted_content__block' id="corePass">*/}
+                  {/*  <span id='core_network' className='hiddenBlock'/>*/}
+                  {/*  <CorePass />*/}
+                  {/*</div>*/}
                 </Col>
               </Row>
             </Col>
+            {!this.state.isSmd && (
+              <Col md='3' className='hidden-xs getStarted_menu'>
+                <div>
+                  <Scrollspy
+                    items={ ['coreClient', 'distributionClients', 'coreMining', 'blockIndex', 'openHardware', 'corePass'] }
+                    currentClassName="active"
+                  >{SideBarMenu.map(this.renderLinks)}</Scrollspy>
+                </div>
+              </Col>
+            )
+            }
           </Row>
         </Container>
       </div>

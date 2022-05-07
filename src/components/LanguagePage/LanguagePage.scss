@@ -49,6 +49,9 @@
     position: relative;
     cursor: pointer;
     transition: .8s;
+    &-active {
+      border: 1px solid var(--green);
+    }
     @media (max-width: 768px) {
       width: 100%;
     }

@@ -14,14 +14,16 @@
   transition: transform 0.4s;
   .navbar-brand {
     img {
-      width: 367px;
+      width: 263px;
+      height: 40px;
     }
   }
   @media (max-width: 768px) {
     height: 68px;
     .navbar-brand {
       img {
-        width: 141px;
+        width: 215px;
+        height: 32px;
       }
     }
     .navbar-expand-md {
@@ -37,12 +39,22 @@
   }
   .navbar {
     justify-content: space-between;
+
     width: 100%;
-    padding: 0 5px;
+    max-width: 1943px;
+    padding: 0 40px 0 25px;
     ul {
       li{
         color: var(--white);
       }
+    }
+    @media (max-width: 768px) {
+      padding: 0 5px 0 5px;
+    }
+    &_col {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
   }
   .nav-item {
@@ -65,7 +77,7 @@
   &_left {
     display: flex;
     position: relative;
-    padding-left: 20px;
+    padding-left: 64px;
     .theme_green {
       margin-left: 10px;
       text-transform: capitalize;
@@ -93,12 +105,13 @@
       height: 69px;
       padding: 13px 23px 13px 11px;
     }
-    &__search {
+    &__button {
       display: flex;
-      width: 100%;
+      //width: 100%;
       justify-content: space-between;
-      button {
-        margin-right: 0;
+      margin-bottom: 20px;
+      a {
+        margin-right: 0 !important;
       }
       @media (max-width: 768px) {
         flex-wrap: wrap;
@@ -111,7 +124,7 @@
     &.open {
       overflow-x: visible;
       width: 100%;
-      height: 100vh;
+      height: 100%;
     }
     .container {
       flex-direction: column;
@@ -125,5 +138,18 @@
         line-height: 60px;
       }
     }
+  }
+}
+.hamburger-button {
+  padding: 13px 12px;
+  border: 1px solid var(--grey-darken);
+  border-radius: 8px;
+  display: flex;
+}
+
+.navbar-expand-md .navbar-nav {
+  flex-direction: column;
+  @media (min-width: 1025px) {
+    flex-direction: row;
   }
 }

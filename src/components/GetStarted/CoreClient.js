@@ -1,61 +1,55 @@
 import React, { PureComponent } from 'react'
 import { withNamespaces } from 'react-i18next'
-
+import { isMobile } from '../../utils'
 import Select from '../Select'
-import CopyInput from '../CopyInput'
 import AnimatedArrow from '../AnimatedArrow'
-import Button from '../Button'
-import Key from '../SvgIcon/icons/Key'
+import Shield from '../../images/getStarted/get-started-shield.png'
+import Link from '../../images/getStarted/get-started-link.svg'
+import { DownloadLinks } from '../../mockData'
 
 import './GetStarted.scss'
-
-const KeyIcon = <Key />
 
 class CoreClient extends PureComponent {
 
   render() {
     const { t } = this.props
-    const list = Array.from(t('CoreDaemonSoftware osList', { returnObjects: true }))
 
 
     return (
       <>
         <div className='downloadBlock'>
-          <h3>{t('Core Client Boid')}</h3>
-          <p>{t('Go-core is the the command line interface for running a full Core node implemented in Go.')}</p>
+          <img src={Link} alt="shield" className="icon-card"/>
+          <h3>{t('Download the Core Client')}</h3>
+          <p>{t('Go-core is the command-line interface for running a full Core node //Boid// implemented in Go.')}</p>
           <Select
-            type='buttons'
-            download
             id='daemonSoftware'
-            labelText={t('Choose your operating system') + ':'} 
-            items={list}
+            labelText={t('Choose your operating system') + ':'}
+            items={DownloadLinks}
             greenBtnText={t('Download')}
-            ghostBtnText={t('IPFS')}
-            addBtnText={t('Onion')}
+            ghostBtnText={t('Source Code')}
+            sourceCodeLink={'https://github.com/core-coin/go-core'}
+            placeholder={isMobile() ? t('Choose your operating system').slice(0, 16)+'...' : t('Choose your operating system')}
           />
-          <div className='version-links'>
-            <AnimatedArrow
-              url=''
-              text={t('Previous versions')}
-            />
-            <AnimatedArrow
-              url=''
-              text={t('Source code')}
-            />
-          </div>
-          <hr />
-          <h4>{t('Public key')}</h4>
-          <p>{t('As a reminder, all release binaries are signed. You can manually verify the signatures with the command')}:</p>
-          <CopyInput value='openssl dgst -sha256 -verify core.pem -signature core.sig core' />
-          <div className='downloadBlock_key'>
-            <Button
-              theme='ghost'
-              mobileFullWidth
-              size='small'
-              href={'#'}
-              text={t('Public Key')}
-              icon={KeyIcon}
-            />
+          <div className='downloadBlock_card'>
+            <div>
+              <img src={Shield} alt="shield"/>
+            </div>
+            <div className="downloadBlock_card_card-content">
+              <h4>{t('Get Verified Core Blockchain Data')}</h4>
+              <p>{t('This download consists of all blocks that have been verified.')}</p>
+              <div className='version-links'>
+                <AnimatedArrow
+                  url='https://drive.google.com/drive/folders/1VzaVD2rqnzyv3ypbQQXCeRjevUgXfcl8?usp=sharing'
+                  text={t('Google Drive')}
+                  targetBlack
+                />
+                <AnimatedArrow
+                  url='https://disk.yandex.com/d/tKo7gyXuB3asHA'
+                  text={t('Yandex')}
+                  targetBlack
+                />
+              </div>
+            </div>
           </div>
         </div>
       </>

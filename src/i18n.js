@@ -19,8 +19,18 @@ i18n
     resources,
     lng: "en",
 
-    keySeparator: false, 
-
+    keySeparator: false,
+    whitelist: ['en', 'sk'],
+    fallbackLng: ['en'],
+    detection: {
+      order: ['path'],
+      lookupFromPathIndex: 0,
+      checkWhitelist: true
+    },
+    interpolation: {
+      escapeValue: false,
+      formatSeparator: '.'
+    }
     // interpolation: {
     //   escapeValue: false 
     // }

@@ -15,12 +15,13 @@ export default class Button extends PureComponent {
         href: string,
         download: bool,
         size: oneOf(['normal', 'small', 'extraSmall']),
-        type: oneOf(['router', 'button', 'a']),
+        type: oneOf(['router', 'button', 'a', 'href']),
         onClick: func,
         icon: node,
         hover: bool,
         margin: oneOf(['15', '35']),
         mobileFullWidth: bool,
+        disabled: bool,
     }
 
     static defaultProps = {
@@ -35,10 +36,11 @@ export default class Button extends PureComponent {
         download: false,
         margin: '15',
         mobileFullWidth: false,
+        disabled: false
     }
 
     renderBody() {
-        const { icon, text } = this.props;
+        const { icon, text} = this.props;
 
         return (
             <span className={cx('body')}>
@@ -58,7 +60,8 @@ export default class Button extends PureComponent {
             onClick,
             hover,
             margin,
-            mobileFullWidth
+            mobileFullWidth,
+            disabled
         } = this.props
 
         const className = cx('button', {
@@ -67,11 +70,12 @@ export default class Button extends PureComponent {
             [`margin_${margin}`]: margin,
             hover,
             mobileFullWidth,
+            disabled,
         })
 
         if (type === 'router') {
             return (
-                <Link to={href} className={className} onClick={onClick}>
+                <Link to={href} className={className} onClick={onClick}  style={{ textDecoration: 'none' }}>
                     {this.renderBody()}
                 </Link>
             )
@@ -87,7 +91,7 @@ export default class Button extends PureComponent {
 
         if (href) {
             return (
-                <a className={className} href={href}>
+                <a className={className} href={href} target='_blank' rel="noreferrer">
                     {this.renderBody()}
                 </a>
             )

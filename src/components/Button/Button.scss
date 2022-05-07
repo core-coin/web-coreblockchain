@@ -5,8 +5,9 @@
   border: 1px solid transparent;
   text-align: center;
   margin-right: 15px;
-  padding: 0 20px;
+  padding: 0 24px;
   text-transform: uppercase;
+  text-decoration: none;
   @media (max-width: 767px) {
     &.mobileFullWidth {
       width: 100%;
@@ -14,16 +15,19 @@
   }
   &.hover {
     transition: all .2s ease-in-out;
-    &:hover {
-      text-decoration: none;
-      transform: scale(1.03);
-    }
+  }
+  &:hover {
+    text-decoration: none;
+    //transform: scale(1.03);
   }
   &:active,
   &:focus {
     outline: none;
   }
   &.margin {
+    &_0 {
+      margin-right: 0;
+    }
     &_10 {
       margin-right: 10px;
     }
@@ -38,8 +42,8 @@
     &_normal {
       height: 65px;
       min-width: 230px;
-      border-radius: 14px;
-      font-size: .7em;
+      border-radius: 8px;
+      font-size: 14px;
       color: #ffffff;
       font-family: var(--font-primary);
       font-weight: var(--font-primary-weight-bold);
@@ -53,28 +57,42 @@
     }
     &_small {
       min-width: 110px;
-      height: 43px;
+      height: 40px;
       border-radius: 8px;
-      font-size: .7em;
+      font-size: 12px;
       color: #ffffff;
-      font-family: var(--font-secondary);
-      font-weight: var(--font-secondary-weight-normal);
+      line-height: 32px;
+      letter-spacing: 0.1em;
+      font-family: var(--font-primary);
+      font-weight: var(--font-primary-weight-bold);
     }
     &_extraSmall {
-      min-width: 43px;
-      height: 43px;
-      border-radius: 10px;
-      font-size: .7em;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 14px;
       color: #ffffff;
-      font-family: var(--font-secondary);
+      font-family: var(--font-primary);
       font-weight: var(--font-secondary-weight-normal);
       line-height: 24px;
+      padding: 11px;
+      .body{
+        height: 16px;
+        width: 16px;
+        .body_icon {
+          height: 16px;
+          width: 16px;
+          margin-right: 0;
+          svg {
+            margin-top: -10px;
+          }
+        }
+      }
     }
   }
   &.theme {
     &_green {
       background-color: var(--green);
-      box-shadow: 3px 3px 20px rgba(0, 133, 44, 0.47);
     }
     &_ghost {
       border: 1px solid var(--gray-darken);
@@ -88,14 +106,20 @@
     margin-right: 0;
   }
   .body{
-    height: calc(100% - 2px);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     .body_icon {
+      margin-right: 8px;
       & + .body_text {
         padding-left: 15px;
       }
     }
   }
+}
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
 }
