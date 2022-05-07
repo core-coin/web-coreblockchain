@@ -20,9 +20,9 @@ const path = (
     /* eslint-enable */
 );
 const Cryptohub = createIcon(path, {
-    width: 19,
-    height: 30,
-    viewBox: '0 0 19 30'
+  width: 32,
+  height: 32,
+  viewBox: '0 0 32 32'
 })
 
 export default Cryptohub

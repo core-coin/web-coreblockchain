@@ -2,7 +2,7 @@ const DownloadLinks = [
   {
     "label": "Linux",
     "value": "linux",
-    "linkToDownLoad": "https://github.com/core-coin/go-core/releases/latest/download/gocore-darwin-x86_64",
+    "linkToDownLoad": "https://github.com/core-coin/go-core/releases/latest/download/gocore-linux-x86_64",
     "checksum": "https://github.com/core-coin/go-core/releases/latest/download/gocore-linux-x86_64.checksum"
   },
   {

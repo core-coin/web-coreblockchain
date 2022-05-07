@@ -11,9 +11,9 @@ const path = (
     /* eslint-enable */
 );
 const Cube = createIcon(path, {
-    width: 31,
-    height: 24,
-    viewBox: '0 0 31 24'
+    width: 32,
+    height: 32,
+    viewBox: '0 0 32 32'
 })
 
 export default Cube

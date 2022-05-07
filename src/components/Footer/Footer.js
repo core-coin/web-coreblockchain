@@ -15,11 +15,11 @@ import Github from '../SvgIcon/icons/Github'
 import Discord from '../SvgIcon/icons/Discord'
 import Twitter from '../SvgIcon/icons/Twitter'
 import { isMobile } from '../../utils'
-import Facebook from '../SvgIcon/icons/Facebook'
-import Instagram from '../SvgIcon/icons/Instagram'
-import Youtube from '../SvgIcon/icons/Youtube'
-import Linkedin from '../SvgIcon/icons/Linkedin'
-import Reddit from '../SvgIcon/icons/Reddit'
+import Facebook from '../../images/facebook.svg'
+import Youtube from '../../images/youtube.svg'
+import Linkedin from '../../images/linkedin.svg'
+import Reddit from '../../images/reddit.svg'
+import Instagram from '../../images/instagram.svg'
 
 
 import './Footer.scss'
@@ -110,11 +110,11 @@ class Footer extends PureComponent{
                                         <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter/></a>
                                     </div>
                                     <div className='icons d-flex'>
-                                        <div className="footer_contact__icons-container"><a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><Facebook/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.instagram.com/corecoincc/' target='_blank' rel="noreferrer"><Instagram/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.linkedin.com/company/core-blockchain' target='_blank' rel="noreferrer"><Linkedin/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.reddit.com/r/CoreCoinCC/' target='_blank' rel="noreferrer"><Reddit/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.youtube.com/channel/UCQ_X4HgniaUPpxL7b6O4KJQ' target='_blank' rel="noreferrer"><Youtube/></a></div>
+                                        <a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><img src={Facebook} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.instagram.com/corecoincc/' target='_blank' rel="noreferrer"><img src={Instagram} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.linkedin.com/company/core-blockchain' target='_blank' rel="noreferrer"><img src={Linkedin} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.reddit.com/r/CoreCoinCC/' target='_blank' rel="noreferrer"><img src={Reddit} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.youtube.com/channel/UCQ_X4HgniaUPpxL7b6O4KJQ' target='_blank' rel="noreferrer"><img src={Youtube} alt={''} className={'social-media-icon'}/></a>
                                     </div>
                                 </Collapse>
                             </Col>
@@ -133,18 +133,18 @@ class Footer extends PureComponent{
                                     <p className="title">{t('Get in Touch')}</p>
                                     <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
                                     <div className='footer_contact__icons'>
-                                        <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube/></a>
-                                        <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
-                                        <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github/></a>
-                                        <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord/></a>
-                                        <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter/></a>
+                                        <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube className="social-media-icon"/></a>
+                                        <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub  className="social-media-icon"/></a>
+                                        <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github  className="social-media-icon"/></a>
+                                        <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord  className="social-media-icon"/></a>
+                                        <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter  className="social-media-icon"/></a>
                                     </div>
-                                    <div className='footer_contact__icons d-flex'>
-                                        <div className="footer_contact__icons-container"><a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><Facebook/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.instagram.com/corecoincc/' target='_blank' rel="noreferrer"><Instagram/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.linkedin.com/company/core-blockchain' target='_blank' rel="noreferrer"><Linkedin/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.reddit.com/r/CoreCoinCC/' target='_blank' rel="noreferrer"><Reddit/></a></div>
-                                        <div className="footer_contact__icons-container"><a href='https://www.youtube.com/channel/UCQ_X4HgniaUPpxL7b6O4KJQ' target='_blank' rel="noreferrer"><Youtube/></a></div>
+                                    <div className='footer_contact__icons'>
+                                        <a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><img src={Facebook} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.instagram.com/corecoincc/' target='_blank' rel="noreferrer"><img src={Instagram} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.linkedin.com/company/core-blockchain' target='_blank' rel="noreferrer"><img src={Linkedin} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.reddit.com/r/CoreCoinCC/' target='_blank' rel="noreferrer"><img src={Reddit} alt={''} className={'social-media-icon'}/></a>
+                                        <a href='https://www.youtube.com/channel/UCQ_X4HgniaUPpxL7b6O4KJQ' target='_blank' rel="noreferrer"><img src={Youtube} alt={''} className={'social-media-icon'}/></a>
                                     </div>
                                 </Col>
                                 <Row>
