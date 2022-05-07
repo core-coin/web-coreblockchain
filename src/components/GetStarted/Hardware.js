@@ -31,7 +31,7 @@ class Hardware extends PureComponent{
             <h3>
                 {t('Open Hardware //IoT Devices//')}
             </h3>
-            <p>{t('Minimum requirements')}</p>
+            <p>{t('Minimum Requirements')}</p>
             <ul>{HardwareRequirements.map(this.renderContent)}</ul>
             <div className="button-container">
                 <Button

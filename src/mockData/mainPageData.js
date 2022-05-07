@@ -79,7 +79,7 @@ const TargetIndustries = [
 const DeveloperTabs = [
   {
     tabName: "Developer Portal",
-    tabContent: "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect Blockchain to your running system using Oracles. Interact with Blockchain Worldwide network.",
+    tabContent: "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect blockchain to your running system using Oracles. Interact with blockchain worldwide network.",
     tabGreenBtn: "Visit",
     tabGreenBtnLink: "https://dev.coreblockchain.cc/",
     tabGhostBtn: "Report Bug",

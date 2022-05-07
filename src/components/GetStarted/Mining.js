@@ -18,7 +18,7 @@ class Mining extends PureComponent {
       <>
         <div className='downloadBlock'>
           <img src={Rings} alt='icon' className="icon-card" />
-          <h3>{t('How to get started with Core Mining')}</h3>
+          <h3>{t('How to Get Started with Core Mining')}</h3>
           <p>{t('Contribute to the Core Network with the computation power of your CPU and receive rewards in Ores.')}</p>
           <div className="button-container">
             <Button

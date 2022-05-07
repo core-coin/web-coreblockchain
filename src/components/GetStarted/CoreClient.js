@@ -35,7 +35,7 @@ class CoreClient extends PureComponent {
               <img src={Shield} alt="shield"/>
             </div>
             <div className="downloadBlock_card_card-content">
-              <h4>{t('Get verified Core Blockchain data')}</h4>
+              <h4>{t('Get Verified Core Blockchain Data')}</h4>
               <p>{t('This download consists of all blocks that have been verified.')}</p>
               <div className='version-links'>
                 <AnimatedArrow

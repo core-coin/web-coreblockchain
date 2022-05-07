@@ -48,7 +48,7 @@ class NodeCoverage extends PureComponent{
                                Planet covered by <em>Blockchain</em>
                                 </Trans>
                             </h1>
-                            <p className='description'>{t('Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection and more.')}</p>
+                            <p className='description'>{t('Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection, and more.')}</p>
                         </Col>
                         <div className='custom_col'>
                             <div className='custom_row'>
