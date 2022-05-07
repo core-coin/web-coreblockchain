@@ -19,8 +19,7 @@ i18n
     resources,
     lng: "en",
 
-    keySeparator: false, 
-
+    keySeparator: false
     // interpolation: {
     //   escapeValue: false 
     // }
