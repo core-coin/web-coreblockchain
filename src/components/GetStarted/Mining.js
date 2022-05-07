@@ -41,7 +41,7 @@ class Mining extends PureComponent {
               <div className="storage-type">
                 <div className="tab-content-item safe-storage">
                   <div className="tab-content-item-tag safe-storage-tag">
-                    <p className="tab-content-item-title safe-storage-title ">{t("Desktop wallet")}</p>
+                    <p className="tab-content-item-title safe-storage-title ">{t("Desktop Wallet")}</p>
                   </div>
                   <div className="tab-content-item-icons safe-storage-icons">
                     <a href="https://github.com/core-coin/wallet-generator" className="tab-content-item-link safe-storage-link" target='_blank' rel="noreferrer">
@@ -51,7 +51,7 @@ class Mining extends PureComponent {
                 </div>
                 <div className="tab-content-item safe-storage">
                   <div className="tab-content-item-tag safe-storage-tag">
-                    <p className="tab-content-item-title safe-storage-title">{t("Mobile wallet")}</p>
+                    <p className="tab-content-item-title safe-storage-title">{t("Mobile Wallet")}</p>
                   </div>
                   <div className="tab-content-item-icons safe-storage-icons">
                     <a href="https://corepass.net/" className="tab-content-item-link safe-storage-link" target='_blank' rel="noreferrer">
