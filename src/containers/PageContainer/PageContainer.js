@@ -50,7 +50,7 @@ class PageContainer extends PureComponent {
   };
 
     componentDidMount() {
-      axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats')
+      axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats', {headers: {"Access-Control-Allow-Origin": "*"}})
         .then(res => {
           const networkDifficultyData = res.data.nodes[0].difficulty
           const  blockTimeData = res.data.nodes[0].blocktime

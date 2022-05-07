@@ -5,7 +5,7 @@ import {
     Col
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
-import {Link} from  'react-router-dom'
+import {Link } from  'react-router-dom'
 
 import AnimatedArrow from '../AnimatedArrow'
 import { LanguagesData } from '../../mockData'
@@ -13,12 +13,10 @@ import { LanguagesData } from '../../mockData'
 import './LanguagePage.scss'
 import i18next from 'i18next'
 
-
 const LanguageSort = LanguagesData.sort((a, b) => a.englishName.localeCompare(b.englishName))
 
 class LanguagePage extends PureComponent{
     render(){
-
         const { t, i18n } = this.props
         return(
             <div className='languagePage page'>

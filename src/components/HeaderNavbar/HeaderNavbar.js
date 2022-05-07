@@ -6,7 +6,7 @@ import {
   NavLink,
   Container,
   Row,
-  Col,
+  Col
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
 import {Link} from  'react-router-dom'
@@ -35,8 +35,9 @@ class HeaderNavbar extends PureComponent {
     super(props)
     this.state = {
       isMenuOpen: false,
+      isTranslationOpen: false,
       isMobile: isMobile(),
-      isSd: isSd()
+      isSd: isSd(),
     }
   }
 	static propTypes = {
@@ -99,6 +100,19 @@ class HeaderNavbar extends PureComponent {
       isMenuOpen: false,
     })
     document.body.style.overflow = ''
+  }
+  onOpenTranslation = (e) => {
+    e.preventDefault()
+    this.setState({
+      isTranslationOpen: true,
+    })
+  }
+
+  onCloseTranslation = (e) => {
+    e.preventDefault()
+    this.setState({
+      isTranslationOpen: false,
+    })
   }
   closeSidebar = () => {
     this.setState({
@@ -195,6 +209,13 @@ class HeaderNavbar extends PureComponent {
                         href={`/${language}/language`}
                         type='router'
                       />
+                      {/*<Button*/}
+                      {/*  icon={LanguageIcon}*/}
+                      {/*  theme='ghost'*/}
+                      {/*  size='extraSmall'*/}
+                      {/*  hover={false}*/}
+                      {/*  onClick={this.onOpenTranslation}*/}
+                      {/*/>*/}
                       <Button
                         theme='green'
                         text={t('Get started')}
@@ -208,6 +229,18 @@ class HeaderNavbar extends PureComponent {
             </div>
           </Row>
         </Container>
+        {/*<div*/}
+        {/*  className={*/}
+        {/*    this.state.isTranslationOpen*/}
+        {/*      ? 'headerNavbar_sidebar open'*/}
+        {/*      : 'headerNavbar_sidebar'*/}
+        {/*  }*/}
+        {/*>*/}
+        {/*  <a onClick={this.onCloseTranslation} href='/'>*/}
+        {/*    <Close />*/}
+        {/*  </a>*/}
+        {/*  <LanguagePage language={t}/>*/}
+        {/*</div>*/}
       </div>
     )
   }

@@ -109,6 +109,13 @@ class Footer extends PureComponent{
                                         <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord/></a>
                                         <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter/></a>
                                     </div>
+                                    <div className='icons d-flex'>
+                                        <div className="footer_contact__icons-container"><a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><Facebook/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.instagram.com/corecoincc/' target='_blank' rel="noreferrer"><Instagram/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.linkedin.com/company/core-blockchain' target='_blank' rel="noreferrer"><Linkedin/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.reddit.com/r/CoreCoinCC/' target='_blank' rel="noreferrer"><Reddit/></a></div>
+                                        <div className="footer_contact__icons-container"><a href='https://www.youtube.com/channel/UCQ_X4HgniaUPpxL7b6O4KJQ' target='_blank' rel="noreferrer"><Youtube/></a></div>
+                                    </div>
                                 </Collapse>
                             </Col>
                         </Row>

@@ -138,6 +138,9 @@
           width: 32px;
         }
       }
+      &-container:hover {
+        background-color: var(--grey-darken);
+      }
     }
     &_section {
       display: flex;

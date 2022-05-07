@@ -39,7 +39,7 @@ class CoreClient extends PureComponent {
               <p>{t('This download consists of all blocks that have been verified.')}</p>
               <div className='version-links'>
                 <AnimatedArrow
-                  url='https://drive.google.com/drive/folders/1Yi_9Bb5BKF5GETPYA1jBfADyiH1BQ4dL?usp=sharing'
+                  url='https://drive.google.com/drive/folders/1VzaVD2rqnzyv3ypbQQXCeRjevUgXfcl8?usp=sharing'
                   text={t('Google Drive')}
                   targetBlack
                 />
