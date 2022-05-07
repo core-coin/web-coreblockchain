@@ -78,7 +78,7 @@ class Footer extends PureComponent{
                     <Col sm='12'>
                         <Row className="contact-container">
                             <Col xs='12'>
-                                <p className="title">{t('Get in touch')}</p>
+                                <p className="title">{t('Get in Touch')}</p>
                             </Col>
                             <Col xs='12' className={isContactOpen ? 'toggle open' : 'toggle'}>
                                 <a href='/' onClick={this.onToggleContact} className='toggle_header'>{t('Contact')} <Plus/></a>
@@ -130,7 +130,7 @@ class Footer extends PureComponent{
                         <Container>
                             <div className='footer_container'>
                                 <Col md="4">
-                                    <p className="title">{t('Get in touch')}</p>
+                                    <p className="title">{t('Get in Touch')}</p>
                                     <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
                                     <div className='footer_contact__icons'>
                                         <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube/></a>
