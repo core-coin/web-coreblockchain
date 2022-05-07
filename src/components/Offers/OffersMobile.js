@@ -53,27 +53,27 @@ class Offers extends PureComponent{
                                 <div className='offers_block'>
                                     <img src={Decentralization2} className="img-fluid" alt="" />
                                     <h4>{t('Decentralization')}</h4>
-                                    <p>{t('Core distributed computing platform is reliable, secure and available for everyone.')}</p>
+                                    <p>{t('Core distributed computing platform is reliable, secure, and available for everyone.')}</p>
                                 </div>
                                 <div className='offers_block'>
                                   <img src={Security} className="img-fluid" alt="" />
                                     <h4>{t('Security')}</h4>
-                                    <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
+                                    <p>{t('Twisted Edwards Curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
                                 </div>
                                 <div className='offers_block'>
                                     <img src={Interoperability} className="img-fluid" alt="" />
                                     <h4>{t('Interoperability')}</h4>
-                                    <p>{t('Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.')}</p>
+                                    <p>{t('Connecting the world using Oracles and distributing financial instruments through Smart Contracts.')}</p>
                                 </div>
                                 <div className='offers_block'>
                                     <img src={Coverage} className="img-fluid" alt="" />
                                     <h4>{t('Coverage')}</h4>
-                                    <p>{t('Borderless network anywhere in the World run on various networks.')}</p>
+                                    <p>{t('Join the borderless network anywhere in the world run on various networks.')}</p>
                                 </div>
                             <div className='offers_block'>
                                 <img src={Persistence} className="img-fluid" alt="" />
                                 <h4>{t('Persistence')}</h4>
-                                <p>{t('Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
+                                <p>{t('Immutable blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
                             </div>
                             <div className='offers_block'>
                                 <img src={Intelligence} className="img-fluid" alt="" />

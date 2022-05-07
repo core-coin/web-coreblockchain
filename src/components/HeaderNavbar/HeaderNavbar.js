@@ -160,7 +160,7 @@ class HeaderNavbar extends PureComponent {
                     >
                       <Container>
                         <Col className='headerNavbar_sidebar__header'>
-                        <Link to={`/${language}`} className='navbar-brand' onClick={this.closeSidebar}>
+                        <Link to={`/${t.language}`} className='navbar-brand' onClick={this.closeSidebar}>
                           <img src={Logo} alt='Core Chain' />
                         </Link>
                           <a onClick={this.onCloseSidebar} href='/'>

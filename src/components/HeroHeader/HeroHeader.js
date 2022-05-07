@@ -32,7 +32,7 @@ class HeroHeader extends PureComponent{
                         </h1>
                         </Col>
                         <Col sm='12' lg={{ size: 8, offset: 2 }} xl={{ size: 6, offset: 3 }}>
-                            <p className='description'>{t('Core Blockchain is a Worldwide, open-source, unstoppable, and financial Smart Contract network.')}</p>
+                            <p className='description'>{t('Core Blockchain is a worldwide, open-source, unstoppable, and financial smart contract network.')}</p>
                         </Col>
                         <Col sm={{ size: 10, offset: 1 }} lg={{ size: 8, offset: 2 }} xl={{ size: 6, offset: 3 }} className='text-center'>
                             <Button

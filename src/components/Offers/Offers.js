@@ -89,7 +89,7 @@ class Offers extends PureComponent{
                                                         <Decentralization />
                                                     </div>
                                                     <h4>{t('Decentralization')}</h4>
-                                                    <p>{t('Core distributed computing platform is reliable, secure and available for everyone.')}</p>
+                                                    <p>{t('Core distributed computing platform is reliable, secure, and available for everyone.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -100,7 +100,7 @@ class Offers extends PureComponent{
                                                         <Security />
                                                     </div>
                                                     <h4>{t('Security')}</h4>
-                                                    <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
+                                                    <p>{t('Twisted Edwards Curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -111,7 +111,7 @@ class Offers extends PureComponent{
                                                         <Interoperability />
                                                     </div>
                                                     <h4>{t('Interoperability')}</h4>
-                                                    <p>{t('Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.')}</p>
+                                                    <p>{t('Connecting the world using Oracles and distributing financial instruments through Smart Contracts.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -130,7 +130,7 @@ class Offers extends PureComponent{
                                                         <Persistence />
                                                     </div>
                                                     <h4>{t('Persistence')}</h4>
-                                                    <p>{t('Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
+                                                    <p>{t('Immutable blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -141,7 +141,7 @@ class Offers extends PureComponent{
                                                         <Coverage />
                                                     </div>
                                                     <h4>{t('Coverage')}</h4>
-                                                    <p>{t('Borderless network anywhere in the World run on various networks.')}</p>
+                                                    <p>{t('Join the borderless network anywhere in the world run on various networks.')}</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -185,7 +185,7 @@ class Offers extends PureComponent{
                                                             <Decentralization />
                                                         </div>
                                                         <h4>{t('Decentralization')}</h4>
-                                                        <p>{t('Core distributed computing platform is reliable, secure and available for everyone.')}</p>
+                                                        <p>{t('Core distributed computing platform is reliable, secure, and available for everyone.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -196,7 +196,7 @@ class Offers extends PureComponent{
                                                             <Security />
                                                         </div>
                                                         <h4>{t('Security')}</h4>
-                                                        <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
+                                                        <p>{t('Twisted Edwards Curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -215,7 +215,7 @@ class Offers extends PureComponent{
                                                             <Interoperability />
                                                         </div>
                                                         <h4>{t('Interoperability')}</h4>
-                                                        <p>{t('Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.')}</p>
+                                                        <p>{t('Connecting the world using Oracles and distributing financial instruments through Smart Contracts.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -226,7 +226,7 @@ class Offers extends PureComponent{
                                                             <Coverage />
                                                         </div>
                                                         <h4>{t('Coverage')}</h4>
-                                                        <p>{t('Borderless network anywhere in the World run on various networks.')}</p>
+                                                        <p>{t('Join the borderless network anywhere in the world run on various networks.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -245,7 +245,7 @@ class Offers extends PureComponent{
                                                             <Persistence />
                                                         </div>
                                                         <h4>{t('Persistence')}</h4>
-                                                        <p>{t('Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
+                                                        <p>{t('Immutable blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -287,7 +287,7 @@ class Offers extends PureComponent{
                                                           <Decentralization />
                                                         </div>
                                                         <h4>{t('Decentralization')}</h4>
-                                                        <p>{t('Core distributed computing platform is reliable, secure and available for everyone.')}</p>
+                                                        <p>{t('Core distributed computing platform is reliable, secure, and available for everyone.')}</p>
                                                    </div>
                                                 </div>
                                             </Col>
@@ -298,7 +298,7 @@ class Offers extends PureComponent{
                                                           <Security />
                                                         </div>
                                                         <h4>{t('Security')}</h4>
-                                                        <p>{t('Twisted Edwards curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
+                                                        <p>{t('Twisted Edwards Curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -317,7 +317,7 @@ class Offers extends PureComponent{
                                                           <Interoperability />
                                                         </div>
                                                         <h4>{t('Interoperability')}</h4>
-                                                        <p>{t('Connecting the World using Oracles and distributing Financial instruments through Smart Contracts.')}</p>
+                                                        <p>{t('Connecting the world using Oracles and distributing financial instruments through Smart Contracts.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -328,7 +328,7 @@ class Offers extends PureComponent{
                                                           <Coverage />
                                                         </div>
                                                         <h4>{t('Coverage')}</h4>
-                                                        <p>{t('Borderless network anywhere in the World run on various networks.')}</p>
+                                                        <p>{t('Join the borderless network anywhere in the world run on various networks.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -339,7 +339,7 @@ class Offers extends PureComponent{
                                                           <Persistence />
                                                         </div>
                                                         <h4>{t('Persistence')}</h4>
-                                                        <p>{t('Immutable Blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
+                                                        <p>{t('Immutable blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
                                                     </div>
                                                 </div>
                                             </Col>
