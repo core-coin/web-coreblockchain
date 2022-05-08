@@ -121,7 +121,7 @@ class Footer extends PureComponent{
                         </Row>
                     </Col>
                     <div className='footer_mobile'>
-                        <p className='text-center footer_copyright_mobile'>{t('Copyright © 2018-2021 Core Foundation. All Rights Reserved.')}</p>
+                        <p className='text-center footer_copyright_mobile'>{t('Core Foundation // Copyright and related rights waived via CC0.')}</p>
                     </div>
                 </div>
               ) : (

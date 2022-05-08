@@ -54,10 +54,10 @@ class NodeCoverage extends PureComponent{
                             <div className='custom_row'>
                                 <div className="block-container">
                                     <div className='nodeCoverage_block nodeCoverage_block_first'>
-                                        <h2>{t('ICAN address')}</h2>
+                                        <h2>{t('ICAN Address')}</h2>
                                         <p>{t('We introduce a standard for crypto addresses — ICAN — with HRP and checksum, similar to what we all are using for current financial transactions.')}</p>
                                        <div className='text-center power-by'>
-                                           <AnimatedArrow text={t('Generate ICAN address')} url='https://github.com/core-coin/wallet-generator' targetBlack/>
+                                           <AnimatedArrow text={t('Generate ICAN Address')} url='https://github.com/core-coin/wallet-generator' targetBlack/>
                                        </div>
                                     </div>
                                 </div>
