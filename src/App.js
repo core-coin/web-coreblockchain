@@ -35,10 +35,9 @@ export default class App extends PureComponent {
         <ConnectedRouter history={history}>
           <Layout>
             <Switch>
-              <Route path='/:lang/language' component={WithLanguageHoc(LanguagePageContainer)} />
+              <Route path={['/:lang/language', '/get-language']} as='/language' component={WithLanguageHoc(LanguagePageContainer)} />
               {/*<Route path='/:lang/language-program' component={WithLanguageHoc(LanguageTranslatePageContainer)} />*/}
-              <Route path='/:lang/get-started' component={WithLanguageHoc(GetStartedContainer)} />
-              <Route path='/:lang/download' component={WithLanguageHoc(GetStartedContainer)} />
+              <Route path={['/:lang/get-started', '/get-started', '/:lang/download' , '/download' ]} component={WithLanguageHoc(GetStartedContainer)} />
               {/*<Route path='/:lang/developers' component={WithLanguageHoc(DevelopersContainer)} />*/}
               {/*<Route path='/:lang/community' component={WithLanguageHoc(CommunityContainer)} />*/}
               {/*<Route path='/:lang/learn' component={WithLanguageHoc(LearnContainer)} />*/}
@@ -46,7 +45,7 @@ export default class App extends PureComponent {
               {/*<Route path='/:lang/*' component={WithLanguageHoc(OverviewContainer)}/>*/}
               <Route
                 exact
-                path="/:lang/" component={WithLanguageHoc(PageContainer)}
+                path={["/:lang/", '/']} component={WithLanguageHoc(PageContainer)}
               />
               <Redirect to={lang}/>
             </Switch>
