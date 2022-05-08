@@ -35,7 +35,7 @@ export default class App extends PureComponent {
         <ConnectedRouter history={history}>
           <Layout>
             <Switch>
-              <Route path={['/:lang/language', '/language']} as='/language' component={WithLanguageHoc(LanguagePageContainer)} />
+              <Route path={['/:lang/language', '/language']} component={WithLanguageHoc(LanguagePageContainer)} />
               {/*<Route path='/:lang/language-program' component={WithLanguageHoc(LanguageTranslatePageContainer)} />*/}
               <Route path={['/:lang/get-started', '/get-started', '/:lang/download' , '/download' ]} component={WithLanguageHoc(GetStartedContainer)} />
               {/*<Route path='/:lang/developers' component={WithLanguageHoc(DevelopersContainer)} />*/}
