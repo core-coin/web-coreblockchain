@@ -86,7 +86,7 @@ class PageContainer extends PureComponent {
                 </title>
                 <meta name="description" content="A New Sense of Integrity" />
                 <meta name="keywords" content="core,blockchain,xcb,xce,xab,new,sense,of,integrity,smart,contract,network,open-source,open,source,mainnet,devin" />
-                <meta name="wallet:xcb" content="cb57bbbb54cdf60fa666fd741be78f794d4608d67109" />
+                <meta property="wallet:xcb" content="cb57bbbb54cdf60fa666fd741be78f794d4608d67109" />
                 <meta property="og:title" content="Core Blockchain" />
                 <meta property="og:description" content="A New Sense of Integrity" />
                 <meta property="og:image" content={Slogan} />
