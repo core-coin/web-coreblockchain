@@ -20,6 +20,7 @@ import Youtube from '../../images/youtube.svg'
 import Linkedin from '../../images/linkedin.svg'
 import Reddit from '../../images/reddit.svg'
 import Instagram from '../../images/instagram.svg'
+import Telegram from '../../images/telegram.svg'
 
 
 import './Footer.scss'
@@ -108,6 +109,7 @@ class Footer extends PureComponent{
                                         <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github/></a>
                                         <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord/></a>
                                         <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter/></a>
+                                        <a href='https://t.me/coreblockchaincc' target='_blank' rel="noreferrer"><img src={Telegram} alt={''} className={'social-media-icon'}/></a>
                                     </div>
                                     <div className='icons d-flex'>
                                         <a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><img src={Facebook} alt={''} className={'social-media-icon'}/></a>
@@ -138,6 +140,8 @@ class Footer extends PureComponent{
                                         <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github  className="social-media-icon"/></a>
                                         <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord  className="social-media-icon"/></a>
                                         <a href='https://twitter.com/corecoincc' target='_blank' rel="noreferrer"><Twitter  className="social-media-icon"/></a>
+                                        <a href='https://t.me/coreblockchaincc' target='_blank' rel="noreferrer"><img src={Telegram} alt={''} className={'social-media-icon'}/></a>
+
                                     </div>
                                     <div className='footer_contact__icons'>
                                         <a href='https://www.facebook.com/corecoincc' target='_blank' rel="noreferrer"><img src={Facebook} alt={''} className={'social-media-icon'}/></a>
