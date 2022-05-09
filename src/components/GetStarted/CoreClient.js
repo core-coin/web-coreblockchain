@@ -19,7 +19,7 @@ class CoreClient extends PureComponent {
       <>
         <div className='downloadBlock'>
           <img src={Link} alt="shield" className="icon-card"/>
-          <a id="download"/>
+          <div id="download"/>
           <h3>{t('Download the Core Client')}</h3>
           <p>{t('Go-core is the command-line interface for running a full Core node //Boid// implemented in Go.')}</p>
           <Select

@@ -83,7 +83,7 @@ class Distribution extends PureComponent{
             <>
                 <div className='downloadBlock'>
                     <img src={Arrows} alt='arrows' className="icon-card"/>
-                    <a id="distribution"/>
+                    <div id="distribution"/>
                     <h3>{t('Distribution Clients')}</h3>
                     <p>{t('Specific download for distribution deployment.')}</p>
                     <div className='tabs_header'>
