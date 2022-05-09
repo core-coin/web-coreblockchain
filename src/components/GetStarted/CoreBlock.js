@@ -14,6 +14,7 @@ class CoreBlock extends PureComponent{
             <>
                 <div className='downloadBlock'>
                     <img src={Search} alt='search_icon' className="icon-card" />
+                    <a id="explorer"/>
                     <h3>{t('Core Block Index & Analytics')}</h3>
                     <p>{t('Core Block Explorer is a web tool that provides detailed information about Core blocks, addresses, and transactions.')}</p>
                     <div className="button-container">

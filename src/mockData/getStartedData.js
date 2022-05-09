@@ -6,8 +6,8 @@ const DownloadLinks = [
     "checksum": "https://github.com/core-coin/go-core/releases/latest/download/gocore-linux-x86_64.checksum"
   },
   {
-    "label": "Darwin",
-    "value": "darwin",
+    "label": "MacOS",
+    "value": "macos",
     "linkToDownLoad": "https://github.com/core-coin/go-core/releases/latest/download/gocore-darwin-x86_64",
     "checksum": "https://github.com/core-coin/go-core/releases/latest/download/gocore-darwin-x86_64.checksum"
   },

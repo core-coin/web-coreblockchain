@@ -28,6 +28,7 @@ class Hardware extends PureComponent{
         return(
           <div className='downloadBlock'>
             <img src={DesktopIcon} alt='search_icon' className="icon-card" />
+              <a id="hardware"/>
             <h3>
                 {t('Open Hardware //IoT Devices//')}
             </h3>

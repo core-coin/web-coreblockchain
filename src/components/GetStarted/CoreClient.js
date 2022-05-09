@@ -33,6 +33,7 @@ class CoreClient extends PureComponent {
           <div className='downloadBlock_card'>
             <div>
               <img src={Shield} alt="shield"/>
+              <a id="download"/>
             </div>
             <div className="downloadBlock_card_card-content">
               <h4>{t('Get Verified Core Blockchain Data')}</h4>
