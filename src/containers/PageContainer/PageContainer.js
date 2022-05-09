@@ -107,7 +107,7 @@ class PageContainer extends PureComponent {
                 fbq('init', '310638287807412');
                 fbq('track', 'PageView');`}
                 </script>
-                <noscript><img height="1" width="1" style={"display:none"} alt="facebook"
+                <noscript><img height="1" width="1" style={{display: "none"}} alt="facebook"
                                src="https://www.facebook.com/tr?id=310638287807412&ev=PageView&noscript=1"
                 /></noscript>
               </MetaTags>
