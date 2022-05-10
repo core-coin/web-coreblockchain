@@ -40,6 +40,11 @@ export default class Solutions extends PureComponent{
             });
         }
     }
+    closeMenu = () => {
+        this.setState({ showMenu: false }, () => {
+            document.removeEventListener('click', this.closeMenu);
+        });
+    }
 
     render(){
         const { text, url, centerMode, targetBlack, dropdownItems, dropdown } = this.props
