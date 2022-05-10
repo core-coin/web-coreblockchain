@@ -211,6 +211,11 @@
         a {
           margin-right: 32px;
         }
+        .menu {
+          a {
+            margin-right: 0;
+          }
+        }
       }
       &.coreWallet {
         background: var(--black-lighter) url("../../images/core-wallet.webp")

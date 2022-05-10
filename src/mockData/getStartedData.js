@@ -90,5 +90,16 @@ const NodeDistributionData = [
     elements: []
   },
 ]
+const YandexDownloadLinks = [
+  {
+    label: "Mainnet",
+    link: "https://disk.yandex.com/d/SK2VqMDRZY4Jzw"
+  },
+  {
+    label: "Devin ",
+    link: "https://disk.yandex.com/d/nD0gLLtYy7VY3A"
+  }
+]
 
-export { DownloadLinks, HardwareRequirements, SideBarMenu, NodeDistributionData }
+
+export { DownloadLinks, HardwareRequirements, SideBarMenu, NodeDistributionData,YandexDownloadLinks }

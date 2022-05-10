@@ -5,7 +5,7 @@ import Select from '../Select'
 import AnimatedArrow from '../AnimatedArrow'
 import Shield from '../../images/getStarted/get-started-shield.png'
 import Link from '../../images/getStarted/get-started-link.svg'
-import { DownloadLinks } from '../../mockData'
+import { DownloadLinks, YandexDownloadLinks } from '../../mockData'
 
 import './GetStarted.scss'
 
@@ -45,9 +45,10 @@ class CoreClient extends PureComponent {
                   targetBlack
                 />
                 <AnimatedArrow
-                  url='https://disk.yandex.com/d/tKo7gyXuB3asHA'
+                  url='/'
                   text={t('Yandex')}
-                  targetBlack
+                  dropdown
+                  dropdownItems={YandexDownloadLinks}
                 />
               </div>
             </div>
