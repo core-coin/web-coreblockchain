@@ -107,6 +107,9 @@ class PageContainer extends PureComponent {
                 fbq('init', '310638287807412');
                 fbq('track', 'PageView');`}
                 </script>
+                <script>
+                  {` !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js%22,t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_mhpuy0r6');rdt('track', 'PageVisit');`}
+                  </script>
                 <noscript><img height="1" width="1" style={{display: "none"}} alt="facebook"
                                src="https://www.facebook.com/tr?id=310638287807412&ev=PageView&noscript=1"
                 /></noscript>
