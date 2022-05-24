@@ -5,6 +5,10 @@ import Kubernetes from '../images/getStarted/get-started-kubernetes.svg'
 import DockerCompose from '../images/getStarted/docker-compose.svg'
 import Bash from '../images/getStarted/bash.svg'
 import Ansible from '../images/getStarted/Ansible.svg'
+import Chocolatey from '../images/getStarted/chocolatey.svg'
+import Grafana from '../images/getStarted/grafana.svg'
+import Homebrew from '../images/getStarted/homebrew.svg'
+
 
 export function getCloudImage(id) {
   if (id === 'azure') {
@@ -21,6 +25,11 @@ export function getCloudImage(id) {
     return Bash
   } else if (id === 'ansible') {
     return Ansible
+  }else if (id === 'chocolatey') {
+    return Chocolatey
+  }else if(id ==='grafana') {
+    return Grafana
+  }else if (id === 'homebrew') {
+    return Homebrew
   }
-
 }

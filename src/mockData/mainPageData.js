@@ -9,7 +9,7 @@ const MenuItemList = [
   },
   {
     label: "Talk",
-    link: "https://coretalk.info/"
+    link: "https://coretalk.space/"
   }
 ]
 
@@ -89,7 +89,7 @@ const DeveloperTabs = [
     tabName: "Core Talk",
     tabContent: "Discuss and open new QA in the Talk community. Developers as well as other community members will assist you to answer your questions.",
     tabGreenBtn: "Visit",
-    tabGreenBtnLink: "https://coretalk.info/",
+    tabGreenBtnLink: "https://coretalk.space/",
     tabGhostBtn: "Report Bug",
     tabGhostBtnLink: "https://dev.coreblockchain.cc/report/bug"
   },

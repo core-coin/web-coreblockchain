@@ -1,18 +1,24 @@
 const DownloadLinks = [
   {
-    "label": "Linux",
-    "value": "linux",
+    "label": "Linux //64-bit//",
+    "value": "linux64b",
     "linkToDownLoad": "https://github.com/core-coin/go-core/releases/latest/download/gocore-linux-x86_64",
     "checksum": "https://github.com/core-coin/go-core/releases/latest/download/gocore-linux-x86_64.checksum"
   },
   {
-    "label": "MacOS",
+    "label": "Linux //ARM64//",
+    "value": "linuxARM64",
+    "linkToDownLoad": "https://github.com/core-coin/go-core/releases/latest/download/gocore-linux-arm64",
+    "checksum": "https://github.com/core-coin/go-core/releases/latest/download/gocore-linux-arm64.checksum"
+  },
+  {
+    "label": "macOS //64-bit//",
     "value": "macos",
     "linkToDownLoad": "https://github.com/core-coin/go-core/releases/latest/download/gocore-darwin-x86_64",
     "checksum": "https://github.com/core-coin/go-core/releases/latest/download/gocore-darwin-x86_64.checksum"
   },
   {
-    "label": "Microsoft Windows",
+    "label": "Windows //64-bit//",
     "value": "windows",
     "linkToDownLoad": "https://github.com/core-coin/go-core/releases/latest/download/gocore-windows-x86_64.exe",
     "checksum": "https://github.com/core-coin/go-core/releases/latest/download/gocore-windows-x86_64.exe.checksum"

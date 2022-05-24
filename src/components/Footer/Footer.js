@@ -93,7 +93,7 @@ class Footer extends PureComponent{
                                     <a href='https://dev.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Developer Portal')}</a>
                                     <a href='https://cip.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
                                     <a href='https://blog.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Blog')}</a>
-                                    <a href='https://coretalk.info/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
+                                    <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
                                 </Collapse>
                             </Col>
                             <Col xs='12' className={isLinksOpen ? 'toggle open' : 'toggle'}>
@@ -102,9 +102,9 @@ class Footer extends PureComponent{
                                     <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
                                     <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
                                     <a href='https://dev.coreblockchain.cc/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
-                                    <a href='https://coretalk.info/c/projects/5/' target='_blank' rel="noreferrer">{t('Introduce Project')}</a>
+                                    <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Introduce Project')}</a>
                                     <div className='icons'>
-                                        <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube/></a>
+                                        <a href='https://coretalk.space/' target='_blank' rel="noreferrer"><Cube/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
                                         <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github/></a>
                                         <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord/></a>
@@ -135,7 +135,7 @@ class Footer extends PureComponent{
                                     <p className="title">{t('Get in Touch')}</p>
                                     <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
                                     <div className='footer_contact__icons'>
-                                        <a href='https://coretalk.info/' target='_blank' rel="noreferrer"><Cube className="social-media-icon"/></a>
+                                        <a href='https://coretalk.space/' target='_blank' rel="noreferrer"><Cube className="social-media-icon"/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub  className="social-media-icon"/></a>
                                         <a href='https://github.com/core-coin' target='_blank' rel="noreferrer"><Github  className="social-media-icon"/></a>
                                         <a href='https://discord.gg/SCxmFr5Pwp' target='_blank' rel="noreferrer"><Discord  className="social-media-icon"/></a>
@@ -157,14 +157,14 @@ class Footer extends PureComponent{
                                         <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
                                         <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
                                         <a href='https://dev.coreblockchain.cc/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
-                                        <a href='https://coretalk.info/c/projects/5/' target='_blank' rel="noreferrer">{t('Introduce Project')}</a>
+                                        <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Introduce Project')}</a>
                                     </Col>
                                     <Col md="6" className='footer_contact_section'>
                                         <p className="title">{t('Development')}</p>
                                         <a href='https://dev.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Developer Portal')}</a>
                                         <a href='https://cip.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
                                         <a href='https://blog.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Blog')}</a>
-                                        <a href='https://coretalk.info/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
+                                        <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
                                     </Col>
                                 </Row>
                             </div>
