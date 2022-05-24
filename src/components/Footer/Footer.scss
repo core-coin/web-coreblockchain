@@ -147,6 +147,8 @@
     &_section {
       display: flex;
       flex-direction: column;
+      overflow: visible;
+      white-space: nowrap;
       a {
         font-size: 14px;
         line-height: 32px;
@@ -181,6 +183,11 @@
     font-weight: var(--font-secondary-weight-normal);
     line-height: 24px;
     width: 100%;
+  }
+  &_row {
+    @media(max-width: 1366px) {
+      margin-right: 15px;
+    }
   }
 }
 .social-media-icon {

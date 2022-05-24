@@ -151,7 +151,7 @@ class Footer extends PureComponent{
                                         <a href='https://www.youtube.com/channel/UCQ_X4HgniaUPpxL7b6O4KJQ' target='_blank' rel="noreferrer"><img src={Youtube} alt={''} className={'social-media-icon'}/></a>
                                     </div>
                                 </Col>
-                                <Row>
+                                <Row className="footer_row">
                                     <Col md="6" className='footer_contact_section'>
                                         <p className="title">{t('Useful Links')}</p>
                                         <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
