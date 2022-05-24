@@ -95,7 +95,7 @@
   "Supply Chain": "Zásobovací reťazec",
   "Technology": "Technológia",
   "Telecommunications": "Telekomunikácie",
-  "A New Sense of Integrity": "Nový nádych <1>integrity.</1>",
+  "A New Sense of Integrity": "Nový nádych <1>integrity</1>",
   "Trademark": "Ochranná známka",
   "Visit": "Navštíviť",
   "Core Blockchain represents a blockchain revolution as the first-ever next-generation Proof of Work, referred to as the Proof of Distributed Efficiency //PoDE//, in the world. Distributed Efficiency refers to transactions being confirmed on a network in any location. Using energy that could be waste energy, grid energy, or any other form of energy production, and or a combination thereof is not only environmentally friendly but also self-sustainable.": "Core Blockchain predstavuje revolúciu blockchainu ako vôbec prvý \"Proof of Work\" novej generácie, označovaný ako \"Proof of Distributed Efficiency\" //PoDE// na svete. Distribuovaná efektívnosť sa vzťahuje na transakcie potvrdené v sieti na akomkoľvek mieste. Využívanie energie, ktorá by mohla byť odpadovou energiou, energiou zo siete alebo akoukoľvek inou formou výroby energie alebo ich kombináciou, je nielen ekologické, ale aj sebestačné.",
@@ -193,5 +193,7 @@
   "Get Verified Core Blockchain Data": "Získať overené dáta Core Blockchainu",
   "How to Get Started with Core Mining": "Ako začať s Core ťažbou",
   "Core Blockchain is a worldwide, open-source, unstoppable, and financial smart contract network.": "Core Blockchain je open-source, nezastaviteľná celosvetová finančná a smart-kontraktová sieť.",
-  "Generate ICAN Address": "Vygenerovať ICAN adresu"
+  "Generate ICAN Address": "Vygenerovať ICAN adresu",
+  "Terms and Conditions": "Podmienky používania",
+  "Privacy Policy": "Ochrana súkromia"
 }
