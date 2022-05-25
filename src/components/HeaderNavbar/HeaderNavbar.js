@@ -103,8 +103,6 @@ class HeaderNavbar extends PureComponent {
   }
   onOpenTranslation = (e) => {
     e.preventDefault()
-    console.log('click')
-    console.log(this.state.isTranslationOpen)
     this.setState({
       isTranslationOpen: true,
     })
