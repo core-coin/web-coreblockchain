@@ -19,10 +19,9 @@ import Close from '../SvgIcon/icons/Close'
 import Language from '../SvgIcon/icons/Language'
 import { isMobile, isSd } from '../../utils'
 import { MenuItemList } from '../../mockData'
-
 import './HeaderNavbar.scss'
-import i18next from 'i18next'
 import i18n from 'i18next'
+import LanguagePage from '../LanguagePage'
 
 const LanguageIcon = <Language />
 
@@ -47,7 +46,7 @@ class HeaderNavbar extends PureComponent {
 
   renderLink = ({ link, label }, index) => (
     <NavItem key={index}>
-      <NavLink href={link}>{i18next.t(label)}</NavLink>
+      <NavLink href={link}>{i18n.t(label)}</NavLink>
     </NavItem>
   )
 
@@ -104,6 +103,8 @@ class HeaderNavbar extends PureComponent {
   }
   onOpenTranslation = (e) => {
     e.preventDefault()
+    console.log('click')
+    console.log(this.state.isTranslationOpen)
     this.setState({
       isTranslationOpen: true,
     })
@@ -126,7 +127,7 @@ class HeaderNavbar extends PureComponent {
 
       <li key={index} className='nav-item'>
         <a className='nav-link' href={`${item.link}`} onClick={this.closeSidebar} target='_blank' rel="noreferrer">
-          {i18next.t(item.label)}
+          {i18n.t(item.label)}
         </a>
       </li>
 
@@ -202,21 +203,21 @@ class HeaderNavbar extends PureComponent {
                       {MenuItemList.map(this.renderNavbar)}
                     </Nav>
                     <div className='headerNavbar_left'>
-                      <Button
-                        icon={LanguageIcon}
-                        theme='ghost'
-                        size='extraSmall'
-                        hover={false}
-                        href={`/${i18n.language}/language`}
-                        type='router'
-                      />
                       {/*<Button*/}
                       {/*  icon={LanguageIcon}*/}
                       {/*  theme='ghost'*/}
                       {/*  size='extraSmall'*/}
                       {/*  hover={false}*/}
-                      {/*  onClick={this.onOpenTranslation}*/}
+                      {/*  href={`/${i18n.language}/language`}*/}
+                      {/*  type='router'*/}
                       {/*/>*/}
+                      <Button
+                        icon={LanguageIcon}
+                        theme='ghost'
+                        size='extraSmall'
+                        hover={false}
+                        onClick={this.onOpenTranslation}
+                      />
                       <Button
                         theme='green'
                         text={t('Get started')}
@@ -226,22 +227,25 @@ class HeaderNavbar extends PureComponent {
                     </div>
                   </div>
                 )}
+                <div
+                  className={
+                    this.state.isTranslationOpen
+                      ? 'headerNavbar_language_modal open'
+                      : 'headerNavbar_language_modal'
+                  }
+                >
+                  <Col className='headerNavbar_language_modal__header'>
+                    <a onClick={this.onCloseTranslation} href='/'>
+                      <Close />
+                    </a>
+                  </Col>
+                  <LanguagePage language={i18n.language}/>
+                </div>
               </Navbar>
             </div>
           </Row>
         </Container>
-        {/*<div*/}
-        {/*  className={*/}
-        {/*    this.state.isTranslationOpen*/}
-        {/*      ? 'headerNavbar_sidebar open'*/}
-        {/*      : 'headerNavbar_sidebar'*/}
-        {/*  }*/}
-        {/*>*/}
-        {/*  <a onClick={this.onCloseTranslation} href='/'>*/}
-        {/*    <Close />*/}
-        {/*  </a>*/}
-        {/*  <LanguagePage language={t}/>*/}
-        {/*</div>*/}
+
       </div>
     )
   }
