@@ -22,6 +22,7 @@ import { MenuItemList } from '../../mockData'
 
 import './HeaderNavbar.scss'
 import i18next from 'i18next'
+import i18n from 'i18next'
 
 const LanguageIcon = <Language />
 
@@ -132,7 +133,7 @@ class HeaderNavbar extends PureComponent {
   )
 
   render() {
-    const { t, language } = this.props
+    const { t } = this.props
     const { isMenuOpen } = this.state
 
     return (
@@ -142,7 +143,7 @@ class HeaderNavbar extends PureComponent {
             <div className='navbar_col'>
               <Navbar expand='md' className="navbar-custom">
                 <div>
-                  <Link className='navbar-brand' to={`/${language}`}>
+                  <Link className='navbar-brand' to={`/${i18n.language}`}>
                     <img src={Logo} alt='Core Chain' />
                   </Link>
                 </div>
@@ -177,7 +178,7 @@ class HeaderNavbar extends PureComponent {
                             theme='ghost'
                             size='small'
                             hover={false}
-                            href={`/${language}/language`}
+                            href={`/${i18n.language}/language`}
                             type='router'
                             onClick={this.closeSidebar}
                           />
@@ -188,7 +189,7 @@ class HeaderNavbar extends PureComponent {
                             theme='green'
                             text={t('Get started')}
                             type='router'
-                            href={`/${language}/get-started`}
+                            href={`/${i18n.language}/get-started`}
                             onClick={this.closeSidebar}
                           />
                         </div>
@@ -206,7 +207,7 @@ class HeaderNavbar extends PureComponent {
                         theme='ghost'
                         size='extraSmall'
                         hover={false}
-                        href={`/${language}/language`}
+                        href={`/${i18n.language}/language`}
                         type='router'
                       />
                       {/*<Button*/}
@@ -220,7 +221,7 @@ class HeaderNavbar extends PureComponent {
                         theme='green'
                         text={t('Get started')}
                         type='router'
-                        href={`/${language}/get-started`}
+                        href={`/${i18n.language}/get-started`}
                       />
                     </div>
                   </div>

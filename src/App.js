@@ -12,6 +12,8 @@ import PageContainer from './containers/PageContainer/PageContainer'
 import LanguagePageContainer from './containers/LanguagePageContainer/LanguagePageContainer'
 // import LanguageTranslatePageContainer from './containers/LanguageTranslatePageContainer/LanguageTranslatePageContainer'
 import GetStartedContainer from './containers/GetStartedContainer/GetStartedContainer'
+import TermsConditionsContainer from './containers/TermsConditionsContainer'
+import PrivacyPolicyContainer from './containers/PrivacyPolicyContainer'
 // import DevelopersContainer from './containers/DevelopersContainer'
 // import OverviewContainer from './containers/OverviewContainer'
 // import CommunityContainer from './containers/CommunityContainer'
@@ -38,6 +40,8 @@ export default class App extends PureComponent {
               <Route path={['/:lang/language', '/language']} component={WithLanguageHoc(LanguagePageContainer)} />
               {/*<Route path='/:lang/language-program' component={WithLanguageHoc(LanguageTranslatePageContainer)} />*/}
               <Route path={['/:lang/get-started', '/get-started', '/:lang/download' , '/download' ]} component={WithLanguageHoc(GetStartedContainer)} />
+              <Route path={['/:lang/terms-conditions', '/terms-conditions' ]} component={WithLanguageHoc(TermsConditionsContainer)} />
+              <Route path={['/:lang/privacy-policy', '/privacy-policy']} component={WithLanguageHoc(PrivacyPolicyContainer)} />
               {/*<Route path='/:lang/developers' component={WithLanguageHoc(DevelopersContainer)} />*/}
               {/*<Route path='/:lang/community' component={WithLanguageHoc(CommunityContainer)} />*/}
               {/*<Route path='/:lang/learn' component={WithLanguageHoc(LearnContainer)} />*/}

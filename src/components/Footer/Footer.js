@@ -24,6 +24,8 @@ import Telegram from '../../images/telegram.svg'
 
 
 import './Footer.scss'
+import { Link } from 'react-router-dom'
+import i18n from "i18next";
 
 class Footer extends PureComponent{
     constructor(props) {
@@ -158,6 +160,8 @@ class Footer extends PureComponent{
                                         <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
                                         <a href='https://dev.coreblockchain.cc/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
                                         <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Introduce Project')}</a>
+                                        <Link to={`/${i18n.language}/terms-conditions`}>{t('Terms and Conditions')}</Link>
+                                        <Link to={`/${i18n.language}/privacy-policy`}>{t('Privacy Policy')}</Link>
                                     </Col>
                                     <Col md="6" className='footer_contact_section'>
                                         <p className="title">{t('Development')}</p>

@@ -1,6 +1,13 @@
 .content-container {
   color: var(--grey);
-  padding: 81px 328px;
+  padding: 81px 20px;
+  @media (min-width: 1023px) {
+    padding: 81px 128px;
+  }
+  @media (min-width: 1366px) {
+    padding: 81px 328px;
+  }
+
   h1 {
     font-size: 44px;
     color: var(--white);
