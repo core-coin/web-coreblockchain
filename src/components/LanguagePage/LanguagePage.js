@@ -5,7 +5,6 @@ import {
     Col
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
-import {Link } from  'react-router-dom'
 
 import AnimatedArrow from '../AnimatedArrow'
 import { LanguagesData } from '../../mockData'
@@ -31,14 +30,14 @@ class LanguagePage extends PureComponent{
                             <Row>
                                 {LanguageSort.map((language) => (
                                 <Col xs='12' sm='4' lg='4' key={language.code}>
-                                    <Link className={i18n.language === language.code ? 'languagePage_block languagePage_block-active' : 'languagePage_block'}
-                                    onClick={() => {i18n.changeLanguage(language.code).then()}} to={`/${language.code}`}
+                                    <a href='/' className={i18n.language === language.code ? 'languagePage_block languagePage_block-active' : 'languagePage_block'}
+                                    onClick={() => {i18n.changeLanguage(language.code).then()}}
                                 >
                                         <div className='languagePage_block__text'>
                                             <p>{language.englishName}</p>
                                             <span>{language.nativeName}</span>
                                         </div>
-                                    </Link>
+                                    </a>
 
                                 </Col>
                                 ))}
