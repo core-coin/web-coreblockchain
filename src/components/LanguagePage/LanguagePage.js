@@ -30,8 +30,11 @@ class LanguagePage extends PureComponent{
                             <Row>
                                 {LanguageSort.map((language) => (
                                 <Col xs='12' sm='4' lg='4' key={language.code}>
-                                    <a href='/' className={i18n.language === language.code ? 'languagePage_block languagePage_block-active' : 'languagePage_block'}
-                                    onClick={() => {i18n.changeLanguage(language.code).then()}}
+                                    <a className={i18n.language === language.code ? 'languagePage_block languagePage_block-active' : 'languagePage_block'}
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        return i18n.changeLanguage(language.code).then()}
+                                    } href='/'
                                 >
                                         <div className='languagePage_block__text'>
                                             <p>{language.englishName}</p>
