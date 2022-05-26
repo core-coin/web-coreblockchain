@@ -140,37 +140,28 @@
     }
   }
   &_language_modal {
-    height: auto;
-    width: 0;
+    max-height: 0;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: var(--black);
-    overflow-x: hidden;
-    transition: width 0.5s;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 100px;
     &__header {
       display: flex;
       justify-content: end;
       padding: 45px 75px 45px 27px;
     }
     &.open {
-      overflow-x: visible;
-      width: 100%;
-      height: auto;
-      margin-top: 100px;
+      transition: max-height 0.25s ease-in;
+      max-height: 768px;
     }
     .container {
       flex-direction: column;
       background: var(--black);
-    }
-    .navbar-nav {
-      text-align: center;
-      .nav-link {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 60px;
-      }
     }
   }
 }

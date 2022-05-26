@@ -102,20 +102,24 @@ class HeaderNavbar extends PureComponent {
     })
     document.body.style.overflow = ''
   }
-  onOpenTranslation = (e) => {
-    e.preventDefault()
-    this.setState({
-      isTranslationOpen: true,
-    })
-  }
-
-  onCloseTranslation = (e) => {
-    e.preventDefault()
+  closeTranslation = () => {
     this.setState({
       isTranslationOpen: false,
     })
   }
-  closeTranslation = () => {
+  onOpenTranslation = (e) => {
+    e.preventDefault()
+    if (this.state.isTranslationOpen){
+      this.closeTranslation()
+    } else {
+      this.setState({
+        isTranslationOpen: true,
+      })
+    }
+  }
+
+  onCloseTranslation = (e) => {
+    e.preventDefault()
     this.setState({
       isTranslationOpen: false,
     })
