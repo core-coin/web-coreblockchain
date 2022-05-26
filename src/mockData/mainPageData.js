@@ -27,12 +27,12 @@ const TargetIndustries = [
   {
     tabName: "Aerospace",
     tabImage: '/images/space.jpg',
-    tabContent: "Aerospace operators can share data about aircraft history, maintenance, and operations with verified Blockchain messages."
+    tabContent: "Aerospace operators can share data about aircraft history, maintenance, and operations with verified blockchain messages."
   },
   {
     tabName: "Energy",
     tabImage: '/images/energy.jpg',
-    tabContent: "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with structure LIFO //Last-In-First-Out//."
+    tabContent: "Optimizing IoT and small devices participating in the mining network and algorithm //RandomY//. We are using ZERO-waste — 0W — energy with the LIFO //Last-In-First-Out// structure."
   },
   {
     tabName: "Supply Chain",
@@ -40,29 +40,29 @@ const TargetIndustries = [
     tabContent: "Management and Resilience in Supply Chain to track, monitor, and alert using Blockchain-based verified information. Blockchain reduces the length of the chain to some extent by cutting down on the middlemen or 3rd party organizations"
   },
   {
-    tabName: "eGovernment & DAO’s",
+    tabName: "eGovernment & DAOs",
     tabImage: '/images/egov.jpg',
-    tabContent: "Blockchain-based transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served Worldwide"
+    tabContent: "Blockchain-based, transparent, immutable eGov //digital Government// solution for G2 //Government-to// services served worldwide."
   },
   {
     tabName: "Mass Media",
     tabImage: '/images/massmedia.jpg',
-    tabContent: "Enable Indie-producers //Low-budget// and microfinance for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments."
+    tabContent: "Enable Indie-producers //Low-budget// and microfinancing for movies and entertainment. Monetize content utilizing fast & secure real-time Core payments."
   },
   {
     tabName: "GIScience",
     tabImage: '/images/GIS.jpg',
-    tabContent: "Core Blockchain is contributing to Geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries."
+    tabContent: "Core Blockchain is contributing to geographic information science //GIScience// to build a digital trust platform that can be used for multiple industries."
   },
   {
     tabName: "Defence & Security",
     tabImage: '/images/defense.jpg',
-    tabContent: "Core Blockchain can serve for an Autonomous Pod Data Transport…"
+    tabContent: "Core Blockchain can serve as an Autonomous Pod Data Transport //APDT// and connect multiple devices with the reliable and secure Core Blockchain Network globally."
   },
   {
     tabName: "Asset Tokenization",
     tabImage: '/images/tokenization.jpg',
-    tabContent: "Following the concept of using Blockchain technology to secure assets and host multiple securities on the Core Blockchain platform."
+    tabContent: "Following the concept of using blockchain technology to secure assets and host multiple securities on the Core Blockchain platform."
   },
   {
     tabName: "Education",

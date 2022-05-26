@@ -74,7 +74,7 @@ class Developers extends PureComponent{
                 <Container>
                     <Row>
                         <Col sm='12'>
-                            <h3 className='preTitle'>{i18next.t('Connect with Dev Community')}</h3>
+                            <h3 className='preTitle'>{i18next.t('Connect with the Dev Community')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='Designed for Developers'>
                                     Designed for <em>Developers</em>

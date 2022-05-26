@@ -254,7 +254,7 @@ class HeaderNavbar extends PureComponent {
                 <Close />
               </a>
             </Col>
-            <LanguagePage language={i18n.language}/>
+            <LanguagePage language={i18n.language} onClick={this.closeTranslation}/>
           </div>
         </OutsideClickHandler>
       </div>

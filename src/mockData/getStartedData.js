@@ -95,6 +95,17 @@ const NodeDistributionData = [
     tabName: "Images",
     elements: []
   },
+  {
+    tabName: "Tools",
+    elements: [
+      {
+        label: "Grafana",
+        command: "15957",
+        id: "grafana",
+        link: "https://grafana.com/grafana/dashboards/15957"
+      }
+    ]
+  },
 ]
 const YandexDownloadLinks = [
   {

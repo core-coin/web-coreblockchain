@@ -31,7 +31,7 @@ class Contacts extends PureComponent{
                 <Container>
                     <Row className='contacts_row'>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
-                            <h3 className='preTitle'>{t('How to get involved')}</h3>
+                            <h3 className='preTitle'>{t('How to get involved?')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='core mining'>
                                     core <em>mining</em>

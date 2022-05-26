@@ -11,12 +11,19 @@ import { LanguagesData } from '../../mockData'
 
 import './LanguagePage.scss'
 import i18next from 'i18next'
+import { func } from 'prop-types'
 
 const LanguageSort = LanguagesData.sort((a, b) => a.englishName.localeCompare(b.englishName))
 
 class LanguagePage extends PureComponent{
+    static propTypes = {
+        onClick: func,
+    }
+    static defaultProps = {
+        onClick: () => {},
+    }
     render(){
-        const { t, i18n } = this.props
+        const { t, i18n, onClick } = this.props
         return(
             <div className='languagePage page'>
                 <Container>
@@ -33,7 +40,8 @@ class LanguagePage extends PureComponent{
                                     <a className={i18n.language === language.code ? 'languagePage_block languagePage_block-active' : 'languagePage_block'}
                                     onClick={(e) => {
                                         e.preventDefault()
-                                        return i18n.changeLanguage(language.code).then()}
+                                        onClick()
+                                        return i18n.changeLanguage(language.code)}
                                     } href='/'
                                 >
                                         <div className='languagePage_block__text'>

@@ -42,7 +42,7 @@ class NodeCoverage extends PureComponent{
                 <Container>
                     <Row>
                         <Col sm='12' lg={{ size: 12 }}>
-                            <h3 className='preTitle'>{t('Core Network reach')}</h3>
+                            <h3 className='preTitle'>{t('Core Network')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='Planet covered by Blockchain'>
                                Planet covered by <em>Blockchain</em>
