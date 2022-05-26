@@ -98,7 +98,7 @@ const DeveloperTabs = [
     tabContent: "The Core community has adopted many standards that are helpful for developers. Typically these are introduced as Core Improvement Proposals //CIP//. CIPs describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards.",
     tabGreenBtn: "Visit",
     tabGreenBtnLink: "https://cip.coreblockchain.cc/",
-    tabGhostBtn: "Open an issue",
+    tabGhostBtn: "Open an Issue",
     tabGhostBtnLink: "https://github.com/core-coin/cip/issues/new/choose"
   }
 ]
