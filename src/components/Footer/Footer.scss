@@ -154,6 +154,9 @@
         line-height: 32px;
       }
     }
+    &_development {
+      padding-left: 45px;
+    }
   }
   &_copyright {
     border-top: 1px solid #292936;
@@ -185,6 +188,7 @@
     width: 100%;
   }
   &_row {
+    width: 40%;
     @media(max-width: 1366px) {
       margin-right: 15px;
     }

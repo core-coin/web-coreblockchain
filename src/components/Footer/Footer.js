@@ -163,7 +163,7 @@ class Footer extends PureComponent{
                                         <Link to={`/${i18n.language}/terms-conditions`}>{t('Terms and Conditions')}</Link>
                                         <Link to={`/${i18n.language}/privacy-policy`}>{t('Privacy Policy')}</Link>
                                     </Col>
-                                    <Col md="6" className='footer_contact_section'>
+                                    <Col md="6" className='footer_contact_section footer_contact_development'>
                                         <p className="title">{t('Development')}</p>
                                         <a href='https://dev.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Developer Portal')}</a>
                                         <a href='https://cip.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
