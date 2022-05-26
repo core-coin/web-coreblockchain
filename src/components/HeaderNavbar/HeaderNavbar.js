@@ -10,6 +10,7 @@ import {
 } from 'reactstrap'
 import { withNamespaces } from 'react-i18next'
 import {Link} from  'react-router-dom'
+import OutsideClickHandler from 'react-outside-click-handler';
 import { string } from 'prop-types'
 
 import Logo from '../../images/logo.webp'
@@ -110,6 +111,11 @@ class HeaderNavbar extends PureComponent {
 
   onCloseTranslation = (e) => {
     e.preventDefault()
+    this.setState({
+      isTranslationOpen: false,
+    })
+  }
+  closeTranslation = () => {
     this.setState({
       isTranslationOpen: false,
     })
@@ -225,25 +231,28 @@ class HeaderNavbar extends PureComponent {
                     </div>
                   </div>
                 )}
-                <div
-                  className={
-                    this.state.isTranslationOpen
-                      ? 'headerNavbar_language_modal open'
-                      : 'headerNavbar_language_modal'
-                  }
-                >
-                  <Col className='headerNavbar_language_modal__header'>
-                    <a onClick={this.onCloseTranslation} href='/'>
-                      <Close />
-                    </a>
-                  </Col>
-                  <LanguagePage language={i18n.language}/>
-                </div>
               </Navbar>
             </div>
           </Row>
         </Container>
-
+        <OutsideClickHandler
+          onOutsideClick={this.closeTranslation}
+        >
+          <div
+            className={
+              this.state.isTranslationOpen
+                ? 'headerNavbar_language_modal open'
+                : 'headerNavbar_language_modal'
+            }
+          >
+            <Col className='headerNavbar_language_modal__header'>
+              <a onClick={this.onCloseTranslation} href='/'>
+                <Close />
+              </a>
+            </Col>
+            <LanguagePage language={i18n.language}/>
+          </div>
+        </OutsideClickHandler>
       </div>
     )
   }
