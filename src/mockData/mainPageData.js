@@ -90,8 +90,8 @@ const DeveloperTabs = [
     tabContent: "Discuss and open new QA in the Talk community. Developers as well as other community members will assist you to answer your questions.",
     tabGreenBtn: "Visit",
     tabGreenBtnLink: "https://coretalk.space/",
-    tabGhostBtn: "Report Bug",
-    tabGhostBtnLink: "https://dev.coreblockchain.cc/report/bug"
+    tabGhostBtn: "Explore #XCB",
+    tabGhostBtnLink: "https://coretalk.space/tags/xcb"
   },
   {
     tabName: "Core Standards",

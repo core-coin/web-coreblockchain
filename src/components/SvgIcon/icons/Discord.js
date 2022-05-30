@@ -12,9 +12,9 @@ const path = (
     /* eslint-enable */
 );
 const Discord = createIcon(path, {
-  width: 32,
-  height: 32,
-  viewBox: '0 0 32 32'
+    width: 31,
+    height: 22,
+    viewBox: '0 0 31 22'
 })
 
 export default Discord

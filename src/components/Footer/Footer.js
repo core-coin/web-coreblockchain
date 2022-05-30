@@ -104,7 +104,7 @@ class Footer extends PureComponent{
                                     <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
                                     <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
                                     <a href='https://dev.coreblockchain.cc/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
-                                    <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Introduce Project')}</a>
+                                    <a href='mailto:booster@coreblockchain.cc'>{t('Core booster')}</a>
                                     <div className='icons'>
                                         <a href='https://coretalk.space/' target='_blank' rel="noreferrer"><Cube/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
@@ -159,7 +159,7 @@ class Footer extends PureComponent{
                                         <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
                                         <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
                                         <a href='https://dev.coreblockchain.cc/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
-                                        <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Introduce Project')}</a>
+                                        <a href='mailto:booster@coreblockchain.cc'>{t('Core booster')}</a>
                                         <Link to={`/${i18n.language}/terms-conditions`}>{t('Terms and Conditions')}</Link>
                                         <Link to={`/${i18n.language}/privacy-policy`}>{t('Privacy Policy')}</Link>
                                     </Col>

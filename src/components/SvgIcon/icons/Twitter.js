@@ -12,9 +12,9 @@ const path = (
     /* eslint-enable */
 );
 const Twitter = createIcon(path, {
-  width: 32,
-  height: 32,
-  viewBox: '0 0 32 32'
+    width: 29,
+    height: 24,
+    viewBox: '0 0 29 24'
 })
 
 export default Twitter

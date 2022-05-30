@@ -12,9 +12,9 @@ const path = (
     /* eslint-enable */
 );
 const Github = createIcon(path, {
-  width: 32,
-  height: 32,
-  viewBox: '0 0 32 32'
+    width: 30,
+    height: 29,
+    viewBox: '0 0 30 29'
 })
 
 export default Github
