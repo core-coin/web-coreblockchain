@@ -92,9 +92,6 @@
         margin-top: 9px;
         @media (max-width: 767px) {
           margin-top: 0;
-          &:last-child {
-            margin-top: 17px;
-          }
         }
         p {
           color: var(--grey);
