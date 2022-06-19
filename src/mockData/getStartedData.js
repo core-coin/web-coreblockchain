@@ -88,6 +88,18 @@ const NodeDistributionData = [
         id: "ansible",
         command: "",
         link: "https://github.com/core-coin/core-playbook"
+      },
+      {
+        label: "Homebrew ",
+        id: "homebrew",
+        command: "brew tap core-coin/gocore && brew install gocore",
+        link: "https://github.com/core-coin/homebrew-gocore"
+      },
+      {
+        label: "Chocolatey ",
+        id: "chocolatey",
+        command: "choco install go-core",
+        link: "https://community.chocolatey.org/packages/go-core"
       }
     ]
   },
