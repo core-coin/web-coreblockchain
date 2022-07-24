@@ -40,7 +40,7 @@ class Hardware extends PureComponent{
                   theme='ghost'
                   size='small'
                   type={'href'}
-                  href='https://www.thingiverse.com/groups/blockchain'
+                  href='https://www.thingiverse.com/groups/blockchain/things'
                   text={t('Build Your Own')}
                 />
                 {/*<Button*/}

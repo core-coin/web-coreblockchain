@@ -65,7 +65,7 @@ class Contacts extends PureComponent{
                                     size='normal'
                                     text={t('Build Hardware')}
                                     type={'href'}
-                                    href='https://www.thingiverse.com/groups/blockchain'
+                                    href='https://www.thingiverse.com/groups/blockchain/things'
                                 />
                             </div>
                         </Col>
