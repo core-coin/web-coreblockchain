@@ -83,7 +83,7 @@ class NodeCoverage extends PureComponent{
                                             </li>
                                             <li>
                                                 {t('Block Reward')}:
-                                                <span>{blockReward} XCB</span>
+                                                <span>5 XCB</span>
                                             </li>
                                         </ul>
                                         <div className='text-center power-by'>
