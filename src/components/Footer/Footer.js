@@ -92,9 +92,9 @@ class Footer extends PureComponent{
                             <Col xs='12' className={isDevOpen ? 'toggle open' : 'toggle'}>
                                 <a href='/' onClick={this.onToggleDev} className='toggle_header'>{t('Development')} <Plus/></a>
                                 <Collapse isOpen={isDevOpen} className='toggle_content'>
-                                    <a href='https://dev.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Developer Portal')}</a>
-                                    <a href='https://cip.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
-                                    <a href='https://blog.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Blog')}</a>
+                                    <a href='https://dev.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Developer Portal')}</a>
+                                    <a href='https://cip.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
+                                    <a href='https://blog.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Blog')}</a>
                                     <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
                                 </Collapse>
                             </Col>
@@ -135,7 +135,7 @@ class Footer extends PureComponent{
                             <div className='footer_container'>
                                 <Col md="4">
                                     <p className="title">{t('Get in Touch')}</p>
-                                    <a href='mailto:contact@coreblockchain.cc'>contact@coreblockchain.cc</a>
+                                    <a href='mailto:contact@coreblockchain.net'>contact@coreblockchain.net</a>
                                     <div className='footer_contact__icons'>
                                         <a href='https://coretalk.space/' target='_blank' rel="noreferrer"><Cube className="social-media-icon"/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub  className="social-media-icon"/></a>
@@ -158,16 +158,16 @@ class Footer extends PureComponent{
                                         <p className="title">{t('Useful Links')}</p>
                                         <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
                                         <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
-                                        <a href='https://dev.coreblockchain.cc/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
-                                        <a href='mailto:booster@coreblockchain.cc'>{t('Core booster')}</a>
+                                        <a href='https://dev.coreblockchain.net/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
+                                        <a href='mailto:booster@coreblockchain.net'>{t('Core booster')}</a>
                                         <Link to={`/${i18n.language}/terms-conditions`}>{t('Terms and Conditions')}</Link>
                                         <Link to={`/${i18n.language}/privacy-policy`}>{t('Privacy Policy')}</Link>
                                     </Col>
                                     <Col md="6" className='footer_contact_section footer_contact_development'>
                                         <p className="title">{t('Development')}</p>
-                                        <a href='https://dev.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Developer Portal')}</a>
-                                        <a href='https://cip.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
-                                        <a href='https://blog.coreblockchain.cc/' target='_blank' rel="noreferrer">{t('Blog')}</a>
+                                        <a href='https://dev.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Developer Portal')}</a>
+                                        <a href='https://cip.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
+                                        <a href='https://blog.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Blog')}</a>
                                         <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
                                     </Col>
                                 </Row>

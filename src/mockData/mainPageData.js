@@ -1,11 +1,11 @@
 const MenuItemList = [
   {
     label: "Blog",
-    link: "https://blog.coreblockchain.cc/"
+    link: "https://blog.coreblockchain.net/"
   },
   {
     label: "Developers",
-    link: "https://dev.coreblockchain.cc/"
+    link: "https://dev.coreblockchain.net/"
   },
   {
     label: "Talk",
@@ -81,9 +81,9 @@ const DeveloperTabs = [
     tabName: "Developer Portal",
     tabContent: "Explore the interface between a set of APIs, SDKs, or other interactive digital tools and their various stakeholders. Connect blockchain to your running system using Oracles. Interact with blockchain worldwide network.",
     tabGreenBtn: "Visit",
-    tabGreenBtnLink: "https://dev.coreblockchain.cc/",
+    tabGreenBtnLink: "https://dev.coreblockchain.net/",
     tabGhostBtn: "Report Bug",
-    tabGhostBtnLink: "https://dev.coreblockchain.cc/report/bug"
+    tabGhostBtnLink: "https://dev.coreblockchain.net/report/bug"
   },
   {
     tabName: "Core Talk",
@@ -97,7 +97,7 @@ const DeveloperTabs = [
     tabName: "Core Standards",
     tabContent: "The Core community has adopted many standards that are helpful for developers. Typically these are introduced as Core Improvement Proposals //CIP//. CIPs describe standards for the Core platform, including core protocol specifications, client APIs, and contract standards.",
     tabGreenBtn: "Visit",
-    tabGreenBtnLink: "https://cip.coreblockchain.cc/",
+    tabGreenBtnLink: "https://cip.coreblockchain.net/",
     tabGhostBtn: "Open an Issue",
     tabGhostBtnLink: "https://github.com/core-coin/cip/issues/new/choose"
   }
