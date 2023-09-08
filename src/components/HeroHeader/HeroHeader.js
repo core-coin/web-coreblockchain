@@ -47,7 +47,7 @@ class HeroHeader extends PureComponent{
                                 size='normal'
                                 text={t('Learn more')}
                                 type={'href'}
-                                href={'https://blog.coreblockchain.cc/'}
+                                href={'https://blog.coreblockchain.net/'}
                             />
                         </Col>
                         <Col sm='12' md='12' className='hidden-xs'>
