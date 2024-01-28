@@ -6,8 +6,6 @@ lang: en-US
 sidebar: false
 ---
 
-# Brand identity
-
 ## Logo
 
 Core green | Core raven | Core lilia
@@ -61,7 +59,6 @@ CORE BLOCKCHAIN is using [units and sub-units](https://github.com/core-coin/core
 
 - default — core — is `₡`
 - smallest unit — ore — is `ø`
-
 
 ## Trademark
 

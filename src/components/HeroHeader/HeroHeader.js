@@ -26,13 +26,13 @@ class HeroHeader extends PureComponent{
                     <Row className='heroHeader_bg'>
                         <Col sm='12' lg={{ size: 10, offset: 1 }} xl={{ size: 6, offset: 3 }}>
                         <h1 className='title'>
-                        <Trans i18nKey='A New Sense of Integrity'>
-                            A New Sense of <em>Integrity</em>
+                        <Trans i18nKey='A New Era of Blockchain Innovation'>
+                            A New Era of <em>Blockchain Innovation</em>
                         </Trans>
                         </h1>
                         </Col>
                         <Col sm='12' lg={{ size: 8, offset: 2 }} xl={{ size: 6, offset: 3 }}>
-                            <p className='description'>{t('Core Blockchain is a worldwide, open-source, unstoppable, and financial smart contract network.')}</p>
+                            <p className='description'>{t('Revolutionizing blockchain with unparalleled security and decentralized financial solutions, Core Blockchain stands as a beacon of integrity and innovation in the global digital economy. Our platform redefines the blockchain landscape by offering an unstoppable, open-source network that transcends traditional financial boundaries and defining a new internet-of-value.')}</p>
                         </Col>
                         <Col sm={{ size: 10, offset: 1 }} lg={{ size: 8, offset: 2 }} xl={{ size: 6, offset: 3 }} className='text-center'>
                             <Button

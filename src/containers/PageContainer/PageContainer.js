@@ -7,6 +7,7 @@ import MetaTags from 'react-meta-tags'
 import HeroHeader from '../../components/HeroHeader'
 import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
+import Wallets from '../../components/Wallets'
 import Solutions from '../../components/Solutions'
 import Tabs from '../../components/Tabs'
 import TabsSlider from '../../components/Tabs/TabsSlider'
@@ -84,15 +85,14 @@ class PageContainer extends PureComponent {
                 <title>
                   {t('Core Blockchain')}
                 </title>
-                <meta name="description" content="A New Sense of Integrity" />
+                <meta name="description" content="A New Era of Blockchain Innovation" />
                 <meta name="keywords" content="core,blockchain,xcb,xce,xab,new,sense,of,integrity,smart,contract,network,open-source,open,source,mainnet,devin" />
-                <meta property="wallet:xcb" content="cb57bbbb54cdf60fa666fd741be78f794d4608d67109" />
                 <meta property="og:title" content="Core Blockchain" />
-                <meta property="og:description" content="A New Sense of Integrity" />
+                <meta property="og:description" content="A New Era of Blockchain Innovation" />
                 <meta property="og:image" content={Slogan} />
                 <meta property="og:type" content="website" />
                 <meta property="twitter:title" content="Core Blockchain" />
-                <meta property="twitter:description" content="A New Sense of Integrity" />
+                <meta property="twitter:description" content="A New Era of Blockchain Innovation" />
                 <meta property="twitter:image" content={TwitterImage} />
                 <meta property="twitter:card" content="summary" />
                 <script>
@@ -109,7 +109,14 @@ class PageContainer extends PureComponent {
                 </script>
                 <script>
                   {` !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js%22,t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_mhpuy0r6');rdt('track', 'PageVisit');`}
-                  </script>
+                </script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MTZD2YNLF"></script>
+                <script>
+                {`window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-8MTZD2YNLF');`}
+                </script>
                 <noscript><img height="1" width="1" style={{display: "none"}} alt="facebook"
                                src="https://www.facebook.com/tr?id=310638287807412&ev=PageView&noscript=1"
                 /></noscript>
@@ -131,6 +138,7 @@ class PageContainer extends PureComponent {
                     difficulty={this.state.statistics.networkDifficulty}
                     id="community"
                 />
+                <Wallets id="wallets" />
             </>
         )
     }
