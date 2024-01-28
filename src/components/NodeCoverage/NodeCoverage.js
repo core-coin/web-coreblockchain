@@ -55,9 +55,9 @@ class NodeCoverage extends PureComponent{
                                 <div className="block-container">
                                     <div className='nodeCoverage_block nodeCoverage_block_first'>
                                         <h2>{t('ICAN Address')}</h2>
-                                        <p>{t('We introduce a standard for crypto addresses — ICAN — with HRP and checksum, similar to what we all are using for current financial transactions.')}</p>
+                                        <p>{t('Introducing a user-friendly and secure standard for crypto addresses, enhancing transaction reliability and ease.')}</p>
                                        <div className='text-center power-by'>
-                                           <AnimatedArrow text={t('Generate ICAN Address')} url='https://github.com/core-coin/wallet-generator' targetBlack/>
+                                           <AnimatedArrow text={t('Read more about ICAN')} url='https://cip.coreblockchain.net/cip/cbc/cip-100' targetBlack/>
                                        </div>
                                     </div>
                                 </div>
@@ -79,7 +79,7 @@ class NodeCoverage extends PureComponent{
                                             </li>
                                             <li>
                                                 {t('Block Time')}:
-                                                <span>{blockTime} sec</span>
+                                                <span>~7 sec</span>
                                             </li>
                                             <li>
                                                 {t('Block Reward')}:

@@ -153,7 +153,7 @@ class HeaderNavbar extends PureComponent {
               <Navbar expand='md' className="navbar-custom">
                 <div>
                   <Link className='navbar-brand' to={`/${i18n.language}`}>
-                    <img src={Logo} alt='Core Chain' />
+                    <img src={Logo} alt='Core Blockchain' />
                   </Link>
                 </div>
                 {this.state.isMobile || this.state.isSd ? (

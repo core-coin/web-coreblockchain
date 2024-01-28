@@ -1,0 +1,121 @@
+.wallets {
+  border-top: 1px solid var(--grey-darken);
+  background-color: var(--black);
+  //background-image: url(../../images/map-mobile.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 72px 15px 52px;
+  @media (min-width: 768px) {
+    border-top: none;
+    //background-color: var(--black);
+    background-image: none;
+    background-position: 30% top;
+    background-size: 613px 432px;
+    padding: 120px 0;
+    .container {
+      //background-color: var(--black);
+    }
+  }
+  @media (min-width: 1025px) {
+    background-image: url(../../images/mobile-wallets.png);
+    background-position: 150% center;
+    background-size: 897px;
+    padding: 246px 0 226px;
+  }
+  @media (min-width: 1367px) {
+    background-position: 110% center;
+  }
+  .preTitle {
+    margin-bottom: 16px;
+    @media (max-width: 767px) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .title {
+    margin-bottom: 0;
+  }
+
+  .tabs_header {
+    @media (max-width: 767px) {
+      border-bottom: 1px solid var(--grey-darken);
+    }
+    .nav-tabs {
+      border-bottom: 1px solid rgba(99, 99, 120, 0.2);
+      margin-top: 56px;
+      display: flex;
+      justify-content: flex-start;
+      @media (max-width: 767px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        margin-top: 24px;
+        border-bottom: none;
+      }
+      .title {
+        margin-top: 68px;
+      }
+      .nav-link {
+        color: var(--gray);
+        font-family: var(--font-primary);
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: var(--font-primary-weight-bold);
+        cursor: pointer;
+        border: none;
+        padding: 0  0 24px 0;
+        transition: color 0.1s linear;
+        @media (max-width: 767px) {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 40px;
+          padding: 8px 16px;
+        }
+        &:hover{
+          border-bottom: 2px solid var(--green);
+          color: var(--white);
+        }
+        &.active {
+          background-color: transparent;
+          border-bottom: 2px solid var(--green);
+          color: var(--green);
+          @media (max-width: 767px) {
+            border-bottom: 2px solid var(--green);
+          }
+        }
+      }
+    }
+    .nav-item {
+      padding: 0 16px 0 16px;
+    }
+    .nav-item:first-child {
+      padding: 0 16px 0 0;
+    }
+
+  }
+  .tab-content {
+    transition: all 0.3s ease-in-out;
+    .tab-pane {
+      margin-top: 32px;
+      @media (max-width: 767px) {
+        margin-top: 24px;
+        padding-left: 0;
+      }
+      p {
+        color: var(--grey);
+        font-family: var(--font-secondary);
+        font-size: 20px;
+        font-weight: var(--font-secondary-weight-normal);
+        line-height: 32px;
+        margin-bottom: 69px;
+        @media (max-width: 767px) {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 23px;
+
+        }
+      }
+    }
+  }
+}

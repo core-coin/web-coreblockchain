@@ -16,9 +16,9 @@ class PrivacyPolicy extends PureComponent{
         return(
             <Col md='12'>
                 <h2><strong>{t('Privacy Policy')}</strong></h2>
-                <p>{t('At coreblockchain.cc, accessible from coreblockchain.cc, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that are collected and recorded by coreblockchain.cc and how we use it.')}</p>
+                <p>{t('At coreblockchain.net, accessible from coreblockchain.net, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that are collected and recorded by coreblockchain.net and how we use it.')}</p>
                 <p>{t('If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.')}</p>
-                <p>{t('This Privacy Policy applies only to our online activities and is valid for visitors of our website with regards to the information that they shared and/or collected at coreblockchain.cc. This policy is not applicable to any information collected offline or via channels other than this website.')}</p>
+                <p>{t('This Privacy Policy applies only to our online activities and is valid for visitors of our website with regards to the information that they shared and/or collected at coreblockchain.net. This policy is not applicable to any information collected offline or via channels other than this website.')}</p>
                 <h2>{t('Consent')}</h2>
                 <p>{t('By using our website, you hereby consent to our Privacy Policy and agree to its terms.')}</p>
                 <h2>{t('Information We Collect')}</h2>
@@ -36,16 +36,16 @@ class PrivacyPolicy extends PureComponent{
                     <li>{t('Find and prevent fraud')}</li>
                 </ul>
                 <h2>{t('Log Files')}</h2>
-                <p>{t('coreblockchain.cc follows a standard procedure of using log files. These files log visitors in when they visit websites. All hosting companies do this and are a part of hosting services\' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and in some cases the number of clicks. These are not linked to any information that is personally identifiable. The purpose of gathering the information is to analyze trends, administer the site, track users\' movement on the website, and gather demographic information.')}
+                <p>{t('coreblockchain.net follows a standard procedure of using log files. These files log visitors in when they visit websites. All hosting companies do this and are a part of hosting services\' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and in some cases the number of clicks. These are not linked to any information that is personally identifiable. The purpose of gathering the information is to analyze trends, administer the site, track users\' movement on the website, and gather demographic information.')}
                 </p>
                 <h2>{t('Cookies and Web Beacons')}</h2>
-                <p>{t('Like any other website, coreblockchain.cc uses \'cookies\'. These cookies are used to store information that includes visitors\' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users\' experience by customizing our web page content based on visitors\' browser type and/or other information.')}</p>
+                <p>{t('Like any other website, coreblockchain.net uses \'cookies\'. These cookies are used to store information that includes visitors\' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users\' experience by customizing our web page content based on visitors\' browser type and/or other information.')}</p>
                 <h2>{t('Advertising Partners Privacy Policies')}</h2>
-                <p>{t('You may consult this list to find the Privacy Policy for each of the advertising partners of coreblockchain.cc.')}</p>
-                <p>{t('Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on coreblockchain.cc, which are sent directly to users\' browsers. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on the websites you visit.')}</p>
-                <p>{t('Note that coreblockchain.cc has no access to or control over these cookies that are used by third-party advertisers.')}</p>
+                <p>{t('You may consult this list to find the Privacy Policy for each of the advertising partners of coreblockchain.net.')}</p>
+                <p>{t('Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on coreblockchain.net, which are sent directly to users\' browsers. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on the websites you visit.')}</p>
+                <p>{t('Note that coreblockchain.net has no access to or control over these cookies that are used by third-party advertisers.')}</p>
                 <h2>{t('Third-Party Privacy Policies')}</h2>
-                <p>{t('coreblockchain.cc/\'s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.')}</p>
+                <p>{t('coreblockchain.net/\'s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.')}</p>
                 <p>{t('You can choose to disable cookies through your individual browser options. To get more detailed information about cookie management with specific web browsers, visit the browsers\' respective websites.')}</p>
                 <h2>{t('CCPA Privacy Rights (Do Not Sell My Personal Information)')}</h2>
                 <p>{t('Under the CCPA, among other rights, consumers have the right to')}:</p>
@@ -69,7 +69,7 @@ class PrivacyPolicy extends PureComponent{
                 </ul>
                 <h2>{t('Children\'s Information')}</h2>
                 <p>{t('Another part of our priorities is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.')}</p>
-                <p>{t('coreblockchain.cc does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.')}</p>
+                <p>{t('coreblockchain.net does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.')}</p>
             </Col>
         )
     }

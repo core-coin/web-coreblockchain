@@ -40,8 +40,8 @@ class Hardware extends PureComponent{
                   theme='ghost'
                   size='small'
                   type={'href'}
-                  href='https://www.thingiverse.com/groups/blockchain/things'
-                  text={t('Build Your Own')}
+                  href='https://blog.coreblockchain.net/mining'
+                  text={t('Start mining')}
                 />
                 {/*<Button*/}
                 {/*  mobileFullWidth*/}

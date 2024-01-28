@@ -53,32 +53,32 @@ class Offers extends PureComponent{
                                 <div className='offers_block'>
                                     <img src={Decentralization2} className="img-fluid" alt="" />
                                     <h4>{t('Decentralization')}</h4>
-                                    <p>{t('Core distributed computing platform is reliable, secure, and available for everyone.')}</p>
+                                    <p>{t('Reliable, secure, and universally accessible distributed computing platform ensures fair and transparent access, illustrated by our global voting system for network decisions.')}</p>
                                 </div>
                                 <div className='offers_block'>
                                   <img src={Security} className="img-fluid" alt="" />
                                     <h4>{t('Security')}</h4>
-                                    <p>{t('Twisted Edwards Curve — Edwards448 — 224-bit //Spinal Tap-grade// security level.')}</p>
+                                    <p>{t('Twisted Edwards Curve – Edwards448 encryption provides 224-bit, Spinal Tap-grade security, safeguarding transactions even in the most demanding financial environments.')}</p>
                                 </div>
                                 <div className='offers_block'>
                                     <img src={Interoperability} className="img-fluid" alt="" />
                                     <h4>{t('Interoperability')}</h4>
-                                    <p>{t('Connecting the world using Oracles and distributing financial instruments through Smart Contracts.')}</p>
+                                    <p>{t('Connect diverse financial systems seamlessly with Oracles and Smart Contracts, enabling versatile and innovative financial applications.')}</p>
                                 </div>
                                 <div className='offers_block'>
                                     <img src={Coverage} className="img-fluid" alt="" />
                                     <h4>{t('Coverage')}</h4>
-                                    <p>{t('Join the borderless network anywhere in the world run on various networks.')}</p>
+                                    <p>{t('Embrace a borderless network accessible from anywhere in the world, adaptable to various technological environments.')}</p>
                                 </div>
                             <div className='offers_block'>
                                 <img src={Persistence} className="img-fluid" alt="" />
-                                <h4>{t('Persistence')}</h4>
-                                <p>{t('Immutable blockchain transactions are stored in tamper-proof P2P ledgers.')}</p>
+                                <h4>{t('Trustworthy')}</h4>
+                                <p>{t('Immutable blockchain transactions where integrity is defined by data being securely stored in tamper-proof P2P ledgers.')}</p>
                             </div>
                             <div className='offers_block'>
                                 <img src={Intelligence} className="img-fluid" alt="" />
                                 <h4>{t('Swarm Intelligence')}</h4>
-                                <p>{t('Core Blockchain is using a self-organized system — Boids — to transact and route the data.')}</p>
+                                <p>{t('Core Blockchain uses self-organized nodes, optimizing data transaction and routing for maximum efficiency and reliability.')}</p>
                             </div>
                             </Slider>
                         </Col>

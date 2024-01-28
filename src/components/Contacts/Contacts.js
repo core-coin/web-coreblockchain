@@ -31,13 +31,13 @@ class Contacts extends PureComponent{
                 <Container>
                     <Row className='contacts_row'>
                         <Col sm='12' lg='7' xl={{ size: 6, offset: 1 }} className='contacts_right'>
-                            <h3 className='preTitle'>{t('How to get involved?')}</h3>
+                            <h3 className='preTitle'>{t('Get involved in Core Mining')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='core mining'>
                                     core <em>mining</em>
                                 </Trans>
                             </h1>
-                            <p className='description'>{t('Core Blockchain represents a blockchain revolution as the first-ever next-generation Proof of Work, referred to as the Proof of Distributed Efficiency //PoDE//, in the world. Distributed Efficiency refers to transactions being confirmed on a network in any location. Using energy that could be waste energy, grid energy, or any other form of energy production, and or a combination thereof is not only environmentally friendly but also self-sustainable.')}</p>
+                            <p className='description'>{t('PoDE (Proof of Distributed Efficiency): Our innovative mining algorithm PoDE based on eco-friendly energy consumption, promoting environmental sustainability while maintaining high network efficiency.')}</p>
                             <div className='contacts_right__info'>
                                 {/*<div className='contacts_right__info-block'>*/}
                                 {/*    <p>{t('Block time')}</p>*/}
@@ -63,9 +63,9 @@ class Contacts extends PureComponent{
                                 <Button
                                     theme='ghost'
                                     size='normal'
-                                    text={t('Build Hardware')}
+                                    text={t('Start Mining')}
                                     type={'href'}
-                                    href='https://www.thingiverse.com/groups/blockchain/things'
+                                    href='https://blog.coreblockchain.net/mining'
                                 />
                             </div>
                         </Col>
