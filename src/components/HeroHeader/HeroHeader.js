@@ -26,7 +26,7 @@ class HeroHeader extends PureComponent{
                     <Row className='heroHeader_bg'>
                         <Col sm='12' lg={{ size: 10, offset: 1 }} xl={{ size: 6, offset: 3 }}>
                         <h1 className='title'>
-                        <Trans i18nKey='A New Sense of Integrity'>
+                        <Trans i18nKey='A New Era of Blockchain Innovation'>
                             A New Era of <em>Blockchain Innovation</em>
                         </Trans>
                         </h1>
