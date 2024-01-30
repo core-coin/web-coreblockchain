@@ -85,14 +85,14 @@ class PageContainer extends PureComponent {
                 <title>
                   {t('Core Blockchain')}
                 </title>
-                <meta name="description" content="A New Era of Blockchain Innovation" />
+                <meta name="description" content="Revolutionizing blockchain with unparalleled security and decentralized financial solutions, Core Blockchain stands as a beacon of integrity and innovation in the Digital Economy." />
                 <meta name="keywords" content="core,blockchain,xcb,xce,xab,new,sense,of,integrity,smart,contract,network,open-source,open,source,mainnet,devin" />
                 <meta property="og:title" content="Core Blockchain" />
-                <meta property="og:description" content="A New Era of Blockchain Innovation" />
+                <meta property="og:description" content="Revolutionizing blockchain with unparalleled security and decentralized financial solutions, Core Blockchain stands as a beacon of integrity and innovation in the Digital Economy." />
                 <meta property="og:image" content={Slogan} />
                 <meta property="og:type" content="website" />
                 <meta property="twitter:title" content="Core Blockchain" />
-                <meta property="twitter:description" content="A New Era of Blockchain Innovation" />
+                <meta property="twitter:description" content="Revolutionizing blockchain with unparalleled security and decentralized financial solutions, Core Blockchain stands as a beacon of integrity and innovation in the Digital Economy." />
                 <meta property="twitter:image" content={TwitterImage} />
                 <meta property="twitter:card" content="summary" />
                 <script>
