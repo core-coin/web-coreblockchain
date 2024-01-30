@@ -5,7 +5,7 @@ import { setLanguage, fillSearchIndex, setMarkdownFiles } from './actions'
 
 const initialState = {
     language: 'en',
-    blockTime: 200,
+    blockTime: 7,
     algorithm: 'RandomY',
     difficulty: 333,
     searchIndex: null,

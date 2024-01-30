@@ -1,29 +1,23 @@
 .developers {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  //background-image: url(../../images/map-mobile.svg);
   background-position: top;
   background-repeat: no-repeat;
   padding: 72px 15px 52px;
   @media (min-width: 768px) {
     border-top: none;
-    //background-color: var(--black);
     background-image: none;
     background-position: 30% top;
     background-size: 613px 432px;
     padding: 120px 0;
+  }
+  @media (min-width: 1200px) {
     .container {
-      //background-color: var(--black);
+      background-image: url(../../images/developers-medium.webp);
+      background-position: calc(100% + 100px) center;
+      background-size: 700px;
+      background-repeat: no-repeat;
     }
-  }
-  @media (min-width: 1025px) {
-    background-image: url(../../images/developers-medium.webp);
-    background-position: 150% center;
-    background-size: 897px;
-    padding: 246px 0 226px;
-  }
-  @media (min-width: 1367px) {
-    background-position: 110% center;
   }
   .preTitle {
     margin-bottom: 16px;

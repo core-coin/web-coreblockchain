@@ -1,7 +1,6 @@
 .wallets {
   border-top: 1px solid var(--grey-darken);
   background-color: var(--black);
-  //background-image: url(../../images/map-mobile.svg);
   background-position: top;
   background-repeat: no-repeat;
   padding: 72px 15px 52px;
@@ -12,18 +11,14 @@
     background-position: 30% top;
     background-size: 613px 432px;
     padding: 120px 0;
+  }
+  @media (min-width: 1200px) {
     .container {
-      //background-color: var(--black);
+      background-image: url(../../images/mobile-wallets.png);
+      background-position: calc(100% + 100px) center;
+      background-size: 700px;
+      background-repeat: no-repeat;
     }
-  }
-  @media (min-width: 1025px) {
-    background-image: url(../../images/mobile-wallets.png);
-    background-position: 150% center;
-    background-size: 897px;
-    padding: 246px 0 226px;
-  }
-  @media (min-width: 1367px) {
-    background-position: 110% center;
   }
   .preTitle {
     margin-bottom: 16px;
