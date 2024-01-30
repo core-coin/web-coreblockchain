@@ -58,7 +58,7 @@ class PageContainer extends PureComponent {
 
           const statisticsData =  {
               blockchainHeight: numberToString(numberFormat(parseInt(res.data.nodes[0].height))),
-              networkHashrate: numberToString(siFormat((networkDifficultyData / blockTimeData).toFixed(2), 2)),
+              //networkHashrate: numberToString(siFormat((networkDifficultyData / blockTimeData).toFixed(2), 2)),
               networkDifficulty: siFormat(parseInt(res.data.nodes[0].difficulty), 2),
               blockTime: numberToString(ago(toStringDateTime(res.data.stats.lastBlockFound))),
               blockReward: numberToString(numberFormat(toXCBPrice(parseInt(res.data.blockReward)))),

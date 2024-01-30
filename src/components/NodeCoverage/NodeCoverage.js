@@ -45,7 +45,7 @@ class NodeCoverage extends PureComponent{
                             <h3 className='preTitle'>{t('Core Network')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='Planet covered by Blockchain'>
-                               Planet covered by <em>Blockchain</em>
+                                    Planet covered by <em>Blockchain</em>
                                 </Trans>
                             </h1>
                             <p className='description'>{t('Core Blockchain can operate on various platforms and environments - including mesh networks, satellite streams, mobile internet connection, and more.')}</p>
@@ -68,10 +68,6 @@ class NodeCoverage extends PureComponent{
                                             <li>
                                                 {t('Blockchain Height')}:
                                                 <span>{blockchainHeight}</span>
-                                            </li>
-                                            <li>
-                                                {t('Network Hashrate')}:
-                                                <span>{networkHashrate}h/s</span>
                                             </li>
                                             <li>
                                                 {t('Network Difficulty')}:

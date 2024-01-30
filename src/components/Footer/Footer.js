@@ -96,7 +96,6 @@ class Footer extends PureComponent{
                                     <a href='https://cip.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
                                     <a href='https://blog.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Blog')}</a>
                                     <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
-                                    <a href='https://dev.coreblockchain.net/vulnerability' target='_blank' rel="noreferrer">{t('Report Vulnerability')}</a>
                                     <a href='https://payto.money' target='_blank' rel="noreferrer">{t('Payto Money')}</a>
                                 </Collapse>
                             </Col>
@@ -105,9 +104,9 @@ class Footer extends PureComponent{
                                 <Collapse isOpen={isLinksOpen} className='toggle_content'>
                                     <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
                                     <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
-                                    <a href='https://dev.coreblockchain.cc/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
+                                    <a href='https://dev.coreblockchain.net/vulnerability' target='_blank' rel="noreferrer">{t('Report Vulnerability')}</a>
                                     <a href='/#booster'>{t('Core booster')}</a>
-                                    <a href='/brand-identity'>{t('Brand Identity')}</a>
+                                    <a href='https://dev.coreblockchain.cc/brand-identity' target='_blank' rel="noreferrer">{t('Brand Identity')}</a>
                                     <div className='icons'>
                                         <a href='https://coretalk.space/' target='_blank' rel="noreferrer"><Cube/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
@@ -161,9 +160,9 @@ class Footer extends PureComponent{
                                         <p className="title">{t('Useful Links')}</p>
                                         <a href='https://github.com/core-coin/go-core/issues' target='_blank' rel="noreferrer">{t('Issues List')}</a>
                                         <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
-                                        <a href='https://dev.coreblockchain.net/report/bug' target='_blank' rel="noreferrer">{t('Report Bug')}</a>
+                                        <a href='https://dev.coreblockchain.net/vulnerability' target='_blank' rel="noreferrer">{t('Report Vulnerability')}</a>
                                         <a href='/#booster'>{t('Core booster')}</a>
-                                        <a href='/brand-identity'>{t('Brand Identity')}</a>
+                                        <a href='https://dev.coreblockchain.cc/brand-identity' target='_blank' rel="noreferrer">{t('Brand Identity')}</a>
                                         <Link to={`/${i18n.language}/terms-conditions`}>{t('Terms and Conditions')}</Link>
                                         <Link to={`/${i18n.language}/privacy-policy`}>{t('Privacy Policy')}</Link>
                                     </Col>
@@ -173,7 +172,6 @@ class Footer extends PureComponent{
                                         <a href='https://cip.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Core Improvement Proposals')}</a>
                                         <a href='https://blog.coreblockchain.net/' target='_blank' rel="noreferrer">{t('Blog')}</a>
                                         <a href='https://coretalk.space/' target='_blank' rel="noreferrer">{t('Core Talk')}</a>
-                                        <a href='https://dev.coreblockchain.net/vulnerability' target='_blank' rel="noreferrer">{t('Report Vulnerability')}</a>
                                         <a href='https://payto.money' target='_blank' rel="noreferrer">{t('Payto Money')}</a>
                                     </Col>
                                 </Row>
