@@ -106,7 +106,7 @@ class Footer extends PureComponent{
                                     <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
                                     <a href='https://dev.coreblockchain.net/vulnerability' target='_blank' rel="noreferrer">{t('Report Vulnerability')}</a>
                                     <a href='/#booster'>{t('Core booster')}</a>
-                                    <a href='https://dev.coreblockchain.cc/brand-identity' target='_blank' rel="noreferrer">{t('Brand Identity')}</a>
+                                    <a href='https://dev.coreblockchain.net/next/brand-identity' target='_blank' rel="noreferrer">{t('Brand Identity')}</a>
                                     <div className='icons'>
                                         <a href='https://coretalk.space/' target='_blank' rel="noreferrer"><Cube/></a>
                                         <a href='https://github.com/cryptohub-digital' target='_blank' rel="noreferrer"><Cryptohub/></a>
@@ -162,7 +162,7 @@ class Footer extends PureComponent{
                                         <a href='https://github.com/core-coin/go-core/pulls' target='_blank' rel="noreferrer">{t('Pull Requests')}</a>
                                         <a href='https://dev.coreblockchain.net/vulnerability' target='_blank' rel="noreferrer">{t('Report Vulnerability')}</a>
                                         <a href='/#booster'>{t('Core booster')}</a>
-                                        <a href='https://dev.coreblockchain.cc/brand-identity' target='_blank' rel="noreferrer">{t('Brand Identity')}</a>
+                                        <a href='https://dev.coreblockchain.net/next/brand-identity' target='_blank' rel="noreferrer">{t('Brand Identity')}</a>
                                         <Link to={`/${i18n.language}/terms-conditions`}>{t('Terms and Conditions')}</Link>
                                         <Link to={`/${i18n.language}/privacy-policy`}>{t('Privacy Policy')}</Link>
                                     </Col>
