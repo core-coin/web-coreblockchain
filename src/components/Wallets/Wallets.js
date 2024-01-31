@@ -74,6 +74,7 @@ class Wallets extends PureComponent{
                 <Container>
                     <Row>
                         <Col sm='12'>
+                            <a id="wallets"/>
                             <h3 className='preTitle'>{i18next.t('Mobile Wallets')}</h3>
                             <h1 className='title'>
                                 <Trans i18nKey='Keep digital assets safe'>

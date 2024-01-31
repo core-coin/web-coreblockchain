@@ -55,7 +55,7 @@ class NodeCoverage extends PureComponent{
                                 <div className="block-container">
                                     <div className='nodeCoverage_block nodeCoverage_block_first'>
                                         <h2>{t('ICAN Address')}</h2>
-                                        <p>{t('Introducing a user-friendly and secure standard for crypto addresses, enhancing transaction reliability and ease.')}</p>
+                                        <p>{t('Introducing a user-friendly, secure crypto address standard, bolstering transaction reliability. Discover dependable, community-friendly blockchain addresses that align with modern financial solutions. Incorporating checksums minimizes address entry errors. ICAN adopts familiar financial standards for simplicity.')}</p>
                                        <div className='text-center power-by'>
                                            <AnimatedArrow text={t('Read more about ICAN')} url='https://cip.coreblockchain.net/cip/cbc/cip-100' targetBlack/>
                                        </div>

@@ -52,10 +52,10 @@ class Mining extends PureComponent {
                 </div>
                 <div className="tab-content-item safe-storage">
                   <div className="tab-content-item-tag safe-storage-tag">
-                    <p className="tab-content-item-title safe-storage-title">{t("Mobile Wallet")}</p>
+                    <p className="tab-content-item-title safe-storage-title">{t("Mobile Wallets")}</p>
                   </div>
                   <div className="tab-content-item-icons safe-storage-icons">
-                    <a href="https://corepass.net/" className="tab-content-item-link safe-storage-link" target='_blank' rel="noreferrer">
+                    <a href="/#wallets" className="tab-content-item-link safe-storage-link">
                       <img src={Arrow} alt="arrow right" className="arrow-right" />
                     </a>
                   </div>
