@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import MetaTags from 'react-meta-tags'
 
+import AI from '../../components/AI'
 import HeroHeader from '../../components/HeroHeader'
 import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
@@ -33,6 +34,8 @@ class PageContainer extends PureComponent {
         networkDifficulty: "",
         blockTime: "",
         blockReward: "",
+        circulatingSupply: "",
+        marketCap: "",
       }
     }
   }
@@ -50,24 +53,34 @@ class PageContainer extends PureComponent {
     this.setState({isSd:isSd()});
   };
 
-    componentDidMount() {
-      axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats')
-        .then(res => {
-          const networkDifficultyData = res.data.nodes[0].difficulty
-          const  blockTimeData = res.data.nodes[0].blocktime
+  componentDidMount() {
+    axios.all([
+      axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats'),
+      axios.get('https://api.ping.exchange/marketdata/api/v1/tickers'),
+      axios.get('https://blockindex.net/api/v2/circulating-supply')
+    ]).then(axios.spread((statsResponse, priceResponse, supplyResponse) => {
+      const networkDifficultyData = statsResponse.data.nodes[0].difficulty;
+      const blockTimeData = statsResponse.data.nodes[0].blocktime;
+      const xcbUsdcPrice = priceResponse.data.find(ticker => ticker.symbol === "xcb_usdc").lastPrice;
+      const circulatingSupply = supplyResponse.data.result;
+      const marketCap = xcbUsdcPrice * circulatingSupply;
 
-          const statisticsData =  {
-              blockchainHeight: numberToString(numberFormat(parseInt(res.data.nodes[0].height))),
-              //networkHashrate: numberToString(siFormat((networkDifficultyData / blockTimeData).toFixed(2), 2)),
-              networkDifficulty: siFormat(parseInt(res.data.nodes[0].difficulty), 2),
-              blockTime: numberToString(ago(toStringDateTime(res.data.stats.lastBlockFound))),
-              blockReward: numberToString(numberFormat(toXCBPrice(parseInt(res.data.blockReward)))),
-          }
-          this.setState({ statistics:  statisticsData })
-        })
-      window.addEventListener('resize', this.updateIsMobile);
-      window.addEventListener('resize', this.updateIsSd);
+      const statisticsData = {
+          blockchainHeight: numberToString(numberFormat(parseInt(statsResponse.data.nodes[0].height))),
+          networkDifficulty: siFormat(parseInt(statsResponse.data.nodes[0].difficulty), 2),
+          circulatingSupply: numberToString(numberFormat(circulatingSupply)),
+          marketCap: numberToString(numberFormat(marketCap)),
+      };
+
+      this.setState({ statistics: statisticsData });
+    })).catch(error => {
+      console.error("Error fetching data: ", error);
+    });
+
+    window.addEventListener('resize', this.updateIsMobile);
+    window.addEventListener('resize', this.updateIsSd);
     }
+
     componentWillUnmount() {
       window.removeEventListener('resize', this.updateIsMobile);
       window.removeEventListener('resize', this.updateIsSd);
@@ -132,8 +145,11 @@ class PageContainer extends PureComponent {
                     networkDifficulty={this.state.statistics.networkDifficulty}
                     blockTime={this.state.statistics.blockTime}
                     blockReward={this.state.statistics.blockReward}
+                    circulatingSupply={this.state.statistics.circulatingSupply}
+                    marketCap={this.state.statistics.marketCap}
                     id="enterprise"
                 />
+                <AI id="ai" />
                 <Contacts
                     difficulty={this.state.statistics.networkDifficulty}
                     id="community"
