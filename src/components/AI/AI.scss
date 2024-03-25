@@ -1,0 +1,55 @@
+.ai {
+  border-top: 1px solid var(--grey-darken);
+  background-color: var(--black);
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 72px 15px 52px;
+  @media (min-width: 768px) {
+    border-top: none;
+    //background-color: var(--black);
+    background-image: none;
+    background-position: 30% top;
+    background-size: 613px 432px;
+    padding: 120px 0;
+  }
+  @media (min-width: 1200px) {
+    .container {
+      background-image: url(../../images/corecode.png);
+      background-position: 100% center;
+      background-size: 500px;
+      background-repeat: no-repeat;
+    }
+  }
+  .preTitle {
+    margin-bottom: 16px;
+    @media (max-width: 767px) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+  .title {
+    margin-bottom: 0;
+  }
+  .pane {
+    margin-top: 32px;
+    @media (max-width: 767px) {
+      margin-top: 24px;
+      padding-left: 0;
+    }
+    p {
+      color: var(--grey);
+      font-family: var(--font-secondary);
+      font-size: 20px;
+      font-weight: var(--font-secondary-weight-normal);
+      line-height: 32px;
+      @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 23px;
+      }
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
