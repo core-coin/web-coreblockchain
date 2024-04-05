@@ -19,8 +19,21 @@ import { TargetIndustries } from '../../mockData'
 import Slogan from '../../images/core-blockchain-slogan.jpg'
 import TwitterImage from '../../images/core-blockchain-twitter.jpg'
 
-import { isMobile, isSd, numberToString, toStringDateTime, siFormat, numberFormat, toXCBPrice, ago } from '../../utils'
+import { isMobile, isSd, numberToString, siFormat, numberFormat } from '../../utils'
 import axios from 'axios'
+import ExchNumberFormat from 'exchange-rounding'
+
+const priceFrmt = new ExchNumberFormat(undefined, {
+  style: 'currency',
+  currency: 'USD',
+  currencyDisplay: 'symbol'
+});
+
+const circulatingSupplyFrmt = new ExchNumberFormat(undefined, {
+  style: 'decimal',
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
 
 class PageContainer extends PureComponent {
   constructor(props) {
@@ -30,12 +43,12 @@ class PageContainer extends PureComponent {
       isSd: isSd(),
       statistics: {
         blockchainHeight: "",
-        networkHashrate: "",
         networkDifficulty: "",
         blockTime: "",
         blockReward: "",
         circulatingSupply: "",
         marketCap: "",
+        priceUsd: "",
       }
     }
   }
@@ -56,20 +69,17 @@ class PageContainer extends PureComponent {
   componentDidMount() {
     axios.all([
       axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats'),
-      axios.get('https://api.ping.exchange/marketdata/api/v1/tickers'),
-      axios.get('https://blockindex.net/api/v2/circulating-supply')
-    ]).then(axios.spread((statsResponse, priceResponse, supplyResponse) => {
-      const networkDifficultyData = statsResponse.data.nodes[0].difficulty;
-      const blockTimeData = statsResponse.data.nodes[0].blocktime;
-      const xcbUsdcPrice = priceResponse.data.find(ticker => ticker.symbol === "xcb_usdc").lastPrice;
-      const circulatingSupply = supplyResponse.data.result;
-      const marketCap = xcbUsdcPrice * circulatingSupply;
-
+      axios.get('https://coincodex.com/api/coincodex/get_coin/xcb3'),
+    ]).then(axios.spread((statsResponse, coinResponse) => {
+      const xcbUsdPrice = coinResponse.data.last_price_usd;
+      const circulatingSupply = coinResponse.data.supply;
+      const marketCap = xcbUsdPrice * circulatingSupply;
       const statisticsData = {
           blockchainHeight: numberToString(numberFormat(parseInt(statsResponse.data.nodes[0].height))),
           networkDifficulty: siFormat(parseInt(statsResponse.data.nodes[0].difficulty), 2),
-          circulatingSupply: numberToString(numberFormat(circulatingSupply)),
-          marketCap: numberToString(numberFormat(marketCap)),
+          circulatingSupply: circulatingSupplyFrmt.format(circulatingSupply),
+          marketCap: priceFrmt.format(marketCap),
+          priceUsd: priceFrmt.format(xcbUsdPrice),
       };
 
       this.setState({ statistics: statisticsData });
@@ -141,12 +151,12 @@ class PageContainer extends PureComponent {
                 <Developers  id="developers" />
                 <NodeCoverage
                     blockchainHeight={this.state.statistics.blockchainHeight}
-                    networkHashrate={this.state.statistics.networkHashrate}
                     networkDifficulty={this.state.statistics.networkDifficulty}
                     blockTime={this.state.statistics.blockTime}
                     blockReward={this.state.statistics.blockReward}
                     circulatingSupply={this.state.statistics.circulatingSupply}
                     marketCap={this.state.statistics.marketCap}
+                    priceUsd={this.state.statistics.priceUsd}
                     id="enterprise"
                 />
                 <AI id="ai" />

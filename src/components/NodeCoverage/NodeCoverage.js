@@ -9,39 +9,24 @@ import { withNamespaces, Trans } from 'react-i18next'
 import Button from '../Button'
 import './NodeCoverage.scss'
 import AnimatedArrow from '../AnimatedArrow/AnimatedArrow'
-import ExchNumberFormat from 'exchange-rounding';
 
-const marketCapFrmt = new ExchNumberFormat(undefined, {
-    style: 'currency',
-    currency: 'USD',
-    currencyDisplay: 'symbol'
-});
-
-const circulatingSupplyFrmt = new ExchNumberFormat(undefined, {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-});
-
-class NodeCoverage extends PureComponent{
+class NodeCoverage extends PureComponent {
     static propTypes = {
         blockchainHeight: string,
         networkHashrate: string,
         networkDifficulty: string,
-        blockTime: string,
-        blockReward: string,
         circulatingSupply: string,
         marketCap: string,
+        priceUsd: string,
     }
 
     static defaultProps = {
         blockchainHeight: "",
         networkHashrate: "",
         networkDifficulty: "",
-        blockTime: "",
-        blockReward: "",
         circulatingSupply: "",
         marketCap: "",
+        priceUsd: "",
     }
 
     renderDigit = (item, index) => (
@@ -51,7 +36,7 @@ class NodeCoverage extends PureComponent{
     )
 
     render(){
-        const { t, blockchainHeight, networkDifficulty, circulatingSupply, marketCap } = this.props
+        const { t, blockchainHeight, networkDifficulty, circulatingSupply, marketCap, priceUsd } = this.props;
 
         return(
             <div className='nodeCoverage'>
@@ -91,11 +76,15 @@ class NodeCoverage extends PureComponent{
                                             </li>
                                             <li>
                                                 {t('Circulating Supply')}:
-                                                <span>{circulatingSupplyFrmt.format(circulatingSupply)}</span>
+                                                <span>{circulatingSupply}</span>
                                             </li>
                                             <li>
                                                 {t('Market Cap')}:
-                                                <span>{marketCapFrmt.format(marketCap)}</span>
+                                                <span>{marketCap}</span>
+                                            </li>
+                                            <li>
+                                                {t('Price')}:
+                                                <span>{priceUsd}</span>
                                             </li>
                                         </ul>
                                         <div className='text-center power-by'>
