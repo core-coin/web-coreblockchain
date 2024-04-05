@@ -10,22 +10,23 @@ import Button from '../Button'
 import './NodeCoverage.scss'
 import AnimatedArrow from '../AnimatedArrow/AnimatedArrow'
 
-
-class NodeCoverage extends PureComponent{
+class NodeCoverage extends PureComponent {
     static propTypes = {
         blockchainHeight: string,
         networkHashrate: string,
         networkDifficulty: string,
-        blockTime: string,
-        blockReward: string,
+        circulatingSupply: string,
+        marketCap: string,
+        priceUsd: string,
     }
 
     static defaultProps = {
         blockchainHeight: "",
         networkHashrate: "",
         networkDifficulty: "",
-        blockTime: "",
-        blockReward: "",
+        circulatingSupply: "",
+        marketCap: "",
+        priceUsd: "",
     }
 
     renderDigit = (item, index) => (
@@ -35,7 +36,7 @@ class NodeCoverage extends PureComponent{
     )
 
     render(){
-        const { t, blockchainHeight, networkHashrate, networkDifficulty, blockTime, blockReward } = this.props
+        const { t, blockchainHeight, networkDifficulty, circulatingSupply, marketCap, priceUsd } = this.props;
 
         return(
             <div className='nodeCoverage'>
@@ -74,12 +75,16 @@ class NodeCoverage extends PureComponent{
                                                 <span>{networkDifficulty}h/s</span>
                                             </li>
                                             <li>
-                                                {t('Block Time')}:
-                                                <span>~7 sec</span>
+                                                {t('Circulating Supply')}:
+                                                <span>{circulatingSupply}</span>
                                             </li>
                                             <li>
-                                                {t('Block Reward')}:
-                                                <span>5 XCB</span>
+                                                {t('Market Cap')}:
+                                                <span>{marketCap}</span>
+                                            </li>
+                                            <li>
+                                                {t('Price')}:
+                                                <span>{priceUsd}</span>
                                             </li>
                                         </ul>
                                         <div className='text-center power-by'>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import MetaTags from 'react-meta-tags'
 
+import AI from '../../components/AI'
 import HeroHeader from '../../components/HeroHeader'
 import NodeCoverage from '../../components/NodeCoverage'
 import Developers from '../../components/Developers'
@@ -18,8 +19,21 @@ import { TargetIndustries } from '../../mockData'
 import Slogan from '../../images/core-blockchain-slogan.jpg'
 import TwitterImage from '../../images/core-blockchain-twitter.jpg'
 
-import { isMobile, isSd, numberToString, toStringDateTime, siFormat, numberFormat, toXCBPrice, ago } from '../../utils'
+import { isMobile, isSd, numberToString, siFormat, numberFormat } from '../../utils'
 import axios from 'axios'
+import ExchNumberFormat from 'exchange-rounding'
+
+const priceFrmt = new ExchNumberFormat(undefined, {
+  style: 'currency',
+  currency: 'USD',
+  currencyDisplay: 'symbol'
+});
+
+const circulatingSupplyFrmt = new ExchNumberFormat(undefined, {
+  style: 'decimal',
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
 
 class PageContainer extends PureComponent {
   constructor(props) {
@@ -29,10 +43,12 @@ class PageContainer extends PureComponent {
       isSd: isSd(),
       statistics: {
         blockchainHeight: "",
-        networkHashrate: "",
         networkDifficulty: "",
         blockTime: "",
         blockReward: "",
+        circulatingSupply: "",
+        marketCap: "",
+        priceUsd: "",
       }
     }
   }
@@ -50,24 +66,31 @@ class PageContainer extends PureComponent {
     this.setState({isSd:isSd()});
   };
 
-    componentDidMount() {
-      axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats')
-        .then(res => {
-          const networkDifficultyData = res.data.nodes[0].difficulty
-          const  blockTimeData = res.data.nodes[0].blocktime
+  componentDidMount() {
+    axios.all([
+      axios.get('https://eu-api.catchthatrabbit.com/v2/api/stats'),
+      axios.get('https://coincodex.com/api/coincodex/get_coin/xcb3'),
+    ]).then(axios.spread((statsResponse, coinResponse) => {
+      const xcbUsdPrice = coinResponse.data.last_price_usd;
+      const circulatingSupply = coinResponse.data.supply;
+      const marketCap = xcbUsdPrice * circulatingSupply;
+      const statisticsData = {
+          blockchainHeight: numberToString(numberFormat(parseInt(statsResponse.data.nodes[0].height))),
+          networkDifficulty: siFormat(parseInt(statsResponse.data.nodes[0].difficulty), 2),
+          circulatingSupply: circulatingSupplyFrmt.format(circulatingSupply),
+          marketCap: priceFrmt.format(marketCap),
+          priceUsd: priceFrmt.format(xcbUsdPrice),
+      };
 
-          const statisticsData =  {
-              blockchainHeight: numberToString(numberFormat(parseInt(res.data.nodes[0].height))),
-              //networkHashrate: numberToString(siFormat((networkDifficultyData / blockTimeData).toFixed(2), 2)),
-              networkDifficulty: siFormat(parseInt(res.data.nodes[0].difficulty), 2),
-              blockTime: numberToString(ago(toStringDateTime(res.data.stats.lastBlockFound))),
-              blockReward: numberToString(numberFormat(toXCBPrice(parseInt(res.data.blockReward)))),
-          }
-          this.setState({ statistics:  statisticsData })
-        })
-      window.addEventListener('resize', this.updateIsMobile);
-      window.addEventListener('resize', this.updateIsSd);
+      this.setState({ statistics: statisticsData });
+    })).catch(error => {
+      console.error("Error fetching data: ", error);
+    });
+
+    window.addEventListener('resize', this.updateIsMobile);
+    window.addEventListener('resize', this.updateIsSd);
     }
+
     componentWillUnmount() {
       window.removeEventListener('resize', this.updateIsMobile);
       window.removeEventListener('resize', this.updateIsSd);
@@ -128,12 +151,15 @@ class PageContainer extends PureComponent {
                 <Developers  id="developers" />
                 <NodeCoverage
                     blockchainHeight={this.state.statistics.blockchainHeight}
-                    networkHashrate={this.state.statistics.networkHashrate}
                     networkDifficulty={this.state.statistics.networkDifficulty}
                     blockTime={this.state.statistics.blockTime}
                     blockReward={this.state.statistics.blockReward}
+                    circulatingSupply={this.state.statistics.circulatingSupply}
+                    marketCap={this.state.statistics.marketCap}
+                    priceUsd={this.state.statistics.priceUsd}
                     id="enterprise"
                 />
+                <AI id="ai" />
                 <Contacts
                     difficulty={this.state.statistics.networkDifficulty}
                     id="community"
